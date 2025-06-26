@@ -15,12 +15,12 @@ export const Hero = () => {
         </p>
       </div>
       
-      {/* Section image */}
-      <div className="bg-gray-100 flex items-center justify-center relative min-h-[400px] lg:min-h-full">
+      {/* Section image - prend toute la section */}
+      <div className="bg-gray-100 flex items-center justify-center relative min-h-[400px] lg:min-h-full overflow-hidden">
         <img 
           src="/lovable-uploads/c2c2bc5c-1a2d-4fdd-a6ac-9d3a8d13ac23.png" 
           alt="Link Agency Logo" 
-          className="w-64 h-64 object-contain"
+          className="w-full h-full object-cover"
         />
       </div>
     </section>
