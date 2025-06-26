@@ -1,7 +1,7 @@
 
 import { Header } from "@/components/Header";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Palette, Users, Music, Briefcase, Monitor, Camera } from "lucide-react";
+import { ArrowLeft, Palette, Users, Music, Briefcase, Monitor, Camera, CheckCircle, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Evenementiel = () => {
@@ -38,62 +38,156 @@ const Evenementiel = () => {
     }
   ];
 
+  const advantages = [
+    "Équipe créative expérimentée",
+    "Gestion complète de A à Z", 
+    "Respect des délais et budgets",
+    "Solutions sur-mesure",
+    "Couverture photo/vidéo incluse"
+  ];
+
+  const stats = [
+    { number: "150+", label: "Événements organisés" },
+    { number: "98%", label: "Clients satisfaits" },
+    { number: "50+", label: "Partenaires de confiance" },
+    { number: "24/7", label: "Support disponible" }
+  ];
+
   return (
     <div className="min-h-screen bg-white">
       <Header />
       
-      <section className="pt-32 pb-20 px-8 lg:px-16 bg-gradient-to-br from-blue-50 to-white">
-        <div className="max-w-6xl mx-auto">
-          <Link to="/" className="inline-flex items-center text-gray-600 hover:text-black transition-colors mb-8">
-            <ArrowLeft className="w-4 h-4 mr-2" />
+      {/* Hero Section */}
+      <section className="pt-32 pb-20 px-8 lg:px-16 bg-gradient-to-br from-blue-50 via-white to-gray-50 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/5 to-purple-600/5"></div>
+        <div className="max-w-6xl mx-auto relative z-10">
+          <Link to="/" className="inline-flex items-center text-gray-600 hover:text-black transition-colors mb-8 group">
+            <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
             Retour à l'accueil
           </Link>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
+            <div className="animate-fade-in">
+              <div className="inline-flex items-center bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
+                <Star className="w-4 h-4 mr-2" />
+                Excellence événementielle
+              </div>
               <h1 className="text-5xl lg:text-6xl font-light mb-8 text-black leading-tight">
                 Événementiel
+                <span className="block text-3xl lg:text-4xl text-gray-600 mt-2">d'exception</span>
               </h1>
               <p className="text-xl text-gray-700 leading-relaxed mb-8 font-light">
-                Nous concevons et organisons des événements mémorables qui marquent les esprits et renforcent votre image de marque.
+                Nous concevons et organisons des événements mémorables qui marquent les esprits et renforcent votre image de marque. Chaque détail compte pour créer des expériences uniques.
               </p>
-              <a 
-                href="https://wa.me/33745010714" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-block"
-              >
-                <Button className="bg-black text-white hover:bg-gray-800 px-8 py-6 text-lg">
-                  Parlons de votre événement
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a 
+                  href="https://wa.me/33745010714" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-block"
+                >
+                  <Button className="bg-black text-white hover:bg-gray-800 px-8 py-6 text-lg hover-scale">
+                    Parlons de votre événement
+                  </Button>
+                </a>
+                <Button variant="outline" className="px-8 py-6 text-lg border-2 hover:bg-gray-50">
+                  Voir nos réalisations
                 </Button>
-              </a>
+              </div>
             </div>
             
-            <div className="relative">
+            <div className="relative animate-fade-in">
+              <div className="absolute -inset-4 bg-gradient-to-r from-blue-200 to-purple-200 rounded-2xl blur-xl opacity-20"></div>
               <img 
                 src="/lovable-uploads/4e5435ee-9057-449a-b988-b2ed164da3e1.png" 
                 alt="Événementiel Services" 
-                className="w-full h-auto rounded-lg shadow-lg"
+                className="relative w-full h-auto rounded-xl shadow-2xl hover-scale"
               />
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-20 px-8 lg:px-16">
+      {/* Stats Section */}
+      <section className="py-16 px-8 lg:px-16 bg-black">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-light mb-16 text-black text-center">Nos services événementiels</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {eventServices.map((service, index) => (
-              <div key={index} className="bg-blue-50 p-8 rounded-lg hover:shadow-lg transition-shadow">
-                <div className="text-black mb-4">
-                  {service.icon}
-                </div>
-                <h3 className="text-xl font-light mb-4 text-black">{service.title}</h3>
-                <p className="text-gray-600 leading-relaxed text-sm">{service.description}</p>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="text-3xl lg:text-4xl font-light text-white mb-2">{stat.number}</div>
+                <div className="text-gray-300 text-sm font-light">{stat.label}</div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-20 px-8 lg:px-16 bg-gradient-to-b from-white to-gray-50">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-light mb-6 text-black">Nos services événementiels</h2>
+            <p className="text-xl text-gray-600 font-light max-w-3xl mx-auto">
+              De la conception à la réalisation, nous vous accompagnons à chaque étape pour créer des événements qui marquent
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {eventServices.map((service, index) => (
+              <div key={index} className="group bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-blue-200">
+                <div className="flex items-start space-x-4">
+                  <div className="text-blue-600 bg-blue-50 p-3 rounded-lg group-hover:bg-blue-100 transition-colors">
+                    {service.icon}
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-medium mb-3 text-black group-hover:text-blue-600 transition-colors">
+                      {service.title}
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed text-sm">
+                      {service.description}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us Section */}
+      <section className="py-20 px-8 lg:px-16 bg-blue-50">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 className="text-4xl font-light mb-8 text-black">Pourquoi nous choisir ?</h2>
+              <p className="text-gray-600 mb-8 leading-relaxed">
+                Notre expertise et notre passion pour l'événementiel nous permettent de créer des expériences uniques et mémorables.
+              </p>
+              <div className="space-y-4">
+                {advantages.map((advantage, index) => (
+                  <div key={index} className="flex items-center space-x-3">
+                    <CheckCircle className="w-5 h-5 text-green-500" />
+                    <span className="text-gray-700">{advantage}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="bg-white p-8 rounded-xl shadow-lg">
+              <h3 className="text-2xl font-light mb-6 text-black">Prêt à créer votre événement ?</h3>
+              <p className="text-gray-600 mb-6">
+                Discutons de votre projet et transformons votre vision en réalité.
+              </p>
+              <a 
+                href="https://wa.me/33745010714" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-block w-full"
+              >
+                <Button className="w-full bg-black text-white hover:bg-gray-800 py-4 text-lg">
+                  Contactez-nous maintenant
+                </Button>
+              </a>
+            </div>
           </div>
         </div>
       </section>
