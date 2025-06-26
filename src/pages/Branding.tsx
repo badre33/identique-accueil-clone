@@ -1,4 +1,3 @@
-
 import { Header } from "@/components/Header";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Palette, Target, Compass, LayoutDashboard, Search, Lightbulb, Rocket, Zap } from "lucide-react";
@@ -92,7 +91,7 @@ const Branding = () => {
                 Link Agency élabore des identités de marque puissantes, alignées sur votre vision et votre audience. Chaque service est pensé pour renforcer votre positionnement stratégique, affirmer votre image et bâtir une marque durable et mémorable.
               </p>
               <a 
-                href="https://wa.me/3345010714" 
+                href="https://wa.me/33745010714" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-block"
@@ -194,7 +193,7 @@ const Branding = () => {
               Prêt à transformer votre marque ?
             </p>
             <a 
-              href="https://wa.me/3345010714" 
+              href="https://wa.me/33745010714" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-block"
