@@ -1,4 +1,3 @@
-
 import { Header } from "@/components/Header";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Smartphone, Video, Camera, Edit, TrendingUp, Users, Target, Zap, CheckCircle, Star } from "lucide-react";
@@ -62,6 +61,13 @@ const ContentDigital = () => {
     }
   ];
 
+  const handleContact = () => {
+    const phoneNumber = "33745010714";
+    const message = "Bonjour, je souhaite créer mes contenus digitaux avec Link Agency.";
+    const encodedMessage = encodeURIComponent(message);
+    window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
+  };
+
   return (
     <div className="min-h-screen bg-white">
       <Header />
@@ -90,7 +96,10 @@ const ContentDigital = () => {
               <p className="text-lg text-gray-600 leading-relaxed mb-8 font-light">
                 De la stratégie à la diffusion, nous transformons vos idées en contenus qui marquent les esprits et renforcent votre présence digitale.
               </p>
-              <Button className="bg-gradient-to-r from-green-600 to-blue-600 text-white hover:from-green-700 hover:to-blue-700 px-8 py-6 text-lg transform hover:scale-105 transition-all duration-300">
+              <Button 
+                onClick={handleContact}
+                className="bg-gradient-to-r from-green-600 to-blue-600 text-white hover:from-green-700 hover:to-blue-700 px-8 py-6 text-lg transform hover:scale-105 transition-all duration-300"
+              >
                 Créer vos contenus
               </Button>
             </div>
@@ -203,7 +212,10 @@ const ContentDigital = () => {
           <p className="text-xl text-green-100 leading-relaxed mb-8 font-light">
             Collaborons pour créer des contenus qui marquent et engagent votre audience.
           </p>
-          <Button className="bg-white text-green-600 hover:bg-gray-100 px-8 py-6 text-lg font-medium transform hover:scale-105 transition-all duration-300">
+          <Button 
+            onClick={handleContact}
+            className="bg-white text-green-600 hover:bg-gray-100 px-8 py-6 text-lg font-medium transform hover:scale-105 transition-all duration-300"
+          >
             Démarrer votre projet
           </Button>
         </div>

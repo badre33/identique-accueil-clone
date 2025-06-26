@@ -1,4 +1,3 @@
-
 import { Header } from "@/components/Header";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Palette, Users, Music, Briefcase, Monitor, Camera, CheckCircle, Star } from "lucide-react";
@@ -53,6 +52,13 @@ const Evenementiel = () => {
     { number: "24/7", label: "Support disponible" }
   ];
 
+  const handleContact = () => {
+    const phoneNumber = "33745010714";
+    const message = "Bonjour, je souhaite organiser un événement avec Link Agency.";
+    const encodedMessage = encodeURIComponent(message);
+    window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
+  };
+
   return (
     <div className="min-h-screen bg-white">
       <Header />
@@ -80,16 +86,12 @@ const Evenementiel = () => {
                 Nous concevons et organisons des événements mémorables qui marquent les esprits et renforcent votre image de marque. Chaque détail compte pour créer des expériences uniques.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a 
-                  href="https://wa.me/33745010714" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-block"
+                <Button 
+                  onClick={handleContact}
+                  className="bg-black text-white hover:bg-gray-800 px-8 py-6 text-lg hover-scale"
                 >
-                  <Button className="bg-black text-white hover:bg-gray-800 px-8 py-6 text-lg hover-scale">
-                    Parlons de votre événement
-                  </Button>
-                </a>
+                  Parlons de votre événement
+                </Button>
                 <Button variant="outline" className="px-8 py-6 text-lg border-2 hover:bg-gray-50">
                   Voir nos réalisations
                 </Button>
@@ -177,16 +179,12 @@ const Evenementiel = () => {
               <p className="text-gray-600 mb-6">
                 Discutons de votre projet et transformons votre vision en réalité.
               </p>
-              <a 
-                href="https://wa.me/33745010714" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-block w-full"
+              <Button 
+                onClick={handleContact}
+                className="w-full bg-black text-white hover:bg-gray-800 py-4 text-lg"
               >
-                <Button className="w-full bg-black text-white hover:bg-gray-800 py-4 text-lg">
-                  Contactez-nous maintenant
-                </Button>
-              </a>
+                Contactez-nous maintenant
+              </Button>
             </div>
           </div>
         </div>

@@ -70,6 +70,13 @@ const Branding = () => {
     }
   ];
 
+  const handleContact = () => {
+    const phoneNumber = "33745010714";
+    const message = "Bonjour, je souhaite développer ma marque avec Link Agency.";
+    const encodedMessage = encodeURIComponent(message);
+    window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
+  };
+
   return (
     <div className="min-h-screen bg-white">
       <Header />
@@ -90,16 +97,12 @@ const Branding = () => {
               <p className="text-xl text-gray-700 leading-relaxed mb-8 font-light">
                 Link Agency élabore des identités de marque puissantes, alignées sur votre vision et votre audience. Chaque service est pensé pour renforcer votre positionnement stratégique, affirmer votre image et bâtir une marque durable et mémorable.
               </p>
-              <a 
-                href="https://wa.me/33745010714" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-block"
+              <Button 
+                onClick={handleContact}
+                className="bg-black text-white hover:bg-gray-800 px-8 py-6 text-lg"
               >
-                <Button className="bg-black text-white hover:bg-gray-800 px-8 py-6 text-lg">
-                  Parlons de votre vision
-                </Button>
-              </a>
+                Parlons de votre vision
+              </Button>
             </div>
             
             <div className="relative">
@@ -192,16 +195,12 @@ const Branding = () => {
             <p className="text-lg text-gray-700 mb-6 font-light">
               Prêt à transformer votre marque ?
             </p>
-            <a 
-              href="https://wa.me/33745010714" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="inline-block"
+            <Button 
+              onClick={handleContact}
+              className="bg-black text-white hover:bg-gray-800 px-8 py-6 text-lg"
             >
-              <Button className="bg-black text-white hover:bg-gray-800 px-8 py-6 text-lg">
-                Échangeons ensemble
-              </Button>
-            </a>
+              Échangeons ensemble
+            </Button>
           </div>
         </div>
       </section>
