@@ -30,62 +30,71 @@ export const Contact = () => {
   };
 
   return (
-    <section className="min-h-screen flex">
-      <div className="w-full lg:w-1/2 bg-stone-900 px-8 lg:px-16 py-20 flex flex-col justify-center">
-        <h2 className="text-3xl lg:text-4xl font-light mb-16 text-white">
-          Nos réalisations
-        </h2>
-        <form onSubmit={handleSubmit} className="space-y-8">
+    <section className="px-8 lg:px-16 py-32 bg-gray-900">
+      <div className="max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           <div>
-            <Input
-              type="text"
-              name="nom"
-              placeholder="Nom"
-              value={formData.nom}
-              onChange={handleChange}
-              className="bg-transparent border-0 border-b border-stone-500 rounded-none px-0 py-4 text-white placeholder:text-stone-400 focus:border-white focus-visible:ring-0"
-              required
-            />
-          </div>
-          <div>
-            <Input
-              type="email"
-              name="email"
-              placeholder="Adresse e-mail"
-              value={formData.email}
-              onChange={handleChange}
-              className="bg-transparent border-0 border-b border-stone-500 rounded-none px-0 py-4 text-white placeholder:text-stone-400 focus:border-white focus-visible:ring-0"
-              required
-            />
-          </div>
-          <div>
-            <Textarea
-              name="message"
-              placeholder="Message"
-              value={formData.message}
-              onChange={handleChange}
-              className="bg-transparent border-0 border-b border-stone-500 rounded-none px-0 py-4 text-white placeholder:text-stone-400 focus:border-white focus-visible:ring-0 resize-none min-h-[100px]"
-              required
-            />
-          </div>
-          <Button 
-            type="submit"
-            className="bg-white text-stone-900 hover:bg-stone-100 px-8 py-3 rounded-full font-light"
-          >
-            Envoyer
-          </Button>
-        </form>
-      </div>
-      <div className="hidden lg:block w-1/2 bg-stone-300 relative">
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="w-48 h-64 bg-stone-900 rounded-3xl flex items-center justify-center shadow-2xl">
-            <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center">
-              <div className="w-8 h-8 bg-stone-900 rounded transform rotate-12"></div>
+            <h2 className="text-4xl lg:text-5xl font-thin text-white mb-8">
+              Parlons de votre projet
+            </h2>
+            <p className="text-gray-300 text-lg leading-relaxed mb-12">
+              Chaque projet est unique. Contactez-nous pour discuter 
+              de vos besoins et découvrir comment nous pouvons 
+              vous accompagner.
+            </p>
+            
+            <div className="space-y-6">
+              <div>
+                <p className="text-gray-400 text-sm mb-1">Email</p>
+                <p className="text-white">hello@linkagency.fr</p>
+              </div>
+              <div>
+                <p className="text-gray-400 text-sm mb-1">Téléphone</p>
+                <p className="text-white">+33 1 23 45 67 89</p>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 bg-white px-8 py-4 rounded-lg shadow-lg">
-          <h3 className="text-lg font-light text-stone-800">Projet / Référence</h3>
+          
+          <form onSubmit={handleSubmit} className="space-y-8">
+            <div>
+              <Input
+                type="text"
+                name="nom"
+                placeholder="Votre nom"
+                value={formData.nom}
+                onChange={handleChange}
+                className="bg-transparent border-0 border-b border-gray-600 rounded-none px-0 py-4 text-white placeholder:text-gray-400 focus:border-white focus-visible:ring-0"
+                required
+              />
+            </div>
+            <div>
+              <Input
+                type="email"
+                name="email"
+                placeholder="Votre email"
+                value={formData.email}
+                onChange={handleChange}
+                className="bg-transparent border-0 border-b border-gray-600 rounded-none px-0 py-4 text-white placeholder:text-gray-400 focus:border-white focus-visible:ring-0"
+                required
+              />
+            </div>
+            <div>
+              <Textarea
+                name="message"
+                placeholder="Votre message"
+                value={formData.message}
+                onChange={handleChange}
+                className="bg-transparent border-0 border-b border-gray-600 rounded-none px-0 py-4 text-white placeholder:text-gray-400 focus:border-white focus-visible:ring-0 resize-none min-h-[120px]"
+                required
+              />
+            </div>
+            <Button 
+              type="submit"
+              className="bg-white text-gray-900 hover:bg-gray-100 px-8 py-3 font-light text-sm tracking-wide"
+            >
+              ENVOYER LE MESSAGE
+            </Button>
+          </form>
         </div>
       </div>
     </section>

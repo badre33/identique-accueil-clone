@@ -1,65 +1,57 @@
 
-import { Triangle, Circle, User, Edit3 } from "lucide-react";
-
 export const Services = () => {
   const services = [
     {
-      icon: Triangle,
-      title: "Branding",
-      subtitle: "Progettazione e",
-      subtitle2: "attuazione Brand",
-      subtitle3: "strategico"
+      number: "01",
+      title: "Stratégie de marque",
+      description: "Développement d'identités visuelles fortes et cohérentes qui reflètent l'essence de votre entreprise."
     },
     {
-      icon: Circle,
-      title: "Événementiel",
-      subtitle: "Progettiamo, realizziamo",
-      subtitle2: "Fachklam istituiti",
-      subtitle3: "singoli brand."
+      number: "02", 
+      title: "Communication digitale",
+      description: "Création de contenus engageants et gestion de votre présence sur les plateformes numériques."
     },
     {
-      icon: User,
-      title: "Personal",
-      title2: "Branding",
-      subtitle: "Creazione de categorie si",
-      subtitle2: "programmation actions."
+      number: "03",
+      title: "Design graphique",
+      description: "Conception visuelle moderne et impactante pour tous vos supports de communication."
     },
     {
-      icon: Edit3,
-      title: "Content",
-      title2: "digital",
-      subtitle: "Monitorinaning digitalizzazione",
-      subtitle2: "otto cianfrugaleut."
+      number: "04",
+      title: "Conseil en communication",
+      description: "Accompagnement stratégique pour optimiser votre message et atteindre vos objectifs."
     }
   ];
 
   return (
-    <section className="px-8 lg:px-16 py-20 bg-stone-100">
-      <h2 className="text-3xl lg:text-4xl font-light mb-16 text-stone-800">
-        Nos services
-      </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-        {services.map((service, index) => (
-          <div key={index} className="text-center group">
-            <div className="w-20 h-20 mx-auto mb-6 flex items-center justify-center">
-              <service.icon 
-                size={40} 
-                className="text-stone-600 stroke-1 group-hover:text-stone-800 transition-colors duration-300" 
-              />
+    <section className="px-8 lg:px-16 py-32 bg-gray-50">
+      <div className="max-w-6xl mx-auto">
+        <div className="mb-20">
+          <h2 className="text-4xl lg:text-5xl font-thin text-gray-900 mb-6">
+            Nos expertises
+          </h2>
+          <div className="w-24 h-px bg-gray-300"></div>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-20">
+          {services.map((service, index) => (
+            <div key={index} className="group">
+              <div className="flex items-start gap-6">
+                <span className="text-sm font-mono text-gray-400 mt-1">
+                  {service.number}
+                </span>
+                <div>
+                  <h3 className="text-2xl font-light text-gray-900 mb-4 group-hover:text-gray-600 transition-colors">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    {service.description}
+                  </p>
+                </div>
+              </div>
             </div>
-            <h3 className="text-xl font-light mb-2 text-stone-800">
-              {service.title}
-              {service.title2 && <div>{service.title2}</div>}
-            </h3>
-            <p className="text-sm text-stone-600 leading-relaxed">
-              {service.subtitle}
-              <br />
-              {service.subtitle2}
-              <br />
-              {service.subtitle3}
-            </p>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );
