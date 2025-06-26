@@ -1,7 +1,7 @@
 
 export const Hero = () => {
   return (
-    <section className="min-h-screen bg-white grid grid-cols-1 lg:grid-cols-2">
+    <section className="min-h-screen bg-white grid grid-cols-1 lg:grid-cols-2 pt-20">
       {/* Section texte */}
       <div className="p-8 lg:p-16 flex flex-col justify-center">
         <h1 className="text-5xl lg:text-6xl font-light mb-8 text-black leading-tight">
