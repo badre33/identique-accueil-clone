@@ -16,12 +16,12 @@ export const Contact = () => {
   };
 
   return (
-    <section className="min-h-screen bg-gray-900 grid grid-cols-1 lg:grid-cols-2">
+    <section className="min-h-screen bg-black grid grid-cols-1 lg:grid-cols-2">
       {/* Section formulaire */}
-      <div className="p-16 lg:p-24 flex flex-col justify-center">
-        <h2 className="text-4xl font-serif mb-12 text-white">Nos réalisations</h2>
+      <div className="p-8 lg:p-16 flex flex-col justify-center">
+        <h2 className="text-4xl lg:text-5xl font-light mb-12 text-white">Nos réalisations</h2>
         
-        <form className="space-y-8">
+        <form className="space-y-8 max-w-md">
           <div>
             <input
               type="text"
@@ -29,7 +29,7 @@ export const Contact = () => {
               placeholder="Nom"
               value={formData.nom}
               onChange={handleChange}
-              className="w-full bg-transparent border-0 border-b border-gray-600 pb-2 text-white placeholder:text-gray-400 focus:outline-none focus:border-white"
+              className="w-full bg-transparent border-0 border-b border-gray-600 pb-3 text-white placeholder:text-gray-400 focus:outline-none focus:border-white text-lg font-light"
             />
           </div>
           <div>
@@ -39,7 +39,7 @@ export const Contact = () => {
               placeholder="Adresse e-mail"
               value={formData.email}
               onChange={handleChange}
-              className="w-full bg-transparent border-0 border-b border-gray-600 pb-2 text-white placeholder:text-gray-400 focus:outline-none focus:border-white"
+              className="w-full bg-transparent border-0 border-b border-gray-600 pb-3 text-white placeholder:text-gray-400 focus:outline-none focus:border-white text-lg font-light"
             />
           </div>
           <div>
@@ -48,19 +48,19 @@ export const Contact = () => {
               placeholder="Message"
               value={formData.message}
               onChange={handleChange}
-              className="w-full bg-transparent border-0 border-b border-gray-600 pb-2 text-white placeholder:text-gray-400 focus:outline-none focus:border-white resize-none"
+              className="w-full bg-transparent border-0 border-b border-gray-600 pb-3 text-white placeholder:text-gray-400 focus:outline-none focus:border-white resize-none text-lg font-light"
               rows={1}
             />
           </div>
         </form>
       </div>
       
-      {/* Section image/projet */}
-      <div className="bg-gray-300 flex flex-col items-center justify-center p-16">
-        <div className="bg-black w-48 h-64 rounded-lg flex items-center justify-center mb-8">
-          <div className="text-white text-6xl font-bold transform -rotate-12">L</div>
+      {/* Section projet */}
+      <div className="bg-gray-800 flex flex-col items-center justify-center p-16">
+        <div className="bg-white w-48 h-64 rounded-lg flex items-center justify-center mb-8 shadow-lg">
+          <div className="text-black text-6xl font-bold">L</div>
         </div>
-        <p className="text-gray-700 text-lg font-serif">Projet / Référence</p>
+        <p className="text-gray-300 text-lg font-light">Projet / Référence</p>
       </div>
     </section>
   );

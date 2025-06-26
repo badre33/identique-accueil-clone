@@ -1,13 +1,13 @@
 
 export const Hero = () => {
   return (
-    <section className="min-h-screen bg-gray-100 grid grid-cols-1 lg:grid-cols-2">
+    <section className="min-h-screen bg-white grid grid-cols-1 lg:grid-cols-2">
       {/* Section texte */}
-      <div className="p-16 lg:p-24 flex flex-col justify-center bg-gray-50">
-        <h1 className="text-4xl lg:text-5xl font-serif mb-8 text-gray-900">
+      <div className="p-8 lg:p-16 flex flex-col justify-center">
+        <h1 className="text-5xl lg:text-6xl font-light mb-8 text-black leading-tight">
           À propos de Link
         </h1>
-        <p className="text-lg text-gray-700 leading-relaxed max-w-md">
+        <p className="text-lg text-gray-800 leading-relaxed max-w-lg font-light">
           Link Agency conçoit des solutions 
           stratégiques, chaque point de 
           contact devient une opportunité 
@@ -15,10 +15,12 @@ export const Hero = () => {
         </p>
       </div>
       
-      {/* Section image */}
-      <div className="bg-gray-300 flex items-center justify-center relative">
-        <div className="w-64 h-32 bg-gray-400 rounded-full opacity-60"></div>
-        <div className="absolute w-48 h-24 bg-gray-500 rounded-full opacity-40 translate-x-8 translate-y-4"></div>
+      {/* Section forme organique */}
+      <div className="bg-gray-100 flex items-center justify-center relative min-h-[400px] lg:min-h-full">
+        <div className="relative">
+          <div className="w-80 h-40 bg-gray-300 rounded-full transform rotate-12"></div>
+          <div className="absolute top-8 left-12 w-64 h-32 bg-gray-400 rounded-full transform -rotate-6"></div>
+        </div>
       </div>
     </section>
   );
