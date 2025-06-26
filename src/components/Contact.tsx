@@ -55,10 +55,14 @@ export const Contact = () => {
         </form>
       </div>
       
-      {/* Section projet */}
+      {/* Section projet avec vraie image */}
       <div className="bg-gray-800 flex flex-col items-center justify-center p-16">
-        <div className="bg-white w-48 h-64 rounded-lg flex items-center justify-center mb-8 shadow-lg">
-          <div className="text-black text-6xl font-bold">L</div>
+        <div className="bg-white rounded-lg flex items-center justify-center mb-8 shadow-lg overflow-hidden">
+          <img 
+            src="/lovable-uploads/155dc759-4923-4ddc-8251-334cb8ba3ad7.png" 
+            alt="Projet Link" 
+            className="w-48 h-64 object-cover"
+          />
         </div>
         <p className="text-gray-300 text-lg font-light">Projet / Référence</p>
       </div>

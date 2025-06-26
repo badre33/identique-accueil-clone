@@ -15,12 +15,13 @@ export const Hero = () => {
         </p>
       </div>
       
-      {/* Section forme organique */}
+      {/* Section image */}
       <div className="bg-gray-100 flex items-center justify-center relative min-h-[400px] lg:min-h-full">
-        <div className="relative">
-          <div className="w-80 h-40 bg-gray-300 rounded-full transform rotate-12"></div>
-          <div className="absolute top-8 left-12 w-64 h-32 bg-gray-400 rounded-full transform -rotate-6"></div>
-        </div>
+        <img 
+          src="/lovable-uploads/c2c2bc5c-1a2d-4fdd-a6ac-9d3a8d13ac23.png" 
+          alt="Link Agency Logo" 
+          className="w-64 h-64 object-contain"
+        />
       </div>
     </section>
   );
