@@ -2,56 +2,74 @@
 export const Services = () => {
   const services = [
     {
-      number: "01",
-      title: "Stratégie de marque",
-      description: "Développement d'identités visuelles fortes et cohérentes qui reflètent l'essence de votre entreprise."
+      icon: "triangle",
+      title: "Branding",
+      subtitle: "Prograstes und atanseman Dendär strateg."
     },
     {
-      number: "02", 
-      title: "Communication digitale",
-      description: "Création de contenus engageants et gestion de votre présence sur les plateformes numériques."
+      icon: "circle", 
+      title: "Événementiel",
+      subtitle: "Prégrâmas, Räserces Faciliors ittaabt ainjd boart."
     },
     {
-      number: "03",
-      title: "Design graphique",
-      description: "Conception visuelle moderne et impactante pour tous vos supports de communication."
+      icon: "person",
+      title: "Personal Branding", 
+      subtitle: "Creation de caterce us programmation actions."
     },
     {
-      number: "04",
-      title: "Conseil en communication",
-      description: "Accompagnement stratégique pour optimiser votre message et atteindre vos objectifs."
+      icon: "content",
+      title: "Content digital",
+      subtitle: "Montouraning digitilive otto cientleaut."
     }
   ];
 
+  const renderIcon = (iconType: string) => {
+    switch(iconType) {
+      case "triangle":
+        return (
+          <svg width="40" height="40" viewBox="0 0 40 40" className="text-gray-700">
+            <path d="M20 8 L32 28 L8 28 Z" fill="none" stroke="currentColor" strokeWidth="1.5"/>
+          </svg>
+        );
+      case "circle":
+        return (
+          <svg width="40" height="40" viewBox="0 0 40 40" className="text-gray-700">
+            <circle cx="20" cy="20" r="12" fill="none" stroke="currentColor" strokeWidth="1.5"/>
+          </svg>
+        );
+      case "person":
+        return (
+          <svg width="40" height="40" viewBox="0 0 40 40" className="text-gray-700">
+            <circle cx="20" cy="15" r="5" fill="currentColor"/>
+            <path d="M12 28c0-4.4 3.6-8 8-8s8 3.6 8 8" fill="currentColor"/>
+          </svg>
+        );
+      case "content":
+        return (
+          <svg width="40" height="40" viewBox="0 0 40 40" className="text-gray-700">
+            <path d="M10 12 L30 12 M10 20 L25 20 M10 28 L20 28" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+            <rect x="8" y="8" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="1.5" rx="2"/>
+          </svg>
+        );
+      default:
+        return null;
+    }
+  };
+
   return (
-    <section className="px-8 lg:px-16 py-32 bg-gray-50">
-      <div className="max-w-6xl mx-auto">
-        <div className="mb-20">
-          <h2 className="text-4xl lg:text-5xl font-thin text-gray-900 mb-6">
-            Nos expertises
-          </h2>
-          <div className="w-24 h-px bg-gray-300"></div>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-20">
-          {services.map((service, index) => (
-            <div key={index} className="group">
-              <div className="flex items-start gap-6">
-                <span className="text-sm font-mono text-gray-400 mt-1">
-                  {service.number}
-                </span>
-                <div>
-                  <h3 className="text-2xl font-light text-gray-900 mb-4 group-hover:text-gray-600 transition-colors">
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    {service.description}
-                  </p>
-                </div>
-              </div>
+    <section className="py-20 px-16 lg:px-24 bg-gray-50">
+      <h2 className="text-4xl font-serif mb-16 text-gray-900">Nos services</h2>
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        {services.map((service, index) => (
+          <div key={index} className="text-center">
+            <div className="mb-6 flex justify-center">
+              {renderIcon(service.icon)}
             </div>
-          ))}
-        </div>
+            <h3 className="text-xl font-serif mb-3 text-gray-900">{service.title}</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">{service.subtitle}</p>
+          </div>
+        ))}
       </div>
     </section>
   );
