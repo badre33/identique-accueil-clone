@@ -8,28 +8,24 @@ const Branding = () => {
   const brandingServices = [
     {
       icon: <Palette className="w-8 h-8" />,
-      emoji: "🎨",
       title: "Identité visuelle",
       subtitle: "Créez une signature visuelle unique et reconnaissable.",
       description: "Nous concevons des logos, chartes graphiques, palettes de couleurs, typographies et éléments iconographiques qui traduisent vos valeurs, votre ambition et votre style. Une identité pensée pour durer."
     },
     {
       icon: <Target className="w-8 h-8" />,
-      emoji: "🎯",
       title: "Positionnement",
       subtitle: "Affirmez votre différence sur le marché.",
       description: "Nous vous aidons à clarifier votre promesse de marque, à structurer votre proposition de valeur et à identifier les leviers différenciateurs qui créeront l'adhésion auprès de vos cibles."
     },
     {
       icon: <Compass className="w-8 h-8" />,
-      emoji: "🧭",
       title: "Stratégie de marque",
       subtitle: "Bâtissez une fondation stratégique solide.",
       description: "Nous structurons votre territoire de marque à travers une vision claire, un storytelling cohérent et une stratégie de développement qui aligne identité, ambition et marché."
     },
     {
       icon: <LayoutDashboard className="w-8 h-8" />,
-      emoji: "📐",
       title: "Brand Guidelines",
       subtitle: "Assurez la cohérence de votre image dans le temps.",
       description: "Nous créons des guides complets et sur mesure (guidelines de marque) pour garantir une application fidèle de votre identité visuelle et éditoriale, en interne comme en externe."
@@ -80,11 +76,8 @@ const Branding = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {brandingServices.map((service, index) => (
               <div key={index} className="bg-gray-50 p-8 rounded-lg hover:shadow-lg transition-shadow">
-                <div className="flex items-center mb-6">
-                  <span className="text-3xl mr-4">{service.emoji}</span>
-                  <div className="text-black">
-                    {service.icon}
-                  </div>
+                <div className="text-black mb-4">
+                  {service.icon}
                 </div>
                 <h3 className="text-2xl font-light mb-4 text-black">{service.title}</h3>
                 <p className="text-gray-700 font-medium mb-4">{service.subtitle}</p>
