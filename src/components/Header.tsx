@@ -1,5 +1,6 @@
 
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -39,6 +40,12 @@ export const Header = () => {
             >
               Services
             </button>
+            <Link 
+              to="/inside-link"
+              className="text-black hover:text-gray-600 transition-colors font-light"
+            >
+              Inside Link
+            </Link>
             <button 
               onClick={() => scrollToSection('apropos')}
               className="text-black hover:text-gray-600 transition-colors font-light"
@@ -80,6 +87,13 @@ export const Header = () => {
               >
                 Services
               </button>
+              <Link 
+                to="/inside-link"
+                className="text-black hover:text-gray-600 transition-colors font-light text-left"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Inside Link
+              </Link>
               <button 
                 onClick={() => scrollToSection('apropos')}
                 className="text-black hover:text-gray-600 transition-colors font-light text-left"
