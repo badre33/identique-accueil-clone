@@ -35,8 +35,6 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
 
-    --radius: 0.5rem;
-
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
     --sidebar-primary: 240 5.9% 10%;
@@ -46,14 +44,22 @@
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
 
-    /* Nouvelles couleurs secondaires */
-    --brand-blue: 217 91% 60%;
-    --brand-purple: 262 83% 58%;
-    --brand-emerald: 160 84% 39%;
-    --brand-orange: 25 95% 53%;
-    --brand-rose: 330 81% 60%;
+    /* Système de couleurs unifié - Brand Colors */
+    --brand-primary: 0 0% 0%;
+    --brand-secondary: 210 40% 96%;
+    --brand-accent: 160 100% 40%;
+    --brand-warning: 38 92% 50%;
+    --brand-error: 0 84% 60%;
+    --brand-success: 142 76% 36%;
     
-    /* Couleurs neutres étendues */
+    /* Couleurs de gradients harmonieux */
+    --gradient-primary: linear-gradient(135deg, hsl(160 100% 40%) 0%, hsl(217 91% 60%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(262 83% 58%) 0%, hsl(217 91% 60%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(160 100% 40%) 0%, hsl(142 76% 36%) 100%);
+    --gradient-warm: linear-gradient(135deg, hsl(38 92% 50%) 0%, hsl(330 81% 60%) 100%);
+    --gradient-subtle: linear-gradient(135deg, hsl(210 40% 98%) 0%, hsl(220 14% 96%) 100%);
+    
+    /* Couleurs neutres étendues et unifiées */
     --neutral-50: 210 20% 98%;
     --neutral-100: 220 14% 96%;
     --neutral-200: 220 13% 91%;
@@ -64,6 +70,43 @@
     --neutral-700: 217 19% 27%;
     --neutral-800: 215 28% 17%;
     --neutral-900: 222 84% 5%;
+    
+    /* Variables d'espacement responsive */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-2xl: 3rem;
+    --spacing-3xl: 4rem;
+    
+    /* Variables typographiques */
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.25rem;
+    --font-size-2xl: 1.5rem;
+    --font-size-3xl: 1.875rem;
+    --font-size-4xl: 2.25rem;
+    --font-size-5xl: 3rem;
+    --font-size-6xl: 3.75rem;
+    
+    /* Variables de rayon pour cohérence */
+    --radius-sm: 0.25rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 0.75rem;
+    --radius-xl: 1rem;
+    --radius-2xl: 1.5rem;
+    --radius-full: 9999px;
+    
+    /* Variables d'animation */
+    --transition-fast: 0.15s;
+    --transition-normal: 0.3s;
+    --transition-slow: 0.5s;
+    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-out: cubic-bezier(0, 0, 0.2, 1);
+    --ease-in: cubic-bezier(0.4, 0, 1, 1);
   }
 
   .dark {
@@ -104,80 +147,81 @@
 
   body {
     @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
   }
 
-  /* Hiérarchie typographique améliorée */
+  /* Hiérarchie typographique améliorée et unifiée */
   h1 {
-    @apply text-4xl lg:text-6xl font-light leading-tight tracking-tight;
+    @apply text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-light leading-tight tracking-tight;
+    font-variation-settings: "wght" 300;
   }
   
   h2 {
-    @apply text-3xl lg:text-5xl font-light leading-tight tracking-tight;
+    @apply text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-light leading-tight tracking-tight;
+    font-variation-settings: "wght" 300;
   }
   
   h3 {
-    @apply text-2xl lg:text-3xl font-normal leading-snug;
+    @apply text-2xl sm:text-3xl lg:text-4xl font-normal leading-snug tracking-tight;
+    font-variation-settings: "wght" 400;
   }
   
   h4 {
-    @apply text-xl lg:text-2xl font-normal leading-snug;
+    @apply text-xl sm:text-2xl lg:text-3xl font-normal leading-snug;
+    font-variation-settings: "wght" 400;
   }
   
   h5 {
-    @apply text-lg lg:text-xl font-medium leading-normal;
+    @apply text-lg sm:text-xl lg:text-2xl font-medium leading-normal;
+    font-variation-settings: "wght" 500;
   }
   
   h6 {
-    @apply text-base lg:text-lg font-medium leading-normal;
+    @apply text-base sm:text-lg lg:text-xl font-medium leading-normal;
+    font-variation-settings: "wght" 500;
   }
 
   /* Paragraphes avec espacement cohérent */
   p {
     @apply leading-relaxed text-neutral-600;
+    font-variation-settings: "wght" 400;
   }
 
-  /* Espacement standard pour les sections */
+  /* Amélioration des liens */
+  a {
+    @apply text-current transition-colors duration-300 ease-out;
+  }
+
+  a:hover, a:focus {
+    @apply text-black;
+  }
+
+  /* Espacement responsive unifié */
   .section-padding {
-    @apply py-16 lg:py-24 px-8 lg:px-16;
+    @apply py-12 px-4 sm:py-16 sm:px-6 lg:py-24 lg:px-8 xl:px-16;
   }
   
   .container-max {
     @apply max-w-7xl mx-auto;
   }
 
-  /* Amélioration de l'accessibilité - texte caché pour lecteurs d'écran */
+  /* États de focus améliorés */
+  *:focus {
+    @apply outline-none;
+  }
+
+  *:focus-visible {
+    @apply ring-2 ring-black ring-opacity-50 ring-offset-2 ring-offset-white transition-all duration-200;
+  }
+
+  /* Skip links pour l'accessibilité */
   .sr-only {
     @apply absolute w-px h-px p-0 -m-px overflow-hidden whitespace-nowrap border-0;
     clip: rect(0, 0, 0, 0);
   }
 
-  /* États de focus améliorés pour l'accessibilité */
-  *:focus {
-    @apply outline-none;
-  }
-
-  /* Focus visible pour la navigation clavier */
-  *:focus-visible {
-    @apply ring-2 ring-black ring-opacity-50 ring-offset-2 ring-offset-white;
-  }
-
-  /* Amélioration du contraste pour les liens */
-  a {
-    @apply text-black underline-offset-4;
-  }
-
-  a:hover, a:focus {
-    @apply text-neutral-800;
-  }
-
-  /* Amélioration du contraste pour les boutons */
-  button:disabled {
-    @apply opacity-50 cursor-not-allowed;
-  }
-
-  /* Skip links pour l'accessibilité */
   .skip-link {
-    @apply absolute -top-10 left-6 bg-black text-white px-4 py-2 rounded-md z-50 transform -translate-y-16 transition-transform;
+    @apply absolute -top-10 left-6 bg-black text-white px-4 py-2 rounded-md z-50 transform -translate-y-16 transition-transform duration-300;
   }
 
   .skip-link:focus {
@@ -186,46 +230,130 @@
 }
 
 @layer components {
-  /* Micro-interactions et hover effects */
+  /* Micro-animations fluides et cohérentes */
+  .smooth-hover {
+    @apply transition-all duration-300 ease-out;
+  }
+  
   .interactive-card {
-    @apply transition-all duration-300 ease-out hover:shadow-lg hover:-translate-y-1 focus-within:shadow-lg focus-within:-translate-y-1 cursor-pointer;
+    @apply smooth-hover hover:shadow-xl hover:-translate-y-2 focus-within:shadow-xl focus-within:-translate-y-2 cursor-pointer;
+    transform-origin: center;
   }
   
   .interactive-button {
-    @apply transition-all duration-200 ease-out hover:scale-105 focus:scale-105 active:scale-95;
+    @apply smooth-hover hover:scale-105 focus:scale-105 active:scale-95;
+    transform-origin: center;
+  }
+  
+  .scale-hover {
+    @apply smooth-hover hover:scale-110 focus:scale-110;
+    transform-origin: center;
   }
   
   .underline-animation {
     @apply relative after:content-[''] after:absolute after:w-full after:h-0.5 after:bottom-0 after:left-0 after:bg-current after:scale-x-0 after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 focus:after:scale-x-100 hover:after:origin-bottom-left focus:after:origin-bottom-left;
   }
+
+  /* Boutons avec design unifié et animations fluides */
+  .btn-primary {
+    background: var(--gradient-primary);
+    @apply text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full font-medium smooth-hover hover:shadow-lg focus:shadow-lg interactive-button;
+  }
   
+  .btn-secondary {
+    @apply border-2 border-black text-black bg-white px-6 py-3 sm:px-8 sm:py-4 rounded-full font-medium smooth-hover hover:bg-black hover:text-white focus:bg-black focus:text-white hover:shadow-lg focus:shadow-lg interactive-button;
+  }
+  
+  .btn-ghost {
+    @apply text-neutral-700 bg-neutral-100 px-4 py-2 sm:px-6 sm:py-3 rounded-full font-medium smooth-hover hover:text-black hover:bg-neutral-200 focus:text-black focus:bg-neutral-200 interactive-button;
+  }
+
+  /* Gradients subtils et harmonieux */
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-secondary {
+    background: var(--gradient-secondary);
+  }
+  
+  .gradient-accent {
+    background: var(--gradient-accent);
+  }
+  
+  .gradient-warm {
+    background: var(--gradient-warm);
+  }
+  
+  .gradient-subtle {
+    background: var(--gradient-subtle);
+  }
+
+  /* Cards avec animations et design cohérent */
+  .card-modern {
+    @apply bg-white rounded-2xl shadow-sm border border-neutral-200 p-6 sm:p-8 interactive-card;
+    backdrop-filter: blur(10px);
+  }
+  
+  .card-glass {
+    @apply bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg border border-white/20 p-6 sm:p-8 interactive-card;
+  }
+
+  /* Animations d'entrée fluides */
   .fade-in-up {
-    @apply opacity-0 translate-y-4 transition-all duration-500 ease-out;
+    @apply opacity-0 translate-y-8 transition-all duration-700 ease-out;
   }
   
   .fade-in-up.animate {
     @apply opacity-100 translate-y-0;
   }
-
-  /* Buttons avec micro-interactions et contraste amélioré */
-  .btn-primary {
-    @apply bg-black text-white px-6 py-3 rounded-full font-medium transition-all duration-200 hover:bg-neutral-800 focus:bg-neutral-800 hover:shadow-lg focus:shadow-lg hover:scale-105 focus:scale-105 active:scale-95;
-    /* Ratio de contraste 21:1 pour WCAG AAA */
-  }
   
-  .btn-secondary {
-    @apply border-2 border-black text-black px-6 py-3 rounded-full font-medium transition-all duration-200 hover:bg-black hover:text-white focus:bg-black focus:text-white hover:shadow-lg focus:shadow-lg hover:scale-105 focus:scale-105 active:scale-95;
-    /* Ratio de contraste 21:1 pour WCAG AAA */
-  }
-  
-  .btn-ghost {
-    @apply text-neutral-700 px-4 py-2 rounded-lg font-medium transition-all duration-200 hover:text-black hover:bg-neutral-100 focus:text-black focus:bg-neutral-100 hover:scale-105 focus:scale-105 active:scale-95;
-    /* Ratio de contraste amélioré */
+  .stagger-animation {
+    animation-delay: calc(var(--stagger-delay, 0) * 0.1s);
   }
 
-  /* États de focus et hover pour les éléments interactifs */
+  /* Espacement responsive unifié */
+  .space-section {
+    @apply space-y-6 sm:space-y-8 lg:space-y-12 xl:space-y-16;
+  }
+
+  .space-content {
+    @apply space-y-3 sm:space-y-4 lg:space-y-6;
+  }
+
+  .space-tight {
+    @apply space-y-2 sm:space-y-3 lg:space-y-4;
+  }
+
+  /* Images optimisées responsive */
+  .img-responsive {
+    @apply w-full h-auto object-cover;
+  }
+  
+  .img-hero {
+    @apply img-responsive max-h-screen;
+  }
+  
+  .img-card {
+    @apply img-responsive rounded-lg;
+  }
+
+  /* Formulaires avec design moderne */
+  .form-input {
+    @apply w-full bg-transparent border-0 border-b-2 border-neutral-300 px-0 py-3 text-current placeholder:text-neutral-400 focus:outline-none focus:border-black smooth-hover;
+  }
+  
+  .form-select {
+    @apply form-input cursor-pointer;
+  }
+  
+  .form-textarea {
+    @apply form-input resize-none;
+  }
+
+  /* États d'éléments interactifs */
   .interactive-element {
-    @apply transition-all duration-200 ease-out;
+    @apply smooth-hover;
   }
 
   .interactive-element:hover,
@@ -236,29 +364,13 @@
   .interactive-element:active {
     @apply transform scale-95;
   }
-
-  /* Amélioration des contrastes pour les textes */
-  .text-high-contrast {
-    @apply text-neutral-900;
-    /* Ratio de contraste 21:1 */
-  }
-
-  .text-medium-contrast {
-    @apply text-neutral-700;
-    /* Ratio de contraste 12.6:1 */
-  }
-
-  .text-accessible-gray {
-    @apply text-neutral-600;
-    /* Ratio de contraste 7:1 pour WCAG AA */
-  }
 }
 
-/* Animations personnalisées */
+/* Animations personnalisées fluides */
 @keyframes fade-in-up {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
@@ -269,100 +381,123 @@
 @keyframes pulse-subtle {
   0%, 100% {
     transform: scale(1);
+    opacity: 1;
   }
   50% {
-    transform: scale(1.02);
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
   }
 }
 
 .animate-fade-in-up {
-  animation: fade-in-up 0.6s ease-out forwards;
+  animation: fade-in-up 0.8s ease-out forwards;
 }
 
 .animate-pulse-subtle {
-  animation: pulse-subtle 2s ease-in-out infinite;
+  animation: pulse-subtle 3s ease-in-out infinite;
 }
 
-/* Responsive spacing utilities */
-.space-section {
-  @apply space-y-8 lg:space-y-12;
+.animate-float {
+  animation: float 6s ease-in-out infinite;
 }
 
-.space-content {
-  @apply space-y-4 lg:space-y-6;
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
 }
 
-.space-tight {
-  @apply space-y-2 lg:space-y-3;
-}
-
-/* Améliorations pour la navigation clavier */
-@media (prefers-reduced-motion: reduce) {
-  .animate-fade-in-up,
-  .animate-pulse-subtle,
-  .animate-bounce,
-  .animate-spin {
-    animation: none;
+/* Responsive breakpoints optimisés */
+@media (max-width: 640px) {
+  .section-padding {
+    @apply py-8 px-4;
   }
   
-  .transition-all,
-  .transition-colors,
-  .transition-transform,
-  .transition-opacity {
-    transition: none;
+  h1 {
+    @apply text-3xl leading-tight;
+  }
+  
+  h2 {
+    @apply text-2xl leading-tight;
+  }
+  
+  .btn-primary,
+  .btn-secondary {
+    @apply px-4 py-2 text-sm;
   }
 }
 
-/* Amélioration du contraste en mode sombre */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .section-padding {
+    @apply py-12 px-6;
+  }
+}
+
+/* Mode sombre amélioré */
 @media (prefers-color-scheme: dark) {
-  .text-accessible-gray {
+  .text-neutral-600 {
     @apply text-neutral-300;
   }
   
-  .text-medium-contrast {
-    @apply text-neutral-200;
+  .card-modern {
+    @apply bg-neutral-900 border-neutral-700;
   }
   
-  .text-high-contrast {
-    @apply text-white;
+  .card-glass {
+    @apply bg-neutral-900/80 border-neutral-700/20;
   }
 }
 
-/* Indicateurs visuels pour les utilisateurs de lecteurs d'écran */
-[aria-hidden="true"] {
-  speak: none;
+/* Réduction de mouvement pour l'accessibilité */
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in-up,
+  .animate-pulse-subtle,
+  .animate-float,
+  .animate-shimmer {
+    animation: none;
+  }
+  
+  .smooth-hover,
+  .interactive-card,
+  .interactive-button,
+  .scale-hover {
+    transition: none;
+  }
+  
+  *:hover,
+  *:focus {
+    transform: none !important;
+  }
 }
 
-[role="presentation"] {
-  speak: none;
-}
-
-/* Amélioration des liens avec indicateurs visuels */
-a[target="_blank"]::after {
-  content: " (ouvre dans un nouvel onglet)";
-  @apply sr-only;
-}
-
-/* Amélioration des formulaires pour l'accessibilité */
-input:invalid,
-textarea:invalid,
-select:invalid {
-  @apply border-red-500 ring-2 ring-red-200;
-}
-
-input:invalid:focus,
-textarea:invalid:focus,
-select:invalid:focus {
-  @apply ring-red-300;
-}
-
-/* Amélioration des contrastes pour les bordures */
-.border-accessible {
-  @apply border-neutral-400;
-  /* Ratio de contraste 3:1 minimum pour les éléments non-textuels */
-}
-
-.border-accessible:hover,
-.border-accessible:focus {
-  @apply border-neutral-600;
+/* Print styles */
+@media print {
+  .animate-fade-in-up,
+  .animate-pulse-subtle,
+  .animate-float {
+    animation: none;
+  }
+  
+  .shadow-lg,
+  .shadow-xl {
+    box-shadow: none;
+  }
 }

@@ -3,9 +3,8 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
-import { Send, Phone, Mail, MapPin, Clock, Check, AlertCircle } from 'lucide-react';
+import { Send, Check, AlertCircle, Loader2 } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
-import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Form, FormControl, FormField, FormItem, FormMessage } from '@/components/ui/form';
 
@@ -129,20 +128,20 @@ ${data.message}`;
     if (!value) return null;
     const hasError = errors[fieldName];
     return hasError ? (
-      <AlertCircle className="w-5 h-5 text-red-400" />
+      <AlertCircle className="w-4 h-4 sm:w-5 sm:h-5 text-red-400" />
     ) : (
-      <Check className="w-5 h-5 text-green-400" />
+      <Check className="w-4 h-4 sm:w-5 sm:h-5 text-green-400" />
     );
   };
 
   if (isSubmitted) {
     return (
-      <div className="flex flex-col items-center justify-center min-h-[400px] text-center">
-        <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mb-6">
-          <Check className="w-8 h-8 text-white" />
+      <div className="flex flex-col items-center justify-center min-h-[300px] sm:min-h-[400px] text-center px-4">
+        <div className="w-12 h-12 sm:w-16 sm:h-16 bg-green-500 rounded-full flex items-center justify-center mb-4 sm:mb-6 animate-pulse-subtle">
+          <Check className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
         </div>
-        <h3 className="text-2xl font-light text-white mb-4">Message envoyé !</h3>
-        <p className="text-gray-300 max-w-md">
+        <h3 className="text-xl sm:text-2xl font-light text-white mb-3 sm:mb-4">Message envoyé !</h3>
+        <p className="text-sm sm:text-base text-gray-300 max-w-md leading-relaxed">
           Merci pour votre message. Notre équipe vous contactera dans les 24h. 
           Vous allez être redirigé vers WhatsApp pour poursuivre la conversation.
         </p>
@@ -152,9 +151,9 @@ ${data.message}`;
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 max-w-lg">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 sm:space-y-6 max-w-lg">
         {/* Informations personnelles */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <FormField
             control={form.control}
             name="nom"
@@ -165,14 +164,14 @@ ${data.message}`;
                     <input
                       {...field}
                       placeholder="Nom *"
-                      className="w-full bg-transparent border-0 border-b border-gray-600 pb-3 text-white placeholder:text-gray-400 focus:outline-none focus:border-white text-lg font-light transition-colors pr-8"
+                      className="w-full bg-transparent border-0 border-b-2 border-gray-600 pb-2 sm:pb-3 text-white placeholder:text-gray-400 focus:outline-none focus:border-white text-base sm:text-lg font-light smooth-hover pr-8"
                     />
                   </FormControl>
                   <div className="absolute right-0 top-0">
                     {getFieldIcon('nom', field.value)}
                   </div>
                 </div>
-                <FormMessage className="text-red-400 text-sm mt-1" />
+                <FormMessage className="text-red-400 text-xs sm:text-sm mt-1" />
               </FormItem>
             )}
           />
@@ -187,20 +186,20 @@ ${data.message}`;
                     <input
                       {...field}
                       placeholder="Prénom *"
-                      className="w-full bg-transparent border-0 border-b border-gray-600 pb-3 text-white placeholder:text-gray-400 focus:outline-none focus:border-white text-lg font-light transition-colors pr-8"
+                      className="w-full bg-transparent border-0 border-b-2 border-gray-600 pb-2 sm:pb-3 text-white placeholder:text-gray-400 focus:outline-none focus:border-white text-base sm:text-lg font-light smooth-hover pr-8"
                     />
                   </FormControl>
                   <div className="absolute right-0 top-0">
                     {getFieldIcon('prenom', field.value)}
                   </div>
                 </div>
-                <FormMessage className="text-red-400 text-sm mt-1" />
+                <FormMessage className="text-red-400 text-xs sm:text-sm mt-1" />
               </FormItem>
             )}
           />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <FormField
             control={form.control}
             name="email"
@@ -212,14 +211,14 @@ ${data.message}`;
                       {...field}
                       type="email"
                       placeholder="Adresse e-mail *"
-                      className="w-full bg-transparent border-0 border-b border-gray-600 pb-3 text-white placeholder:text-gray-400 focus:outline-none focus:border-white text-lg font-light transition-colors pr-8"
+                      className="w-full bg-transparent border-0 border-b-2 border-gray-600 pb-2 sm:pb-3 text-white placeholder:text-gray-400 focus:outline-none focus:border-white text-base sm:text-lg font-light smooth-hover pr-8"
                     />
                   </FormControl>
                   <div className="absolute right-0 top-0">
                     {getFieldIcon('email', field.value)}
                   </div>
                 </div>
-                <FormMessage className="text-red-400 text-sm mt-1" />
+                <FormMessage className="text-red-400 text-xs sm:text-sm mt-1" />
               </FormItem>
             )}
           />
@@ -230,17 +229,21 @@ ${data.message}`;
                 control={form.control}
                 name="countryCode"
                 render={({ field }) => (
-                  <FormItem className="w-24">
+                  <FormItem className="w-20 sm:w-24">
                     <Select onValueChange={field.onChange} defaultValue={field.value}>
                       <FormControl>
-                        <SelectTrigger className="bg-transparent border-0 border-b border-gray-600 text-white focus:border-white rounded-none">
+                        <SelectTrigger className="bg-transparent border-0 border-b-2 border-gray-600 text-white focus:border-white rounded-none h-auto pb-2 sm:pb-3 text-sm sm:text-base">
                           <SelectValue />
                         </SelectTrigger>
                       </FormControl>
-                      <SelectContent className="bg-black border-gray-700">
+                      <SelectContent className="bg-black border-gray-700 max-h-48">
                         {countryCodes.map((country, index) => (
-                          <SelectItem key={index} value={country.code} className="text-white hover:bg-gray-800">
-                            {country.flag} {country.code}
+                          <SelectItem key={index} value={country.code} className="text-white hover:bg-gray-800 text-sm">
+                            <span className="flex items-center gap-2">
+                              <span>{country.flag}</span>
+                              <span className="hidden sm:inline">{country.code}</span>
+                              <span className="sm:hidden">{country.code}</span>
+                            </span>
                           </SelectItem>
                         ))}
                       </SelectContent>
@@ -259,15 +262,15 @@ ${data.message}`;
                         <input
                           {...field}
                           type="tel"
-                          placeholder="Numéro de téléphone"
-                          className="w-full bg-transparent border-0 border-b border-gray-600 pb-3 text-white placeholder:text-gray-400 focus:outline-none focus:border-white text-lg font-light transition-colors pr-8"
+                          placeholder="Téléphone *"
+                          className="w-full bg-transparent border-0 border-b-2 border-gray-600 pb-2 sm:pb-3 text-white placeholder:text-gray-400 focus:outline-none focus:border-white text-base sm:text-lg font-light smooth-hover pr-8"
                         />
                       </FormControl>
                       <div className="absolute right-0 top-0">
                         {getFieldIcon('telephone', field.value)}
                       </div>
                     </div>
-                    <FormMessage className="text-red-400 text-sm mt-1" />
+                    <FormMessage className="text-red-400 text-xs sm:text-sm mt-1" />
                   </FormItem>
                 )}
               />
@@ -285,11 +288,11 @@ ${data.message}`;
                   <input
                     {...field}
                     placeholder="Entreprise / Organisation"
-                    className="w-full bg-transparent border-0 border-b border-gray-600 pb-3 text-white placeholder:text-gray-400 focus:outline-none focus:border-white text-lg font-light transition-colors pr-8"
+                    className="w-full bg-transparent border-0 border-b-2 border-gray-600 pb-2 sm:pb-3 text-white placeholder:text-gray-400 focus:outline-none focus:border-white text-base sm:text-lg font-light smooth-hover pr-8"
                   />
                 </FormControl>
                 <div className="absolute right-0 top-0">
-                  {getFieldIcon('entreprise', field.value)}
+                  {getFieldIcon('entreprise', field.value || '')}
                 </div>
               </div>
             </FormItem>
@@ -304,7 +307,7 @@ ${data.message}`;
             <FormItem>
               <Select onValueChange={field.onChange} value={field.value}>
                 <FormControl>
-                  <SelectTrigger className="bg-transparent border-0 border-b border-gray-600 text-white focus:border-white rounded-none text-lg font-light">
+                  <SelectTrigger className="bg-transparent border-0 border-b-2 border-gray-600 text-white focus:border-white rounded-none h-auto pb-2 sm:pb-3 text-base sm:text-lg font-light">
                     <SelectValue placeholder="Service souhaité *" className="text-gray-400" />
                   </SelectTrigger>
                 </FormControl>
@@ -316,12 +319,12 @@ ${data.message}`;
                   ))}
                 </SelectContent>
               </Select>
-              <FormMessage className="text-red-400 text-sm mt-1" />
+              <FormMessage className="text-red-400 text-xs sm:text-sm mt-1" />
             </FormItem>
           )}
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <FormField
             control={form.control}
             name="budget"
@@ -329,7 +332,7 @@ ${data.message}`;
               <FormItem>
                 <Select onValueChange={field.onChange} value={field.value}>
                   <FormControl>
-                    <SelectTrigger className="bg-transparent border-0 border-b border-gray-600 text-white focus:border-white rounded-none text-lg font-light">
+                    <SelectTrigger className="bg-transparent border-0 border-b-2 border-gray-600 text-white focus:border-white rounded-none h-auto pb-2 sm:pb-3 text-base sm:text-lg font-light">
                       <SelectValue placeholder="Budget estimé" className="text-gray-400" />
                     </SelectTrigger>
                   </FormControl>
@@ -352,7 +355,7 @@ ${data.message}`;
               <FormItem>
                 <Select onValueChange={field.onChange} value={field.value}>
                   <FormControl>
-                    <SelectTrigger className="bg-transparent border-0 border-b border-gray-600 text-white focus:border-white rounded-none text-lg font-light">
+                    <SelectTrigger className="bg-transparent border-0 border-b-2 border-gray-600 text-white focus:border-white rounded-none h-auto pb-2 sm:pb-3 text-base sm:text-lg font-light">
                       <SelectValue placeholder="Délai souhaité" className="text-gray-400" />
                     </SelectTrigger>
                   </FormControl>
@@ -379,38 +382,38 @@ ${data.message}`;
                   <textarea
                     {...field}
                     placeholder="Décrivez votre projet, vos objectifs, votre vision... *"
-                    className="w-full bg-transparent border-0 border-b border-gray-600 pb-3 text-white placeholder:text-gray-400 focus:outline-none focus:border-white resize-none text-lg font-light transition-colors pr-8"
-                    rows={4}
+                    className="w-full bg-transparent border-0 border-b-2 border-gray-600 pb-2 sm:pb-3 text-white placeholder:text-gray-400 focus:outline-none focus:border-white resize-none text-base sm:text-lg font-light smooth-hover pr-8 min-h-[80px] sm:min-h-[100px]"
+                    rows={3}
                   />
                 </FormControl>
                 <div className="absolute right-0 top-0">
                   {getFieldIcon('message', field.value)}
                 </div>
               </div>
-              <FormMessage className="text-red-400 text-sm mt-1" />
+              <FormMessage className="text-red-400 text-xs sm:text-sm mt-1" />
             </FormItem>
           )}
         />
 
-        <div className="pt-4">
+        <div className="pt-4 sm:pt-6">
           <button
             type="submit"
             disabled={isSubmitting}
-            className="group bg-white text-black px-8 py-4 rounded-full hover:bg-gray-100 transition-all duration-300 font-medium flex items-center space-x-3 hover:scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+            className="group bg-white text-black px-6 py-3 sm:px-8 sm:py-4 rounded-full hover:bg-gray-100 smooth-hover font-medium flex items-center space-x-2 sm:space-x-3 interactive-button disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none w-full sm:w-auto justify-center"
           >
             {isSubmitting ? (
               <>
-                <div className="w-5 h-5 border-2 border-black border-t-transparent rounded-full animate-spin" />
-                <span>Envoi en cours...</span>
+                <Loader2 className="w-4 h-4 sm:w-5 sm:h-5 animate-spin" />
+                <span className="text-sm sm:text-base">Envoi en cours...</span>
               </>
             ) : (
               <>
-                <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                <span>Envoyer ma demande</span>
+                <Send className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 smooth-hover" />
+                <span className="text-sm sm:text-base">Envoyer ma demande</span>
               </>
             )}
           </button>
-          <p className="text-gray-500 text-sm mt-3">
+          <p className="text-gray-500 text-xs sm:text-sm mt-3 text-center sm:text-left">
             Réponse garantie sous 24h • Les champs marqués * sont obligatoires
           </p>
         </div>
