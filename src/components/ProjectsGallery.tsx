@@ -55,7 +55,7 @@ export const ProjectsGallery = () => {
       category: "Événementiel",
       image: "/lovable-uploads/8021884d-fcc2-4e05-ac30-7e42c2b94abc.png",
       description: "Direction artistique et production d'événements exclusifs haut de gamme avec une approche créative unique et mémorable. Gestion complète du booking et de la programmation d'artistes DJs internationaux pour des soirées d'exception.",
-      year: "2023-2024",
+      year: "2024-2025",
       url: "#"
     },
     {
@@ -71,7 +71,7 @@ export const ProjectsGallery = () => {
       category: "Personal Branding",
       image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=1200&q=80",
       description: "Accompagnement stratégique sur une mission de personal branding à fort enjeu destinée à renforcer l'image d'une dirigeante politique influente sur la scène internationale. Le travail a porté sur la construction d'un positionnement personnel humanisant et inspirant, la mise en place d'une stratégie multicanale (réseaux sociaux, storytelling éditorial, contenus visuels), et la coordination d'une équipe créative complète (social media, design, contenu). Une attention particulière a été portée à la désolidarisation du cadre politique officiel pour valoriser une figure incarnant l'espoir, la jeunesse et l'avenir.",
-      year: "2024",
+      year: "2024-2025",
       url: "#"
     },
     {
@@ -79,7 +79,7 @@ export const ProjectsGallery = () => {
       category: "Branding Global",
       image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=1200&q=80",
       description: "Mission en cours de refonte stratégique d'image et de structuration du branding personnel d'un entrepreneur marocain, parallèlement au positionnement de sa holding innovante active dans plusieurs secteurs (architecture, éducation, gastronomie, coworking). Le travail inclut la création d'une charte graphique sur-mesure, l'élaboration d'un narratif éditorial inspiré par la vision du fondateur, et la production de supports de communication professionnels (brand deck, identité visuelle, manifeste de fondation). Objectif : harmoniser l'écosystème des marques autour d'une esthétique raffinée, d'un engagement humaniste et d'une ambition internationale.",
-      year: "2025",
+      year: "2024-2025",
       url: "#"
     }
   ];
