@@ -1,11 +1,18 @@
-import { ArrowRight, ExternalLink } from "lucide-react";
+
+import { ArrowRight, ExternalLink, Eye } from "lucide-react";
+import { useState } from "react";
+import { ProjectDetailsModal } from "./ProjectDetailsModal";
 
 export const ProjectsGallery = () => {
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const projects = [
     {
       title: "Amoud",
       category: "Branding & Marketing Digital",
       image: "/lovable-uploads/8e26a61e-e439-4688-b503-8a3088d2124f.png",
+      shortDescription: "Maison de pâtisserie marocaine fondée en 1982, réputée pour l'excellence de ses viennoiseries et créations sucrées haut de gamme. Alliant tradition artisanale et innovation moderne.",
       description: "Maison de pâtisserie marocaine fondée en 1982, réputée pour l'excellence de ses viennoiseries, entremets et créations sucrées haut de gamme. Alliant tradition artisanale et innovation, elle s'est imposée comme une référence incontournable à Casablanca et dans plusieurs grandes villes du Maroc. Grâce à un savoir-faire rigoureux et une offre raffinée, Amoud séduit une clientèle exigeante à la recherche de qualité et d'authenticité.",
       year: "2024",
       url: "#"
@@ -14,6 +21,7 @@ export const ProjectsGallery = () => {
       title: "Edwin",
       category: "Pop-up Store & Événementiel", 
       image: "/lovable-uploads/b82bb134-7256-4325-b5ca-90d055f1629c.png",
+      shortDescription: "Mission complète de pop-up store à Bordeaux pour cette marque de jeans japonaise iconique fondée en 1947. Conception d'un espace éphémère immersif célébrant l'héritage denim japonais.",
       description: "Mission complète de pop-up store à Bordeaux pour cette marque de jeans japonaise iconique fondée en 1947. Conception et production d'un espace éphémère immersif célébrant l'héritage denim japonais, organisation d'événements exclusifs avec des artistes locaux, stratégie d'activation marketing ciblée et renforcement du branding européen. Une expérience retail unique mêlant tradition japonaise et culture bordelaise.",
       year: "2024",
       url: "#"
@@ -22,6 +30,7 @@ export const ProjectsGallery = () => {
       title: "French Tech",
       category: "Partenariat Stratégique",
       image: "/lovable-uploads/801816e7-97bc-49c9-948c-34e3c9d49e1f.png",
+      shortDescription: "Partenaire officiel de l'écosystème French Tech pour l'accompagnement des startups marocaines vers l'international.",
       description: "Partenaire officiel de l'écosystème French Tech pour l'accompagnement des startups marocaines vers l'international.",
       year: "2022-2024",
       url: "#"
@@ -30,6 +39,7 @@ export const ProjectsGallery = () => {
       title: "Soulection",
       category: "Événementiel & Branding",
       image: "/lovable-uploads/b8c1c54b-9721-486c-81ab-dae0977cacc0.png",
+      shortDescription: "Production d'événements exclusifs et développement de la présence africaine pour ce collectif musical international.",
       description: "Production d'événements exclusifs et développement de la présence africaine pour ce collectif musical international.",
       year: "2023-2024",
       url: "https://soulection.com/"
@@ -38,6 +48,7 @@ export const ProjectsGallery = () => {
       title: "Artitenium",
       category: "Branding & Digital",
       image: "/lovable-uploads/ceaff19e-cebb-453b-a8e2-33fc348e3bad.png",
+      shortDescription: "Création d'identité visuelle moderne, développement de site web et stratégie d'acquisition digitale pour cette entreprise d'aménagement d'intérieur haut de gamme.",
       description: "Création d'une identité visuelle moderne, développement de site web et stratégie d'acquisition digitale pour cette entreprise spécialisée dans l'aménagement d'intérieur haut de gamme. Mission complète incluant branding, stratégie digitale et gestion des réseaux sociaux.",
       year: "2024-2025",
       url: "https://artitenium.ma/"
@@ -46,11 +57,17 @@ export const ProjectsGallery = () => {
       title: "Personal Branding Politique",
       category: "Branding Personnel",
       image: "/lovable-uploads/da131874-d340-4dc9-b1e7-5fc5f24a0f40.png",
+      shortDescription: "Accompagnement stratégique sur une mission de personal branding à fort enjeu pour renforcer l'image d'une dirigeante politique influente sur la scène internationale.",
       description: "Accompagnement stratégique sur une mission de personal branding à fort enjeu destinée à renforcer l'image d'une dirigeante politique influente sur la scène internationale. Le travail a porté sur la construction d'un positionnement personnel humanisant et inspirant, la mise en place d'une stratégie multicanale (réseaux sociaux, storytelling éditorial, contenus visuels), et la coordination d'une équipe créative complète. Une attention particulière a été portée à la désolidarisation du cadre politique officiel pour valoriser une figure incarnant l'espoir, la jeunesse et l'avenir.",
       year: "2024",
       url: "#"
     }
   ];
+
+  const handleProjectClick = (project) => {
+    setSelectedProject(project);
+    setIsModalOpen(true);
+  };
 
   return (
     <section className="py-32 px-8 lg:px-16 bg-gradient-to-br from-gray-50 via-white to-gray-100 relative overflow-hidden">
@@ -74,8 +91,9 @@ export const ProjectsGallery = () => {
           {projects.map((project, index) => (
             <div 
               key={index}
-              className="group relative overflow-hidden rounded-2xl bg-white hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100"
+              className="group relative overflow-hidden rounded-2xl bg-white hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 cursor-pointer"
               style={{ animationDelay: `${index * 100}ms` }}
+              onClick={() => handleProjectClick(project)}
             >
               <div className="aspect-[4/3] overflow-hidden relative">
                 <img 
@@ -85,9 +103,14 @@ export const ProjectsGallery = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 
-                {/* Badge année flottant */}
                 <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm text-black px-3 py-1 rounded-full text-xs font-medium">
                   {project.year}
+                </div>
+
+                <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="bg-white/90 backdrop-blur-sm p-2 rounded-full">
+                    <Eye className="w-4 h-4 text-gray-700" />
+                  </div>
                 </div>
               </div>
               
@@ -102,6 +125,7 @@ export const ProjectsGallery = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="opacity-0 group-hover:opacity-100 transition-opacity p-2 hover:bg-gray-100 rounded-full"
+                      onClick={(e) => e.stopPropagation()}
                     >
                       <ExternalLink className="w-4 h-4 text-gray-600" />
                     </a>
@@ -112,16 +136,15 @@ export const ProjectsGallery = () => {
                   {project.title}
                 </h3>
                 <p className="text-sm text-gray-600 leading-relaxed mb-4">
-                  {project.description}
+                  {project.shortDescription}
                 </p>
                 
                 <div className="flex items-center text-black group-hover:text-gray-700 transition-colors">
-                  <span className="text-sm font-medium mr-2">Voir le projet</span>
+                  <span className="text-sm font-medium mr-2">Voir les détails</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </div>
               </div>
               
-              {/* Barre de progression animée */}
               <div className="h-1 bg-gradient-to-r from-black to-gray-600 rounded-b-2xl transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
             </div>
           ))}
@@ -137,6 +160,12 @@ export const ProjectsGallery = () => {
           </a>
         </div>
       </div>
+
+      <ProjectDetailsModal 
+        project={selectedProject}
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
     </section>
   );
 };
