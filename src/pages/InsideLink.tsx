@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { ArrowLeft, Target, Palette, Users, Lightbulb, Linkedin, History, Download } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -15,6 +14,8 @@ import { ThreeDHoverCard } from "@/components/inside-link/ThreeDHoverCard";
 import { BrandingQuiz } from "@/components/inside-link/BrandingQuiz";
 import { VirtualBusinessCard } from "@/components/inside-link/VirtualBusinessCard";
 import { InteractiveTimeline } from "@/components/inside-link/InteractiveTimeline";
+import { PersonalizedWelcome } from "@/components/inside-link/PersonalizedWelcome";
+import { DynamicContent } from "@/components/inside-link/DynamicContent";
 import { useParallax } from "@/hooks/useParallax";
 import { useSoundEffects } from "@/hooks/useSoundEffects";
 
@@ -101,6 +102,8 @@ const InsideLink = () => {
         <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.02)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
         
         <div className="max-w-6xl mx-auto text-center relative z-10">
+          <PersonalizedWelcome />
+          
           <h1 className="text-6xl lg:text-7xl font-light mb-8 text-transparent bg-clip-text bg-gradient-to-r from-black via-gray-800 to-black animate-fade-in">
             Inside Link
           </h1>
@@ -110,6 +113,10 @@ const InsideLink = () => {
               speed={30}
               delay={1000}
             />
+          </div>
+          
+          <div className="mt-12">
+            <DynamicContent />
           </div>
         </div>
       </section>
