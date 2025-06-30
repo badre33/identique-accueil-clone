@@ -1,4 +1,5 @@
 import { ArrowRight, Sparkles, Calendar, FileText } from "lucide-react";
+import { OptimizedImage } from "./OptimizedImage";
 
 export const Hero = () => {
   return (
@@ -111,13 +112,14 @@ export const Hero = () => {
           </div>
         </div>
         
-        {/* Section image avec effets */}
+        {/* Section image optimisée */}
         <div className="relative min-h-[500px] lg:min-h-full overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/10 to-white/30 z-10"></div>
-          <img 
-            src="/lovable-uploads/c2c2bc5c-1a2d-4fdd-a6ac-9d3a8d13ac23.png" 
-            alt="Link Agency - Créativité et Innovation" 
-            className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+          <OptimizedImage
+            src="/lovable-uploads/c2c2bc5c-1a2d-4fdd-a6ac-9d3a8d13ac23.png"
+            alt="Link Agency - Créativité et Innovation"
+            className="w-full h-full hover:scale-105 transition-transform duration-700"
+            priority={true}
           />
           
           {/* Éléments flottants décoratifs */}
