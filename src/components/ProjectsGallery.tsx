@@ -65,6 +65,22 @@ export const ProjectsGallery = () => {
       description: "Conception et production complète de ce festival artistique underground avec une identité visuelle forte et une expérience immersive. Booking et curation d'une programmation DJ avant-gardiste pour créer une expérience musicale unique.",
       year: "2022-2024",
       url: "#"
+    },
+    {
+      title: "Branding Personnel",
+      category: "Personal Branding",
+      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=1200&q=80",
+      description: "Accompagnement stratégique sur une mission de personal branding à fort enjeu destinée à renforcer l'image d'une dirigeante politique influente sur la scène internationale. Le travail a porté sur la construction d'un positionnement personnel humanisant et inspirant, la mise en place d'une stratégie multicanale (réseaux sociaux, storytelling éditorial, contenus visuels), et la coordination d'une équipe créative complète (social media, design, contenu). Une attention particulière a été portée à la désolidarisation du cadre politique officiel pour valoriser une figure incarnant l'espoir, la jeunesse et l'avenir.",
+      year: "2024",
+      url: "#"
+    },
+    {
+      title: "Entrepreneur & Holding",
+      category: "Branding Global",
+      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=1200&q=80",
+      description: "Mission en cours de refonte stratégique d'image et de structuration du branding personnel d'un entrepreneur marocain, parallèlement au positionnement de sa holding innovante active dans plusieurs secteurs (architecture, éducation, gastronomie, coworking). Le travail inclut la création d'une charte graphique sur-mesure, l'élaboration d'un narratif éditorial inspiré par la vision du fondateur, et la production de supports de communication professionnels (brand deck, identité visuelle, manifeste de fondation). Objectif : harmoniser l'écosystème des marques autour d'une esthétique raffinée, d'un engagement humaniste et d'une ambition internationale.",
+      year: "2024",
+      url: "#"
     }
   ];
 
