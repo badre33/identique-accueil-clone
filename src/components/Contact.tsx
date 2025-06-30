@@ -1,4 +1,5 @@
 
+
 import { useState } from 'react';
 import { Send, Phone, Mail, MapPin, Clock } from 'lucide-react';
 
@@ -12,7 +13,8 @@ export const Contact = () => {
     service: '',
     budget: '',
     message: '',
-    delai: ''
+    delai: '',
+    countryCode: '+212'
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -29,7 +31,7 @@ export const Contact = () => {
 👤 Contact:
 - Nom: ${formData.nom} ${formData.prenom}
 - Email: ${formData.email}
-- Téléphone: ${formData.telephone}
+- Téléphone: ${formData.countryCode} ${formData.telephone}
 - Entreprise: ${formData.entreprise}
 
 📋 Projet:
@@ -69,6 +71,51 @@ ${formData.message}`;
     '3-6 mois',
     'Plus de 6 mois',
     'Flexible'
+  ];
+
+  const countryCodes = [
+    { code: '+212', country: 'Maroc', flag: '🇲🇦' },
+    { code: '+33', country: 'France', flag: '🇫🇷' },
+    { code: '+1', country: 'États-Unis/Canada', flag: '🇺🇸' },
+    { code: '+44', country: 'Royaume-Uni', flag: '🇬🇧' },
+    { code: '+49', country: 'Allemagne', flag: '🇩🇪' },
+    { code: '+39', country: 'Italie', flag: '🇮🇹' },
+    { code: '+34', country: 'Espagne', flag: '🇪🇸' },
+    { code: '+32', country: 'Belgique', flag: '🇧🇪' },
+    { code: '+41', country: 'Suisse', flag: '🇨🇭' },
+    { code: '+31', country: 'Pays-Bas', flag: '🇳🇱' },
+    { code: '+213', country: 'Algérie', flag: '🇩🇿' },
+    { code: '+216', country: 'Tunisie', flag: '🇹🇳' },
+    { code: '+966', country: 'Arabie Saoudite', flag: '🇸🇦' },
+    { code: '+971', country: 'Émirats Arabes Unis', flag: '🇦🇪' },
+    { code: '+962', country: 'Jordanie', flag: '🇯🇴' },
+    { code: '+20', country: 'Égypte', flag: '🇪🇬' },
+    { code: '+961', country: 'Liban', flag: '🇱🇧' },
+    { code: '+965', country: 'Koweït', flag: '🇰🇼' },
+    { code: '+974', country: 'Qatar', flag: '🇶🇦' },
+    { code: '+973', country: 'Bahreïn', flag: '🇧🇭' },
+    { code: '+968', country: 'Oman', flag: '🇴🇲' },
+    { code: '+91', country: 'Inde', flag: '🇮🇳' },
+    { code: '+86', country: 'Chine', flag: '🇨🇳' },
+    { code: '+81', country: 'Japon', flag: '🇯🇵' },
+    { code: '+82', country: 'Corée du Sud', flag: '🇰🇷' },
+    { code: '+60', country: 'Malaisie', flag: '🇲🇾' },
+    { code: '+65', country: 'Singapour', flag: '🇸🇬' },
+    { code: '+852', country: 'Hong Kong', flag: '🇭🇰' },
+    { code: '+886', country: 'Taïwan', flag: '🇹🇼' },
+    { code: '+61', country: 'Australie', flag: '🇦🇺' },
+    { code: '+64', country: 'Nouvelle-Zélande', flag: '🇳🇿' },
+    { code: '+55', country: 'Brésil', flag: '🇧🇷' },
+    { code: '+52', country: 'Mexique', flag: '🇲🇽' },
+    { code: '+54', country: 'Argentine', flag: '🇦🇷' },
+    { code: '+56', country: 'Chili', flag: '🇨🇱' },
+    { code: '+57', country: 'Colombie', flag: '🇨🇴' },
+    { code: '+51', country: 'Pérou', flag: '🇵🇪' },
+    { code: '+58', country: 'Venezuela', flag: '🇻🇪' },
+    { code: '+27', country: 'Afrique du Sud', flag: '🇿🇦' },
+    { code: '+234', country: 'Nigeria', flag: '🇳🇬' },
+    { code: '+254', country: 'Kenya', flag: '🇰🇪' },
+    { code: '+233', country: 'Ghana', flag: '🇬🇭' }
   ];
 
   return (
@@ -125,13 +172,22 @@ ${formData.message}`;
             </div>
             <div className="relative">
               <div className="flex">
-                <div className="flex items-center bg-transparent border-0 border-b border-gray-600 pb-3 text-gray-400 text-lg font-light pr-2">
-                  +212
-                </div>
+                <select
+                  name="countryCode"
+                  value={formData.countryCode}
+                  onChange={handleChange}
+                  className="bg-transparent border-0 border-b border-gray-600 pb-3 text-white focus:outline-none focus:border-white text-lg font-light transition-colors appearance-none cursor-pointer pr-2"
+                >
+                  {countryCodes.map((country, index) => (
+                    <option key={index} value={country.code} className="bg-black text-white">
+                      {country.flag} {country.code} {country.country}
+                    </option>
+                  ))}
+                </select>
                 <input
                   type="tel"
                   name="telephone"
-                  placeholder="6 XX XX XX XX"
+                  placeholder="Numéro de téléphone"
                   value={formData.telephone}
                   onChange={handleChange}
                   className="flex-1 bg-transparent border-0 border-b border-gray-600 pb-3 text-white placeholder:text-gray-400 focus:outline-none focus:border-white text-lg font-light transition-colors ml-2"
@@ -314,3 +370,4 @@ ${formData.message}`;
     </section>
   );
 };
+
