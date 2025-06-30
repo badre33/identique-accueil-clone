@@ -11,14 +11,15 @@ interface MagneticButtonProps {
 }
 
 export const MagneticButton = ({ children, className = '', href, onClick, target, rel }: MagneticButtonProps) => {
-  const buttonRef = useRef<HTMLAnchorElement | HTMLButtonElement>(null);
+  const anchorRef = useRef<HTMLAnchorElement>(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
-    const button = buttonRef.current;
-    if (!button) return;
+    const element = href ? anchorRef.current : buttonRef.current;
+    if (!element) return;
 
     const handleMouseMove = (e: MouseEvent) => {
-      const rect = button.getBoundingClientRect();
+      const rect = element.getBoundingClientRect();
       const x = e.clientX - rect.left - rect.width / 2;
       const y = e.clientY - rect.top - rect.height / 2;
       
@@ -30,39 +31,46 @@ export const MagneticButton = ({ children, className = '', href, onClick, target
         const moveX = x * strength * 0.3;
         const moveY = y * strength * 0.3;
         
-        button.style.transform = `translate(${moveX}px, ${moveY}px) scale(1.05)`;
+        element.style.transform = `translate(${moveX}px, ${moveY}px) scale(1.05)`;
       }
     };
 
     const handleMouseLeave = () => {
-      button.style.transform = 'translate(0px, 0px) scale(1)';
+      element.style.transform = 'translate(0px, 0px) scale(1)';
     };
 
-    button.addEventListener('mousemove', handleMouseMove);
-    button.addEventListener('mouseleave', handleMouseLeave);
+    element.addEventListener('mousemove', handleMouseMove);
+    element.addEventListener('mouseleave', handleMouseLeave);
 
     return () => {
-      button.removeEventListener('mousemove', handleMouseMove);
-      button.removeEventListener('mouseleave', handleMouseLeave);
+      element.removeEventListener('mousemove', handleMouseMove);
+      element.removeEventListener('mouseleave', handleMouseLeave);
     };
-  }, []);
+  }, [href]);
 
-  const commonProps = {
-    ref: buttonRef,
-    className: `transition-all duration-300 ease-out ${className}`,
-    onClick
-  };
+  const commonClassName = `transition-all duration-300 ease-out ${className}`;
 
   if (href) {
     return (
-      <a {...commonProps} href={href} target={target} rel={rel}>
+      <a
+        ref={anchorRef}
+        href={href}
+        target={target}
+        rel={rel}
+        className={commonClassName}
+        onClick={onClick}
+      >
         {children}
       </a>
     );
   }
 
   return (
-    <button {...commonProps}>
+    <button
+      ref={buttonRef}
+      className={commonClassName}
+      onClick={onClick}
+    >
       {children}
     </button>
   );
