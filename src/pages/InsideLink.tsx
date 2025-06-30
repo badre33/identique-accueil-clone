@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from "react";
-import { ArrowLeft, Target, Palette, Users, Lightbulb, Linkedin } from "lucide-react";
+import { ArrowLeft, Target, Palette, Users, Lightbulb, Linkedin, History, Download } from "lucide-react";
 import { Link } from "react-router-dom";
 import { FloatingContactWidget } from "@/components/FloatingContactWidget";
 import { SideNavigation } from "@/components/inside-link/SideNavigation";
@@ -10,15 +10,22 @@ import { JoinTeamSection } from "@/components/inside-link/JoinTeamSection";
 import { TypewriterText } from "@/components/inside-link/TypewriterText";
 import { MagneticButton } from "@/components/inside-link/MagneticButton";
 import { ParticleBackground } from "@/components/inside-link/ParticleBackground";
+import { InteractiveBackground } from "@/components/inside-link/InteractiveBackground";
+import { ThreeDHoverCard } from "@/components/inside-link/ThreeDHoverCard";
+import { BrandingQuiz } from "@/components/inside-link/BrandingQuiz";
+import { VirtualBusinessCard } from "@/components/inside-link/VirtualBusinessCard";
+import { InteractiveTimeline } from "@/components/inside-link/InteractiveTimeline";
 import { useParallax } from "@/hooks/useParallax";
+import { useSoundEffects } from "@/hooks/useSoundEffects";
 
 const InsideLink = () => {
   const [currentSection, setCurrentSection] = useState('hero');
   const parallaxOffset = useParallax(0.3);
+  const { playClickSound, playHoverSound } = useSoundEffects();
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['hero', 'founders', 'vision', 'stats', 'mission', 'join'];
+      const sections = ['hero', 'founders', 'skills', 'vision', 'stats', 'timeline', 'quiz', 'cards', 'mission', 'join'];
       const scrollPosition = window.scrollY + 200;
 
       for (const section of sections) {
@@ -39,9 +46,37 @@ const InsideLink = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const skillsData = [
+    {
+      icon: Target,
+      title: "Stratégie de Positionnement",
+      description: "Nous analysons votre marché et définissons votre positionnement unique pour vous démarquer de la concurrence.",
+      gradient: "from-blue-500 to-cyan-500"
+    },
+    {
+      icon: Palette,
+      title: "Design & Identité Visuelle",
+      description: "Création d'identités visuelles mémorables qui reflètent parfaitement l'essence de votre marque.",
+      gradient: "from-purple-500 to-pink-500"
+    },
+    {
+      icon: Lightbulb,
+      title: "Innovation & Créativité",
+      description: "Approches créatives et innovations pour faire rayonner votre marque dans un monde saturé.",
+      gradient: "from-green-500 to-emerald-500"
+    },
+    {
+      icon: Users,
+      title: "Expérience Client",
+      description: "Optimisation de chaque point de contact pour créer des expériences client exceptionnelles.",
+      gradient: "from-orange-500 to-red-500"
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-white relative overflow-hidden">
       <ParticleBackground />
+      <InteractiveBackground />
       <SideNavigation currentSection={currentSection} />
       
       {/* Header avec navigation de retour */}
@@ -100,6 +135,7 @@ const InsideLink = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-white/90 backdrop-blur-sm p-3 rounded-full hover:bg-white transition-colors"
+                    onClick={playClickSound}
                   >
                     <Linkedin className="w-5 h-5 text-blue-600" />
                   </MagneticButton>
@@ -119,7 +155,7 @@ const InsideLink = () => {
                 
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
-                    <Target className="w-6 h-6 text-black transform hover:rotate-12 transition-transform duration-300" />
+                    <Target className="w-6 h-6 text-black transform hover:rotate-12 transition-transform duration-300 morph-icon" />
                     <span className="text-lg font-medium text-black">Expert en :</span>
                   </div>
                   <ul className="space-y-2 ml-9 text-gray-700">
@@ -155,6 +191,7 @@ const InsideLink = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-white/90 backdrop-blur-sm p-3 rounded-full hover:bg-white transition-colors"
+                    onClick={playClickSound}
                   >
                     <Linkedin className="w-5 h-5 text-blue-600" />
                   </MagneticButton>
@@ -174,7 +211,7 @@ const InsideLink = () => {
                 
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
-                    <Palette className="w-6 h-6 text-black transform hover:rotate-12 transition-transform duration-300" />
+                    <Palette className="w-6 h-6 text-black transform hover:rotate-12 transition-transform duration-300 morph-icon" />
                     <span className="text-lg font-medium text-black">Spécialiste de :</span>
                   </div>
                   <ul className="space-y-2 ml-9 text-gray-700">
@@ -197,8 +234,97 @@ const InsideLink = () => {
         </div>
       </section>
 
+      {/* 3D Skills Section */}
+      <section id="skills" className="py-32 px-8 lg:px-16 bg-gradient-to-br from-gray-50 to-white relative">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl lg:text-6xl font-light mb-6 text-black">
+              Nos Expertises
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Des compétences complémentaires pour une approche holistique du branding
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {skillsData.map((skill, index) => (
+              <div key={index} className="animate-fade-in" style={{ animationDelay: `${index * 200}ms` }}>
+                <ThreeDHoverCard {...skill} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <VisionSection />
       <AnimatedStats />
+
+      {/* Interactive Timeline Section */}
+      <section id="timeline" className="py-32 px-8 lg:px-16 bg-gradient-to-br from-white to-gray-50 relative">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-16">
+            <div className="flex items-center justify-center space-x-3 mb-8">
+              <History className="w-8 h-8 transform hover:rotate-12 transition-transform duration-300" />
+              <h2 className="text-5xl lg:text-6xl font-light">Notre Histoire</h2>
+            </div>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Le parcours qui nous a menés à créer Link Agency
+            </p>
+          </div>
+          
+          <InteractiveTimeline />
+        </div>
+      </section>
+
+      {/* Branding Quiz Section */}
+      <section id="quiz" className="py-32 px-8 lg:px-16 relative">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl lg:text-6xl font-light mb-6 text-black">
+              Découvrez Votre Type de Branding
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Un quiz interactif pour identifier l'approche de branding qui vous correspond
+            </p>
+          </div>
+          
+          <BrandingQuiz />
+        </div>
+      </section>
+
+      {/* Virtual Business Cards Section */}
+      <section id="cards" className="py-32 px-8 lg:px-16 bg-gradient-to-br from-gray-50 to-white relative">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <div className="flex items-center justify-center space-x-3 mb-8">
+              <Download className="w-8 h-8 transform hover:rotate-12 transition-transform duration-300" />
+              <h2 className="text-5xl lg:text-6xl font-light">Nos Contacts</h2>
+            </div>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Téléchargez nos cartes de visite virtuelles pour rester en contact
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 justify-items-center">
+            <VirtualBusinessCard
+              name="Badreddine Harkaoui"
+              title="Strategic Growth Architect"
+              image="/lovable-uploads/da131874-d340-4dc9-b1e7-5fc5f24a0f40.png"
+              linkedinUrl="https://www.linkedin.com/in/badreddine-harkaoui-nexiafiducia/"
+              email="badreddine@link-agency.fr"
+              phone="+33 7 45 01 07 14"
+            />
+            <VirtualBusinessCard
+              name="Ayman Nejmi"
+              title="Creative Technologist"
+              image="/lovable-uploads/d53262f8-9a1f-43dd-b2bc-b199945981c1.png"
+              linkedinUrl="https://www.linkedin.com/in/ayman-nejmi-9926681a6/"
+              email="ayman@link-agency.fr"
+              phone="+33 7 45 01 07 14"
+            />
+          </div>
+        </div>
+      </section>
 
       {/* Pourquoi Link Section */}
       <section id="mission" className="py-32 px-8 lg:px-16 bg-gradient-to-br from-black to-gray-900 text-white relative overflow-hidden">
@@ -229,7 +355,8 @@ const InsideLink = () => {
               href="https://wa.me/33745010714?text=Bonjour%2C%20j'aimerais%20découvrir%20votre%20approche%20et%20échanger%20sur%20mon%20projet"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center space-x-3 bg-white text-black px-8 py-4 rounded-full hover:bg-gray-100 transition-all duration-300 text-lg font-medium hover:shadow-2xl"
+              className="inline-flex items-center space-x-3 bg-white text-black px-8 py-4 rounded-full hover:bg-gray-100 transition-all duration-300 text-lg font-medium hover:shadow-2xl glow-pulse"
+              onClick={playClickSound}
             >
               <Users className="w-6 h-6" />
               <span>Rencontrer l'équipe</span>
