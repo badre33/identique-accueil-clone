@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { ArrowRight, Sparkles, Zap, Users, Megaphone, MessageCircle, Calendar } from "lucide-react";
 
@@ -130,7 +129,7 @@ export const Services = () => {
                     {/* CTA contextuel pour chaque service */}
                     <div className="opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity">
                       <a 
-                        href={`https://wa.me/33745010714?text=Bonjour%2C%20je%20suis%20intéressé(e)%20par%20vos%20services%20de%20${service.title.toLowerCase()}%20et%20j'aimerais%20en%20discuter`}
+                        href={`https://wa.me/212661779744?text=Bonjour%2C%20je%20suis%20intéressé(e)%20par%20vos%20services%20de%20${service.title.toLowerCase()}%20et%20j'aimerais%20en%20discuter`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-neutral-500 hover:text-black focus:text-black transition-colors focus:outline-none focus:ring-2 focus:ring-black focus:ring-opacity-50 rounded-lg p-2"
@@ -162,7 +161,7 @@ export const Services = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" role="group" aria-label="Actions de contact">
               <a 
-                href="https://wa.me/33745010714?text=Bonjour%2C%20je%20souhaite%20en%20savoir%20plus%20sur%20vos%20services%20et%20obtenir%20un%20devis%20personnalisé"
+                href="https://wa.me/212661779744?text=Bonjour%2C%20je%20souhaite%20en%20savoir%20plus%20sur%20vos%20services%20et%20obtenir%20un%20devis%20personnalisé"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary interactive-button group flex items-center space-x-2 focus:ring-4 focus:ring-black focus:ring-opacity-50"
@@ -174,11 +173,11 @@ export const Services = () => {
               </a>
               
               <a 
-                href="https://wa.me/33745010714?text=Bonjour%2C%20j'aimerais%20planifier%20une%20consultation%20gratuite%20pour%20mon%20projet"
+                href="https://calendly.com/b-harkaoui-linkagency/30min"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-secondary interactive-button group flex items-center space-x-2 focus:ring-4 focus:ring-black focus:ring-opacity-50"
-                aria-label="Planifier une consultation gratuite via WhatsApp"
+                aria-label="Planifier une consultation gratuite via Calendly"
               >
                 <Calendar className="w-5 h-5" aria-hidden="true" />
                 <span>Consultation gratuite</span>

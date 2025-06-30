@@ -1,4 +1,3 @@
-
 import { ArrowRight, Sparkles, Calendar, FileText } from "lucide-react";
 import { OptimizedImage } from "./OptimizedImage";
 
@@ -7,7 +6,6 @@ export const Hero = () => {
     const servicesSection = document.getElementById('services');
     if (servicesSection) {
       servicesSection.scrollIntoView({ behavior: 'smooth' });
-      // Focus sur la section pour les utilisateurs de lecteurs d'écran
       servicesSection.setAttribute('tabindex', '-1');
       servicesSection.focus();
     }
@@ -66,7 +64,7 @@ export const Hero = () => {
             {/* CTA principal */}
             <div className="flex flex-col sm:flex-row gap-4">
               <a 
-                href="https://wa.me/33745010714?text=Bonjour%2C%20je%20souhaite%20découvrir%20vos%20services%20créatifs%20et%20discuter%20de%20mon%20projet"
+                href="https://wa.me/212661779744?text=Bonjour%2C%20je%20souhaite%20découvrir%20vos%20services%20créatifs%20et%20discuter%20de%20mon%20projet"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary interactive-button group flex items-center space-x-2 focus:ring-4 focus:ring-black focus:ring-opacity-50"
@@ -88,14 +86,14 @@ export const Hero = () => {
             {/* CTAs secondaires contextuels */}
             <div className="flex flex-wrap gap-3 pt-2" role="group" aria-label="Actions secondaires">
               <a 
-                href="https://wa.me/33745010714?text=Bonjour%2C%20j'aimerais%20planifier%20un%20rendez-vous%20pour%20discuter%20de%20mon%20projet"
+                href="https://calendly.com/b-harkaoui-linkagency/30min"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center space-x-2 text-neutral-600 hover:text-black focus:text-black transition-colors text-sm bg-neutral-100 hover:bg-neutral-200 focus:bg-neutral-200 px-4 py-2 rounded-full font-medium group focus:ring-2 focus:ring-black focus:ring-opacity-50"
-                aria-label="Planifier un rendez-vous via WhatsApp"
+                aria-label="Planifier un rendez-vous via Calendly"
               >
                 <Calendar className="w-4 h-4" aria-hidden="true" />
-                <span>Planifier un RDV</span>
+                <span>Consultation gratuite</span>
               </a>
               
               <button 

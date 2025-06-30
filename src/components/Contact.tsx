@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Send, Phone, Mail, MapPin, Clock } from 'lucide-react';
 
@@ -40,7 +39,7 @@ export const Contact = () => {
 💬 Message:
 ${formData.message}`;
 
-    const whatsappUrl = `https://wa.me/33745010714?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/212661779744?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
 
@@ -245,10 +244,10 @@ ${formData.message}`;
             <div>
               <p className="text-gray-400 text-sm">Téléphone</p>
               <a 
-                href="tel:+33745010714" 
+                href="tel:+212661779744" 
                 className="text-white text-lg hover:text-gray-300 transition-colors"
               >
-                +33 7 45 01 07 14
+                +212 661 779 744
               </a>
             </div>
           </div>
@@ -260,7 +259,7 @@ ${formData.message}`;
             <div>
               <p className="text-gray-400 text-sm">Email</p>
               <a 
-                href="mailto:contact@linkagency.ma" 
+                href="mailto:bharkaoui@linkagency.ma" 
                 className="text-white text-lg hover:text-gray-300 transition-colors"
               >
                 contact@linkagency.ma
@@ -296,7 +295,7 @@ ${formData.message}`;
             Contactez-nous directement via WhatsApp pour une consultation express
           </p>
           <a 
-            href="https://wa.me/33745010714?text=Bonjour%2C%20j'aimerais%20une%20consultation%20express%20pour%20mon%20projet"
+            href="https://wa.me/212661779744?text=Bonjour%2C%20j'aimerais%20une%20consultation%20express%20pour%20mon%20projet"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center space-x-2 text-green-400 hover:text-green-300 transition-colors font-medium"
