@@ -35,7 +35,7 @@ export const SideNavigation = ({ currentSection }: SideNavigationProps) => {
   ];
 
   return (
-    <nav className={`fixed left-8 top-1/2 -translate-y-1/2 z-40 transition-all duration-500 ${
+    <nav className={`fixed left-4 top-1/2 -translate-y-1/2 z-30 transition-all duration-500 ${
       isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-full'
     }`}>
       <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl p-2 border border-gray-200">
@@ -47,15 +47,15 @@ export const SideNavigation = ({ currentSection }: SideNavigationProps) => {
             <button
               key={section.id}
               onClick={() => scrollToSection(section.id)}
-              className={`group relative flex items-center p-3 rounded-xl transition-all duration-300 w-full ${
+              className={`group relative flex items-center p-2 rounded-xl transition-all duration-300 w-full ${
                 isActive 
                   ? 'bg-black text-white shadow-lg' 
                   : 'hover:bg-gray-100 text-gray-600 hover:text-black'
               }`}
               title={section.label}
             >
-              <Icon className="w-5 h-5" />
-              <span className={`ml-3 text-sm font-medium whitespace-nowrap overflow-hidden transition-all duration-300 ${
+              <Icon className="w-4 h-4" />
+              <span className={`ml-2 text-xs font-medium whitespace-nowrap overflow-hidden transition-all duration-300 ${
                 isActive ? 'opacity-100 w-auto' : 'opacity-0 w-0 group-hover:opacity-100 group-hover:w-auto'
               }`}>
                 {section.label}
