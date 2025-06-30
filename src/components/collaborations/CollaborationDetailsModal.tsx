@@ -308,7 +308,7 @@ export const CollaborationDetailsModal = ({ collaboration, isOpen, onClose }: Co
             Découvrez comment nous pouvons transformer votre vision en succès concret.
           </p>
           <a 
-            href="https://wa.me/33745010714?text=Bonjour%2C%20je%20souhaite%20échanger%20sur%20une%20collaboration%20similaire%20à%20" + encodeURIComponent(collaboration.name)
+            href={`https://wa.me/33745010714?text=Bonjour%2C%20je%20souhaite%20échanger%20sur%20une%20collaboration%20similaire%20à%20${encodeURIComponent(collaboration.name)}`}
             target="_blank"
             rel="noopener noreferrer"
             className="bg-white text-black px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 hover:scale-105 shadow-lg inline-block"
