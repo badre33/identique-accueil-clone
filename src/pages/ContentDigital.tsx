@@ -1,8 +1,9 @@
-
 import { Header } from "@/components/Header";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Smartphone, Video, Camera, Edit, TrendingUp, Users, Target, Zap, CheckCircle, Star } from "lucide-react";
 import { Link } from "react-router-dom";
+import { FloatingContactWidget } from "@/components/FloatingContactWidget";
+import { QuoteCalculator } from "@/components/QuoteCalculator";
 
 const ContentDigital = () => {
   const contentServices = [
@@ -72,6 +73,7 @@ const ContentDigital = () => {
   return (
     <div className="min-h-screen bg-white">
       <Header />
+      <FloatingContactWidget />
       
       <section className="pt-24 sm:pt-32 pb-16 sm:pb-20 section-padding gradient-subtle relative overflow-hidden">
         {/* Éléments décoratifs optimisés */}
@@ -171,6 +173,22 @@ const ContentDigital = () => {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Nouvelle section calculateur de devis */}
+      <section className="section-padding bg-gradient-subtle">
+        <div className="container-max">
+          <div className="text-center mb-12 sm:mb-16 space-content">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light mb-4 sm:mb-6 text-black">
+              Calculez votre devis en ligne
+            </h2>
+            <p className="text-lg sm:text-xl text-gray-600 font-light max-w-3xl mx-auto">
+              Obtenez une estimation personnalisée pour vos besoins en content digital en quelques clics.
+            </p>
+          </div>
+          
+          <QuoteCalculator />
         </div>
       </section>
 
