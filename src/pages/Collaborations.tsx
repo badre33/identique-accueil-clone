@@ -42,17 +42,17 @@ const Collaborations = () => {
     {
       name: "Artitenium",
       url: "https://kzmfwv89vwbj1uf8kcxa.lite.vusercontent.net/",
-      category: "Digital"
+      category: "Architecture d'intérieur"
     },
     {
       name: "DWP",
       url: "https://dwp.ma/",
-      category: "Digital"
+      category: "Design d'intérieur"
     },
     {
       name: "Focus M",
       url: "https://focusm.ma/",
-      category: "Marketing"
+      category: "Écrans interactifs tactiles"
     },
     {
       name: "Secret Events",
@@ -73,10 +73,25 @@ const Collaborations = () => {
       name: "Casablanca Music Week",
       url: "https://guichet.com/ma-fr/event/producer/casablanca-music-week",
       category: "Événementiel"
+    },
+    {
+      name: "Mom Corporation",
+      url: "#",
+      category: "Événement, Design & Marketing"
+    },
+    {
+      name: "OK Daddy",
+      url: "#",
+      category: "Événementiel"
+    },
+    {
+      name: "Épicerie Bordelaise",
+      url: "#",
+      category: "Restauration & Conférences musicales"
     }
   ];
 
-  const categories = ["Restauration", "Immobilier", "Commerce", "Tech", "Startup Studio", "Musique", "Digital", "Marketing", "Événementiel"];
+  const categories = ["Restauration", "Immobilier", "Commerce", "Tech", "Startup Studio", "Musique", "Architecture d'intérieur", "Design d'intérieur", "Écrans interactifs", "Événementiel"];
 
   return (
     <div className="min-h-screen bg-white">
@@ -129,7 +144,7 @@ const Collaborations = () => {
 
           <div className="text-center mt-16">
             <p className="text-lg text-gray-600 font-light mb-8">
-              Secteurs d'expertise : {categories.slice(0, 5).join(", ")} et plus encore.
+              Secteurs d'expertise : {categories.slice(0, 6).join(", ")} et plus encore.
             </p>
             <a 
               href="https://wa.me/33745010714?text=Bonjour%2C%20j'aimerais%20découvrir%20vos%20références%20et%20échanger%20sur%20mon%20projet"
