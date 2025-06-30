@@ -11,12 +11,12 @@ export const ProjectsGallery = () => {
       url: "#"
     },
     {
-      title: "SGTM Immobilier",
-      category: "Branding & Web", 
-      image: "/lovable-uploads/a404ed81-6016-457c-b044-6027db20cf22.png",
-      description: "Refonte complète de l'identité visuelle et développement d'une plateforme web premium pour cette agence immobilière de prestige.",
-      year: "2023",
-      url: "https://sgtm-immobilier.com/fr/accueil/"
+      title: "Edwin",
+      category: "Pop-up Store & Événementiel", 
+      image: "/lovable-uploads/155dc759-4923-4ddc-8251-334cb8ba3ad7.png",
+      description: "Mission complète de pop-up store à Bordeaux pour cette marque de jeans japonaise iconique fondée en 1947. Conception et production d'un espace éphémère immersif célébrant l'héritage denim japonais, organisation d'événements exclusifs avec des artistes locaux, stratégie d'activation marketing ciblée et renforcement du branding européen. Une expérience retail unique mêlant tradition japonaise et culture bordelaise.",
+      year: "2024",
+      url: "#"
     },
     {
       title: "French Tech",
