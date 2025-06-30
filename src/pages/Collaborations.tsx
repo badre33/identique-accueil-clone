@@ -7,17 +7,20 @@ const Collaborations = () => {
     {
       name: "Subway Maroc",
       url: "https://www.instagram.com/subwaymaroc/?hl=fr",
-      category: "Restauration"
+      category: "Restauration",
+      logo: "https://logos-world.net/wp-content/uploads/2020/09/Subway-Logo.png"
     },
     {
       name: "SGTM Immobilier",
       url: "https://sgtm-immobilier.com/fr/accueil/",
-      category: "Immobilier"
+      category: "Immobilier",
+      logo: "https://sgtm-immobilier.com/wp-content/uploads/2019/10/logo-sgtm-immobilier.png"
     },
     {
       name: "Amoud",
       url: "https://www.amoud.ma/",
-      category: "Commerce"
+      category: "Commerce",
+      logo: "https://www.amoud.ma/wp-content/uploads/2019/05/logo-amoud.png"
     },
     {
       name: "Achibest Food",
@@ -27,17 +30,20 @@ const Collaborations = () => {
     {
       name: "French Tech",
       url: "#",
-      category: "Tech"
+      category: "Tech",
+      logo: "https://www.lafrenchtech.com/wp-content/uploads/2019/06/french-tech-logo.png"
     },
     {
       name: "The Family",
       url: "https://www.thefamily.co/",
-      category: "Startup Studio"
+      category: "Startup Studio",
+      logo: "https://www.thefamily.co/static/images/logo-black.svg"
     },
     {
       name: "Soulection",
       url: "https://soulection.com/",
-      category: "Musique"
+      category: "Musique",
+      logo: "https://soulection.com/images/soulection-logo.png"
     },
     {
       name: "Artitenium",
@@ -118,6 +124,18 @@ const Collaborations = () => {
               >
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex-1">
+                    {collaboration.logo && (
+                      <div className="mb-3 flex items-center justify-center h-12">
+                        <img 
+                          src={collaboration.logo} 
+                          alt={`${collaboration.name} logo`}
+                          className="max-h-full max-w-full object-contain opacity-80 group-hover:opacity-100 transition-opacity"
+                          onError={(e) => {
+                            e.currentTarget.style.display = 'none';
+                          }}
+                        />
+                      </div>
+                    )}
                     <h3 className="text-lg font-medium text-black mb-2 group-hover:text-gray-800 transition-colors">
                       {collaboration.name}
                     </h3>
