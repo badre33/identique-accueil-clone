@@ -59,7 +59,7 @@ export const Contact = () => {
                 href="mailto:bharkaoui@linkagency.ma" 
                 className="text-white text-lg hover:text-gray-300 transition-colors"
               >
-                contact@linkagency.ma
+                bharkaoui@linkagency.ma
               </a>
             </div>
           </div>
