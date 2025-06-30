@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -21,26 +20,26 @@ export const QuoteCalculator = () => {
     {
       id: 'social-media',
       name: 'Réseaux sociaux',
-      basePrice: 8000,
-      description: 'Stratégie éditoriale, création de contenu, community management'
+      basePrice: 25000,
+      description: 'Stratégie éditoriale premium, création de contenu exclusif, community management'
     },
     {
       id: 'video-production',
       name: 'Production vidéo',
-      basePrice: 15000,
-      description: 'Conception, tournage et post-production vidéo professionnelle'
+      basePrice: 45000,
+      description: 'Production cinématographique haut de gamme, post-production avancée'
     },
     {
       id: 'photography',
       name: 'Photographie',
-      basePrice: 6000,
-      description: 'Shooting photo professionnel et retouche'
+      basePrice: 18000,
+      description: 'Shooting photo corporate premium, retouche professionnelle avancée'
     },
     {
       id: 'web-writing',
       name: 'Rédaction web',
-      basePrice: 4000,
-      description: 'Articles de blog, newsletters, contenus SEO'
+      basePrice: 12000,
+      description: 'Copywriting stratégique, contenus SEO premium, storytelling corporate'
     }
   ];
 
@@ -77,7 +76,7 @@ export const QuoteCalculator = () => {
       services.find(s => s.id === id)?.name
     ).join(', ');
     
-    const message = `Bonjour, je souhaite un devis pour les services suivants : ${selectedServiceNames}. Échelle du projet : ${projectScale}, Délai : ${urgency}. Total estimé : ${calculateTotal()}DH`;
+    const message = `Bonjour, je souhaite un devis premium pour les services suivants : ${selectedServiceNames}. Échelle du projet : ${projectScale}, Délai : ${urgency}. Total estimé : ${calculateTotal().toLocaleString()}DH`;
     const encodedMessage = encodeURIComponent(message);
     window.open(`https://wa.me/33745010714?text=${encodedMessage}`, '_blank');
   };
