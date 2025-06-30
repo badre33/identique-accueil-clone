@@ -86,7 +86,7 @@ END:VCARD`;
         {/* Content */}
         <div className="relative z-10 h-full flex flex-col justify-between">
           <div className="flex items-start justify-between">
-            <div>
+            <div className="flex-1 pr-4">
               <h3 className="text-xl font-bold mb-1">{name}</h3>
               <p className="text-gray-300 text-sm">{title}</p>
               <p className="text-gray-400 text-xs mt-1">Link Agency</p>
@@ -94,7 +94,7 @@ END:VCARD`;
             <img 
               src={image} 
               alt={name}
-              className="w-12 h-12 rounded-full object-cover border-2 border-white/20"
+              className="w-12 h-12 rounded-full object-cover border-2 border-white/20 flex-shrink-0"
             />
           </div>
 
@@ -149,9 +149,9 @@ END:VCARD`;
             
             <button
               onClick={generateVCard}
-              className="flex items-center space-x-2 bg-white text-black px-3 py-2 rounded-lg hover:bg-gray-100 transition-colors text-sm font-medium"
+              className="flex items-center space-x-1 bg-white text-black px-2 py-1.5 rounded-lg hover:bg-gray-100 transition-colors text-xs font-medium"
             >
-              <Download className="w-4 h-4" />
+              <Download className="w-3 h-3" />
               <span>Télécharger</span>
             </button>
           </div>
