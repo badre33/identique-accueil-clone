@@ -1,4 +1,3 @@
-
 import { ArrowRight, ExternalLink } from "lucide-react";
 
 export const ProjectsGallery = () => {
@@ -40,7 +39,7 @@ export const ProjectsGallery = () => {
       category: "Branding & Digital",
       image: "/lovable-uploads/ceaff19e-cebb-453b-a8e2-33fc348e3bad.png",
       description: "Création d'une identité visuelle moderne, développement de site web et stratégie d'acquisition digitale pour cette entreprise spécialisée dans l'aménagement d'intérieur haut de gamme. Mission complète incluant branding, stratégie digitale et gestion des réseaux sociaux.",
-      year: "2024",
+      year: "2024-2025",
       url: "https://artitenium.ma/"
     },
     {
@@ -48,7 +47,7 @@ export const ProjectsGallery = () => {
       category: "Branding & Digital",
       image: "/lovable-uploads/29365e8a-7e4d-4041-ad14-37f38d1bde1b.png",
       description: "Accompagnement stratégique complet pour cette entreprise de design d'intérieur : création d'identité de marque, développement de site web, stratégie d'acquisition client et gestion des réseaux sociaux pour renforcer leur positionnement sur le marché du design premium.",
-      year: "2024",
+      year: "2024-2025",
       url: "https://dwp.ma/"
     },
     {
