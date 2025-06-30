@@ -1,4 +1,3 @@
-
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { ExternalLink, Calendar, Tag, Target, Users, Award, Sparkles } from "lucide-react";
 
@@ -33,11 +32,11 @@ export const CollaborationDetailsModal = ({ collaboration, isOpen, onClose }: Co
         };
       case "SGTM Immobilier":
         return {
-          impact: "Positionnement premium établi avec 300% d'augmentation des leads qualifiés",
-          services: ["Refonte identité visuelle", "Développement web", "Stratégie de marque", "Communication luxury"],
-          results: ["Site web premium lancé", "Identité visuelle moderne", "Pipeline commercial plein", "Notoriété haut de gamme"],
-          challenge: "Créer une identité visuelle et digitale à la hauteur du portefeuille immobilier de prestige",
-          fullDescription: "Transformation complète de l'agence immobilière SGTM avec création d'une identité de marque sophistiquée et développement d'une plateforme web immersive. Le projet visait à positionner SGTM comme la référence du marché immobilier haut de gamme, avec une approche créative qui reflète l'excellence et l'exclusivité de leurs biens d'exception."
+          impact: "Positionnement premium établi avec 300% d'augmentation des leads qualifiés et acquisition stratégique réussie",
+          services: ["Refonte identité visuelle", "Développement web", "Stratégie de marque", "Communication luxury", "Stratégie d'acquisition"],
+          results: ["Site web premium lancé", "Identité visuelle moderne", "Pipeline commercial plein", "Notoriété haut de gamme", "Acquisition d'entreprises cibles"],
+          challenge: "Créer une identité visuelle et digitale à la hauteur du portefeuille immobilier de prestige tout en développant une stratégie d'acquisition",
+          fullDescription: "Transformation complète de l'agence immobilière SGTM avec création d'une identité de marque sophistiquée et développement d'une plateforme web immersive. Le projet visait à positionner SGTM comme la référence du marché immobilier haut de gamme, avec une approche créative qui reflète l'excellence et l'exclusivité de leurs biens d'exception. Nous avons également développé une stratégie d'acquisition pour identifier et intégrer des entreprises complémentaires, renforçant ainsi leur position dominante sur le marché du luxe immobilier."
         };
       case "Amoud":
         return {
@@ -65,11 +64,11 @@ export const CollaborationDetailsModal = ({ collaboration, isOpen, onClose }: Co
         };
       case "The Family":
         return {
-          impact: "Expansion réussie sur le marché africain avec 5 startups déployées",
-          services: ["Conseil stratégique", "Développement marché", "Partenariats internationaux", "Stratégie d'expansion"],
-          results: ["Présence africaine établie", "Startups locales accompagnées", "Réseau de partenaires", "Modèle économique adapté"],
-          challenge: "Adapter le modèle européen de The Family aux spécificités du marché africain",
-          fullDescription: "Collaboration stratégique avec The Family pour leur expansion sur le marché africain. Notre expertise locale et notre connaissance des écosystèmes startup africains ont permis d'adapter leur modèle d'accompagnement et de créer des ponts durables entre les écosystèmes européens et africains."
+          impact: "Collaboration avec cet incubateur pionnier pour accompagner l'écosystème startup européen",
+          services: ["Accompagnement startups", "Stratégie internationale", "Marketing écosystème", "Développement partenariats"],
+          results: ["Startups accompagnées", "Méthodologies développées", "Réseau européen étendu", "Expertise incubation renforcée"],
+          challenge: "Contribuer au développement de l'écosystème startup européen avec une approche innovante",
+          fullDescription: "Collaboration avec The Family en 2018, incubateur européen pionnier dans l'accompagnement de startups. Notre mission consistait à appliquer les mêmes services que ceux développés avec French Tech mais dans un modèle d'incubation différent et plus mature. Cette expérience nous a permis de développer une expertise approfondie dans l'accompagnement des startups européennes et de comprendre les nuances des différents modèles d'incubation à travers l'Europe."
         };
       case "Soulection":
         return {
@@ -145,11 +144,11 @@ export const CollaborationDetailsModal = ({ collaboration, isOpen, onClose }: Co
         };
       case "OK Daddy":
         return {
-          impact: "Concept événementiel innovant mêlant gastronomie et expériences sensorielles",
-          services: ["Concept innovation", "Expérience gastronomique", "Design événementiel", "Stratégie sensorielle"],
-          results: ["Concept événementiel unique", "Expérience multisensorielle", "Innovation gastronomique", "Communauté créative"],
-          challenge: "Créer un concept événementiel qui révolutionne l'expérience gastronomique traditionnelle",
-          fullDescription: "Développement du concept événementiel innovant OK Daddy qui révolutionne l'expérience gastronomique en combinant cuisine d'exception, musique et design d'expérience. Notre approche créative transcende les codes traditionnels pour créer des moments uniques où tous les sens sont sollicités."
+          impact: "Concept événementiel et retail innovant avec pop-up stores à succès sur Bordeaux",
+          services: ["Concept innovation", "Organisation pop-up stores", "Expérience gastronomique", "Lancement produits/artistes"],
+          results: ["Pop-up stores réussis", "Lancements produits mémorables", "Collaborations artistiques", "Expérience multisensorielle"],
+          challenge: "Créer des expériences retail éphémères qui révolutionnent le lancement de produits et d'artistes",
+          fullDescription: "Développement du concept événementiel et retail innovant OK Daddy qui révolutionne l'expérience de découverte de nouveaux produits et artistes. Notre mission inclut l'organisation de pop-up stores sur Bordeaux pour le lancement de nouveaux produits de marques ou d'artistes en tout genre. Ces espaces éphémères combinent expérience gastronomique, découverte artistique et innovation retail pour créer des moments uniques où tous les sens sont sollicités et où les participants vivent une expérience de marque inoubliable."
         };
       case "Épicerie Bordelaise":
         return {
