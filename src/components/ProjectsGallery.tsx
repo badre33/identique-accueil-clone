@@ -6,7 +6,7 @@ export const ProjectsGallery = () => {
     {
       title: "Amoud",
       category: "Branding & Marketing Digital",
-      image: "/lovable-uploads/db939411-f619-4958-844f-cb5d9d97a9ca.png",
+      image: "/lovable-uploads/8e26a61e-e439-4688-b503-8a3088d2124f.png",
       description: "Maison de pâtisserie marocaine fondée en 1982, réputée pour l'excellence de ses viennoiseries, entremets et créations sucrées haut de gamme. Alliant tradition artisanale et innovation, elle s'est imposée comme une référence incontournable à Casablanca et dans plusieurs grandes villes du Maroc. Grâce à un savoir-faire rigoureux et une offre raffinée, Amoud séduit une clientèle exigeante à la recherche de qualité et d'authenticité.",
       year: "2024",
       url: "#"
