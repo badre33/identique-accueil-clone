@@ -21,7 +21,7 @@ export const ProjectsGallery = () => {
       category: "Pop-up Store & Événementiel", 
       image: "/lovable-uploads/b82bb134-7256-4325-b5ca-90d055f1629c.png",
       shortDescription: "Mission complète de pop-up store à Bordeaux pour cette marque de jeans japonaise iconique fondée en 1947. Conception d'un espace éphémère immersif célébrant l'héritage denim japonais.",
-      description: "Création et production d'un pop-up store exceptionnel à Bordeaux pour la marque de jeans japonaise légendaire Edwin. Notre mission consistait à concevoir un espace retail éphémère qui capture l'essence de la culture denim japonaise tout en s'intégrant harmonieusement dans l'écosystème créatif bordelais. Le projet comprenait la scénographie complète de l'espace, l'organisation d'événements exclusifs mêlant art local et tradition nippone, ainsi que le développement d'une stratégie d'activation marketing sur mesure pour créer un buzz authentique et générer des ventes record.",
+      description: "Création et production d'un pop-up store exceptionnel à Bordeaux pour la marque de jeans japonaise légendaire Edwin. Notre mission consistait à concevoir un espace retail éphémère qui capture l'essence de la culture denim japonaise tout en s'intégrant harmonieusement dans l'écosystème créatif bordelais. Le projet comprenait la scénographie complète de l'espace, l'organisation d'événements exclusifs mêlant art local et tradition nippone, ainsi que le développement d'une stratégie d'activation marketing sur mesure pour créer un buzz authentique et générer des ventes record sur une durée limitée.",
       year: "2024",
       url: "#"
     },
@@ -29,8 +29,8 @@ export const ProjectsGallery = () => {
       title: "French Tech",
       category: "Partenariat Stratégique",
       image: "/lovable-uploads/801816e7-97bc-49c9-948c-34e3c9d49e1f.png",
-      shortDescription: "Partenaire officiel de l'écosystème French Tech pour l'accompagnement des startups marocaines vers l'international.",
-      description: "Partenariat stratégique avec l'écosystème French Tech Bordeaux pour développer et structurer l'accompagnement des startups incubées vers l'international. Notre rôle couvre le branding de l'écosystème, la stratégie marketing des programmes d'incubation, et l'accompagnement personnalisé des startups prometteuses. Nous développons les outils de communication, les stratégies de positionnement et les campagnes d'attraction pour renforcer la notoriété de French Tech Bordeaux sur la scène européenne et faciliter l'expansion internationale des entreprises incubées.",
+      shortDescription: "Partenaire officiel de l'écosystème French Tech Bordeaux pour l'accompagnement stratégique des startups incubées vers l'international.",
+      description: "Partenariat stratégique avec l'écosystème French Tech Bordeaux pour développer et structurer l'accompagnement des startups incubées vers l'international. Notre rôle couvre le développement de la stratégie de marque de l'écosystème bordelais, la création des outils marketing pour les programmes d'incubation, et l'accompagnement personnalisé des startups prometteuses dans leur développement commercial. Nous orchestrons les campagnes de communication, développons les stratégies de positionnement et créons les supports d'attraction pour renforcer la notoriété de French Tech Bordeaux sur la scène européenne et faciliter l'expansion internationale des entreprises incubées.",
       year: "2022-2024",
       url: "#"
     },
@@ -38,8 +38,8 @@ export const ProjectsGallery = () => {
       title: "Soulection",
       category: "Événementiel & Branding",
       image: "/lovable-uploads/b8c1c54b-9721-486c-81ab-dae0977cacc0.png",
-      shortDescription: "Production d'événements exclusifs et développement de la présence africaine pour ce collectif musical international.",
-      description: "Organisation et production d'événements musicaux exclusifs pour le collectif international Soulection dans l'écosystème culturel bordelais, avec un focus particulier sur l'I-Boat. Notre mission consiste à créer des expériences musicales uniques en faisant venir les DJs officiels du collectif Soulection pour des soirées exceptionnelles. Nous gérons l'intégralité de la production événementielle, de la programmation artistique au branding spécifique, en créant un pont authentique entre la culture musicale internationale de Soulection et la scène culturelle bordelaise dynamique.",
+      shortDescription: "Production d'événements musicaux exclusifs sur l'I-Boat à Bordeaux avec les DJs officiels du collectif international Soulection.",
+      description: "Organisation et production d'événements musicaux exclusifs pour le collectif international Soulection sur l'emblématique I-Boat à Bordeaux. Notre mission consiste à créer des expériences musicales uniques en faisant venir les DJs officiels du collectif Soulection pour des soirées exceptionnelles dans cet espace culturel iconique bordelais. Nous gérons l'intégralité de la production événementielle, de la programmation artistique au branding spécifique, en créant un pont authentique entre la culture musicale internationale de Soulection et la scène culturelle bordelaise dynamique, contribuant ainsi au rayonnement culturel de Bordeaux.",
       year: "2023-2024",
       url: "https://soulection.com/"
     },
@@ -48,16 +48,16 @@ export const ProjectsGallery = () => {
       category: "Branding & Digital",
       image: "/lovable-uploads/ceaff19e-cebb-453b-a8e2-33fc348e3bad.png",
       shortDescription: "Création d'identité visuelle moderne, développement de site web et stratégie d'acquisition digitale pour cette entreprise d'aménagement d'intérieur haut de gamme.",
-      description: "Transformation digitale complète d'Artitenium, entreprise spécialisée dans l'aménagement d'intérieur haut de gamme. Notre accompagnement incluait la création d'une identité de marque sophistiquée reflétant l'excellence artisanale, le développement d'un site web premium showcase mettant en valeur leurs réalisations exceptionnelles, et l'élaboration d'une stratégie d'acquisition digitale ciblée. L'objectif était de positionner Artitenium comme la référence incontournable du design d'intérieur de luxe au Maroc, en développant une présence digitale à la hauteur de leur savoir-faire exceptionnel.",
+      description: "Transformation digitale complète d'Artitenium, entreprise spécialisée dans l'aménagement d'intérieur haut de gamme au Maroc. Notre accompagnement incluait la création d'une identité de marque sophistiquée reflétant l'excellence artisanale marocaine, le développement d'un site web premium showcase mettant en valeur leurs réalisations exceptionnelles, et l'élaboration d'une stratégie d'acquisition digitale ciblée. L'objectif était de positionner Artitenium comme la référence incontournable du design d'intérieur de luxe au Maroc, en développant une présence digitale à la hauteur de leur savoir-faire exceptionnel et en créant les outils nécessaires pour conquérir une clientèle haut de gamme exigeante.",
       year: "2024-2025",
       url: "https://artitenium.ma/"
     },
     {
       title: "Personal Branding Politique",
       category: "Branding Personnel",
-      image: "/lovable-uploads/da131874-d340-4dc9-b1e7-5fc5f24a0f40.png",
+      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
       shortDescription: "Accompagnement stratégique sur une mission de personal branding à fort enjeu pour renforcer l'image d'une dirigeante politique influente sur la scène internationale.",
-      description: "Mission stratégique de personal branding pour une figure politique influente, visant à construire une image publique authentique et inspirante détachée des codes politiques traditionnels. Notre approche s'est concentrée sur l'humanisation du discours, la valorisation des valeurs d'espoir et de modernité, et la création d'un storytelling personnel puissant. Le projet incluait la refonte complète de la stratégie de communication multicanale, la production de contenus éditoriaux et visuels premium, ainsi que la coordination d'une équipe créative dédiée pour assurer une cohérence parfaite sur tous les points de contact.",
+      description: "Mission stratégique de personal branding pour une figure politique influente, visant à construire une image publique authentique et inspirante détachée des codes politiques traditionnels. Notre approche s'est concentrée sur l'humanisation du discours politique, la valorisation des valeurs d'espoir et de modernité, et la création d'un storytelling personnel puissant résonnant avec les enjeux contemporains. Le projet incluait la refonte complète de la stratégie de communication multicanale, la production de contenus éditoriaux et visuels premium, ainsi que la coordination d'une équipe créative dédiée pour assurer une cohérence parfaite sur tous les points de contact et renforcer l'influence de cette personnalité sur la scène politique internationale.",
       year: "2024",
       url: "#"
     }
