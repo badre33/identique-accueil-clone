@@ -1,4 +1,3 @@
-
 import { ArrowRight, ExternalLink } from "lucide-react";
 
 export const ProjectsGallery = () => {
@@ -55,7 +54,7 @@ export const ProjectsGallery = () => {
       title: "Secret Events",
       category: "Événementiel",
       image: "/lovable-uploads/8021884d-fcc2-4e05-ac30-7e42c2b94abc.png",
-      description: "Direction artistique et production d'événements exclusifs haut de gamme avec une approche créative unique et mémorable.",
+      description: "Direction artistique et production d'événements exclusifs haut de gamme avec une approche créative unique et mémorable. Gestion complète du booking et de la programmation d'artistes DJs internationaux pour des soirées d'exception.",
       year: "2023-2024",
       url: "#"
     },
@@ -63,7 +62,7 @@ export const ProjectsGallery = () => {
       title: "Umbra Festival",
       category: "Événementiel & Branding",
       image: "/lovable-uploads/d46d1c34-57bc-469e-a5df-99754ff0d5ed.png",
-      description: "Conception et production complète de ce festival artistique underground avec une identité visuelle forte et une expérience immersive.",
+      description: "Conception et production complète de ce festival artistique underground avec une identité visuelle forte et une expérience immersive. Booking et curation d'une programmation DJ avant-gardiste pour créer une expérience musicale unique.",
       year: "2022-2024",
       url: "#"
     }
