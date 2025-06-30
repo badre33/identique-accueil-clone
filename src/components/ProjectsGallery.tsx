@@ -13,7 +13,7 @@ export const ProjectsGallery = () => {
     {
       title: "Edwin",
       category: "Pop-up Store & Événementiel", 
-      image: "/lovable-uploads/155dc759-4923-4ddc-8251-334cb8ba3ad7.png",
+      image: "/lovable-uploads/b82bb134-7256-4325-b5ca-90d055f1629c.png",
       description: "Mission complète de pop-up store à Bordeaux pour cette marque de jeans japonaise iconique fondée en 1947. Conception et production d'un espace éphémère immersif célébrant l'héritage denim japonais, organisation d'événements exclusifs avec des artistes locaux, stratégie d'activation marketing ciblée et renforcement du branding européen. Une expérience retail unique mêlant tradition japonaise et culture bordelaise.",
       year: "2024",
       url: "#"
