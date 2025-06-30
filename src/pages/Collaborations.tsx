@@ -14,6 +14,15 @@ const Collaborations = () => {
 
   const collaborations = [
     {
+      name: "Branding global / Entrepreneur et holding multisectorielle",
+      url: "#",
+      category: "Branding Stratégique",
+      logo: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=400&h=300&fit=crop&crop=center",
+      description: "Refonte stratégique d'image et structuration du branding personnel d'un entrepreneur marocain avec sa holding multisectorielle (architecture, éducation, gastronomie, coworking).",
+      year: "2024",
+      type: "Branding Global"
+    },
+    {
       name: "Subway Maroc",
       url: "https://www.instagram.com/subwaymaroc/?hl=fr",
       category: "Restauration",
@@ -177,7 +186,7 @@ const Collaborations = () => {
     }
   ];
 
-  const categories = ["Toutes", "Restauration", "Immobilier", "Commerce", "Tech", "Startup Studio", "Musique", "Architecture d'intérieur", "Design d'intérieur", "Écrans interactifs tactiles", "Événementiel", "Mode"];
+  const categories = ["Toutes", "Branding Stratégique", "Restauration", "Immobilier", "Commerce", "Tech", "Startup Studio", "Musique", "Architecture d'intérieur", "Design d'intérieur", "Écrans interactifs tactiles", "Événementiel", "Mode"];
 
   const filteredCollaborations = selectedCategory === "Toutes" 
     ? collaborations 

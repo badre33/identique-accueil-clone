@@ -22,6 +22,14 @@ export const CollaborationDetailsModal = ({ collaboration, isOpen, onClose }: Co
 
   const getCollaborationDetails = (collaboration: Collaboration) => {
     switch (collaboration.name) {
+      case "Branding global / Entrepreneur et holding multisectorielle":
+        return {
+          impact: "Harmonisation complète de l'écosystème de marques avec une identité visuelle raffinée et un positionnement stratégique international",
+          services: ["Refonte stratégique d'image", "Structuration branding personnel", "Charte graphique sur-mesure", "Narratif éditorial", "Brand deck professionnel", "Identité visuelle globale", "Manifeste de fondation", "Positionnement holding"],
+          results: ["Écosystème unifié", "Esthétique raffinée", "Engagement humaniste", "Ambition internationale", "Cohérence multi-sectorielle", "Vision fondateur valorisée"],
+          challenge: "Harmoniser une holding multisectorielle (architecture, éducation, gastronomie, coworking) autour d'une vision entrepreneuriale unique",
+          fullDescription: "Mission stratégique de refonte globale pour un entrepreneur marocain visionnaire et sa holding innovante active dans plusieurs secteurs clés. Notre approche holistique combine la structuration du branding personnel du fondateur avec le positionnement stratégique de ses activités diversifiées. Le projet inclut la création d'une charte graphique sophistiquée qui reflète l'excellence opérationnelle, l'élaboration d'un narratif éditorial inspiré par la vision humaniste du dirigeant, et la production de supports de communication professionnels de haute qualité. L'objectif est de créer une cohérence visuelle et narrative qui transcende les secteurs d'activité tout en affirmant une ambition internationale et un engagement sociétal fort."
+        };
       case "Subway Maroc":
         return {
           impact: "Augmentation de 200% de l'engagement sur les réseaux sociaux",
