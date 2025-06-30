@@ -30,6 +30,14 @@ export const CollaborationDetailsModal = ({ collaboration, isOpen, onClose }: Co
           challenge: "Harmoniser une holding multisectorielle (architecture, éducation, gastronomie, coworking) autour d'une vision entrepreneuriale unique",
           fullDescription: "Mission stratégique de refonte globale pour un entrepreneur marocain visionnaire et sa holding innovante active dans plusieurs secteurs clés. Notre approche holistique combine la structuration du branding personnel du fondateur avec le positionnement stratégique de ses activités diversifiées. Le projet inclut la création d'une charte graphique sophistiquée qui reflète l'excellence opérationnelle, l'élaboration d'un narratif éditorial inspiré par la vision humaniste du dirigeant, et la production de supports de communication professionnels de haute qualité. L'objectif est de créer une cohérence visuelle et narrative qui transcende les secteurs d'activité tout en affirmant une ambition internationale et un engagement sociétal fort."
         };
+      case "Personal Branding Politique":
+        return {
+          impact: "Construction d'une image publique authentique et inspirante avec influence renforcée sur la scène politique internationale",
+          services: ["Personal branding stratégique", "Storytelling personnel", "Communication multicanale", "Humanisation du discours", "Production de contenus premium", "Coordination créative"],
+          results: ["Image authentique établie", "Influence politique renforcée", "Discours modernisé", "Cohérence multicanale", "Valeurs d'espoir valorisées", "Rayonnement international"],
+          challenge: "Construire une image publique inspirante détachée des codes politiques traditionnels tout en résonnant avec les enjeux contemporains",
+          fullDescription: "Mission stratégique de personal branding pour une figure politique influente, visant à construire une image publique authentique et inspirante détachée des codes politiques traditionnels. Notre approche s'est concentrée sur l'humanisation du discours politique, la valorisation des valeurs d'espoir et de modernité, et la création d'un storytelling personnel puissant résonnant avec les enjeux contemporains. Le projet incluait la refonte complète de la stratégie de communication multicanale, la production de contenus éditoriaux et visuels premium, ainsi que la coordination d'une équipe créative dédiée pour assurer une cohérence parfaite sur tous les points de contact et renforcer l'influence de cette personnalité sur la scène politique internationale."
+        };
       case "Subway Maroc":
         return {
           impact: "Augmentation de 200% de l'engagement sur les réseaux sociaux",

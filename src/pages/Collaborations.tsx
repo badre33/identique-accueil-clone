@@ -17,10 +17,19 @@ const Collaborations = () => {
       name: "Branding global / Entrepreneur et holding multisectorielle",
       url: "#",
       category: "Branding Stratégique",
-      logo: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=400&h=300&fit=crop&crop=center",
+      logo: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=400&h=300&fit=crop&crop=center",
       description: "Refonte stratégique d'image et structuration du branding personnel d'un entrepreneur marocain avec sa holding multisectorielle (architecture, éducation, gastronomie, coworking).",
       year: "2024",
       type: "Branding Global"
+    },
+    {
+      name: "Personal Branding Politique",
+      url: "#",
+      category: "Branding Personnel",
+      logo: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=300",
+      description: "Accompagnement stratégique sur une mission de personal branding à fort enjeu pour renforcer l'image d'une dirigeante politique influente sur la scène internationale.",
+      year: "2024",
+      type: "Personal Branding"
     },
     {
       name: "Subway Maroc",
@@ -186,7 +195,7 @@ const Collaborations = () => {
     }
   ];
 
-  const categories = ["Toutes", "Branding Stratégique", "Restauration", "Immobilier", "Commerce", "Tech", "Startup Studio", "Musique", "Architecture d'intérieur", "Design d'intérieur", "Écrans interactifs tactiles", "Événementiel", "Mode"];
+  const categories = ["Toutes", "Branding Stratégique", "Branding Personnel", "Restauration", "Immobilier", "Commerce", "Tech", "Startup Studio", "Musique", "Architecture d'intérieur", "Design d'intérieur", "Écrans interactifs tactiles", "Événementiel", "Mode"];
 
   const filteredCollaborations = selectedCategory === "Toutes" 
     ? collaborations 
