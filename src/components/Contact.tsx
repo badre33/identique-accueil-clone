@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Send, Phone, Mail, MapPin, Clock } from 'lucide-react';
 
@@ -122,15 +123,20 @@ ${formData.message}`;
                 className="w-full bg-transparent border-0 border-b border-gray-600 pb-3 text-white placeholder:text-gray-400 focus:outline-none focus:border-white text-lg font-light transition-colors"
               />
             </div>
-            <div>
-              <input
-                type="tel"
-                name="telephone"
-                placeholder="Téléphone"
-                value={formData.telephone}
-                onChange={handleChange}
-                className="w-full bg-transparent border-0 border-b border-gray-600 pb-3 text-white placeholder:text-gray-400 focus:outline-none focus:border-white text-lg font-light transition-colors"
-              />
+            <div className="relative">
+              <div className="flex">
+                <div className="flex items-center bg-transparent border-0 border-b border-gray-600 pb-3 text-gray-400 text-lg font-light pr-2">
+                  +212
+                </div>
+                <input
+                  type="tel"
+                  name="telephone"
+                  placeholder="6 XX XX XX XX"
+                  value={formData.telephone}
+                  onChange={handleChange}
+                  className="flex-1 bg-transparent border-0 border-b border-gray-600 pb-3 text-white placeholder:text-gray-400 focus:outline-none focus:border-white text-lg font-light transition-colors ml-2"
+                />
+              </div>
             </div>
           </div>
 
