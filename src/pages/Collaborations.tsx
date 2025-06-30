@@ -66,41 +66,54 @@ const Collaborations = () => {
     {
       name: "Secret Events",
       url: "https://www.instagram.com/secreteventss/",
-      category: "Événementiel"
+      category: "Événementiel",
+      logo: "/lovable-uploads/386ddb83-a99a-4280-8cec-8c6aea34644a.png"
     },
     {
       name: "Umbra Festival",
       url: "https://www.instagram.com/umbra.dance/",
-      category: "Événementiel"
+      category: "Événementiel",
+      logo: "/lovable-uploads/05dcf8f9-c5f0-40af-8ca3-4b1d2d1f48bc.png"
     },
     {
       name: "Beyond Fears",
       url: "https://www.instagram.com/beyond__fears/?hl=fr",
-      category: "Événementiel"
+      category: "Événementiel",
+      logo: "/lovable-uploads/f90f2ce2-2e95-4f15-9766-0ad4ed8561a8.png"
     },
     {
       name: "Casablanca Music Week",
       url: "https://guichet.com/ma-fr/event/producer/casablanca-music-week",
-      category: "Événementiel"
+      category: "Événementiel",
+      logo: "/lovable-uploads/196f8a91-ab64-4dc6-9354-6fe7d9f3031e.png"
     },
     {
       name: "Mom Corporation",
       url: "#",
-      category: "Événement, Design & Marketing"
+      category: "Événement, Design & Marketing",
+      logo: "/lovable-uploads/0175fb15-d9a3-4f83-afbc-0486d21505f9.png"
     },
     {
       name: "OK Daddy",
       url: "#",
-      category: "Événementiel"
+      category: "Événementiel",
+      logo: "/lovable-uploads/1d79743a-6078-4a50-b98c-fabf537de013.png"
     },
     {
       name: "Épicerie Bordelaise",
       url: "#",
-      category: "Restauration & Conférences musicales"
+      category: "Restauration & Conférences musicales",
+      logo: "/lovable-uploads/4708f307-8187-48cb-b276-b1b4c356c679.png"
+    },
+    {
+      name: "Edwin",
+      url: "https://edwin-europe.com/fr-fr/?srsltid=AfmBOoozm7D36im7r3_ZLIY46gmE5v6R9kdcNLMgPcrQBUf0TIzU2Ysh",
+      category: "Mode",
+      logo: "/lovable-uploads/f08a883a-31aa-4529-bf02-a1c73a030a71.png"
     }
   ];
 
-  const categories = ["Restauration", "Immobilier", "Commerce", "Tech", "Startup Studio", "Musique", "Architecture d'intérieur", "Design d'intérieur", "Écrans interactifs", "Événementiel"];
+  const categories = ["Restauration", "Immobilier", "Commerce", "Tech", "Startup Studio", "Musique", "Architecture d'intérieur", "Design d'intérieur", "Écrans interactifs", "Événementiel", "Mode"];
 
   return (
     <div className="min-h-screen bg-white">
