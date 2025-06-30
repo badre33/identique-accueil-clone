@@ -311,16 +311,19 @@ const InsideLink = () => {
               title="Strategic Growth Architect"
               image="/lovable-uploads/da131874-d340-4dc9-b1e7-5fc5f24a0f40.png"
               linkedinUrl="https://www.linkedin.com/in/badreddine-harkaoui-nexiafiducia/"
-              email="badreddine@link-agency.fr"
-              phone="+33 7 45 01 07 14"
+              email="bharkaoui@linkagency.ma"
+              phone="+212 610-061014"
+              whatsapp="+33745010714"
+              website="http://linkagency.ma/"
             />
             <VirtualBusinessCard
               name="Ayman Nejmi"
               title="Creative Technologist"
               image="/lovable-uploads/d53262f8-9a1f-43dd-b2bc-b199945981c1.png"
               linkedinUrl="https://www.linkedin.com/in/ayman-nejmi-9926681a6/"
-              email="ayman@link-agency.fr"
-              phone="+33 7 45 01 07 14"
+              email="a.nejmi@linkagency.ma"
+              phone="+212 669-866831"
+              website="http://linkagency.ma/"
             />
           </div>
         </div>

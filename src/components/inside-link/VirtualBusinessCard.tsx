@@ -1,6 +1,6 @@
 
 import React, { useRef } from 'react';
-import { Download, Linkedin, Mail, Phone } from 'lucide-react';
+import { Download, Linkedin, Mail, Phone, MessageCircle, Globe } from 'lucide-react';
 import { useSoundEffects } from '@/hooks/useSoundEffects';
 
 interface VirtualBusinessCardProps {
@@ -10,9 +10,20 @@ interface VirtualBusinessCardProps {
   linkedinUrl: string;
   email: string;
   phone: string;
+  whatsapp?: string;
+  website?: string;
 }
 
-export const VirtualBusinessCard = ({ name, title, image, linkedinUrl, email, phone }: VirtualBusinessCardProps) => {
+export const VirtualBusinessCard = ({ 
+  name, 
+  title, 
+  image, 
+  linkedinUrl, 
+  email, 
+  phone, 
+  whatsapp,
+  website 
+}: VirtualBusinessCardProps) => {
   const cardRef = useRef<HTMLDivElement>(null);
   const { playClickSound } = useSoundEffects();
 
@@ -24,7 +35,7 @@ ORG:Link Agency
 TITLE:${title}
 EMAIL:${email}
 TEL:${phone}
-URL:${linkedinUrl}
+URL:${website || linkedinUrl}
 END:VCARD`;
 
     const blob = new Blob([vcard], { type: 'text/vcard' });
@@ -88,7 +99,7 @@ END:VCARD`;
           </div>
 
           <div className="flex items-center justify-between">
-            <div className="flex space-x-3">
+            <div className="flex space-x-2">
               <a 
                 href={linkedinUrl}
                 target="_blank"
@@ -112,6 +123,28 @@ END:VCARD`;
               >
                 <Phone className="w-4 h-4" />
               </a>
+              {whatsapp && (
+                <a 
+                  href={`https://wa.me/${whatsapp.replace(/[^0-9]/g, '')}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 bg-white/10 rounded-lg hover:bg-white/20 transition-colors"
+                  onClick={playClickSound}
+                >
+                  <MessageCircle className="w-4 h-4" />
+                </a>
+              )}
+              {website && (
+                <a 
+                  href={website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 bg-white/10 rounded-lg hover:bg-white/20 transition-colors"
+                  onClick={playClickSound}
+                >
+                  <Globe className="w-4 h-4" />
+                </a>
+              )}
             </div>
             
             <button
