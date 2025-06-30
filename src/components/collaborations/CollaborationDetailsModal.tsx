@@ -1,3 +1,4 @@
+
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { ExternalLink, Calendar, Tag, Target, Users, Award, Sparkles } from "lucide-react";
 
@@ -227,7 +228,7 @@ export const CollaborationDetailsModal = ({ collaboration, isOpen, onClose }: Co
                 <img 
                   src={collaboration.logo} 
                   alt={collaboration.name}
-                  className="max-h-20 max-w-full object-contain opacity-80 hover:opacity-100 transition-opacity"
+                  className="max-h-32 max-w-full object-contain opacity-80 hover:opacity-100 transition-opacity"
                 />
               ) : (
                 <div className="text-6xl font-light text-gray-400">
