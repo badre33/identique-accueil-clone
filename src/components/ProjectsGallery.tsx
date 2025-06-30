@@ -43,12 +43,12 @@ export const ProjectsGallery = () => {
       url: "https://artitenium.ma/"
     },
     {
-      title: "DWP",
-      category: "Branding & Digital",
-      image: "/lovable-uploads/29365e8a-7e4d-4041-ad14-37f38d1bde1b.png",
-      description: "Accompagnement stratégique complet pour cette entreprise de design d'intérieur : création d'identité de marque, développement de site web, stratégie d'acquisition client et gestion des réseaux sociaux pour renforcer leur positionnement sur le marché du design premium.",
-      year: "2024-2025",
-      url: "https://dwp.ma/"
+      title: "Personal Branding Politique",
+      category: "Branding Personnel",
+      image: "/lovable-uploads/da131874-d340-4dc9-b1e7-5fc5f24a0f40.png",
+      description: "Accompagnement stratégique sur une mission de personal branding à fort enjeu destinée à renforcer l'image d'une dirigeante politique influente sur la scène internationale. Le travail a porté sur la construction d'un positionnement personnel humanisant et inspirant, la mise en place d'une stratégie multicanale (réseaux sociaux, storytelling éditorial, contenus visuels), et la coordination d'une équipe créative complète. Une attention particulière a été portée à la désolidarisation du cadre politique officiel pour valoriser une figure incarnant l'espoir, la jeunesse et l'avenir.",
+      year: "2024",
+      url: "#"
     }
   ];
 
