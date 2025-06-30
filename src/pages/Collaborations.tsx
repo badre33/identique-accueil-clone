@@ -1,7 +1,10 @@
 
-import { ExternalLink, Users, Award, Globe, Zap } from "lucide-react";
 import { Header } from "@/components/Header";
 import { useState } from "react";
+import { StatsSection } from "@/components/collaborations/StatsSection";
+import { CategoryFilter } from "@/components/collaborations/CategoryFilter";
+import { CollaborationCard } from "@/components/collaborations/CollaborationCard";
+import { CTASection } from "@/components/collaborations/CTASection";
 
 const Collaborations = () => {
   const [selectedCategory, setSelectedCategory] = useState("Toutes");
@@ -177,21 +180,6 @@ const Collaborations = () => {
     ? collaborations 
     : collaborations.filter(collab => collab.category === selectedCategory);
 
-  const stats = [
-    { icon: Users, number: "18+", label: "Collaborations actives" },
-    { icon: Award, number: "50+", label: "Projets réalisés" },
-    { icon: Globe, number: "3", label: "Pays d'intervention" },
-    { icon: Zap, number: "95%", label: "Taux de satisfaction" }
-  ];
-
-  const getLogoClasses = (name: string) => {
-    // Logos qui ont besoin d'être réduits pour s'harmoniser
-    if (name === "Achibest Food" || name === "DWP" || name === "Focus M") {
-      return "max-h-6 max-w-full object-contain opacity-80 group-hover:opacity-100 transition-opacity";
-    }
-    return "max-h-full max-w-full object-contain opacity-80 group-hover:opacity-100 transition-opacity";
-  };
-
   return (
     <div className="min-h-screen bg-white">
       <Header />
@@ -209,134 +197,29 @@ const Collaborations = () => {
               Des partenariats stratégiques qui transforment les marques et créent des expériences inoubliables.
             </p>
             
-            {/* Stats */}
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center group">
-                  <div className="mb-4 flex justify-center">
-                    <stat.icon className="w-8 h-8 text-black group-hover:scale-110 transition-transform duration-300" />
-                  </div>
-                  <div className="text-3xl lg:text-4xl font-light text-black mb-2">{stat.number}</div>
-                  <div className="text-sm text-gray-600 font-medium">{stat.label}</div>
-                </div>
-              ))}
-            </div>
+            <StatsSection />
           </div>
 
-          {/* Category Filter */}
-          <div className="flex flex-wrap justify-center gap-3 mb-12">
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
-                className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
-                  selectedCategory === category
-                    ? "bg-black text-white shadow-lg scale-105"
-                    : "bg-white text-gray-700 border border-gray-200 hover:border-gray-300 hover:bg-gray-50"
-                }`}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
+          <CategoryFilter 
+            categories={categories}
+            selectedCategory={selectedCategory}
+            onCategoryChange={setSelectedCategory}
+          />
 
           {/* Collaborations Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredCollaborations.map((collaboration, index) => (
-              <div 
+              <CollaborationCard 
                 key={index}
-                className="group bg-white rounded-3xl p-8 shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-gray-200 hover:-translate-y-2"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <div className="flex items-start justify-between mb-6">
-                  <div className="flex-1">
-                    {collaboration.logo && (
-                      <div className="mb-4 flex items-center justify-center h-12">
-                        <img 
-                          src={collaboration.logo} 
-                          alt={`${collaboration.name} logo`}
-                          className={getLogoClasses(collaboration.name)}
-                          onError={(e) => {
-                            e.currentTarget.style.display = 'none';
-                          }}
-                        />
-                      </div>
-                    )}
-                    <h3 className="text-xl font-semibold text-black mb-3 group-hover:text-gray-800 transition-colors">
-                      {collaboration.name}
-                    </h3>
-                    <p className="text-sm text-gray-600 leading-relaxed mb-4">
-                      {collaboration.description}
-                    </p>
-                    <div className="flex items-center justify-between mb-4">
-                      <span className="inline-block px-3 py-1 text-xs font-medium bg-gray-100 text-gray-700 rounded-full">
-                        {collaboration.category}
-                      </span>
-                      <span className="text-xs text-gray-500 font-medium">
-                        {collaboration.year}
-                      </span>
-                    </div>
-                    <div className="inline-block px-3 py-1 text-xs font-medium bg-black text-white rounded-full">
-                      {collaboration.type}
-                    </div>
-                  </div>
-                  {collaboration.url !== "#" && (
-                    <a 
-                      href={collaboration.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="opacity-0 group-hover:opacity-100 transition-all duration-300 p-3 hover:bg-gray-100 rounded-full hover:scale-110"
-                    >
-                      <ExternalLink className="w-5 h-5 text-gray-600" />
-                    </a>
-                  )}
-                </div>
-                
-                <div className="h-1 bg-gradient-to-r from-black to-gray-600 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
-              </div>
+                collaboration={collaboration}
+                index={index}
+              />
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-24 px-8 lg:px-16 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
-        
-        <div className="max-w-4xl mx-auto relative z-10 text-center">
-          <h2 className="text-4xl lg:text-5xl font-light mb-8 text-white">
-            Rejoignez nos collaborations d'exception
-          </h2>
-          <p className="text-xl text-gray-300 leading-relaxed mb-12 max-w-3xl mx-auto">
-            Nous sélectionnons nos partenaires avec soin pour créer ensemble des projets qui marquent les esprits et transforment les industries.
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <div className="text-center">
-              <div className="text-2xl font-light text-white mb-2">Stratégie</div>
-              <div className="text-gray-400 text-sm">Positionnement & Vision</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-light text-white mb-2">Création</div>
-              <div className="text-gray-400 text-sm">Design & Contenu</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-light text-white mb-2">Impact</div>
-              <div className="text-gray-400 text-sm">Résultats & Growth</div>
-            </div>
-          </div>
-          
-          <a 
-            href="https://wa.me/33745010714?text=Bonjour%2C%20j'aimerais%20découvrir%20vos%20références%20et%20échanger%20sur%20mon%20projet"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center space-x-4 bg-white text-black px-10 py-5 rounded-full hover:bg-gray-100 transition-all duration-300 text-lg font-medium hover:scale-105 hover:shadow-2xl group"
-          >
-            <span>Démarrer une collaboration</span>
-            <ExternalLink className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
-          </a>
-        </div>
-      </section>
+      <CTASection />
     </div>
   );
 };
