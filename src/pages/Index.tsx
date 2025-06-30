@@ -3,6 +3,7 @@ import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { Services } from "@/components/Services";
 import { Philosophy } from "@/components/Philosophy";
+import { ProjectsGallery } from "@/components/ProjectsGallery";
 import { FAQ } from "@/components/FAQ";
 import { Contact } from "@/components/Contact";
 import { ScrollToTop } from "@/components/ScrollToTop";
@@ -23,6 +24,7 @@ const Index = () => {
       <div id="apropos">
         <Philosophy />
       </div>
+      <ProjectsGallery />
       <FAQ />
       <div id="contact">
         <Contact />

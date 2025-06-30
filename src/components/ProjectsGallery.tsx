@@ -4,67 +4,112 @@ import { ArrowRight, ExternalLink } from "lucide-react";
 export const ProjectsGallery = () => {
   const projects = [
     {
-      title: "Identité visuelle TechFlow",
-      category: "Branding",
-      image: "/lovable-uploads/18500dfb-e7b6-4c75-8c7c-89fa212ee0a8.png",
-      description: "Création d'une identité moderne pour une startup tech"
+      title: "Subway Maroc",
+      category: "Marketing Digital",
+      image: "/lovable-uploads/c66a2b50-92d9-4a9d-a394-09ff44b3d1b2.png",
+      description: "Stratégie marketing digital complète pour la franchise leader au Maroc avec campagnes multi-canal et croissance de +150% d'engagement.",
+      year: "2023-2024",
+      url: "https://www.instagram.com/subwaymaroc/?hl=fr"
     },
     {
-      title: "Événement Innovation Summit",
-      category: "Événementiel", 
-      image: "/lovable-uploads/632e64c5-bfb1-4507-b655-8fb324a8236f.png",
-      description: "Organisation d'un sommet d'innovation avec 500 participants"
+      title: "SGTM Immobilier",
+      category: "Branding & Web", 
+      image: "/lovable-uploads/a404ed81-6016-457c-b044-6027db20cf22.png",
+      description: "Refonte complète de l'identité visuelle et développement d'une plateforme web premium pour cette agence immobilière de prestige.",
+      year: "2023",
+      url: "https://sgtm-immobilier.com/fr/accueil/"
     },
     {
-      title: "Personal Branding CEO",
-      category: "Personal Branding",
-      image: "/lovable-uploads/da131874-d340-4dc9-b1e7-5fc5f24a0f40.png",
-      description: "Développement de l'image personnelle d'un dirigeant"
+      title: "Casablanca Music Week",
+      category: "Événementiel",
+      image: "/lovable-uploads/196f8a91-ab64-4dc6-9354-6fe7d9f3031e.png",
+      description: "Direction artistique et production de la plus grande semaine musicale du Maroc avec plus de 50 000 participants sur 7 jours.",
+      year: "2022-2024",
+      url: "https://guichet.com/ma-fr/event/producer/casablanca-music-week"
     },
     {
-      title: "Campagne Digitale GreenStart",
-      category: "Content Digital",
-      image: "/lovable-uploads/f08a883a-31aa-4529-bf02-a1c73a030a71.png",
-      description: "Stratégie de contenu et campagne multi-canal"
+      title: "French Tech",
+      category: "Partenariat Stratégique",
+      image: "/lovable-uploads/801816e7-97bc-49c9-948c-34e3c9d49e1f.png",
+      description: "Partenaire officiel de l'écosystème French Tech pour l'accompagnement des startups marocaines vers l'international.",
+      year: "2022-2024",
+      url: "#"
+    },
+    {
+      title: "The Family",
+      category: "Conseil Stratégique",
+      image: "/lovable-uploads/ae1bb8f8-ff5a-4b2d-8a17-aacf539b492a.png",
+      description: "Collaboration avec ce startup studio européen pour le développement de l'écosystème tech africain et stratégies d'expansion.",
+      year: "2023",
+      url: "https://www.thefamily.co/"
+    },
+    {
+      title: "Soulection",
+      category: "Événementiel & Branding",
+      image: "/lovable-uploads/b8c1c54b-9721-486c-81ab-dae0977cacc0.png",
+      description: "Production d'événements exclusifs et développement de la présence africaine pour ce collectif musical international.",
+      year: "2023-2024",
+      url: "https://soulection.com/"
     }
   ];
 
   return (
-    <section className="py-32 px-8 lg:px-16 bg-white relative overflow-hidden">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center space-x-2 bg-gray-100 text-gray-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
+    <section className="py-32 px-8 lg:px-16 bg-gradient-to-br from-gray-50 via-white to-gray-100 relative overflow-hidden">
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.02)_1px,transparent_1px)] bg-[size:50px_50px] [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
+
+      <div className="max-w-7xl mx-auto relative z-10">
+        <div className="text-center mb-20">
+          <div className="inline-flex items-center space-x-2 bg-black text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
             <ExternalLink className="w-4 h-4" />
             <span>Nos réalisations</span>
           </div>
-          <h2 className="text-5xl lg:text-6xl font-light mb-6 text-transparent bg-clip-text bg-gradient-to-r from-black via-gray-800 to-black">
+          <h2 className="text-5xl lg:text-6xl font-light mb-8 text-transparent bg-clip-text bg-gradient-to-r from-black via-gray-800 to-black">
             Projets récents
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Découvrez quelques-unes de nos créations les plus marquantes et l'impact qu'elles ont eu sur nos clients.
+          <p className="text-xl lg:text-2xl text-gray-700 leading-relaxed max-w-4xl mx-auto font-light">
+            Découvrez quelques-unes de nos collaborations les plus marquantes et l'impact créatif que nous avons généré pour nos partenaires.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <div 
               key={index}
-              className="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
+              className="group relative overflow-hidden rounded-2xl bg-white hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100"
+              style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div className="aspect-square overflow-hidden">
+              <div className="aspect-[4/3] overflow-hidden relative">
                 <img 
                   src={project.image} 
                   alt={project.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                
+                {/* Badge année flottant */}
+                <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm text-black px-3 py-1 rounded-full text-xs font-medium">
+                  {project.year}
+                </div>
               </div>
               
               <div className="p-6">
-                <div className="text-xs text-gray-500 uppercase tracking-wide mb-2 font-medium">
-                  {project.category}
+                <div className="flex items-center justify-between mb-3">
+                  <span className="text-xs text-gray-500 uppercase tracking-wide font-medium">
+                    {project.category}
+                  </span>
+                  {project.url !== "#" && (
+                    <a 
+                      href={project.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="opacity-0 group-hover:opacity-100 transition-opacity p-2 hover:bg-gray-100 rounded-full"
+                    >
+                      <ExternalLink className="w-4 h-4 text-gray-600" />
+                    </a>
+                  )}
                 </div>
-                <h3 className="text-lg font-medium text-black mb-2 group-hover:text-gray-700 transition-colors">
+                
+                <h3 className="text-xl font-semibold text-black mb-3 group-hover:text-gray-700 transition-colors">
                   {project.title}
                 </h3>
                 <p className="text-sm text-gray-600 leading-relaxed mb-4">
@@ -76,16 +121,19 @@ export const ProjectsGallery = () => {
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </div>
               </div>
+              
+              {/* Barre de progression animée */}
+              <div className="h-1 bg-gradient-to-r from-black to-gray-600 rounded-b-2xl transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
             </div>
           ))}
         </div>
 
-        <div className="text-center mt-12">
+        <div className="text-center mt-16">
           <a 
             href="/collaborations"
-            className="inline-flex items-center space-x-2 bg-black text-white px-8 py-4 rounded-full hover:bg-gray-800 transition-all duration-300 hover:scale-105"
+            className="inline-flex items-center space-x-3 bg-black text-white px-8 py-4 rounded-full hover:bg-gray-800 transition-all duration-300 hover:scale-105 hover:shadow-2xl text-lg font-medium"
           >
-            <span className="font-medium">Voir tous nos projets</span>
+            <span>Voir toutes nos collaborations</span>
             <ArrowRight className="w-5 h-5" />
           </a>
         </div>
