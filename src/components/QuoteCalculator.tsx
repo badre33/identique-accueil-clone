@@ -21,25 +21,25 @@ export const QuoteCalculator = () => {
     {
       id: 'social-media',
       name: 'Réseaux sociaux',
-      basePrice: 800,
+      basePrice: 8000,
       description: 'Stratégie éditoriale, création de contenu, community management'
     },
     {
       id: 'video-production',
       name: 'Production vidéo',
-      basePrice: 1500,
+      basePrice: 15000,
       description: 'Conception, tournage et post-production vidéo professionnelle'
     },
     {
       id: 'photography',
       name: 'Photographie',
-      basePrice: 600,
+      basePrice: 6000,
       description: 'Shooting photo professionnel et retouche'
     },
     {
       id: 'web-writing',
       name: 'Rédaction web',
-      basePrice: 400,
+      basePrice: 4000,
       description: 'Articles de blog, newsletters, contenus SEO'
     }
   ];
@@ -77,7 +77,7 @@ export const QuoteCalculator = () => {
       services.find(s => s.id === id)?.name
     ).join(', ');
     
-    const message = `Bonjour, je souhaite un devis pour les services suivants : ${selectedServiceNames}. Échelle du projet : ${projectScale}, Délai : ${urgency}. Total estimé : ${calculateTotal()}€`;
+    const message = `Bonjour, je souhaite un devis pour les services suivants : ${selectedServiceNames}. Échelle du projet : ${projectScale}, Délai : ${urgency}. Total estimé : ${calculateTotal()}DH`;
     const encodedMessage = encodeURIComponent(message);
     window.open(`https://wa.me/33745010714?text=${encodedMessage}`, '_blank');
   };
@@ -120,7 +120,7 @@ export const QuoteCalculator = () => {
                     <p className="text-sm text-gray-600 mt-1">{service.description}</p>
                   </div>
                   <Badge variant="secondary" className="ml-2">
-                    À partir de {service.basePrice}€
+                    À partir de {service.basePrice.toLocaleString()}DH
                   </Badge>
                 </div>
               </div>
@@ -183,7 +183,7 @@ export const QuoteCalculator = () => {
             <div className="flex items-center justify-between mb-4">
               <h3 className="font-semibold text-lg">Estimation totale</h3>
               <div className="text-3xl font-light text-black">
-                {calculateTotal().toLocaleString()}€
+                {calculateTotal().toLocaleString()}DH
               </div>
             </div>
             
