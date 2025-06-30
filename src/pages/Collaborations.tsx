@@ -113,7 +113,15 @@ const Collaborations = () => {
     }
   ];
 
-  const categories = ["Restauration", "Immobilier", "Commerce", "Tech", "Startup Studio", "Musique", "Architecture d'intérieur", "Design d'intérieur", "Écrans interactifs", "Événementiel", "Mode"];
+  const categories = ["Restauration", "Immobilier", "Commerce", "Tech", "Startup Studio", "Musique", "Architecture d'intérieur", "Design d'intérieur", "Écrans interactifs tactiles", "Événementiel", "Mode"];
+
+  const getLogoClasses = (name: string) => {
+    // Logos qui ont besoin d'être redimensionnés pour s'harmoniser
+    if (name === "Achibest Food" || name === "DWP" || name === "Focus M") {
+      return "max-h-8 max-w-full object-contain opacity-80 group-hover:opacity-100 transition-opacity";
+    }
+    return "max-h-full max-w-full object-contain opacity-80 group-hover:opacity-100 transition-opacity";
+  };
 
   return (
     <div className="min-h-screen bg-white">
@@ -145,7 +153,7 @@ const Collaborations = () => {
                         <img 
                           src={collaboration.logo} 
                           alt={`${collaboration.name} logo`}
-                          className="max-h-full max-w-full object-contain opacity-80 group-hover:opacity-100 transition-opacity"
+                          className={getLogoClasses(collaboration.name)}
                           onError={(e) => {
                             e.currentTarget.style.display = 'none';
                           }}
