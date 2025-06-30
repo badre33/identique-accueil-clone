@@ -64,7 +64,7 @@ export const Hero = () => {
             {/* CTA principal */}
             <div className="flex flex-col sm:flex-row gap-4">
               <a 
-                href="https://wa.me/212661779744?text=Bonjour%2C%20je%20souhaite%20découvrir%20vos%20services%20créatifs%20et%20discuter%20de%20mon%20projet"
+                href="https://wa.me/33745010714?text=Bonjour%2C%20je%20souhaite%20découvrir%20vos%20services%20créatifs%20et%20discuter%20de%20mon%20projet"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary interactive-button group flex items-center space-x-2 focus:ring-4 focus:ring-black focus:ring-opacity-50"
