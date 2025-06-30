@@ -5,8 +5,8 @@ export const ProjectsGallery = () => {
     {
       title: "Amoud",
       category: "Branding & Marketing Digital",
-      image: "/lovable-uploads/86dfbcc8-1b16-4656-9047-427ad8d69523.png",
-      description: "Maison de pâtisserie marocaine fondée en 1982, réputée pour l'excellence de ses viennoiseries, entremets et créations sucrées haut de gamme. Alliant tradition artisanale et innovation, elle s'est imposée comme une référence incontournable à Casablanca.",
+      image: "/lovable-uploads/db939411-f619-4958-844f-cb5d9d97a9ca.png",
+      description: "Maison de pâtisserie marocaine fondée en 1982, réputée pour l'excellence de ses viennoiseries, entremets et créations sucrées haut de gamme. Alliant tradition artisanale et innovation, elle s'est imposée comme une référence incontournable à Casablanca et dans plusieurs grandes villes du Maroc. Grâce à un savoir-faire rigoureux et une offre raffinée, Amoud séduit une clientèle exigeante à la recherche de qualité et d'authenticité.",
       year: "2024",
       url: "#"
     },
@@ -38,17 +38,17 @@ export const ProjectsGallery = () => {
       title: "Artitenium",
       category: "Branding & Digital",
       image: "/lovable-uploads/ceaff19e-cebb-453b-a8e2-33fc348e3bad.png",
-      description: "Création d'une identité visuelle moderne et développement d'une stratégie digitale complète pour cette entreprise technologique innovante.",
+      description: "Création d'une identité visuelle moderne, développement de site web et stratégie d'acquisition digitale pour cette entreprise spécialisée dans l'aménagement d'intérieur haut de gamme. Mission complète incluant branding, stratégie digitale et gestion des réseaux sociaux.",
       year: "2023",
-      url: "#"
+      url: "https://artitenium.ma/"
     },
     {
       title: "DWP",
-      category: "Conseil & Stratégie",
+      category: "Branding & Digital",
       image: "/lovable-uploads/29365e8a-7e4d-4041-ad14-37f38d1bde1b.png",
-      description: "Accompagnement stratégique et développement de solutions créatives pour cette entreprise en expansion internationale.",
+      description: "Accompagnement stratégique complet pour cette entreprise de design d'intérieur : création d'identité de marque, développement de site web, stratégie d'acquisition client et gestion des réseaux sociaux pour renforcer leur positionnement sur le marché du design premium.",
       year: "2023-2024",
-      url: "#"
+      url: "https://dwp.ma/"
     },
     {
       title: "Secret Events",
