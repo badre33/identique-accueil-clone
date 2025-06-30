@@ -3,11 +3,14 @@ import { useState } from "react";
 import { StatsSection } from "@/components/collaborations/StatsSection";
 import { CategoryFilter } from "@/components/collaborations/CategoryFilter";
 import { CollaborationCard } from "@/components/collaborations/CollaborationCard";
+import { CollaborationDetailsModal } from "@/components/collaborations/CollaborationDetailsModal";
 import { CTASection } from "@/components/collaborations/CTASection";
 import { FloatingContactWidget } from "@/components/FloatingContactWidget";
 
 const Collaborations = () => {
   const [selectedCategory, setSelectedCategory] = useState("Toutes");
+  const [selectedCollaboration, setSelectedCollaboration] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const collaborations = [
     {
@@ -180,6 +183,11 @@ const Collaborations = () => {
     ? collaborations 
     : collaborations.filter(collab => collab.category === selectedCategory);
 
+  const handleCollaborationClick = (collaboration) => {
+    setSelectedCollaboration(collaboration);
+    setIsModalOpen(true);
+  };
+
   return (
     <div className="min-h-screen bg-white">
       <Header />
@@ -213,6 +221,7 @@ const Collaborations = () => {
                 key={index}
                 collaboration={collaboration}
                 index={index}
+                onClick={() => handleCollaborationClick(collaboration)}
               />
             ))}
           </div>
@@ -221,6 +230,12 @@ const Collaborations = () => {
 
       <CTASection />
       <FloatingContactWidget />
+      
+      <CollaborationDetailsModal 
+        collaboration={selectedCollaboration}
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
     </div>
   );
 };

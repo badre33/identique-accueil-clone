@@ -14,9 +14,10 @@ interface Collaboration {
 interface CollaborationCardProps {
   collaboration: Collaboration;
   index: number;
+  onClick?: () => void;
 }
 
-export const CollaborationCard = ({ collaboration, index }: CollaborationCardProps) => {
+export const CollaborationCard = ({ collaboration, index, onClick }: CollaborationCardProps) => {
   const getLogoClasses = (name: string) => {
     if (name === "Achibest Food" || name === "DWP" || name === "Focus M") {
       return "max-h-6 max-w-full object-contain opacity-80 group-hover:opacity-100 transition-opacity";
@@ -26,8 +27,9 @@ export const CollaborationCard = ({ collaboration, index }: CollaborationCardPro
 
   return (
     <div 
-      className="group bg-white rounded-3xl p-8 shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-gray-200 hover:-translate-y-2"
+      className="group bg-white rounded-3xl p-8 shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-gray-200 hover:-translate-y-2 cursor-pointer"
       style={{ animationDelay: `${index * 100}ms` }}
+      onClick={onClick}
     >
       <div className="flex items-start justify-between mb-6">
         <div className="flex-1">
@@ -57,8 +59,13 @@ export const CollaborationCard = ({ collaboration, index }: CollaborationCardPro
               {collaboration.year}
             </span>
           </div>
-          <div className="inline-block px-3 py-1 text-xs font-medium bg-black text-white rounded-full">
+          <div className="inline-block px-3 py-1 text-xs font-medium bg-black text-white rounded-full mb-4">
             {collaboration.type}
+          </div>
+          
+          <div className="flex items-center text-black group-hover:text-gray-700 transition-colors">
+            <span className="text-sm font-medium mr-2">Voir les détails</span>
+            <div className="w-4 h-4 group-hover:translate-x-1 transition-transform">→</div>
           </div>
         </div>
         {collaboration.url !== "#" && (
@@ -67,6 +74,7 @@ export const CollaborationCard = ({ collaboration, index }: CollaborationCardPro
             target="_blank"
             rel="noopener noreferrer"
             className="opacity-0 group-hover:opacity-100 transition-all duration-300 p-3 hover:bg-gray-100 rounded-full hover:scale-110"
+            onClick={(e) => e.stopPropagation()}
           >
             <ExternalLink className="w-5 h-5 text-gray-600" />
           </a>
