@@ -1,4 +1,3 @@
-
 import { Mail, MessageCircle, Calendar, ArrowRight } from 'lucide-react';
 
 export const JoinTeamSection = () => {
@@ -16,7 +15,7 @@ export const JoinTeamSection = () => {
       title: 'Email Direct',
       description: 'Présentez-nous votre projet par écrit',
       action: 'Envoyer un email',
-      href: 'mailto:contact@linkagency.fr?subject=Collaboration%20-%20Découverte%20de%20votre%20approche',
+      href: 'mailto:bharkaoui@linkagency.ma?subject=Collaboration%20-%20Découverte%20de%20votre%20approche',
       color: 'from-blue-500 to-cyan-500'
     },
     {
@@ -24,7 +23,7 @@ export const JoinTeamSection = () => {
       title: 'Rendez-vous Stratégique',
       description: 'Planifions un call de 30 minutes',
       action: 'Réserver un créneau',
-      href: 'https://calendly.com/linkagency',
+      href: 'https://calendly.com/b-harkaoui-linkagency/30min',
       color: 'from-purple-500 to-pink-500'
     }
   ];
