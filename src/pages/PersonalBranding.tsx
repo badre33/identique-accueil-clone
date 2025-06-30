@@ -1,8 +1,8 @@
-
 import { Header } from "@/components/Header";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, User, Star, MessageCircle, BarChart, Target, Lightbulb, Users, TrendingUp } from "lucide-react";
 import { Link } from "react-router-dom";
+import { FloatingContactWidget } from "@/components/FloatingContactWidget";
 
 const PersonalBranding = () => {
   const personalServices = [
@@ -210,6 +210,8 @@ const PersonalBranding = () => {
           </Button>
         </div>
       </section>
+      
+      <FloatingContactWidget />
     </div>
   );
 };

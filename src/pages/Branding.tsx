@@ -2,6 +2,7 @@ import { Header } from "@/components/Header";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Palette, Target, Compass, LayoutDashboard, Search, Lightbulb, Rocket, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
+import { FloatingContactWidget } from "@/components/FloatingContactWidget";
 
 const Branding = () => {
   const brandingServices = [
@@ -204,6 +205,8 @@ const Branding = () => {
           </div>
         </div>
       </section>
+      
+      <FloatingContactWidget />
     </div>
   );
 };

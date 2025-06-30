@@ -2,6 +2,7 @@ import { Header } from "@/components/Header";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Palette, Users, Music, Briefcase, Monitor, Camera, CheckCircle, Star } from "lucide-react";
 import { Link } from "react-router-dom";
+import { FloatingContactWidget } from "@/components/FloatingContactWidget";
 
 const Evenementiel = () => {
   const eventServices = [
@@ -189,6 +190,8 @@ const Evenementiel = () => {
           </div>
         </div>
       </section>
+      
+      <FloatingContactWidget />
     </div>
   );
 };
