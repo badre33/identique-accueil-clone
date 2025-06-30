@@ -1,4 +1,3 @@
-
 import { ArrowRight, ExternalLink, Eye } from "lucide-react";
 import { useState } from "react";
 import { ProjectDetailsModal } from "./ProjectDetailsModal";
@@ -13,7 +12,7 @@ export const ProjectsGallery = () => {
       category: "Branding & Marketing Digital",
       image: "/lovable-uploads/8e26a61e-e439-4688-b503-8a3088d2124f.png",
       shortDescription: "Maison de pâtisserie marocaine fondée en 1982, réputée pour l'excellence de ses viennoiseries et créations sucrées haut de gamme. Alliant tradition artisanale et innovation moderne.",
-      description: "Maison de pâtisserie marocaine fondée en 1982, réputée pour l'excellence de ses viennoiseries, entremets et créations sucrées haut de gamme. Alliant tradition artisanale et innovation, elle s'est imposée comme une référence incontournable à Casablanca et dans plusieurs grandes villes du Maroc. Grâce à un savoir-faire rigoureux et une offre raffinée, Amoud séduit une clientèle exigeante à la recherche de qualité et d'authenticité.",
+      description: "Mission complète de transformation digitale et de repositionnement premium pour cette maison de pâtisserie marocaine historique. Nous avons développé une stratégie de marque moderne qui respecte l'héritage artisanal tout en propulsant Amoud vers les standards du luxe contemporain. Le projet incluait la refonte complète de l'identité visuelle, la création d'un packaging premium, le développement d'une présence digitale forte et l'orchestration de campagnes marketing ciblées pour conquérir une clientèle haut de gamme exigeante.",
       year: "2024",
       url: "#"
     },
@@ -22,7 +21,7 @@ export const ProjectsGallery = () => {
       category: "Pop-up Store & Événementiel", 
       image: "/lovable-uploads/b82bb134-7256-4325-b5ca-90d055f1629c.png",
       shortDescription: "Mission complète de pop-up store à Bordeaux pour cette marque de jeans japonaise iconique fondée en 1947. Conception d'un espace éphémère immersif célébrant l'héritage denim japonais.",
-      description: "Mission complète de pop-up store à Bordeaux pour cette marque de jeans japonaise iconique fondée en 1947. Conception et production d'un espace éphémère immersif célébrant l'héritage denim japonais, organisation d'événements exclusifs avec des artistes locaux, stratégie d'activation marketing ciblée et renforcement du branding européen. Une expérience retail unique mêlant tradition japonaise et culture bordelaise.",
+      description: "Création et production d'un pop-up store exceptionnel à Bordeaux pour la marque de jeans japonaise légendaire Edwin. Notre mission consistait à concevoir un espace retail éphémère qui capture l'essence de la culture denim japonaise tout en s'intégrant harmonieusement dans l'écosystème créatif bordelais. Le projet comprenait la scénographie complète de l'espace, l'organisation d'événements exclusifs mêlant art local et tradition nippone, ainsi que le développement d'une stratégie d'activation marketing sur mesure pour créer un buzz authentique et générer des ventes record.",
       year: "2024",
       url: "#"
     },
@@ -31,7 +30,7 @@ export const ProjectsGallery = () => {
       category: "Partenariat Stratégique",
       image: "/lovable-uploads/801816e7-97bc-49c9-948c-34e3c9d49e1f.png",
       shortDescription: "Partenaire officiel de l'écosystème French Tech pour l'accompagnement des startups marocaines vers l'international.",
-      description: "Partenaire officiel de l'écosystème French Tech pour l'accompagnement des startups marocaines vers l'international.",
+      description: "Partenariat stratégique avec l'écosystème French Tech Bordeaux pour développer et structurer l'accompagnement des startups incubées vers l'international. Notre rôle couvre le branding de l'écosystème, la stratégie marketing des programmes d'incubation, et l'accompagnement personnalisé des startups prometteuses. Nous développons les outils de communication, les stratégies de positionnement et les campagnes d'attraction pour renforcer la notoriété de French Tech Bordeaux sur la scène européenne et faciliter l'expansion internationale des entreprises incubées.",
       year: "2022-2024",
       url: "#"
     },
@@ -40,7 +39,7 @@ export const ProjectsGallery = () => {
       category: "Événementiel & Branding",
       image: "/lovable-uploads/b8c1c54b-9721-486c-81ab-dae0977cacc0.png",
       shortDescription: "Production d'événements exclusifs et développement de la présence africaine pour ce collectif musical international.",
-      description: "Production d'événements exclusifs et développement de la présence africaine pour ce collectif musical international.",
+      description: "Organisation et production d'événements musicaux exclusifs pour le collectif international Soulection dans l'écosystème culturel bordelais, avec un focus particulier sur l'I-Boat. Notre mission consiste à créer des expériences musicales uniques en faisant venir les DJs officiels du collectif Soulection pour des soirées exceptionnelles. Nous gérons l'intégralité de la production événementielle, de la programmation artistique au branding spécifique, en créant un pont authentique entre la culture musicale internationale de Soulection et la scène culturelle bordelaise dynamique.",
       year: "2023-2024",
       url: "https://soulection.com/"
     },
@@ -49,7 +48,7 @@ export const ProjectsGallery = () => {
       category: "Branding & Digital",
       image: "/lovable-uploads/ceaff19e-cebb-453b-a8e2-33fc348e3bad.png",
       shortDescription: "Création d'identité visuelle moderne, développement de site web et stratégie d'acquisition digitale pour cette entreprise d'aménagement d'intérieur haut de gamme.",
-      description: "Création d'une identité visuelle moderne, développement de site web et stratégie d'acquisition digitale pour cette entreprise spécialisée dans l'aménagement d'intérieur haut de gamme. Mission complète incluant branding, stratégie digitale et gestion des réseaux sociaux.",
+      description: "Transformation digitale complète d'Artitenium, entreprise spécialisée dans l'aménagement d'intérieur haut de gamme. Notre accompagnement incluait la création d'une identité de marque sophistiquée reflétant l'excellence artisanale, le développement d'un site web premium showcase mettant en valeur leurs réalisations exceptionnelles, et l'élaboration d'une stratégie d'acquisition digitale ciblée. L'objectif était de positionner Artitenium comme la référence incontournable du design d'intérieur de luxe au Maroc, en développant une présence digitale à la hauteur de leur savoir-faire exceptionnel.",
       year: "2024-2025",
       url: "https://artitenium.ma/"
     },
@@ -58,7 +57,7 @@ export const ProjectsGallery = () => {
       category: "Branding Personnel",
       image: "/lovable-uploads/da131874-d340-4dc9-b1e7-5fc5f24a0f40.png",
       shortDescription: "Accompagnement stratégique sur une mission de personal branding à fort enjeu pour renforcer l'image d'une dirigeante politique influente sur la scène internationale.",
-      description: "Accompagnement stratégique sur une mission de personal branding à fort enjeu destinée à renforcer l'image d'une dirigeante politique influente sur la scène internationale. Le travail a porté sur la construction d'un positionnement personnel humanisant et inspirant, la mise en place d'une stratégie multicanale (réseaux sociaux, storytelling éditorial, contenus visuels), et la coordination d'une équipe créative complète. Une attention particulière a été portée à la désolidarisation du cadre politique officiel pour valoriser une figure incarnant l'espoir, la jeunesse et l'avenir.",
+      description: "Mission stratégique de personal branding pour une figure politique influente, visant à construire une image publique authentique et inspirante détachée des codes politiques traditionnels. Notre approche s'est concentrée sur l'humanisation du discours, la valorisation des valeurs d'espoir et de modernité, et la création d'un storytelling personnel puissant. Le projet incluait la refonte complète de la stratégie de communication multicanale, la production de contenus éditoriaux et visuels premium, ainsi que la coordination d'une équipe créative dédiée pour assurer une cohérence parfaite sur tous les points de contact.",
       year: "2024",
       url: "#"
     }
