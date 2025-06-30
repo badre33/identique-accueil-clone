@@ -1,6 +1,7 @@
 
 import { ArrowLeft, Target, Palette, Users, Lightbulb } from "lucide-react";
 import { Link } from "react-router-dom";
+import { FloatingContactWidget } from "@/components/FloatingContactWidget";
 
 const InsideLink = () => {
   return (
@@ -164,6 +165,8 @@ const InsideLink = () => {
           </div>
         </div>
       </section>
+      
+      <FloatingContactWidget />
     </div>
   );
 };

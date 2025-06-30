@@ -1,10 +1,10 @@
-
 import { Header } from "@/components/Header";
 import { useState } from "react";
 import { StatsSection } from "@/components/collaborations/StatsSection";
 import { CategoryFilter } from "@/components/collaborations/CategoryFilter";
 import { CollaborationCard } from "@/components/collaborations/CollaborationCard";
 import { CTASection } from "@/components/collaborations/CTASection";
+import { FloatingContactWidget } from "@/components/FloatingContactWidget";
 
 const Collaborations = () => {
   const [selectedCategory, setSelectedCategory] = useState("Toutes");
@@ -220,6 +220,7 @@ const Collaborations = () => {
       </section>
 
       <CTASection />
+      <FloatingContactWidget />
     </div>
   );
 };
