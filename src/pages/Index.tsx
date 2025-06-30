@@ -7,12 +7,14 @@ import { FAQ } from "@/components/FAQ";
 import { Contact } from "@/components/Contact";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { ScrollProgress } from "@/components/ScrollProgress";
+import { FloatingContactWidget } from "@/components/FloatingContactWidget";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-white">
       <ScrollProgress />
       <Header />
+      <FloatingContactWidget />
       <div id="accueil">
         <Hero />
       </div>
