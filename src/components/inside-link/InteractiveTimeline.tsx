@@ -47,7 +47,7 @@ const timelineEvents: TimelineEvent[] = [
     description: 'Création officielle de Link Agency avec une vision claire : révolutionner le branding.',
     icon: Rocket,
     color: 'from-orange-500 to-red-500',
-    location: 'Lyon, France'
+    location: 'Casablanca'
   },
   {
     id: 5,
