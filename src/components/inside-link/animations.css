@@ -1,0 +1,70 @@
+
+/* Animations personnalisées pour Inside Link */
+
+@keyframes morphIcon {
+  0% { transform: scale(1) rotate(0deg) }
+  50% { transform: scale(1.2) rotate(180deg) }
+  100% { transform: scale(1) rotate(360deg) }
+}
+
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 5px rgba(0, 0, 0, 0.1) }
+  50% { box-shadow: 0 0 20px rgba(0, 0, 0, 0.3), 0 0 30px rgba(0, 0, 0, 0.1) }
+}
+
+@keyframes textShimmer {
+  0% { background-position: -200% 0 }
+  100% { background-position: 200% 0 }
+}
+
+.morph-icon:hover {
+  animation: morphIcon 0.6s ease-in-out;
+}
+
+.glow-pulse {
+  animation: glowPulse 2s ease-in-out infinite;
+}
+
+.text-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  background-size: 200% 100%;
+  animation: textShimmer 2s infinite;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Enhanced transitions */
+* {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Interactive elements */
+.interactive-element {
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.interactive-element::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+.interactive-element:hover::before {
+  width: 200px;
+  height: 200px;
+}
