@@ -1,8 +1,9 @@
 import { Header } from "@/components/Header";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Palette, Target, Compass, LayoutDashboard, Search, Lightbulb, Rocket, Zap } from "lucide-react";
+import { ArrowLeft, Palette, Target, Compass, LayoutDashboard, Search, Lightbulb, Rocket, Zap, Users, TrendingUp } from "lucide-react";
 import { Link } from "react-router-dom";
 import { FloatingContactWidget } from "@/components/FloatingContactWidget";
+import { WorkflowTimeline } from "@/components/WorkflowTimeline";
 
 const Branding = () => {
   const brandingServices = [
@@ -32,42 +33,34 @@ const Branding = () => {
     }
   ];
 
-  const processSteps = [
+  const workflowSteps = [
     {
-      number: "①",
-      icon: <Search className="w-12 h-12" />,
-      title: "Recherche",
-      subtitle: "Comprendre avant de créer.",
+      number: "1",
+      title: "Recherche & Immersion",
       description: "Nous étudions votre marché, vos concurrents et vos utilisateurs pour identifier les véritables leviers d'impact. Cette phase d'immersion garantit la pertinence stratégique de nos recommandations.",
-      color: "from-blue-50 to-blue-100",
-      accent: "bg-blue-500"
+      duration: "1-2 semaines",
+      icon: <Search className="w-8 h-8" />
     },
     {
-      number: "②",
-      icon: <Target className="w-12 h-12" />,
-      title: "Stratégie",
-      subtitle: "Structurer une marque qui dure.",
+      number: "2",
+      title: "Stratégie de Marque",
       description: "Nous construisons une architecture de marque claire, forte et alignée sur vos ambitions. Positionnement, vision, ton, ADN : chaque choix est guidé par une cohérence stratégique globale.",
-      color: "from-purple-50 to-purple-100",
-      accent: "bg-purple-500"
+      duration: "2-3 semaines",
+      icon: <Target className="w-8 h-8" />
     },
     {
-      number: "③",
-      icon: <Lightbulb className="w-12 h-12" />,
-      title: "Création",
-      subtitle: "Donner vie à votre identité.",
+      number: "3",
+      title: "Création & Design",
       description: "Nous traduisons votre stratégie en un univers visuel et narratif unique : logo, charte graphique, contenus, expérience. Chaque détail est pensé pour capter, engager et inspirer.",
-      color: "from-orange-50 to-orange-100",
-      accent: "bg-orange-500"
+      duration: "3-4 semaines",
+      icon: <Lightbulb className="w-8 h-8" />
     },
     {
-      number: "④",
-      icon: <Rocket className="w-12 h-12" />,
-      title: "Déploiement",
-      subtitle: "Activer votre marque dans le réel.",
+      number: "4",
+      title: "Déploiement & Activation",
       description: "Nous accompagnons le lancement ou la refonte avec une mise en œuvre maîtrisée : kit de communication, stratégie digitale, contenu, événements. Votre marque prend vie, avec impact et élégance.",
-      color: "from-green-50 to-green-100",
-      accent: "bg-green-500"
+      duration: "2-4 semaines",
+      icon: <Rocket className="w-8 h-8" />
     }
   ];
 
@@ -137,74 +130,12 @@ const Branding = () => {
         </div>
       </section>
 
-      {/* Process Section */}
-      <section className="py-20 px-8 lg:px-16 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
-        {/* Decorative elements */}
-        <div className="absolute top-10 right-10 w-32 h-32 bg-gradient-to-br from-gray-100 to-gray-200 rounded-full opacity-20 animate-pulse"></div>
-        <div className="absolute bottom-20 left-10 w-24 h-24 bg-gradient-to-br from-black to-gray-600 rounded-full opacity-10 animate-bounce" style={{ animationDelay: '1s', animationDuration: '3s' }}></div>
-        
-        <div className="max-w-6xl mx-auto relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-light mb-8 text-black">Notre processus</h2>
-            <p className="text-xl text-gray-700 max-w-4xl mx-auto font-light leading-relaxed">
-              Notre méthode repose sur une approche sur-mesure, rigoureuse et créative, conçue pour transformer chaque marque en une référence inspirante et durable.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {processSteps.map((step, index) => (
-              <div key={index} className="group relative">
-                {/* Connection line for desktop */}
-                {index < processSteps.length - 1 && index % 2 === 0 && (
-                  <div className="hidden lg:block absolute top-1/2 left-full w-12 h-0.5 bg-gradient-to-r from-gray-300 to-transparent transform -translate-y-1/2 z-0"></div>
-                )}
-                
-                <div className={`relative bg-gradient-to-br ${step.color} p-8 rounded-2xl hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-white/50 backdrop-blur-sm`}>
-                  {/* Number badge */}
-                  <div className={`absolute -top-4 -left-4 w-12 h-12 ${step.accent} text-white rounded-full flex items-center justify-center text-xl font-bold shadow-lg`}>
-                    {step.number}
-                  </div>
-                  
-                  {/* Icon */}
-                  <div className="text-gray-700 mb-6 group-hover:scale-110 transition-transform duration-300">
-                    {step.icon}
-                  </div>
-                  
-                  {/* Content */}
-                  <h3 className="text-2xl font-light mb-3 text-black group-hover:text-gray-800 transition-colors">
-                    {step.title}
-                  </h3>
-                  <p className="text-gray-800 font-medium mb-4 text-lg">
-                    {step.subtitle}
-                  </p>
-                  <p className="text-gray-600 leading-relaxed">
-                    {step.description}
-                  </p>
-                  
-                  {/* Decorative element */}
-                  <div className={`absolute bottom-4 right-4 w-3 h-3 ${step.accent} rounded-full opacity-60 group-hover:opacity-100 transition-opacity`}></div>
-                </div>
-              </div>
-            ))}
-          </div>
-          
-          {/* Bottom CTA */}
-          <div className="text-center mt-16">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-black text-white rounded-full mb-6 animate-pulse">
-              <Zap className="w-8 h-8" />
-            </div>
-            <p className="text-lg text-gray-700 mb-6 font-light">
-              Prêt à transformer votre marque ?
-            </p>
-            <Button 
-              onClick={handleContact}
-              className="bg-black text-white hover:bg-gray-800 px-8 py-6 text-lg"
-            >
-              Échangeons ensemble
-            </Button>
-          </div>
-        </div>
-      </section>
+      {/* Workflow Timeline */}
+      <WorkflowTimeline 
+        steps={workflowSteps}
+        title="Notre processus de création de marque"
+        subtitle="Une méthode rigoureuse et créative pour transformer chaque marque en référence inspirante"
+      />
       
       <FloatingContactWidget />
     </div>

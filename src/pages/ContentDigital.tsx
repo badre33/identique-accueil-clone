@@ -1,9 +1,10 @@
 import { Header } from "@/components/Header";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Smartphone, Video, Camera, Edit, TrendingUp, Users, Target, Zap, CheckCircle, Star } from "lucide-react";
+import { ArrowLeft, Smartphone, Video, Camera, Edit, TrendingUp, Users, Target, Zap, CheckCircle, Star, Search, Palette, Calendar, BarChart } from "lucide-react";
 import { Link } from "react-router-dom";
 import { FloatingContactWidget } from "@/components/FloatingContactWidget";
 import { QuoteCalculator } from "@/components/QuoteCalculator";
+import { WorkflowTimeline } from "@/components/WorkflowTimeline";
 
 const ContentDigital = () => {
   const contentServices = [
@@ -60,6 +61,37 @@ const ContentDigital = () => {
       icon: <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6" />,
       title: "Qualité garantie",
       description: "Processus de validation rigoureux pour des contenus irréprochables."
+    }
+  ];
+
+  const workflowSteps = [
+    {
+      number: "1",
+      title: "Audit & Stratégie",
+      description: "Analyse de votre présence digitale actuelle, définition de vos objectifs et création d'une stratégie de contenu personnalisée pour maximiser votre impact.",
+      duration: "1 semaine",
+      icon: <Search className="w-8 h-8" />
+    },
+    {
+      number: "2",
+      title: "Création & Production",
+      description: "Production de contenus haute qualité : visuels, vidéos, textes optimisés. Chaque contenu est créé pour engager votre audience et renforcer votre image de marque.",
+      duration: "2-4 semaines",
+      icon: <Palette className="w-8 h-8" />
+    },
+    {
+      number: "3",
+      title: "Planification & Diffusion",
+      description: "Mise en place du calendrier éditorial, programmation et diffusion sur vos plateformes digitales avec un timing optimal pour maximiser la portée.",
+      duration: "En continu",
+      icon: <Calendar className="w-8 h-8" />
+    },
+    {
+      number: "4",
+      title: "Analyse & Optimisation",
+      description: "Suivi des performances, analyse des KPIs et optimisation continue de votre stratégie pour améliorer constamment vos résultats.",
+      duration: "Mensuel",
+      icon: <BarChart className="w-8 h-8" />
     }
   ];
 
@@ -221,6 +253,13 @@ const ContentDigital = () => {
           </div>
         </div>
       </section>
+
+      {/* Workflow Timeline */}
+      <WorkflowTimeline 
+        steps={workflowSteps}
+        title="Notre processus content digital"
+        subtitle="Une approche méthodique pour créer, diffuser et optimiser vos contenus digitaux"
+      />
 
       {/* Section call-to-action avec gradient unifié */}
       <section className="section-padding gradient-primary">

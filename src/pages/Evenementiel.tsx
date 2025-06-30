@@ -1,8 +1,9 @@
 import { Header } from "@/components/Header";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Palette, Users, Music, Briefcase, Monitor, Camera, CheckCircle, Star } from "lucide-react";
+import { ArrowLeft, Palette, Users, Music, Briefcase, Monitor, Camera, CheckCircle, Star, Search, Calendar, Settings, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
 import { FloatingContactWidget } from "@/components/FloatingContactWidget";
+import { WorkflowTimeline } from "@/components/WorkflowTimeline";
 
 const Evenementiel = () => {
   const eventServices = [
@@ -51,6 +52,37 @@ const Evenementiel = () => {
     { number: "98%", label: "Clients satisfaits" },
     { number: "50+", label: "Partenaires de confiance" },
     { number: "24/7", label: "Support disponible" }
+  ];
+
+  const workflowSteps = [
+    {
+      number: "1",
+      title: "Briefing & Conceptualisation",
+      description: "Nous analysons vos objectifs, votre audience et vos contraintes pour concevoir un concept événementiel unique et mémorable, parfaitement aligné avec votre image de marque.",
+      duration: "1 semaine",
+      icon: <Search className="w-8 h-8" />
+    },
+    {
+      number: "2",
+      title: "Planification & Production",
+      description: "Développement du concept, recherche de lieux, coordination des prestataires, création des supports visuels et mise en place de la logistique complète de votre événement.",
+      duration: "3-6 semaines",
+      icon: <Calendar className="w-8 h-8" />
+    },
+    {
+      number: "3",
+      title: "Réalisation & Coordination",
+      description: "Gestion opérationnelle le jour J avec notre équipe sur place, coordination des équipes techniques, accueil des invités et suivi en temps réel pour un événement parfait.",
+      duration: "Jour J",
+      icon: <Settings className="w-8 h-8" />
+    },
+    {
+      number: "4",
+      title: "Bilan & Valorisation",
+      description: "Livraison des contenus photo/vidéo, analyse des retombées, rapport de performance et recommandations pour optimiser vos futurs événements.",
+      duration: "1-2 semaines",
+      icon: <Zap className="w-8 h-8" />
+    }
   ];
 
   const handleContact = () => {
@@ -156,6 +188,13 @@ const Evenementiel = () => {
           </div>
         </div>
       </section>
+
+      {/* Workflow Timeline */}
+      <WorkflowTimeline 
+        steps={workflowSteps}
+        title="Notre processus événementiel"
+        subtitle="De la conception à la réalisation, une approche méthodique pour des événements d'exception"
+      />
 
       {/* Why Choose Us Section */}
       <section className="py-20 px-8 lg:px-16 bg-blue-50">

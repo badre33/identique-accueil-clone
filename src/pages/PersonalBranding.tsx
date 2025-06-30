@@ -1,8 +1,9 @@
 import { Header } from "@/components/Header";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, User, Star, MessageCircle, BarChart, Target, Lightbulb, Users, TrendingUp } from "lucide-react";
+import { ArrowLeft, User, Star, MessageCircle, BarChart, Target, Lightbulb, Users, TrendingUp, Search, Palette, Rocket, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import { FloatingContactWidget } from "@/components/FloatingContactWidget";
+import { WorkflowTimeline } from "@/components/WorkflowTimeline";
 
 const PersonalBranding = () => {
   const personalServices = [
@@ -59,6 +60,37 @@ const PersonalBranding = () => {
       icon: <TrendingUp className="w-6 h-6" />,
       title: "Résultats mesurables",
       description: "Analytics et reporting pour optimiser votre performance."
+    }
+  ];
+
+  const workflowSteps = [
+    {
+      number: "1",
+      title: "Audit & Analyse",
+      description: "Nous analysons votre positionnement actuel, votre marché et vos objectifs pour définir une stratégie personnalisée et différenciante.",
+      duration: "1-2 semaines",
+      icon: <Search className="w-8 h-8" />
+    },
+    {
+      number: "2", 
+      title: "Stratégie & Identité",
+      description: "Création de votre identité visuelle, définition de votre message clé et structuration de votre proposition de valeur unique.",
+      duration: "2-3 semaines",
+      icon: <Palette className="w-8 h-8" />
+    },
+    {
+      number: "3",
+      title: "Création de Contenu",
+      description: "Production de contenus personnalisés : visuels, textes, vidéos et mise en place de votre présence digitale optimisée.",
+      duration: "3-4 semaines", 
+      icon: <MessageCircle className="w-8 h-8" />
+    },
+    {
+      number: "4",
+      title: "Lancement & Suivi", 
+      description: "Déploiement de votre nouvelle identité, lancement des campagnes et suivi des performances avec optimisations continues.",
+      duration: "En continu",
+      icon: <Rocket className="w-8 h-8" />
     }
   ];
 
@@ -166,6 +198,13 @@ const PersonalBranding = () => {
           </div>
         </div>
       </section>
+
+      {/* Workflow Timeline */}
+      <WorkflowTimeline 
+        steps={workflowSteps}
+        title="Notre processus Personal Branding"
+        subtitle="4 étapes clés pour construire une marque personnelle puissante"
+      />
 
       {/* Why Choose Us Section */}
       <section className="py-20 px-8 lg:px-16 bg-gradient-to-br from-gray-50 to-purple-50">
