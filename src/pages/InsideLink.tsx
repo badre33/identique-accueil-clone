@@ -48,9 +48,9 @@ const InsideLink = () => {
             <div className="group">
               <div className="relative mb-8 overflow-hidden rounded-3xl">
                 <img 
-                  src="/lovable-uploads/e2763711-5c4f-41c8-8f70-c40bb1559f9b.png"
+                  src="/lovable-uploads/aaebff3a-fdf0-4f54-9c7a-6fbbf4e7894c.png"
                   alt="Badreddine Harkaoui"
-                  className="w-full h-[600px] object-cover group-hover:scale-105 transition-transform duration-700"
+                  className="w-full h-[600px] object-cover object-center group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
