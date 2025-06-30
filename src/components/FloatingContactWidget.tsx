@@ -14,7 +14,7 @@ export const FloatingContactWidget = () => {
   };
 
   const handleCall = () => {
-    window.open('tel:+33745010714', '_self');
+    window.open('tel:+212990245226', '_self');
   };
 
   const handleEmail = () => {
