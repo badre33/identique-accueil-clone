@@ -1,4 +1,3 @@
-
 import { ExternalLink } from "lucide-react";
 import { Header } from "@/components/Header";
 
@@ -8,57 +7,61 @@ const Collaborations = () => {
       name: "Subway Maroc",
       url: "https://www.instagram.com/subwaymaroc/?hl=fr",
       category: "Restauration",
-      logo: "https://logos-world.net/wp-content/uploads/2020/09/Subway-Logo.png"
+      logo: "/lovable-uploads/c66a2b50-92d9-4a9d-a394-09ff44b3d1b2.png"
     },
     {
       name: "SGTM Immobilier",
       url: "https://sgtm-immobilier.com/fr/accueil/",
       category: "Immobilier",
-      logo: "https://sgtm-immobilier.com/wp-content/uploads/2019/10/logo-sgtm-immobilier.png"
+      logo: "/lovable-uploads/a404ed81-6016-457c-b044-6027db20cf22.png"
     },
     {
       name: "Amoud",
       url: "https://www.amoud.ma/",
       category: "Commerce",
-      logo: "https://www.amoud.ma/wp-content/uploads/2019/05/logo-amoud.png"
+      logo: "/lovable-uploads/18500dfb-e7b6-4c75-8c7c-89fa212ee0a8.png"
     },
     {
       name: "Achibest Food",
       url: "https://www.instagram.com/achibest_food/?hl=fr",
-      category: "Restauration"
+      category: "Restauration",
+      logo: "/lovable-uploads/632e64c5-bfb1-4507-b655-8fb324a8236f.png"
     },
     {
       name: "French Tech",
       url: "#",
       category: "Tech",
-      logo: "https://www.lafrenchtech.com/wp-content/uploads/2019/06/french-tech-logo.png"
+      logo: "/lovable-uploads/801816e7-97bc-49c9-948c-34e3c9d49e1f.png"
     },
     {
       name: "The Family",
       url: "https://www.thefamily.co/",
       category: "Startup Studio",
-      logo: "https://www.thefamily.co/static/images/logo-black.svg"
+      logo: "/lovable-uploads/ae1bb8f8-ff5a-4b2d-8a17-aacf539b492a.png"
     },
     {
       name: "Soulection",
       url: "https://soulection.com/",
       category: "Musique",
-      logo: "https://soulection.com/images/soulection-logo.png"
+      logo: "/lovable-uploads/b8c1c54b-9721-486c-81ab-dae0977cacc0.png"
     },
     {
       name: "Artitenium",
       url: "https://kzmfwv89vwbj1uf8kcxa.lite.vusercontent.net/",
-      category: "Architecture d'intérieur"
+      category: "Architecture d'intérieur",
+      logo: "/lovable-uploads/ce7e28cc-c15c-48b9-b9be-03195d92927f.png"
     },
     {
       name: "DWP",
       url: "https://dwp.ma/",
-      category: "Design d'intérieur"
+      category: "Design d'intérieur",
+      logo: "/lovable-uploads/b800af93-e21f-4e18-af4d-9f94678f2999.png"
     },
     {
       name: "Focus M",
       url: "https://focusm.ma/",
-      category: "Écrans interactifs tactiles"
+      category: "Écrans interactifs tactiles",
+      logo: "/lovable-uploads/db939411-f619-4958-844f-cb5d9d97a9ca.png"
     },
     {
       name: "Secret Events",
