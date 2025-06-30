@@ -1,11 +1,43 @@
 
-import { ArrowLeft, Target, Palette, Users, Lightbulb } from "lucide-react";
+import { useState, useEffect } from "react";
+import { ArrowLeft, Target, Palette, Users, Lightbulb, Linkedin } from "lucide-react";
 import { Link } from "react-router-dom";
 import { FloatingContactWidget } from "@/components/FloatingContactWidget";
+import { SideNavigation } from "@/components/inside-link/SideNavigation";
+import { AnimatedStats } from "@/components/inside-link/AnimatedStats";
+import { VisionSection } from "@/components/inside-link/VisionSection";
+import { JoinTeamSection } from "@/components/inside-link/JoinTeamSection";
 
 const InsideLink = () => {
+  const [currentSection, setCurrentSection] = useState('hero');
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ['hero', 'founders', 'vision', 'stats', 'mission', 'join'];
+      const scrollPosition = window.scrollY + 200;
+
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const offsetTop = element.offsetTop;
+          const offsetBottom = offsetTop + element.offsetHeight;
+          
+          if (scrollPosition >= offsetTop && scrollPosition < offsetBottom) {
+            setCurrentSection(section);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <div className="min-h-screen bg-white">
+      <SideNavigation currentSection={currentSection} />
+      
       {/* Header avec navigation de retour */}
       <header className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-8 lg:px-16">
@@ -27,26 +59,26 @@ const InsideLink = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-8 lg:px-16 bg-gradient-to-br from-gray-50 via-white to-gray-100 relative overflow-hidden">
+      <section id="hero" className="pt-32 pb-20 px-8 lg:px-16 bg-gradient-to-br from-gray-50 via-white to-gray-100 relative overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.02)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
         
         <div className="max-w-6xl mx-auto text-center relative z-10">
-          <h1 className="text-6xl lg:text-7xl font-light mb-8 text-transparent bg-clip-text bg-gradient-to-r from-black via-gray-800 to-black">
+          <h1 className="text-6xl lg:text-7xl font-light mb-8 text-transparent bg-clip-text bg-gradient-to-r from-black via-gray-800 to-black animate-fade-in">
             Inside Link
           </h1>
-          <p className="text-2xl lg:text-3xl text-gray-700 leading-relaxed max-w-4xl mx-auto font-light">
+          <p className="text-2xl lg:text-3xl text-gray-700 leading-relaxed max-w-4xl mx-auto font-light animate-fade-in" style={{ animationDelay: '200ms' }}>
             Deux fondateurs. Une vision claire. Un seul objectif : bâtir des marques qui imposent le respect.
           </p>
         </div>
       </section>
 
       {/* Fondateurs Section */}
-      <section className="py-32 px-8 lg:px-16">
+      <section id="founders" className="py-32 px-8 lg:px-16">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
             
             {/* Badreddine Harkaoui */}
-            <div className="group">
+            <div className="group animate-fade-in">
               <div className="relative mb-8 overflow-hidden rounded-3xl">
                 <img 
                   src="/lovable-uploads/da131874-d340-4dc9-b1e7-5fc5f24a0f40.png"
@@ -54,6 +86,16 @@ const InsideLink = () => {
                   className="w-full aspect-[4/5] object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <a 
+                    href="https://www.linkedin.com/in/badreddine-harkaoui-nexiafiducia/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-white/90 backdrop-blur-sm p-3 rounded-full hover:bg-white transition-colors"
+                  >
+                    <Linkedin className="w-5 h-5 text-blue-600" />
+                  </a>
+                </div>
               </div>
               
               <div className="space-y-6">
@@ -86,7 +128,7 @@ const InsideLink = () => {
             </div>
 
             {/* Ayman Nejmi */}
-            <div className="group">
+            <div className="group animate-fade-in" style={{ animationDelay: '200ms' }}>
               <div className="relative mb-8 overflow-hidden rounded-3xl">
                 <img 
                   src="/lovable-uploads/d53262f8-9a1f-43dd-b2bc-b199945981c1.png"
@@ -94,6 +136,16 @@ const InsideLink = () => {
                   className="w-full aspect-[4/5] object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <a 
+                    href="https://www.linkedin.com/in/ayman-nejmi-9926681a6/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-white/90 backdrop-blur-sm p-3 rounded-full hover:bg-white transition-colors"
+                  >
+                    <Linkedin className="w-5 h-5 text-blue-600" />
+                  </a>
+                </div>
               </div>
               
               <div className="space-y-6">
@@ -128,8 +180,11 @@ const InsideLink = () => {
         </div>
       </section>
 
+      <VisionSection />
+      <AnimatedStats />
+
       {/* Pourquoi Link Section */}
-      <section className="py-32 px-8 lg:px-16 bg-gradient-to-br from-black to-gray-900 text-white relative overflow-hidden">
+      <section id="mission" className="py-32 px-8 lg:px-16 bg-gradient-to-br from-black to-gray-900 text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
         
         <div className="max-w-5xl mx-auto relative z-10">
@@ -165,6 +220,8 @@ const InsideLink = () => {
           </div>
         </div>
       </section>
+
+      <JoinTeamSection />
       
       <FloatingContactWidget />
     </div>
