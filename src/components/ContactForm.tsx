@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -229,7 +228,7 @@ ${data.message}`;
                 control={form.control}
                 name="countryCode"
                 render={({ field }) => (
-                  <FormItem className="w-20 sm:w-24">
+                  <FormItem className="w-28 sm:w-32">
                     <Select onValueChange={field.onChange} defaultValue={field.value}>
                       <FormControl>
                         <SelectTrigger className="bg-transparent border-0 border-b-2 border-gray-600 text-white focus:border-white rounded-none h-auto pb-2 sm:pb-3 text-sm sm:text-base">
@@ -241,8 +240,7 @@ ${data.message}`;
                           <SelectItem key={index} value={country.code} className="text-white hover:bg-gray-800 text-sm">
                             <span className="flex items-center gap-2">
                               <span>{country.flag}</span>
-                              <span className="hidden sm:inline">{country.code}</span>
-                              <span className="sm:hidden">{country.code}</span>
+                              <span>{country.code}</span>
                             </span>
                           </SelectItem>
                         ))}
