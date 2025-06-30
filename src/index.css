@@ -1,35 +1,39 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Import du système de design unifié */
-@import './styles/design-system.css';
-
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. */
 
 @layer base {
-  /* Système de couleurs hérité mais unifié avec le design system */
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
+
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
+
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
+
     --primary: 222.2 47.4% 11.2%;
     --primary-foreground: 210 40% 98%;
+
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
+
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
+
     --accent: 210 40% 96.1%;
     --accent-foreground: 222.2 47.4% 11.2%;
+
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
+
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
+
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
     --sidebar-primary: 240 5.9% 10%;
@@ -38,18 +42,70 @@
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Système de couleurs unifié - Brand Colors */
+    --brand-primary: 0 0% 0%;
+    --brand-secondary: 210 40% 96%;
+    --brand-accent: 160 100% 40%;
+    --brand-warning: 38 92% 50%;
+    --brand-error: 0 84% 60%;
+    --brand-success: 142 76% 36%;
     
-    /* Variables d'espacement responsive - alignées avec le design system */
-    --spacing-xs: var(--space-1);
-    --spacing-sm: var(--space-2);
-    --spacing-md: var(--space-4);
-    --spacing-lg: var(--space-6);
-    --spacing-xl: var(--space-8);
-    --spacing-2xl: var(--space-12);
-    --spacing-3xl: var(--space-16);
+    /* Couleurs de gradients harmonieux */
+    --gradient-primary: linear-gradient(135deg, hsl(160 100% 40%) 0%, hsl(217 91% 60%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(262 83% 58%) 0%, hsl(217 91% 60%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(160 100% 40%) 0%, hsl(142 76% 36%) 100%);
+    --gradient-warm: linear-gradient(135deg, hsl(38 92% 50%) 0%, hsl(330 81% 60%) 100%);
+    --gradient-subtle: linear-gradient(135deg, hsl(210 40% 98%) 0%, hsl(220 14% 96%) 100%);
     
-    /* Variables de rayon pour cohérence - alignées */
-    --radius: var(--radius-lg);
+    /* Couleurs neutres étendues et unifiées */
+    --neutral-50: 210 20% 98%;
+    --neutral-100: 220 14% 96%;
+    --neutral-200: 220 13% 91%;
+    --neutral-300: 216 12% 84%;
+    --neutral-400: 218 11% 65%;
+    --neutral-500: 220 9% 46%;
+    --neutral-600: 215 14% 34%;
+    --neutral-700: 217 19% 27%;
+    --neutral-800: 215 28% 17%;
+    --neutral-900: 222 84% 5%;
+    
+    /* Variables d'espacement responsive */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-2xl: 3rem;
+    --spacing-3xl: 4rem;
+    
+    /* Variables typographiques */
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.25rem;
+    --font-size-2xl: 1.5rem;
+    --font-size-3xl: 1.875rem;
+    --font-size-4xl: 2.25rem;
+    --font-size-5xl: 3rem;
+    --font-size-6xl: 3.75rem;
+    
+    /* Variables de rayon pour cohérence */
+    --radius-sm: 0.25rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 0.75rem;
+    --radius-xl: 1rem;
+    --radius-2xl: 1.5rem;
+    --radius-full: 9999px;
+    
+    /* Variables d'animation */
+    --transition-fast: 0.15s;
+    --transition-normal: 0.3s;
+    --transition-slow: 0.5s;
+    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-out: cubic-bezier(0, 0, 0.2, 1);
+    --ease-in: cubic-bezier(0.4, 0, 1, 1);
   }
 
   .dark {
@@ -83,95 +139,6 @@
   }
 }
 
-@layer utilities {
-  /* Typography System - moved from design-system.css for @apply compatibility */
-  .heading-hero {
-    font-family: var(--font-family-display);
-    font-size: clamp(var(--text-5xl), 8vw, var(--text-8xl));
-    font-weight: var(--font-weight-light);
-    line-height: var(--leading-none);
-    letter-spacing: var(--tracking-tighter);
-    background: var(--gradient-brand);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  .heading-section {
-    font-family: var(--font-family-display);
-    font-size: clamp(var(--text-4xl), 5vw, var(--text-6xl));
-    font-weight: var(--font-weight-light);
-    line-height: var(--leading-tight);
-    letter-spacing: var(--tracking-tight);
-    color: var(--brand-black);
-  }
-
-  .heading-card {
-    font-family: var(--font-family-display);
-    font-size: var(--text-3xl);
-    font-weight: var(--font-weight-normal);
-    line-height: var(--leading-snug);
-    color: var(--brand-black);
-  }
-
-  .text-body-lg {
-    font-family: var(--font-family-primary);
-    font-size: var(--text-xl);
-    font-weight: var(--font-weight-normal);
-    line-height: var(--leading-relaxed);
-    color: var(--neutral-700);
-  }
-
-  .text-body {
-    font-family: var(--font-family-primary);
-    font-size: var(--text-base);
-    font-weight: var(--font-weight-normal);
-    line-height: var(--leading-normal);
-    color: var(--neutral-600);
-  }
-
-  .text-small {
-    font-family: var(--font-family-primary);
-    font-size: var(--text-sm);
-    font-weight: var(--font-weight-medium);
-    line-height: var(--leading-normal);
-    color: var(--neutral-500);
-  }
-
-  /* Focus States */
-  .focus-ring:focus {
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
-  }
-
-  /* Smooth Transitions */
-  .transition-smooth {
-    transition: all var(--duration-300) var(--ease-out);
-  }
-
-  .transition-fast {
-    transition: all var(--duration-150) var(--ease-out);
-  }
-
-  .transition-slow {
-    transition: all var(--duration-500) var(--ease-out);
-  }
-
-  /* Interactive Elements */
-  .interactive {
-    cursor: pointer;
-    transition: all var(--duration-200) var(--ease-out);
-  }
-
-  .interactive:hover {
-    transform: translateY(-2px);
-  }
-
-  .interactive:active {
-    transform: translateY(0);
-  }
-}
-
 @layer base {
   * {
     @apply border-border;
@@ -179,331 +146,386 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: var(--font-family-primary);
     font-feature-settings: "rlig" 1, "calt" 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
   }
 
-  /* Hiérarchie typographique mise à jour avec le design system */
+  /* Hiérarchie typographique améliorée et unifiée */
   h1 {
-    @apply heading-hero;
+    @apply text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-light leading-tight tracking-tight;
+    font-variation-settings: "wght" 300;
   }
   
   h2 {
-    @apply heading-section;
+    @apply text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-light leading-tight tracking-tight;
+    font-variation-settings: "wght" 300;
   }
   
   h3 {
-    @apply heading-card;
+    @apply text-2xl sm:text-3xl lg:text-4xl font-normal leading-snug tracking-tight;
+    font-variation-settings: "wght" 400;
   }
   
-  h4, h5, h6 {
-    font-family: var(--font-family-primary);
-    font-weight: var(--font-weight-semibold);
-    line-height: var(--leading-snug);
-    color: var(--brand-black);
-  }
-
   h4 {
-    font-size: var(--text-xl);
+    @apply text-xl sm:text-2xl lg:text-3xl font-normal leading-snug;
+    font-variation-settings: "wght" 400;
   }
   
   h5 {
-    font-size: var(--text-lg);
+    @apply text-lg sm:text-xl lg:text-2xl font-medium leading-normal;
+    font-variation-settings: "wght" 500;
   }
   
   h6 {
-    font-size: var(--text-base);
+    @apply text-base sm:text-lg lg:text-xl font-medium leading-normal;
+    font-variation-settings: "wght" 500;
   }
 
-  /* Paragraphes avec classes de design system */
+  /* Paragraphes avec espacement cohérent */
   p {
-    @apply text-body;
+    @apply leading-relaxed text-neutral-600;
+    font-variation-settings: "wght" 400;
   }
 
   /* Amélioration des liens */
   a {
-    color: inherit;
-    text-decoration: none;
-    transition: all var(--duration-200) var(--ease-out);
+    @apply text-current transition-colors duration-300 ease-out;
   }
 
   a:hover, a:focus {
-    color: var(--brand-accent);
-  }
-
-  /* États de focus améliorés avec design system */
-  *:focus {
-    outline: none;
-  }
-
-  *:focus-visible {
-    @apply focus-ring;
+    @apply text-black;
   }
 
   /* Espacement responsive unifié */
   .section-padding {
-    padding: var(--space-16) var(--space-4);
-  }
-
-  @media (min-width: 640px) {
-    .section-padding {
-      padding: var(--space-20) var(--space-6);
-    }
-  }
-
-  @media (min-width: 1024px) {
-    .section-padding {
-      padding: var(--space-24) var(--space-8);
-    }
+    @apply py-12 px-4 sm:py-16 sm:px-6 lg:py-24 lg:px-8 xl:px-16;
   }
   
   .container-max {
-    max-width: 1280px;
-    margin: 0 auto;
+    @apply max-w-7xl mx-auto;
+  }
+
+  /* États de focus améliorés */
+  *:focus {
+    @apply outline-none;
+  }
+
+  *:focus-visible {
+    @apply ring-2 ring-black ring-opacity-50 ring-offset-2 ring-offset-white transition-all duration-200;
+  }
+
+  /* Skip links pour l'accessibilité */
+  .sr-only {
+    @apply absolute w-px h-px p-0 -m-px overflow-hidden whitespace-nowrap border-0;
+    clip: rect(0, 0, 0, 0);
+  }
+
+  .skip-link {
+    @apply absolute -top-10 left-6 bg-black text-white px-4 py-2 rounded-md z-50 transform -translate-y-16 transition-transform duration-300;
+  }
+
+  .skip-link:focus {
+    @apply transform translate-y-0;
   }
 }
 
 @layer components {
-  /* Button System - moved from design-system.css */
-  .btn-primary {
-    background: var(--gradient-accent);
-    color: var(--brand-white);
-    font-family: var(--font-family-primary);
-    font-size: var(--text-base);
-    font-weight: var(--font-weight-medium);
-    padding: var(--space-3) var(--space-6);
-    border-radius: var(--radius-full);
-    border: none;
-    cursor: pointer;
-    transition: all var(--duration-200) var(--ease-out);
-    box-shadow: var(--shadow-sm);
-  }
-
-  .btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-lg);
-  }
-
-  .btn-secondary {
-    background: transparent;
-    color: var(--brand-black);
-    border: 2px solid var(--brand-black);
-    font-family: var(--font-family-primary);
-    font-size: var(--text-base);
-    font-weight: var(--font-weight-medium);
-    padding: var(--space-3) var(--space-6);
-    border-radius: var(--radius-full);
-    cursor: pointer;
-    transition: all var(--duration-200) var(--ease-out);
-  }
-
-  .btn-secondary:hover {
-    background: var(--brand-black);
-    color: var(--brand-white);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
-  }
-
-  .btn-ghost {
-    background: transparent;
-    color: var(--neutral-700);
-    border: none;
-    font-family: var(--font-family-primary);
-    font-size: var(--text-base);
-    font-weight: var(--font-weight-medium);
-    padding: var(--space-2) var(--space-4);
-    border-radius: var(--radius-md);
-    cursor: pointer;
-    transition: all var(--duration-150) var(--ease-out);
-  }
-
-  .btn-ghost:hover {
-    background: var(--neutral-100);
-    color: var(--brand-black);
-  }
-
-  /* Card System - moved from design-system.css */
-  .card {
-    background: var(--gradient-card);
-    border: 1px solid var(--neutral-200);
-    border-radius: var(--radius-2xl);
-    padding: var(--space-8);
-    box-shadow: var(--shadow-sm);
-    transition: all var(--duration-300) var(--ease-out);
-  }
-
-  .card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-xl);
-    border-color: var(--neutral-300);
-  }
-
-  .card-featured {
-    background: var(--gradient-brand);
-    color: var(--brand-white);
-    border: none;
-  }
-
-  .card-featured .text-body {
-    color: rgba(255, 255, 255, 0.8);
-  }
-
-  /* Input System - moved from design-system.css */
-  .input {
-    background: var(--brand-white);
-    border: 2px solid var(--neutral-200);
-    border-radius: var(--radius-lg);
-    padding: var(--space-3) var(--space-4);
-    font-family: var(--font-family-primary);
-    font-size: var(--text-base);
-    color: var(--brand-black);
-    transition: all var(--duration-200) var(--ease-out);
-  }
-
-  .input:focus {
-    outline: none;
-    border-color: var(--brand-accent);
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
-  }
-
-  /* Migration des styles existants vers le design system */
+  /* Micro-animations fluides et cohérentes */
   .smooth-hover {
-    @apply transition-smooth;
+    @apply transition-all duration-300 ease-out;
   }
   
   .interactive-card {
-    @apply card interactive;
+    @apply smooth-hover hover:shadow-xl hover:-translate-y-2 focus-within:shadow-xl focus-within:-translate-y-2 cursor-pointer;
+    transform-origin: center;
   }
   
   .interactive-button {
-    @apply interactive;
+    @apply smooth-hover hover:scale-105 focus:scale-105 active:scale-95;
+    transform-origin: center;
   }
   
   .scale-hover {
-    @apply interactive;
+    @apply smooth-hover hover:scale-110 focus:scale-110;
+    transform-origin: center;
+  }
+  
+  .underline-animation {
+    @apply relative after:content-[''] after:absolute after:w-full after:h-0.5 after:bottom-0 after:left-0 after:bg-current after:scale-x-0 after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 focus:after:scale-x-100 hover:after:origin-bottom-left focus:after:origin-bottom-left;
   }
 
-  /* Formulaires avec design moderne */
-  .form-input {
-    @apply input;
-    border-bottom: 2px solid var(--neutral-300);
-    border-radius: 0;
-    background: transparent;
-    padding-left: 0;
-    padding-right: 0;
+  /* Boutons avec design unifié et animations fluides */
+  .btn-primary {
+    background: var(--gradient-primary);
+    @apply text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full font-medium smooth-hover hover:shadow-lg focus:shadow-lg interactive-button;
   }
   
-  .form-input:focus {
-    border-bottom-color: var(--brand-accent);
+  .btn-secondary {
+    @apply border-2 border-black text-black bg-white px-6 py-3 sm:px-8 sm:py-4 rounded-full font-medium smooth-hover hover:bg-black hover:text-white focus:bg-black focus:text-white hover:shadow-lg focus:shadow-lg interactive-button;
+  }
+  
+  .btn-ghost {
+    @apply text-neutral-700 bg-neutral-100 px-4 py-2 sm:px-6 sm:py-3 rounded-full font-medium smooth-hover hover:text-black hover:bg-neutral-200 focus:text-black focus:bg-neutral-200 interactive-button;
   }
 
-  /* Images optimisées responsive */
-  .img-responsive {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+  /* Gradients subtils et harmonieux */
+  .gradient-primary {
+    background: var(--gradient-primary);
   }
   
-  .img-hero {
-    @apply img-responsive;
-    max-height: 100vh;
+  .gradient-secondary {
+    background: var(--gradient-secondary);
   }
   
-  .img-card {
-    @apply img-responsive;
-    border-radius: var(--radius-lg);
+  .gradient-accent {
+    background: var(--gradient-accent);
+  }
+  
+  .gradient-warm {
+    background: var(--gradient-warm);
+  }
+  
+  .gradient-subtle {
+    background: var(--gradient-subtle);
+  }
+
+  /* Cards avec animations et design cohérent */
+  .card-modern {
+    @apply bg-white rounded-2xl shadow-sm border border-neutral-200 p-6 sm:p-8 interactive-card;
+    backdrop-filter: blur(10px);
+  }
+  
+  .card-glass {
+    @apply bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg border border-white/20 p-6 sm:p-8 interactive-card;
+  }
+
+  /* Animations d'entrée fluides */
+  .fade-in-up {
+    @apply opacity-0 translate-y-8 transition-all duration-700 ease-out;
+  }
+  
+  .fade-in-up.animate {
+    @apply opacity-100 translate-y-0;
+  }
+  
+  .stagger-animation {
+    animation-delay: calc(var(--stagger-delay, 0) * 0.1s);
   }
 
   /* Espacement responsive unifié */
   .space-section {
-    gap: var(--space-6);
-  }
-
-  @media (min-width: 640px) {
-    .space-section {
-      gap: var(--space-8);
-    }
-  }
-
-  @media (min-width: 1024px) {
-    .space-section {
-      gap: var(--space-12);
-    }
+    @apply space-y-6 sm:space-y-8 lg:space-y-12 xl:space-y-16;
   }
 
   .space-content {
-    gap: var(--space-3);
+    @apply space-y-3 sm:space-y-4 lg:space-y-6;
   }
 
-  @media (min-width: 640px) {
-    .space-content {
-      gap: var(--space-4);
-    }
+  .space-tight {
+    @apply space-y-2 sm:space-y-3 lg:space-y-4;
   }
 
-  @media (min-width: 1024px) {
-    .space-content {
-      gap: var(--space-6);
-    }
+  /* Images optimisées responsive */
+  .img-responsive {
+    @apply w-full h-auto object-cover;
+  }
+  
+  .img-hero {
+    @apply img-responsive max-h-screen;
+  }
+  
+  .img-card {
+    @apply img-responsive rounded-lg;
+  }
+
+  /* Formulaires avec design moderne */
+  .form-input {
+    @apply w-full bg-transparent border-0 border-b-2 border-neutral-300 px-0 py-3 text-current placeholder:text-neutral-400 focus:outline-none focus:border-black smooth-hover;
+  }
+  
+  .form-select {
+    @apply form-input cursor-pointer;
+  }
+  
+  .form-textarea {
+    @apply form-input resize-none;
+  }
+
+  /* États d'éléments interactifs */
+  .interactive-element {
+    @apply smooth-hover;
+  }
+
+  .interactive-element:hover,
+  .interactive-element:focus {
+    @apply transform scale-105;
+  }
+
+  .interactive-element:active {
+    @apply transform scale-95;
   }
 }
 
-/* Styles existants optimisés */
+/* Nouvelles animations pour les composants interactifs */
+@keyframes scale-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.9) translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-scale-in {
+  animation: scale-in 0.2s ease-out forwards;
+}
+
+/* Animation pour le widget flottant */
 .floating-widget {
-  transition: all var(--duration-300) var(--ease-brand);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .floating-widget:hover {
   transform: translateY(-2px);
-  box-shadow: var(--shadow-xl);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
+/* Styles pour le calculateur */
 .calculator-card {
-  @apply card;
-  background: var(--gradient-subtle);
+  background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%);
+  border: 1px solid #e5e5e5;
+  transition: all 0.3s ease;
 }
 
+.calculator-card:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation pour les badges de prix */
 .price-badge {
-  background: var(--gradient-subtle);
-  transition: all var(--duration-200) var(--ease-out);
-  border-radius: var(--radius-md);
-  padding: var(--space-1) var(--space-2);
+  background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+  transition: all 0.2s ease;
 }
 
 .price-badge:hover {
-  background: var(--neutral-200);
+  background: linear-gradient(135deg, #e5e7eb 0%, #d1d5db 100%);
+}
+
+/* Animations personnalisées fluides */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-subtle {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out forwards;
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 3s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
 }
 
 /* Responsive breakpoints optimisés */
 @media (max-width: 640px) {
   .section-padding {
-    padding: var(--space-8) var(--space-4);
+    @apply py-8 px-4;
+  }
+  
+  h1 {
+    @apply text-3xl leading-tight;
+  }
+  
+  h2 {
+    @apply text-2xl leading-tight;
   }
   
   .btn-primary,
   .btn-secondary {
-    padding: var(--space-2) var(--space-4);
-    font-size: var(--text-sm);
+    @apply px-4 py-2 text-sm;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .section-padding {
+    @apply py-12 px-6;
+  }
+}
+
+/* Mode sombre amélioré */
+@media (prefers-color-scheme: dark) {
+  .text-neutral-600 {
+    @apply text-neutral-300;
+  }
+  
+  .card-modern {
+    @apply bg-neutral-900 border-neutral-700;
+  }
+  
+  .card-glass {
+    @apply bg-neutral-900/80 border-neutral-700/20;
   }
 }
 
 /* Réduction de mouvement pour l'accessibilité */
 @media (prefers-reduced-motion: reduce) {
-  .animate-fadeInUp,
-  .animate-fadeInScale,
-  .animate-slideInRight,
-  .animate-float,
+  .animate-fade-in-up,
   .animate-pulse-subtle,
+  .animate-float,
   .animate-shimmer {
-    animation: none !important;
+    animation: none;
   }
   
-  .transition-smooth,
-  .interactive,
-  .floating-widget {
-    transition: none !important;
+  .smooth-hover,
+  .interactive-card,
+  .interactive-button,
+  .scale-hover {
+    transition: none;
   }
   
   *:hover,
@@ -514,9 +536,8 @@
 
 /* Print styles */
 @media print {
-  .animate-fadeInUp,
-  .animate-fadeInScale,
-  .animate-slideInRight,
+  .animate-fade-in-up,
+  .animate-pulse-subtle,
   .animate-float {
     animation: none;
   }
