@@ -57,6 +57,12 @@ export const Header = () => {
             >
               Services
             </button>
+            <button 
+              onClick={() => scrollToSection('collaborations')}
+              className="text-black hover:text-gray-600 transition-colors font-light"
+            >
+              Collaborations
+            </button>
             <Link 
               to="/inside-link"
               className="text-black hover:text-gray-600 transition-colors font-light"
@@ -103,6 +109,12 @@ export const Header = () => {
                 className="text-black hover:text-gray-600 transition-colors font-light text-left"
               >
                 Services
+              </button>
+              <button 
+                onClick={() => scrollToSection('collaborations')}
+                className="text-black hover:text-gray-600 transition-colors font-light text-left"
+              >
+                Collaborations
               </button>
               <Link 
                 to="/inside-link"
