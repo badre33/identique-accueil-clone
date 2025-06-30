@@ -11,6 +11,7 @@ import Evenementiel from "./pages/Evenementiel";
 import PersonalBranding from "./pages/PersonalBranding";
 import ContentDigital from "./pages/ContentDigital";
 import InsideLink from "./pages/InsideLink";
+import Collaborations from "./pages/Collaborations";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/personal-branding" element={<PersonalBranding />} />
           <Route path="/content-digital" element={<ContentDigital />} />
           <Route path="/inside-link" element={<InsideLink />} />
+          <Route path="/collaborations" element={<Collaborations />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

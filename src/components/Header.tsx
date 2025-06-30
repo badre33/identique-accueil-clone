@@ -57,12 +57,12 @@ export const Header = () => {
             >
               Services
             </button>
-            <button 
-              onClick={() => scrollToSection('collaborations')}
+            <Link 
+              to="/collaborations"
               className="text-black hover:text-gray-600 transition-colors font-light"
             >
               Collaborations
-            </button>
+            </Link>
             <Link 
               to="/inside-link"
               className="text-black hover:text-gray-600 transition-colors font-light"
@@ -110,12 +110,13 @@ export const Header = () => {
               >
                 Services
               </button>
-              <button 
-                onClick={() => scrollToSection('collaborations')}
+              <Link 
+                to="/collaborations"
                 className="text-black hover:text-gray-600 transition-colors font-light text-left"
+                onClick={() => setIsMenuOpen(false)}
               >
                 Collaborations
-              </button>
+              </Link>
               <Link 
                 to="/inside-link"
                 className="text-black hover:text-gray-600 transition-colors font-light text-left"
