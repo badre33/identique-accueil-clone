@@ -49,7 +49,7 @@ const InsideLink = () => {
                 <img 
                   src="/lovable-uploads/566ba4a2-ee11-42db-a054-14667389b2c6.png"
                   alt="Badreddine Harkaoui"
-                  className="w-full h-[600px] object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                  className="w-full h-[600px] object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
