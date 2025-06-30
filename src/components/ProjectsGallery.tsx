@@ -54,7 +54,7 @@ export const ProjectsGallery = () => {
     {
       title: "Secret Events",
       category: "Événementiel",
-      image: "/lovable-uploads/f90f2ce2-2e95-4f15-9766-0ad4ed8561a8.png",
+      image: "/lovable-uploads/8021884d-fcc2-4e05-ac30-7e42c2b94abc.png",
       description: "Direction artistique et production d'événements exclusifs haut de gamme avec une approche créative unique et mémorable.",
       year: "2023-2024",
       url: "#"
@@ -62,7 +62,7 @@ export const ProjectsGallery = () => {
     {
       title: "Umbra Festival",
       category: "Événementiel & Branding",
-      image: "/lovable-uploads/da131874-d340-4dc9-b1e7-5fc5f24a0f40.png",
+      image: "/lovable-uploads/d46d1c34-57bc-469e-a5df-99754ff0d5ed.png",
       description: "Conception et production complète de ce festival artistique underground avec une identité visuelle forte et une expérience immersive.",
       year: "2022-2024",
       url: "#"
