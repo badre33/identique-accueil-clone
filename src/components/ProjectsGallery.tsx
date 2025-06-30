@@ -1,4 +1,3 @@
-
 import { ArrowRight, ExternalLink } from "lucide-react";
 
 export const ProjectsGallery = () => {
@@ -38,7 +37,7 @@ export const ProjectsGallery = () => {
     {
       title: "Artitenium",
       category: "Branding & Digital",
-      image: "/lovable-uploads/85b45a40-6291-4f5d-a377-65024ddb1976.png",
+      image: "/lovable-uploads/ceaff19e-cebb-453b-a8e2-33fc348e3bad.png",
       description: "Création d'une identité visuelle moderne et développement d'une stratégie digitale complète pour cette entreprise technologique innovante.",
       year: "2023",
       url: "#"
@@ -46,7 +45,7 @@ export const ProjectsGallery = () => {
     {
       title: "DWP",
       category: "Conseil & Stratégie",
-      image: "/lovable-uploads/566ba4a2-ee11-42db-a054-14667389b2c6.png",
+      image: "/lovable-uploads/29365e8a-7e4d-4041-ad14-37f38d1bde1b.png",
       description: "Accompagnement stratégique et développement de solutions créatives pour cette entreprise en expansion internationale.",
       year: "2023-2024",
       url: "#"
