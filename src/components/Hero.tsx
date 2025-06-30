@@ -62,7 +62,7 @@ export const Hero = () => {
               <div className="text-sm text-gray-600">Projets réalisés</div>
             </div>
             <div className="text-center group">
-              <div className="text-3xl font-light text-black group-hover:scale-110 transition-transform">5</div>
+              <div className="text-3xl font-light text-black group-hover:scale-110 transition-transform">11+</div>
               <div className="text-sm text-gray-600">Ans d'expérience</div>
             </div>
             <div className="text-center group">
