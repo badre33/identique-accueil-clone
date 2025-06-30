@@ -4,6 +4,8 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { PageTransition } from "@/components/PageTransition";
+import { Breadcrumb } from "@/components/Breadcrumb";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Branding from "./pages/Branding";
@@ -21,17 +23,20 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/branding" element={<Branding />} />
-          <Route path="/evenementiel" element={<Evenementiel />} />
-          <Route path="/personal-branding" element={<PersonalBranding />} />
-          <Route path="/content-digital" element={<ContentDigital />} />
-          <Route path="/inside-link" element={<InsideLink />} />
-          <Route path="/collaborations" element={<Collaborations />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <PageTransition>
+          <Breadcrumb />
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/branding" element={<Branding />} />
+            <Route path="/evenementiel" element={<Evenementiel />} />
+            <Route path="/personal-branding" element={<PersonalBranding />} />
+            <Route path="/content-digital" element={<ContentDigital />} />
+            <Route path="/inside-link" element={<InsideLink />} />
+            <Route path="/collaborations" element={<Collaborations />} />
+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </PageTransition>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
