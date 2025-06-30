@@ -1,14 +1,29 @@
 
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+    // Si on est sur la page d'accueil, scroll direct
+    if (location.pathname === '/') {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      // Si on est sur une autre page, naviguer vers l'accueil avec l'ancre
+      navigate(`/#${sectionId}`);
+      // Attendre que la navigation soit terminée puis scroller
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
     }
     setIsMenuOpen(false);
   };
@@ -19,11 +34,13 @@ export const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center">
-            <img 
-              src="/lovable-uploads/85b45a40-6291-4f5d-a377-65024ddb1976.png" 
-              alt="Link Agency Logo" 
-              className="h-12 w-auto object-contain"
-            />
+            <Link to="/">
+              <img 
+                src="/lovable-uploads/85b45a40-6291-4f5d-a377-65024ddb1976.png" 
+                alt="Link Agency Logo" 
+                className="h-12 w-auto object-contain"
+              />
+            </Link>
           </div>
 
           {/* Navigation desktop */}
