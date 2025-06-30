@@ -1,3 +1,4 @@
+
 import { ArrowRight, ExternalLink } from "lucide-react";
 
 export const ProjectsGallery = () => {
@@ -5,8 +6,8 @@ export const ProjectsGallery = () => {
     {
       title: "Amoud",
       category: "Branding & Marketing Digital",
-      image: "/lovable-uploads/4708f307-8187-48cb-b276-b1b4c356c679.png",
-      description: "Développement complet de l'identité visuelle et stratégie digitale pour cette marque émergente avec une approche moderne et impactante.",
+      image: "/lovable-uploads/86dfbcc8-1b16-4656-9047-427ad8d69523.png",
+      description: "Maison de pâtisserie marocaine fondée en 1982, réputée pour l'excellence de ses viennoiseries, entremets et créations sucrées haut de gamme. Alliant tradition artisanale et innovation, elle s'est imposée comme une référence incontournable à Casablanca.",
       year: "2024",
       url: "#"
     },
