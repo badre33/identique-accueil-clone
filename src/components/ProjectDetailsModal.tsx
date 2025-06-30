@@ -31,24 +31,24 @@ export const ProjectDetailsModal = ({ project, isOpen, onClose }: ProjectDetails
         };
       case "Edwin":
         return {
-          impact: "Pop-up store sold-out en 3 jours",
+          impact: "Pop-up store sold-out en 3 jours - 1500+ visiteurs/jour",
           services: ["Conception d'espace", "Événementiel", "Stratégie d'activation", "Branding européen"],
-          results: ["500+ visiteurs/jour", "Couverture médiatique nationale", "Collaboration artistique unique"],
+          results: ["1500+ visiteurs/jour", "Couverture médiatique nationale", "Collaboration artistique unique", "Ventes record sur 3 jours"],
           challenge: "Créer un pont authentique entre la culture denim japonaise et l'art de vivre bordelais"
         };
       case "French Tech":
         return {
-          impact: "20+ startups accompagnées vers l'international",
-          services: ["Mentoring stratégique", "Networking international", "Développement business"],
-          results: ["5 levées de fonds réussies", "Expansion européenne", "Écosystème renforcé"],
-          challenge: "Accélérer l'internationalisation des startups marocaines"
+          impact: "20+ startups accompagnées vers l'international depuis Bordeaux",
+          services: ["Branding écosystème", "Marketing stratégique", "Développement business", "Accompagnement incubés"],
+          results: ["5 levées de fonds réussies", "Expansion européenne", "Écosystème bordelais renforcé", "Notoriété internationale"],
+          challenge: "Développer et positionner l'écosystème French Tech bordelais sur la scène internationale"
         };
       case "Soulection":
         return {
-          impact: "3 événements exclusifs, 2000+ participants",
-          services: ["Production événementielle", "Stratégie de développement", "Branding africain"],
-          results: ["Présence renforcée en Afrique", "Nouveaux talents découverts", "Communauté engagée"],
-          challenge: "Développer la présence africaine d'un collectif musical international"
+          impact: "3 événements exclusifs I-Boat, 2000+ participants total",
+          services: ["Production événementielle I-Boat", "Programmation artistique", "Branding événementiel", "Stratégie digitale"],
+          results: ["Événements sold-out I-Boat", "DJs internationaux Soulection", "Communauté bordelaisa engagée", "Rayonnement culturel"],
+          challenge: "Implanter la culture Soulection à Bordeaux via des événements d'exception à l'I-Boat"
         };
       case "Artitenium":
         return {
