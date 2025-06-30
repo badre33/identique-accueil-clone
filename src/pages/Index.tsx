@@ -14,7 +14,6 @@ const Index = () => {
     <div className="min-h-screen bg-white">
       <ScrollProgress />
       <Header />
-      <FloatingContactWidget />
       <div id="accueil">
         <Hero />
       </div>
@@ -29,6 +28,7 @@ const Index = () => {
         <Contact />
       </div>
       <ScrollToTop />
+      <FloatingContactWidget />
     </div>
   );
 };
