@@ -1,6 +1,6 @@
 
 import { Link } from "react-router-dom";
-import { ArrowRight, Sparkles, Zap, Users, Megaphone } from "lucide-react";
+import { ArrowRight, Sparkles, Zap, Users, Megaphone, MessageCircle, Calendar } from "lucide-react";
 
 export const Services = () => {
   const services = [
@@ -110,11 +110,26 @@ export const Services = () => {
                   </p>
                   
                   {/* Call to action avec underline animation */}
-                  <div className="flex items-center text-black group-hover:text-neutral-700 transition-all duration-300">
-                    <span className="font-medium mr-3 underline-animation">Découvrir</span>
-                    <div className="flex items-center space-x-2 group-hover:translate-x-2 transition-transform">
-                      <ArrowRight className="w-5 h-5" />
-                      <div className="w-12 h-0.5 bg-current transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center text-black group-hover:text-neutral-700 transition-all duration-300">
+                      <span className="font-medium mr-3 underline-animation">Découvrir</span>
+                      <div className="flex items-center space-x-2 group-hover:translate-x-2 transition-transform">
+                        <ArrowRight className="w-5 h-5" />
+                        <div className="w-12 h-0.5 bg-current transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
+                      </div>
+                    </div>
+                    
+                    {/* CTA contextuel pour chaque service */}
+                    <div className="opacity-0 group-hover:opacity-100 transition-opacity">
+                      <a 
+                        href={`https://wa.me/33745010714?text=Bonjour%2C%20je%20suis%20intéressé(e)%20par%20vos%20services%20de%20${service.title.toLowerCase()}%20et%20j'aimerais%20en%20discuter`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-neutral-500 hover:text-black transition-colors"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        <MessageCircle className="w-5 h-5" />
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -126,18 +141,53 @@ export const Services = () => {
           })}
         </div>
 
-        {/* Section CTA finale */}
+        {/* Section CTA finale variée */}
         <div className="text-center mt-20 animate-fade-in-up" style={{ animationDelay: '0.7s' }}>
-          <div className="inline-flex flex-col sm:flex-row gap-4">
-            <a 
-              href="https://wa.me/33745010714?text=Bonjour%2C%20je%20souhaite%20en%20savoir%20plus%20sur%20vos%20services"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary interactive-button group flex items-center space-x-2"
-            >
-              <span>Discutons de votre projet</span>
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </a>
+          <div className="bg-gradient-to-r from-neutral-50 to-neutral-100 rounded-3xl p-8 lg:p-12 max-w-4xl mx-auto">
+            <h3 className="text-2xl lg:text-3xl font-light mb-4 text-black">
+              Prêt à transformer votre vision en réalité ?
+            </h3>
+            <p className="text-neutral-600 mb-8 max-w-2xl mx-auto leading-relaxed">
+              Chaque projet est unique. Discutons ensemble de vos besoins spécifiques et créons quelque chose d'exceptionnel.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a 
+                href="https://wa.me/33745010714?text=Bonjour%2C%20je%20souhaite%20en%20savoir%20plus%20sur%20vos%20services%20et%20obtenir%20un%20devis%20personnalisé"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary interactive-button group flex items-center space-x-2"
+              >
+                <MessageCircle className="w-5 h-5" />
+                <span>Discutons de votre projet</span>
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </a>
+              
+              <a 
+                href="https://wa.me/33745010714?text=Bonjour%2C%20j'aimerais%20planifier%20une%20consultation%20gratuite%20pour%20mon%20projet"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-secondary interactive-button group flex items-center space-x-2"
+              >
+                <Calendar className="w-5 h-5" />
+                <span>Consultation gratuite</span>
+              </a>
+            </div>
+            
+            <div className="flex flex-wrap justify-center gap-6 mt-8 text-sm text-neutral-500">
+              <div className="flex items-center space-x-2">
+                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                <span>Devis gratuit sous 24h</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                <span>Accompagnement personnalisé</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                <span>Satisfaction garantie</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -1,5 +1,4 @@
-
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, Sparkles, Calendar, FileText } from "lucide-react";
 
 export const Hero = () => {
   return (
@@ -36,23 +35,63 @@ export const Hero = () => {
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
-            <a 
-              href="https://wa.me/33745010714?text=Bonjour%2C%20je%20souhaite%20découvrir%20vos%20services%20créatifs"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary interactive-button group flex items-center space-x-2"
-            >
-              <span>Démarrer votre projet</span>
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </a>
-            
-            <button 
-              onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
-              className="btn-secondary interactive-button group flex items-center space-x-2"
-            >
-              <span>Découvrir nos services</span>
-            </button>
+          {/* CTAs variés avec contexte */}
+          <div className="space-y-4 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
+            {/* CTA principal */}
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a 
+                href="https://wa.me/33745010714?text=Bonjour%2C%20je%20souhaite%20découvrir%20vos%20services%20créatifs%20et%20discuter%20de%20mon%20projet"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary interactive-button group flex items-center space-x-2"
+              >
+                <span>Démarrer votre projet</span>
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </a>
+              
+              <button 
+                onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
+                className="btn-secondary interactive-button group flex items-center space-x-2"
+              >
+                <span>Découvrir nos services</span>
+              </button>
+            </div>
+
+            {/* CTAs secondaires contextuels */}
+            <div className="flex flex-wrap gap-3 pt-2">
+              <a 
+                href="https://wa.me/33745010714?text=Bonjour%2C%20j'aimerais%20planifier%20un%20rendez-vous%20pour%20discuter%20de%20mon%20projet"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center space-x-2 text-neutral-600 hover:text-black transition-colors text-sm bg-neutral-100 hover:bg-neutral-200 px-4 py-2 rounded-full font-medium group"
+              >
+                <Calendar className="w-4 h-4" />
+                <span>Planifier un RDV</span>
+              </a>
+              
+              <button 
+                onClick={() => {
+                  const portfolioUrl = window.location.origin + '/collaborations';
+                  window.open(portfolioUrl, '_blank');
+                }}
+                className="inline-flex items-center space-x-2 text-neutral-600 hover:text-black transition-colors text-sm bg-neutral-100 hover:bg-neutral-200 px-4 py-2 rounded-full font-medium group"
+              >
+                <FileText className="w-4 h-4" />
+                <span>Voir notre portfolio</span>
+              </button>
+            </div>
+
+            {/* Indicateur de confiance */}
+            <div className="flex items-center space-x-4 pt-4 text-sm text-neutral-500">
+              <div className="flex items-center space-x-2">
+                <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                <span>Disponible maintenant</span>
+              </div>
+              <div className="w-px h-4 bg-neutral-300"></div>
+              <span>Réponse sous 2h garantie</span>
+              <div className="w-px h-4 bg-neutral-300"></div>
+              <span>Devis gratuit</span>
+            </div>
           </div>
 
           {/* Statistiques avec animations */}
