@@ -1,15 +1,14 @@
-
 import { ArrowRight, ExternalLink } from "lucide-react";
 
 export const ProjectsGallery = () => {
   const projects = [
     {
-      title: "Subway Maroc",
-      category: "Marketing Digital",
-      image: "/lovable-uploads/c66a2b50-92d9-4a9d-a394-09ff44b3d1b2.png",
-      description: "Stratégie marketing digital complète pour la franchise leader au Maroc avec campagnes multi-canal et croissance de +150% d'engagement.",
-      year: "2023-2024",
-      url: "https://www.instagram.com/subwaymaroc/?hl=fr"
+      title: "Amoud",
+      category: "Branding & Marketing Digital",
+      image: "/lovable-uploads/4708f307-8187-48cb-b276-b1b4c356c679.png",
+      description: "Développement complet de l'identité visuelle et stratégie digitale pour cette marque émergente avec une approche moderne et impactante.",
+      year: "2024",
+      url: "#"
     },
     {
       title: "SGTM Immobilier",
@@ -20,14 +19,6 @@ export const ProjectsGallery = () => {
       url: "https://sgtm-immobilier.com/fr/accueil/"
     },
     {
-      title: "Casablanca Music Week",
-      category: "Événementiel",
-      image: "/lovable-uploads/196f8a91-ab64-4dc6-9354-6fe7d9f3031e.png",
-      description: "Direction artistique et production de la plus grande semaine musicale du Maroc avec plus de 50 000 participants sur 7 jours.",
-      year: "2022-2024",
-      url: "https://guichet.com/ma-fr/event/producer/casablanca-music-week"
-    },
-    {
       title: "French Tech",
       category: "Partenariat Stratégique",
       image: "/lovable-uploads/801816e7-97bc-49c9-948c-34e3c9d49e1f.png",
@@ -36,20 +27,44 @@ export const ProjectsGallery = () => {
       url: "#"
     },
     {
-      title: "The Family",
-      category: "Conseil Stratégique",
-      image: "/lovable-uploads/ae1bb8f8-ff5a-4b2d-8a17-aacf539b492a.png",
-      description: "Collaboration avec ce startup studio européen pour le développement de l'écosystème tech africain et stratégies d'expansion.",
-      year: "2023",
-      url: "https://www.thefamily.co/"
-    },
-    {
       title: "Soulection",
       category: "Événementiel & Branding",
       image: "/lovable-uploads/b8c1c54b-9721-486c-81ab-dae0977cacc0.png",
       description: "Production d'événements exclusifs et développement de la présence africaine pour ce collectif musical international.",
       year: "2023-2024",
       url: "https://soulection.com/"
+    },
+    {
+      title: "Artitenium",
+      category: "Branding & Digital",
+      image: "/lovable-uploads/85b45a40-6291-4f5d-a377-65024ddb1976.png",
+      description: "Création d'une identité visuelle moderne et développement d'une stratégie digitale complète pour cette entreprise technologique innovante.",
+      year: "2023",
+      url: "#"
+    },
+    {
+      title: "DWP",
+      category: "Conseil & Stratégie",
+      image: "/lovable-uploads/566ba4a2-ee11-42db-a054-14667389b2c6.png",
+      description: "Accompagnement stratégique et développement de solutions créatives pour cette entreprise en expansion internationale.",
+      year: "2023-2024",
+      url: "#"
+    },
+    {
+      title: "Secret Events",
+      category: "Événementiel",
+      image: "/lovable-uploads/f90f2ce2-2e95-4f15-9766-0ad4ed8561a8.png",
+      description: "Direction artistique et production d'événements exclusifs haut de gamme avec une approche créative unique et mémorable.",
+      year: "2023-2024",
+      url: "#"
+    },
+    {
+      title: "Umbra Festival",
+      category: "Événementiel & Branding",
+      image: "/lovable-uploads/da131874-d340-4dc9-b1e7-5fc5f24a0f40.png",
+      description: "Conception et production complète de ce festival artistique underground avec une identité visuelle forte et une expérience immersive.",
+      year: "2022-2024",
+      url: "#"
     }
   ];
 
