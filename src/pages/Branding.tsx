@@ -136,6 +136,24 @@ const Branding = () => {
         title="Notre processus de création de marque"
         subtitle="Une méthode rigoureuse et créative pour transformer chaque marque en référence inspirante"
       />
+
+      {/* Final CTA Section */}
+      <section className="py-20 px-8 lg:px-16 bg-white">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-light mb-8 text-black">
+            Prêt à transformer votre marque ?
+          </h2>
+          <p className="text-xl text-gray-600 mb-12 font-light leading-relaxed">
+            Discutons de votre projet et créons ensemble une identité de marque qui marquera les esprits.
+          </p>
+          <Button 
+            onClick={handleContact}
+            className="bg-black text-white hover:bg-gray-800 px-12 py-6 text-lg"
+          >
+            Démarrer votre projet
+          </Button>
+        </div>
+      </section>
       
       <FloatingContactWidget />
     </div>
