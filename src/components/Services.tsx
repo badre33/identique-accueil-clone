@@ -3,6 +3,7 @@ import { Code, Palette, Megaphone, Users, Lightbulb, TrendingUp } from "lucide-r
 import { TouchOptimized } from "./TouchOptimized";
 import { ResponsiveGrid } from "./ResponsiveGrid";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { Link } from "react-router-dom";
 
 export const Services = () => {
   const { elementRef, isVisible } = useScrollAnimation({ delay: 200 });
@@ -15,6 +16,7 @@ export const Services = () => {
       features: ["Logo & Charte graphique", "Identité visuelle complète", "Guidelines de marque"],
       color: "from-blue-500 to-purple-600",
       bgImage: "https://images.unsplash.com/photo-1558655146-d09347e92766?w=400&h=300&fit=crop",
+      link: "/branding"
     },
     {
       icon: Code,
@@ -23,6 +25,7 @@ export const Services = () => {
       features: ["Sites web responsives", "Applications web", "E-commerce"],
       color: "from-green-500 to-blue-600",
       bgImage: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop",
+      link: "/content-digital"
     },
     {
       icon: Megaphone,
@@ -31,6 +34,7 @@ export const Services = () => {
       features: ["SEO & Référencement", "Publicité en ligne", "Analytics & Reporting"],
       color: "from-purple-500 to-pink-600",
       bgImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop",
+      link: "/evenementiel"
     },
     {
       icon: Users,
@@ -39,6 +43,7 @@ export const Services = () => {
       features: ["Audit & Diagnostic", "Stratégie digitale", "Formation équipes"],
       color: "from-orange-500 to-red-600",
       bgImage: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop",
+      link: "/personal-branding"
     },
     {
       icon: Lightbulb,
@@ -47,6 +52,7 @@ export const Services = () => {
       features: ["UX/UI Design", "Prototypage", "Tests utilisateurs"],
       color: "from-yellow-500 to-orange-600",
       bgImage: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=400&h=300&fit=crop",
+      link: "/branding"
     },
     {
       icon: TrendingUp,
@@ -55,6 +61,7 @@ export const Services = () => {
       features: ["Growth Hacking", "A/B Testing", "Conversion Rate Optimization"],
       color: "from-indigo-500 to-blue-600",
       bgImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop",
+      link: "/content-digital"
     },
   ];
 
@@ -112,61 +119,63 @@ export const Services = () => {
                 hapticFeedback
                 className="h-full"
               >
-                <div className={`group relative bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transform hover:scale-105 hover:-translate-y-2 transition-all duration-700 border border-gray-100 hover:border-gray-200 overflow-hidden h-full min-h-[400px] sm:min-h-[450px] flex flex-col ${
-                  isVisible ? 'animate-fade-in-up opacity-100' : 'opacity-0'
-                }`}
-                style={{ animationDelay: `${index * 150}ms` }}
-                >
-                  {/* Background Image Overlay */}
-                  <div className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-700">
-                    <img 
-                      src={service.bgImage} 
-                      alt="" 
-                      className="w-full h-full object-cover rounded-2xl sm:rounded-3xl"
-                    />
-                  </div>
-                  
-                  {/* Gradient Overlay Effect */}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-5 transition-opacity duration-700 rounded-2xl sm:rounded-3xl`}></div>
-                  
-                  {/* Content */}
-                  <div className="relative z-10 flex flex-col h-full">
-                    {/* Icon with enhanced mobile sizing */}
-                    <div className={`w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br ${service.color} rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-lg group-hover:shadow-xl`}>
-                      <Icon className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
+                <Link to={service.link} className="block h-full">
+                  <div className={`group relative bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transform hover:scale-105 hover:-translate-y-2 transition-all duration-700 border border-gray-100 hover:border-gray-200 overflow-hidden h-full min-h-[400px] sm:min-h-[450px] flex flex-col ${
+                    isVisible ? 'animate-fade-in-up opacity-100' : 'opacity-0'
+                  }`}
+                  style={{ animationDelay: `${index * 150}ms` }}
+                  >
+                    {/* Background Image Overlay */}
+                    <div className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-700">
+                      <img 
+                        src={service.bgImage} 
+                        alt="" 
+                        className="w-full h-full object-cover rounded-2xl sm:rounded-3xl"
+                      />
                     </div>
                     
-                    {/* Title with better mobile typography */}
-                    <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold text-slate-900 mb-3 sm:mb-4 group-hover:text-slate-800 transition-colors duration-300">
-                      {service.title}
-                    </h3>
+                    {/* Gradient Overlay Effect */}
+                    <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-5 transition-opacity duration-700 rounded-2xl sm:rounded-3xl`}></div>
                     
-                    {/* Description with improved mobile readability */}
-                    <p className="text-sm sm:text-base text-slate-600 mb-4 sm:mb-6 leading-relaxed group-hover:text-slate-700 transition-colors duration-300 flex-grow">
-                      {service.description}
-                    </p>
-                    
-                    {/* Features List with better mobile spacing */}
-                    <ul className="space-y-2 sm:space-y-3">
-                      {service.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-center text-xs sm:text-sm text-slate-600 group-hover:text-slate-700 transition-colors duration-300">
-                          <div className={`w-1.5 h-1.5 sm:w-2 sm:h-2 bg-gradient-to-r ${service.color} rounded-full mr-2 sm:mr-3 group-hover:scale-125 transition-transform duration-300`}></div>
-                          <span className="font-medium">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                    
-                    {/* Hover Arrow Effect */}
-                    <div className="mt-4 sm:mt-6 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-500">
-                      <div className={`inline-flex items-center text-xs sm:text-sm font-semibold bg-gradient-to-r ${service.color} bg-clip-text text-transparent`}>
-                        <span>En savoir plus</span>
-                        <svg className="w-3 h-3 sm:w-4 sm:h-4 ml-1 sm:ml-2 transform group-hover:translate-x-1 transition-transform duration-300" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586L10.293 4.707a1 1 0 010-1.414z" clipRule="evenodd" />
-                        </svg>
+                    {/* Content */}
+                    <div className="relative z-10 flex flex-col h-full">
+                      {/* Icon with enhanced mobile sizing */}
+                      <div className={`w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br ${service.color} rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-lg group-hover:shadow-xl`}>
+                        <Icon className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
+                      </div>
+                      
+                      {/* Title with better mobile typography */}
+                      <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold text-slate-900 mb-3 sm:mb-4 group-hover:text-slate-800 transition-colors duration-300">
+                        {service.title}
+                      </h3>
+                      
+                      {/* Description with improved mobile readability */}
+                      <p className="text-sm sm:text-base text-slate-600 mb-4 sm:mb-6 leading-relaxed group-hover:text-slate-700 transition-colors duration-300 flex-grow">
+                        {service.description}
+                      </p>
+                      
+                      {/* Features List with better mobile spacing */}
+                      <ul className="space-y-2 sm:space-y-3">
+                        {service.features.map((feature, idx) => (
+                          <li key={idx} className="flex items-center text-xs sm:text-sm text-slate-600 group-hover:text-slate-700 transition-colors duration-300">
+                            <div className={`w-1.5 h-1.5 sm:w-2 sm:h-2 bg-gradient-to-r ${service.color} rounded-full mr-2 sm:mr-3 group-hover:scale-125 transition-transform duration-300`}></div>
+                            <span className="font-medium">{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                      
+                      {/* Hover Arrow Effect */}
+                      <div className="mt-4 sm:mt-6 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-500">
+                        <div className={`inline-flex items-center text-xs sm:text-sm font-semibold bg-gradient-to-r ${service.color} bg-clip-text text-transparent`}>
+                          <span>En savoir plus</span>
+                          <svg className="w-3 h-3 sm:w-4 sm:h-4 ml-1 sm:ml-2 transform group-hover:translate-x-1 transition-transform duration-300" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586L10.293 4.707a1 1 0 010-1.414z" clipRule="evenodd" />
+                          </svg>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
+                </Link>
               </TouchOptimized>
             );
           })}
