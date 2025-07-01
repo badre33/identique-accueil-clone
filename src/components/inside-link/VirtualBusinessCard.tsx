@@ -1,4 +1,5 @@
 
+
 import React, { useRef } from 'react';
 import { Download, Linkedin, Mail, Phone, MessageCircle, Globe } from 'lucide-react';
 import { useSoundEffects } from '@/hooks/useSoundEffects';
@@ -177,7 +178,8 @@ END:VCARD`;
             <img 
               src={image} 
               alt={name}
-              className="w-12 h-12 rounded-full object-cover border-2 border-white/30 flex-shrink-0 shadow-lg"
+              className="w-12 h-12 rounded-full object-cover border-2 border-white/30 flex-shrink-0 shadow-lg object-top"
+              style={{ objectPosition: '50% 30%' }}
             />
           </div>
 
@@ -250,3 +252,4 @@ END:VCARD`;
     </div>
   );
 };
+
