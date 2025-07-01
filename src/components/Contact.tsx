@@ -41,10 +41,10 @@ export const Contact = () => {
             <div>
               <p className="text-gray-400 text-sm">Téléphone</p>
               <a 
-                href="tel:+21299024526" 
+                href="tel:+212699024526" 
                 className="text-white text-lg hover:text-gray-300 transition-colors"
               >
-                +212 99 024 526
+                +212 6 99 024 526
               </a>
             </div>
           </div>

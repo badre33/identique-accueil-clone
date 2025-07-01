@@ -1,5 +1,4 @@
 
-
 import React, { useRef } from 'react';
 import { Download, Linkedin, Mail, Phone, MessageCircle, Globe } from 'lucide-react';
 import { useSoundEffects } from '@/hooks/useSoundEffects';
@@ -252,4 +251,3 @@ END:VCARD`;
     </div>
   );
 };
-
