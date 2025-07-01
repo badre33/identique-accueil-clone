@@ -364,8 +364,8 @@ const InsideLink = () => {
                     image="/lovable-uploads/da131874-d340-4dc9-b1e7-5fc5f24a0f40.png"
                     linkedinUrl="https://www.linkedin.com/in/badreddine-harkaoui-nexiafiducia/"
                     email="badreddine@linkagency.ma"
-                    phone="+212 610-061014"
-                    whatsapp="+212610061014"
+                    phone="+212699024526"
+                    whatsapp="+33745010714"
                     website="https://linkagency.ma/"
                   />
                 </AnimatedCard>
