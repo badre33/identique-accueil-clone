@@ -185,15 +185,20 @@ export const ProjectDetailsModal = ({ project, isOpen, onClose }: ProjectDetails
           </p>
         </div>
 
-        {/* CTA Section */}
+        {/* CTA Section - Texte blanc sur fond sombre */}
         <div className="mt-8 bg-gradient-to-r from-black to-gray-800 rounded-2xl p-8 text-center text-white">
-          <h3 className="text-2xl font-light mb-4">Prêt à créer votre success story ?</h3>
+          <h3 className="text-2xl font-light mb-4 text-white">Prêt à créer votre success story ?</h3>
           <p className="text-gray-200 mb-6 text-lg">
             Découvrez comment nous pouvons transformer votre vision en réalité exceptionnelle.
           </p>
-          <button className="bg-white text-black px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 hover:scale-105 shadow-lg">
+          <a
+            href="https://wa.me/33745010714?text=Bonjour%2C%20j'aimerais%20discuter%20de%20mon%20projet"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white text-black px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 hover:scale-105 shadow-lg inline-block"
+          >
             Discutons de votre projet
-          </button>
+          </a>
         </div>
       </DialogContent>
     </Dialog>
