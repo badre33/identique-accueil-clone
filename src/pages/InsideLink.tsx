@@ -390,16 +390,7 @@ const InsideLink = () => {
 
       {/* Pourquoi Link Section */}
       <ScrollReveal delay={200}>
-        <section id="mission" className="section-padding bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white relative overflow-hidden">
-          {/* Pattern de fond très subtil pour éviter la superposition */}
-          <div className="absolute inset-0 opacity-5">
-            <div className="absolute inset-0" style={{
-              backgroundImage: 'radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.08) 0%, transparent 50%), radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.03) 0%, transparent 50%)',
-              backgroundSize: '300px 300px',
-              backgroundPosition: '0 0, 150px 150px'
-            }}></div>
-          </div>
-          
+        <section id="mission" className="section-padding bg-black text-white relative overflow-hidden">
           <div className="max-w-5xl mx-auto relative z-10">
             <div className="text-center mb-16">
               <div className="flex items-center justify-center space-x-4 mb-8">
@@ -409,10 +400,10 @@ const InsideLink = () => {
             </div>
             
             <div className="space-y-8 text-lg lg:text-xl leading-relaxed font-light max-w-4xl mx-auto">
-              <p className="text-gray-200 transition-colors duration-500 hover:text-gray-100 text-center">
+              <p className="text-gray-100 text-center">
                 Parce que nous étions fatigués de voir des marques fades, des identités génériques et des fondateurs brillants mal présentés.
               </p>
-              <p className="text-gray-200 transition-colors duration-500 hover:text-gray-100 text-center">
+              <p className="text-gray-100 text-center">
                 Parce qu'on voulait créer une agence différente : radicalement stratégique, obsessionnellement esthétique.
               </p>
               <p className="text-white text-xl lg:text-2xl font-normal text-center mt-12">
