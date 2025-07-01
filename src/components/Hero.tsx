@@ -62,11 +62,11 @@ const Hero = () => {
           <div className="animate-fade-in-up delay-600">
             <p className="text-sm text-gray-500 mb-6">Déjà choisi par des entrepreneurs ambitieux</p>
             <div className="flex justify-center items-center space-x-8 grayscale hover:grayscale-0 transition-all duration-500">
-              <div className="text-2xl font-bold text-gray-400">25+ projets</div>
+              <div className="text-2xl font-bold text-gray-400">75+ projets</div>
               <div className="w-px h-8 bg-gray-300"></div>
               <div className="text-2xl font-bold text-gray-400">100% satisfaction</div>
               <div className="w-px h-8 bg-gray-300"></div>
-              <div className="text-2xl font-bold text-gray-400">2 ans d'expérience</div>
+              <div className="text-2xl font-bold text-gray-400">11+ ans d'expérience</div>
             </div>
           </div>
         </div>
