@@ -363,10 +363,10 @@ const InsideLink = () => {
                     title="Strategic Growth Architect"
                     image="/lovable-uploads/da131874-d340-4dc9-b1e7-5fc5f24a0f40.png"
                     linkedinUrl="https://www.linkedin.com/in/badreddine-harkaoui-nexiafiducia/"
-                    email="bharkaoui@linkagency.ma"
+                    email="badreddine@linkagency.ma"
                     phone="+212 610-061014"
-                    whatsapp="+33745010714"
-                    website="http://linkagency.ma/"
+                    whatsapp="+212610061014"
+                    website="https://linkagency.ma/"
                   />
                 </AnimatedCard>
               </ScrollReveal>
@@ -378,9 +378,10 @@ const InsideLink = () => {
                     title="Creative Technologist"
                     image="/lovable-uploads/d53262f8-9a1f-43dd-b2bc-b199945981c1.png"
                     linkedinUrl="https://www.linkedin.com/in/ayman-nejmi-9926681a6/"
-                    email="a.nejmi@linkagency.ma"
+                    email="ayman@linkagency.ma"
                     phone="+212 669-866831"
-                    website="http://linkagency.ma/"
+                    whatsapp="+212669866831"
+                    website="https://linkagency.ma/"
                   />
                 </AnimatedCard>
               </ScrollReveal>
