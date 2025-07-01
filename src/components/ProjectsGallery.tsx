@@ -70,9 +70,11 @@ export const ProjectsGallery = () => {
 
   return (
     <section className="py-32 px-8 lg:px-16 bg-gradient-to-br from-gray-50 via-white to-gray-100 relative overflow-hidden">
+      {/* Background pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.02)_1px,transparent_1px)] bg-[size:50px_50px] [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
+        {/* Header section */}
         <div className="text-center mb-20">
           <div className="inline-flex items-center space-x-2 bg-black text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
             <ExternalLink className="w-4 h-4" />
@@ -86,6 +88,7 @@ export const ProjectsGallery = () => {
           </p>
         </div>
 
+        {/* Projects grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <div 
@@ -151,10 +154,12 @@ export const ProjectsGallery = () => {
 
         <div className="text-center mt-16">
           <a 
-            href="/collaborations"
+            href="https://wa.me/33745010714?text=Bonjour%2C%20j'aimerais%20discuter%20de%20mon%20projet"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center space-x-3 bg-black text-white px-8 py-4 rounded-full hover:bg-gray-800 transition-all duration-300 hover:scale-105 hover:shadow-2xl text-lg font-medium"
           >
-            <span>Voir toutes nos collaborations</span>
+            <span>Discutons de votre projet</span>
             <ArrowRight className="w-5 h-5" />
           </a>
         </div>
