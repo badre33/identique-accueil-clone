@@ -1,7 +1,8 @@
 
-// Utilitaires pour l'optimisation des performances
+import React from 'react';
 
-export const performance = {
+// Utilitaires pour l'optimisation des performances
+export const performanceUtils = {
   // Debounce pour limiter les appels fréquents
   debounce<T extends (...args: unknown[]) => unknown>(
     func: T,
@@ -53,9 +54,9 @@ export const performance = {
 
   // Mesure des performances
   measurePerformance: (name: string, fn: () => void) => {
-    const start = performance.now();
+    const start = window.performance.now();
     fn();
-    const end = performance.now();
+    const end = window.performance.now();
     console.log(`${name} took ${end - start} milliseconds`);
   },
 
@@ -77,9 +78,9 @@ export const performance = {
 // Hook pour mesurer les performances de rendu
 export const useRenderPerformance = (componentName: string) => {
   React.useEffect(() => {
-    const start = performance.now();
+    const start = window.performance.now();
     return () => {
-      const end = performance.now();
+      const end = window.performance.now();
       console.log(`${componentName} render took ${end - start} milliseconds`);
     };
   });
