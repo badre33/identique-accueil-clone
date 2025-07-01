@@ -33,14 +33,14 @@ export default defineConfig(({ mode }) => ({
         },
       },
     },
-    // Compression et optimisation
-    minify: 'terser',
-    terserOptions: {
+    // Configuration de minification plus robuste
+    minify: mode === 'production' ? 'terser' : false,
+    terserOptions: mode === 'production' ? {
       compress: {
-        drop_console: mode === 'production',
-        drop_debugger: mode === 'production',
+        drop_console: true,
+        drop_debugger: true,
       },
-    },
+    } : undefined,
     // Source maps pour le débogage
     sourcemap: mode === 'development',
     // Taille limite des chunks
