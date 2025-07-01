@@ -1,4 +1,3 @@
-
 import React, { useRef } from 'react';
 import { Download, Linkedin, Mail, Phone, MessageCircle, Globe } from 'lucide-react';
 import { useSoundEffects } from '@/hooks/useSoundEffects';
@@ -47,37 +46,20 @@ END:VCARD`;
 
       console.log('Contenu vCard généré:', vcard);
       
-      // Créer le blob
+      // Créer le blob avec encodage UTF-8
       const blob = new Blob([vcard], { type: 'text/vcard;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
       
-      // Utiliser une approche plus compatible avec tous les navigateurs
-      if (window.navigator && (window.navigator as any).msSaveOrOpenBlob) {
-        // Pour Internet Explorer
-        (window.navigator as any).msSaveOrOpenBlob(blob, `${name.replace(/\s+/g, '_')}_LinkAgency.vcf`);
-      } else {
-        // Pour les autres navigateurs
-        const url = URL.createObjectURL(blob);
-        const link = document.createElement('a');
-        
-        // Forcer l'attribut download et href
-        link.setAttribute('href', url);
-        link.setAttribute('download', `${name.replace(/\s+/g, '_')}_LinkAgency.vcf`);
-        link.style.visibility = 'hidden';
-        
-        // Ajouter au DOM
-        document.body.appendChild(link);
-        
-        // Petit délai pour s'assurer que l'élément est dans le DOM
-        setTimeout(() => {
-          link.click();
-          
-          // Nettoyer après un délai plus long
-          setTimeout(() => {
-            document.body.removeChild(link);
-            URL.revokeObjectURL(url);
-          }, 100);
-        }, 10);
-      }
+      // Créer un lien de téléchargement
+      const downloadLink = document.createElement('a');
+      downloadLink.href = url;
+      downloadLink.download = `${name.replace(/\s+/g, '_')}_LinkAgency.vcf`;
+      
+      // Déclencher immédiatement le téléchargement
+      downloadLink.click();
+      
+      // Nettoyer l'URL
+      URL.revokeObjectURL(url);
       
       playClickSound();
       
