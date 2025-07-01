@@ -132,10 +132,10 @@ export const ProjectDetailsModal = ({ project, isOpen, onClose }: ProjectDetails
             {/* Impact Highlight */}
             <div className="bg-gradient-to-r from-black to-gray-800 rounded-2xl p-6 text-white">
               <div className="flex items-center space-x-2 mb-3">
-                <Award className="w-5 h-5" />
-                <h3 className="text-lg font-semibold">Impact Clé</h3>
+                <Award className="w-5 h-5 text-white" />
+                <h3 className="text-lg font-semibold text-white">Impact Clé</h3>
               </div>
-              <p className="text-xl font-light leading-relaxed">{details.impact}</p>
+              <p className="text-xl font-light leading-relaxed text-white">{details.impact}</p>
             </div>
 
             {/* Challenge */}
