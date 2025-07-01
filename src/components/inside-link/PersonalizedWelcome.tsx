@@ -8,11 +8,24 @@ export const PersonalizedWelcome = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setVisitors(prev => prev + Math.floor(Math.random() * 3));
+      // Augmentation plus cohérente : entre 1 et 4 visiteurs toutes les 8-12 secondes
+      setVisitors(prev => prev + Math.floor(Math.random() * 4) + 1);
       setTimeSpent(prev => prev + 1);
-    }, 5000);
+    }, 8000 + Math.random() * 4000); // Entre 8 et 12 secondes
 
     return () => clearInterval(interval);
+  }, []);
+
+  // Effet pour une augmentation graduelle plus fréquente
+  useEffect(() => {
+    const frequentInterval = setInterval(() => {
+      // Petite chance d'augmentation de 1 visiteur toutes les 3-5 secondes
+      if (Math.random() < 0.3) { // 30% de chance
+        setVisitors(prev => prev + 1);
+      }
+    }, 3000 + Math.random() * 2000); // Entre 3 et 5 secondes
+
+    return () => clearInterval(frequentInterval);
   }, []);
 
   const currentHour = new Date().getHours();
