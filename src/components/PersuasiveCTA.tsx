@@ -136,7 +136,7 @@ export const CTAWithStats = ({ className }: { className?: string }) => (
         size="large"
         icon={<Sparkles className="w-6 h-6" />}
         microCopy="Consultation gratuite de 30 minutes"
-        href="https://wa.me/33745010714?text=Bonjour%2C%20j'aimerais%20une%20consultation%20gratuite"
+        href="https://calendly.com/b-harkaoui-linkagency/30min"
       >
         Démarrer mon projet
       </PersuasiveCTA>

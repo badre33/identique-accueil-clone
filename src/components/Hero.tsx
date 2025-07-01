@@ -39,7 +39,7 @@ const Hero = () => {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16 animate-fade-in-up delay-400">
             <a
-              href="https://wa.me/33745010714?text=Bonjour%2C%20j'aimerais%20démarrer%20mon%20projet%20de%20branding%20avec%20Link%20Agency"
+              href="https://calendly.com/b-harkaoui-linkagency/30min"
               target="_blank"
               rel="noopener noreferrer"
               className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-700 text-white rounded-full font-semibold text-lg hover:from-blue-700 hover:via-purple-700 hover:to-blue-800 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
