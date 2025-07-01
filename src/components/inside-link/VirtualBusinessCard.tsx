@@ -28,6 +28,8 @@ export const VirtualBusinessCard = ({
   const { playClickSound } = useSoundEffects();
 
   const generateVCard = () => {
+    console.log('Generating vCard for:', name);
+    
     const vcard = `BEGIN:VCARD
 VERSION:3.0
 FN:${name}
@@ -39,49 +41,25 @@ URL:${website || linkedinUrl}
 NOTE:${title} chez Link Agency - Expert en branding et stratégie digitale
 END:VCARD`;
 
-    try {
-      const blob = new Blob([vcard], { type: 'text/vcard;charset=utf-8' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = `${name.replace(/\s+/g, '_')}_LinkAgency.vcf`;
-      a.style.display = 'none';
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
-      playClickSound();
-      
-      // Feedback visuel amélioré
-      const button = document.querySelector(`[data-card="${name}"] .download-btn`) as HTMLElement;
-      if (button) {
-        const originalText = button.innerHTML;
-        button.innerHTML = '<span class="text-green-600 font-semibold">✓ Téléchargé !</span>';
-        button.style.background = '#f0f9ff';
-        setTimeout(() => {
-          button.innerHTML = originalText;
-          button.style.background = '';
-        }, 2000);
-      }
-    } catch (error) {
-      console.error('Erreur lors du téléchargement de la vCard:', error);
-      // Fallback amélioré
-      const contactInfo = `${name}\n${title}\nLink Agency\nEmail: ${email}\nTéléphone: ${phone}\nSite web: ${website || linkedinUrl}`;
-      if (navigator.clipboard) {
-        navigator.clipboard.writeText(contactInfo).then(() => {
-          alert('Informations copiées dans le presse-papier !');
-        }).catch(() => {
-          // Fallback ultime
-          const textArea = document.createElement('textarea');
-          textArea.value = contactInfo;
-          document.body.appendChild(textArea);
-          textArea.select();
-          document.execCommand('copy');
-          document.body.removeChild(textArea);
-          alert('Informations copiées !');
-        });
-      }
-    }
+    console.log('vCard content:', vcard);
+
+    const blob = new Blob([vcard], { type: 'text/vcard;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `${name.replace(/\s+/g, '_')}_LinkAgency.vcf`;
+    
+    // Forcer le téléchargement
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    
+    // Nettoyer l'URL
+    setTimeout(() => URL.revokeObjectURL(url), 100);
+    
+    playClickSound();
+    console.log('Download initiated for:', link.download);
   };
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -114,16 +92,16 @@ END:VCARD`;
         onMouseLeave={handleMouseLeave}
         style={{ transformStyle: 'preserve-3d' }}
       >
-        {/* Background pattern with better contrast */}
+        {/* Background pattern */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:20px_20px] rounded-2xl"></div>
         
-        {/* Content with improved contrast */}
+        {/* Content */}
         <div className="relative z-10 h-full flex flex-col justify-between">
           <div className="flex items-start justify-between">
             <div className="flex-1 pr-4">
-              <h3 className="text-xl font-bold mb-1 text-white drop-shadow-md">{name}</h3>
-              <p className="text-gray-200 text-sm font-medium">{title}</p>
-              <p className="text-gray-300 text-xs mt-1 font-medium">Link Agency</p>
+              <h3 className="text-xl font-bold mb-1 text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] filter contrast-125">{name}</h3>
+              <p className="text-gray-100 text-sm font-medium drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">{title}</p>
+              <p className="text-gray-200 text-xs mt-1 font-medium drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">Link Agency</p>
             </div>
             <img 
               src={image} 
@@ -195,7 +173,7 @@ END:VCARD`;
           </div>
         </div>
 
-        {/* Enhanced shine effect */}
+        {/* Shine effect */}
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 rounded-2xl"></div>
       </div>
     </div>
