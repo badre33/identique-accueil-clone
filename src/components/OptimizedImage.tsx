@@ -1,7 +1,8 @@
 
 import { useState, useRef, useEffect } from 'react';
+import { AccessibilityProps } from '@/types/common';
 
-interface OptimizedImageProps {
+interface OptimizedImageProps extends AccessibilityProps {
   src: string;
   alt: string;
   className?: string;
@@ -10,6 +11,8 @@ interface OptimizedImageProps {
   priority?: boolean;
   placeholder?: string;
   decorative?: boolean;
+  sizes?: string;
+  quality?: number;
 }
 
 export const OptimizedImage = ({ 
@@ -20,13 +23,44 @@ export const OptimizedImage = ({
   height, 
   priority = false,
   placeholder = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PC9zdmc+",
-  decorative = false
+  decorative = false,
+  sizes = "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw",
+  quality = 85,
+  ...accessibilityProps
 }: OptimizedImageProps) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const [imageSrc, setImageSrc] = useState(priority ? src : placeholder);
   const [hasError, setHasError] = useState(false);
+  const [supportedFormat, setSupportedFormat] = useState<string>('');
   const imgRef = useRef<HTMLImageElement>(null);
+
+  // Détection du support des formats modernes
+  useEffect(() => {
+    const checkWebPSupport = () => {
+      const canvas = document.createElement('canvas');
+      canvas.width = 1;
+      canvas.height = 1;
+      return canvas.toDataURL('image/webp').indexOf('webp') > -1;
+    };
+
+    const checkAVIFSupport = () => {
+      const canvas = document.createElement('canvas');
+      canvas.width = 1;
+      canvas.height = 1;
+      try {
+        return canvas.toDataURL('image/avif').indexOf('avif') > -1;
+      } catch {
+        return false;
+      }
+    };
+
+    if (checkAVIFSupport()) {
+      setSupportedFormat('avif');
+    } else if (checkWebPSupport()) {
+      setSupportedFormat('webp');
+    }
+  }, []);
 
   useEffect(() => {
     if (priority) return;
@@ -54,6 +88,22 @@ export const OptimizedImage = ({
     }
   }, [isInView, src, priority]);
 
+  const getOptimizedSrc = (originalSrc: string) => {
+    // Si c'est un placeholder ou déjà optimisé, retourner tel quel
+    if (originalSrc.includes('data:image') || originalSrc.includes('.webp') || originalSrc.includes('.avif')) {
+      return originalSrc;
+    }
+    
+    // Pour les images Lovable, essayer d'appliquer le format moderne
+    if (originalSrc.includes('lovable-uploads') && supportedFormat) {
+      // Note: En production, vous devriez avoir un service de transformation d'images
+      // Pour maintenant, on retourne l'image originale
+      return originalSrc;
+    }
+    
+    return originalSrc;
+  };
+
   const handleLoad = () => {
     setIsLoaded(true);
     setHasError(false);
@@ -64,20 +114,6 @@ export const OptimizedImage = ({
     setIsLoaded(false);
   };
 
-  const getOptimizedSrc = (originalSrc: string) => {
-    // Si l'image est déjà optimisée ou si c'est un placeholder, on la retourne telle quelle
-    if (originalSrc.includes('data:image') || originalSrc.includes('.webp')) {
-      return originalSrc;
-    }
-    
-    // Pour les images Lovable, on essaie d'abord le format WebP
-    if (originalSrc.includes('lovable-uploads')) {
-      return originalSrc;
-    }
-    
-    return originalSrc;
-  };
-
   return (
     <div className={`relative overflow-hidden ${className}`}>
       <img
@@ -86,6 +122,7 @@ export const OptimizedImage = ({
         alt={decorative ? "" : alt}
         width={width}
         height={height}
+        sizes={sizes}
         className={`transition-opacity duration-500 ${
           isLoaded ? 'opacity-100' : 'opacity-0'
         } w-full h-full object-cover`}
@@ -95,16 +132,17 @@ export const OptimizedImage = ({
         decoding="async"
         role={decorative ? "presentation" : undefined}
         aria-hidden={decorative ? "true" : undefined}
+        {...accessibilityProps}
       />
       
       {!isLoaded && !hasError && (
         <div 
-          className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center"
+          className="absolute inset-0 bg-neutral-200 animate-pulse flex items-center justify-center"
           aria-label="Chargement de l'image en cours"
           role="status"
         >
           <div 
-            className="w-8 h-8 border-2 border-gray-300 border-t-gray-600 rounded-full animate-spin"
+            className="w-8 h-8 border-2 border-neutral-300 border-t-neutral-600 rounded-full animate-spin"
             aria-hidden="true"
           ></div>
           <span className="sr-only">Chargement de l'image...</span>
@@ -113,7 +151,7 @@ export const OptimizedImage = ({
 
       {hasError && (
         <div 
-          className="absolute inset-0 bg-gray-100 flex items-center justify-center text-gray-500"
+          className="absolute inset-0 bg-neutral-100 flex items-center justify-center text-neutral-500"
           role="alert"
           aria-label="Erreur de chargement de l'image"
         >
