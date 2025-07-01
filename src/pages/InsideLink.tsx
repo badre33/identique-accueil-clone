@@ -11,9 +11,9 @@ import { MagneticButton } from "@/components/inside-link/MagneticButton";
 import { ParticleBackground } from "@/components/inside-link/ParticleBackground";
 import { InteractiveBackground } from "@/components/inside-link/InteractiveBackground";
 import { ThreeDHoverCard } from "@/components/inside-link/ThreeDHoverCard";
-import { BrandingQuiz } from "@/components/inside-link/BrandingQuiz";
 import { VirtualBusinessCard } from "@/components/inside-link/VirtualBusinessCard";
-import { InteractiveTimeline } from "@/components/inside-link/InteractiveTimeline";
+import { EnhancedTimeline } from "@/components/inside-link/EnhancedTimeline";
+import { GameifiedBrandingQuiz } from "@/components/inside-link/GameifiedBrandingQuiz";
 import { PersonalizedWelcome } from "@/components/inside-link/PersonalizedWelcome";
 import { DynamicContent } from "@/components/inside-link/DynamicContent";
 import { ScrollReveal } from "@/components/inside-link/ScrollReveal";
@@ -297,7 +297,7 @@ const InsideLink = () => {
         <AnimatedStats />
       </ScrollReveal>
 
-      {/* Interactive Timeline Section */}
+      {/* Enhanced Interactive Timeline Section */}
       <SectionTransition>
         <section id="timeline" className="section-padding gradient-subtle relative pattern-waves">
           <div className="max-w-5xl mx-auto">
@@ -314,26 +314,26 @@ const InsideLink = () => {
             </ScrollReveal>
             
             <ScrollReveal delay={400}>
-              <InteractiveTimeline />
+              <EnhancedTimeline />
             </ScrollReveal>
           </div>
         </section>
       </SectionTransition>
 
-      {/* Branding Quiz Section */}
+      {/* Gamified Branding Quiz Section */}
       <ScrollReveal delay={200}>
         <section id="quiz" className="section-padding relative">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-20 space-content">
               <h2 className="text-neutral-900 mb-8">
-                Découvrez Votre Type de Branding
+                Testez Vos Connaissances en Branding
               </h2>
               <p className="text-xl text-neutral-500 max-w-3xl mx-auto">
-                Un quiz interactif pour identifier l'approche de branding qui vous correspond
+                Un quiz interactif et ludique pour découvrir votre niveau en branding
               </p>
             </div>
             
-            <BrandingQuiz />
+            <GameifiedBrandingQuiz />
           </div>
         </section>
       </ScrollReveal>
