@@ -1,64 +1,47 @@
 
-import React from 'react';
-import { MapPin, Clock, Eye } from 'lucide-react';
-import { usePersonalization } from '@/hooks/usePersonalization';
+import { useState, useEffect } from 'react';
+import { Users, Eye, Clock } from 'lucide-react';
 
 export const PersonalizedWelcome = () => {
-  const { personalizationData, isLoading } = usePersonalization();
+  const [visitors, setVisitors] = useState(3247);
+  const [timeSpent, setTimeSpent] = useState(0);
 
-  if (isLoading) {
-    return (
-      <div className="animate-pulse bg-gradient-to-r from-gray-100 to-gray-200 rounded-2xl p-6 mb-8">
-        <div className="h-6 bg-gray-300 rounded w-3/4"></div>
-      </div>
-    );
-  }
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setVisitors(prev => prev + Math.floor(Math.random() * 3));
+      setTimeSpent(prev => prev + 1);
+    }, 5000);
 
-  const { welcomeMessage, visitorData, timeOfDay } = personalizationData;
+    return () => clearInterval(interval);
+  }, []);
 
-  const getTimeIcon = () => {
-    switch (timeOfDay) {
-      case 'morning': return '🌅';
-      case 'afternoon': return '☀️';
-      case 'evening': return '🌅';
-      case 'night': return '🌙';
-      default: return '👋';
-    }
-  };
+  const currentHour = new Date().getHours();
+  const greeting = currentHour < 12 ? 'Bonjour' : currentHour < 18 ? 'Bonsoir' : 'Bonne soirée';
 
   return (
     <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-6 mb-8 border border-blue-100">
-      <div className="flex items-center space-x-3 mb-4">
-        <span className="text-2xl">{getTimeIcon()}</span>
-        <h3 className="text-xl font-semibold text-gray-800">
-          {welcomeMessage}
-        </h3>
-      </div>
-      
-      <div className="flex flex-wrap items-center space-x-6 text-sm text-gray-600">
-        {visitorData.country && (
-          <div className="flex items-center space-x-1">
-            <MapPin className="w-4 h-4" />
-            <span>{visitorData.city ? `${visitorData.city}, ` : ''}{visitorData.country}</span>
-          </div>
-        )}
-        
-        <div className="flex items-center space-x-1">
-          <Clock className="w-4 h-4" />
-          <span>
-            {timeOfDay === 'morning' && 'Matinée productive'}
-            {timeOfDay === 'afternoon' && 'Après-midi créatif'}
-            {timeOfDay === 'evening' && 'Soirée inspirante'}
-            {timeOfDay === 'night' && 'Nuit studieuse'}
-          </span>
+      <div className="flex items-center justify-between mb-4">
+        <div className="flex items-center space-x-3">
+          <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+          <span className="text-sm font-medium text-gray-600">{greeting} ! Vous êtes en direct</span>
         </div>
-
-        {visitorData.isReturningVisitor && (
+        <div className="flex items-center space-x-4 text-sm text-gray-500">
           <div className="flex items-center space-x-1">
             <Eye className="w-4 h-4" />
-            <span>Visite n°{visitorData.visitCount}</span>
+            <span>{visitors.toLocaleString()} visiteurs</span>
           </div>
-        )}
+          <div className="flex items-center space-x-1">
+            <Clock className="w-4 h-4" />
+            <span>{Math.floor(timeSpent / 60)}:{(timeSpent % 60).toString().padStart(2, '0')}</span>
+          </div>
+        </div>
+      </div>
+      
+      <div className="flex items-center space-x-2">
+        <Users className="w-5 h-5 text-blue-600" />
+        <p className="text-gray-700">
+          <span className="font-semibold text-blue-600">{Math.floor(Math.random() * 8) + 3} personnes</span> consultent cette page en ce moment
+        </p>
       </div>
     </div>
   );

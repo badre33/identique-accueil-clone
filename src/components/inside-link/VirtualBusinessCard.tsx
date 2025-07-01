@@ -1,4 +1,3 @@
-
 import React, { useRef } from 'react';
 import { Download, Linkedin, Mail, Phone, MessageCircle, Globe } from 'lucide-react';
 import { useSoundEffects } from '@/hooks/useSoundEffects';
@@ -36,18 +35,41 @@ TITLE:${title}
 EMAIL:${email}
 TEL:${phone}
 URL:${website || linkedinUrl}
+NOTE:${title} chez Link Agency - Expert en branding et stratégie digitale
 END:VCARD`;
 
-    const blob = new Blob([vcard], { type: 'text/vcard' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `${name.replace(' ', '_')}_contact.vcf`;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
-    playClickSound();
+    try {
+      const blob = new Blob([vcard], { type: 'text/vcard;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `${name.replace(/\s+/g, '_')}_LinkAgency.vcf`;
+      a.style.display = 'none';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+      playClickSound();
+      
+      // Feedback visuel
+      const button = document.querySelector(`[data-card="${name}"] .download-btn`);
+      if (button) {
+        const originalText = button.textContent;
+        button.textContent = 'Téléchargé !';
+        setTimeout(() => {
+          button.textContent = originalText;
+        }, 2000);
+      }
+    } catch (error) {
+      console.error('Erreur lors du téléchargement de la vCard:', error);
+      // Fallback: copier les informations dans le presse-papier
+      const contactInfo = `${name}\n${title}\nLink Agency\n${email}\n${phone}`;
+      navigator.clipboard.writeText(contactInfo).then(() => {
+        alert('Informations copiées dans le presse-papier !');
+      }).catch(() => {
+        alert('Veuillez télécharger manuellement les informations de contact.');
+      });
+    }
   };
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -72,7 +94,7 @@ END:VCARD`;
   };
 
   return (
-    <div className="group">
+    <div className="group" data-card={name}>
       <div
         ref={cardRef}
         className="relative w-80 h-48 bg-gradient-to-br from-black to-gray-800 rounded-2xl p-6 text-white cursor-pointer transition-all duration-300 hover:shadow-2xl"
@@ -149,7 +171,7 @@ END:VCARD`;
             
             <button
               onClick={generateVCard}
-              className="flex items-center space-x-1 bg-white text-black px-2 py-1.5 rounded-lg hover:bg-gray-100 transition-colors text-xs font-medium"
+              className="download-btn flex items-center space-x-1 bg-white text-black px-2 py-1.5 rounded-lg hover:bg-gray-100 transition-colors text-xs font-medium"
             >
               <Download className="w-3 h-3" />
               <span>Télécharger</span>
