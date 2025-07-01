@@ -1,3 +1,4 @@
+
 import React, { useRef } from 'react';
 import { Download, Linkedin, Mail, Phone, MessageCircle, Globe } from 'lucide-react';
 import { useSoundEffects } from '@/hooks/useSoundEffects';
@@ -26,9 +27,14 @@ export const VirtualBusinessCard = ({
   const cardRef = useRef<HTMLDivElement>(null);
   const { playClickSound } = useSoundEffects();
 
-  const generateVCard = () => {
+  const generateVCard = (e: React.MouseEvent) => {
+    // Empêcher la propagation et le comportement par défaut
+    e.preventDefault();
+    e.stopPropagation();
+    
     console.log('=== DÉBUT GÉNÉRATION VCARD ===');
-    console.log('Navigateur:', navigator.userAgent);
+    console.log('Event type:', e.type);
+    console.log('Event trusted:', e.isTrusted);
     console.log('Générant vCard pour:', name);
     
     const vcard = `BEGIN:VCARD
@@ -44,86 +50,28 @@ END:VCARD`;
 
     console.log('Contenu vCard généré:', vcard);
     
-    // Méthode 1: Téléchargement direct
-    try {
-      console.log('Tentative méthode 1: Blob + createObjectURL');
-      const blob = new Blob([vcard], { type: 'text/vcard' });
-      console.log('Blob créé:', blob.size, 'bytes');
-      
-      const url = URL.createObjectURL(blob);
-      console.log('URL créée:', url);
-      
-      const link = document.createElement('a');
-      link.href = url;
-      link.download = `${name.replace(/\s+/g, '_')}_LinkAgency.vcf`;
-      link.style.display = 'none';
-      
-      console.log('Lien créé, nom de fichier:', link.download);
-      
-      document.body.appendChild(link);
-      console.log('Lien ajouté au DOM');
-      
-      link.click();
-      console.log('Click simulé sur le lien');
-      
-      setTimeout(() => {
-        document.body.removeChild(link);
-        URL.revokeObjectURL(url);
-        console.log('Nettoyage effectué');
-      }, 100);
-      
-      playClickSound();
-      console.log('=== TÉLÉCHARGEMENT INITIÉ ===');
-      return;
-      
-    } catch (error) {
-      console.error('Erreur méthode 1:', error);
-    }
+    // Créer immédiatement le lien et déclencher le téléchargement
+    const blob = new Blob([vcard], { type: 'text/vcard;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
     
-    // Méthode 2: Data URL
-    try {
-      console.log('Tentative méthode 2: Data URL');
-      const dataUrl = 'data:text/vcard;charset=utf-8,' + encodeURIComponent(vcard);
-      console.log('Data URL créée');
-      
-      const link = document.createElement('a');
-      link.href = dataUrl;
-      link.download = `${name.replace(/\s+/g, '_')}_LinkAgency.vcf`;
-      link.style.display = 'none';
-      
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-      
-      playClickSound();
-      console.log('=== TÉLÉCHARGEMENT MÉTHODE 2 INITIÉ ===');
-      return;
-      
-    } catch (error) {
-      console.error('Erreur méthode 2:', error);
-    }
+    // Créer un lien temporaire et le cliquer immédiatement
+    const downloadLink = document.createElement('a');
+    downloadLink.href = url;
+    downloadLink.download = `${name.replace(/\s+/g, '_')}_LinkAgency.vcf`;
+    downloadLink.style.display = 'none';
     
-    // Fallback: Copier dans le presse-papier
-    console.log('Fallback: copie dans le presse-papier');
-    const contactInfo = `${name}
-${title}
-Link Agency
-Email: ${email}
-Téléphone: ${phone}
-Site web: ${website || linkedinUrl}`;
+    // Ajouter au DOM, cliquer, puis nettoyer immédiatement
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    document.body.removeChild(downloadLink);
     
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(contactInfo).then(() => {
-        alert('Impossible de télécharger le fichier. Les informations de contact ont été copiées dans le presse-papier.');
-        console.log('Informations copiées dans le presse-papier');
-      }).catch(() => {
-        alert(`Voici les informations de contact à copier manuellement:\n\n${contactInfo}`);
-        console.log('Affichage manuel des informations');
-      });
-    } else {
-      alert(`Voici les informations de contact à copier manuellement:\n\n${contactInfo}`);
-      console.log('Affichage manuel des informations (pas de clipboard API)');
-    }
+    // Nettoyer l'URL après un court délai
+    setTimeout(() => {
+      URL.revokeObjectURL(url);
+    }, 100);
+    
+    playClickSound();
+    console.log('=== TÉLÉCHARGEMENT DÉCLENCHÉ ===');
   };
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
