@@ -46,20 +46,24 @@ END:VCARD`;
 
       console.log('Contenu vCard généré:', vcard);
       
-      // Créer le blob avec encodage UTF-8
-      const blob = new Blob([vcard], { type: 'text/vcard;charset=utf-8' });
-      const url = URL.createObjectURL(blob);
+      // Créer le fichier vCard
+      const fileName = `${name.replace(/\s+/g, '_')}_LinkAgency.vcf`;
+      const dataStr = "data:text/vcard;charset=utf-8," + encodeURIComponent(vcard);
       
-      // Créer un lien de téléchargement
-      const downloadLink = document.createElement('a');
-      downloadLink.href = url;
-      downloadLink.download = `${name.replace(/\s+/g, '_')}_LinkAgency.vcf`;
+      // Créer un lien de téléchargement temporaire
+      const downloadAnchorNode = document.createElement('a');
+      downloadAnchorNode.setAttribute("href", dataStr);
+      downloadAnchorNode.setAttribute("download", fileName);
+      downloadAnchorNode.style.display = 'none';
       
-      // Déclencher immédiatement le téléchargement
-      downloadLink.click();
+      // Ajouter temporairement au DOM
+      document.body.appendChild(downloadAnchorNode);
       
-      // Nettoyer l'URL
-      URL.revokeObjectURL(url);
+      // Déclencher le téléchargement
+      downloadAnchorNode.click();
+      
+      // Nettoyer
+      document.body.removeChild(downloadAnchorNode);
       
       playClickSound();
       
