@@ -89,7 +89,7 @@ export const PersuasiveCTA = ({
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        <a href={href} className={buttonClasses} onClick={onClick}>
+        <a href={href} target="_blank" rel="noopener noreferrer" className={buttonClasses} onClick={onClick}>
           {content}
           {shimmerEffect}
         </a>
