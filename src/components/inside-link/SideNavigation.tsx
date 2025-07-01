@@ -1,6 +1,9 @@
 
 import { useState, useEffect } from 'react';
 import { Users, Target, Lightbulb, Award, Mail } from 'lucide-react';
+import { TouchOptimized } from '../TouchOptimized';
+import { useMobile } from '@/hooks/useMobile';
+import { cn } from '@/lib/utils';
 
 interface SideNavigationProps {
   currentSection: string;
@@ -8,6 +11,7 @@ interface SideNavigationProps {
 
 export const SideNavigation = ({ currentSection }: SideNavigationProps) => {
   const [isVisible, setIsVisible] = useState(false);
+  const { isMobile, isTablet } = useMobile();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,33 +38,57 @@ export const SideNavigation = ({ currentSection }: SideNavigationProps) => {
     { id: 'join', label: 'Nous Rejoindre', icon: Mail },
   ];
 
+  // Hide on mobile in portrait mode or very small screens
+  if (isMobile) {
+    return null;
+  }
+
   return (
-    <nav className={`fixed left-4 top-1/2 -translate-y-1/2 z-30 transition-all duration-500 ${
-      isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-full'
-    }`}>
-      <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl p-2 border border-gray-200">
+    <nav 
+      className={cn(
+        'fixed z-30 transition-all duration-500',
+        isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-full',
+        isTablet ? 'left-2 top-1/2 -translate-y-1/2' : 'left-4 top-1/2 -translate-y-1/2'
+      )}
+    >
+      <div className={cn(
+        'bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl border border-gray-200',
+        isTablet ? 'p-1.5' : 'p-2'
+      )}>
         {sections.map((section) => {
           const Icon = section.icon;
           const isActive = currentSection === section.id;
           
           return (
-            <button
+            <TouchOptimized
               key={section.id}
+              touchTarget="medium"
+              hapticFeedback
               onClick={() => scrollToSection(section.id)}
-              className={`group relative flex items-center p-2 rounded-xl transition-all duration-300 w-full ${
-                isActive 
-                  ? 'bg-black text-white shadow-lg' 
-                  : 'hover:bg-gray-100 text-gray-600 hover:text-black'
-              }`}
-              title={section.label}
             >
-              <Icon className="w-4 h-4" />
-              <span className={`ml-2 text-xs font-medium whitespace-nowrap overflow-hidden transition-all duration-300 ${
-                isActive ? 'opacity-100 w-auto' : 'opacity-0 w-0 group-hover:opacity-100 group-hover:w-auto'
-              }`}>
-                {section.label}
-              </span>
-            </button>
+              <button
+                className={cn(
+                  'group relative flex items-center rounded-xl transition-all duration-300 w-full',
+                  isTablet ? 'p-2.5' : 'p-2',
+                  isActive 
+                    ? 'bg-black text-white shadow-lg' 
+                    : 'hover:bg-gray-100 text-gray-600 hover:text-black'
+                )}
+                title={section.label}
+              >
+                <Icon className={cn(
+                  'flex-shrink-0',
+                  isTablet ? 'w-5 h-5' : 'w-4 h-4'
+                )} />
+                <span className={cn(
+                  'ml-2 font-medium whitespace-nowrap overflow-hidden transition-all duration-300',
+                  isTablet ? 'text-sm' : 'text-xs',
+                  isActive ? 'opacity-100 w-auto' : 'opacity-0 w-0 group-hover:opacity-100 group-hover:w-auto'
+                )}>
+                  {section.label}
+                </span>
+              </button>
+            </TouchOptimized>
           );
         })}
       </div>
