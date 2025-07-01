@@ -2,6 +2,7 @@
 import React, { useRef } from 'react';
 import { Download, Linkedin, Mail, Phone, MessageCircle, Globe } from 'lucide-react';
 import { useSoundEffects } from '@/hooks/useSoundEffects';
+import { useToast } from '@/hooks/use-toast';
 
 interface VirtualBusinessCardProps {
   name: string;
@@ -26,52 +27,64 @@ export const VirtualBusinessCard = ({
 }: VirtualBusinessCardProps) => {
   const cardRef = useRef<HTMLDivElement>(null);
   const { playClickSound } = useSoundEffects();
+  const { toast } = useToast();
 
-  const generateVCard = (e: React.MouseEvent) => {
-    // Empêcher la propagation et le comportement par défaut
-    e.preventDefault();
-    e.stopPropagation();
-    
+  const generateVCard = () => {
     console.log('=== DÉBUT GÉNÉRATION VCARD ===');
-    console.log('Event type:', e.type);
-    console.log('Event trusted:', e.isTrusted);
     console.log('Générant vCard pour:', name);
     
-    const vcard = `BEGIN:VCARD
+    try {
+      const vcard = `BEGIN:VCARD
 VERSION:3.0
 FN:${name}
 ORG:Link Agency
 TITLE:${title}
 EMAIL:${email}
-TEL:${phone}
+TEL:${phone}${whatsapp ? `\nTEL;TYPE=WHATSAPP:${whatsapp}` : ''}
 URL:${website || linkedinUrl}
 NOTE:${title} chez Link Agency - Expert en branding et stratégie digitale
 END:VCARD`;
 
-    console.log('Contenu vCard généré:', vcard);
-    
-    // Créer immédiatement le lien et déclencher le téléchargement
-    const blob = new Blob([vcard], { type: 'text/vcard;charset=utf-8' });
-    const url = URL.createObjectURL(blob);
-    
-    // Créer un lien temporaire et le cliquer immédiatement
-    const downloadLink = document.createElement('a');
-    downloadLink.href = url;
-    downloadLink.download = `${name.replace(/\s+/g, '_')}_LinkAgency.vcf`;
-    downloadLink.style.display = 'none';
-    
-    // Ajouter au DOM, cliquer, puis nettoyer immédiatement
-    document.body.appendChild(downloadLink);
-    downloadLink.click();
-    document.body.removeChild(downloadLink);
-    
-    // Nettoyer l'URL après un court délai
-    setTimeout(() => {
+      console.log('Contenu vCard généré:', vcard);
+      
+      // Créer le blob avec le bon type MIME
+      const blob = new Blob([vcard], { type: 'text/vcard' });
+      
+      // Créer l'URL du blob
+      const url = URL.createObjectURL(blob);
+      
+      // Créer un élément de lien temporaire
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = `${name.replace(/\s+/g, '_')}_LinkAgency.vcf`;
+      
+      // Ajouter au DOM temporairement
+      document.body.appendChild(link);
+      
+      // Déclencher le téléchargement
+      link.click();
+      
+      // Nettoyer
+      document.body.removeChild(link);
       URL.revokeObjectURL(url);
-    }, 100);
-    
-    playClickSound();
-    console.log('=== TÉLÉCHARGEMENT DÉCLENCHÉ ===');
+      
+      playClickSound();
+      
+      toast({
+        title: "Carte de visite téléchargée",
+        description: `La carte de ${name} a été téléchargée avec succès.`,
+      });
+      
+      console.log('=== TÉLÉCHARGEMENT RÉUSSI ===');
+      
+    } catch (error) {
+      console.error('Erreur lors du téléchargement:', error);
+      toast({
+        title: "Erreur de téléchargement",
+        description: "Impossible de télécharger la carte de visite.",
+        variant: "destructive",
+      });
+    }
   };
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
