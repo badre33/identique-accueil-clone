@@ -174,18 +174,18 @@ export const CTAWithStats = ({ className }: { className?: string }) => {
   };
 
   return (
-    <div className={cn("text-center space-y-8 w-full", className)}>
-      <div className="grid grid-cols-3 gap-8 max-w-md mx-auto mb-8">
-        <div className="text-center group cursor-pointer hover:scale-105 transition-transform duration-300 p-2 rounded-lg hover:bg-white/50">
-          <div className="text-2xl font-bold text-black mb-1 group-hover:text-blue-600 transition-colors duration-300">50+</div>
+    <div className={cn("text-center space-y-6 sm:space-y-8 w-full", className)}>
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8 max-w-md sm:max-w-none mx-auto mb-6 sm:mb-8">
+        <div className="text-center group cursor-pointer hover:scale-105 transition-transform duration-300 p-3 sm:p-2 rounded-lg hover:bg-white/50">
+          <div className="text-xl sm:text-2xl font-bold text-black mb-1 group-hover:text-blue-600 transition-colors duration-300">50+</div>
           <div className="text-sm text-gray-600 group-hover:text-gray-700 transition-colors duration-300">Projets réalisés</div>
         </div>
-        <div className="text-center group cursor-pointer hover:scale-105 transition-transform duration-300 p-2 rounded-lg hover:bg-white/50">
-          <div className="text-2xl font-bold text-black mb-1 group-hover:text-green-600 transition-colors duration-300">98%</div>
+        <div className="text-center group cursor-pointer hover:scale-105 transition-transform duration-300 p-3 sm:p-2 rounded-lg hover:bg-white/50">
+          <div className="text-xl sm:text-2xl font-bold text-black mb-1 group-hover:text-green-600 transition-colors duration-300">98%</div>
           <div className="text-sm text-gray-600 group-hover:text-gray-700 transition-colors duration-300">Clients satisfaits</div>
         </div>
-        <div className="text-center group cursor-pointer hover:scale-105 transition-transform duration-300 p-2 rounded-lg hover:bg-white/50">
-          <div className="text-2xl font-bold text-black mb-1 group-hover:text-purple-600 transition-colors duration-300">24h</div>
+        <div className="text-center group cursor-pointer hover:scale-105 transition-transform duration-300 p-3 sm:p-2 rounded-lg hover:bg-white/50">
+          <div className="text-xl sm:text-2xl font-bold text-black mb-1 group-hover:text-purple-600 transition-colors duration-300">24h</div>
           <div className="text-sm text-gray-600 group-hover:text-gray-700 transition-colors duration-300">Réponse garantie</div>
         </div>
       </div>
@@ -194,7 +194,7 @@ export const CTAWithStats = ({ className }: { className?: string }) => {
         <PersuasiveCTA
           variant="gradient"
           size="large"
-          icon={<Sparkles className="w-6 h-6" />}
+          icon={<Sparkles className="w-5 h-5 sm:w-6 sm:h-6" />}
           microCopy="Consultation gratuite de 30 minutes"
           href="https://calendly.com/b-harkaoui-linkagency/30min"
           onClick={handleClick}
@@ -204,7 +204,7 @@ export const CTAWithStats = ({ className }: { className?: string }) => {
         </PersuasiveCTA>
       </div>
 
-      <p className="text-sm text-gray-500 max-w-sm mx-auto hover:text-gray-600 transition-colors duration-300">
+      <p className="text-sm text-gray-500 max-w-sm mx-auto hover:text-gray-600 transition-colors duration-300 px-4">
         ✨ Sans engagement • 🚀 Réponse rapide • 💎 Expertise garantie
       </p>
     </div>
@@ -221,30 +221,31 @@ export const CTAWithUrgency = ({ className }: { className?: string }) => {
   };
 
   return (
-    <div className={cn("text-center bg-gradient-to-r from-red-50 to-pink-50 p-8 rounded-3xl border border-red-100 w-full hover:shadow-lg transition-shadow duration-500", className)}>
-      <div className="inline-flex items-center space-x-2 bg-red-100 text-red-700 px-4 py-2 rounded-full text-sm font-medium mb-6 hover:bg-red-200 hover:scale-105 transition-all duration-300 cursor-pointer">
-        <Zap className="w-4 h-4 animate-pulse" />
+    <div className={cn("text-center bg-gradient-to-r from-red-50 to-pink-50 p-4 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl border border-red-100 w-full hover:shadow-lg transition-shadow duration-500 mx-auto max-w-2xl", className)}>
+      <div className="inline-flex items-center space-x-2 bg-red-100 text-red-700 px-3 py-2 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-medium mb-4 sm:mb-6 hover:bg-red-200 hover:scale-105 transition-all duration-300 cursor-pointer">
+        <Zap className="w-3 h-3 sm:w-4 sm:h-4 animate-pulse" />
         <span>Offre limitée</span>
       </div>
       
-      <h3 className="text-2xl font-bold text-black mb-4 hover:text-red-700 transition-colors duration-300">
+      <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-black mb-3 sm:mb-4 hover:text-red-700 transition-colors duration-300 leading-tight">
         -20% sur votre premier projet
       </h3>
       
-      <p className="text-gray-600 mb-8 max-w-md mx-auto hover:text-gray-700 transition-colors duration-300">
+      <p className="text-sm sm:text-base text-gray-600 mb-6 sm:mb-8 max-w-md mx-auto hover:text-gray-700 transition-colors duration-300 leading-relaxed px-2">
         Profitez de notre offre de lancement pour les 10 prochains clients
       </p>
       
-      <div className="w-full flex justify-center px-4">
+      <div className="w-full flex justify-center px-2 sm:px-4">
         <PersuasiveCTA
           variant="primary"
           size="large"
-          icon={<Users className="w-6 h-6" />}
+          icon={<Users className="w-5 h-5 sm:w-6 sm:h-6" />}
           microCopy="Plus que 3 places disponibles"
           pulse
           href="https://wa.me/33745010714?text=Bonjour%2C%20je%20souhaite%20profiter%20de%20l'offre%20-20%25"
           onClick={handleClick}
           loading={loading}
+          className="w-full sm:w-auto max-w-sm"
         >
           {loading ? "Réservation..." : "Réserver ma place"}
         </PersuasiveCTA>
