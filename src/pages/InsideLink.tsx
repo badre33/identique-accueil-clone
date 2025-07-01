@@ -1,4 +1,5 @@
 
+
 import { useState, useEffect } from "react";
 import { ArrowLeft, Target, Palette, Users, Lightbulb, Linkedin, History, Download } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -363,8 +364,8 @@ const InsideLink = () => {
                     title="Strategic Growth Architect"
                     image="/lovable-uploads/da131874-d340-4dc9-b1e7-5fc5f24a0f40.png"
                     linkedinUrl="https://www.linkedin.com/in/badreddine-harkaoui-nexiafiducia/"
-                    email="badreddine@linkagency.ma"
-                    phone="+212699024526"
+                    email="bharkaoui@linkagency.ma"
+                    phone="+212610061014"
                     whatsapp="+33745010714"
                     website="https://linkagency.ma/"
                   />
@@ -439,3 +440,4 @@ const InsideLink = () => {
 };
 
 export default InsideLink;
+
