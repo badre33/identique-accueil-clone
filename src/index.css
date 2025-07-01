@@ -114,7 +114,7 @@
     --ease-out: cubic-bezier(0, 0, 0.2, 1);
     --ease-in: cubic-bezier(0.4, 0, 1, 1);
     
-    /* Variables d'ombres sophistiquées */
+    /* Variables d'ombres sophistiquées - définies comme variables CSS */
     --shadow-subtle: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     --shadow-soft: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     --shadow-medium: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
@@ -269,20 +269,37 @@
   }
   
   .interactive-card {
-    @apply smooth-hover hover:shadow-large hover:-translate-y-2 focus-within:shadow-large focus-within:-translate-y-2 cursor-pointer;
+    @apply smooth-hover cursor-pointer;
     transform-origin: center;
     box-shadow: var(--shadow-soft);
   }
   
+  .interactive-card:hover, .interactive-card:focus-within {
+    box-shadow: var(--shadow-large);
+    transform: translateY(-2px);
+  }
+  
   .interactive-button {
-    @apply smooth-hover hover:scale-105 focus:scale-105 active:scale-95;
+    @apply smooth-hover;
     transform-origin: center;
     box-shadow: var(--shadow-subtle);
   }
   
+  .interactive-button:hover, .interactive-button:focus {
+    transform: scale(1.05);
+  }
+  
+  .interactive-button:active {
+    transform: scale(0.95);
+  }
+  
   .scale-hover {
-    @apply smooth-hover hover:scale-110 focus:scale-110;
+    @apply smooth-hover;
     transform-origin: center;
+  }
+  
+  .scale-hover:hover, .scale-hover:focus {
+    transform: scale(1.1);
   }
   
   .underline-animation {
@@ -451,12 +468,12 @@
 
   .interactive-element:hover,
   .interactive-element:focus {
-    @apply transform scale-105;
+    transform: scale(1.05);
     box-shadow: var(--shadow-medium);
   }
 
   .interactive-element:active {
-    @apply transform scale-95;
+    transform: scale(0.95);
   }
 }
 
