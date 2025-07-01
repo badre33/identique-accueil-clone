@@ -1,3 +1,4 @@
+
 import React, { useRef } from 'react';
 import { Download, Linkedin, Mail, Phone, MessageCircle, Globe } from 'lucide-react';
 import { useSoundEffects } from '@/hooks/useSoundEffects';
@@ -51,24 +52,35 @@ END:VCARD`;
       URL.revokeObjectURL(url);
       playClickSound();
       
-      // Feedback visuel
-      const button = document.querySelector(`[data-card="${name}"] .download-btn`);
+      // Feedback visuel amélioré
+      const button = document.querySelector(`[data-card="${name}"] .download-btn`) as HTMLElement;
       if (button) {
-        const originalText = button.textContent;
-        button.textContent = 'Téléchargé !';
+        const originalText = button.innerHTML;
+        button.innerHTML = '<span class="text-green-600 font-semibold">✓ Téléchargé !</span>';
+        button.style.background = '#f0f9ff';
         setTimeout(() => {
-          button.textContent = originalText;
+          button.innerHTML = originalText;
+          button.style.background = '';
         }, 2000);
       }
     } catch (error) {
       console.error('Erreur lors du téléchargement de la vCard:', error);
-      // Fallback: copier les informations dans le presse-papier
-      const contactInfo = `${name}\n${title}\nLink Agency\n${email}\n${phone}`;
-      navigator.clipboard.writeText(contactInfo).then(() => {
-        alert('Informations copiées dans le presse-papier !');
-      }).catch(() => {
-        alert('Veuillez télécharger manuellement les informations de contact.');
-      });
+      // Fallback amélioré
+      const contactInfo = `${name}\n${title}\nLink Agency\nEmail: ${email}\nTéléphone: ${phone}\nSite web: ${website || linkedinUrl}`;
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(contactInfo).then(() => {
+          alert('Informations copiées dans le presse-papier !');
+        }).catch(() => {
+          // Fallback ultime
+          const textArea = document.createElement('textarea');
+          textArea.value = contactInfo;
+          document.body.appendChild(textArea);
+          textArea.select();
+          document.execCommand('copy');
+          document.body.removeChild(textArea);
+          alert('Informations copiées !');
+        });
+      }
     }
   };
 
@@ -97,26 +109,26 @@ END:VCARD`;
     <div className="group" data-card={name}>
       <div
         ref={cardRef}
-        className="relative w-80 h-48 bg-gradient-to-br from-black to-gray-800 rounded-2xl p-6 text-white cursor-pointer transition-all duration-300 hover:shadow-2xl"
+        className="relative w-80 h-48 bg-gradient-to-br from-gray-900 via-black to-gray-800 rounded-2xl p-6 text-white cursor-pointer transition-all duration-300 hover:shadow-2xl border border-gray-700"
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
         style={{ transformStyle: 'preserve-3d' }}
       >
-        {/* Background pattern */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:20px_20px] rounded-2xl"></div>
+        {/* Background pattern with better contrast */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:20px_20px] rounded-2xl"></div>
         
-        {/* Content */}
+        {/* Content with improved contrast */}
         <div className="relative z-10 h-full flex flex-col justify-between">
           <div className="flex items-start justify-between">
             <div className="flex-1 pr-4">
-              <h3 className="text-xl font-bold mb-1">{name}</h3>
-              <p className="text-gray-300 text-sm">{title}</p>
-              <p className="text-gray-400 text-xs mt-1">Link Agency</p>
+              <h3 className="text-xl font-bold mb-1 text-white drop-shadow-md">{name}</h3>
+              <p className="text-gray-200 text-sm font-medium">{title}</p>
+              <p className="text-gray-300 text-xs mt-1 font-medium">Link Agency</p>
             </div>
             <img 
               src={image} 
               alt={name}
-              className="w-12 h-12 rounded-full object-cover border-2 border-white/20 flex-shrink-0"
+              className="w-12 h-12 rounded-full object-cover border-2 border-white/30 flex-shrink-0 shadow-lg"
             />
           </div>
 
@@ -126,21 +138,25 @@ END:VCARD`;
                 href={linkedinUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 bg-white/10 rounded-lg hover:bg-white/20 transition-colors"
+                className="p-2 bg-white/15 backdrop-blur-sm rounded-lg hover:bg-white/25 transition-colors border border-white/20"
                 onClick={playClickSound}
               >
                 <Linkedin className="w-4 h-4" />
               </a>
               <a 
                 href={`mailto:${email}`}
-                className="p-2 bg-white/10 rounded-lg hover:bg-white/20 transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 bg-white/15 backdrop-blur-sm rounded-lg hover:bg-white/25 transition-colors border border-white/20"
                 onClick={playClickSound}
               >
                 <Mail className="w-4 h-4" />
               </a>
               <a 
                 href={`tel:${phone}`}
-                className="p-2 bg-white/10 rounded-lg hover:bg-white/20 transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 bg-white/15 backdrop-blur-sm rounded-lg hover:bg-white/25 transition-colors border border-white/20"
                 onClick={playClickSound}
               >
                 <Phone className="w-4 h-4" />
@@ -150,7 +166,7 @@ END:VCARD`;
                   href={`https://wa.me/${whatsapp.replace(/[^0-9]/g, '')}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 bg-white/10 rounded-lg hover:bg-white/20 transition-colors"
+                  className="p-2 bg-white/15 backdrop-blur-sm rounded-lg hover:bg-white/25 transition-colors border border-white/20"
                   onClick={playClickSound}
                 >
                   <MessageCircle className="w-4 h-4" />
@@ -161,7 +177,7 @@ END:VCARD`;
                   href={website}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 bg-white/10 rounded-lg hover:bg-white/20 transition-colors"
+                  className="p-2 bg-white/15 backdrop-blur-sm rounded-lg hover:bg-white/25 transition-colors border border-white/20"
                   onClick={playClickSound}
                 >
                   <Globe className="w-4 h-4" />
@@ -171,7 +187,7 @@ END:VCARD`;
             
             <button
               onClick={generateVCard}
-              className="download-btn flex items-center space-x-1 bg-white text-black px-2 py-1.5 rounded-lg hover:bg-gray-100 transition-colors text-xs font-medium"
+              className="download-btn flex items-center space-x-1 bg-white text-black px-3 py-2 rounded-lg hover:bg-gray-100 transition-all duration-300 text-xs font-semibold shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               <Download className="w-3 h-3" />
               <span>Télécharger</span>
@@ -179,8 +195,8 @@ END:VCARD`;
           </div>
         </div>
 
-        {/* Shine effect */}
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 rounded-2xl"></div>
+        {/* Enhanced shine effect */}
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 rounded-2xl"></div>
       </div>
     </div>
   );
