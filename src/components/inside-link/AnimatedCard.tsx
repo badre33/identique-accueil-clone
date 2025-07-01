@@ -8,6 +8,7 @@ interface AnimatedCardProps {
   hoverScale?: number;
   hoverRotation?: number;
   glowEffect?: boolean;
+  onClick?: () => void;
 }
 
 export const AnimatedCard = ({ 
@@ -15,7 +16,8 @@ export const AnimatedCard = ({
   className = '', 
   hoverScale = 1.02,
   hoverRotation = 0,
-  glowEffect = false
+  glowEffect = false,
+  onClick
 }: AnimatedCardProps) => {
   const [isHovered, setIsHovered] = useState(false);
   const { playHoverSound } = useSoundEffects();
@@ -43,6 +45,7 @@ export const AnimatedCard = ({
       }}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      onClick={onClick}
     >
       {children}
       
