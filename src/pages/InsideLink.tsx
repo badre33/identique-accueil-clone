@@ -391,38 +391,45 @@ const InsideLink = () => {
 
       {/* Pourquoi Link Section */}
       <ScrollReveal delay={200}>
-        <section id="mission" className="section-padding gradient-dark text-white relative overflow-hidden pattern-grid">
-          <div className="absolute inset-0 pattern-waves opacity-20"></div>
+        <section id="mission" className="section-padding bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white relative overflow-hidden">
+          {/* Pattern de fond subtil */}
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute inset-0" style={{
+              backgroundImage: 'radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.1) 0%, transparent 50%), radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.05) 0%, transparent 50%)',
+              backgroundSize: '200px 200px',
+              backgroundPosition: '0 0, 100px 100px'
+            }}></div>
+          </div>
           
           <div className="max-w-5xl mx-auto relative z-10">
-            <div className="text-center mb-20">
-              <div className="flex items-center justify-center space-x-4 mb-10">
-                <Lightbulb className="w-10 h-10 transform hover:rotate-12 transition-transform duration-300" />
-                <h2 className="text-white">Pourquoi nous avons fondé Link</h2>
+            <div className="text-center mb-16">
+              <div className="flex items-center justify-center space-x-4 mb-8">
+                <Lightbulb className="w-10 h-10 text-white transform hover:rotate-12 transition-transform duration-300" />
+                <h2 className="text-white text-4xl lg:text-5xl font-light">Pourquoi nous avons fondé Link</h2>
               </div>
             </div>
             
-            <div className="space-content text-lg lg:text-xl leading-relaxed font-light">
-              <p className="text-gray-300 transition-colors duration-500 hover:text-gray-200">
+            <div className="space-y-8 text-lg lg:text-xl leading-relaxed font-light max-w-4xl mx-auto">
+              <p className="text-gray-200 transition-colors duration-500 hover:text-gray-100 text-center">
                 Parce que nous étions fatigués de voir des marques fades, des identités génériques et des fondateurs brillants mal présentés.
               </p>
-              <p className="text-gray-300 transition-colors duration-500 hover:text-gray-200">
+              <p className="text-gray-200 transition-colors duration-500 hover:text-gray-100 text-center">
                 Parce qu'on voulait créer une agence différente : radicalement stratégique, obsessionnellement esthétique.
               </p>
-              <p className="text-white text-xl lg:text-2xl font-normal">
+              <p className="text-white text-xl lg:text-2xl font-normal text-center mt-12">
                 Une agence où la rigueur militaire croise le design, où l'exécution est un art, et où chaque client est traité comme une marque de demain.
               </p>
             </div>
             
-            <div className="text-center mt-20">
+            <div className="text-center mt-16">
               <MagneticButton 
                 href="https://wa.me/33745010714?text=Bonjour%2C%20j'aimerais%20découvrir%20votre%20approche%20et%20échanger%20sur%20mon%20projet"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-primary text-lg font-medium"
+                className="inline-flex items-center space-x-3 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-700 text-white px-10 py-5 rounded-full text-lg font-medium hover:from-blue-700 hover:via-purple-700 hover:to-blue-800 transition-all duration-300 hover:scale-105 hover:-translate-y-1 shadow-lg hover:shadow-xl"
                 onClick={playClickSound}
               >
-                <Users className="w-6 h-6 transition-transform duration-300 group-hover:scale-110" />
+                <Users className="w-6 h-6" />
                 <span>Rencontrer l'équipe</span>
               </MagneticButton>
             </div>
