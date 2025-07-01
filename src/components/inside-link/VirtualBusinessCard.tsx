@@ -1,3 +1,4 @@
+
 import React, { useRef } from 'react';
 import { Download, Linkedin, Mail, Phone, MessageCircle, Globe } from 'lucide-react';
 import { useSoundEffects } from '@/hooks/useSoundEffects';
@@ -31,6 +32,7 @@ export const VirtualBusinessCard = ({
   const generateVCard = () => {
     console.log('=== DÉBUT GÉNÉRATION VCARD ===');
     console.log('Générant vCard pour:', name);
+    console.log('Navigateur:', navigator.userAgent);
     
     try {
       const vcard = `BEGIN:VCARD
@@ -45,38 +47,87 @@ NOTE:${title} chez Link Agency - Expert en branding et stratégie digitale
 END:VCARD`;
 
       console.log('Contenu vCard généré:', vcard);
+      console.log('Longueur du contenu:', vcard.length);
       
-      // Créer le blob directement avec le bon type MIME
-      const blob = new Blob([vcard], { type: 'text/vcard' });
-      const url = URL.createObjectURL(blob);
+      // Approche plus robuste pour Chrome
+      const fileName = `${name.replace(/\s+/g, '_')}_LinkAgency.vcf`;
       
-      // Créer le lien de téléchargement
-      const link = document.createElement('a');
-      link.href = url;
-      link.download = `${name.replace(/\s+/g, '_')}_LinkAgency.vcf`;
-      
-      // Ajouter au DOM, cliquer immédiatement, puis supprimer
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-      
-      // Nettoyer l'URL après un court délai
-      setTimeout(() => URL.revokeObjectURL(url), 100);
+      // Vérifier si le navigateur supporte les downloads
+      if ('download' in document.createElement('a')) {
+        console.log('Le navigateur supporte l\'attribut download');
+        
+        // Créer le blob avec plusieurs types MIME pour compatibilité
+        const blob = new Blob([vcard], { 
+          type: 'text/vcard;charset=utf-8' 
+        });
+        console.log('Blob créé:', blob);
+        console.log('Taille du blob:', blob.size);
+        
+        // Vérifier si URL.createObjectURL est disponible
+        if (typeof URL !== 'undefined' && URL.createObjectURL) {
+          console.log('URL.createObjectURL disponible');
+          
+          const url = URL.createObjectURL(blob);
+          console.log('URL créée:', url);
+          
+          // Créer le lien de téléchargement
+          const link = document.createElement('a');
+          link.href = url;
+          link.download = fileName;
+          link.style.display = 'none';
+          
+          console.log('Lien créé avec href:', link.href);
+          console.log('Nom de fichier:', link.download);
+          
+          // S'assurer que le lien est dans le DOM avant de cliquer
+          document.body.appendChild(link);
+          console.log('Lien ajouté au DOM');
+          
+          // Petit délai pour s'assurer que tout est prêt
+          setTimeout(() => {
+            console.log('Déclenchement du clic...');
+            link.click();
+            console.log('Clic déclenché');
+            
+            // Nettoyer après un délai
+            setTimeout(() => {
+              console.log('Nettoyage...');
+              if (document.body.contains(link)) {
+                document.body.removeChild(link);
+              }
+              URL.revokeObjectURL(url);
+              console.log('Nettoyage terminé');
+            }, 100);
+          }, 10);
+          
+        } else {
+          console.error('URL.createObjectURL non disponible');
+          throw new Error('URL.createObjectURL non supporté');
+        }
+      } else {
+        console.error('Attribut download non supporté');
+        throw new Error('Téléchargements non supportés par ce navigateur');
+      }
       
       playClickSound();
       
       toast({
-        title: "Carte de visite téléchargée",
-        description: `La carte de ${name} a été téléchargée avec succès.`,
+        title: "Téléchargement initié",
+        description: `La carte de ${name} devrait se télécharger automatiquement.`,
       });
       
-      console.log('=== TÉLÉCHARGEMENT RÉUSSI ===');
+      console.log('=== TÉLÉCHARGEMENT INITIÉ ===');
       
     } catch (error) {
-      console.error('Erreur lors du téléchargement:', error);
+      console.error('=== ERREUR DÉTAILLÉE ===');
+      console.error('Type d\'erreur:', typeof error);
+      console.error('Message d\'erreur:', error instanceof Error ? error.message : String(error));
+      console.error('Stack trace:', error instanceof Error ? error.stack : 'Pas de stack trace');
+      console.error('=== FIN ERREUR ===');
+      
       toast({
         title: "Erreur de téléchargement",
-        description: "Impossible de télécharger la carte de visite.",
+        description: `Impossible de télécharger la carte de visite. Erreur: ${error instanceof Error ? error.message : 'Erreur inconnue'}`,
         variant: "destructive",
       });
     }
