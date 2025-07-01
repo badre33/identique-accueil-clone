@@ -70,19 +70,6 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        
-        {/* Bottom CTA */}
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <a
-            href="https://calendly.com/b-harkaoui-linkagency/30min"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center px-6 py-3 bg-black text-white rounded-full font-medium hover:bg-gray-800 transition-colors shadow-lg"
-          >
-            Réserver ma place
-            <ArrowRight className="w-4 h-4 ml-2" />
-          </a>
-        </div>
       </div>
     </section>
   );
