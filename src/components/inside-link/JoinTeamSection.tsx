@@ -1,3 +1,4 @@
+
 import { Mail, MessageCircle, Calendar, ArrowRight } from 'lucide-react';
 
 export const JoinTeamSection = () => {
@@ -29,15 +30,15 @@ export const JoinTeamSection = () => {
   ];
 
   return (
-    <section id="join" className="py-32 px-8 lg:px-16 bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
+    <section id="join" className="py-32 px-8 lg:px-16 bg-black text-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.01)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.01)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
       
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-20">
-          <h2 className="text-5xl lg:text-6xl font-light mb-8">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-light mb-8 text-white leading-tight">
             Prêt à Construire Quelque Chose d'Exceptionnel ?
           </h2>
-          <p className="text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl lg:text-2xl text-gray-200 max-w-4xl mx-auto leading-relaxed">
             Que vous soyez une startup ambitieuse ou une entreprise établie, nous sommes là pour transformer votre vision en réalité marquante.
           </p>
         </div>
