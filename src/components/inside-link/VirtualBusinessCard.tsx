@@ -1,4 +1,3 @@
-
 import React, { useRef } from 'react';
 import { Download, Linkedin, Mail, Phone, MessageCircle, Globe } from 'lucide-react';
 import { useSoundEffects } from '@/hooks/useSoundEffects';
@@ -28,7 +27,9 @@ export const VirtualBusinessCard = ({
   const { playClickSound } = useSoundEffects();
 
   const generateVCard = () => {
-    console.log('Generating vCard for:', name);
+    console.log('=== DÉBUT GÉNÉRATION VCARD ===');
+    console.log('Navigateur:', navigator.userAgent);
+    console.log('Générant vCard pour:', name);
     
     const vcard = `BEGIN:VCARD
 VERSION:3.0
@@ -41,25 +42,88 @@ URL:${website || linkedinUrl}
 NOTE:${title} chez Link Agency - Expert en branding et stratégie digitale
 END:VCARD`;
 
-    console.log('vCard content:', vcard);
-
-    const blob = new Blob([vcard], { type: 'text/vcard;charset=utf-8' });
-    const url = URL.createObjectURL(blob);
+    console.log('Contenu vCard généré:', vcard);
     
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = `${name.replace(/\s+/g, '_')}_LinkAgency.vcf`;
+    // Méthode 1: Téléchargement direct
+    try {
+      console.log('Tentative méthode 1: Blob + createObjectURL');
+      const blob = new Blob([vcard], { type: 'text/vcard' });
+      console.log('Blob créé:', blob.size, 'bytes');
+      
+      const url = URL.createObjectURL(blob);
+      console.log('URL créée:', url);
+      
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = `${name.replace(/\s+/g, '_')}_LinkAgency.vcf`;
+      link.style.display = 'none';
+      
+      console.log('Lien créé, nom de fichier:', link.download);
+      
+      document.body.appendChild(link);
+      console.log('Lien ajouté au DOM');
+      
+      link.click();
+      console.log('Click simulé sur le lien');
+      
+      setTimeout(() => {
+        document.body.removeChild(link);
+        URL.revokeObjectURL(url);
+        console.log('Nettoyage effectué');
+      }, 100);
+      
+      playClickSound();
+      console.log('=== TÉLÉCHARGEMENT INITIÉ ===');
+      return;
+      
+    } catch (error) {
+      console.error('Erreur méthode 1:', error);
+    }
     
-    // Forcer le téléchargement
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    // Méthode 2: Data URL
+    try {
+      console.log('Tentative méthode 2: Data URL');
+      const dataUrl = 'data:text/vcard;charset=utf-8,' + encodeURIComponent(vcard);
+      console.log('Data URL créée');
+      
+      const link = document.createElement('a');
+      link.href = dataUrl;
+      link.download = `${name.replace(/\s+/g, '_')}_LinkAgency.vcf`;
+      link.style.display = 'none';
+      
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      
+      playClickSound();
+      console.log('=== TÉLÉCHARGEMENT MÉTHODE 2 INITIÉ ===');
+      return;
+      
+    } catch (error) {
+      console.error('Erreur méthode 2:', error);
+    }
     
-    // Nettoyer l'URL
-    setTimeout(() => URL.revokeObjectURL(url), 100);
+    // Fallback: Copier dans le presse-papier
+    console.log('Fallback: copie dans le presse-papier');
+    const contactInfo = `${name}
+${title}
+Link Agency
+Email: ${email}
+Téléphone: ${phone}
+Site web: ${website || linkedinUrl}`;
     
-    playClickSound();
-    console.log('Download initiated for:', link.download);
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(contactInfo).then(() => {
+        alert('Impossible de télécharger le fichier. Les informations de contact ont été copiées dans le presse-papier.');
+        console.log('Informations copiées dans le presse-papier');
+      }).catch(() => {
+        alert(`Voici les informations de contact à copier manuellement:\n\n${contactInfo}`);
+        console.log('Affichage manuel des informations');
+      });
+    } else {
+      alert(`Voici les informations de contact à copier manuellement:\n\n${contactInfo}`);
+      console.log('Affichage manuel des informations (pas de clipboard API)');
+    }
   };
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
