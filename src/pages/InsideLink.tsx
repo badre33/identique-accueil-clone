@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { ArrowLeft, Target, Palette, Users, Lightbulb, Linkedin, History, Download } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -392,12 +391,12 @@ const InsideLink = () => {
       {/* Pourquoi Link Section */}
       <ScrollReveal delay={200}>
         <section id="mission" className="section-padding bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white relative overflow-hidden">
-          {/* Pattern de fond subtil */}
-          <div className="absolute inset-0 opacity-10">
+          {/* Pattern de fond très subtil pour éviter la superposition */}
+          <div className="absolute inset-0 opacity-5">
             <div className="absolute inset-0" style={{
-              backgroundImage: 'radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.1) 0%, transparent 50%), radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.05) 0%, transparent 50%)',
-              backgroundSize: '200px 200px',
-              backgroundPosition: '0 0, 100px 100px'
+              backgroundImage: 'radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.08) 0%, transparent 50%), radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.03) 0%, transparent 50%)',
+              backgroundSize: '300px 300px',
+              backgroundPosition: '0 0, 150px 150px'
             }}></div>
           </div>
           
