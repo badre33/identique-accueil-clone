@@ -47,26 +47,37 @@ END:VCARD`;
 
       console.log('Contenu vCard généré:', vcard);
       
-      // Créer le blob avec le bon type MIME
-      const blob = new Blob([vcard], { type: 'text/vcard' });
+      // Créer le blob
+      const blob = new Blob([vcard], { type: 'text/vcard;charset=utf-8' });
       
-      // Créer l'URL du blob
-      const url = URL.createObjectURL(blob);
-      
-      // Créer un élément de lien temporaire
-      const link = document.createElement('a');
-      link.href = url;
-      link.download = `${name.replace(/\s+/g, '_')}_LinkAgency.vcf`;
-      
-      // Ajouter au DOM temporairement
-      document.body.appendChild(link);
-      
-      // Déclencher le téléchargement
-      link.click();
-      
-      // Nettoyer
-      document.body.removeChild(link);
-      URL.revokeObjectURL(url);
+      // Utiliser une approche plus compatible avec tous les navigateurs
+      if (window.navigator && (window.navigator as any).msSaveOrOpenBlob) {
+        // Pour Internet Explorer
+        (window.navigator as any).msSaveOrOpenBlob(blob, `${name.replace(/\s+/g, '_')}_LinkAgency.vcf`);
+      } else {
+        // Pour les autres navigateurs
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        
+        // Forcer l'attribut download et href
+        link.setAttribute('href', url);
+        link.setAttribute('download', `${name.replace(/\s+/g, '_')}_LinkAgency.vcf`);
+        link.style.visibility = 'hidden';
+        
+        // Ajouter au DOM
+        document.body.appendChild(link);
+        
+        // Petit délai pour s'assurer que l'élément est dans le DOM
+        setTimeout(() => {
+          link.click();
+          
+          // Nettoyer après un délai plus long
+          setTimeout(() => {
+            document.body.removeChild(link);
+            URL.revokeObjectURL(url);
+          }, 100);
+        }, 10);
+      }
       
       playClickSound();
       
