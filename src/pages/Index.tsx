@@ -4,7 +4,6 @@ import { Hero } from "@/components/Hero";
 import { Services } from "@/components/Services";
 import { Philosophy } from "@/components/Philosophy";
 import { ProjectsGallery } from "@/components/ProjectsGallery";
-import { TestimonialsCarousel } from "@/components/TestimonialsCarousel";
 import { CTAWithStats, CTAWithUrgency } from "@/components/PersuasiveCTA";
 import { FAQ } from "@/components/FAQ";
 import { Contact } from "@/components/Contact";
@@ -35,9 +34,6 @@ const Index = () => {
       </section>
       
       <ProjectsGallery />
-      
-      {/* Témoignages avec carrousel */}
-      <TestimonialsCarousel />
       
       {/* CTA avec urgence */}
       <section className="py-20 px-8 lg:px-16">
