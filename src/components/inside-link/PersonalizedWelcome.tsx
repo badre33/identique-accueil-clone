@@ -3,29 +3,66 @@ import { useState, useEffect } from 'react';
 import { Users, Eye, Clock } from 'lucide-react';
 
 export const PersonalizedWelcome = () => {
-  const [visitors, setVisitors] = useState(3247);
   const [timeSpent, setTimeSpent] = useState(0);
+  
+  // Calcul du nombre de visiteurs basé sur une progression réaliste
+  const calculateVisitors = () => {
+    const now = new Date();
+    const currentHour = now.getHours();
+    
+    // Base de départ (3247) + progression journalière
+    const baseVisitors = 3247;
+    const daysSinceStart = Math.floor((now.getTime() - new Date('2024-01-01').getTime()) / (1000 * 60 * 60 * 24));
+    
+    // 3-4 visiteurs par heure pendant 14 heures (9h-23h) = ~49 visiteurs par jour
+    const dailyGrowth = 49;
+    const totalGrowth = daysSinceStart * dailyGrowth;
+    
+    // Progression dans la journée actuelle (9h-23h)
+    let todayProgress = 0;
+    if (currentHour >= 9 && currentHour <= 23) {
+      const hoursActive = currentHour - 9;
+      const minutesInCurrentHour = now.getMinutes();
+      // 3.5 visiteurs par heure en moyenne
+      todayProgress = Math.floor(hoursActive * 3.5 + (minutesInCurrentHour / 60) * 3.5);
+    } else if (currentHour < 9) {
+      // Avant 9h, on garde le total de la veille
+      todayProgress = 0;
+    } else {
+      // Après 23h, on a le total de la journée
+      todayProgress = 14 * 3.5; // 14 heures * 3.5 visiteurs/heure
+    }
+    
+    return baseVisitors + totalGrowth + todayProgress + Math.floor(Math.random() * 5);
+  };
+
+  const [visitors, setVisitors] = useState(calculateVisitors);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      // Augmentation plus cohérente : entre 1 et 4 visiteurs toutes les 8-12 secondes
-      setVisitors(prev => prev + Math.floor(Math.random() * 4) + 1);
+      const currentHour = new Date().getHours();
+      
+      // Mise à jour réaliste seulement pendant les heures d'activité (9h-23h)
+      if (currentHour >= 9 && currentHour <= 23) {
+        // Petite chance d'augmentation pour simuler l'activité en temps réel
+        if (Math.random() < 0.4) { // 40% de chance
+          setVisitors(prev => prev + 1);
+        }
+      }
+      
       setTimeSpent(prev => prev + 1);
-    }, 8000 + Math.random() * 4000); // Entre 8 et 12 secondes
+    }, 15000 + Math.random() * 10000); // Entre 15 et 25 secondes
 
     return () => clearInterval(interval);
   }, []);
 
-  // Effet pour une augmentation graduelle plus fréquente
+  // Recalcul périodique pour maintenir la cohérence
   useEffect(() => {
-    const frequentInterval = setInterval(() => {
-      // Petite chance d'augmentation de 1 visiteur toutes les 3-5 secondes
-      if (Math.random() < 0.3) { // 30% de chance
-        setVisitors(prev => prev + 1);
-      }
-    }, 3000 + Math.random() * 2000); // Entre 3 et 5 secondes
+    const recalcInterval = setInterval(() => {
+      setVisitors(calculateVisitors());
+    }, 60000); // Toutes les minutes
 
-    return () => clearInterval(frequentInterval);
+    return () => clearInterval(recalcInterval);
   }, []);
 
   const currentHour = new Date().getHours();
