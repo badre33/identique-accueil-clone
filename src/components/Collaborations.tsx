@@ -2,6 +2,12 @@
 import { ExternalLink } from "lucide-react";
 
 export const Collaborations = () => {
+  console.log("Collaborations component is rendering");
+  console.log("Collaborations array:", [
+    { name: "Subway Maroc", category: "Restauration" },
+    { name: "SGTM Immobilier", category: "Immobilier" },
+    { name: "Nexia", category: "Conseil" }
+  ]);
   const collaborations = [
     {
       name: "Subway Maroc",
