@@ -13,16 +13,16 @@ export const Collaborations = () => {
       url: "https://sgtm-immobilier.com/fr/accueil/",
       category: "Immobilier"
     },
-    // {
-    //   name: "Amoud",
-    //   url: "https://www.amoud.ma/",
-    //   category: "Commerce"
-    // },
     {
       name: "Nexia",
       url: "https://nexia.ma/",
       category: "Conseil"
     },
+    // {
+    //   name: "Amoud",
+    //   url: "https://www.amoud.ma/",
+    //   category: "Commerce"
+    // },
     {
       name: "Achibest Food",
       url: "https://www.instagram.com/achibest_food/?hl=fr",
