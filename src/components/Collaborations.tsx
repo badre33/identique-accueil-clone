@@ -4,49 +4,13 @@ import { ExternalLink } from "lucide-react";
 export const Collaborations = () => {
   const collaborations = [
     {
-      name: "Subway Maroc",
-      url: "https://www.instagram.com/subwaymaroc/?hl=fr",
-      category: "Restauration",
-      logo: "/lovable-uploads/c66a2b50-92d9-4a9d-a394-09ff44b3d1b2.png",
-      description: "Stratégie marketing digital et création de contenu pour la franchise de restauration rapide leader au Maroc.",
-      year: "2023-2024",
-      type: "Marketing Digital"
-    },
-    {
-      name: "SGTM Immobilier",
-      url: "https://sgtm-immobilier.com/fr/accueil/",
-      category: "Immobilier",
-      logo: "/lovable-uploads/a404ed81-6016-457c-b044-6027db20cf22.png",
-      description: "Refonte complète de l'identité visuelle et développement web pour cette agence immobilière de prestige.",
-      year: "2023",
-      type: "Branding & Web"
-    },
-    // {
-    //   name: "Amoud",
-    //   url: "https://www.amoud.ma/",
-    //   category: "Commerce",
-    //   logo: "/lovable-uploads/18500dfb-e7b6-4c75-8c7c-89fa212ee0a8.png",
-    //   description: "Transformation digitale complète avec une nouvelle plateforme e-commerce et stratégie omnicanale.",
-    //   year: "2023",
-    //   type: "E-commerce"
-    // },
-    {
-      name: "Nexia",
-      url: "https://nexia.ma/",
-      category: "Conseil",
-      logo: "/lovable-uploads/05dfc79f-2a20-4241-aa4d-606f6cdd30d2.png",
-      description: "Accompagnement stratégique en digitalisation, conseil en communication et gestion des réseaux sociaux pour optimiser la présence digitale.",
+      name: "Personal Branding Politique",
+      url: "#",
+      category: "Branding Personnel",
+      logo: "/lovable-uploads/18825dfb-531b-4f17-aef9-00701ced882e.png",
+      description: "Accompagnement stratégique sur une mission de personal branding à fort enjeu pour renforcer l'image d'une dirigeante politique influente sur la scène internationale.",
       year: "2024",
-      type: "Conseil & Digitalisation"
-    },
-    {
-      name: "Achibest Food",
-      url: "https://www.instagram.com/achibest_food/?hl=fr",
-      category: "Restauration",
-      logo: "/lovable-uploads/632e64c5-bfb1-4507-b655-8fb324a8236f.png",
-      description: "Création d'une identité de marque forte et stratégie de communication pour cette chaîne de restauration.",
-      year: "2024",
-      type: "Branding"
+      type: "Personal Branding"
     },
     {
       name: "French Tech",
@@ -56,15 +20,6 @@ export const Collaborations = () => {
       description: "Partenaire officiel de l'écosystème French Tech pour l'accompagnement des startups marocaines.",
       year: "2022-2024",
       type: "Partenariat"
-    },
-    {
-      name: "The Family",
-      url: "https://www.thefamily.co/",
-      category: "Startup Studio",
-      logo: "/lovable-uploads/ae1bb8f8-ff5a-4b2d-8a17-aacf539b492a.png",
-      description: "Collaboration stratégique avec ce startup studio européen pour l'expansion sur le marché africain.",
-      year: "2023",
-      type: "Conseil Stratégique"
     },
     {
       name: "Soulection",
@@ -85,58 +40,13 @@ export const Collaborations = () => {
       type: "Branding & Digital"
     },
     {
-      name: "DWP",
-      url: "https://dwp.ma/",
-      category: "Digital",
-      logo: "/lovable-uploads/b800af93-e21f-4e18-af4d-9f94678f2999.png",
-      description: "Création d'une stratégie de communication premium pour cette agence de design d'intérieur de luxe.",
-      year: "2023",
-      type: "Communication"
-    },
-    {
-      name: "Focus M",
-      url: "https://focusm.ma/",
-      category: "Marketing",
-      logo: "/lovable-uploads/db939411-f619-4958-844f-cb5d9d97a9ca.png",
-      description: "Positionnement marché et stratégie commerciale pour cette entreprise tech spécialisée.",
+      name: "Nexia",
+      url: "https://nexia.ma/",
+      category: "Conseil",
+      logo: "/lovable-uploads/05dfc79f-2a20-4241-aa4d-606f6cdd30d2.png",
+      description: "Accompagnement stratégique en digitalisation, conseil en communication et gestion des réseaux sociaux pour optimiser la présence digitale.",
       year: "2024",
-      type: "Stratégie"
-    },
-    {
-      name: "Secret Events",
-      url: "https://www.instagram.com/secreteventss/",
-      category: "Événementiel",
-      logo: "/lovable-uploads/386ddb83-a99a-4280-8cec-8c6aea34644a.png",
-      description: "Production d'événements privés haut de gamme et gestion de l'image de marque exclusive.",
-      year: "2023-2024",
-      type: "Production"
-    },
-    {
-      name: "Umbra Festival",
-      url: "https://www.instagram.com/umbra.dance/",
-      category: "Événementiel",
-      logo: "/lovable-uploads/05dcf8f9-c5f0-40af-8ca3-4b1d2d1f48bc.png",
-      description: "Direction artistique et production complète de ce festival de musique électronique underground.",
-      year: "2023",
-      type: "Festival"
-    },
-    {
-      name: "Beyond Fears",
-      url: "https://www.instagram.com/beyond__fears/?hl=fr",
-      category: "Événementiel",
-      logo: "/lovable-uploads/f90f2ce2-2e95-4f15-9766-0ad4ed8561a8.png",
-      description: "Concept créatif et production d'événements immersifs axés sur l'expérience utilisateur.",
-      year: "2024",
-      type: "Expérience"
-    },
-    {
-      name: "Casablanca Music Week",
-      url: "https://guichet.com/ma-fr/event/producer/casablanca-music-week",
-      category: "Événementiel",
-      logo: "/lovable-uploads/196f8a91-ab64-4dc6-9354-6fe7d9f3031e.png",
-      description: "Partenaire officiel de la plus grande semaine musicale du Maroc avec plus de 50 000 participants.",
-      year: "2022-2024",
-      type: "Festival"
+      type: "Conseil & Digitalisation"
     },
     {
       name: "Edwin",
@@ -149,7 +59,7 @@ export const Collaborations = () => {
     }
   ];
 
-  const categories = ["Restauration", "Immobilier", "Commerce", "Tech", "Startup Studio", "Musique", "Digital", "Marketing", "Événementiel", "Conseil", "Mode"];
+  const categories = ["Branding Personnel", "Tech", "Musique", "Digital", "Conseil", "Mode"];
 
   return (
     <section className="py-32 px-8 lg:px-16 bg-gradient-to-br from-gray-50 via-white to-gray-100 relative overflow-hidden">
