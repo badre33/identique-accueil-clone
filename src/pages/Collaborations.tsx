@@ -59,6 +59,15 @@ const Collaborations = () => {
     //   type: "E-commerce"
     // },
     {
+      name: "Nexia",
+      url: "https://nexia.ma/",
+      category: "Conseil",
+      logo: "/lovable-uploads/05dfc79f-2a20-4241-aa4d-606f6cdd30d2.png",
+      description: "Accompagnement stratégique en digitalisation, conseil en communication et gestion des réseaux sociaux pour optimiser la présence digitale.",
+      year: "2024",
+      type: "Conseil & Digitalisation"
+    },
+    {
       name: "Achibest Food",
       url: "https://www.instagram.com/achibest_food/?hl=fr",
       category: "Restauration",
@@ -195,7 +204,7 @@ const Collaborations = () => {
     }
   ];
 
-  const categories = ["Toutes", "Branding Stratégique", "Branding Personnel", "Restauration", "Immobilier", "Commerce", "Tech", "Startup Studio", "Musique", "Architecture d'intérieur", "Design d'intérieur", "Écrans interactifs tactiles", "Événementiel", "Mode"];
+  const categories = ["Toutes", "Branding Stratégique", "Branding Personnel", "Restauration", "Immobilier", "Commerce", "Tech", "Startup Studio", "Musique", "Architecture d'intérieur", "Design d'intérieur", "Écrans interactifs tactiles", "Événementiel", "Mode", "Conseil"];
 
   const filteredCollaborations = selectedCategory === "Toutes" 
     ? collaborations 

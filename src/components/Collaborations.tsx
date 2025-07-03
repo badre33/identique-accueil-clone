@@ -19,6 +19,11 @@ export const Collaborations = () => {
     //   category: "Commerce"
     // },
     {
+      name: "Nexia",
+      url: "https://nexia.ma/",
+      category: "Conseil"
+    },
+    {
       name: "Achibest Food",
       url: "https://www.instagram.com/achibest_food/?hl=fr",
       category: "Restauration"
@@ -75,7 +80,7 @@ export const Collaborations = () => {
     }
   ];
 
-  const categories = ["Restauration", "Immobilier", "Commerce", "Tech", "Startup Studio", "Musique", "Digital", "Marketing", "Événementiel"];
+  const categories = ["Restauration", "Immobilier", "Commerce", "Tech", "Startup Studio", "Musique", "Digital", "Marketing", "Événementiel", "Conseil"];
 
   return (
     <section className="py-32 px-8 lg:px-16 bg-gradient-to-br from-gray-50 via-white to-gray-100 relative overflow-hidden">
