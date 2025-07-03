@@ -21,6 +21,15 @@ export const Collaborations = () => {
       year: "2023",
       type: "Branding & Web"
     },
+    // {
+    //   name: "Amoud",
+    //   url: "https://www.amoud.ma/",
+    //   category: "Commerce",
+    //   logo: "/lovable-uploads/18500dfb-e7b6-4c75-8c7c-89fa212ee0a8.png",
+    //   description: "Transformation digitale complète avec une nouvelle plateforme e-commerce et stratégie omnicanale.",
+    //   year: "2023",
+    //   type: "E-commerce"
+    // },
     {
       name: "Nexia",
       url: "https://nexia.ma/",
@@ -67,17 +76,80 @@ export const Collaborations = () => {
       type: "Événementiel"
     },
     {
+      name: "Artitenium",
+      url: "https://kzmfwv89vwbj1uf8kcxa.lite.vusercontent.net/",
+      category: "Digital",
+      logo: "/lovable-uploads/ce7e28cc-c15c-48b9-b9be-03195d92927f.png",
+      description: "Développement de l'identité visuelle et présence digitale pour ce studio d'architecture d'intérieur.",
+      year: "2024",
+      type: "Branding & Digital"
+    },
+    {
       name: "DWP",
       url: "https://dwp.ma/",
-      category: "Design d'intérieur",
+      category: "Digital",
       logo: "/lovable-uploads/b800af93-e21f-4e18-af4d-9f94678f2999.png",
       description: "Création d'une stratégie de communication premium pour cette agence de design d'intérieur de luxe.",
       year: "2023",
       type: "Communication"
+    },
+    {
+      name: "Focus M",
+      url: "https://focusm.ma/",
+      category: "Marketing",
+      logo: "/lovable-uploads/db939411-f619-4958-844f-cb5d9d97a9ca.png",
+      description: "Positionnement marché et stratégie commerciale pour cette entreprise tech spécialisée.",
+      year: "2024",
+      type: "Stratégie"
+    },
+    {
+      name: "Secret Events",
+      url: "https://www.instagram.com/secreteventss/",
+      category: "Événementiel",
+      logo: "/lovable-uploads/386ddb83-a99a-4280-8cec-8c6aea34644a.png",
+      description: "Production d'événements privés haut de gamme et gestion de l'image de marque exclusive.",
+      year: "2023-2024",
+      type: "Production"
+    },
+    {
+      name: "Umbra Festival",
+      url: "https://www.instagram.com/umbra.dance/",
+      category: "Événementiel",
+      logo: "/lovable-uploads/05dcf8f9-c5f0-40af-8ca3-4b1d2d1f48bc.png",
+      description: "Direction artistique et production complète de ce festival de musique électronique underground.",
+      year: "2023",
+      type: "Festival"
+    },
+    {
+      name: "Beyond Fears",
+      url: "https://www.instagram.com/beyond__fears/?hl=fr",
+      category: "Événementiel",
+      logo: "/lovable-uploads/f90f2ce2-2e95-4f15-9766-0ad4ed8561a8.png",
+      description: "Concept créatif et production d'événements immersifs axés sur l'expérience utilisateur.",
+      year: "2024",
+      type: "Expérience"
+    },
+    {
+      name: "Casablanca Music Week",
+      url: "https://guichet.com/ma-fr/event/producer/casablanca-music-week",
+      category: "Événementiel",
+      logo: "/lovable-uploads/196f8a91-ab64-4dc6-9354-6fe7d9f3031e.png",
+      description: "Partenaire officiel de la plus grande semaine musicale du Maroc avec plus de 50 000 participants.",
+      year: "2022-2024",
+      type: "Festival"
+    },
+    {
+      name: "Edwin",
+      url: "https://edwin-europe.com/fr-fr/?srsltid=AfmBOoozm7D36im7r3_ZLIY46gmE5v6R9kdcNLMgPcrQBUf0TIzU2Ysh",
+      category: "Mode",
+      logo: "/lovable-uploads/f08a883a-31aa-4529-bf02-a1c73a030a71.png",
+      description: "Stratégie de repositionnement et campagne de communication pour cette marque de mode iconique.",
+      year: "2024",
+      type: "Fashion"
     }
   ];
 
-  const categories = ["Restauration", "Immobilier", "Tech", "Startup Studio", "Musique", "Design d'intérieur", "Conseil"];
+  const categories = ["Restauration", "Immobilier", "Commerce", "Tech", "Startup Studio", "Musique", "Digital", "Marketing", "Événementiel", "Conseil", "Mode"];
 
   return (
     <section className="py-32 px-8 lg:px-16 bg-gradient-to-br from-gray-50 via-white to-gray-100 relative overflow-hidden">
