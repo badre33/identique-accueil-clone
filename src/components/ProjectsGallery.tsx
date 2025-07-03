@@ -17,6 +17,15 @@ export const ProjectsGallery = () => {
     //   url: "#"
     // },
     {
+      title: "Nexia",
+      category: "Conseil & Digitalisation",
+      image: "/lovable-uploads/05dfc79f-2a20-4241-aa4d-606f6cdd30d2.png",
+      shortDescription: "Accompagnement stratégique en digitalisation, conseil en communication et gestion des réseaux sociaux pour optimiser la présence digitale.",
+      description: "Mission d'accompagnement stratégique pour Nexia, cabinet de conseil spécialisé, dans leur transformation digitale complète. Notre intervention s'est concentrée sur l'optimisation de leur présence digitale, le développement d'une stratégie de communication moderne et la restructuration de leur approche sur les réseaux sociaux. Le projet incluait la refonte de leur stratégie de contenu, la mise en place d'outils de digitalisation performants et l'accompagnement de leurs équipes dans l'adoption des nouvelles pratiques digitales pour renforcer leur positionnement d'expert conseil auprès de leur clientèle cible.",
+      year: "2024",
+      url: "https://nexia.ma/"
+    },
+    {
       title: "Edwin",
       category: "Pop-up Store & Événementiel", 
       image: "/lovable-uploads/b82bb134-7256-4325-b5ca-90d055f1629c.png",
