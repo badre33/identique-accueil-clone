@@ -2,12 +2,6 @@
 import { ExternalLink } from "lucide-react";
 
 export const Collaborations = () => {
-  console.log("Collaborations component is rendering");
-  console.log("Collaborations array:", [
-    { name: "Subway Maroc", category: "Restauration" },
-    { name: "SGTM Immobilier", category: "Immobilier" },
-    { name: "Nexia", category: "Conseil" }
-  ]);
   const collaborations = [
     {
       name: "Subway Maroc",
@@ -19,16 +13,16 @@ export const Collaborations = () => {
       url: "https://sgtm-immobilier.com/fr/accueil/",
       category: "Immobilier"
     },
-    {
-      name: "Nexia",
-      url: "https://nexia.ma/",
-      category: "Conseil"
-    },
     // {
     //   name: "Amoud",
     //   url: "https://www.amoud.ma/",
     //   category: "Commerce"
     // },
+    {
+      name: "Nexia",
+      url: "https://nexia.ma/",
+      category: "Conseil"
+    },
     {
       name: "Achibest Food",
       url: "https://www.instagram.com/achibest_food/?hl=fr",

@@ -3,7 +3,6 @@ import { Header } from "@/components/Header";
 import Hero from "@/components/Hero";
 import { Services } from "@/components/Services";
 import { Philosophy } from "@/components/Philosophy";
-import { Collaborations } from "@/components/Collaborations";
 import { ProjectsGallery } from "@/components/ProjectsGallery";
 import { CTAWithStats, CTAWithUrgency } from "@/components/PersuasiveCTA";
 import { FAQ } from "@/components/FAQ";
@@ -26,9 +25,6 @@ const Index = () => {
       <div id="apropos">
         <Philosophy />
       </div>
-      
-      <Collaborations />
-      
       
       {/* CTA Section avec stats */}
       <section className="py-20 px-8 lg:px-16 bg-gradient-to-br from-gray-50 to-white">
