@@ -6,81 +6,78 @@ export const Collaborations = () => {
     {
       name: "Subway Maroc",
       url: "https://www.instagram.com/subwaymaroc/?hl=fr",
-      category: "Restauration"
+      category: "Restauration",
+      logo: "/lovable-uploads/c66a2b50-92d9-4a9d-a394-09ff44b3d1b2.png",
+      description: "Stratégie marketing digital et création de contenu pour la franchise de restauration rapide leader au Maroc.",
+      year: "2023-2024",
+      type: "Marketing Digital"
     },
     {
       name: "SGTM Immobilier",
       url: "https://sgtm-immobilier.com/fr/accueil/",
-      category: "Immobilier"
+      category: "Immobilier",
+      logo: "/lovable-uploads/a404ed81-6016-457c-b044-6027db20cf22.png",
+      description: "Refonte complète de l'identité visuelle et développement web pour cette agence immobilière de prestige.",
+      year: "2023",
+      type: "Branding & Web"
     },
-    // {
-    //   name: "Amoud",
-    //   url: "https://www.amoud.ma/",
-    //   category: "Commerce"
-    // },
     {
       name: "Nexia",
       url: "https://nexia.ma/",
-      category: "Conseil"
+      category: "Conseil",
+      logo: "/lovable-uploads/05dfc79f-2a20-4241-aa4d-606f6cdd30d2.png",
+      description: "Accompagnement stratégique en digitalisation, conseil en communication et gestion des réseaux sociaux pour optimiser la présence digitale.",
+      year: "2024",
+      type: "Conseil & Digitalisation"
     },
     {
       name: "Achibest Food",
       url: "https://www.instagram.com/achibest_food/?hl=fr",
-      category: "Restauration"
+      category: "Restauration",
+      logo: "/lovable-uploads/632e64c5-bfb1-4507-b655-8fb324a8236f.png",
+      description: "Création d'une identité de marque forte et stratégie de communication pour cette chaîne de restauration.",
+      year: "2024",
+      type: "Branding"
     },
     {
       name: "French Tech",
       url: "#",
-      category: "Tech"
+      category: "Tech",
+      logo: "/lovable-uploads/801816e7-97bc-49c9-948c-34e3c9d49e1f.png",
+      description: "Partenaire officiel de l'écosystème French Tech pour l'accompagnement des startups marocaines.",
+      year: "2022-2024",
+      type: "Partenariat"
     },
     {
       name: "The Family",
       url: "https://www.thefamily.co/",
-      category: "Startup Studio"
+      category: "Startup Studio",
+      logo: "/lovable-uploads/ae1bb8f8-ff5a-4b2d-8a17-aacf539b492a.png",
+      description: "Collaboration stratégique avec ce startup studio européen pour l'expansion sur le marché africain.",
+      year: "2023",
+      type: "Conseil Stratégique"
     },
     {
       name: "Soulection",
       url: "https://soulection.com/",
-      category: "Musique"
-    },
-    {
-      name: "Artitenium",
-      url: "https://kzmfwv89vwbj1uf8kcxa.lite.vusercontent.net/",
-      category: "Digital"
+      category: "Musique",
+      logo: "/lovable-uploads/b8c1c54b-9721-486c-81ab-dae0977cacc0.png",
+      description: "Production d'événements exclusifs et stratégie de marque pour ce collectif musical international.",
+      year: "2023-2024",
+      type: "Événementiel"
     },
     {
       name: "DWP",
       url: "https://dwp.ma/",
-      category: "Digital"
-    },
-    {
-      name: "Focus M",
-      url: "https://focusm.ma/",
-      category: "Marketing"
-    },
-    {
-      name: "Secret Events",
-      url: "https://www.instagram.com/secreteventss/",
-      category: "Événementiel"
-    },
-    {
-      name: "Umbra Festival",
-      url: "https://www.instagram.com/umbra.dance/",
-      category: "Événementiel"
-    },
-    {
-      name: "Beyond Fears",
-      url: "https://www.instagram.com/beyond__fears/?hl=fr",
-      category: "Événementiel"
-    },
-    {
-      name: "Casablanca Music Week",
-      url: "https://guichet.com/ma-fr/event/producer/casablanca-music-week",
-      category: "Événementiel"
+      category: "Design d'intérieur",
+      logo: "/lovable-uploads/b800af93-e21f-4e18-af4d-9f94678f2999.png",
+      description: "Création d'une stratégie de communication premium pour cette agence de design d'intérieur de luxe.",
+      year: "2023",
+      type: "Communication"
     }
   ];
 
-  const categories = ["Restauration", "Immobilier", "Commerce", "Tech", "Startup Studio", "Musique", "Digital", "Marketing", "Événementiel", "Conseil"];
+  const categories = ["Restauration", "Immobilier", "Tech", "Startup Studio", "Musique", "Design d'intérieur", "Conseil"];
 
   return (
     <section className="py-32 px-8 lg:px-16 bg-gradient-to-br from-gray-50 via-white to-gray-100 relative overflow-hidden">
@@ -100,30 +97,54 @@ export const Collaborations = () => {
           {collaborations.map((collaboration, index) => (
             <div 
               key={index}
-              className="group bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-gray-200"
+              className="group bg-white rounded-3xl p-8 shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-gray-200 hover:-translate-y-2"
+              style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div className="flex items-start justify-between mb-4">
+              <div className="flex items-start justify-between mb-6">
                 <div className="flex-1">
-                  <h3 className="text-lg font-medium text-black mb-2 group-hover:text-gray-800 transition-colors">
+                  {collaboration.logo && (
+                    <div className="mb-4 flex items-center justify-center h-12">
+                      <img 
+                        src={collaboration.logo} 
+                        alt={`${collaboration.name} logo`}
+                        className="max-h-full max-w-full object-contain opacity-80 group-hover:opacity-100 transition-opacity"
+                        onError={(e) => {
+                          e.currentTarget.style.display = 'none';
+                        }}
+                      />
+                    </div>
+                  )}
+                  <h3 className="text-xl font-semibold text-black mb-3 group-hover:text-gray-800 transition-colors">
                     {collaboration.name}
                   </h3>
-                  <span className="inline-block px-3 py-1 text-xs font-medium bg-gray-100 text-gray-700 rounded-full">
-                    {collaboration.category}
-                  </span>
+                  <p className="text-sm text-gray-600 leading-relaxed mb-4">
+                    {collaboration.description}
+                  </p>
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="inline-block px-3 py-1 text-xs font-medium bg-gray-100 text-gray-700 rounded-full">
+                      {collaboration.category}
+                    </span>
+                    <span className="text-xs text-gray-500 font-medium">
+                      {collaboration.year}
+                    </span>
+                  </div>
+                  <div className="inline-block px-3 py-1 text-xs font-medium bg-black text-white rounded-full mb-4">
+                    {collaboration.type}
+                  </div>
                 </div>
                 {collaboration.url !== "#" && (
                   <a 
                     href={collaboration.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-2 hover:bg-gray-100 rounded-full"
+                    className="opacity-0 group-hover:opacity-100 transition-all duration-300 p-3 hover:bg-gray-100 rounded-full hover:scale-110"
                   >
-                    <ExternalLink className="w-4 h-4 text-gray-600" />
+                    <ExternalLink className="w-5 h-5 text-gray-600" />
                   </a>
                 )}
               </div>
               
-              <div className="h-1 bg-gradient-to-r from-black to-gray-600 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+              <div className="h-1 bg-gradient-to-r from-black to-gray-600 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
             </div>
           ))}
         </div>
