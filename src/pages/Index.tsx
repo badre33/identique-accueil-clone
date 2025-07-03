@@ -35,13 +35,6 @@ const Index = () => {
       
       <ProjectsGallery />
       
-      {/* CTA avec urgence */}
-      <section className="py-20 px-8 lg:px-16">
-        <div className="max-w-4xl mx-auto">
-          <CTAWithUrgency />
-        </div>
-      </section>
-      
       <FAQ />
       <div id="contact">
         <Contact />
