@@ -49,15 +49,15 @@ const Collaborations = () => {
       year: "2023",
       type: "Branding & Web"
     },
-    {
-      name: "Amoud",
-      url: "https://www.amoud.ma/",
-      category: "Commerce",
-      logo: "/lovable-uploads/18500dfb-e7b6-4c75-8c7c-89fa212ee0a8.png",
-      description: "Transformation digitale complète avec une nouvelle plateforme e-commerce et stratégie omnicanale.",
-      year: "2023",
-      type: "E-commerce"
-    },
+    // {
+    //   name: "Amoud",
+    //   url: "https://www.amoud.ma/",
+    //   category: "Commerce",
+    //   logo: "/lovable-uploads/18500dfb-e7b6-4c75-8c7c-89fa212ee0a8.png",
+    //   description: "Transformation digitale complète avec une nouvelle plateforme e-commerce et stratégie omnicanale.",
+    //   year: "2023",
+    //   type: "E-commerce"
+    // },
     {
       name: "Achibest Food",
       url: "https://www.instagram.com/achibest_food/?hl=fr",

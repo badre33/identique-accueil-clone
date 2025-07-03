@@ -7,15 +7,15 @@ export const ProjectsGallery = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const projects = [
-    {
-      title: "Amoud",
-      category: "Branding & Marketing Digital",
-      image: "/lovable-uploads/8e26a61e-e439-4688-b503-8a3088d2124f.png",
-      shortDescription: "Maison de pâtisserie marocaine fondée en 1982, réputée pour l'excellence de ses viennoiseries et créations sucrées haut de gamme. Alliant tradition artisanale et innovation moderne.",
-      description: "Mission complète de transformation digitale et de repositionnement premium pour cette maison de pâtisserie marocaine historique. Nous avons développé une stratégie de marque moderne qui respecte l'héritage artisanal tout en propulsant Amoud vers les standards du luxe contemporain. Le projet incluait la refonte complète de l'identité visuelle, la création d'un packaging premium, le développement d'une présence digitale forte et l'orchestration de campagnes marketing ciblées pour conquérir une clientèle haut de gamme exigeante.",
-      year: "2024",
-      url: "#"
-    },
+    // {
+    //   title: "Amoud",
+    //   category: "Branding & Marketing Digital",
+    //   image: "/lovable-uploads/8e26a61e-e439-4688-b503-8a3088d2124f.png",
+    //   shortDescription: "Maison de pâtisserie marocaine fondée en 1982, réputée pour l'excellence de ses viennoiseries et créations sucrées haut de gamme. Alliant tradition artisanale et innovation moderne.",
+    //   description: "Mission complète de transformation digitale et de repositionnement premium pour cette maison de pâtisserie marocaine historique. Nous avons développé une stratégie de marque moderne qui respecte l'héritage artisanal tout en propulsant Amoud vers les standards du luxe contemporain. Le projet incluait la refonte complète de l'identité visuelle, la création d'un packaging premium, le développement d'une présence digitale forte et l'orchestration de campagnes marketing ciblées pour conquérir une clientèle haut de gamme exigeante.",
+    //   year: "2024",
+    //   url: "#"
+    // },
     {
       title: "Edwin",
       category: "Pop-up Store & Événementiel", 

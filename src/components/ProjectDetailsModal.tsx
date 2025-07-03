@@ -22,13 +22,13 @@ export const ProjectDetailsModal = ({ project, isOpen, onClose }: ProjectDetails
 
   const getProjectDetails = (project: Project) => {
     switch (project.title) {
-      case "Amoud":
-        return {
-          impact: "Augmentation de 150% de la notoriété de marque",
-          services: ["Stratégie de marque", "Identité visuelle", "Campagne digitale", "Packaging premium"],
-          results: ["3 nouvelles boutiques ouvertes", "Partenariats haut de gamme", "Présence médiatique renforcée"],
-          challenge: "Positionner une pâtisserie traditionnelle comme référence du luxe marocain moderne"
-        };
+      // case "Amoud":
+      //   return {
+      //     impact: "Augmentation de 150% de la notoriété de marque",
+      //     services: ["Stratégie de marque", "Identité visuelle", "Campagne digitale", "Packaging premium"],
+      //     results: ["3 nouvelles boutiques ouvertes", "Partenariats haut de gamme", "Présence médiatique renforcée"],
+      //     challenge: "Positionner une pâtisserie traditionnelle comme référence du luxe marocain moderne"
+      //   };
       case "Edwin":
         return {
           impact: "Pop-up store sold-out en 3 jours - 1500+ visiteurs/jour",
