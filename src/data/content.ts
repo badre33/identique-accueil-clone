@@ -225,6 +225,7 @@ export const testimonials: Testimonial[] = [
     role: 'Directeur Général',
     content: 'L\'organisation de notre événement de lancement a été parfaite. 200 invités VIP, coordination impeccable, respect du budget et timing. Link Agency maîtrise l\'événementiel haut de gamme au Maroc.',
     rating: 5,
+    image: '/lovable-uploads/566ba4a2-ee11-42db-a054-14667389b2c6.png',
     service: 'Événementiel Premium',
     date: '2023-11-20',
     projectType: 'Lancement produit immobilier',
