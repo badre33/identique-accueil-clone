@@ -4,6 +4,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HelmetProvider } from 'react-helmet-async';
 import { PageTransition } from "@/components/PageTransition";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
@@ -34,12 +35,13 @@ const queryClient = new QueryClient({
 
 const App = () => (
   <ErrorBoundary>
-    <ThemeProvider>
-      <QueryClientProvider client={queryClient}>
-        <TooltipProvider>
-          <CriticalResourcesPreloader />
-          <Toaster />
-          <Sonner />
+    <HelmetProvider>
+      <ThemeProvider>
+        <QueryClientProvider client={queryClient}>
+          <TooltipProvider>
+            <CriticalResourcesPreloader />
+            <Toaster />
+            <Sonner />
           <BrowserRouter>
             <PageTransition>
               <Breadcrumb />
@@ -59,7 +61,8 @@ const App = () => (
         </TooltipProvider>
       </QueryClientProvider>
     </ThemeProvider>
-  </ErrorBoundary>
+  </HelmetProvider>
+</ErrorBoundary>
 );
 
 export default App;

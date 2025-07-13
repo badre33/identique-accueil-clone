@@ -1,45 +1,112 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Page d'accueil -->
   <url>
     <loc>https://linkagency.ma/</loc>
     <lastmod>2025-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://linkagency.ma/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://linkagency.ma/ar/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://linkagency.ma/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://linkagency.ma/" />
+    <image:image>
+      <image:loc>https://linkagency.ma/logo-link-agency.png</image:loc>
+      <image:title>Link Agency - Agence Marketing Digital Maroc</image:title>
+    </image:image>
   </url>
+
+  <!-- Services Branding -->
   <url>
     <loc>https://linkagency.ma/branding</loc>
     <lastmod>2025-01-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://linkagency.ma/branding" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://linkagency.ma/ar/branding" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://linkagency.ma/en/branding" />
   </url>
-  <url>
-    <loc>https://linkagency.ma/personal-branding</loc>
-    <lastmod>2025-01-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://linkagency.ma/content-digital</loc>
-    <lastmod>2025-01-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
+
+  <!-- Services Événementiel -->
   <url>
     <loc>https://linkagency.ma/evenementiel</loc>
     <lastmod>2025-01-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://linkagency.ma/evenementiel" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://linkagency.ma/ar/evenementiel" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://linkagency.ma/en/evenementiel" />
   </url>
+
+  <!-- Personal Branding -->
   <url>
-    <loc>https://linkagency.ma/collaborations</loc>
+    <loc>https://linkagency.ma/personal-branding</loc>
     <lastmod>2025-01-13</lastmod>
-    <changefreq>weekly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://linkagency.ma/personal-branding" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://linkagency.ma/ar/personal-branding" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://linkagency.ma/en/personal-branding" />
   </url>
+
+  <!-- Contenu Digital -->
+  <url>
+    <loc>https://linkagency.ma/content-digital</loc>
+    <lastmod>2025-01-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://linkagency.ma/content-digital" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://linkagency.ma/ar/content-digital" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://linkagency.ma/en/content-digital" />
+  </url>
+
+  <!-- Inside Link -->
   <url>
     <loc>https://linkagency.ma/inside-link</loc>
     <lastmod>2025-01-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://linkagency.ma/inside-link" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://linkagency.ma/ar/inside-link" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://linkagency.ma/en/inside-link" />
   </url>
+
+  <!-- Collaborations -->
+  <url>
+    <loc>https://linkagency.ma/collaborations</loc>
+    <lastmod>2025-01-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://linkagency.ma/collaborations" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://linkagency.ma/ar/collaborations" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://linkagency.ma/en/collaborations" />
+  </url>
+
+  <!-- Pages locales - Casablanca -->
+  <url>
+    <loc>https://linkagency.ma/casablanca</loc>
+    <lastmod>2025-01-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Pages locales - Rabat -->
+  <url>
+    <loc>https://linkagency.ma/rabat</loc>
+    <lastmod>2025-01-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Pages locales - Marrakech -->
+  <url>
+    <loc>https://linkagency.ma/marrakech</loc>
+    <lastmod>2025-01-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>

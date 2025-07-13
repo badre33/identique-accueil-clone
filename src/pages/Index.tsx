@@ -10,10 +10,34 @@ import { Contact } from "@/components/Contact";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { ScrollProgress } from "@/components/ScrollProgress";
 import { FloatingContactWidget } from "@/components/FloatingContactWidget";
+import { SEOHead } from "@/components/SEOHead";
+import { generateOrganizationSchema, generateLocalBusinessSchema, generateWebPageSchema } from "@/utils/structuredData";
 
 const Index = () => {
+  // Données structurées pour la page d'accueil
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      generateOrganizationSchema(),
+      generateLocalBusinessSchema(),
+      generateWebPageSchema(
+        "Link Agency - Agence Marketing Digital au Maroc",
+        "Agence marketing digital au Maroc spécialisée en branding, communication digitale et événementiel. Services créatifs à Casablanca, Rabat et Marrakech.",
+        "https://linkagency.ma/"
+      )
+    ]
+  };
+
   return (
     <div className="min-h-screen bg-white">
+      <SEOHead 
+        title="Link Agency - Agence Marketing Digital au Maroc | Branding & Communication"
+        description="Agence marketing digital au Maroc spécialisée en branding, communication digitale et événementiel. Services créatifs à Casablanca, Rabat et Marrakech."
+        keywords="agence marketing digital maroc, branding maroc, communication digitale casablanca, événementiel maroc, agence créative rabat, marketing digital casablanca"
+        url="https://linkagency.ma/"
+        type="website"
+        structuredData={structuredData}
+      />
       <ScrollProgress />
       <Header />
       <div id="accueil">
