@@ -85,17 +85,20 @@ export const WebVitalsOptimizer = () => {
       });
     };
 
-    // Mesurer les Web Vitals
+    // Mesurer les performances avec l'API native
     const measureWebVitals = () => {
-      if ('web-vitals' in window) {
-        // @ts-ignore
-        import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-          getCLS(console.log);
-          getFID(console.log);
-          getFCP(console.log);
-          getLCP(console.log);
-          getTTFB(console.log);
-        });
+      // Observer les performances avec PerformanceObserver
+      if ('PerformanceObserver' in window) {
+        try {
+          const observer = new PerformanceObserver((list) => {
+            for (const entry of list.getEntries()) {
+              console.log(`Performance ${entry.entryType}:`, entry.name, entry.duration);
+            }
+          });
+          observer.observe({ entryTypes: ['navigation', 'resource'] });
+        } catch (error) {
+          console.warn('Performance monitoring not available');
+        }
       }
     };
 
