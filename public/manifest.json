@@ -1,0 +1,35 @@
+{
+  "name": "Link Agency - Agence Digital Marketing Maroc",
+  "short_name": "Link Agency",
+  "description": "Agence de marketing digital au Maroc spécialisée en branding, contenu digital et événementiel",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#8b5cf6",
+  "icons": [
+    {
+      "src": "/lovable-uploads/85b45a40-6291-4f5d-a377-65024ddb1976.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/lovable-uploads/85b45a40-6291-4f5d-a377-65024ddb1976.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "lang": "fr",
+  "scope": "/",
+  "orientation": "portrait-primary",
+  "categories": ["business", "marketing", "design"],
+  "screenshots": [
+    {
+      "src": "/lovable-uploads/c2c2bc5c-1a2d-4fdd-a6ac-9d3a8d13ac23.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "label": "Accueil Link Agency"
+    }
+  ]
+}
