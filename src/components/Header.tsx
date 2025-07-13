@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { TouchOptimized } from './TouchOptimized';
+import { OptimizedImage } from './OptimizedImage';
 import { useMobile } from '@/hooks/useMobile';
 import { cn } from '@/lib/utils';
 
@@ -65,10 +66,14 @@ export const Header = () => {
             {/* Logo */}
             <div className="flex items-center flex-shrink-0">
               <Link to="/" className="block">
-                <img 
-                  src="/lovable-uploads/85b45a40-6291-4f5d-a377-65024ddb1976.png" 
+                <OptimizedImage
+                  src="/lovable-uploads/85b45a40-6291-4f5d-a377-65024ddb1976.png"
                   alt="Link Agency Logo" 
+                  width={160}
+                  height={60}
+                  priority={true}
                   className="h-12 sm:h-16 w-auto object-contain transition-transform duration-300 hover:scale-105"
+                  placeholder="empty"
                 />
               </Link>
             </div>
@@ -141,10 +146,13 @@ export const Header = () => {
             <div className="flex flex-col h-full">
               {/* Header */}
               <div className="flex items-center justify-between p-6 border-b border-gray-200">
-                <img 
-                  src="/lovable-uploads/85b45a40-6291-4f5d-a377-65024ddb1976.png" 
+                <OptimizedImage
+                  src="/lovable-uploads/85b45a40-6291-4f5d-a377-65024ddb1976.png"
                   alt="Link Agency Logo" 
+                  width={120}
+                  height={45}
                   className="h-8 w-auto object-contain"
+                  placeholder="empty"
                 />
                 <TouchOptimized 
                   touchTarget="large"
