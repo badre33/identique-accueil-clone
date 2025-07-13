@@ -11,6 +11,8 @@ import { ScrollToTop } from "@/components/ScrollToTop";
 import { ScrollProgress } from "@/components/ScrollProgress";
 import { FloatingContactWidget } from "@/components/FloatingContactWidget";
 import { SEOHead } from "@/components/SEOHead";
+import { TestimonialsEnhanced } from "@/components/TestimonialsEnhanced";
+import { OptimizedCTAs } from "@/components/OptimizedCTAs";
 import { generateOrganizationSchema, generateLocalBusinessSchema, generateWebPageSchema } from "@/utils/structuredData";
 
 const Index = () => {
@@ -53,11 +55,21 @@ const Index = () => {
       {/* CTA Section avec stats */}
       <section className="py-20 px-8 lg:px-16 bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-4xl mx-auto">
-          <CTAWithStats />
+          <OptimizedCTAs.SocialProofCTA />
         </div>
       </section>
       
       <ProjectsGallery />
+      
+      {/* Témoignages avec rich snippets */}
+      <TestimonialsEnhanced />
+      
+      {/* CTA d'urgence */}
+      <section className="py-20 px-8 lg:px-16 bg-gray-50">
+        <div className="max-w-4xl mx-auto">
+          <OptimizedCTAs.UrgencyCTA />
+        </div>
+      </section>
       
       <FAQ />
       <div id="contact">

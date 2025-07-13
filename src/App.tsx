@@ -21,6 +21,8 @@ const PersonalBranding = () => <LazyWrapper importFunc={() => import('./pages/Pe
 const ContentDigital = () => <LazyWrapper importFunc={() => import('./pages/ContentDigital')} />;
 const InsideLink = () => <LazyWrapper importFunc={() => import('./pages/InsideLink')} />;
 const Collaborations = () => <LazyWrapper importFunc={() => import('./pages/Collaborations')} />;
+const Blog = () => <LazyWrapper importFunc={() => import('./pages/Blog')} />;
+const BlogPost = () => <LazyWrapper importFunc={() => import('./pages/BlogPost')} />;
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -53,6 +55,8 @@ const App = () => (
                 <Route path="/content-digital" element={<ContentDigital />} />
                 <Route path="/inside-link" element={<InsideLink />} />
                 <Route path="/collaborations" element={<Collaborations />} />
+                <Route path="/blog" element={<Blog />} />
+                <Route path="/blog/:slug" element={<BlogPost />} />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                 <Route path="*" element={<NotFound />} />
               </Routes>
