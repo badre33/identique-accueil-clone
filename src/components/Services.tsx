@@ -4,6 +4,8 @@ import { TouchOptimized } from "./TouchOptimized";
 import { ResponsiveGrid } from "./ResponsiveGrid";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import { generateServiceSchema } from "@/utils/structuredData";
 
 export const Services = () => {
   const { elementRef, isVisible } = useScrollAnimation({ delay: 200 });
@@ -64,6 +66,42 @@ export const Services = () => {
       link: "/content-digital"
     },
   ];
+
+  // Injecter les données structurées pour les services
+  useEffect(() => {
+    const servicesSchema = {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "itemListElement": services.map((service, index) => ({
+        "@type": "ListItem",
+        "position": index + 1,
+        "item": generateServiceSchema(
+          service.title,
+          service.description,
+          "Sur devis"
+        )
+      }))
+    };
+    
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(servicesSchema);
+    script.id = 'services-schema';
+    
+    const existingScript = document.getElementById('services-schema');
+    if (existingScript) {
+      existingScript.remove();
+    }
+    
+    document.head.appendChild(script);
+    
+    return () => {
+      const scriptToRemove = document.getElementById('services-schema');
+      if (scriptToRemove) {
+        scriptToRemove.remove();
+      }
+    };
+  }, []);
 
   return (
     <section className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 xl:px-16 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">

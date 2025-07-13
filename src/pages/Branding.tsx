@@ -4,8 +4,33 @@ import { ArrowLeft, Palette, Target, Compass, LayoutDashboard, Search, Lightbulb
 import { Link } from "react-router-dom";
 import { FloatingContactWidget } from "@/components/FloatingContactWidget";
 import { WorkflowTimeline } from "@/components/WorkflowTimeline";
+import { SEOHead } from "@/components/SEOHead";
+import { generateServiceSchema, generateWebPageSchema, generateBreadcrumbSchema } from "@/utils/structuredData";
+import { generatePageMeta } from "@/utils/seoHelpers";
 
 const Branding = () => {
+  // Métadonnées et données structurées pour la page Branding
+  const pageMeta = generatePageMeta('branding');
+  
+  const brandingSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      generateServiceSchema(
+        "Services Branding & Identité Visuelle",
+        "Création d'identité visuelle complète, logo, charte graphique et stratégie de marque au Maroc",
+        "À partir de 5000 MAD"
+      ),
+      generateWebPageSchema(
+        pageMeta.title,
+        pageMeta.description,
+        "https://linkagency.ma/branding"
+      ),
+      generateBreadcrumbSchema([
+        { name: "Accueil", url: "https://linkagency.ma/" },
+        { name: "Services Branding", url: "https://linkagency.ma/branding" }
+      ])
+    ]
+  };
   const brandingServices = [
     {
       icon: <Palette className="w-8 h-8" />,
@@ -73,6 +98,14 @@ const Branding = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEOHead 
+        title={pageMeta.title}
+        description={pageMeta.description}
+        keywords={pageMeta.keywords}
+        url="https://linkagency.ma/branding"
+        type="service"
+        structuredData={brandingSchema}
+      />
       <Header />
       
       {/* Hero Section */}

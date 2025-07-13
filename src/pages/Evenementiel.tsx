@@ -4,8 +4,33 @@ import { ArrowLeft, Palette, Users, Music, Briefcase, Monitor, Camera, CheckCirc
 import { Link } from "react-router-dom";
 import { FloatingContactWidget } from "@/components/FloatingContactWidget";
 import { WorkflowTimeline } from "@/components/WorkflowTimeline";
+import { SEOHead } from "@/components/SEOHead";
+import { generateServiceSchema, generateWebPageSchema, generateBreadcrumbSchema } from "@/utils/structuredData";
+import { generatePageMeta } from "@/utils/seoHelpers";
 
 const Evenementiel = () => {
+  // Métadonnées et données structurées pour la page Événementiel
+  const pageMeta = generatePageMeta('evenementiel');
+  
+  const evenementielSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      generateServiceSchema(
+        "Services Événementiel & Communication",
+        "Organisation d'événements corporate, marketing et communication événementielle au Maroc",
+        "À partir de 8000 MAD"
+      ),
+      generateWebPageSchema(
+        pageMeta.title,
+        pageMeta.description,
+        "https://linkagency.ma/evenementiel"
+      ),
+      generateBreadcrumbSchema([
+        { name: "Accueil", url: "https://linkagency.ma/" },
+        { name: "Services Événementiel", url: "https://linkagency.ma/evenementiel" }
+      ])
+    ]
+  };
   const eventServices = [
     {
       icon: <Palette className="w-8 h-8" />,
@@ -94,6 +119,14 @@ const Evenementiel = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEOHead 
+        title={pageMeta.title}
+        description={pageMeta.description}
+        keywords={pageMeta.keywords}
+        url="https://linkagency.ma/evenementiel"
+        type="service"
+        structuredData={evenementielSchema}
+      />
       <Header />
       
       {/* Hero Section */}

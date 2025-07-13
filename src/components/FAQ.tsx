@@ -1,6 +1,7 @@
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Plus, Minus, HelpCircle } from "lucide-react";
+import { generateFAQSchema } from "@/utils/structuredData";
 
 export const FAQ = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -31,6 +32,32 @@ export const FAQ = () => {
       answer: "Oui, nous avons des formules d'accompagnement mensuel pour la création de contenu digital et le personal branding. Ces formules permettent un suivi régulier et des créations continues."
     }
   ];
+
+  // Générer les données structurées FAQ
+  useEffect(() => {
+    const faqSchema = generateFAQSchema(faqs);
+    
+    // Injecter le schema dans le head
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(faqSchema);
+    script.id = 'faq-schema';
+    
+    // Supprimer l'ancien schema s'il existe
+    const existingScript = document.getElementById('faq-schema');
+    if (existingScript) {
+      existingScript.remove();
+    }
+    
+    document.head.appendChild(script);
+    
+    return () => {
+      const scriptToRemove = document.getElementById('faq-schema');
+      if (scriptToRemove) {
+        scriptToRemove.remove();
+      }
+    };
+  }, []);
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
