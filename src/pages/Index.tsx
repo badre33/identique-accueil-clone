@@ -13,6 +13,7 @@ import { FloatingContactWidget } from "@/components/FloatingContactWidget";
 import { SEOHead } from "@/components/SEOHead";
 import { TestimonialsEnhanced } from "@/components/TestimonialsEnhanced";
 import { OptimizedCTAs } from "@/components/OptimizedCTAs";
+import { LocalSEOSection } from "@/components/LocalSEO";
 import { generateOrganizationSchema, generateLocalBusinessSchema, generateWebPageSchema } from "@/utils/structuredData";
 
 const Index = () => {
@@ -72,6 +73,10 @@ const Index = () => {
       </section>
       
       <FAQ />
+      
+      {/* Section Local SEO */}
+      <LocalSEOSection />
+      
       <div id="contact">
         <Contact />
       </div>

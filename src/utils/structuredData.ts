@@ -43,39 +43,128 @@ export const generateOrganizationSchema = () => ({
   ]
 });
 
-export const generateLocalBusinessSchema = () => ({
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Link Agency",
-  "image": "https://linkagency.ma/logo-link-agency.png",
-  "telephone": "+212-XXX-XXXXXX",
-  "email": "contact@linkagency.ma",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Casablanca",
-    "addressLocality": "Casablanca",
-    "addressRegion": "Grand Casablanca",
-    "postalCode": "20000",
-    "addressCountry": "MA"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 33.5731,
-    "longitude": -7.5898
-  },
-  "url": "https://linkagency.ma",
-  "priceRange": "$$",
-  "openingHours": [
-    "Mo-Fr 09:00-18:00",
-    "Sa 09:00-13:00"
-  ],
-  "servesCuisine": [],
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.8",
-    "reviewCount": "47"
-  }
-});
+export const generateLocalBusinessSchema = (city?: 'casablanca' | 'rabat' | 'marrakech') => {
+  const locations = {
+    casablanca: {
+      name: "Link Agency Casablanca",
+      address: {
+        "@type": "PostalAddress",
+        "streetAddress": "Centre Ville, Casablanca",
+        "addressLocality": "Casablanca",
+        "addressRegion": "Grand Casablanca",
+        "postalCode": "20000",
+        "addressCountry": "MA"
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        "latitude": 33.5731,
+        "longitude": -7.5898
+      },
+      telephone: "+212-522-XXX-XXX",
+      specialties: ["Marketing Digital", "E-commerce", "Branding Corporate"],
+      aggregateRating: {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "47"
+      }
+    },
+    rabat: {
+      name: "Link Agency Rabat",
+      address: {
+        "@type": "PostalAddress",
+        "streetAddress": "Agdal, Rabat",
+        "addressLocality": "Rabat",
+        "addressRegion": "Rabat-Salé-Kénitra",
+        "postalCode": "10000",
+        "addressCountry": "MA"
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        "latitude": 34.0209,
+        "longitude": -6.8416
+      },
+      telephone: "+212-537-XXX-XXX",
+      specialties: ["Communication Institutionnelle", "Relations Publiques", "Événementiel"],
+      aggregateRating: {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "32"
+      }
+    },
+    marrakech: {
+      name: "Link Agency Marrakech",
+      address: {
+        "@type": "PostalAddress",
+        "streetAddress": "Gueliz, Marrakech",
+        "addressLocality": "Marrakech",
+        "addressRegion": "Marrakech-Safi",
+        "postalCode": "40000",
+        "addressCountry": "MA"
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        "latitude": 31.6295,
+        "longitude": -7.9811
+      },
+      telephone: "+212-524-XXX-XXX",
+      specialties: ["Tourisme Digital", "Hôtellerie", "Artisanat Local"],
+      aggregateRating: {
+        "@type": "AggregateRating",
+        "ratingValue": "4.7",
+        "reviewCount": "38"
+      }
+    }
+  };
+
+  const location = city ? locations[city] : locations.casablanca;
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": location.name,
+    "image": "https://linkagency.ma/logo-link-agency.png",
+    "telephone": location.telephone,
+    "email": "contact@linkagency.ma",
+    "address": location.address,
+    "geo": location.geo,
+    "url": "https://linkagency.ma",
+    "priceRange": "$$",
+    "openingHours": [
+      "Mo-Fr 09:00-18:00",
+      "Sa 09:00-13:00"
+    ],
+    "serviceArea": {
+      "@type": "Country",
+      "name": "Morocco"
+    },
+    "areaServed": [
+      {
+        "@type": "City",
+        "name": "Casablanca"
+      },
+      {
+        "@type": "City", 
+        "name": "Rabat"
+      },
+      {
+        "@type": "City",
+        "name": "Marrakech"
+      }
+    ],
+    "aggregateRating": location.aggregateRating,
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Services Marketing Digital",
+      "itemListElement": location.specialties.map(specialty => ({
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": specialty
+        }
+      }))
+    }
+  };
+};
 
 export const generateServiceSchema = (serviceName: string, description: string, price?: string) => ({
   "@context": "https://schema.org",
