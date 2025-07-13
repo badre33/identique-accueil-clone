@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { intelligentPreloading, optimizeCriticalResources, adaptContentForNetwork } from '../utils/bundleOptimization';
 import { useServiceWorker } from '../hooks/useServiceWorker';
 import { WebVitalsOptimizer } from './WebVitalsOptimizer';
-import { initGA } from '../utils/analytics';
+import { initGA4 } from '../utils/analytics';
 
 export const CriticalResourcesPreloader = () => {
   useServiceWorker();
@@ -19,7 +19,7 @@ export const CriticalResourcesPreloader = () => {
 
     // Initialiser Google Analytics en production
     if (process.env.NODE_ENV === 'production') {
-      initGA();
+      initGA4();
     }
 
     // Nettoyage au démontage
