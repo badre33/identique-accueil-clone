@@ -16,14 +16,8 @@ preloadCriticalImages();
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <HelmetProvider>
-      <BrowserRouter>
-        <QueryClientProvider client={queryClient}>
-          <AnalyticsProvider>
-            <App />
-          </AnalyticsProvider>
-        </QueryClientProvider>
-      </BrowserRouter>
-    </HelmetProvider>
+    <AnalyticsProvider>
+      <App />
+    </AnalyticsProvider>
   </StrictMode>
 );
