@@ -11,7 +11,7 @@ import { ScrollToTop } from "@/components/ScrollToTop";
 import { ScrollProgress } from "@/components/ScrollProgress";
 import { FloatingContactWidget } from "@/components/FloatingContactWidget";
 import { SEOHead } from "@/components/SEOHead";
-import { TestimonialsEnhanced } from "@/components/TestimonialsEnhanced";
+
 import { OptimizedCTAs } from "@/components/OptimizedCTAs";
 import { LocalSEOSection } from "@/components/LocalSEO";
 import { generateOrganizationSchema, generateLocalBusinessSchema, generateWebPageSchema } from "@/utils/structuredData";
@@ -62,8 +62,6 @@ const Index = () => {
       
       <ProjectsGallery />
       
-      {/* Témoignages avec rich snippets */}
-      <TestimonialsEnhanced />
       
       {/* CTA d'urgence */}
       <section className="py-20 px-8 lg:px-16 bg-gray-50">
