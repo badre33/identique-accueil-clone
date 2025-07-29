@@ -64,10 +64,6 @@ const Index = () => {
       
       
       <FAQ />
-      
-      {/* Section Local SEO */}
-      <LocalSEOSection />
-      
       <div id="contact">
         <Contact />
       </div>
