@@ -7,7 +7,7 @@ export const OptimizedCTAs = {
   // CTA principal avec urgence
   PrimaryCTA: ({ 
     title = "Transformez votre marque dès aujourd'hui",
-    subtitle = "Rejoignez plus de 150 entreprises qui nous font confiance",
+    subtitle = "Rejoignez plus de 150 entreprises satisfaites",
     ctaText = "Démarrer mon projet",
     urgencyText = "Consultation gratuite - Réponse sous 24h",
     link = "/#contact"
