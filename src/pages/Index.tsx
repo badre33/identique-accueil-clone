@@ -63,13 +63,6 @@ const Index = () => {
       <ProjectsGallery />
       
       
-      {/* CTA d'urgence */}
-      <section className="py-20 px-8 lg:px-16 bg-gray-50">
-        <div className="max-w-4xl mx-auto">
-          <OptimizedCTAs.UrgencyCTA />
-        </div>
-      </section>
-      
       <FAQ />
       
       {/* Section Local SEO */}
