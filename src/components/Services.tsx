@@ -63,7 +63,7 @@ export const Services = () => {
       features: ["Growth Hacking", "A/B Testing", "Conversion Rate Optimization"],
       color: "from-indigo-500 to-blue-600",
       bgImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop",
-      link: "/content-digital"
+      link: "/analytics"
     },
   ];
 
