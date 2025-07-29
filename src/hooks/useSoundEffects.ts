@@ -1,8 +1,21 @@
 
 import { useCallback, useRef } from 'react';
+import { useLocation } from 'react-router-dom';
 
 export const useSoundEffects = () => {
+  const location = useLocation();
   const audioContextRef = useRef<AudioContext | null>(null);
+  
+  // Désactiver les sons sur la page Inside Link
+  const isInsideLinkPage = location.pathname === '/inside-link';
+  
+  if (isInsideLinkPage) {
+    return {
+      playHoverSound: () => {},
+      playClickSound: () => {},
+      playSuccessSound: () => {}
+    };
+  }
 
   const initAudioContext = useCallback(() => {
     if (!audioContextRef.current) {
