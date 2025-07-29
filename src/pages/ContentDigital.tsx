@@ -208,21 +208,6 @@ const ContentDigital = () => {
         </div>
       </section>
 
-      {/* Nouvelle section calculateur de devis */}
-      <section className="section-padding bg-gradient-subtle">
-        <div className="container-max">
-          <div className="text-center mb-12 sm:mb-16 space-content">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light mb-4 sm:mb-6 text-black">
-              Calculez votre devis en ligne
-            </h2>
-            <p className="text-lg sm:text-xl text-gray-600 font-light max-w-3xl mx-auto">
-              Obtenez une estimation personnalisée pour vos besoins en content digital en quelques clics.
-            </p>
-          </div>
-          
-          <QuoteCalculator />
-        </div>
-      </section>
 
       {/* Section avantages optimisée */}
       <section className="section-padding gradient-subtle">
