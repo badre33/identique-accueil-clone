@@ -258,8 +258,8 @@ export const WebVitalsOptimizer = () => {
       }
     };
 
-    // Exécuter toutes les optimisations
-    requestIdleCallback(() => {
+    // Exécuter toutes les optimisations avec fallback pour requestIdleCallback
+    const runOptimizations = () => {
       optimizeLCP();
       optimizeCLS();
       optimizeInteractivity();
@@ -269,7 +269,14 @@ export const WebVitalsOptimizer = () => {
       setTimeout(() => {
         monitorWebVitals();
       }, 2000);
-    });
+    };
+
+    // Utiliser requestIdleCallback si disponible, sinon setTimeout
+    if (typeof requestIdleCallback !== 'undefined') {
+      requestIdleCallback(runOptimizations);
+    } else {
+      setTimeout(runOptimizations, 0);
+    }
 
     // Optimisations continues
     const continuousOptimizations = () => {
