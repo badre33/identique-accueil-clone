@@ -21,6 +21,7 @@ const PersonalBranding = () => <LazyWrapper importFunc={() => import('./pages/Pe
 const ContentDigital = () => <LazyWrapper importFunc={() => import('./pages/ContentDigital')} />;
 const Analytics = () => <LazyWrapper importFunc={() => import('./pages/Analytics')} />;
 const DeveloppementWeb = () => <LazyWrapper importFunc={() => import('./pages/DeveloppementWeb')} />;
+const InnovationUX = () => <LazyWrapper importFunc={() => import('./pages/InnovationUX')} />;
 const InsideLink = () => <LazyWrapper importFunc={() => import('./pages/InsideLink')} />;
 const Collaborations = () => <LazyWrapper importFunc={() => import('./pages/Collaborations')} />;
 const Blog = () => <LazyWrapper importFunc={() => import('./pages/Blog')} />;
@@ -56,6 +57,7 @@ const App = () => (
                 <Route path="/personal-branding" element={<PersonalBranding />} />
                 <Route path="/content-digital" element={<ContentDigital />} />
                 <Route path="/developpement-web" element={<DeveloppementWeb />} />
+                <Route path="/innovation-ux" element={<InnovationUX />} />
                 <Route path="/analytics" element={<Analytics />} />
                 <Route path="/inside-link" element={<InsideLink />} />
                 <Route path="/collaborations" element={<Collaborations />} />

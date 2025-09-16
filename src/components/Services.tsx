@@ -54,7 +54,7 @@ export const Services = () => {
       features: ["UX/UI Design", "Prototypage", "Tests utilisateurs"],
       color: "from-yellow-500 to-orange-600",
       bgImage: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=400&h=300&fit=crop",
-      link: "/content-digital"
+      link: "/innovation-ux"
     },
     {
       icon: TrendingUp,
