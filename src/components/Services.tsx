@@ -27,7 +27,7 @@ export const Services = () => {
       features: ["Sites web responsives", "Applications web", "E-commerce"],
       color: "from-green-500 to-blue-600",
       bgImage: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop",
-      link: "/content-digital"
+      link: "/developpement-web"
     },
     {
       icon: Megaphone,
@@ -36,7 +36,7 @@ export const Services = () => {
       features: ["SEO & Référencement", "Publicité en ligne", "Analytics & Reporting"],
       color: "from-purple-500 to-pink-600",
       bgImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop",
-      link: "/content-digital"
+      link: "/evenementiel"
     },
     {
       icon: Users,
