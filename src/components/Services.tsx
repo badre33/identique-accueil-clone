@@ -36,7 +36,7 @@ export const Services = () => {
       features: ["SEO & Référencement", "Publicité en ligne", "Analytics & Reporting"],
       color: "from-purple-500 to-pink-600",
       bgImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop",
-      link: "/evenementiel"
+      link: "/content-digital"
     },
     {
       icon: Users,
@@ -54,7 +54,7 @@ export const Services = () => {
       features: ["UX/UI Design", "Prototypage", "Tests utilisateurs"],
       color: "from-yellow-500 to-orange-600",
       bgImage: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=400&h=300&fit=crop",
-      link: "/branding"
+      link: "/content-digital"
     },
     {
       icon: TrendingUp,
