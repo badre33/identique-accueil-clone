@@ -78,7 +78,7 @@ export const QuoteCalculator = () => {
     
     const message = `Bonjour, je souhaite un devis premium pour les services suivants : ${selectedServiceNames}. Échelle du projet : ${projectScale}, Délai : ${urgency}. Total estimé : ${calculateTotal().toLocaleString()}DH`;
     const encodedMessage = encodeURIComponent(message);
-    window.open(`https://wa.me/33745010714?text=${encodedMessage}`, '_blank');
+    window.open(`https://wa.me/212699024526?text=${encodedMessage}`, '_blank');
   };
 
   return (

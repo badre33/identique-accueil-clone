@@ -242,7 +242,7 @@ export const CTAWithUrgency = ({ className }: { className?: string }) => {
           icon={<Users className="w-5 h-5 sm:w-6 sm:h-6" />}
           microCopy="Plus que 3 places disponibles"
           pulse
-          href="https://wa.me/33745010714?text=Bonjour%2C%20je%20souhaite%20profiter%20de%20l'offre%20-20%25"
+          href="https://wa.me/212699024526?text=Bonjour%2C%20je%20souhaite%20profiter%20de%20l'offre%20-20%25"
           onClick={handleClick}
           loading={loading}
           className="w-full sm:w-auto max-w-sm"

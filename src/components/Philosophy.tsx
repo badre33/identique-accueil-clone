@@ -98,7 +98,7 @@ export const Philosophy = () => {
                 <p className="text-gray-500 text-sm">Créateurs d'expériences</p>
               </div>
               <a 
-                href="https://wa.me/33745010714?text=Bonjour%2C%20votre%20philosophie%20m'inspire%21%20Parlons%20de%20mon%20projet"
+                href="https://wa.me/212699024526?text=Bonjour%2C%20votre%20philosophie%20m'inspire%21%20Parlons%20de%20mon%20projet"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group bg-black text-white px-6 py-3 rounded-full hover:bg-gray-800 transition-all duration-300 flex items-center space-x-2 hover:scale-105"

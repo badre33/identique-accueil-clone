@@ -122,7 +122,7 @@ const DeveloppementWeb = () => {
 
   const handleContact = () => {
     const message = "Bonjour, je souhaite discuter d'un projet de développement web avec Link Agency.";
-    window.open(`https://wa.me/212661066992?text=${encodeURIComponent(message)}`, '_blank');
+    window.open(`https://wa.me/212699024526?text=${encodeURIComponent(message)}`, '_blank');
   };
 
   return (

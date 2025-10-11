@@ -192,7 +192,7 @@ export const BrandingQuiz = () => {
           <div className="space-y-4">
             <button
               onClick={() => {
-                window.open('https://wa.me/33745010714?text=Bonjour%2C%20j\'ai%20fait%20le%20quiz%20et%20je%20suis%20' + result.type + '%20!%20J\'aimerais%20discuter%20de%20mon%20branding', '_blank');
+                window.open('https://wa.me/212699024526?text=Bonjour%2C%20j\'ai%20fait%20le%20quiz%20et%20je%20suis%20' + result.type + '%20!%20J\'aimerais%20discuter%20de%20mon%20branding', '_blank');
                 playClickSound();
               }}
               className={`w-full bg-gradient-to-r ${result.color} text-white px-6 py-3 rounded-full hover:shadow-lg transition-all duration-300 transform hover:scale-105`}

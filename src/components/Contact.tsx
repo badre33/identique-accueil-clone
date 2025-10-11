@@ -44,7 +44,7 @@ export const Contact = () => {
                 href="tel:+212699024526" 
                 className="text-white text-lg hover:text-gray-300 transition-colors"
               >
-                +212 6 99 024 526
+                +212 699-024526
               </a>
             </div>
           </div>
@@ -92,7 +92,7 @@ export const Contact = () => {
             Contactez-nous directement via WhatsApp pour une consultation express
           </p>
           <a 
-            href="https://wa.me/33745010714?text=Bonjour%2C%20j'aimerais%20une%20consultation%20express%20pour%20mon%20projet"
+            href="https://wa.me/212699024526?text=Bonjour%2C%20j'aimerais%20une%20consultation%20express%20pour%20mon%20projet"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center space-x-2 text-green-400 hover:text-green-300 transition-colors font-medium"

@@ -8,7 +8,7 @@ export const JoinTeamSection = () => {
       title: 'Discussion WhatsApp',
       description: 'Échangeons de vive voix sur vos projets',
       action: 'Démarrer la conversation',
-      href: 'https://wa.me/33745010714?text=Bonjour%2C%20j\'aimerais%20découvrir%20votre%20approche%20et%20échanger%20sur%20mon%20projet',
+      href: 'https://wa.me/212699024526?text=Bonjour%2C%20j\'aimerais%20découvrir%20votre%20approche%20et%20échanger%20sur%20mon%20projet',
       color: 'from-green-500 to-emerald-500'
     },
     {

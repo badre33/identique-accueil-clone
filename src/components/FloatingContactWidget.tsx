@@ -7,7 +7,7 @@ export const FloatingContactWidget = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleWhatsApp = () => {
-    const phoneNumber = "33745010714";
+    const phoneNumber = "212699024526";
     const message = "Bonjour, je souhaite discuter de mon projet avec Link Agency.";
     const encodedMessage = encodeURIComponent(message);
     window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');

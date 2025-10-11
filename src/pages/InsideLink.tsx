@@ -364,7 +364,7 @@ const InsideLink = () => {
                     linkedinUrl="https://www.linkedin.com/in/badreddine-harkaoui-nexiafiducia/"
                     email="bharkaoui@linkagency.ma"
                     phone="+212699024526"
-                    whatsapp="+33745010714"
+                    whatsapp="+212699024526"
                     website="https://linkagency.ma/"
                   />
                 </AnimatedCard>
@@ -414,7 +414,7 @@ const InsideLink = () => {
             
             <div className="text-center mt-16">
               <MagneticButton 
-                href="https://wa.me/33745010714?text=Bonjour%2C%20j'aimerais%20découvrir%20votre%20approche%20et%20échanger%20sur%20mon%20projet"
+                href="https://wa.me/212699024526?text=Bonjour%2C%20j'aimerais%20découvrir%20votre%20approche%20et%20échanger%20sur%20mon%20projet"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center space-x-3 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-700 text-white px-10 py-5 rounded-full text-lg font-medium hover:from-blue-700 hover:via-purple-700 hover:to-blue-800 transition-all duration-300 hover:scale-105 hover:-translate-y-1 shadow-lg hover:shadow-xl"

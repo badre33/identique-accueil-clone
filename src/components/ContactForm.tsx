@@ -108,7 +108,7 @@ export const ContactForm = () => {
 💬 Message:
 ${data.message}`;
 
-    const whatsappUrl = `https://wa.me/33745010714?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/212699024526?text=${encodeURIComponent(message)}`;
     
     setIsSubmitting(false);
     setIsSubmitted(true);

@@ -136,7 +136,7 @@ export const Collaborations = () => {
             Secteurs d'expertise : {categories.slice(0, 5).join(", ")} et plus encore.
           </p>
           <a 
-            href="https://wa.me/33745010714?text=Bonjour%2C%20j'aimerais%20découvrir%20vos%20références%20et%20échanger%20sur%20mon%20projet"
+            href="https://wa.me/212699024526?text=Bonjour%2C%20j'aimerais%20découvrir%20vos%20références%20et%20échanger%20sur%20mon%20projet"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center space-x-3 bg-black text-white px-8 py-4 rounded-full hover:bg-gray-800 transition-all duration-300 text-lg font-medium hover:scale-105 hover:shadow-2xl"

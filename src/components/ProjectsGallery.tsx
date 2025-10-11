@@ -163,7 +163,7 @@ export const ProjectsGallery = () => {
 
         <div className="text-center mt-16">
           <a 
-            href="https://wa.me/33745010714?text=Bonjour%2C%20j'aimerais%20discuter%20de%20mon%20projet"
+            href="https://wa.me/212699024526?text=Bonjour%2C%20j'aimerais%20discuter%20de%20mon%20projet"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center space-x-3 bg-black text-white px-8 py-4 rounded-full hover:bg-gray-800 transition-all duration-300 hover:scale-105 hover:shadow-2xl text-lg font-medium"

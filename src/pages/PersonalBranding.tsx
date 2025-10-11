@@ -95,7 +95,7 @@ const PersonalBranding = () => {
   ];
 
   const handleContact = () => {
-    const phoneNumber = "33745010714";
+    const phoneNumber = "212699024526";
     const message = "Bonjour, je souhaite développer ma marque personnelle avec Link Agency.";
     const encodedMessage = encodeURIComponent(message);
     window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
