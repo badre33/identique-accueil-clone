@@ -7,15 +7,15 @@ export const ProjectsGallery = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const projects = [
-    // {
-    //   title: "Amoud",
-    //   category: "Branding & Marketing Digital",
-    //   image: "/lovable-uploads/8e26a61e-e439-4688-b503-8a3088d2124f.png",
-    //   shortDescription: "Maison de pâtisserie marocaine fondée en 1982, réputée pour l'excellence de ses viennoiseries et créations sucrées haut de gamme. Alliant tradition artisanale et innovation moderne.",
-    //   description: "Mission complète de transformation digitale et de repositionnement premium pour cette maison de pâtisserie marocaine historique. Nous avons développé une stratégie de marque moderne qui respecte l'héritage artisanal tout en propulsant Amoud vers les standards du luxe contemporain. Le projet incluait la refonte complète de l'identité visuelle, la création d'un packaging premium, le développement d'une présence digitale forte et l'orchestration de campagnes marketing ciblées pour conquérir une clientèle haut de gamme exigeante.",
-    //   year: "2024",
-    //   url: "#"
-    // },
+    {
+      title: "Oncovita",
+      category: "Santé & Bien-être",
+      image: "/lovable-uploads/oncovita-logo.jpeg",
+      shortDescription: "Association dédiée à l'accompagnement holistique des patients atteints de cancer : soigner le corps, apaiser l'esprit, nourrir l'espoir.",
+      description: "Mission complète d'accompagnement stratégique pour Oncovita, association pionnière dans le soutien aux patients atteints de cancer au Maroc. Notre intervention s'est concentrée sur la création d'une identité visuelle forte et sensible, le développement d'une stratégie de communication émotionnelle et impactante, ainsi que la mise en place d'outils digitaux pour faciliter l'accès aux services d'accompagnement. Le projet incluait la refonte de l'identité de marque, la production de contenus inspirants centrés sur l'espoir et la résilience, et le développement d'une présence digitale humaniste permettant de toucher et d'accompagner davantage de patients et leurs familles dans cette épreuve.",
+      year: "2025",
+      url: "#"
+    },
     {
       title: "Nexia",
       category: "Conseil & Digitalisation",

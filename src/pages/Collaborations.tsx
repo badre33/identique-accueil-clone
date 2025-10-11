@@ -14,6 +14,15 @@ const Collaborations = () => {
 
   const collaborations = [
     {
+      name: "Oncovita",
+      url: "#",
+      category: "Santé & Bien-être",
+      logo: "/lovable-uploads/oncovita-logo.jpeg",
+      description: "Association dédiée à l'accompagnement holistique des patients atteints de cancer : soigner le corps, apaiser l'esprit, nourrir l'espoir. Création d'identité visuelle et stratégie de communication émotionnelle.",
+      year: "2025",
+      type: "Branding & Communication"
+    },
+    {
       name: "Branding global / Entrepreneur et holding multisectorielle",
       url: "#",
       category: "Branding Stratégique",
@@ -204,7 +213,7 @@ const Collaborations = () => {
     }
   ];
 
-  const categories = ["Toutes", "Branding Stratégique", "Branding Personnel", "Restauration", "Immobilier", "Commerce", "Tech", "Startup Studio", "Musique", "Architecture d'intérieur", "Design d'intérieur", "Écrans interactifs tactiles", "Événementiel", "Mode", "Conseil"];
+  const categories = ["Toutes", "Santé & Bien-être", "Branding Stratégique", "Branding Personnel", "Restauration", "Immobilier", "Commerce", "Tech", "Startup Studio", "Musique", "Architecture d'intérieur", "Design d'intérieur", "Écrans interactifs tactiles", "Événementiel", "Mode", "Conseil"];
 
   const filteredCollaborations = selectedCategory === "Toutes" 
     ? collaborations 
