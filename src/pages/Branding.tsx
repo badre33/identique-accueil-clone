@@ -97,8 +97,8 @@ const Branding = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white">
-      <SEOHead 
+    <div className="min-h-screen bg-white pt-16 sm:pt-20">
+      <SEOHead
         title={pageMeta.title}
         description={pageMeta.description}
         keywords={pageMeta.keywords}

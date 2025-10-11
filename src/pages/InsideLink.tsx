@@ -78,7 +78,7 @@ const InsideLink = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white relative overflow-hidden">
+    <div className="min-h-screen bg-white relative overflow-hidden pt-16 sm:pt-20">
       <ParticleBackground />
       <InteractiveBackground />
       <SideNavigation currentSection={currentSection} />

@@ -68,8 +68,8 @@ const BlogPost = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white">
-      <SEOHead 
+    <div className="min-h-screen bg-white pt-16 sm:pt-20">
+      <SEOHead
         title={`${post.title} - Link Agency Blog`}
         description={post.metaDescription}
         keywords={post.metaKeywords}

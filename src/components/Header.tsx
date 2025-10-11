@@ -60,20 +60,18 @@ export const Header = () => {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100 transition-all duration-300">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-16">
+      <header className="fixed top-0 left-0 right-0 bg-white z-50 border-b border-gray-100 shadow-sm">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 sm:h-20">
-            {/* Logo - Always visible */}
-            <div className="flex items-center flex-shrink-0 z-50">
-              <Link to="/" className="block" onClick={() => setIsMenuOpen(false)}>
-                <img
-                  src="/lovable-uploads/85b45a40-6291-4f5d-a377-65024ddb1976.png"
-                  alt="Link Agency Logo" 
-                  className="h-10 sm:h-12 lg:h-16 w-auto object-contain transition-transform duration-300 hover:scale-105"
-                  loading="eager"
-                />
-              </Link>
-            </div>
+            {/* Logo */}
+            <Link to="/" className="flex-shrink-0 z-50" onClick={() => setIsMenuOpen(false)}>
+              <img
+                src="/lovable-uploads/85b45a40-6291-4f5d-a377-65024ddb1976.png"
+                alt="Link Agency Logo" 
+                className="h-10 sm:h-12 lg:h-14 w-auto object-contain transition-transform duration-300 hover:scale-105"
+                loading="eager"
+              />
+            </Link>
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8">

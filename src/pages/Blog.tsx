@@ -53,8 +53,8 @@ const Blog = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white">
-      <SEOHead 
+    <div className="min-h-screen bg-white pt-16 sm:pt-20">
+      <SEOHead
         title="Blog Marketing Digital & Branding - Link Agency Maroc"
         description="Découvrez nos conseils et actualités marketing digital, branding et événementiel au Maroc. Articles d'experts, tendances et guides pratiques."
         keywords="blog marketing digital maroc, actualités branding, conseils communication, tendances marketing maroc, guides pratiques"
