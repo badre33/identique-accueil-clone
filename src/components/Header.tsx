@@ -63,17 +63,14 @@ export const Header = () => {
       <header className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100 transition-all duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-16">
           <div className="flex items-center justify-between h-16 sm:h-20">
-            {/* Logo */}
-            <div className="flex items-center flex-shrink-0">
-              <Link to="/" className="block">
-                <OptimizedImage
+            {/* Logo - Always visible */}
+            <div className="flex items-center flex-shrink-0 z-50">
+              <Link to="/" className="block" onClick={() => setIsMenuOpen(false)}>
+                <img
                   src="/lovable-uploads/85b45a40-6291-4f5d-a377-65024ddb1976.png"
                   alt="Link Agency Logo" 
-                  width={160}
-                  height={60}
-                  priority={true}
-                  className="h-12 sm:h-16 w-auto object-contain transition-transform duration-300 hover:scale-105"
-                  placeholder="empty"
+                  className="h-10 sm:h-12 lg:h-16 w-auto object-contain transition-transform duration-300 hover:scale-105"
+                  loading="eager"
                 />
               </Link>
             </div>
@@ -101,103 +98,93 @@ export const Header = () => {
               ))}
             </nav>
 
-            {/* Mobile menu button */}
-            <TouchOptimized 
-              touchTarget="large"
-              hapticFeedback
-              className="lg:hidden"
+            {/* Mobile menu button - Always visible on mobile */}
+            <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors z-50 flex items-center justify-center min-w-[44px] min-h-[44px]"
+              aria-label="Toggle menu"
             >
-              <div className="p-2 rounded-lg hover:bg-gray-100 transition-colors">
-                {isMenuOpen ? (
-                  <X className="w-6 h-6 text-black" />
-                ) : (
-                  <Menu className="w-6 h-6 text-black" />
-                )}
-              </div>
-            </TouchOptimized>
+              {isMenuOpen ? (
+                <X className="w-6 h-6 text-black" />
+              ) : (
+                <Menu className="w-6 h-6 text-black" />
+              )}
+            </button>
           </div>
         </div>
       </header>
 
-      {/* Mobile Menu Overlay */}
-      {isMobile && (
+      {/* Mobile Menu Overlay - Show on all screen sizes < lg */}
+      <div
+        className={cn(
+          'fixed inset-0 z-40 lg:hidden transition-all duration-300 ease-in-out',
+          isMenuOpen 
+            ? 'opacity-100 pointer-events-auto' 
+            : 'opacity-0 pointer-events-none'
+        )}
+      >
+        {/* Backdrop */}
+        <div 
+          className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+          onClick={() => setIsMenuOpen(false)}
+        />
+        
+        {/* Menu Panel */}
         <div
           className={cn(
-            'fixed inset-0 z-40 lg:hidden transition-all duration-300 ease-in-out',
-            isMenuOpen 
-              ? 'opacity-100 pointer-events-auto' 
-              : 'opacity-0 pointer-events-none'
+            'absolute right-0 top-0 h-full w-80 max-w-[85vw] bg-white shadow-2xl transform transition-transform duration-300 ease-out',
+            isMenuOpen ? 'translate-x-0' : 'translate-x-full'
           )}
         >
-          {/* Backdrop */}
-          <div 
-            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
-            onClick={() => setIsMenuOpen(false)}
-          />
-          
-          {/* Menu Panel */}
-          <div
-            className={cn(
-              'absolute right-0 top-0 h-full w-80 max-w-[85vw] bg-white shadow-2xl transform transition-transform duration-300 ease-out',
-              isMenuOpen ? 'translate-x-0' : 'translate-x-full'
-            )}
-          >
-            <div className="flex flex-col h-full">
-              {/* Header */}
-              <div className="flex items-center justify-between p-6 border-b border-gray-200">
-                <OptimizedImage
-                  src="/lovable-uploads/85b45a40-6291-4f5d-a377-65024ddb1976.png"
-                  alt="Link Agency Logo" 
-                  width={120}
-                  height={45}
-                  className="h-8 w-auto object-contain"
-                  placeholder="empty"
-                />
-                <TouchOptimized 
-                  touchTarget="large"
-                  hapticFeedback
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  <div className="p-2 rounded-lg hover:bg-gray-100 transition-colors">
-                    <X className="w-6 h-6 text-black" />
-                  </div>
-                </TouchOptimized>
-              </div>
-
-              {/* Navigation */}
-              <nav className="flex-1 px-6 py-8">
-                <div className="space-y-2">
-                  {navigationItems.map((item) => (
-                    <TouchOptimized 
-                      key={item.label} 
-                      touchTarget="large"
-                      hapticFeedback
-                      className="block"
-                    >
-                      {item.to ? (
-                        <Link 
-                          to={item.to}
-                          className="block px-4 py-4 text-lg font-light text-black hover:text-gray-600 hover:bg-gray-50 rounded-xl transition-all duration-200"
-                        >
-                          {item.label}
-                        </Link>
-                      ) : (
-                        <button 
-                          onClick={item.action}
-                          className="w-full text-left px-4 py-4 text-lg font-light text-black hover:text-gray-600 hover:bg-gray-50 rounded-xl transition-all duration-200"
-                        >
-                          {item.label}
-                        </button>
-                      )}
-                    </TouchOptimized>
-                  ))}
-                </div>
-              </nav>
+          <div className="flex flex-col h-full">
+            {/* Header */}
+            <div className="flex items-center justify-between p-6 border-b border-gray-200">
+              <img
+                src="/lovable-uploads/85b45a40-6291-4f5d-a377-65024ddb1976.png"
+                alt="Link Agency Logo" 
+                className="h-8 w-auto object-contain"
+                loading="eager"
+              />
+              <button
+                onClick={() => setIsMenuOpen(false)}
+                className="p-2 rounded-lg hover:bg-gray-100 transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
+                aria-label="Close menu"
+              >
+                <X className="w-6 h-6 text-black" />
+              </button>
             </div>
+
+            {/* Navigation */}
+            <nav className="flex-1 px-6 py-8 overflow-y-auto">
+              <div className="space-y-2">
+                {navigationItems.map((item) => (
+                  <div key={item.label} className="block">
+                    {item.to ? (
+                      <Link 
+                        to={item.to}
+                        onClick={() => setIsMenuOpen(false)}
+                        className="block px-4 py-4 text-lg font-light text-black hover:text-gray-600 hover:bg-gray-50 rounded-xl transition-all duration-200"
+                      >
+                        {item.label}
+                      </Link>
+                    ) : (
+                      <button 
+                        onClick={() => {
+                          item.action?.();
+                          setIsMenuOpen(false);
+                        }}
+                        className="w-full text-left px-4 py-4 text-lg font-light text-black hover:text-gray-600 hover:bg-gray-50 rounded-xl transition-all duration-200"
+                      >
+                        {item.label}
+                      </button>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </nav>
           </div>
         </div>
-      )}
+      </div>
     </>
   );
 };
