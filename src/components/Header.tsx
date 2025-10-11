@@ -55,20 +55,22 @@ export const Header = () => {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 w-full bg-white z-[100] border-b border-gray-200">
+      <header className="fixed top-0 left-0 right-0 w-full bg-white z-[9999] border-b border-gray-200 shadow-sm" style={{ WebkitTransform: 'translateZ(0)', transform: 'translateZ(0)' }}>
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 sm:h-20">
             {/* Logo - Left side */}
             <Link 
               to="/" 
-              className="flex items-center flex-shrink-0"
+              className="flex items-center flex-shrink-0 relative z-[10000]"
               onClick={() => setIsMenuOpen(false)}
+              style={{ WebkitTransform: 'translateZ(0)', transform: 'translateZ(0)' }}
             >
               <img
                 src="/lovable-uploads/85b45a40-6291-4f5d-a377-65024ddb1976.png"
                 alt="Link Agency Logo" 
-                className="h-8 sm:h-10 md:h-12 w-auto object-contain"
+                className="h-10 w-auto max-w-[100px] sm:max-w-[120px] md:h-12 md:max-w-[140px] object-contain"
                 loading="eager"
+                style={{ display: 'block' }}
               />
             </Link>
 
@@ -98,8 +100,9 @@ export const Header = () => {
             {/* Mobile menu button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors flex items-center justify-center min-w-[44px] min-h-[44px]"
+              className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors flex items-center justify-center min-w-[44px] min-h-[44px] relative z-[10000]"
               aria-label="Toggle menu"
+              style={{ WebkitTransform: 'translateZ(0)', transform: 'translateZ(0)' }}
             >
               {isMenuOpen ? (
                 <X className="w-6 h-6 text-gray-900" />
