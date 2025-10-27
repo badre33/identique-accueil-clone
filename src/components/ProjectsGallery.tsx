@@ -2,6 +2,18 @@ import { ArrowRight, ExternalLink, Eye } from "lucide-react";
 import { useState } from "react";
 import { ProjectDetailsModal } from "./ProjectDetailsModal";
 
+/**
+ * OPTIMIZATION NOTE: Images in /lovable-uploads should be optimized for web:
+ * - ceaff19e-cebb-453b-a8e2-33fc348e3bad.png (1920x1920 → should be ~400x400 WebP)
+ * - oncovita-logo.jpeg (1188x700 → should be ~400x236 WebP)
+ * - 85b45a40-6291-4f5d-a377-65024ddb1976.png (1920x1920 → should be ~800x800 WebP for backgrounds)
+ * - 05dfc79f-2a20-4241-aa4d-606f6cdd30d2.png (1920x488 → should be ~400x102 WebP)
+ * - 801816e7-97bc-49c9-948c-34e3c9d49e1f.png (512x512 → should be ~200x200 WebP)
+ * - b82bb134-7256-4325-b5ca-90d055f1629c.png (800x800 → should be ~300x300 WebP)
+ * - b8c1c54b-9721-486c-81ab-dae0977cacc0.png (600x600 → should be ~200x200 WebP)
+ * Use tools like TinyPNG, Squoosh, or ImageOptim to compress before uploading
+ */
+
 export const ProjectsGallery = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -64,7 +76,7 @@ export const ProjectsGallery = () => {
     {
       title: "Personal Branding Politique",
       category: "Branding Personnel",
-      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
+      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=500&h=300&fit=crop&fm=webp&q=80",
       shortDescription: "Accompagnement stratégique sur une mission de personal branding à fort enjeu pour renforcer l'image d'une dirigeante politique influente sur la scène internationale.",
       description: "Mission stratégique de personal branding pour une figure politique influente, visant à construire une image publique authentique et inspirante détachée des codes politiques traditionnels. Notre approche s'est concentrée sur l'humanisation du discours politique, la valorisation des valeurs d'espoir et de modernité, et la création d'un storytelling personnel puissant résonnant avec les enjeux contemporains. Le projet incluait la refonte complète de la stratégie de communication multicanale, la production de contenus éditoriaux et visuels premium, ainsi que la coordination d'une équipe créative dédiée pour assurer une cohérence parfaite sur tous les points de contact et renforcer l'influence de cette personnalité sur la scène politique internationale.",
       year: "2024",

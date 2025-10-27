@@ -17,7 +17,7 @@ export const Services = () => {
       description: "Création d'identités visuelles fortes et mémorables qui reflètent l'essence de votre marque",
       features: ["Logo & Charte graphique", "Identité visuelle complète", "Guidelines de marque"],
       color: "from-blue-500 to-purple-600",
-      bgImage: "https://images.unsplash.com/photo-1558655146-d09347e92766?w=400&h=300&fit=crop",
+      bgImage: "https://images.unsplash.com/photo-1558655146-d09347e92766?w=400&h=300&fit=crop&fm=webp&q=80",
       link: "/branding"
     },
     {
@@ -26,7 +26,7 @@ export const Services = () => {
       description: "Sites web performants et applications sur mesure avec les dernières technologies",
       features: ["Sites web responsives", "Applications web", "E-commerce"],
       color: "from-green-500 to-blue-600",
-      bgImage: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop",
+      bgImage: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop&fm=webp&q=80",
       link: "/developpement-web"
     },
     {
@@ -35,7 +35,7 @@ export const Services = () => {
       description: "Stratégies digitales personnalisées pour booster votre visibilité en ligne",
       features: ["SEO & Référencement", "Publicité en ligne", "Analytics & Reporting"],
       color: "from-purple-500 to-pink-600",
-      bgImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop",
+      bgImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop&fm=webp&q=80",
       link: "/evenementiel"
     },
     {
@@ -44,7 +44,7 @@ export const Services = () => {
       description: "Accompagnement personnalisé pour définir et atteindre vos objectifs business",
       features: ["Audit & Diagnostic", "Stratégie digitale", "Formation équipes"],
       color: "from-orange-500 to-red-600",
-      bgImage: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop",
+      bgImage: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop&fm=webp&q=80",
       link: "/personal-branding"
     },
     {
@@ -53,7 +53,7 @@ export const Services = () => {
       description: "Conception d'expériences utilisateur exceptionnelles centrées sur vos clients",
       features: ["UX/UI Design", "Prototypage", "Tests utilisateurs"],
       color: "from-yellow-500 to-orange-600",
-      bgImage: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=400&h=300&fit=crop",
+      bgImage: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=400&h=300&fit=crop&fm=webp&q=80",
       link: "/innovation-ux"
     },
     {
@@ -62,7 +62,7 @@ export const Services = () => {
       description: "Optimisation continue basée sur la data pour maximiser votre ROI",
       features: ["Growth Hacking", "A/B Testing", "Conversion Rate Optimization"],
       color: "from-indigo-500 to-blue-600",
-      bgImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop",
+      bgImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop&fm=webp&q=80",
       link: "/analytics"
     },
   ];
