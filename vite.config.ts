@@ -25,11 +25,13 @@ export default defineConfig(({ mode }) => ({
     rollupOptions: {
       output: {
         manualChunks: {
-          // Séparer les dépendances volumineuses
+          // Séparer les dépendances volumineuses plus agressivement
           vendor: ['react', 'react-dom'],
           router: ['react-router-dom'],
-          ui: ['@radix-ui/react-dialog', '@radix-ui/react-popover'],
+          ui: ['@radix-ui/react-dialog', '@radix-ui/react-popover', '@radix-ui/react-select'],
           query: ['@tanstack/react-query'],
+          charts: ['recharts'],
+          forms: ['react-hook-form', '@hookform/resolvers', 'zod'],
         },
       },
     },
@@ -39,12 +41,16 @@ export default defineConfig(({ mode }) => ({
       compress: {
         drop_console: true,
         drop_debugger: true,
+        passes: 2,
+      },
+      mangle: {
+        safari10: true,
       },
     } : undefined,
     // Source maps pour le débogage
     sourcemap: mode === 'development',
-    // Taille limite des chunks
-    chunkSizeWarningLimit: 1000,
+    // Taille limite des chunks réduite pour forcer plus de splits
+    chunkSizeWarningLimit: 500,
   },
   // Optimisation des dépendances
   optimizeDeps: {
