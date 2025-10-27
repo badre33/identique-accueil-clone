@@ -6,6 +6,7 @@ import { FloatingContactWidget } from '@/components/FloatingContactWidget';
 import { blogPosts } from '@/data/content';
 import { generateWebPageSchema, generateBreadcrumbSchema } from '@/utils/structuredData';
 import { Button } from '@/components/ui/button';
+import DOMPurify from 'dompurify';
 
 const BlogPost = () => {
   const { slug } = useParams();
@@ -145,7 +146,12 @@ const BlogPost = () => {
           {/* Article Content */}
           <div 
             className="prose prose-lg max-w-none prose-headings:text-foreground prose-p:text-muted-foreground prose-strong:text-foreground prose-ul:text-muted-foreground prose-ol:text-muted-foreground"
-            dangerouslySetInnerHTML={{ __html: post.content }}
+            dangerouslySetInnerHTML={{ 
+              __html: DOMPurify.sanitize(post.content, {
+                ALLOWED_TAGS: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'ul', 'ol', 'li', 'strong', 'em', 'a', 'br', 'blockquote', 'code', 'pre', 'img'],
+                ALLOWED_ATTR: ['href', 'target', 'rel', 'src', 'alt', 'title', 'class']
+              })
+            }}
           />
           
           {/* Tags */}

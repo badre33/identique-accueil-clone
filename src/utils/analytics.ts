@@ -2,12 +2,15 @@
 
 // Configuration Google Analytics 4
 const GA4_MEASUREMENT_ID = 'G-XXXXXXXXXX'; // À remplacer par votre ID GA4
+const IS_DEVELOPMENT = import.meta.env.DEV;
 
 // Initialisation Google Analytics 4 - Chargement différé pour optimiser les performances
 export const initGA4 = () => {
   // Ne charger GA4 que si ce n'est pas un placeholder
   if (GA4_MEASUREMENT_ID === 'G-XXXXXXXXXX') {
-    console.log('⚠️ Google Analytics non configuré (ID placeholder)');
+    if (IS_DEVELOPMENT) {
+      console.log('⚠️ Google Analytics non configuré (ID placeholder)');
+    }
     return;
   }
 
@@ -37,7 +40,9 @@ export const initGA4 = () => {
     script.src = `https://www.googletagmanager.com/gtag/js?id=${GA4_MEASUREMENT_ID}`;
     document.head.appendChild(script);
 
-    console.log('✅ Google Analytics 4 initialisé (chargement différé)');
+    if (IS_DEVELOPMENT) {
+      console.log('✅ Google Analytics 4 initialisé (chargement différé)');
+    }
   };
 
   // Utiliser requestIdleCallback pour charger pendant les moments d'inactivité
@@ -68,8 +73,6 @@ export const trackConversion = (action: string, data?: Record<string, any>) => {
       custom_parameters: data,
     });
   }
-  
-  console.log('🎯 Conversion trackée:', action, data);
 };
 
 // Tracking des interactions utilisateur
@@ -126,8 +129,6 @@ export const trackPagePerformance = () => {
             custom_parameters: metrics,
           });
         }
-
-        console.log('📊 Performance trackée:', metrics);
       }, 0);
     });
   }
@@ -331,8 +332,6 @@ export const initHeatmapTracking = () => {
       click_y: clickData.y
     });
   });
-
-  console.log('🔥 Heatmap tracking initialisé');
 };
 
 // Déclaration des types pour TypeScript

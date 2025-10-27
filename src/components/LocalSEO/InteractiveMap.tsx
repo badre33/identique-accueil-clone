@@ -2,12 +2,11 @@ import React, { useEffect, useRef, useState } from 'react';
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
 import { MapPin, Navigation } from 'lucide-react';
 
-// Configuration temporaire - l'utilisateur devra entrer sa clé Mapbox
-const MAPBOX_TEMP_TOKEN = 'pk.eyJ1IjoibGluay1hZ2VuY3kiLCJhIjoiY2x0ZW1wMTIzNDU2Nzg5In0.temp-token-here';
+// Utiliser une variable d'environnement pour le token Mapbox
+// Note: Les tokens Mapbox publics (pk.*) sont conçus pour être publics et sont limités par domaine
+const MAPBOX_TOKEN = import.meta.env.VITE_MAPBOX_PUBLIC_TOKEN || '';
 
 const offices = [
   {
@@ -39,15 +38,14 @@ const offices = [
 export const InteractiveMap: React.FC = () => {
   const mapContainer = useRef<HTMLDivElement>(null);
   const map = useRef<mapboxgl.Map | null>(null);
-  const [mapboxToken, setMapboxToken] = useState(MAPBOX_TEMP_TOKEN);
-  const [tokenSet, setTokenSet] = useState(false);
   const [selectedOffice, setSelectedOffice] = useState<string | null>(null);
+  const [mapInitialized, setMapInitialized] = useState(false);
 
   const initializeMap = () => {
-    if (!mapContainer.current || !mapboxToken || tokenSet) return;
+    if (!mapContainer.current || !MAPBOX_TOKEN || mapInitialized) return;
 
     try {
-      mapboxgl.accessToken = mapboxToken;
+      mapboxgl.accessToken = MAPBOX_TOKEN;
       
       map.current = new mapboxgl.Map({
         container: mapContainer.current,
@@ -108,14 +106,14 @@ export const InteractiveMap: React.FC = () => {
       // Ajouter les contrôles de navigation
       map.current.addControl(new mapboxgl.NavigationControl(), 'top-right');
 
-      setTokenSet(true);
+      setMapInitialized(true);
     } catch (error) {
-      console.error('Erreur lors de l\'initialisation de la carte:', error);
+      // Erreur silencieuse - la carte ne se chargera simplement pas si le token est invalide
     }
   };
 
   useEffect(() => {
-    if (mapboxToken && mapboxToken !== MAPBOX_TEMP_TOKEN) {
+    if (MAPBOX_TOKEN) {
       initializeMap();
     }
 
@@ -124,7 +122,7 @@ export const InteractiveMap: React.FC = () => {
         map.current.remove();
       }
     };
-  }, [mapboxToken]);
+  }, []);
 
   const focusOnOffice = (officeId: string) => {
     const office = offices.find(o => o.id === officeId);
@@ -138,7 +136,7 @@ export const InteractiveMap: React.FC = () => {
     }
   };
 
-  if (!tokenSet && mapboxToken === MAPBOX_TEMP_TOKEN) {
+  if (!MAPBOX_TOKEN) {
     return (
       <Card className="w-full">
         <CardHeader>
@@ -150,23 +148,17 @@ export const InteractiveMap: React.FC = () => {
         <CardContent>
           <div className="space-y-4">
             <p className="text-sm text-muted-foreground">
-              Pour afficher la carte interactive, veuillez entrer votre token Mapbox public.
-              Vous pouvez l'obtenir gratuitement sur{' '}
-              <a href="https://mapbox.com/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-                mapbox.com
-              </a>
+              La carte interactive nécessite une configuration Mapbox.
+              Contactez l'administrateur pour activer cette fonctionnalité.
             </p>
-            <div className="flex gap-2">
-              <Input
-                type="password"
-                placeholder="Votre token Mapbox public"
-                value={mapboxToken}
-                onChange={(e) => setMapboxToken(e.target.value)}
-                className="flex-1"
-              />
-              <Button onClick={initializeMap} disabled={!mapboxToken || mapboxToken === MAPBOX_TEMP_TOKEN}>
-                Charger la carte
-              </Button>
+            <div className="space-y-2">
+              {offices.map((office) => (
+                <div key={office.id} className="p-3 border rounded-lg">
+                  <h4 className="font-semibold">{office.name}</h4>
+                  <p className="text-sm text-muted-foreground">{office.address}</p>
+                  <p className="text-sm text-muted-foreground">{office.phone}</p>
+                </div>
+              ))}
             </div>
           </div>
         </CardContent>
@@ -186,16 +178,18 @@ export const InteractiveMap: React.FC = () => {
         <CardContent>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-2 mb-4">
             {offices.map((office) => (
-              <Button
+              <button
                 key={office.id}
-                variant={selectedOffice === office.id ? "default" : "outline"}
-                size="sm"
                 onClick={() => focusOnOffice(office.id)}
-                className="justify-start"
+                className={`flex items-center justify-start px-3 py-2 rounded-md text-sm transition-colors ${
+                  selectedOffice === office.id
+                    ? 'bg-primary text-white'
+                    : 'border border-gray-300 hover:bg-gray-100'
+                }`}
               >
                 <Navigation className="h-4 w-4 mr-2" />
                 {office.name}
-              </Button>
+              </button>
             ))}
           </div>
         </CardContent>

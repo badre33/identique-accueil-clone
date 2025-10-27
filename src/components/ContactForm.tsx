@@ -8,14 +8,36 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Form, FormControl, FormField, FormItem, FormMessage } from '@/components/ui/form';
 
 const formSchema = z.object({
-  nom: z.string().min(2, 'Le nom doit contenir au moins 2 caractères'),
-  prenom: z.string().min(2, 'Le prénom doit contenir au moins 2 caractères'),
-  email: z.string().email('Adresse email non valide'),
-  telephone: z.string().min(8, 'Numéro de téléphone trop court'),
-  entreprise: z.string().optional(),
+  nom: z.string()
+    .trim()
+    .min(2, 'Le nom doit contenir au moins 2 caractères')
+    .max(100, 'Le nom est trop long')
+    .refine(val => !/<script|javascript:/i.test(val), 'Contenu invalide'),
+  prenom: z.string()
+    .trim()
+    .min(2, 'Le prénom doit contenir au moins 2 caractères')
+    .max(100, 'Le prénom est trop long')
+    .refine(val => !/<script|javascript:/i.test(val), 'Contenu invalide'),
+  email: z.string()
+    .trim()
+    .email('Adresse email non valide')
+    .max(255, 'Email trop long'),
+  telephone: z.string()
+    .trim()
+    .min(8, 'Numéro de téléphone trop court')
+    .max(20, 'Numéro de téléphone trop long')
+    .refine(val => /^[\d\s\-\+\(\)]+$/.test(val), 'Format de téléphone invalide'),
+  entreprise: z.string()
+    .trim()
+    .max(200, 'Nom d\'entreprise trop long')
+    .optional(),
   service: z.string().min(1, 'Veuillez sélectionner un service'),
   budget: z.string().optional(),
-  message: z.string().min(20, 'Le message doit contenir au moins 20 caractères'),
+  message: z.string()
+    .trim()
+    .min(20, 'Le message doit contenir au moins 20 caractères')
+    .max(1000, 'Le message est trop long (max 1000 caractères)')
+    .refine(val => !/<script|javascript:|on\w+=/i.test(val), 'Contenu invalide'),
   delai: z.string().optional(),
   countryCode: z.string()
 });
