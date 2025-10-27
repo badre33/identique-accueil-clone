@@ -1,4 +1,5 @@
 // Analytics et tracking avancé pour Link Agency
+import { hasPrivacyConsent } from './privacyConsent';
 
 // Configuration Google Analytics 4
 const GA4_MEASUREMENT_ID = 'G-XXXXXXXXXX'; // À remplacer par votre ID GA4
@@ -6,6 +7,14 @@ const IS_DEVELOPMENT = import.meta.env.DEV;
 
 // Initialisation Google Analytics 4 - Chargement différé pour optimiser les performances
 export const initGA4 = () => {
+  // Check privacy consent first
+  if (!hasPrivacyConsent()) {
+    if (IS_DEVELOPMENT) {
+      console.log('⚠️ Google Analytics non initialisé (pas de consentement)');
+    }
+    return;
+  }
+
   // Ne charger GA4 que si ce n'est pas un placeholder
   if (GA4_MEASUREMENT_ID === 'G-XXXXXXXXXX') {
     if (IS_DEVELOPMENT) {
@@ -64,6 +73,8 @@ export const initGA4 = () => {
 
 // Tracking des événements de conversion
 export const trackConversion = (action: string, data?: Record<string, any>) => {
+  if (!hasPrivacyConsent()) return;
+  
   if (typeof window !== 'undefined' && (window as any).gtag) {
     (window as any).gtag('event', action, {
       event_category: 'conversion',
@@ -77,6 +88,8 @@ export const trackConversion = (action: string, data?: Record<string, any>) => {
 
 // Tracking des interactions utilisateur
 export const trackUserInteraction = (element: string, action: string, data?: Record<string, any>) => {
+  if (!hasPrivacyConsent()) return;
+  
   if (typeof window !== 'undefined' && (window as any).gtag) {
     (window as any).gtag('event', action, {
       event_category: 'user_interaction',
@@ -136,6 +149,8 @@ export const trackPagePerformance = () => {
 
 // Tracking du scroll depth
 export const initScrollTracking = () => {
+  if (!hasPrivacyConsent()) return;
+  
   let maxScroll = 0;
   const scrollThresholds = [25, 50, 75, 90, 100];
   const triggeredThresholds = new Set<number>();
@@ -194,15 +209,19 @@ export class ABTestManager {
   private userVariants: Map<string, string> = new Map();
 
   constructor() {
-    // Charger les variants de l'utilisateur depuis localStorage
-    const savedVariants = localStorage.getItem('ab_test_variants');
-    if (savedVariants) {
-      this.userVariants = new Map(JSON.parse(savedVariants));
+    // Charger les variants de l'utilisateur depuis localStorage (only with consent)
+    if (hasPrivacyConsent()) {
+      const savedVariants = localStorage.getItem('ab_test_variants');
+      if (savedVariants) {
+        this.userVariants = new Map(JSON.parse(savedVariants));
+      }
     }
   }
 
   // Définir un test A/B
   defineTest(test: ABTest) {
+    if (!hasPrivacyConsent()) return;
+    
     this.tests.set(test.id, test);
     
     // Assigner un variant à l'utilisateur s'il n'en a pas déjà un
@@ -271,7 +290,9 @@ export class ABTestManager {
   }
 
   private saveUserVariants() {
-    localStorage.setItem('ab_test_variants', JSON.stringify([...this.userVariants]));
+    if (hasPrivacyConsent()) {
+      localStorage.setItem('ab_test_variants', JSON.stringify([...this.userVariants]));
+    }
   }
 }
 
@@ -280,6 +301,8 @@ export const abTestManager = new ABTestManager();
 
 // Simulation de heatmap - tracking des clics
 export const initHeatmapTracking = () => {
+  if (!hasPrivacyConsent()) return;
+  
   const heatmapData: Array<{
     x: number;
     y: number;
