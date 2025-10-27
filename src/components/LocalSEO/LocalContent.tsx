@@ -126,14 +126,60 @@ export const LocalContent: React.FC<LocalContentProps> = ({ defaultCity = 'casab
   const [selectedCity, setSelectedCity] = useState<'casablanca' | 'rabat' | 'marrakech'>(defaultCity);
   const [detectedCity, setDetectedCity] = useState<string | null>(null);
 
-  // Détection géographique basique
+  // Détection géographique basique avec cache et timeout
   useEffect(() => {
     const detectUserLocation = async () => {
+      // Check cache first (1 hour TTL)
+      const CACHE_KEY = 'linkagency_geo_location';
+      const CACHE_TTL = 60 * 60 * 1000; // 1 hour
+      
       try {
-        const response = await fetch('https://ipapi.co/json/');
+        const cached = localStorage.getItem(CACHE_KEY);
+        if (cached) {
+          const { data, timestamp } = JSON.parse(cached);
+          if (Date.now() - timestamp < CACHE_TTL && data.city) {
+            const city = data.city.toLowerCase();
+            if (city.includes('casablanca') || city.includes('casa')) {
+              setDetectedCity('casablanca');
+              setSelectedCity('casablanca');
+            } else if (city.includes('rabat')) {
+              setDetectedCity('rabat');
+              setSelectedCity('rabat');
+            } else if (city.includes('marrakech') || city.includes('marrakesh')) {
+              setDetectedCity('marrakech');
+              setSelectedCity('marrakech');
+            }
+            return;
+          }
+        }
+      } catch {
+        // Invalid cache, continue to fetch
+      }
+
+      // Fetch with timeout and proper error handling
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 5000);
+      
+      try {
+        const response = await fetch('https://ipapi.co/json/', {
+          signal: controller.signal,
+          headers: { 'Accept': 'application/json' }
+        });
+        
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}`);
+        }
+        
         const data = await response.json();
         
-        if (data.city) {
+        // Validate response structure
+        if (data && typeof data.city === 'string') {
+          // Cache the result
+          localStorage.setItem(CACHE_KEY, JSON.stringify({
+            data,
+            timestamp: Date.now()
+          }));
+          
           const city = data.city.toLowerCase();
           if (city.includes('casablanca') || city.includes('casa')) {
             setDetectedCity('casablanca');
@@ -147,7 +193,14 @@ export const LocalContent: React.FC<LocalContentProps> = ({ defaultCity = 'casab
           }
         }
       } catch (error) {
-        console.log('Géolocalisation non disponible');
+        if ((error as any).name === 'AbortError') {
+          console.warn('Geolocation request timed out');
+        } else {
+          console.warn('Geolocation unavailable:', (error as Error).message);
+        }
+        // Graceful degradation - use default city (already set)
+      } finally {
+        clearTimeout(timeoutId);
       }
     };
 

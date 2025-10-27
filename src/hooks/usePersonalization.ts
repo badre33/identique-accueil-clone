@@ -67,19 +67,38 @@ export const usePersonalization = () => {
         else if (referrer.includes('google')) industryContext = 'search';
         else if (referrer.includes('facebook') || referrer.includes('instagram')) industryContext = 'social';
 
-        // Géolocalisation (optionnelle)
-        if (navigator.geolocation && !visitorData.country) {
+        // Géolocalisation (optionnelle) with timeout and caching
+        if (!visitorData.country) {
+          const controller = new AbortController();
+          const timeoutId = setTimeout(() => controller.abort(), 5000);
+          
           try {
-            // Utiliser une API de géolocalisation IP (gratuite)
-            const geoResponse = await fetch('https://ipapi.co/json/');
-            if (geoResponse.ok) {
-              const geoData = await geoResponse.json();
+            const geoResponse = await fetch('https://ipapi.co/json/', {
+              signal: controller.signal,
+              headers: { 'Accept': 'application/json' }
+            });
+            
+            if (!geoResponse.ok) {
+              throw new Error(`HTTP ${geoResponse.status}`);
+            }
+            
+            const geoData = await geoResponse.json();
+            
+            // Validate response structure
+            if (geoData && typeof geoData.country_name === 'string') {
               visitorData.country = geoData.country_name;
               visitorData.city = geoData.city;
               visitorData.timezone = geoData.timezone;
             }
           } catch (error) {
-            console.log('Geolocation not available');
+            if ((error as any).name === 'AbortError') {
+              console.warn('Geolocation request timed out');
+            } else {
+              console.warn('Geolocation unavailable:', (error as Error).message);
+            }
+            // Graceful degradation - continue without geolocation
+          } finally {
+            clearTimeout(timeoutId);
           }
         }
 
