@@ -433,7 +433,7 @@ ${data.message}`;
               </>
             )}
           </button>
-          <p className="text-gray-500 text-xs sm:text-sm mt-3 text-center sm:text-left">
+          <p className="text-gray-400 text-xs sm:text-sm mt-3 text-center sm:text-left">
             Réponse garantie sous 24h • Les champs marqués * sont obligatoires
           </p>
         </div>
