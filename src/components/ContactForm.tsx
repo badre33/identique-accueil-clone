@@ -253,7 +253,7 @@ ${data.message}`;
                   <FormItem className="w-28 sm:w-32">
                     <Select onValueChange={field.onChange} defaultValue={field.value}>
                       <FormControl>
-                        <SelectTrigger className="bg-transparent border-0 border-b-2 border-gray-600 text-white focus:border-white rounded-none h-auto pb-2 sm:pb-3 text-sm sm:text-base">
+                        <SelectTrigger aria-label="Sélectionner un indicatif téléphonique" className="bg-transparent border-0 border-b-2 border-gray-600 text-white focus:border-white rounded-none h-auto pb-2 sm:pb-3 text-sm sm:text-base">
                           <SelectValue />
                         </SelectTrigger>
                       </FormControl>
@@ -327,7 +327,7 @@ ${data.message}`;
             <FormItem>
               <Select onValueChange={field.onChange} value={field.value}>
                 <FormControl>
-                  <SelectTrigger className="bg-transparent border-0 border-b-2 border-gray-600 text-white focus:border-white rounded-none h-auto pb-2 sm:pb-3 text-base sm:text-lg font-light">
+                  <SelectTrigger aria-label="Sélectionner le service souhaité" className="bg-transparent border-0 border-b-2 border-gray-600 text-white focus:border-white rounded-none h-auto pb-2 sm:pb-3 text-base sm:text-lg font-light">
                     <SelectValue placeholder="Service souhaité *" className="text-gray-400" />
                   </SelectTrigger>
                 </FormControl>
@@ -352,7 +352,7 @@ ${data.message}`;
               <FormItem>
                 <Select onValueChange={field.onChange} value={field.value}>
                   <FormControl>
-                    <SelectTrigger className="bg-transparent border-0 border-b-2 border-gray-600 text-white focus:border-white rounded-none h-auto pb-2 sm:pb-3 text-base sm:text-lg font-light">
+                    <SelectTrigger aria-label="Sélectionner le budget estimé" className="bg-transparent border-0 border-b-2 border-gray-600 text-white focus:border-white rounded-none h-auto pb-2 sm:pb-3 text-base sm:text-lg font-light">
                       <SelectValue placeholder="Budget estimé" className="text-gray-400" />
                     </SelectTrigger>
                   </FormControl>
@@ -375,7 +375,7 @@ ${data.message}`;
               <FormItem>
                 <Select onValueChange={field.onChange} value={field.value}>
                   <FormControl>
-                    <SelectTrigger className="bg-transparent border-0 border-b-2 border-gray-600 text-white focus:border-white rounded-none h-auto pb-2 sm:pb-3 text-base sm:text-lg font-light">
+                    <SelectTrigger aria-label="Sélectionner le délai souhaité" className="bg-transparent border-0 border-b-2 border-gray-600 text-white focus:border-white rounded-none h-auto pb-2 sm:pb-3 text-base sm:text-lg font-light">
                       <SelectValue placeholder="Délai souhaité" className="text-gray-400" />
                     </SelectTrigger>
                   </FormControl>

@@ -33,6 +33,7 @@ export const FloatingContactWidget = () => {
                 variant="ghost"
                 size="sm"
                 onClick={() => setIsOpen(false)}
+                aria-label="Fermer le widget de contact"
                 className="h-10 w-10 p-0 hover:bg-slate-100 rounded-full hover:scale-110 transition-all duration-300"
               >
                 <X className="w-5 h-5 text-slate-600" />
@@ -83,6 +84,7 @@ export const FloatingContactWidget = () => {
         {/* Enhanced Main Button with better micro-interactions */}
         <Button
           onClick={() => setIsOpen(!isOpen)}
+          aria-label={isOpen ? "Fermer les options de contact" : "Ouvrir les options de contact"}
           className="bg-gradient-to-r from-slate-900 to-slate-800 hover:from-slate-800 hover:to-slate-700 text-white rounded-full w-16 h-16 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-110 hover:-translate-y-1 group relative overflow-hidden"
         >
           <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
