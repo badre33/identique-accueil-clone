@@ -3,30 +3,58 @@
 // Configuration Google Analytics 4
 const GA4_MEASUREMENT_ID = 'G-XXXXXXXXXX'; // À remplacer par votre ID GA4
 
-// Initialisation Google Analytics 4
+// Initialisation Google Analytics 4 - Chargement différé pour optimiser les performances
 export const initGA4 = () => {
-  // Charger le script GA4
-  const script = document.createElement('script');
-  script.async = true;
-  script.src = `https://www.googletagmanager.com/gtag/js?id=${GA4_MEASUREMENT_ID}`;
-  document.head.appendChild(script);
-
-  // Initialiser gtag
-  window.dataLayer = window.dataLayer || [];
-  function gtag(...args: any[]) {
-    window.dataLayer.push(args);
+  // Ne charger GA4 que si ce n'est pas un placeholder
+  if (GA4_MEASUREMENT_ID === 'G-XXXXXXXXXX') {
+    console.log('⚠️ Google Analytics non configuré (ID placeholder)');
+    return;
   }
-  (window as any).gtag = gtag;
 
-  gtag('js', new Date());
-  gtag('config', GA4_MEASUREMENT_ID, {
-    page_title: document.title,
-    page_location: window.location.href,
-    anonymize_ip: true, // RGPD compliance
-    allow_google_signals: false, // Respect de la vie privée
-  });
+  // Vérifier si on est dans un environnement browser
+  if (typeof window === 'undefined') return;
 
-  console.log('✅ Google Analytics 4 initialisé');
+  // Différer le chargement jusqu'à ce que la page soit complètement chargée
+  const loadGA4 = () => {
+    // Initialiser gtag avant de charger le script
+    window.dataLayer = window.dataLayer || [];
+    function gtag(...args: any[]) {
+      window.dataLayer.push(args);
+    }
+    (window as any).gtag = gtag;
+
+    gtag('js', new Date());
+    gtag('config', GA4_MEASUREMENT_ID, {
+      page_title: document.title,
+      page_location: window.location.href,
+      anonymize_ip: true,
+      allow_google_signals: false,
+    });
+
+    // Charger le script GA4 de manière asynchrone
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${GA4_MEASUREMENT_ID}`;
+    document.head.appendChild(script);
+
+    console.log('✅ Google Analytics 4 initialisé (chargement différé)');
+  };
+
+  // Utiliser requestIdleCallback pour charger pendant les moments d'inactivité
+  const hasRequestIdleCallback = 'requestIdleCallback' in window;
+  
+  if (hasRequestIdleCallback) {
+    (window as any).requestIdleCallback(() => {
+      setTimeout(loadGA4, 2000);
+    }, { timeout: 5000 });
+  } else if (document.readyState === 'complete') {
+    setTimeout(loadGA4, 3000);
+  } else {
+    const win = window as Window;
+    win.addEventListener('load', () => {
+      setTimeout(loadGA4, 3000);
+    });
+  }
 };
 
 // Tracking des événements de conversion
