@@ -1,10 +1,6 @@
-const CACHE_NAME = 'link-agency-v1';
+const CACHE_NAME = 'link-agency-v2';
 const STATIC_CACHE_URLS = [
-  '/',
-  '/static/js/bundle.js',
-  '/static/css/main.css',
-  '/lovable-uploads/85b45a40-6291-4f5d-a377-65024ddb1976.png',
-  '/lovable-uploads/c2c2bc5c-1a2d-4fdd-a6ac-9d3a8d13ac23.png'
+  '/'
 ];
 
 // Installation du service worker
@@ -41,23 +37,45 @@ self.addEventListener('activate', (event) => {
 
 // Stratégie de cache
 self.addEventListener('fetch', (event) => {
-  // Stratégie Cache First pour les assets statiques
-  if (event.request.destination === 'image' || 
-      event.request.url.includes('/static/') ||
-      event.request.url.includes('/lovable-uploads/')) {
+  const url = new URL(event.request.url);
+  
+  // Stratégie Cache First pour les assets statiques (images, JS, CSS, fonts)
+  const isStaticAsset = 
+    event.request.destination === 'image' || 
+    event.request.destination === 'script' ||
+    event.request.destination === 'style' ||
+    event.request.destination === 'font' ||
+    url.pathname.includes('/lovable-uploads/') ||
+    url.pathname.includes('/assets/') ||
+    url.pathname.match(/\.(js|css|png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$/);
+
+  if (isStaticAsset) {
     event.respondWith(
-      caches.match(event.request)
-        .then((response) => {
-          return response || fetch(event.request)
-            .then((fetchResponse) => {
-              const responseClone = fetchResponse.clone();
-              caches.open(CACHE_NAME)
-                .then((cache) => {
-                  cache.put(event.request, responseClone);
-                });
-              return fetchResponse;
-            });
-        })
+      caches.open(CACHE_NAME).then((cache) => {
+        return cache.match(event.request).then((cachedResponse) => {
+          // Retourner la réponse en cache si disponible
+          if (cachedResponse) {
+            // Rafraîchir le cache en arrière-plan pour les prochaines visites
+            fetch(event.request).then((fetchResponse) => {
+              if (fetchResponse && fetchResponse.status === 200) {
+                cache.put(event.request, fetchResponse.clone());
+              }
+            }).catch(() => {});
+            return cachedResponse;
+          }
+          
+          // Sinon, fetch et mettre en cache
+          return fetch(event.request).then((fetchResponse) => {
+            if (fetchResponse && fetchResponse.status === 200) {
+              cache.put(event.request, fetchResponse.clone());
+            }
+            return fetchResponse;
+          }).catch(() => {
+            // Retourner une réponse par défaut en cas d'erreur
+            return new Response('Asset not available', { status: 503 });
+          });
+        });
+      })
     );
     return;
   }
