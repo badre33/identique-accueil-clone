@@ -5,98 +5,111 @@ export const WebVitalsOptimizer = () => {
   useEffect(() => {
     // Optimisation LCP (Largest Contentful Paint)
     const optimizeLCP = () => {
-      // 1. Précharger les images hero et critiques
-      const heroImages = [
-        '/lovable-uploads/c2c2bc5c-1a2d-4fdd-a6ac-9d3a8d13ac23.png',
-        '/lovable-uploads/85b45a40-6291-4f5d-a377-65024ddb1976.png'
-      ];
+      // Utiliser requestAnimationFrame pour éviter forced reflows
+      requestAnimationFrame(() => {
+        // 1. Précharger les images hero et critiques
+        const heroImages = [
+          '/lovable-uploads/c2c2bc5c-1a2d-4fdd-a6ac-9d3a8d13ac23.png',
+          '/lovable-uploads/85b45a40-6291-4f5d-a377-65024ddb1976.png'
+        ];
 
-      heroImages.forEach(src => {
-        const link = document.createElement('link');
-        link.rel = 'preload';
-        link.href = src;
-        link.as = 'image';
-        link.fetchPriority = 'high';
-        document.head.appendChild(link);
+        heroImages.forEach(src => {
+          const link = document.createElement('link');
+          link.rel = 'preload';
+          link.href = src;
+          link.as = 'image';
+          link.fetchPriority = 'high';
+          document.head.appendChild(link);
+        });
+
+        // 2. Optimiser les polices critiques
+        const fontPreload = document.createElement('link');
+        fontPreload.rel = 'preload';
+        fontPreload.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap';
+        fontPreload.as = 'style';
+        fontPreload.fetchPriority = 'high';
+        document.head.appendChild(fontPreload);
+
+        // 3. Marquer les images critiques - Batch les modifications
+        const criticalImages = document.querySelectorAll('img[data-hero="true"], .hero img, h1 + img');
+        criticalImages.forEach(img => {
+          if (img instanceof HTMLImageElement) {
+            img.fetchPriority = 'high';
+            img.loading = 'eager';
+          }
+        });
+
+        // 4. Optimiser le CSS critique
+        const criticalCSS = `
+          /* CSS critique inline pour améliorer LCP */
+          .hero-section { 
+            min-height: 100vh; 
+            background-image: url('/lovable-uploads/c2c2bc5c-1a2d-4fdd-a6ac-9d3a8d13ac23.png');
+            background-size: cover;
+            background-position: center;
+            contain: layout style paint;
+          }
+          .logo-image { 
+            width: 120px; 
+            height: auto; 
+            aspect-ratio: 120/40;
+            contain: layout;
+          }
+        `;
+        
+        const style = document.createElement('style');
+        style.textContent = criticalCSS;
+        document.head.appendChild(style);
       });
-
-      // 2. Optimiser les polices critiques
-      const fontPreload = document.createElement('link');
-      fontPreload.rel = 'preload';
-      fontPreload.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap';
-      fontPreload.as = 'style';
-      fontPreload.fetchPriority = 'high';
-      document.head.appendChild(fontPreload);
-
-      // 3. Marquer les images critiques
-      const criticalImages = document.querySelectorAll('img[data-hero="true"], .hero img, h1 + img');
-      criticalImages.forEach(img => {
-        if (img instanceof HTMLImageElement) {
-          img.fetchPriority = 'high';
-          img.loading = 'eager';
-        }
-      });
-
-      // 4. Optimiser le CSS critique
-      const criticalCSS = `
-        /* CSS critique inline pour améliorer LCP */
-        .hero-section { 
-          min-height: 100vh; 
-          background-image: url('/lovable-uploads/c2c2bc5c-1a2d-4fdd-a6ac-9d3a8d13ac23.png');
-          background-size: cover;
-          background-position: center;
-          contain: layout style paint;
-        }
-        .logo-image { 
-          width: 120px; 
-          height: auto; 
-          aspect-ratio: 120/40;
-          contain: layout;
-        }
-      `;
-      
-      const style = document.createElement('style');
-      style.textContent = criticalCSS;
-      document.head.appendChild(style);
     };
 
     // Optimisation CLS (Cumulative Layout Shift)
     const optimizeCLS = () => {
-      // 1. Définir les aspect-ratio pour toutes les images
-      const images = document.querySelectorAll('img:not([width]):not([height])');
-      images.forEach(img => {
-        if (img instanceof HTMLImageElement) {
-          // Ratios par défaut selon le contexte
-          if (img.closest('.hero')) {
-            img.style.aspectRatio = '16/9';
-          } else if (img.closest('.logo')) {
-            img.style.aspectRatio = '3/1';
-          } else if (img.closest('.service-card')) {
-            img.style.aspectRatio = '4/3';
-          } else {
-            img.style.aspectRatio = '16/9';
+      // Utiliser requestAnimationFrame pour grouper les modifications DOM et éviter forced reflows
+      requestAnimationFrame(() => {
+        // Phase 1: LECTURE - Collecter les informations sans modifier le DOM
+        const images = document.querySelectorAll('img:not([width]):not([height])');
+        const imageData: Array<{ element: HTMLImageElement; aspectRatio: string }> = [];
+        
+        images.forEach(img => {
+          if (img instanceof HTMLImageElement) {
+            let aspectRatio = '16/9'; // Default
+            // Collecter les infos de contexte
+            if (img.closest('.hero')) {
+              aspectRatio = '16/9';
+            } else if (img.closest('.logo')) {
+              aspectRatio = '3/1';
+            } else if (img.closest('.service-card')) {
+              aspectRatio = '4/3';
+            }
+            imageData.push({ element: img, aspectRatio });
           }
-          img.style.width = '100%';
-          img.style.height = 'auto';
-        }
-      });
+        });
 
-      // 2. Réserver l'espace pour les composants dynamiques
-      const dynamicElements = document.querySelectorAll('[data-dynamic="true"]');
-      dynamicElements.forEach(element => {
-        if (element instanceof HTMLElement) {
-          element.style.minHeight = '200px';
-          element.style.containIntrinsicSize = '200px';
-        }
-      });
+        // Phase 2: ÉCRITURE - Appliquer tous les changements en batch
+        imageData.forEach(({ element, aspectRatio }) => {
+          element.style.aspectRatio = aspectRatio;
+          element.style.width = '100%';
+          element.style.height = 'auto';
+        });
 
-      // 3. Optimiser les transitions pour éviter les shifts
-      const animatedElements = document.querySelectorAll('[class*="animate-"], [class*="transition-"]');
-      animatedElements.forEach(element => {
-        if (element instanceof HTMLElement) {
-          element.style.willChange = 'transform';
-          element.style.transform = 'translateZ(0)'; // Force hardware acceleration
-        }
+        // 2. Réserver l'espace pour les composants dynamiques
+        const dynamicElements = document.querySelectorAll('[data-dynamic="true"]');
+        dynamicElements.forEach(element => {
+          if (element instanceof HTMLElement) {
+            element.style.minHeight = '200px';
+            element.style.containIntrinsicSize = '200px';
+          }
+        });
+
+        // 3. Optimiser les transitions pour éviter les shifts
+        const animatedElements = document.querySelectorAll('[class*="animate-"], [class*="transition-"]');
+        animatedElements.forEach(element => {
+          if (element instanceof HTMLElement) {
+            element.style.willChange = 'transform';
+            element.style.transform = 'translateZ(0)'; // Force hardware acceleration
+          }
+        });
       });
 
       // 4. Observer les layout shifts
@@ -160,16 +173,19 @@ export const WebVitalsOptimizer = () => {
         // Images lazy loading
         const lazyImages = document.querySelectorAll('img[data-lazy="true"]');
         const imageObserver = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              const img = entry.target as HTMLImageElement;
-              if (img.dataset.src) {
-                img.src = img.dataset.src;
-                img.classList.remove('opacity-0');
-                img.classList.add('animate-fade-in');
-                imageObserver.unobserve(img);
+          // Grouper les modifications DOM avec requestAnimationFrame
+          requestAnimationFrame(() => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                const img = entry.target as HTMLImageElement;
+                if (img.dataset.src) {
+                  img.src = img.dataset.src;
+                  img.classList.remove('opacity-0');
+                  img.classList.add('animate-fade-in');
+                  imageObserver.unobserve(img);
+                }
               }
-            }
+            });
           });
         }, { rootMargin: '50px' });
 
@@ -178,13 +194,16 @@ export const WebVitalsOptimizer = () => {
         // Composants lazy loading
         const lazyComponents = document.querySelectorAll('[data-component-lazy="true"]');
         const componentObserver = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              const element = entry.target as HTMLElement;
-              element.style.visibility = 'visible';
-              element.classList.add('animate-fade-in');
-              componentObserver.unobserve(element);
-            }
+          // Grouper les modifications DOM avec requestAnimationFrame
+          requestAnimationFrame(() => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                const element = entry.target as HTMLElement;
+                element.style.visibility = 'visible';
+                element.classList.add('animate-fade-in');
+                componentObserver.unobserve(element);
+              }
+            });
           });
         }, { rootMargin: '100px' });
 

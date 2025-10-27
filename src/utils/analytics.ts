@@ -262,13 +262,28 @@ export const initHeatmapTracking = () => {
   // Tracker les clics
   document.addEventListener('click', (event) => {
     const target = event.target as HTMLElement;
-    const rect = document.documentElement.getBoundingClientRect();
+    
+    // Obtenir className de manière sécurisée (gérer SVGAnimatedString et autres cas)
+    const getClassName = (el: HTMLElement): string => {
+      if (!el.className) return '';
+      // Convertir en string de manière sûre (fonctionne pour string et SVGAnimatedString)
+      const classNameStr = String(el.className);
+      // Pour SVGAnimatedString, String() retourne "[object SVGAnimatedString]"
+      // donc on utilise getAttribute comme fallback
+      if (classNameStr.includes('SVGAnimatedString') || classNameStr.includes('[object')) {
+        return el.getAttribute('class') || '';
+      }
+      return classNameStr;
+    };
+    
+    const className = getClassName(target);
+    const elementSelector = target.tagName.toLowerCase() + (className ? '.' + className.split(' ').join('.') : '');
     
     const clickData = {
       x: event.clientX,
       y: event.clientY + window.scrollY,
       timestamp: Date.now(),
-      element: target.tagName.toLowerCase() + (target.className ? '.' + target.className.split(' ').join('.') : ''),
+      element: elementSelector,
       page: window.location.pathname
     };
 
