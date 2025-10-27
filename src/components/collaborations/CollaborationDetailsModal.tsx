@@ -79,6 +79,7 @@ export const CollaborationDetailsModal = ({ collaboration, isOpen, onClose }: Co
                 href={collaboration.url}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={`Visiter le site web de ${collaboration.name}`}
                 className="p-3 hover:bg-gray-100 rounded-full transition-all duration-300 hover:scale-110"
               >
                 <ExternalLink className="w-6 h-6 text-gray-600" />

@@ -73,6 +73,7 @@ export const CollaborationCard = ({ collaboration, index, onClick }: Collaborati
             href={collaboration.url}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label={`Visiter le site web de ${collaboration.name}`}
             className="opacity-0 group-hover:opacity-100 transition-all duration-300 p-3 hover:bg-gray-100 rounded-full hover:scale-110"
             onClick={(e) => e.stopPropagation()}
           >
