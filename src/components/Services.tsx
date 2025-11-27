@@ -1,5 +1,5 @@
 
-import { Code, Palette, Megaphone, Users, Lightbulb, TrendingUp } from "lucide-react";
+import { Code, Palette, Megaphone, Users, Lightbulb, TrendingUp, Calendar } from "lucide-react";
 import { TouchOptimized } from "./TouchOptimized";
 import { ResponsiveGrid } from "./ResponsiveGrid";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
@@ -64,6 +64,15 @@ export const Services = () => {
       color: "from-indigo-500 to-blue-600",
       bgImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop&fm=webp&q=80",
       link: "/analytics"
+    },
+    {
+      icon: Calendar,
+      title: "Événementiel d'Exception",
+      description: "Organisation d'événements mémorables qui marquent les esprits et renforcent votre image",
+      features: ["Événements corporate", "Lancements de produits", "Team building"],
+      color: "from-pink-500 to-rose-600",
+      bgImage: "https://images.unsplash.com/photo-1511578314322-379afb476865?w=400&h=300&fit=crop&fm=webp&q=80",
+      link: "/evenementiel"
     },
   ];
 
