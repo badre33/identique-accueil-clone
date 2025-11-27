@@ -36,7 +36,7 @@ export const Services = () => {
       features: ["SEO & Référencement", "Publicité en ligne", "Analytics & Reporting"],
       color: "from-purple-500 to-pink-600",
       bgImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop&fm=webp&q=80",
-      link: "/evenementiel"
+      link: "/marketing-digital"
     },
     {
       icon: Users,
@@ -45,7 +45,7 @@ export const Services = () => {
       features: ["Audit & Diagnostic", "Stratégie digitale", "Formation équipes"],
       color: "from-orange-500 to-red-600",
       bgImage: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop&fm=webp&q=80",
-      link: "/personal-branding"
+      link: "/conseil-strategique"
     },
     {
       icon: Lightbulb,
