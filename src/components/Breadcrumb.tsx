@@ -11,6 +11,8 @@ export const Breadcrumb = () => {
     'evenementiel': 'Événementiel',
     'personal-branding': 'Personal Branding',
     'content-digital': 'Content Digital',
+    'marketing-digital': 'Marketing Digital',
+    'conseil-strategique': 'Conseil Stratégique',
     'inside-link': 'Inside Link',
     'collaborations': 'Collaborations',
   };
