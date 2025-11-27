@@ -13,7 +13,6 @@ export const Breadcrumb = () => {
     'content-digital': 'Content Digital',
     'marketing-digital': 'Marketing Digital',
     'conseil-strategique': 'Conseil Stratégique',
-    'influence-marketing': 'Influence Marketing',
     'inside-link': 'Inside Link',
     'collaborations': 'Collaborations',
   };

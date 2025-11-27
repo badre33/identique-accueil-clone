@@ -29,7 +29,6 @@ const Blog = () => <LazyWrapper importFunc={() => import('./pages/Blog')} />;
 const BlogPost = () => <LazyWrapper importFunc={() => import('./pages/BlogPost')} />;
 const MarketingDigital = () => <LazyWrapper importFunc={() => import('./pages/MarketingDigital')} />;
 const ConseilStrategique = () => <LazyWrapper importFunc={() => import('./pages/ConseilStrategique')} />;
-const InfluenceMarketing = () => <LazyWrapper importFunc={() => import('./pages/InfluenceMarketing')} />;
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -64,7 +63,6 @@ const App = () => (
                 <Route path="/developpement-web" element={<DeveloppementWeb />} />
                 <Route path="/marketing-digital" element={<MarketingDigital />} />
                 <Route path="/conseil-strategique" element={<ConseilStrategique />} />
-                <Route path="/influence-marketing" element={<InfluenceMarketing />} />
                 <Route path="/innovation-ux" element={<InnovationUX />} />
                 <Route path="/analytics" element={<Analytics />} />
                 <Route path="/inside-link" element={<InsideLink />} />
