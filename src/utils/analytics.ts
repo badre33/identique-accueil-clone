@@ -1,5 +1,4 @@
 // Analytics et tracking avancé pour Link Agency
-import { hasPrivacyConsent } from './privacyConsent';
 
 // Configuration Google Analytics 4
 const GA4_MEASUREMENT_ID = 'G-XXXXXXXXXX'; // À remplacer par votre ID GA4
@@ -7,14 +6,6 @@ const IS_DEVELOPMENT = import.meta.env.DEV;
 
 // Initialisation Google Analytics 4 - Chargement différé pour optimiser les performances
 export const initGA4 = () => {
-  // Check privacy consent first
-  if (!hasPrivacyConsent()) {
-    if (IS_DEVELOPMENT) {
-      console.log('⚠️ Google Analytics non initialisé (pas de consentement)');
-    }
-    return;
-  }
-
   // Ne charger GA4 que si ce n'est pas un placeholder
   if (GA4_MEASUREMENT_ID === 'G-XXXXXXXXXX') {
     if (IS_DEVELOPMENT) {
@@ -73,8 +64,6 @@ export const initGA4 = () => {
 
 // Tracking des événements de conversion
 export const trackConversion = (action: string, data?: Record<string, any>) => {
-  if (!hasPrivacyConsent()) return;
-  
   if (typeof window !== 'undefined' && (window as any).gtag) {
     (window as any).gtag('event', action, {
       event_category: 'conversion',
@@ -88,8 +77,6 @@ export const trackConversion = (action: string, data?: Record<string, any>) => {
 
 // Tracking des interactions utilisateur
 export const trackUserInteraction = (element: string, action: string, data?: Record<string, any>) => {
-  if (!hasPrivacyConsent()) return;
-  
   if (typeof window !== 'undefined' && (window as any).gtag) {
     (window as any).gtag('event', action, {
       event_category: 'user_interaction',
@@ -104,21 +91,25 @@ export const trackUserInteraction = (element: string, action: string, data?: Rec
   }
 
   // Stocker aussi localement pour les heatmaps
-  const interactions = JSON.parse(localStorage.getItem('user_interactions') || '[]');
-  interactions.push({
-    element,
-    action,
-    timestamp: new Date().toISOString(),
-    page: window.location.pathname,
-    data
-  });
-  
-  // Garder seulement les 1000 dernières interactions
-  if (interactions.length > 1000) {
-    interactions.splice(0, interactions.length - 1000);
+  try {
+    const interactions = JSON.parse(localStorage.getItem('user_interactions') || '[]');
+    interactions.push({
+      element,
+      action,
+      timestamp: new Date().toISOString(),
+      page: window.location.pathname,
+      data
+    });
+    
+    // Garder seulement les 1000 dernières interactions
+    if (interactions.length > 1000) {
+      interactions.splice(0, interactions.length - 1000);
+    }
+    
+    localStorage.setItem('user_interactions', JSON.stringify(interactions));
+  } catch (error) {
+    console.warn('localStorage not available:', error);
   }
-  
-  localStorage.setItem('user_interactions', JSON.stringify(interactions));
 };
 
 // Tracking des performances de page
@@ -149,8 +140,6 @@ export const trackPagePerformance = () => {
 
 // Tracking du scroll depth
 export const initScrollTracking = () => {
-  if (!hasPrivacyConsent()) return;
-  
   let maxScroll = 0;
   const scrollThresholds = [25, 50, 75, 90, 100];
   const triggeredThresholds = new Set<number>();
@@ -209,19 +198,19 @@ export class ABTestManager {
   private userVariants: Map<string, string> = new Map();
 
   constructor() {
-    // Charger les variants de l'utilisateur depuis localStorage (only with consent)
-    if (hasPrivacyConsent()) {
+    // Charger les variants de l'utilisateur depuis localStorage
+    try {
       const savedVariants = localStorage.getItem('ab_test_variants');
       if (savedVariants) {
         this.userVariants = new Map(JSON.parse(savedVariants));
       }
+    } catch (error) {
+      console.warn('localStorage not available:', error);
     }
   }
 
   // Définir un test A/B
   defineTest(test: ABTest) {
-    if (!hasPrivacyConsent()) return;
-    
     this.tests.set(test.id, test);
     
     // Assigner un variant à l'utilisateur s'il n'en a pas déjà un
@@ -290,8 +279,10 @@ export class ABTestManager {
   }
 
   private saveUserVariants() {
-    if (hasPrivacyConsent()) {
+    try {
       localStorage.setItem('ab_test_variants', JSON.stringify([...this.userVariants]));
+    } catch (error) {
+      console.warn('localStorage not available:', error);
     }
   }
 }
@@ -301,15 +292,19 @@ export const abTestManager = new ABTestManager();
 
 // Simulation de heatmap - tracking des clics
 export const initHeatmapTracking = () => {
-  if (!hasPrivacyConsent()) return;
-  
-  const heatmapData: Array<{
+  let heatmapData: Array<{
     x: number;
     y: number;
     timestamp: number;
     element: string;
     page: string;
-  }> = JSON.parse(localStorage.getItem('heatmap_data') || '[]');
+  }> = [];
+
+  try {
+    heatmapData = JSON.parse(localStorage.getItem('heatmap_data') || '[]');
+  } catch (error) {
+    console.warn('localStorage not available:', error);
+  }
 
   // Tracker les clics
   document.addEventListener('click', (event) => {
@@ -346,7 +341,11 @@ export const initHeatmapTracking = () => {
       heatmapData.splice(0, heatmapData.length - 500);
     }
     
-    localStorage.setItem('heatmap_data', JSON.stringify(heatmapData));
+    try {
+      localStorage.setItem('heatmap_data', JSON.stringify(heatmapData));
+    } catch (error) {
+      console.warn('localStorage not available:', error);
+    }
     
     // Tracker dans GA4 aussi
     trackUserInteraction('click', 'heatmap_click', {

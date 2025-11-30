@@ -11,7 +11,6 @@ import { ErrorBoundary } from "@/components/ErrorBoundary";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { LazyWrapper } from "@/components/LazyWrapper";
 import { CriticalResourcesPreloader } from "@/components/CriticalResourcesPreloader";
-import { PrivacyConsentBanner } from "@/components/PrivacyConsentBanner";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 
@@ -48,7 +47,6 @@ const App = () => (
         <QueryClientProvider client={queryClient}>
           <TooltipProvider>
             <CriticalResourcesPreloader />
-            <PrivacyConsentBanner />
             <Toaster />
             <Sonner />
           <BrowserRouter>
