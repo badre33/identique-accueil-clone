@@ -158,17 +158,15 @@ const InfluenceMarketing = () => {
               <p className="text-xl text-gray-700 leading-relaxed mb-8 font-light">
                 Amplifiez votre visibilité avec des campagnes d'influence stratégiques. Du product seeding aux ambassadeurs long-terme, nous connectons votre marque aux meilleurs créateurs du Maroc.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button 
-                  onClick={handleContact}
-                  className="bg-black text-white hover:bg-gray-800 px-8 py-6 text-lg hover-scale"
-                >
-                  Lancer une campagne
-                </Button>
-                <Button variant="outline" className="px-8 py-6 text-lg border-2 hover:bg-gray-50">
-                  Voir notre database
-                </Button>
-              </div>
+              <Button 
+                onClick={handleContact}
+                className="bg-black text-white hover:bg-gray-800 px-8 py-6 text-lg hover-scale"
+              >
+                Lancer une campagne d'influence
+              </Button>
+              <p className="text-gray-600 text-sm mt-4 font-light">
+                +1000 influenceurs qualifiés • Casting sur-mesure • Production premium • ROI garanti
+              </p>
             </div>
             
             <div className="relative animate-fade-in">
