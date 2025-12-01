@@ -17,7 +17,7 @@ const InnovationUX = () => {
     "@graph": [
       generateServiceSchema(
         "Innovation & UX Design",
-        "Conception d'expériences utilisateur exceptionnelles centrées sur vos clients avec UX/UI Design et prototypage",
+        "Conception d'expériences utilisateur exceptionnelles : recherche UX, UI design, prototypage interactif et tests utilisateurs au Maroc",
         "À partir de 3000 MAD"
       ),
       generateWebPageSchema(
@@ -129,8 +129,8 @@ const InnovationUX = () => {
     <div className="min-h-screen bg-gradient-to-br from-yellow-50 via-white to-orange-50 pt-16 sm:pt-20">
       <SEOHead
         title="Innovation & UX Design - Expériences Utilisateur Exceptionnelles | Link Agency"
-        description="Conception UX/UI, prototypage et tests utilisateurs pour créer des expériences digitales centrées sur vos clients au Maroc."
-        keywords="ux design maroc, ui design, expérience utilisateur, prototypage, tests utilisateurs, design thinking casablanca"
+        description="Conception UX/UI professionnelle au Maroc : recherche utilisateur, design d'interfaces, prototypage interactif et tests pour optimiser l'expérience client."
+        keywords="ux design maroc, ui design, expérience utilisateur, prototypage, tests utilisateurs, design thinking casablanca, ux ui designer"
         url="https://linkagency.ma/innovation-ux"
         type="service"
         structuredData={uxSchema}

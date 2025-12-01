@@ -5,8 +5,29 @@ import { Link } from "react-router-dom";
 import { FloatingContactWidget } from "@/components/FloatingContactWidget";
 import { WorkflowTimeline } from "@/components/WorkflowTimeline";
 import { SEOHead } from "@/components/SEOHead";
+import { generateServiceSchema, generateWebPageSchema, generateBreadcrumbSchema } from "@/utils/structuredData";
 
 const ConseilStrategique = () => {
+  const conseilSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      generateServiceSchema(
+        "Conseil Stratégique & Transformation Digitale",
+        "Accompagnement stratégique complet pour accélérer votre transformation digitale : audit, stratégie et accompagnement au Maroc",
+        "À partir de 6000 MAD"
+      ),
+      generateWebPageSchema(
+        "Conseil Stratégique Digital - Audit & Transformation | Link Agency Maroc",
+        "Cabinet conseil stratégique au Maroc : audit entreprise, stratégie digitale, transformation digitale et formation équipes pour accélérer votre croissance.",
+        "https://linkagency.ma/conseil-strategique"
+      ),
+      generateBreadcrumbSchema([
+        { name: "Accueil", url: "https://linkagency.ma/" },
+        { name: "Conseil Stratégique", url: "https://linkagency.ma/conseil-strategique" }
+      ])
+    ]
+  };
+
   const consultingServices = [
     {
       icon: <Target className="w-8 h-8" />,
@@ -105,9 +126,12 @@ const ConseilStrategique = () => {
   return (
     <div className="min-h-screen bg-white pt-16 sm:pt-20">
       <SEOHead
-        title="Conseil Stratégique Digital | Agence Link Agency Maroc"
-        description="Accompagnement personnalisé pour définir et atteindre vos objectifs business. Audit, stratégie digitale et formation équipes par notre cabinet conseil au Maroc."
-        keywords="conseil stratégique maroc, consulting digital, stratégie digitale, transformation digitale, audit entreprise"
+        title="Conseil Stratégique Digital - Audit & Transformation | Link Agency Maroc"
+        description="Cabinet conseil stratégique au Maroc : audit entreprise, stratégie digitale, transformation digitale et formation équipes pour accélérer votre croissance."
+        keywords="conseil stratégique maroc, consulting digital, stratégie digitale, transformation digitale, audit entreprise, cabinet conseil casablanca"
+        url="https://linkagency.ma/conseil-strategique"
+        type="service"
+        structuredData={conseilSchema}
       />
       <Header />
       

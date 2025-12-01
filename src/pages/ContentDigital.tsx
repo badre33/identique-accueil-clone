@@ -5,8 +5,30 @@ import { Link } from "react-router-dom";
 import { FloatingContactWidget } from "@/components/FloatingContactWidget";
 import { QuoteCalculator } from "@/components/QuoteCalculator";
 import { WorkflowTimeline } from "@/components/WorkflowTimeline";
+import { SEOHead } from "@/components/SEOHead";
+import { generateServiceSchema, generateWebPageSchema, generateBreadcrumbSchema } from "@/utils/structuredData";
 
 const ContentDigital = () => {
+  const contentSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      generateServiceSchema(
+        "Création de Contenu Digital & Réseaux Sociaux",
+        "Production de contenus digitaux engageants pour réseaux sociaux, vidéos, photographie et rédaction web au Maroc",
+        "À partir de 2500 MAD"
+      ),
+      generateWebPageSchema(
+        "Content Digital - Création Contenu & Réseaux Sociaux | Link Agency",
+        "Production de contenus digitaux performants : réseaux sociaux, vidéos, photographie et rédaction web. Création de contenu au Maroc.",
+        "https://linkagency.ma/content-digital"
+      ),
+      generateBreadcrumbSchema([
+        { name: "Accueil", url: "https://linkagency.ma/" },
+        { name: "Content Digital", url: "https://linkagency.ma/content-digital" }
+      ])
+    ]
+  };
+
   const contentServices = [
     {
       icon: <Smartphone className="w-6 h-6 sm:w-8 sm:h-8" />,
@@ -104,6 +126,14 @@ const ContentDigital = () => {
 
   return (
     <div className="min-h-screen bg-white pt-16 sm:pt-20">
+      <SEOHead
+        title="Content Digital - Création Contenu & Réseaux Sociaux | Link Agency"
+        description="Production de contenus digitaux performants : réseaux sociaux, vidéos, photographie et rédaction web. Création de contenu au Maroc."
+        keywords="création contenu digital maroc, réseaux sociaux, production vidéo, photographie professionnelle, rédaction web, content marketing"
+        url="https://linkagency.ma/content-digital"
+        type="service"
+        structuredData={contentSchema}
+      />
       <Header />
       <FloatingContactWidget />
       
