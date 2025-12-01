@@ -20,8 +20,8 @@ const Blog = () => {
     "@context": "https://schema.org",
     "@graph": [
       generateWebPageSchema(
-        "Blog Marketing Digital & Branding - Actualités Link Agency Maroc",
-        "Découvrez nos conseils et actualités marketing digital, branding et événementiel au Maroc. Articles d'experts, tendances et guides pratiques.",
+        "Blog Marketing Digital & Branding - Actualités & Conseils Experts | Link Agency Maroc",
+        "Articles experts en marketing digital, branding, SEO et réseaux sociaux au Maroc. Guides pratiques, tendances 2024 et conseils pour développer votre entreprise.",
         "https://linkagency.ma/blog"
       ),
       generateBreadcrumbSchema([
@@ -55,9 +55,9 @@ const Blog = () => {
   return (
     <div className="min-h-screen bg-white pt-16 sm:pt-20">
       <SEOHead
-        title="Blog Marketing Digital & Branding - Link Agency Maroc"
-        description="Découvrez nos conseils et actualités marketing digital, branding et événementiel au Maroc. Articles d'experts, tendances et guides pratiques."
-        keywords="blog marketing digital maroc, actualités branding, conseils communication, tendances marketing maroc, guides pratiques"
+        title="Blog Marketing Digital & Branding - Actualités & Conseils Experts | Link Agency Maroc"
+        description="Articles experts en marketing digital, branding, SEO et réseaux sociaux au Maroc. Guides pratiques, tendances 2024 et conseils pour développer votre entreprise."
+        keywords="blog marketing digital maroc, conseils branding, seo maroc, réseaux sociaux, stratégie digitale, guides pratiques marketing, actualités communication maroc"
         url="https://linkagency.ma/blog"
         type="website"
         structuredData={blogSchema}
@@ -69,11 +69,11 @@ const Blog = () => {
       <section className="pt-32 pb-20 px-8 lg:px-16 bg-gradient-to-br from-primary/5 to-secondary/10">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-light text-foreground mb-6">
-            Blog & <span className="text-primary font-medium">Actualités</span>
+            Blog Marketing Digital & <span className="text-primary font-medium">Branding</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
-            Découvrez nos insights, conseils d'experts et dernières tendances en marketing digital, 
-            branding et événementiel au Maroc.
+            Guides experts, stratégies éprouvées et tendances marketing digital au Maroc. 
+            Tout ce dont vous avez besoin pour faire grandir votre entreprise.
           </p>
           
           {/* Filtres par catégorie */}

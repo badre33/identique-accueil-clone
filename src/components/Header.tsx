@@ -47,9 +47,9 @@ export const Header = () => {
   const navigationItems = [
     { label: 'Accueil', action: () => scrollToSection('accueil') },
     { label: 'Services', action: () => scrollToSection('services') },
+    { label: 'Blog', to: '/blog' },
     { label: 'Collaborations', to: '/collaborations' },
     { label: 'Inside Link', to: '/inside-link' },
-    { label: 'À propos', action: () => scrollToSection('apropos') },
     { label: 'Contact', action: () => scrollToSection('contact') },
   ];
 
