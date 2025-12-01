@@ -196,17 +196,15 @@ const Evenementiel = () => {
               <p className="text-xl text-gray-700 leading-relaxed mb-8 font-light">
                 Organisation d'événements corporate d'exception au Maroc. De la conception à la réalisation, nous transformons vos événements d'entreprise en expériences mémorables.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button 
-                  onClick={handleContact}
-                  className="bg-black text-white hover:bg-gray-800 px-8 py-6 text-lg hover-scale"
-                >
-                  Parlons de votre événement
-                </Button>
-                <Button variant="outline" className="px-8 py-6 text-lg border-2 hover:bg-gray-50">
-                  Voir nos réalisations
-                </Button>
-              </div>
+              <Button 
+                onClick={handleContact}
+                className="bg-black text-white hover:bg-gray-800 px-8 py-6 text-lg hover-scale"
+              >
+                Parlons de votre événement
+              </Button>
+              <p className="text-gray-600 text-sm mt-4 font-light">
+                150+ événements organisés • Équipe experte • Couverture 360° • Support 24/7
+              </p>
             </div>
             
             <div className="relative animate-fade-in">
