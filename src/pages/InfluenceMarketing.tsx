@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { FloatingContactWidget } from "@/components/FloatingContactWidget";
 import { WorkflowTimeline } from "@/components/WorkflowTimeline";
 import { SEOHead } from "@/components/SEOHead";
+import { LocationSection } from "@/components/LocationSection";
 import { generateServiceSchema, generateWebPageSchema, generateBreadcrumbSchema } from "@/utils/structuredData";
 
 const InfluenceMarketing = () => {
@@ -13,18 +14,38 @@ const InfluenceMarketing = () => {
     "@graph": [
       generateServiceSchema(
         "Influence Marketing & Collaborations Créateurs Maroc",
-        "Campagnes d'influence marketing au Maroc avec influenceurs et créateurs de contenu : product seeding, micro-influence, KOL premium, unboxings, ambassador program et lancements de produits. Agence digitale spécialisée à Casablanca.",
+        "Agence influence marketing à Casablanca et Marrakech : campagnes avec influenceurs et créateurs de contenu marocains. Product seeding, micro-influence, KOL premium, unboxings, ambassador program et lancements de produits. Service premium dans tout le Maroc.",
         "Sur devis"
       ),
       generateWebPageSchema(
-        "Influence Marketing Maroc - Campagnes Influenceurs & KOL | Link Agency",
-        "Agence influence marketing Casablanca : campagnes avec influenceurs maroc, collaborations créateurs, product seeding, micro-influence et lancement de produit. Casting, production, diffusion & analytics.",
+        "Influence Marketing Maroc - Agence Casablanca & Marrakech | Link Agency",
+        "Agence influence marketing Casablanca et Marrakech : campagnes avec influenceurs maroc, collaborations créateurs, product seeding, micro-influence et lancement de produit. Casting → production → diffusion → analytics. Service dans tout le Maroc.",
         "https://linkagency.ma/influence-marketing"
       ),
       generateBreadcrumbSchema([
         { name: "Accueil", url: "https://linkagency.ma/" },
         { name: "Influence Marketing", url: "https://linkagency.ma/influence-marketing" }
-      ])
+      ]),
+      {
+        "@type": "Organization",
+        "@id": "https://linkagency.ma/#organization",
+        "name": "Link Agency",
+        "url": "https://linkagency.ma",
+        "logo": "https://linkagency.ma/logo.png",
+        "address": [
+          {
+            "@type": "PostalAddress",
+            "addressLocality": "Casablanca",
+            "addressCountry": "MA"
+          },
+          {
+            "@type": "PostalAddress",
+            "addressLocality": "Marrakech",
+            "addressCountry": "MA"
+          }
+        ],
+        "areaServed": ["Casablanca", "Marrakech", "Rabat", "Tanger", "Maroc"]
+      }
     ]
   };
 
@@ -127,9 +148,9 @@ const InfluenceMarketing = () => {
   return (
     <div className="min-h-screen bg-white pt-16 sm:pt-20">
       <SEOHead
-        title="Influence Marketing Maroc - Campagnes Influenceurs & Créateurs Casablanca"
-        description="Agence influence marketing Casablanca : campagnes avec influenceurs maroc, collaborations créateurs de contenu, product seeding, micro-influence, KOL premium et lancement de produit. Casting → validation → production → diffusion → analytics."
-        keywords="influenceurs maroc, campagne influence maroc, lancement de produit maroc, agence marketing maroc, agence digitale maroc, link agency casablanca, influence marketing casablanca, créateurs contenu maroc"
+        title="Influence Marketing Maroc - Agence Casablanca & Marrakech | Link Agency"
+        description="Agence influence marketing à Casablanca et Marrakech : campagnes avec influenceurs maroc, collaborations créateurs de contenu, product seeding, micro-influence, KOL premium et lancement de produit. Casting → production → diffusion → analytics. Service dans tout le Maroc."
+        keywords="influence marketing casablanca, influence marketing marrakech, influenceurs maroc, campagne influence maroc, lancement de produit maroc, agence marketing casablanca, agence digitale marrakech, link agency casablanca, créateurs contenu maroc, KOL maroc"
         url="https://linkagency.ma/influence-marketing"
         type="service"
         structuredData={influenceSchema}
@@ -153,10 +174,10 @@ const InfluenceMarketing = () => {
               </div>
               <h1 className="text-5xl lg:text-6xl font-light mb-8 text-black leading-tight">
                 Influence Marketing
-                <span className="block text-3xl lg:text-4xl text-gray-600 mt-2">& Collaborations Créateurs</span>
+                <span className="block text-3xl lg:text-4xl text-gray-600 mt-2">Casablanca & Marrakech</span>
               </h1>
               <p className="text-xl text-gray-700 leading-relaxed mb-8 font-light">
-                Amplifiez votre visibilité avec des campagnes d'influence stratégiques. Du product seeding aux ambassadeurs long-terme, nous connectons votre marque aux meilleurs créateurs du Maroc.
+                Agence d'influence marketing basée à Casablanca et Marrakech. Amplifiez votre visibilité avec des campagnes stratégiques : du product seeding aux ambassadeurs long-terme, nous connectons votre marque aux meilleurs influenceurs et créateurs de contenu du Maroc.
               </p>
               <Button 
                 onClick={handleContact}
@@ -267,6 +288,9 @@ const InfluenceMarketing = () => {
         </div>
       </section>
 
+      {/* Location Section */}
+      <LocationSection serviceType="influence" />
+
       {/* Why Choose Us Section */}
       <section className="py-20 px-8 lg:px-16 bg-gradient-to-br from-purple-50 to-white">
         <div className="max-w-6xl mx-auto">
@@ -274,7 +298,7 @@ const InfluenceMarketing = () => {
             <div>
               <h2 className="text-4xl font-light mb-8 text-black">Pourquoi Link Agency ?</h2>
               <p className="text-gray-600 mb-8 leading-relaxed">
-                Une expertise reconnue en influence marketing avec accès à la plus grande database d'influenceurs et créateurs au Maroc.
+                Agence influence marketing premium basée à Casablanca et Marrakech. Une expertise reconnue avec accès à la plus grande database d'influenceurs et créateurs du Maroc. Nous accompagnons les marques dans tout le royaume pour des campagnes d'influence à fort impact.
               </p>
               <div className="space-y-4">
                 {advantages.map((advantage, index) => (

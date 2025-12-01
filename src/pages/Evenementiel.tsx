@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { FloatingContactWidget } from "@/components/FloatingContactWidget";
 import { WorkflowTimeline } from "@/components/WorkflowTimeline";
 import { SEOHead } from "@/components/SEOHead";
+import { LocationSection } from "@/components/LocationSection";
 import { generateServiceSchema, generateWebPageSchema, generateBreadcrumbSchema } from "@/utils/structuredData";
 import { generatePageMeta } from "@/utils/seoHelpers";
 
@@ -17,18 +18,38 @@ const Evenementiel = () => {
     "@graph": [
       generateServiceSchema(
         "Événementiel Corporate au Maroc",
-        "Organisation d'événements corporate haut de gamme au Maroc : conférences, lancements produits, séminaires, team-building, signatures de partenariat et événements institutionnels. Agence événementielle premium à Casablanca.",
+        "Agence événementielle à Casablanca et Marrakech : organisation d'événements corporate haut de gamme. Conférences, lancements produits, séminaires, team-building, signatures de partenariat et événements institutionnels. Service premium dans tout le Maroc.",
         "Sur devis"
       ),
       generateWebPageSchema(
-        "Événementiel Corporate Maroc - Organisation Événements Entreprise | Link Agency",
-        "Agence événementielle corporate Casablanca : organisation professionnelle de conférences, lancements produits, séminaires entreprise au Maroc. Conception, production, coordination & coverage.",
+        "Événementiel Corporate - Agence Casablanca & Marrakech | Link Agency",
+        "Agence événementielle corporate Casablanca et Marrakech : organisation professionnelle de conférences, lancements produits, séminaires et événements d'entreprise au Maroc. Conception → production → coordination → coverage. Service dans tout le royaume.",
         "https://linkagency.ma/evenementiel"
       ),
       generateBreadcrumbSchema([
         { name: "Accueil", url: "https://linkagency.ma/" },
         { name: "Événementiel Corporate", url: "https://linkagency.ma/evenementiel" }
-      ])
+      ]),
+      {
+        "@type": "Organization",
+        "@id": "https://linkagency.ma/#organization",
+        "name": "Link Agency",
+        "url": "https://linkagency.ma",
+        "logo": "https://linkagency.ma/logo.png",
+        "address": [
+          {
+            "@type": "PostalAddress",
+            "addressLocality": "Casablanca",
+            "addressCountry": "MA"
+          },
+          {
+            "@type": "PostalAddress",
+            "addressLocality": "Marrakech",
+            "addressCountry": "MA"
+          }
+        ],
+        "areaServed": ["Casablanca", "Marrakech", "Rabat", "Tanger", "Maroc"]
+      }
     ]
   };
   const eventTypes = [
@@ -162,9 +183,9 @@ const Evenementiel = () => {
   return (
     <div className="min-h-screen bg-white pt-16 sm:pt-20">
       <SEOHead
-        title="Événementiel Corporate Maroc - Organisation Événements Entreprise Casablanca"
-        description="Agence événementielle corporate Casablanca : organisation professionnelle de conférences, lancements produits, séminaires, team-building et événements institutionnels au Maroc. Méthodologie Link Agency : conception → production → coordination → coverage."
-        keywords="événementiel corporate maroc, agence événementielle casablanca, organisation événements entreprise maroc, événementiel corporate casablanca, agence communication casablanca, agence marketing maroc, événements institutionnels maroc"
+        title="Événementiel Corporate - Agence Casablanca & Marrakech | Link Agency"
+        description="Agence événementielle corporate à Casablanca et Marrakech : organisation professionnelle de conférences, lancements produits, séminaires, team-building et événements institutionnels au Maroc. Méthodologie Link Agency : conception → production → coordination → coverage. Service dans tout le Maroc."
+        keywords="événementiel corporate casablanca, événementiel corporate marrakech, agence événementielle casablanca, agence événementielle marrakech, organisation événements entreprise maroc, agence communication casablanca, agence marketing marrakech, événements institutionnels maroc"
         url="https://linkagency.ma/evenementiel"
         type="service"
         structuredData={evenementielSchema}
@@ -188,10 +209,10 @@ const Evenementiel = () => {
               </div>
               <h1 className="text-5xl lg:text-6xl font-light mb-8 text-black leading-tight">
                 Événementiel Corporate
-                <span className="block text-3xl lg:text-4xl text-gray-600 mt-2">Haut de gamme</span>
+                <span className="block text-3xl lg:text-4xl text-gray-600 mt-2">Casablanca & Marrakech</span>
               </h1>
               <p className="text-xl text-gray-700 leading-relaxed mb-8 font-light">
-                Organisation d'événements corporate d'exception au Maroc. De la conception à la réalisation, nous transformons vos événements d'entreprise en expériences mémorables.
+                Agence événementielle basée à Casablanca et Marrakech. Organisation d'événements corporate d'exception dans tout le Maroc. De la conception à la réalisation, nous transformons vos événements d'entreprise en expériences mémorables.
               </p>
               <Button 
                 onClick={handleContact}
@@ -328,6 +349,9 @@ const Evenementiel = () => {
         </div>
       </section>
 
+      {/* Location Section */}
+      <LocationSection serviceType="evenementiel" />
+
       {/* Why Choose Us Section */}
       <section className="py-20 px-8 lg:px-16 bg-blue-50">
         <div className="max-w-6xl mx-auto">
@@ -335,7 +359,7 @@ const Evenementiel = () => {
             <div>
               <h2 className="text-4xl font-light mb-8 text-black">Pourquoi Link Agency ?</h2>
               <p className="text-gray-600 mb-8 leading-relaxed">
-                Une agence événementielle premium avec une méthodologie éprouvée et une équipe d'experts dédiés à l'excellence.
+                Agence événementielle premium basée à Casablanca et Marrakech. Une méthodologie éprouvée et une équipe d'experts dédiés à l'excellence événementielle. Nous accompagnons les entreprises dans tout le Maroc pour créer des événements corporate mémorables.
               </p>
               <div className="space-y-4">
                 {advantages.map((advantage, index) => (
