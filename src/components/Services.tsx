@@ -40,30 +40,30 @@ export const Services = () => {
     },
     {
       icon: Users,
+      title: "Événementiel Corporate",
+      description: "Organisation d'événements corporate d'exception : conférences, lancements, séminaires",
+      features: ["Conception événementielle", "Production & logistique", "Coverage média"],
+      color: "from-blue-500 to-indigo-600",
+      bgImage: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400&h=300&fit=crop&fm=webp&q=80",
+      link: "/evenementiel"
+    },
+    {
+      icon: TrendingUp,
+      title: "Influence Marketing",
+      description: "Campagnes d'influence avec créateurs et KOL pour booster votre visibilité",
+      features: ["Casting influenceurs", "Production contenu", "Analytics ROI"],
+      color: "from-purple-500 to-pink-600",
+      bgImage: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=400&h=300&fit=crop&fm=webp&q=80",
+      link: "/influence-marketing"
+    },
+    {
+      icon: Lightbulb,
       title: "Conseil Stratégique",
       description: "Accompagnement personnalisé pour définir et atteindre vos objectifs business",
       features: ["Audit & Diagnostic", "Stratégie digitale", "Formation équipes"],
       color: "from-orange-500 to-red-600",
       bgImage: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop&fm=webp&q=80",
       link: "/conseil-strategique"
-    },
-    {
-      icon: Lightbulb,
-      title: "Innovation & UX",
-      description: "Conception d'expériences utilisateur exceptionnelles centrées sur vos clients",
-      features: ["UX/UI Design", "Prototypage", "Tests utilisateurs"],
-      color: "from-yellow-500 to-orange-600",
-      bgImage: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=400&h=300&fit=crop&fm=webp&q=80",
-      link: "/innovation-ux"
-    },
-    {
-      icon: TrendingUp,
-      title: "Croissance & Analytics",
-      description: "Optimisation continue basée sur la data pour maximiser votre ROI",
-      features: ["Growth Hacking", "A/B Testing", "Conversion Rate Optimization"],
-      color: "from-indigo-500 to-blue-600",
-      bgImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop&fm=webp&q=80",
-      link: "/analytics"
     },
   ];
 

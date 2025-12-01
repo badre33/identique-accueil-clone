@@ -16,51 +16,96 @@ const Evenementiel = () => {
     "@context": "https://schema.org",
     "@graph": [
       generateServiceSchema(
-        "Services Événementiel & Communication",
-        "Organisation complète d'événements corporate, marketing et communication événementielle au Maroc : conception, production, logistique",
-        "À partir de 8000 MAD"
+        "Événementiel Corporate au Maroc",
+        "Organisation d'événements corporate haut de gamme au Maroc : conférences, lancements produits, séminaires, team-building, signatures de partenariat et événements institutionnels. Agence événementielle premium à Casablanca.",
+        "Sur devis"
       ),
       generateWebPageSchema(
-        "Événementiel - Organisation Événements Corporate & Marketing | Link Agency",
-        "Organisation complète d'événements professionnels, corporate et marketing au Maroc : conception, production, logistique et communication événementielle.",
+        "Événementiel Corporate Maroc - Organisation Événements Entreprise | Link Agency",
+        "Agence événementielle corporate Casablanca : organisation professionnelle de conférences, lancements produits, séminaires entreprise au Maroc. Conception, production, coordination & coverage.",
         "https://linkagency.ma/evenementiel"
       ),
       generateBreadcrumbSchema([
         { name: "Accueil", url: "https://linkagency.ma/" },
-        { name: "Services Événementiel", url: "https://linkagency.ma/evenementiel" }
+        { name: "Événementiel Corporate", url: "https://linkagency.ma/evenementiel" }
       ])
     ]
   };
-  const eventServices = [
+  const eventTypes = [
     {
-      icon: <Palette className="w-8 h-8" />,
-      title: "Conception & Direction Artistique",
-      description: "Nous imaginons des concepts événementiels uniques, en cohérence avec votre image de marque et vos objectifs. Notre équipe créative conçoit chaque détail visuel et narratif pour offrir une expérience immersive et cohérente : scénographie, ambiance, identité visuelle, storytelling, tout est pensé pour capter l'attention et laisser une empreinte."
+      icon: <Briefcase className="w-8 h-8" />,
+      title: "Conférences & Séminaires",
+      description: "Organisation de conférences d'entreprise, séminaires stratégiques et conventions professionnelles avec gestion complète de la logistique."
+    },
+    {
+      icon: <Star className="w-8 h-8" />,
+      title: "Lancements de Produits",
+      description: "Événements de lancement créatifs et impactants pour marquer le lancement de vos nouveaux produits ou services."
     },
     {
       icon: <Users className="w-8 h-8" />,
-      title: "Production & Logistique Événementielle",
-      description: "Nous assurons l'organisation complète de votre événement, du repérage des lieux à la coordination des équipes sur le terrain. Notre expertise couvre les aspects techniques, réglementaires et logistiques, pour garantir une exécution fluide et sans imprévu, dans le respect des délais et du budget."
+      title: "Team Building",
+      description: "Activités de cohésion d'équipe sur mesure pour renforcer l'esprit d'entreprise et la collaboration."
     },
     {
-      icon: <Music className="w-8 h-8" />,
-      title: "Événements Musicaux & Techniques de Scène",
-      description: "Nous organisons des événements musicaux allant du showcase privé au festival de grande envergure. Nos équipes techniques gèrent la mise en place de scènes, la sonorisation, les lumières, la régie, les effets spéciaux et la coordination des artistes. L'expérience musicale est conçue pour être à la fois maîtrisée et percutante."
-    },
-    {
-      icon: <Briefcase className="w-8 h-8" />,
-      title: "Gestion des Événements Professionnels",
-      description: "Nous accompagnons les entreprises dans la création de leurs temps forts : conférences, séminaires, lancements de produit, inaugurations… Chaque événement est conçu comme un outil stratégique de communication, avec un déroulé précis, une organisation rigoureuse et une mise en scène impactante."
+      icon: <Palette className="w-8 h-8" />,
+      title: "Signatures de Partenariat",
+      description: "Cérémonies officielles et événements protocolaires pour sceller vos partenariats stratégiques."
     },
     {
       icon: <Monitor className="w-8 h-8" />,
-      title: "Événements Hybrides & Diffusion Digitale",
-      description: "Nous concevons et produisons des événements hybrides ou 100% digitaux. Captation, streaming, diffusion multi-plateformes, interactions en temps réel… Nos solutions digitales permettent d'élargir votre audience, tout en maintenant un haut niveau d'engagement et de qualité visuelle."
+      title: "Événements Institutionnels",
+      description: "Organisation d'événements officiels, inaugurations et célébrations institutionnelles de prestige."
     },
     {
       icon: <Camera className="w-8 h-8" />,
-      title: "Communication Événementielle & Contenu",
-      description: "Nous créons l'ensemble des supports visuels et outils de communication liés à l'événement : identité graphique, visuels réseaux sociaux, teasers vidéo, landing page ou système d'invitation en ligne. Nous assurons également la couverture photo/vidéo pendant l'événement pour valoriser l'impact de vos actions."
+      title: "Galas & Réceptions",
+      description: "Soirées de gala, réceptions VIP et événements de prestige avec service haut de gamme."
+    }
+  ];
+
+  const pricingPlans = [
+    {
+      name: "Starter",
+      price: "À partir de 15 000 MAD",
+      description: "Idéal pour les événements intimes et les réunions professionnelles",
+      features: [
+        "Jusqu'à 50 participants",
+        "Conception événementielle basique",
+        "Logistique et coordination",
+        "Support technique standard",
+        "Couverture photo"
+      ]
+    },
+    {
+      name: "Standard",
+      price: "À partir de 35 000 MAD",
+      description: "Parfait pour les événements corporate de moyenne envergure",
+      features: [
+        "Jusqu'à 200 participants",
+        "Conception & direction artistique",
+        "Production complète",
+        "Coordination sur place",
+        "Couverture photo & vidéo",
+        "Diffusion en direct",
+        "Rapport post-événement"
+      ],
+      popular: true
+    },
+    {
+      name: "Premium",
+      price: "Sur devis",
+      description: "Solution complète pour les événements d'exception",
+      features: [
+        "Capacité illimitée",
+        "Direction artistique sur mesure",
+        "Production premium",
+        "Équipe dédiée 24/7",
+        "Multi-caméras & live streaming",
+        "Contenu social media",
+        "Analytics & reporting détaillé",
+        "Service VIP & protocole"
+      ]
     }
   ];
 
@@ -82,31 +127,31 @@ const Evenementiel = () => {
   const workflowSteps = [
     {
       number: "1",
-      title: "Briefing & Conceptualisation",
-      description: "Nous analysons vos objectifs, votre audience et vos contraintes pour concevoir un concept événementiel unique et mémorable, parfaitement aligné avec votre image de marque.",
-      duration: "1 semaine",
-      icon: <Search className="w-8 h-8" />
+      title: "Conception",
+      description: "Analyse de vos objectifs et création du concept événementiel sur mesure aligné avec votre image de marque.",
+      duration: "1-2 semaines",
+      icon: <Palette className="w-8 h-8" />
     },
     {
       number: "2",
-      title: "Planification & Production",
-      description: "Développement du concept, recherche de lieux, coordination des prestataires, création des supports visuels et mise en place de la logistique complète de votre événement.",
-      duration: "3-6 semaines",
-      icon: <Calendar className="w-8 h-8" />
-    },
-    {
-      number: "3",
-      title: "Réalisation & Coordination",
-      description: "Gestion opérationnelle le jour J avec notre équipe sur place, coordination des équipes techniques, accueil des invités et suivi en temps réel pour un événement parfait.",
-      duration: "Jour J",
+      title: "Production",
+      description: "Planification détaillée, recherche de lieux, coordination des prestataires et création des supports de communication.",
+      duration: "2-4 semaines",
       icon: <Settings className="w-8 h-8" />
     },
     {
+      number: "3",
+      title: "Coordination",
+      description: "Gestion opérationnelle le jour J avec notre équipe dédiée, coordination technique et suivi en temps réel.",
+      duration: "Jour J",
+      icon: <Users className="w-8 h-8" />
+    },
+    {
       number: "4",
-      title: "Bilan & Valorisation",
-      description: "Livraison des contenus photo/vidéo, analyse des retombées, rapport de performance et recommandations pour optimiser vos futurs événements.",
-      duration: "1-2 semaines",
-      icon: <Zap className="w-8 h-8" />
+      title: "Coverage",
+      description: "Couverture photo/vidéo professionnelle, création de contenu social media et rapport analytique détaillé.",
+      duration: "Post-événement",
+      icon: <Camera className="w-8 h-8" />
     }
   ];
 
@@ -120,9 +165,9 @@ const Evenementiel = () => {
   return (
     <div className="min-h-screen bg-white pt-16 sm:pt-20">
       <SEOHead
-        title="Événementiel - Organisation Événements Corporate & Marketing | Link Agency"
-        description="Organisation complète d'événements professionnels, corporate et marketing au Maroc : conception, production, logistique et communication événementielle."
-        keywords="événementiel maroc, organisation événements, événements corporate, événements marketing, production événementielle, agence événementielle casablanca"
+        title="Événementiel Corporate Maroc - Organisation Événements Entreprise Casablanca"
+        description="Agence événementielle corporate Casablanca : organisation professionnelle de conférences, lancements produits, séminaires, team-building et événements institutionnels au Maroc. Méthodologie Link Agency : conception → production → coordination → coverage."
+        keywords="événementiel corporate maroc, agence événementielle casablanca, organisation événements entreprise maroc, événementiel corporate casablanca, agence communication casablanca, agence marketing maroc, événements institutionnels maroc"
         url="https://linkagency.ma/evenementiel"
         type="service"
         structuredData={evenementielSchema}
@@ -145,11 +190,11 @@ const Evenementiel = () => {
                 Excellence événementielle
               </div>
               <h1 className="text-5xl lg:text-6xl font-light mb-8 text-black leading-tight">
-                Événementiel
-                <span className="block text-3xl lg:text-4xl text-gray-600 mt-2">d'exception</span>
+                Événementiel Corporate
+                <span className="block text-3xl lg:text-4xl text-gray-600 mt-2">Haut de gamme</span>
               </h1>
               <p className="text-xl text-gray-700 leading-relaxed mb-8 font-light">
-                Nous concevons et organisons des événements mémorables qui marquent les esprits et renforcent votre image de marque. Chaque détail compte pour créer des expériences uniques.
+                Organisation d'événements corporate d'exception au Maroc. De la conception à la réalisation, nous transformons vos événements d'entreprise en expériences mémorables.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
@@ -190,53 +235,113 @@ const Evenementiel = () => {
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Types d'événements Section */}
       <section className="py-20 px-8 lg:px-16 bg-gradient-to-b from-white to-gray-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-light mb-6 text-black">Nos services événementiels</h2>
+            <h2 className="text-4xl lg:text-5xl font-light mb-6 text-black">Types d'événements corporate</h2>
             <p className="text-xl text-gray-600 font-light max-w-3xl mx-auto">
-              De la conception à la réalisation, nous vous accompagnons à chaque étape pour créer des événements qui marquent
+              Des solutions événementielles complètes pour tous vos besoins d'entreprise
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {eventServices.map((service, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {eventTypes.map((type, index) => (
               <div key={index} className="group bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-blue-200">
-                <div className="flex items-start space-x-4">
-                  <div className="text-blue-600 bg-blue-50 p-3 rounded-lg group-hover:bg-blue-100 transition-colors">
-                    {service.icon}
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-medium mb-3 text-black group-hover:text-blue-600 transition-colors">
-                      {service.title}
-                    </h3>
-                    <p className="text-gray-600 leading-relaxed text-sm">
-                      {service.description}
-                    </p>
-                  </div>
+                <div className="text-blue-600 bg-blue-50 p-4 rounded-lg group-hover:bg-blue-100 transition-colors inline-block mb-6">
+                  {type.icon}
                 </div>
+                <h3 className="text-xl font-medium mb-3 text-black group-hover:text-blue-600 transition-colors">
+                  {type.title}
+                </h3>
+                <p className="text-gray-600 leading-relaxed text-sm">
+                  {type.description}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Workflow Timeline */}
-      <WorkflowTimeline 
-        steps={workflowSteps}
-        title="Notre processus événementiel"
-        subtitle="De la conception à la réalisation, une approche méthodique pour des événements d'exception"
-      />
+      {/* Méthodologie Link Agency */}
+      <section className="py-20 px-8 lg:px-16 bg-black text-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-light mb-6">Méthodologie Link Agency</h2>
+            <p className="text-xl text-gray-300 font-light max-w-3xl mx-auto">
+              Un processus éprouvé pour des événements d'exception
+            </p>
+          </div>
+          <WorkflowTimeline 
+            steps={workflowSteps}
+            title=""
+            subtitle=""
+          />
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-20 px-8 lg:px-16 bg-gradient-to-b from-gray-50 to-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-light mb-6 text-black">Nos offres événementiel</h2>
+            <p className="text-xl text-gray-600 font-light max-w-3xl mx-auto">
+              Des solutions adaptées à tous vos besoins événementiels
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pricingPlans.map((plan, index) => (
+              <div 
+                key={index} 
+                className={`relative bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 ${
+                  plan.popular ? 'border-4 border-blue-600 transform scale-105' : 'border border-gray-200'
+                }`}
+              >
+                {plan.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-blue-600 text-white px-6 py-2 rounded-full text-sm font-semibold">
+                      Plus populaire
+                    </span>
+                  </div>
+                )}
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-semibold mb-4 text-black">{plan.name}</h3>
+                  <p className="text-3xl font-bold text-blue-600 mb-4">{plan.price}</p>
+                  <p className="text-gray-600 text-sm">{plan.description}</p>
+                </div>
+                <ul className="space-y-4 mb-8">
+                  {plan.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0 mt-1" />
+                      <span className="text-gray-700 text-sm">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <Button 
+                  onClick={handleContact}
+                  className={`w-full py-4 ${
+                    plan.popular 
+                      ? 'bg-blue-600 hover:bg-blue-700 text-white' 
+                      : 'bg-gray-100 hover:bg-gray-200 text-black'
+                  }`}
+                >
+                  Demander un devis
+                </Button>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Why Choose Us Section */}
       <section className="py-20 px-8 lg:px-16 bg-blue-50">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl font-light mb-8 text-black">Pourquoi nous choisir ?</h2>
+              <h2 className="text-4xl font-light mb-8 text-black">Pourquoi Link Agency ?</h2>
               <p className="text-gray-600 mb-8 leading-relaxed">
-                Notre expertise et notre passion pour l'événementiel nous permettent de créer des expériences uniques et mémorables.
+                Une agence événementielle premium avec une méthodologie éprouvée et une équipe d'experts dédiés à l'excellence.
               </p>
               <div className="space-y-4">
                 {advantages.map((advantage, index) => (

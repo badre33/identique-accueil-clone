@@ -30,7 +30,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://linkagency.ma/en/branding" />
   </url>
 
-  <!-- Services Événementiel -->
+  <!-- Services Événementiel Corporate -->
   <url>
     <loc>https://linkagency.ma/evenementiel</loc>
     <lastmod>2025-01-13</lastmod>
@@ -39,6 +39,17 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://linkagency.ma/evenementiel" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://linkagency.ma/ar/evenementiel" />
     <xhtml:link rel="alternate" hreflang="en" href="https://linkagency.ma/en/evenementiel" />
+  </url>
+
+  <!-- Services Influence Marketing -->
+  <url>
+    <loc>https://linkagency.ma/influence-marketing</loc>
+    <lastmod>2025-01-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://linkagency.ma/influence-marketing" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://linkagency.ma/ar/influence-marketing" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://linkagency.ma/en/influence-marketing" />
   </url>
 
   <!-- Personal Branding -->

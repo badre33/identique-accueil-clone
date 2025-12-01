@@ -17,6 +17,7 @@ import NotFound from "./pages/NotFound";
 // Lazy loading des pages
 const Branding = () => <LazyWrapper importFunc={() => import('./pages/Branding')} />;
 const Evenementiel = () => <LazyWrapper importFunc={() => import('./pages/Evenementiel')} />;
+const InfluenceMarketing = () => <LazyWrapper importFunc={() => import('./pages/InfluenceMarketing')} />;
 const PersonalBranding = () => <LazyWrapper importFunc={() => import('./pages/PersonalBranding')} />;
 const ContentDigital = () => <LazyWrapper importFunc={() => import('./pages/ContentDigital')} />;
 const Analytics = () => <LazyWrapper importFunc={() => import('./pages/Analytics')} />;
@@ -56,6 +57,7 @@ const App = () => (
                 <Route path="/" element={<Index />} />
                 <Route path="/branding" element={<Branding />} />
                 <Route path="/evenementiel" element={<Evenementiel />} />
+                <Route path="/influence-marketing" element={<InfluenceMarketing />} />
                 <Route path="/personal-branding" element={<PersonalBranding />} />
                 <Route path="/content-digital" element={<ContentDigital />} />
                 <Route path="/developpement-web" element={<DeveloppementWeb />} />
