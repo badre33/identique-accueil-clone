@@ -11,7 +11,7 @@ import { ScrollToTop } from "@/components/ScrollToTop";
 import { ScrollProgress } from "@/components/ScrollProgress";
 import { FloatingContactWidget } from "@/components/FloatingContactWidget";
 import { SEOHead } from "@/components/SEOHead";
-
+import { Footer } from "@/components/Footer";
 import { OptimizedCTAs } from "@/components/OptimizedCTAs";
 import { LocalSEOSection } from "@/components/LocalSEO";
 import { generateOrganizationSchema, generateLocalBusinessSchema, generateWebPageSchema } from "@/utils/structuredData";
@@ -67,6 +67,7 @@ const Index = () => {
       <div id="contact">
         <Contact />
       </div>
+      <Footer />
       <ScrollToTop />
       <FloatingContactWidget />
     </div>

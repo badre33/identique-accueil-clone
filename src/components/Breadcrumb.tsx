@@ -8,13 +8,15 @@ export const Breadcrumb = () => {
 
   const breadcrumbNameMap: { [key: string]: string } = {
     'branding': 'Branding',
-    'evenementiel': 'Événementiel',
+    'evenementiel': 'Événementiel Corporate',
+    'influence-marketing': 'Influence Marketing',
     'personal-branding': 'Personal Branding',
     'content-digital': 'Content Digital',
     'marketing-digital': 'Marketing Digital',
     'conseil-strategique': 'Conseil Stratégique',
     'inside-link': 'Inside Link',
     'collaborations': 'Collaborations',
+    'blog': 'Blog',
   };
 
   if (pathnames.length === 0) return null;
