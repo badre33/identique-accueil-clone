@@ -5,8 +5,29 @@ import { Link } from "react-router-dom";
 import { FloatingContactWidget } from "@/components/FloatingContactWidget";
 import { WorkflowTimeline } from "@/components/WorkflowTimeline";
 import { SEOHead } from "@/components/SEOHead";
+import { generateServiceSchema, generateWebPageSchema, generateBreadcrumbSchema } from "@/utils/structuredData";
 
 const MarketingDigital = () => {
+  const marketingSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      generateServiceSchema(
+        "Marketing Digital & Stratégies Digitales",
+        "Stratégies marketing digital complètes : SEO, publicité en ligne, social media et analytics au Maroc",
+        "À partir de 4000 MAD"
+      ),
+      generateWebPageSchema(
+        "Marketing Digital - SEO, Publicité & Social Media | Link Agency Maroc",
+        "Stratégies marketing digital sur-mesure pour booster votre visibilité : SEO, publicité en ligne, social media marketing et analytics au Maroc.",
+        "https://linkagency.ma/marketing-digital"
+      ),
+      generateBreadcrumbSchema([
+        { name: "Accueil", url: "https://linkagency.ma/" },
+        { name: "Marketing Digital", url: "https://linkagency.ma/marketing-digital" }
+      ])
+    ]
+  };
+
   const marketingServices = [
     {
       icon: <Search className="w-8 h-8" />,
@@ -82,9 +103,12 @@ const MarketingDigital = () => {
   return (
     <div className="min-h-screen bg-white pt-16 sm:pt-20">
       <SEOHead
-        title="Marketing Digital au Maroc | Agence Link Agency"
-        description="Stratégies digitales personnalisées pour booster votre visibilité en ligne. SEO, publicité, social media et analytics par notre agence marketing digital au Maroc."
-        keywords="marketing digital maroc, agence marketing digital, SEO maroc, publicité en ligne, social media marketing"
+        title="Marketing Digital - SEO, Publicité & Social Media | Link Agency Maroc"
+        description="Stratégies marketing digital sur-mesure pour booster votre visibilité : SEO, publicité en ligne, social media marketing et analytics au Maroc."
+        keywords="marketing digital maroc, agence marketing digital, SEO maroc, publicité en ligne, social media marketing, google ads, meta ads"
+        url="https://linkagency.ma/marketing-digital"
+        type="service"
+        structuredData={marketingSchema}
       />
       <Header />
       

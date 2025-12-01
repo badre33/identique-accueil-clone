@@ -17,12 +17,12 @@ const Branding = () => {
     "@graph": [
       generateServiceSchema(
         "Services Branding & Identité Visuelle",
-        "Création d'identité visuelle complète, logo, charte graphique et stratégie de marque au Maroc",
+        "Création d'identité visuelle complète et stratégie de marque : logo, charte graphique, positionnement et branding au Maroc",
         "À partir de 5000 MAD"
       ),
       generateWebPageSchema(
-        pageMeta.title,
-        pageMeta.description,
+        "Branding & Identité Visuelle - Création Logo & Charte Graphique | Link Agency",
+        "Services complets de branding au Maroc : création d'identité visuelle, logo, charte graphique, positionnement et stratégie de marque.",
         "https://linkagency.ma/branding"
       ),
       generateBreadcrumbSchema([
@@ -99,9 +99,9 @@ const Branding = () => {
   return (
     <div className="min-h-screen bg-white pt-16 sm:pt-20">
       <SEOHead
-        title={pageMeta.title}
-        description={pageMeta.description}
-        keywords={pageMeta.keywords}
+        title="Branding & Identité Visuelle - Création Logo & Charte Graphique | Link Agency"
+        description="Services complets de branding au Maroc : création d'identité visuelle, logo, charte graphique, positionnement et stratégie de marque."
+        keywords="branding maroc, identité visuelle, création logo, charte graphique, positionnement marque, stratégie de marque casablanca"
         url="https://linkagency.ma/branding"
         type="service"
         structuredData={brandingSchema}

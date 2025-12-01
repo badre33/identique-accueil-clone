@@ -17,12 +17,12 @@ const Evenementiel = () => {
     "@graph": [
       generateServiceSchema(
         "Services Événementiel & Communication",
-        "Organisation d'événements corporate, marketing et communication événementielle au Maroc",
+        "Organisation complète d'événements corporate, marketing et communication événementielle au Maroc : conception, production, logistique",
         "À partir de 8000 MAD"
       ),
       generateWebPageSchema(
-        pageMeta.title,
-        pageMeta.description,
+        "Événementiel - Organisation Événements Corporate & Marketing | Link Agency",
+        "Organisation complète d'événements professionnels, corporate et marketing au Maroc : conception, production, logistique et communication événementielle.",
         "https://linkagency.ma/evenementiel"
       ),
       generateBreadcrumbSchema([
@@ -120,9 +120,9 @@ const Evenementiel = () => {
   return (
     <div className="min-h-screen bg-white pt-16 sm:pt-20">
       <SEOHead
-        title={pageMeta.title}
-        description={pageMeta.description}
-        keywords={pageMeta.keywords}
+        title="Événementiel - Organisation Événements Corporate & Marketing | Link Agency"
+        description="Organisation complète d'événements professionnels, corporate et marketing au Maroc : conception, production, logistique et communication événementielle."
+        keywords="événementiel maroc, organisation événements, événements corporate, événements marketing, production événementielle, agence événementielle casablanca"
         url="https://linkagency.ma/evenementiel"
         type="service"
         structuredData={evenementielSchema}

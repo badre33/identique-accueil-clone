@@ -4,8 +4,30 @@ import { ArrowLeft, User, Star, MessageCircle, BarChart, Target, Lightbulb, User
 import { Link } from "react-router-dom";
 import { FloatingContactWidget } from "@/components/FloatingContactWidget";
 import { WorkflowTimeline } from "@/components/WorkflowTimeline";
+import { SEOHead } from "@/components/SEOHead";
+import { generateServiceSchema, generateWebPageSchema, generateBreadcrumbSchema } from "@/utils/structuredData";
 
 const PersonalBranding = () => {
+  const personalBrandingSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      generateServiceSchema(
+        "Personal Branding & Développement de Marque Personnelle",
+        "Construisez une marque personnelle puissante avec stratégie, communication digitale et développement d'audience au Maroc",
+        "À partir de 5000 MAD"
+      ),
+      generateWebPageSchema(
+        "Personal Branding - Marque Personnelle & Positionnement Expert | Link Agency",
+        "Développez votre marque personnelle avec notre accompagnement complet : identité, positionnement expert, communication digitale et croissance d'audience.",
+        "https://linkagency.ma/personal-branding"
+      ),
+      generateBreadcrumbSchema([
+        { name: "Accueil", url: "https://linkagency.ma/" },
+        { name: "Personal Branding", url: "https://linkagency.ma/personal-branding" }
+      ])
+    ]
+  };
+
   const personalServices = [
     {
       icon: <User className="w-8 h-8" />,
@@ -103,6 +125,14 @@ const PersonalBranding = () => {
 
   return (
     <div className="min-h-screen bg-white pt-16 sm:pt-20">
+      <SEOHead
+        title="Personal Branding - Marque Personnelle & Positionnement Expert | Link Agency"
+        description="Développez votre marque personnelle avec notre accompagnement complet : identité, positionnement expert, communication digitale et croissance d'audience."
+        keywords="personal branding maroc, marque personnelle, développement personnel, linkedin, positionnement expert, influence digitale"
+        url="https://linkagency.ma/personal-branding"
+        type="service"
+        structuredData={personalBrandingSchema}
+      />
       <Header />
       
       {/* Hero Section */}
