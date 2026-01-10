@@ -92,3 +92,33 @@ body {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* CLS Optimization - Prevent layout shifts */
+img:not([width]):not([height]) {
+  aspect-ratio: 16/9;
+  width: 100%;
+  height: auto;
+}
+
+.hero img:not([width]):not([height]) {
+  aspect-ratio: 16/9;
+}
+
+.logo img:not([width]):not([height]) {
+  aspect-ratio: 3/1;
+}
+
+.service-card img:not([width]):not([height]) {
+  aspect-ratio: 4/3;
+}
+
+[data-dynamic="true"] {
+  min-height: 200px;
+  contain-intrinsic-size: 200px;
+}
+
+/* Performance - CSS containment for animated elements */
+[class*="animate-"], 
+[class*="transition-"] {
+  contain: layout style;
+}

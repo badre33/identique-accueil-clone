@@ -64,69 +64,9 @@ export const WebVitalsOptimizer = () => {
     };
 
     // Optimisation CLS (Cumulative Layout Shift)
+    // Les styles CLS sont maintenant définis dans index.css pour éviter les forced reflows
     const optimizeCLS = () => {
-      // Utiliser requestAnimationFrame pour grouper les modifications DOM et éviter forced reflows
-      requestAnimationFrame(() => {
-        // Phase 1: LECTURE - Collecter les informations sans modifier le DOM
-        const images = document.querySelectorAll('img:not([width]):not([height])');
-        const imageData: Array<{ element: HTMLImageElement; aspectRatio: string }> = [];
-        
-        images.forEach(img => {
-          if (img instanceof HTMLImageElement) {
-            let aspectRatio = '16/9'; // Default
-            // Collecter les infos de contexte
-            if (img.closest('.hero')) {
-              aspectRatio = '16/9';
-            } else if (img.closest('.logo')) {
-              aspectRatio = '3/1';
-            } else if (img.closest('.service-card')) {
-              aspectRatio = '4/3';
-            }
-            imageData.push({ element: img, aspectRatio });
-          }
-        });
-
-        // Phase 2: ÉCRITURE - Appliquer tous les changements en batch
-        imageData.forEach(({ element, aspectRatio }) => {
-          element.style.aspectRatio = aspectRatio;
-          element.style.width = '100%';
-          element.style.height = 'auto';
-        });
-
-        // 2. Réserver l'espace pour les composants dynamiques
-        const dynamicElements = document.querySelectorAll('[data-dynamic="true"]');
-        dynamicElements.forEach(element => {
-          if (element instanceof HTMLElement) {
-            element.style.minHeight = '200px';
-            element.style.containIntrinsicSize = '200px';
-          }
-        });
-
-        // 3. Optimiser les transitions pour éviter les shifts
-        const animatedElements = document.querySelectorAll('[class*="animate-"], [class*="transition-"]');
-        animatedElements.forEach(element => {
-          if (element instanceof HTMLElement) {
-            element.style.willChange = 'transform';
-            element.style.transform = 'translateZ(0)'; // Force hardware acceleration
-          }
-        });
-      });
-
-      // 4. Observer les layout shifts
-      if ('PerformanceObserver' in window) {
-        const observer = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            const layoutShift = entry as any;
-            if (!layoutShift.hadRecentInput && layoutShift.value > 0.1) {
-              console.warn('Large layout shift detected:', {
-                value: layoutShift.value,
-                sources: layoutShift.sources?.map((s: any) => s.node)
-              });
-            }
-          }
-        });
-        observer.observe({ entryTypes: ['layout-shift'] });
-      }
+      // Pas de manipulation DOM ici - tout est géré par CSS statique dans index.css
     };
 
     // Optimisation FID & INP (First Input Delay & Interaction to Next Paint)
