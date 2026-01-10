@@ -3,22 +3,38 @@
 <html lang="fr-MA">
   <head>
     <meta charset="UTF-8" />
+    <!-- Préconnexions DNS critiques - AVANT tout autre ressource pour optimiser FCP -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    <link rel="dns-prefetch" href="https://images.unsplash.com" />
+    
     <link rel="icon" type="image/png" href="/lovable-uploads/85b45a40-6291-4f5d-a377-65024ddb1976.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/lovable-uploads/85b45a40-6291-4f5d-a377-65024ddb1976.png" />
     <link rel="manifest" href="/manifest.json" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="theme-color" content="#8b5cf6" />
+    
+    <!-- CSS critique inline pour améliorer FCP -->
+    <style>
+      /* Critical CSS - évite le FOUC et améliore FCP */
+      *{margin:0;padding:0;box-sizing:border-box}
+      html{scroll-behavior:smooth}
+      body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto',sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+      #root{min-height:100vh}
+      .hero-section{min-height:100vh}
+    </style>
   
-  <!-- Préconnexions DNS pour optimiser les performances -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Préchargement des ressources critiques avec priorité -->
+    <link rel="preload" href="/lovable-uploads/85b45a40-6291-4f5d-a377-65024ddb1976.png" as="image" fetchpriority="high" />
   
-  <!-- Préchargement de l'image LCP critique -->
-  <link rel="preload" href="/lovable-uploads/85b45a40-6291-4f5d-a377-65024ddb1976.png" as="image" fetchpriority="high" />
-  
-  <!-- Préchargement des ressources critiques -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" media="print" onload="this.media='all'" />
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" /></noscript>
+    <!-- Police Inter - chargement non-bloquant -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" /></noscript>
+    
     <title>Link Agency - Agence Communication Maroc | Branding & Marketing Digital Casablanca</title>
     <meta name="description" content="Link Agency, agence de communication au Maroc spécialisée en branding, marketing digital et événementiel. Transformez votre entreprise en référence incontournable à Casablanca, Rabat et partout au Maroc." />
     <meta name="keywords" content="agence communication maroc, branding maroc, marketing digital casablanca, agence pub maroc, communication digitale rabat, création logo maroc, stratégie marketing maroc, événementiel maroc, agence créative casablanca, publicité maroc" />
