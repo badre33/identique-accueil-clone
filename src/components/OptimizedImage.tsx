@@ -35,31 +35,55 @@ export const OptimizedImage = ({
   const [supportedFormat, setSupportedFormat] = useState<string>('');
   const imgRef = useRef<HTMLImageElement>(null);
 
-  // Détection du support des formats modernes
+  // Détection du support des formats modernes - mise en cache pour éviter les reflows
   useEffect(() => {
-    const checkWebPSupport = () => {
-      const canvas = document.createElement('canvas');
-      canvas.width = 1;
-      canvas.height = 1;
-      return canvas.toDataURL('image/webp').indexOf('webp') > -1;
-    };
-
-    const checkAVIFSupport = () => {
-      const canvas = document.createElement('canvas');
-      canvas.width = 1;
-      canvas.height = 1;
-      try {
-        return canvas.toDataURL('image/avif').indexOf('avif') > -1;
-      } catch {
-        return false;
-      }
-    };
-
-    if (checkAVIFSupport()) {
-      setSupportedFormat('avif');
-    } else if (checkWebPSupport()) {
-      setSupportedFormat('webp');
+    // Utiliser le cache du sessionStorage pour éviter les appels répétés
+    const cachedFormat = sessionStorage.getItem('image-format-support');
+    if (cachedFormat) {
+      setSupportedFormat(cachedFormat);
+      return;
     }
+
+    // Déférer la détection pour éviter les forced reflows au chargement initial
+    const timeoutId = setTimeout(() => {
+      requestAnimationFrame(() => {
+        const checkWebPSupport = () => {
+          try {
+            const canvas = document.createElement('canvas');
+            canvas.width = 1;
+            canvas.height = 1;
+            return canvas.toDataURL('image/webp').indexOf('webp') > -1;
+          } catch {
+            return false;
+          }
+        };
+
+        const checkAVIFSupport = () => {
+          try {
+            const canvas = document.createElement('canvas');
+            canvas.width = 1;
+            canvas.height = 1;
+            return canvas.toDataURL('image/avif').indexOf('avif') > -1;
+          } catch {
+            return false;
+          }
+        };
+
+        let format = '';
+        if (checkAVIFSupport()) {
+          format = 'avif';
+        } else if (checkWebPSupport()) {
+          format = 'webp';
+        }
+
+        setSupportedFormat(format);
+        if (format) {
+          sessionStorage.setItem('image-format-support', format);
+        }
+      });
+    }, 100);
+
+    return () => clearTimeout(timeoutId);
   }, []);
 
   useEffect(() => {
