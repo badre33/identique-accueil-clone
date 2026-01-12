@@ -57,11 +57,10 @@ export const imageOptimization = {
   }
 };
 
-// Précharge les images critiques au chargement de l'app
+// Précharge uniquement le logo (petite image) au chargement de l'app
 export const preloadCriticalImages = () => {
   const criticalImages = [
-    '/lovable-uploads/85b45a40-6291-4f5d-a377-65024ddb1976.png', // Logo
-    '/lovable-uploads/c2c2bc5c-1a2d-4fdd-a6ac-9d3a8d13ac23.png'  // Hero image
+    '/lovable-uploads/85b45a40-6291-4f5d-a377-65024ddb1976.png' // Logo uniquement
   ];
   
   imageOptimization.preloadImages(criticalImages);
