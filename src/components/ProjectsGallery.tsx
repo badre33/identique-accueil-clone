@@ -76,7 +76,7 @@ export const ProjectsGallery = () => {
     {
       title: "Personal Branding Politique",
       category: "Branding Personnel",
-      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=300&h=180&fit=crop&fm=webp&q=60",
+      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=300&h=180&fit=crop&fm=webp&q=50",
       shortDescription: "Accompagnement stratégique sur une mission de personal branding à fort enjeu pour renforcer l'image d'une dirigeante politique influente sur la scène internationale.",
       description: "Mission stratégique de personal branding pour une figure politique influente, visant à construire une image publique authentique et inspirante détachée des codes politiques traditionnels. Notre approche s'est concentrée sur l'humanisation du discours politique, la valorisation des valeurs d'espoir et de modernité, et la création d'un storytelling personnel puissant résonnant avec les enjeux contemporains. Le projet incluait la refonte complète de la stratégie de communication multicanale, la production de contenus éditoriaux et visuels premium, ainsi que la coordination d'une équipe créative dédiée pour assurer une cohérence parfaite sur tous les points de contact et renforcer l'influence de cette personnalité sur la scène politique internationale.",
       year: "2024",
