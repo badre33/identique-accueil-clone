@@ -1,20 +1,49 @@
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 export const ScrollProgress = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
+  const ticking = useRef(false);
+  const cachedHeight = useRef(0);
 
   useEffect(() => {
-    const updateScrollProgress = () => {
-      const scrollPx = document.documentElement.scrollTop;
-      const winHeightPx = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      const scrolled = scrollPx / winHeightPx;
-      
-      setScrollProgress(scrolled * 100);
+    // Cache document height to avoid repeated DOM reads
+    const updateCachedHeight = () => {
+      cachedHeight.current = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     };
 
-    window.addEventListener('scroll', updateScrollProgress);
-    return () => window.removeEventListener('scroll', updateScrollProgress);
+    // Initial calculation
+    updateCachedHeight();
+
+    // Update on resize with debounce
+    let resizeTimeout: ReturnType<typeof setTimeout>;
+    const handleResize = () => {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(updateCachedHeight, 200);
+    };
+
+    const updateScrollProgress = () => {
+      if (!ticking.current) {
+        requestAnimationFrame(() => {
+          if (cachedHeight.current > 0) {
+            const scrollPx = window.pageYOffset;
+            const scrolled = scrollPx / cachedHeight.current;
+            setScrollProgress(scrolled * 100);
+          }
+          ticking.current = false;
+        });
+        ticking.current = true;
+      }
+    };
+
+    window.addEventListener('scroll', updateScrollProgress, { passive: true });
+    window.addEventListener('resize', handleResize, { passive: true });
+    
+    return () => {
+      window.removeEventListener('scroll', updateScrollProgress);
+      window.removeEventListener('resize', handleResize);
+      clearTimeout(resizeTimeout);
+    };
   }, []);
 
   return (
