@@ -90,6 +90,10 @@ export const Collaborations = () => {
                         src={collaboration.logo} 
                         alt={`${collaboration.name} logo`}
                         className="max-h-full max-w-full object-contain opacity-80 group-hover:opacity-100 transition-opacity"
+                        loading="lazy"
+                        decoding="async"
+                        width="150"
+                        height="48"
                         onError={(e) => {
                           e.currentTarget.style.display = 'none';
                         }}

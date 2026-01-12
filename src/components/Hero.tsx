@@ -34,21 +34,23 @@ const Hero = () => {
       {/* Enhanced ambient images - Hidden on mobile, smaller on tablet */}
       <div className="hidden lg:block absolute top-32 right-20 opacity-10 animate-float hover:opacity-20 hover:scale-105 transition-all duration-700">
         <img 
-          src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=200&h=150&fit=crop&fm=webp&q=75" 
+          src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=192&h=144&fit=crop&fm=webp&q=60" 
           alt="" 
           className="w-36 h-28 lg:w-48 lg:h-36 object-cover rounded-2xl shadow-2xl"
           aria-hidden="true"
-          fetchPriority="high"
+          loading="lazy"
+          decoding="async"
         />
       </div>
       
       <div className="hidden lg:block absolute bottom-32 left-20 opacity-10 animate-float-reverse hover:opacity-20 hover:scale-105 transition-all duration-700">
         <img 
-          src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=160&h=128&fit=crop&fm=webp&q=75" 
+          src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=160&h=128&fit=crop&fm=webp&q=60" 
           alt="" 
           className="w-32 h-24 lg:w-40 lg:h-32 object-cover rounded-2xl shadow-2xl"
           aria-hidden="true"
           loading="lazy"
+          decoding="async"
         />
       </div>
       

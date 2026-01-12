@@ -13,6 +13,9 @@ export const Philosophy = () => {
             alt="Link Logo Background" 
             className="w-96 h-96 object-contain animate-pulse"
             loading="lazy"
+            decoding="async"
+            width="384"
+            height="384"
           />
         </div>
         
