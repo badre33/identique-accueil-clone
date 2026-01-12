@@ -7,30 +7,16 @@ export const WebVitalsOptimizer = () => {
     const optimizeLCP = () => {
       // Utiliser requestAnimationFrame pour éviter forced reflows
       requestAnimationFrame(() => {
-        // 1. Précharger les images hero et critiques
-        const heroImages = [
-          '/lovable-uploads/c2c2bc5c-1a2d-4fdd-a6ac-9d3a8d13ac23.png',
-          '/lovable-uploads/85b45a40-6291-4f5d-a377-65024ddb1976.png'
-        ];
+        // 1. Précharger uniquement le logo (petit fichier) - pas d'images héro lourdes
+        const logoSrc = '/lovable-uploads/85b45a40-6291-4f5d-a377-65024ddb1976.png';
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.href = logoSrc;
+        link.as = 'image';
+        link.fetchPriority = 'high';
+        document.head.appendChild(link);
 
-        heroImages.forEach(src => {
-          const link = document.createElement('link');
-          link.rel = 'preload';
-          link.href = src;
-          link.as = 'image';
-          link.fetchPriority = 'high';
-          document.head.appendChild(link);
-        });
-
-        // 2. Optimiser les polices critiques
-        const fontPreload = document.createElement('link');
-        fontPreload.rel = 'preload';
-        fontPreload.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap';
-        fontPreload.as = 'style';
-        fontPreload.fetchPriority = 'high';
-        document.head.appendChild(fontPreload);
-
-        // 3. Marquer les images critiques - Batch les modifications
+        // 2. Marquer les images critiques - Batch les modifications
         const criticalImages = document.querySelectorAll('img[data-hero="true"], .hero img, h1 + img');
         criticalImages.forEach(img => {
           if (img instanceof HTMLImageElement) {
@@ -39,16 +25,8 @@ export const WebVitalsOptimizer = () => {
           }
         });
 
-        // 4. Optimiser le CSS critique
+        // 3. CSS critique léger sans images lourdes
         const criticalCSS = `
-          /* CSS critique inline pour améliorer LCP */
-          .hero-section { 
-            min-height: 100vh; 
-            background-image: url('/lovable-uploads/c2c2bc5c-1a2d-4fdd-a6ac-9d3a8d13ac23.png');
-            background-size: cover;
-            background-position: center;
-            contain: layout style paint;
-          }
           .logo-image { 
             width: 120px; 
             height: auto; 
