@@ -143,11 +143,37 @@ export const initScrollTracking = () => {
   let maxScroll = 0;
   const scrollThresholds = [25, 50, 75, 90, 100];
   const triggeredThresholds = new Set<number>();
+  
+  // Cache dimensions to avoid forced reflows - update on resize only
+  let cachedDocHeight = 0;
+  
+  const updateCachedDimensions = () => {
+    // Batch all reads together
+    requestAnimationFrame(() => {
+      cachedDocHeight = document.documentElement.scrollHeight - window.innerHeight;
+    });
+  };
+  
+  // Initial calculation after load
+  if (document.readyState === 'complete') {
+    updateCachedDimensions();
+  } else {
+    window.addEventListener('load', updateCachedDimensions, { once: true });
+  }
+  
+  // Update on resize with debounce
+  let resizeTimeout: ReturnType<typeof setTimeout>;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(updateCachedDimensions, 200);
+  }, { passive: true });
 
   const trackScroll = () => {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const scrollPercent = Math.round((scrollTop / docHeight) * 100);
+    // Use cached height to avoid reading scrollHeight on every scroll
+    if (cachedDocHeight <= 0) return;
+    
+    const scrollTop = window.pageYOffset;
+    const scrollPercent = Math.round((scrollTop / cachedDocHeight) * 100);
 
     if (scrollPercent > maxScroll) {
       maxScroll = scrollPercent;
@@ -306,52 +332,53 @@ export const initHeatmapTracking = () => {
     console.warn('localStorage not available:', error);
   }
 
-  // Tracker les clics
+  // Tracker les clics - defer processing to avoid forced reflows
   document.addEventListener('click', (event) => {
+    // Capture event properties synchronously (they may be invalidated later)
+    const clientX = event.clientX;
+    const clientY = event.clientY;
     const target = event.target as HTMLElement;
+    const tagName = target.tagName?.toLowerCase() || 'unknown';
     
-    // Obtenir className de manière sécurisée (gérer SVGAnimatedString et autres cas)
-    const getClassName = (el: HTMLElement): string => {
-      if (!el.className) return '';
-      // Convertir en string de manière sûre (fonctionne pour string et SVGAnimatedString)
-      const classNameStr = String(el.className);
-      // Pour SVGAnimatedString, String() retourne "[object SVGAnimatedString]"
-      // donc on utilise getAttribute comme fallback
-      if (classNameStr.includes('SVGAnimatedString') || classNameStr.includes('[object')) {
+    // Defer all DOM reads and processing to avoid forced reflows
+    requestAnimationFrame(() => {
+      // Obtenir className de manière sécurisée (gérer SVGAnimatedString et autres cas)
+      const getClassName = (el: HTMLElement): string => {
+        if (!el.className) return '';
+        // Utiliser getAttribute directement pour éviter les problèmes avec SVGAnimatedString
         return el.getAttribute('class') || '';
-      }
-      return classNameStr;
-    };
-    
-    const className = getClassName(target);
-    const elementSelector = target.tagName.toLowerCase() + (className ? '.' + className.split(' ').join('.') : '');
-    
-    const clickData = {
-      x: event.clientX,
-      y: event.clientY + window.scrollY,
-      timestamp: Date.now(),
-      element: elementSelector,
-      page: window.location.pathname
-    };
+      };
+      
+      const className = getClassName(target);
+      const elementSelector = tagName + (className ? '.' + className.split(' ').join('.') : '');
+      
+      const clickData = {
+        x: clientX,
+        y: clientY + window.scrollY,
+        timestamp: Date.now(),
+        element: elementSelector,
+        page: window.location.pathname
+      };
 
-    heatmapData.push(clickData);
-    
-    // Garder seulement les 500 derniers clics
-    if (heatmapData.length > 500) {
-      heatmapData.splice(0, heatmapData.length - 500);
-    }
-    
-    try {
-      localStorage.setItem('heatmap_data', JSON.stringify(heatmapData));
-    } catch (error) {
-      console.warn('localStorage not available:', error);
-    }
-    
-    // Tracker dans GA4 aussi
-    trackUserInteraction('click', 'heatmap_click', {
-      element_selector: clickData.element,
-      click_x: clickData.x,
-      click_y: clickData.y
+      heatmapData.push(clickData);
+      
+      // Garder seulement les 500 derniers clics
+      if (heatmapData.length > 500) {
+        heatmapData.splice(0, heatmapData.length - 500);
+      }
+      
+      try {
+        localStorage.setItem('heatmap_data', JSON.stringify(heatmapData));
+      } catch (error) {
+        console.warn('localStorage not available:', error);
+      }
+      
+      // Tracker dans GA4 aussi
+      trackUserInteraction('click', 'heatmap_click', {
+        element_selector: clickData.element,
+        click_x: clickData.x,
+        click_y: clickData.y
+      });
     });
   });
 };
