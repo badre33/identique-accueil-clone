@@ -12,16 +12,21 @@ const Blog = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const categories = ['all', 'branding', 'digital', 'evenementiel', 'tendances', 'conseils'];
 
+  // Trier les articles par date (plus récents en premier)
+  const sortedPosts = [...blogPosts].sort((a, b) => 
+    new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime()
+  );
+
   const filteredPosts = selectedCategory === 'all' 
-    ? blogPosts 
-    : blogPosts.filter(post => post.category === selectedCategory);
+    ? sortedPosts 
+    : sortedPosts.filter(post => post.category === selectedCategory);
 
   const blogSchema = {
     "@context": "https://schema.org",
     "@graph": [
       generateWebPageSchema(
-        "Blog Marketing Digital & Branding - Actualités & Conseils Experts | Link Agency Maroc",
-        "Articles experts en marketing digital, branding, SEO et réseaux sociaux au Maroc. Guides pratiques, tendances 2024 et conseils pour développer votre entreprise.",
+        "Blog Marketing Digital & Branding - Actualités & Conseils Experts 2025 | Link Agency Maroc",
+        "Articles experts en marketing digital, branding, SEO local et réseaux sociaux au Maroc. Guides pratiques, tendances 2025 et conseils pour développer votre entreprise.",
         "https://linkagency.ma/blog"
       ),
       generateBreadcrumbSchema([
@@ -55,9 +60,9 @@ const Blog = () => {
   return (
     <div className="min-h-screen bg-white pt-16 sm:pt-20">
       <SEOHead
-        title="Blog Marketing Digital & Branding - Actualités & Conseils Experts | Link Agency Maroc"
-        description="Articles experts en marketing digital, branding, SEO et réseaux sociaux au Maroc. Guides pratiques, tendances 2024 et conseils pour développer votre entreprise."
-        keywords="blog marketing digital maroc, conseils branding, seo maroc, réseaux sociaux, stratégie digitale, guides pratiques marketing, actualités communication maroc"
+        title="Blog Marketing Digital & Branding - Actualités & Conseils Experts 2025 | Link Agency Maroc"
+        description="Articles experts en marketing digital, branding, SEO local et réseaux sociaux au Maroc. Guides pratiques, tendances 2025 et conseils pour développer votre entreprise à Casablanca, Rabat et Marrakech."
+        keywords="blog marketing digital maroc 2025, conseils branding, seo local maroc, réseaux sociaux casablanca, stratégie digitale, guides pratiques marketing, actualités communication maroc"
         url="https://linkagency.ma/blog"
         type="website"
         structuredData={blogSchema}

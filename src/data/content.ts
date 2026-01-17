@@ -637,6 +637,354 @@ export const blogPosts: BlogPost[] = [
     tags: ['réseaux sociaux', 'facebook', 'instagram', 'tiktok', 'linkedin', 'maroc'],
     metaDescription: 'Guide stratégie réseaux sociaux Maroc 2024 : Facebook, Instagram, TikTok, LinkedIn. Statistiques, formats, budgets pub et calendrier éditorial adapté.',
     metaKeywords: 'réseaux sociaux maroc, facebook maroc, instagram maroc, tiktok maroc, linkedin maroc, social media marketing casablanca, community management'
+  },
+  
+  // ============= NOUVEAUX ARTICLES 2025 - SEO LOCAL =============
+  
+  {
+    id: '10',
+    title: 'SEO Local au Maroc en 2025 : Dominer les Recherches à Casablanca, Rabat et Marrakech',
+    excerpt: 'Comment optimiser votre présence locale sur Google pour attirer plus de clients dans les grandes villes marocaines. Stratégies Google Business Profile et citations locales.',
+    content: `
+    <h2>Le SEO local : un enjeu majeur pour les entreprises marocaines en 2025</h2>
+    <p>En 2025, plus de 75% des recherches locales au Maroc aboutissent à une visite en magasin dans les 24 heures. Optimiser votre présence locale n'est plus une option, c'est une nécessité vitale pour votre business.</p>
+    
+    <h3>État des lieux du SEO local au Maroc</h3>
+    <ul>
+      <li><strong>Casablanca</strong> : 3.2 millions de recherches locales mensuelles</li>
+      <li><strong>Rabat</strong> : 1.8 million de recherches locales mensuelles</li>
+      <li><strong>Marrakech</strong> : 2.5 millions (dont 60% touristes internationaux)</li>
+      <li><strong>Tanger</strong> : 1.2 million de recherches locales mensuelles</li>
+      <li><strong>Fès</strong> : 900 000 recherches locales mensuelles</li>
+    </ul>
+    
+    <h2>Optimiser Google Business Profile pour le Maroc</h2>
+    <h3>1. Informations NAP cohérentes</h3>
+    <p>Nom, Adresse, Téléphone doivent être identiques partout : site web, annuaires, réseaux sociaux. Utilisez le format marocain : +212 5XX-XXXXXX.</p>
+    
+    <h3>2. Catégories et attributs locaux</h3>
+    <p>Choisissez des catégories précises et ajoutez les attributs pertinents : "Accepte les paiements en espèces", "Parking disponible", "Climatisé" - très recherchés au Maroc.</p>
+    
+    <h3>3. Photos géolocalisées</h3>
+    <p>Ajoutez des photos avec métadonnées EXIF contenant votre localisation. Google favorise les fiches avec 10+ photos récentes.</p>
+    
+    <h2>Citations locales marocaines</h2>
+    <p>Les annuaires essentiels pour le SEO local au Maroc :</p>
+    <ul>
+      <li><strong>Pages Jaunes Maroc</strong> : Incontournable, haute autorité</li>
+      <li><strong>Kerix.net</strong> : Annuaire B2B marocain</li>
+      <li><strong>Kompass Maroc</strong> : Référence entreprises</li>
+      <li><strong>Charika.ma</strong> : Annuaire légal entreprises</li>
+      <li><strong>1000entreprises.com</strong> : Visibilité PME</li>
+    </ul>
+    
+    <h2>Stratégie de contenu local</h2>
+    <p>Créez du contenu optimisé pour chaque ville ciblée :</p>
+    <ul>
+      <li>Pages dédiées par quartier (Maarif, Hay Riad, Guéliz...)</li>
+      <li>Articles de blog sur les événements locaux</li>
+      <li>Témoignages clients avec mention de la ville</li>
+      <li>FAQ locale avec questions spécifiques à chaque région</li>
+    </ul>
+    
+    <p>Link Agency accompagne +200 entreprises marocaines dans leur stratégie SEO local. Contactez-nous pour un audit gratuit de votre visibilité locale.</p>
+    `,
+    author: 'SEO Team Link Agency',
+    publishDate: '2025-11-15',
+    slug: 'seo-local-maroc-casablanca-rabat-marrakech-2025',
+    category: 'digital',
+    image: '/assets/blog/seo-local-maroc-2025.jpg',
+    readTime: 10,
+    tags: ['seo local', 'google business profile', 'casablanca', 'rabat', 'marrakech', 'référencement local', 'maroc'],
+    metaDescription: 'Guide SEO local Maroc 2025 : optimisez votre visibilité à Casablanca, Rabat et Marrakech. Google Business Profile, citations locales et stratégies gagnantes.',
+    metaKeywords: 'seo local maroc, référencement local casablanca, google business profile maroc, agence seo rabat, visibilité locale marrakech'
+  },
+  {
+    id: '11',
+    title: 'Marketing Digital Maroc 2025 : Les Nouvelles Tendances qui Transforment le Marché',
+    excerpt: 'Intelligence artificielle, commerce social, marketing conversationnel : découvrez les tendances qui redéfinissent le marketing digital au Maroc en 2025.',
+    content: `
+    <h2>Le marketing digital marocain en pleine révolution</h2>
+    <p>2025 marque un tournant décisif pour le digital au Maroc. Avec 32 millions d'internautes et un taux de pénétration mobile de 95%, les opportunités n'ont jamais été aussi nombreuses.</p>
+    
+    <h3>Chiffres clés du digital marocain en 2025</h3>
+    <ul>
+      <li><strong>Internautes</strong> : 32 millions (+15% vs 2024)</li>
+      <li><strong>Utilisateurs mobile</strong> : 28 millions</li>
+      <li><strong>E-commerce</strong> : 45 milliards MAD de transactions</li>
+      <li><strong>Réseaux sociaux</strong> : 25 millions d'utilisateurs actifs</li>
+    </ul>
+    
+    <h2>Les 5 tendances majeures de 2025</h2>
+    
+    <h3>1. L'IA générative dans le marketing</h3>
+    <p>Les entreprises marocaines adoptent massivement l'IA pour la création de contenu, le service client automatisé et l'analyse prédictive. +60% d'efficacité constatée sur les campagnes optimisées par IA.</p>
+    
+    <h3>2. Le commerce social explose</h3>
+    <p>Instagram Shopping et TikTok Shop révolutionnent l'achat en ligne au Maroc. 35% des jeunes marocains ont déjà acheté via les réseaux sociaux en 2025.</p>
+    
+    <h3>3. Marketing conversationnel via WhatsApp</h3>
+    <p>Avec 22 millions d'utilisateurs WhatsApp au Maroc, le marketing conversationnel devient incontournable. Chatbots, catalogues produits, paiements intégrés.</p>
+    
+    <h3>4. Vidéo courte et Reels</h3>
+    <p>Le format vidéo court domine : TikTok, Instagram Reels, YouTube Shorts. Les marques marocaines investissent 40% de leur budget content en vidéo.</p>
+    
+    <h3>5. Personnalisation avancée</h3>
+    <p>Grâce à la data first-party, les campagnes ultra-personnalisées génèrent 3x plus de conversions. Segmentation fine par ville, comportement, historique d'achat.</p>
+    
+    <h2>Budgets et ROI 2025</h2>
+    <p>Budget digital recommandé : 20-30% du budget marketing total. ROI moyen observé chez nos clients : 450% sur les campagnes optimisées.</p>
+    
+    <p>Chez Link Agency Casablanca, nous accompagnons les entreprises marocaines dans leur transformation digitale avec des stratégies data-driven et créatives.</p>
+    `,
+    author: 'Digital Strategy Team',
+    publishDate: '2025-10-28',
+    slug: 'marketing-digital-maroc-tendances-2025',
+    category: 'digital',
+    image: '/assets/blog/marketing-digital-maroc-2025.jpg',
+    readTime: 8,
+    tags: ['marketing digital', 'ia', 'commerce social', 'whatsapp', 'tendances 2025', 'maroc'],
+    metaDescription: 'Tendances marketing digital Maroc 2025 : IA, commerce social, WhatsApp marketing. Stratégies gagnantes pour les entreprises marocaines.',
+    metaKeywords: 'marketing digital maroc 2025, tendances digital casablanca, ia marketing maroc, whatsapp business maroc, commerce social'
+  },
+  {
+    id: '12',
+    title: 'Branding Local au Maroc : Créer une Identité qui Résonne avec les Marocains en 2025',
+    excerpt: 'Comment fusionner tradition et modernité pour créer un branding authentiquement marocain qui séduit les consommateurs locaux et internationaux.',
+    content: `
+    <h2>Le branding marocain : entre héritage et innovation</h2>
+    <p>En 2025, les marques marocaines qui réussissent sont celles qui embrassent leur identité culturelle tout en adoptant les codes modernes. Ce "branding local" séduit autant les Marocains que les touristes.</p>
+    
+    <h3>Pourquoi le branding local fonctionne</h3>
+    <ul>
+      <li><strong>Fierté nationale</strong> : 78% des Marocains préfèrent acheter local</li>
+      <li><strong>Authenticité</strong> : Les consommateurs fuient les marques génériques</li>
+      <li><strong>Différenciation</strong> : Se démarquer des multinationales</li>
+      <li><strong>Export</strong> : Le "Made in Morocco" a la cote à l'international</li>
+    </ul>
+    
+    <h2>Les codes du branding marocain moderne</h2>
+    
+    <h3>1. Couleurs et motifs</h3>
+    <p>Réinterpréter les motifs zellige, les couleurs de Marrakech (terracotta, bleu majorelle), les arabesques géométriques de manière contemporaine.</p>
+    
+    <h3>2. Typographie bilingue</h3>
+    <p>Créer une identité qui fonctionne en arabe et en français/anglais. Les typographies calligraphiques arabes modernisées sont très tendance.</p>
+    
+    <h3>3. Storytelling culturel</h3>
+    <p>Raconter l'histoire de votre marque en lien avec le patrimoine marocain : artisanat, savoir-faire ancestral, valeurs familiales.</p>
+    
+    <h2>Études de cas : succès marocains</h2>
+    <ul>
+      <li><strong>Nectarome</strong> : Cosmétique bio avec codes berbères modernes</li>
+      <li><strong>Lalla</strong> : Mode traditionnelle revisitée pour la jeunesse</li>
+      <li><strong>Centrale Danone</strong> : Ancrage local tout en restant international</li>
+    </ul>
+    
+    <h2>Erreurs à éviter</h2>
+    <ol>
+      <li>Folkloriser excessivement (effet "carte postale")</li>
+      <li>Copier les codes occidentaux sans adaptation</li>
+      <li>Ignorer les différences régionales (Casa vs Marrakech)</li>
+      <li>Négliger la dimension digitale du branding</li>
+    </ol>
+    
+    <p>Link Agency accompagne les marques marocaines dans leur stratégie de branding local depuis 10 ans. Nos créations ont remporté plusieurs awards nationaux et internationaux.</p>
+    `,
+    author: 'Branding Team Link Agency',
+    publishDate: '2025-12-05',
+    slug: 'branding-local-maroc-identite-2025',
+    category: 'branding',
+    image: '/assets/blog/branding-local-maroc-2025.jpg',
+    readTime: 9,
+    tags: ['branding local', 'identité marocaine', 'design maroc', 'marque marocaine', 'patrimoine'],
+    metaDescription: 'Guide branding local Maroc 2025 : créer une identité authentiquement marocaine. Couleurs, typographie, storytelling pour séduire les consommateurs.',
+    metaKeywords: 'branding maroc 2025, identité visuelle marocaine, logo maroc, agence branding casablanca, design local maroc'
+  },
+  {
+    id: '13',
+    title: 'Réseaux Sociaux Maroc 2025 : TikTok, Instagram et les Nouvelles Plateformes',
+    excerpt: 'État des lieux complet des réseaux sociaux au Maroc en 2025 : statistiques, audiences, stratégies par plateforme et budgets publicitaires.',
+    content: `
+    <h2>Le paysage social media marocain en 2025</h2>
+    <p>Les réseaux sociaux au Maroc continuent leur croissance fulgurante. Voici l'état des lieux complet pour planifier votre stratégie 2025.</p>
+    
+    <h3>Statistiques par plateforme (décembre 2025)</h3>
+    <ul>
+      <li><strong>Facebook</strong> : 17.5 millions d'utilisateurs (audience mature 35+)</li>
+      <li><strong>Instagram</strong> : 10.2 millions d'utilisateurs (18-34 ans dominant)</li>
+      <li><strong>TikTok</strong> : 9.5 millions d'utilisateurs (explosion chez les -25 ans)</li>
+      <li><strong>LinkedIn</strong> : 3.2 millions de professionnels</li>
+      <li><strong>Snapchat</strong> : 4.8 millions d'utilisateurs (adolescents)</li>
+      <li><strong>X (Twitter)</strong> : 2.1 millions d'utilisateurs (influenceurs, médias)</li>
+    </ul>
+    
+    <h2>Stratégies par plateforme</h2>
+    
+    <h3>TikTok Maroc : l'incontournable</h3>
+    <p>Croissance de 40% en 2025. Les marques marocaines qui percent :</p>
+    <ul>
+      <li>Contenus en darija authentique</li>
+      <li>Challenges locaux et tendances marocaines</li>
+      <li>Collaborations avec créateurs locaux</li>
+      <li>Behind-the-scenes et contenus "raw"</li>
+    </ul>
+    
+    <h3>Instagram : le visual commerce</h3>
+    <p>Focus sur Instagram Shopping et Reels. Les stories génèrent 2x plus d'engagement qu'en 2024.</p>
+    
+    <h3>LinkedIn Maroc : l'eldorado B2B</h3>
+    <p>+35% d'utilisateurs actifs. Idéal pour le recrutement, thought leadership et génération de leads B2B.</p>
+    
+    <h2>Budgets publicitaires 2025</h2>
+    <table>
+      <tr><td>Facebook/Instagram Ads</td><td>CPC moyen : 1.20-2.50 MAD</td></tr>
+      <tr><td>TikTok Ads</td><td>CPM moyen : 25-45 MAD</td></tr>
+      <tr><td>LinkedIn Ads</td><td>CPC moyen : 8-15 MAD</td></tr>
+    </table>
+    
+    <h2>Calendrier éditorial marocain</h2>
+    <p>Dates clés à intégrer : Ramadan, Aïd (x2), Fête du Trône, rentrée scolaire, soldes d'hiver/été, Saint-Valentin, Black Friday.</p>
+    
+    <p>L'équipe Social Media de Link Agency gère +180 comptes au Maroc. Audit gratuit de vos réseaux sur demande.</p>
+    `,
+    author: 'Social Media Team',
+    publishDate: '2025-11-20',
+    slug: 'reseaux-sociaux-maroc-tiktok-instagram-2025',
+    category: 'digital',
+    image: '/assets/blog/reseaux-sociaux-maroc-2025.jpg',
+    readTime: 11,
+    tags: ['réseaux sociaux', 'tiktok maroc', 'instagram maroc', 'linkedin', 'social media 2025'],
+    metaDescription: 'Guide réseaux sociaux Maroc 2025 : TikTok, Instagram, LinkedIn. Statistiques, stratégies par plateforme et budgets publicitaires au Maroc.',
+    metaKeywords: 'tiktok maroc 2025, instagram maroc, réseaux sociaux casablanca, social media marketing maroc, community management'
+  },
+  {
+    id: '14',
+    title: 'E-commerce au Maroc 2025 : Comment Lancer et Développer Votre Boutique en Ligne',
+    excerpt: 'Le guide complet pour réussir dans le e-commerce marocain en 2025 : plateformes, paiement, logistique, marketing et réglementations.',
+    content: `
+    <h2>L'explosion du e-commerce marocain</h2>
+    <p>Le marché e-commerce marocain atteint 45 milliards MAD en 2025, avec une croissance de 25% par an. Les opportunités sont immenses pour les entrepreneurs locaux.</p>
+    
+    <h3>Chiffres clés 2025</h3>
+    <ul>
+      <li><strong>Marché total</strong> : 45 milliards MAD</li>
+      <li><strong>Acheteurs en ligne</strong> : 8.5 millions de Marocains</li>
+      <li><strong>Panier moyen</strong> : 450 MAD</li>
+      <li><strong>Mobile commerce</strong> : 65% des transactions</li>
+      <li><strong>Top catégories</strong> : Mode, électronique, beauté, maison</li>
+    </ul>
+    
+    <h2>Choisir sa plateforme</h2>
+    <h3>Options pour le Maroc</h3>
+    <ul>
+      <li><strong>Shopify</strong> : Idéal pour débuter, intégration paiement MAD</li>
+      <li><strong>WooCommerce</strong> : Flexible, nécessite hébergement</li>
+      <li><strong>Jumia Seller</strong> : Marketplace avec logistique intégrée</li>
+      <li><strong>Avito Boutique</strong> : Pour produits occasion/artisanat</li>
+      <li><strong>Sur-mesure</strong> : Pour projets complexes</li>
+    </ul>
+    
+    <h2>Solutions de paiement marocaines</h2>
+    <ul>
+      <li><strong>CMI (Centre Monétique Interbancaire)</strong> : Paiement CB local</li>
+      <li><strong>PayPal</strong> : Pour clients internationaux</li>
+      <li><strong>Cash on Delivery</strong> : Encore 60% des transactions !</li>
+      <li><strong>M-Wallet</strong> : Paiement mobile en croissance</li>
+    </ul>
+    
+    <h2>Logistique e-commerce au Maroc</h2>
+    <p>Partenaires de livraison fiables :</p>
+    <ul>
+      <li><strong>Amana</strong> : Filiale de Barid Al-Maghrib</li>
+      <li><strong>Colis Express</strong> : Réseau national dense</li>
+      <li><strong>GLS Maroc</strong> : Qualité premium</li>
+      <li><strong>Points relais</strong> : Solution économique (+15% adoption)</li>
+    </ul>
+    
+    <h2>Marketing e-commerce gagnant</h2>
+    <ol>
+      <li><strong>SEO produits</strong> : Optimisez fiches avec mots-clés locaux</li>
+      <li><strong>Google Shopping</strong> : Maintenant disponible au Maroc</li>
+      <li><strong>Retargeting</strong> : Récupérez 20% des paniers abandonnés</li>
+      <li><strong>Influenceurs</strong> : Micro-influenceurs locaux = meilleur ROI</li>
+    </ol>
+    
+    <p>Link Agency accompagne les e-commerçants marocains de la création à la croissance. Demandez votre stratégie e-commerce personnalisée.</p>
+    `,
+    author: 'E-commerce Team',
+    publishDate: '2025-10-15',
+    slug: 'ecommerce-maroc-boutique-en-ligne-2025',
+    category: 'digital',
+    image: '/assets/blog/ecommerce-maroc-2025.jpg',
+    readTime: 12,
+    tags: ['e-commerce', 'boutique en ligne', 'paiement maroc', 'livraison', 'shopify maroc'],
+    metaDescription: 'Guide e-commerce Maroc 2025 : lancer votre boutique en ligne. Plateformes, paiement CMI, logistique, marketing digital pour réussir au Maroc.',
+    metaKeywords: 'ecommerce maroc 2025, boutique en ligne maroc, paiement en ligne maroc, shopify maroc, vente en ligne casablanca'
+  },
+  {
+    id: '15',
+    title: 'Intelligence Artificielle pour les Entreprises Marocaines : Guide Pratique 2025',
+    excerpt: 'Comment les PME et grandes entreprises marocaines utilisent l\'IA pour automatiser, innover et croître. Cas d\'usage concrets et outils accessibles.',
+    content: `
+    <h2>L'IA démocratisée pour les entreprises marocaines</h2>
+    <p>En 2025, l'intelligence artificielle n'est plus réservée aux géants tech. Les entreprises marocaines de toutes tailles l'adoptent pour gagner en compétitivité.</p>
+    
+    <h3>Adoption de l'IA au Maroc (2025)</h3>
+    <ul>
+      <li><strong>Grandes entreprises</strong> : 45% utilisent l'IA activement</li>
+      <li><strong>PME</strong> : 22% expérimentent des outils IA</li>
+      <li><strong>Startups</strong> : 60% intègrent l'IA dès leur création</li>
+      <li><strong>ROI moyen</strong> : +35% de productivité</li>
+    </ul>
+    
+    <h2>Cas d'usage IA pour les entreprises marocaines</h2>
+    
+    <h3>1. Service client automatisé</h3>
+    <p>Chatbots multilingues (français, arabe, darija) sur WhatsApp et sites web. Réduction de 60% des demandes simples, disponibilité 24/7.</p>
+    
+    <h3>2. Marketing et création de contenu</h3>
+    <ul>
+      <li>Génération de posts réseaux sociaux</li>
+      <li>Rédaction d'emails marketing personnalisés</li>
+      <li>Création de visuels avec DALL-E/Midjourney</li>
+      <li>Traduction automatique AR/FR</li>
+    </ul>
+    
+    <h3>3. Analyse de données et prédiction</h3>
+    <p>Analyse des ventes, prédiction de la demande, segmentation clients automatique. Indispensable pour les retailers et e-commerçants.</p>
+    
+    <h3>4. Automatisation des processus</h3>
+    <p>RPA + IA pour automatiser factures, emails, reporting. Économie moyenne : 15h/semaine par employé.</p>
+    
+    <h2>Outils IA accessibles en 2025</h2>
+    <ul>
+      <li><strong>ChatGPT/Claude</strong> : Assistant rédaction et analyse</li>
+      <li><strong>Jasper</strong> : Marketing content IA</li>
+      <li><strong>Canva Magic</strong> : Design assisté par IA</li>
+      <li><strong>HubSpot AI</strong> : CRM et marketing automation</li>
+      <li><strong>Synthesia</strong> : Vidéos avec avatars IA</li>
+    </ul>
+    
+    <h2>Défis et considérations</h2>
+    <ul>
+      <li>Formation des équipes essentielle</li>
+      <li>Protection des données clients</li>
+      <li>Adaptation au contexte culturel marocain</li>
+      <li>Coûts d'abonnement à budgéter</li>
+    </ul>
+    
+    <p>Link Agency intègre l'IA dans ses prestations : chatbots, contenu augmenté, analyse prédictive. Découvrez comment l'IA peut transformer votre business.</p>
+    `,
+    author: 'Innovation Team',
+    publishDate: '2025-12-10',
+    slug: 'intelligence-artificielle-entreprises-maroc-2025',
+    category: 'tendances',
+    image: '/assets/blog/ia-entreprises-maroc-2025.jpg',
+    readTime: 10,
+    tags: ['intelligence artificielle', 'ia', 'chatbot', 'automatisation', 'innovation maroc'],
+    metaDescription: 'Guide IA pour entreprises marocaines 2025 : chatbots, marketing IA, automatisation. Cas d\'usage et outils accessibles pour PME et grandes entreprises.',
+    metaKeywords: 'intelligence artificielle maroc, ia entreprise casablanca, chatbot maroc, automatisation pme, innovation digitale maroc'
   }
 ];
 
