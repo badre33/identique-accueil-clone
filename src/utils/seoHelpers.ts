@@ -22,9 +22,9 @@ export const generatePageMeta = (page: string) => {
       keywords: "agence marketing digital maroc, branding maroc, communication digitale casablanca, événementiel maroc, agence créative rabat"
     },
     branding: {
-      title: "Services Branding & Identité Visuelle au Maroc - Link Agency",
-      description: "Création d'identité visuelle et stratégie branding au Maroc. Logo, charte graphique, brand book. Agence branding Casablanca, Rabat, Marrakech.",
-      keywords: "branding maroc, identité visuelle, création logo maroc, charte graphique casablanca, brand book rabat"
+      title: "Stratégie de Marque & Branding au Maroc - Conseil Expert | Link Agency",
+      description: "Stratégie de marque et branding au Maroc pour dirigeants et décideurs. Positionnement, identité visuelle, conseil stratégique à Casablanca, Rabat, Marrakech.",
+      keywords: "stratégie de marque maroc, branding maroc, positionnement marque, identité visuelle casablanca, conseil branding rabat"
     },
     evenementiel: {
       title: "Agence Événementiel Maroc - Organisation & Communication - Link Agency",
