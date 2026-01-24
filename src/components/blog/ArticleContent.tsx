@@ -8,20 +8,40 @@ interface ArticleContentProps {
 
 // Transform HTML content with premium styling
 const enhanceContent = (html: string): string => {
-  // Add section dividers before H2s (except first one)
+  let enhanced = html;
+
+  // Wrap first paragraph as premium intro (only the very first one)
+  enhanced = enhanced.replace(
+    /^(\s*<p>)(.*?)(<\/p>)/i,
+    '<div class="premium-intro"><p>$2</p></div>'
+  );
+
+  // Add subtle section markers before H2s (not heavy dividers)
   let h2Count = 0;
-  let enhanced = html.replace(/<h2>/gi, () => {
+  enhanced = enhanced.replace(/<h2>/gi, () => {
     h2Count++;
     if (h2Count > 1) {
-      return `<div class="section-divider" aria-hidden="true"></div><h2>`;
+      return `<div class="section-marker" aria-hidden="true"></div><h2>`;
     }
     return '<h2>';
   });
 
-  // Wrap first paragraph after H1/start as premium intro
+  // Style callout paragraphs (✅, ⚠️, 👉, ❌)
   enhanced = enhanced.replace(
-    /^(\s*<p>)(.*?)(<\/p>)/i,
-    '<div class="premium-intro"><p>$2</p></div>'
+    /<p>([\s]*)(✅|⚠️|👉|❌)/gi,
+    '<p class="callout callout-$2">$1$2'
+  );
+
+  // Style strong text in paragraphs as potential insights
+  enhanced = enhanced.replace(
+    /<p>(<strong>)([^<]{40,150})(<\/strong>)(<\/p>)/gi,
+    '<p class="key-insight"><strong>$2</strong></p>'
+  );
+
+  // Detect and wrap stat lists (Platform: number patterns)
+  enhanced = enhanced.replace(
+    /<li>([A-Za-zÀ-ÿ\s]+)\s*[:–-]\s*([\d,.\s]+(?:millions?|%|M)?[^<]*)<\/li>/gi,
+    '<li class="stat-item"><span class="stat-label">$1</span><span class="stat-value">$2</span></li>'
   );
 
   return enhanced;
@@ -39,43 +59,7 @@ export const ArticleContent = ({ content, isPillar = false }: ArticleContentProp
   return (
     <div 
       className={`
-        premium-article-content
-        prose prose-lg max-w-none
-        
-        /* Headings - Premium typography */
-        prose-headings:font-light prose-headings:tracking-tight
-        prose-h2:text-2xl prose-h2:md:text-3xl prose-h2:mt-16 prose-h2:mb-6
-        prose-h2:text-foreground prose-h2:border-b prose-h2:border-primary/10 prose-h2:pb-4
-        prose-h3:text-xl prose-h3:md:text-2xl prose-h3:mt-10 prose-h3:mb-4
-        prose-h3:text-foreground/90 prose-h3:font-normal
-        
-        /* Paragraphs - Optimal reading */
-        prose-p:text-muted-foreground prose-p:leading-[1.8] prose-p:mb-6
-        prose-p:text-base prose-p:md:text-lg
-        
-        /* Strong emphasis */
-        prose-strong:text-foreground prose-strong:font-semibold
-        
-        /* Lists - Clear hierarchy */
-        prose-ul:text-muted-foreground prose-ol:text-muted-foreground
-        prose-li:mb-3 prose-li:leading-relaxed
-        prose-ul:my-6 prose-ol:my-6
-        
-        /* Links - Subtle but clear */
-        prose-a:text-primary prose-a:no-underline prose-a:font-medium
-        prose-a:border-b prose-a:border-primary/30 
-        hover:prose-a:border-primary hover:prose-a:bg-primary/5
-        prose-a:transition-all prose-a:duration-200
-        
-        /* Blockquotes - Editorial style */
-        prose-blockquote:border-l-2 prose-blockquote:border-primary/40
-        prose-blockquote:bg-gradient-to-r prose-blockquote:from-primary/5 prose-blockquote:to-transparent
-        prose-blockquote:pl-6 prose-blockquote:pr-4 prose-blockquote:py-4
-        prose-blockquote:my-10 prose-blockquote:rounded-r-lg
-        prose-blockquote:text-foreground/90 prose-blockquote:italic
-        prose-blockquote:font-light prose-blockquote:text-lg
-        
-        /* Pillar article specific enhancements */
+        article-prose
         ${isPillar ? 'pillar-article' : 'satellite-article'}
       `}
       dangerouslySetInnerHTML={{ __html: sanitizedContent }}
