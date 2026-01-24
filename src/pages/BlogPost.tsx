@@ -95,10 +95,10 @@ const BlogPost = () => {
       <Header />
       
       {/* Article Header */}
-      <article className="pt-32 pb-20">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+      <article className="pt-24 sm:pt-28 pb-16 sm:pb-20">
+        <div className="max-w-3xl mx-auto px-5 sm:px-6 lg:px-8">
           {/* Breadcrumb */}
-          <nav className="mb-8">
+          <nav className="mb-6 sm:mb-8">
             <Link 
               to="/blog" 
               className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors text-sm font-medium"
@@ -109,26 +109,26 @@ const BlogPost = () => {
           </nav>
           
           {/* Category & Article Type Badge */}
-          <div className="mb-6 flex flex-wrap items-center gap-3">
-            <span className="bg-primary text-primary-foreground px-4 py-2 rounded-full text-sm font-medium">
+          <div className="mb-4 sm:mb-6 flex flex-wrap items-center gap-2 sm:gap-3">
+            <span className="bg-primary text-primary-foreground px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium">
               {post.category}
             </span>
             <ArticleBadge type={isPillar ? 'pilier' : 'satellite'} />
           </div>
           
-          {/* Title */}
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-light text-foreground mb-8 leading-tight tracking-tight">
+          {/* Title - H1 */}
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.75rem] font-semibold text-foreground mb-6 sm:mb-8 leading-[1.2] tracking-tight">
             {post.title}
           </h1>
           
           {/* Meta Info */}
-          <div className="flex flex-wrap items-center gap-4 md:gap-6 text-muted-foreground mb-10 pb-8 border-b border-border/50">
+          <div className="flex flex-wrap items-center gap-3 sm:gap-5 text-muted-foreground mb-8 sm:mb-10 pb-6 sm:pb-8 border-b border-border/40">
             <div className="flex items-center gap-2 text-sm">
-              <User className="w-4 h-4 text-primary/60" />
+              <User className="w-4 h-4 text-primary/50" />
               <span className="font-medium">{post.author}</span>
             </div>
             <div className="flex items-center gap-2 text-sm">
-              <Calendar className="w-4 h-4 text-primary/60" />
+              <Calendar className="w-4 h-4 text-primary/50" />
               {new Date(post.publishDate).toLocaleDateString('fr-FR', {
                 year: 'numeric',
                 month: 'long',
@@ -136,41 +136,41 @@ const BlogPost = () => {
               })}
             </div>
             <div className="flex items-center gap-2 text-sm">
-              <Clock className="w-4 h-4 text-primary/60" />
-              {post.readTime} min de lecture
+              <Clock className="w-4 h-4 text-primary/50" />
+              {post.readTime} min
             </div>
             <button 
-              className="flex items-center gap-2 text-sm text-primary hover:text-primary/80 transition-colors ml-auto"
+              className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors sm:ml-auto"
               onClick={() => navigator.share?.({ title: post.title, url: window.location.href })}
             >
               <Share2 className="w-4 h-4" />
-              Partager
+              <span className="hidden sm:inline">Partager</span>
             </button>
           </div>
           
           {/* Featured Image */}
-          <div className="mb-14 rounded-2xl overflow-hidden shadow-lg">
+          <div className="mb-10 sm:mb-12 rounded-xl overflow-hidden">
             <img 
               src={post.image} 
               alt={post.title}
-              className="w-full h-[350px] md:h-[450px] object-cover"
+              className="w-full h-[250px] sm:h-[350px] md:h-[400px] object-cover"
               loading="eager"
             />
           </div>
           
-          {/* Article Content with Premium Styling */}
+          {/* Article Content with Premium Prose System */}
           <ArticleContent content={post.content} isPillar={isPillar} />
           
           {/* Tags */}
-          <div className="mt-16 pt-10 border-t border-border/50">
-            <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-4">
-              Thématiques abordées
+          <div className="mt-12 sm:mt-14 pt-8 border-t border-border/40">
+            <h3 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-3">
+              Thématiques
             </h3>
             <div className="flex flex-wrap gap-2">
               {post.tags.map((tag) => (
                 <span 
                   key={tag} 
-                  className="bg-muted/50 text-muted-foreground px-4 py-2 rounded-full text-sm hover:bg-muted transition-colors cursor-pointer border border-border/30"
+                  className="bg-muted/40 text-muted-foreground px-3 py-1.5 rounded-full text-sm hover:bg-muted transition-colors cursor-pointer"
                 >
                   {tag}
                 </span>
@@ -179,16 +179,16 @@ const BlogPost = () => {
           </div>
           
           {/* CTA */}
-          <div className="mt-16 p-8 md:p-10 bg-gradient-to-br from-primary/5 via-primary/3 to-transparent rounded-2xl border border-primary/10">
-            <div className="max-w-2xl mx-auto text-center">
-              <h3 className="text-2xl md:text-3xl font-light text-foreground mb-4">
-                Besoin d'accompagnement pour votre projet ?
+          <div className="mt-12 sm:mt-14 p-6 sm:p-8 bg-gradient-to-br from-primary/5 to-transparent rounded-xl border border-primary/10">
+            <div className="text-center">
+              <h3 className="text-xl sm:text-2xl font-medium text-foreground mb-3">
+                Besoin d'accompagnement ?
               </h3>
-              <p className="text-muted-foreground mb-8 text-lg">
-                Notre équipe d'experts est là pour vous conseiller et réaliser vos ambitions.
+              <p className="text-muted-foreground mb-6 text-base max-w-lg mx-auto">
+                Notre équipe d'experts est là pour conseiller et réaliser vos ambitions.
               </p>
               <Link to="/#contact">
-                <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-base font-medium shadow-lg shadow-primary/20">
+                <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-5 text-base font-medium">
                   Parlons de votre projet
                 </Button>
               </Link>
