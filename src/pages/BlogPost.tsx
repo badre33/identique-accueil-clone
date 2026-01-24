@@ -6,7 +6,15 @@ import { FloatingContactWidget } from '@/components/FloatingContactWidget';
 import { blogPosts } from '@/data/content';
 import { generateWebPageSchema, generateBreadcrumbSchema } from '@/utils/structuredData';
 import { Button } from '@/components/ui/button';
-import DOMPurify from 'dompurify';
+import { ArticleBadge, ArticleContent } from '@/components/blog';
+import '@/styles/premium-blog.css';
+
+// Determine if article is a pillar based on word count and structure
+const isPillarArticle = (content: string): boolean => {
+  const wordCount = content.replace(/<[^>]*>/g, '').split(/\s+/).length;
+  const h2Count = (content.match(/<h2>/gi) || []).length;
+  return wordCount > 1500 && h2Count >= 6;
+};
 
 const BlogPost = () => {
   const { slug } = useParams();
@@ -14,9 +22,9 @@ const BlogPost = () => {
 
   if (!post) {
     return (
-      <div className="min-h-screen bg-white flex items-center justify-center">
+      <div className="min-h-screen bg-background flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Article non trouvé</h1>
+          <h1 className="text-4xl font-bold text-foreground mb-4">Article non trouvé</h1>
           <Link to="/blog" className="text-primary hover:underline">
             Retour au blog
           </Link>
@@ -24,6 +32,8 @@ const BlogPost = () => {
       </div>
     );
   }
+
+  const isPillar = isPillarArticle(post.content);
 
   const blogPostSchema = {
     "@context": "https://schema.org",
@@ -69,7 +79,7 @@ const BlogPost = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white pt-16 sm:pt-20">
+    <div className="min-h-screen bg-background pt-16 sm:pt-20">
       <SEOHead
         title={`${post.title} - Link Agency Blog`}
         description={post.metaDescription}
@@ -86,141 +96,156 @@ const BlogPost = () => {
       
       {/* Article Header */}
       <article className="pt-32 pb-20">
-        <div className="max-w-4xl mx-auto px-8 lg:px-16">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
           {/* Breadcrumb */}
           <nav className="mb-8">
             <Link 
               to="/blog" 
-              className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
+              className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors text-sm font-medium"
             >
               <ArrowLeft className="w-4 h-4" />
               Retour au blog
             </Link>
           </nav>
           
-          {/* Category & Meta */}
-          <div className="mb-6">
-            <span className="bg-primary text-white px-4 py-2 rounded-full text-sm font-medium">
+          {/* Category & Article Type Badge */}
+          <div className="mb-6 flex flex-wrap items-center gap-3">
+            <span className="bg-primary text-primary-foreground px-4 py-2 rounded-full text-sm font-medium">
               {post.category}
             </span>
+            <ArticleBadge type={isPillar ? 'pilier' : 'satellite'} />
           </div>
           
           {/* Title */}
-          <h1 className="text-4xl md:text-5xl font-light text-foreground mb-6 leading-tight">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-light text-foreground mb-8 leading-tight tracking-tight">
             {post.title}
           </h1>
           
           {/* Meta Info */}
-          <div className="flex flex-wrap items-center gap-6 text-muted-foreground mb-8 pb-8 border-b border-gray-200">
-            <div className="flex items-center gap-2">
-              <User className="w-4 h-4" />
-              {post.author}
+          <div className="flex flex-wrap items-center gap-4 md:gap-6 text-muted-foreground mb-10 pb-8 border-b border-border/50">
+            <div className="flex items-center gap-2 text-sm">
+              <User className="w-4 h-4 text-primary/60" />
+              <span className="font-medium">{post.author}</span>
             </div>
-            <div className="flex items-center gap-2">
-              <Calendar className="w-4 h-4" />
+            <div className="flex items-center gap-2 text-sm">
+              <Calendar className="w-4 h-4 text-primary/60" />
               {new Date(post.publishDate).toLocaleDateString('fr-FR', {
                 year: 'numeric',
                 month: 'long',
                 day: 'numeric'
               })}
             </div>
-            <div className="flex items-center gap-2">
-              <Clock className="w-4 h-4" />
-              {post.readTime} minutes de lecture
+            <div className="flex items-center gap-2 text-sm">
+              <Clock className="w-4 h-4 text-primary/60" />
+              {post.readTime} min de lecture
             </div>
-            <button className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors">
+            <button 
+              className="flex items-center gap-2 text-sm text-primary hover:text-primary/80 transition-colors ml-auto"
+              onClick={() => navigator.share?.({ title: post.title, url: window.location.href })}
+            >
               <Share2 className="w-4 h-4" />
               Partager
             </button>
           </div>
           
           {/* Featured Image */}
-          <div className="mb-12 rounded-2xl overflow-hidden">
+          <div className="mb-14 rounded-2xl overflow-hidden shadow-lg">
             <img 
               src={post.image} 
               alt={post.title}
-              className="w-full h-[400px] object-cover"
+              className="w-full h-[350px] md:h-[450px] object-cover"
+              loading="eager"
             />
           </div>
           
-          {/* Article Content */}
-          <div 
-            className="prose prose-lg max-w-none prose-headings:text-foreground prose-p:text-muted-foreground prose-strong:text-foreground prose-ul:text-muted-foreground prose-ol:text-muted-foreground"
-            dangerouslySetInnerHTML={{ 
-              __html: DOMPurify.sanitize(post.content, {
-                ALLOWED_TAGS: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'ul', 'ol', 'li', 'strong', 'em', 'a', 'br', 'blockquote', 'code', 'pre', 'img'],
-                ALLOWED_ATTR: ['href', 'target', 'rel', 'src', 'alt', 'title', 'class']
-              })
-            }}
-          />
+          {/* Article Content with Premium Styling */}
+          <ArticleContent content={post.content} isPillar={isPillar} />
           
           {/* Tags */}
-          <div className="mt-12 pt-8 border-t border-gray-200">
-            <h3 className="text-lg font-semibold text-foreground mb-4">Tags :</h3>
-            <div className="flex flex-wrap gap-3">
+          <div className="mt-16 pt-10 border-t border-border/50">
+            <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-4">
+              Thématiques abordées
+            </h3>
+            <div className="flex flex-wrap gap-2">
               {post.tags.map((tag) => (
                 <span 
                   key={tag} 
-                  className="bg-gray-100 text-gray-700 px-4 py-2 rounded-full text-sm hover:bg-gray-200 transition-colors cursor-pointer"
+                  className="bg-muted/50 text-muted-foreground px-4 py-2 rounded-full text-sm hover:bg-muted transition-colors cursor-pointer border border-border/30"
                 >
-                  #{tag}
+                  {tag}
                 </span>
               ))}
             </div>
           </div>
           
           {/* CTA */}
-          <div className="mt-16 p-8 bg-primary/5 rounded-2xl text-center">
-            <h3 className="text-2xl font-semibold text-foreground mb-4">
-              Besoin d'accompagnement pour votre projet ?
-            </h3>
-            <p className="text-muted-foreground mb-6">
-              Notre équipe d'experts est là pour vous conseiller et réaliser vos ambitions.
-            </p>
-            <Link to="/#contact">
-              <Button className="bg-primary hover:bg-primary/90 text-white px-8 py-4">
-                Parlons de votre projet
-              </Button>
-            </Link>
+          <div className="mt-16 p-8 md:p-10 bg-gradient-to-br from-primary/5 via-primary/3 to-transparent rounded-2xl border border-primary/10">
+            <div className="max-w-2xl mx-auto text-center">
+              <h3 className="text-2xl md:text-3xl font-light text-foreground mb-4">
+                Besoin d'accompagnement pour votre projet ?
+              </h3>
+              <p className="text-muted-foreground mb-8 text-lg">
+                Notre équipe d'experts est là pour vous conseiller et réaliser vos ambitions.
+              </p>
+              <Link to="/#contact">
+                <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-base font-medium shadow-lg shadow-primary/20">
+                  Parlons de votre projet
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
         
         {/* Related Articles */}
-        <section className="mt-20 pt-20 bg-gray-50">
-          <div className="max-w-6xl mx-auto px-8 lg:px-16">
-            <h2 className="text-3xl font-light text-foreground mb-12 text-center">
+        <section className="mt-24 pt-20 bg-muted/30">
+          <div className="max-w-6xl mx-auto px-6 lg:px-8">
+            <h2 className="text-3xl font-light text-foreground mb-4 text-center">
               Articles <span className="text-primary font-medium">similaires</span>
             </h2>
+            <p className="text-muted-foreground text-center mb-12 max-w-xl mx-auto">
+              Poursuivez votre lecture avec ces analyses complémentaires
+            </p>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {blogPosts
                 .filter(p => p.id !== post.id && p.category === post.category)
                 .slice(0, 3)
-                .map((relatedPost) => (
-                  <Link 
-                    key={relatedPost.id}
-                    to={`/blog/${relatedPost.slug}`}
-                    className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group"
-                  >
-                    <img 
-                      src={relatedPost.image} 
-                      alt={relatedPost.title}
-                      className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                    <div className="p-6">
-                      <h3 className="text-lg font-semibold text-foreground mb-2 line-clamp-2">
-                        {relatedPost.title}
-                      </h3>
-                      <p className="text-muted-foreground text-sm line-clamp-2">
-                        {relatedPost.excerpt}
-                      </p>
-                      <div className="flex items-center gap-2 mt-4 text-sm text-muted-foreground">
-                        <Clock className="w-3 h-3" />
-                        {relatedPost.readTime} min
+                .map((relatedPost) => {
+                  const isRelatedPillar = isPillarArticle(relatedPost.content);
+                  return (
+                    <Link 
+                      key={relatedPost.id}
+                      to={`/blog/${relatedPost.slug}`}
+                      className="bg-background rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group border border-border/30"
+                    >
+                      <div className="relative">
+                        <img 
+                          src={relatedPost.image} 
+                          alt={relatedPost.title}
+                          className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
+                          loading="lazy"
+                        />
+                        {isRelatedPillar && (
+                          <div className="absolute top-3 left-3">
+                            <ArticleBadge type="pilier" />
+                          </div>
+                        )}
                       </div>
-                    </div>
-                  </Link>
-                ))}
+                      <div className="p-6">
+                        <h3 className="text-lg font-medium text-foreground mb-3 line-clamp-2 group-hover:text-primary transition-colors">
+                          {relatedPost.title}
+                        </h3>
+                        <p className="text-muted-foreground text-sm line-clamp-2 mb-4">
+                          {relatedPost.excerpt}
+                        </p>
+                        <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                          <Clock className="w-3.5 h-3.5" />
+                          {relatedPost.readTime} min de lecture
+                        </div>
+                      </div>
+                    </Link>
+                  );
+                })}
             </div>
           </div>
         </section>

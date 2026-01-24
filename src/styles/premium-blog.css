@@ -1,0 +1,169 @@
+/* Premium Blog Article Styles */
+
+/* Premium Introduction Block */
+.premium-intro {
+  position: relative;
+  max-width: 48rem;
+  margin: 0 auto 3rem;
+  padding: 2rem 0;
+}
+
+.premium-intro p {
+  font-size: 1.25rem;
+  line-height: 1.9;
+  color: hsl(var(--foreground) / 0.9);
+  font-weight: 300;
+}
+
+.premium-intro p::first-letter {
+  float: left;
+  font-size: 4rem;
+  line-height: 1;
+  font-family: Georgia, 'Times New Roman', serif;
+  color: hsl(var(--primary));
+  margin-right: 0.75rem;
+  margin-top: 0.25rem;
+  font-weight: 400;
+}
+
+.premium-intro::after {
+  content: '';
+  display: block;
+  margin-top: 2.5rem;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    hsl(var(--primary) / 0.3),
+    transparent
+  );
+}
+
+/* Section Dividers */
+.section-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin: 4rem 0 2rem;
+}
+
+.section-divider::before,
+.section-divider::after {
+  content: '';
+  height: 1px;
+  width: 4rem;
+  background: linear-gradient(
+    to right,
+    transparent,
+    hsl(var(--primary) / 0.3)
+  );
+}
+
+.section-divider::after {
+  background: linear-gradient(
+    to left,
+    transparent,
+    hsl(var(--primary) / 0.3)
+  );
+}
+
+/* Pillar Article Enhancements */
+.pillar-article h2 {
+  position: relative;
+}
+
+.pillar-article h2::before {
+  content: '';
+  position: absolute;
+  left: -1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 60%;
+  background: linear-gradient(
+    to bottom,
+    hsl(var(--primary)),
+    hsl(var(--primary) / 0.3)
+  );
+  border-radius: 2px;
+}
+
+/* Satellite Article - Lighter styling */
+.satellite-article h2 {
+  border-bottom-color: hsl(var(--muted-foreground) / 0.1);
+}
+
+/* Reading Progress Indicator in Article */
+.premium-article-content {
+  counter-reset: section;
+}
+
+/* Key Insight Styling for blockquotes */
+.premium-article-content blockquote {
+  position: relative;
+  overflow: hidden;
+}
+
+.premium-article-content blockquote::before {
+  content: '"';
+  position: absolute;
+  top: -0.5rem;
+  left: 0.5rem;
+  font-size: 4rem;
+  font-family: Georgia, serif;
+  color: hsl(var(--primary) / 0.1);
+  line-height: 1;
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+  .premium-intro p {
+    font-size: 1.125rem;
+    line-height: 1.8;
+  }
+
+  .premium-intro p::first-letter {
+    font-size: 3rem;
+    margin-right: 0.5rem;
+  }
+
+  .pillar-article h2::before {
+    left: -1rem;
+    width: 3px;
+  }
+
+  .section-divider {
+    margin: 3rem 0 1.5rem;
+  }
+
+  .section-divider::before,
+  .section-divider::after {
+    width: 2.5rem;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .premium-intro::after,
+  .section-divider {
+    display: none;
+  }
+
+  .premium-article-content {
+    font-size: 12pt;
+    line-height: 1.6;
+  }
+}
+
+/* Smooth Scroll for Internal Links */
+.premium-article-content a[href^="#"] {
+  scroll-behavior: smooth;
+}
+
+/* Focus States for Accessibility */
+.premium-article-content a:focus-visible {
+  outline: 2px solid hsl(var(--primary));
+  outline-offset: 2px;
+  border-radius: 2px;
+}
