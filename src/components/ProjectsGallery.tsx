@@ -56,13 +56,13 @@ export const ProjectsGallery = () => {
       url: "#"
     },
     {
-      title: "Soulection",
-      category: "Événementiel & Branding",
-      image: "/lovable-uploads/b8c1c54b-9721-486c-81ab-dae0977cacc0.png",
-      shortDescription: "Production d'événements musicaux exclusifs sur l'I-Boat à Bordeaux avec les DJs officiels du collectif international Soulection.",
-      description: "Organisation et production d'événements musicaux exclusifs pour le collectif international Soulection sur l'emblématique I-Boat à Bordeaux. Notre mission consiste à créer des expériences musicales uniques en faisant venir les DJs officiels du collectif Soulection pour des soirées exceptionnelles dans cet espace culturel iconique bordelais. Nous gérons l'intégralité de la production événementielle, de la programmation artistique au branding spécifique, en créant un pont authentique entre la culture musicale internationale de Soulection et la scène culturelle bordelaise dynamique, contribuant ainsi au rayonnement culturel de Bordeaux.",
-      year: "2023-2024",
-      url: "https://soulection.com/"
+      title: "Nova Spacia",
+      category: "Branding & Digital",
+      image: "/lovable-uploads/novaspacia-logo.svg",
+      shortDescription: "Création d'identité visuelle et développement web pour Nova Spacia, entreprise spécialisée dans l'aménagement d'espaces professionnels et commerciaux.",
+      description: "Accompagnement complet de Nova Spacia dans le développement de leur image de marque et présence digitale. Notre mission incluait la conception d'une identité visuelle moderne et professionnelle, le développement d'un site web performant mettant en valeur leurs services d'aménagement d'espaces, ainsi qu'une stratégie de communication digitale adaptée à leur positionnement premium sur le marché de l'aménagement professionnel.",
+      year: "2024-2025",
+      url: "https://novaspacia.com/"
     },
     {
       title: "Artitenium",
