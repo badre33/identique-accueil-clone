@@ -45,7 +45,7 @@ export const Collaborations = () => {
       category: "Aménagement",
       logo: "/lovable-uploads/novaspacia-logo.svg",
       description: "Création d'identité visuelle et développement web pour cette entreprise spécialisée dans l'aménagement d'espaces professionnels et commerciaux.",
-      year: "2024-2025",
+      year: "2026",
       type: "Branding & Digital",
       darkBg: true
     },
