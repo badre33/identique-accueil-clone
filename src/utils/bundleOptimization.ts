@@ -47,22 +47,10 @@ export const intelligentPreloading = () => {
 };
 
 // Optimisation des ressources critiques
+// Note: preconnects and font preloads are already in index.html — no need to duplicate them here
 export const optimizeCriticalResources = () => {
-  // Précharge les polices critiques
-  const fontPreload = document.createElement('link');
-  fontPreload.rel = 'preload';
-  fontPreload.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap';
-  fontPreload.as = 'style';
-  document.head.appendChild(fontPreload);
-
-  // Préconnecte aux domaines externes
-  const preconnectDomains = ['https://fonts.googleapis.com', 'https://fonts.gstatic.com'];
-  preconnectDomains.forEach(domain => {
-    const link = document.createElement('link');
-    link.rel = 'preconnect';
-    link.href = domain;
-    document.head.appendChild(link);
-  });
+  // All critical preconnects and font preloads are handled in index.html
+  // to avoid duplicate link tags that hurt Lighthouse scores
 };
 
 // Détection de la connexion réseau
