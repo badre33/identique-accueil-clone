@@ -9,7 +9,7 @@ export const Philosophy = () => {
         {/* Logo en filigrane - NOTE: Image should be optimized to ~800x800 WebP */}
         <div className="absolute top-1/2 right-10 transform -translate-y-1/2 opacity-3">
           <img 
-            src="/lovable-uploads/85b45a40-6291-4f5d-a377-65024ddb1976.png" 
+            src="/lovable-uploads/logo-384.webp" 
             alt="Link Logo Background" 
             className="w-96 h-96 object-contain animate-pulse"
             loading="lazy"
