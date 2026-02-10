@@ -40,6 +40,16 @@ export const Collaborations = () => {
       type: "Branding & Digital"
     },
     {
+      name: "Nova Spacia",
+      url: "https://novaspacia.com/",
+      category: "Aménagement",
+      logo: "/lovable-uploads/novaspacia-logo.svg",
+      description: "Création d'identité visuelle et développement web pour cette entreprise spécialisée dans l'aménagement d'espaces professionnels et commerciaux.",
+      year: "2024-2025",
+      type: "Branding & Digital",
+      darkBg: true
+    },
+    {
       name: "Nexia",
       url: "https://nexia.ma/",
       category: "Conseil",
@@ -59,7 +69,7 @@ export const Collaborations = () => {
     }
   ];
 
-  const categories = ["Branding Personnel", "Tech", "Musique", "Digital", "Conseil", "Mode"];
+  const categories = ["Branding Personnel", "Tech", "Musique", "Digital", "Conseil", "Mode", "Aménagement"];
 
   return (
     <section className="py-32 px-8 lg:px-16 bg-gradient-to-br from-gray-50 via-white to-gray-100 relative overflow-hidden">
@@ -85,7 +95,7 @@ export const Collaborations = () => {
               <div className="flex items-start justify-between mb-6">
                 <div className="flex-1">
                   {collaboration.logo && (
-                    <div className="mb-4 flex items-center justify-center h-12">
+                    <div className={`mb-4 flex items-center justify-center h-12 rounded-lg px-3 ${collaboration.darkBg ? 'bg-gray-900' : ''}`}>
                       <img 
                         src={collaboration.logo} 
                         alt={`${collaboration.name} logo`}
