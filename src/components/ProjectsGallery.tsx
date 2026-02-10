@@ -122,7 +122,7 @@ export const ProjectsGallery = () => {
                 <img 
                   src={project.image} 
                   alt={project.title}
-                  className="w-full h-full object-contain p-8 group-hover:scale-110 transition-transform duration-700 bg-white"
+                  className={`w-full h-full object-contain p-8 group-hover:scale-110 transition-transform duration-700 ${project.title === 'Nova Spacia' ? 'bg-gray-900' : 'bg-white'}`}
                   loading="lazy"
                   decoding="async"
                   width="320"
