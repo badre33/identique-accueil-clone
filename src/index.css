@@ -108,5 +108,4 @@ img:not([width]):not([height]) {
   contain: layout style;
 }
 
-/* Import premium blog styles */
-@import './styles/premium-blog.css';
+/* Premium blog styles loaded on-demand via BlogPost.tsx */
