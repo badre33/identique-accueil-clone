@@ -84,16 +84,6 @@ export const SEOHead = ({
         </script>
       )}
       
-      {/* Performance et Core Web Vitals */}
-      <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-      <meta name="theme-color" content="#8b5cf6" />
-      <meta name="msapplication-TileColor" content="#8b5cf6" />
-      
-      {/* Preconnect pour les performances */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-      <link rel="dns-prefetch" href="//www.google-analytics.com" />
-      <link rel="dns-prefetch" href="//www.googletagmanager.com" />
     </Helmet>
   );
 };
