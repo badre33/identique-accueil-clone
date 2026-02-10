@@ -38,8 +38,9 @@ const Hero = () => {
           alt="" 
           className="w-36 h-28 lg:w-48 lg:h-36 object-cover rounded-2xl shadow-2xl"
           aria-hidden="true"
-          loading="lazy"
+          loading="eager"
           decoding="async"
+          fetchPriority="high"
         />
       </div>
       
