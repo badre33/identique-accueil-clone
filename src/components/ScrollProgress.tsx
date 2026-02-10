@@ -7,13 +7,15 @@ export const ScrollProgress = () => {
   const cachedHeight = useRef(0);
 
   useEffect(() => {
-    // Cache document height to avoid repeated DOM reads
+    // Defer initial height read to avoid forced reflow during render
     const updateCachedHeight = () => {
-      cachedHeight.current = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      requestAnimationFrame(() => {
+        cachedHeight.current = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      });
     };
 
-    // Initial calculation
-    updateCachedHeight();
+    // Defer initial calculation
+    requestAnimationFrame(updateCachedHeight);
 
     // Update on resize with debounce
     let resizeTimeout: ReturnType<typeof setTimeout>;
