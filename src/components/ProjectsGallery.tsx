@@ -61,7 +61,7 @@ export const ProjectsGallery = () => {
       image: "/lovable-uploads/novaspacia-logo.svg",
       shortDescription: "Création d'identité visuelle et développement web pour Nova Spacia, entreprise spécialisée dans l'aménagement d'espaces professionnels et commerciaux.",
       description: "Accompagnement complet de Nova Spacia dans le développement de leur image de marque et présence digitale. Notre mission incluait la conception d'une identité visuelle moderne et professionnelle, le développement d'un site web performant mettant en valeur leurs services d'aménagement d'espaces, ainsi qu'une stratégie de communication digitale adaptée à leur positionnement premium sur le marché de l'aménagement professionnel.",
-      year: "2024-2025",
+      year: "2026",
       url: "https://novaspacia.com/"
     },
     {
