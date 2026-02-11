@@ -15,10 +15,15 @@ export const Footer = () => {
             <p className="text-gray-400 text-sm leading-relaxed mb-4">
               Agence marketing digital au Maroc spécialisée en branding, communication digitale, événementiel corporate et influence marketing. Excellence créative à Casablanca.
             </p>
-            <div className="flex items-center space-x-2 text-gray-400 text-sm mb-2">
+            <a 
+              href="https://maps.app.goo.gl/q3xLY5gy8cY6U6Tj6" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors text-sm mb-2"
+            >
               <MapPin className="w-4 h-4 flex-shrink-0" />
               <span>Casablanca, Maroc</span>
-            </div>
+            </a>
           </div>
 
           {/* Services */}
