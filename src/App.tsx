@@ -11,6 +11,7 @@ import { ErrorBoundary } from "@/components/ErrorBoundary";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { LazyWrapper } from "@/components/LazyWrapper";
 import { CriticalResourcesPreloader } from "@/components/CriticalResourcesPreloader";
+import { AnalyticsProvider } from "@/components/Analytics";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 
@@ -46,35 +47,37 @@ const App = () => (
     <HelmetProvider>
       <ThemeProvider>
         <QueryClientProvider client={queryClient}>
-          <TooltipProvider>
-            <CriticalResourcesPreloader />
-            <Toaster />
-            <Sonner />
-          <BrowserRouter>
-            <PageTransition>
-              <Breadcrumb />
-              <Routes>
-                <Route path="/" element={<Index />} />
-                <Route path="/branding" element={<Branding />} />
-                <Route path="/evenementiel" element={<Evenementiel />} />
-                <Route path="/influence-marketing" element={<InfluenceMarketing />} />
-                <Route path="/personal-branding" element={<PersonalBranding />} />
-                <Route path="/content-digital" element={<ContentDigital />} />
-                <Route path="/developpement-web" element={<DeveloppementWeb />} />
-                <Route path="/marketing-digital" element={<MarketingDigital />} />
-                <Route path="/conseil-strategique" element={<ConseilStrategique />} />
-                <Route path="/innovation-ux" element={<InnovationUX />} />
-                <Route path="/analytics" element={<Analytics />} />
-                <Route path="/inside-link" element={<InsideLink />} />
-                <Route path="/collaborations" element={<Collaborations />} />
-                <Route path="/blog" element={<Blog />} />
-                <Route path="/blog/:slug" element={<BlogPost />} />
-                {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-                <Route path="*" element={<NotFound />} />
-              </Routes>
-            </PageTransition>
-          </BrowserRouter>
-        </TooltipProvider>
+          <AnalyticsProvider>
+            <TooltipProvider>
+              <CriticalResourcesPreloader />
+              <Toaster />
+              <Sonner />
+            <BrowserRouter>
+              <PageTransition>
+                <Breadcrumb />
+                <Routes>
+                  <Route path="/" element={<Index />} />
+                  <Route path="/branding" element={<Branding />} />
+                  <Route path="/evenementiel" element={<Evenementiel />} />
+                  <Route path="/influence-marketing" element={<InfluenceMarketing />} />
+                  <Route path="/personal-branding" element={<PersonalBranding />} />
+                  <Route path="/content-digital" element={<ContentDigital />} />
+                  <Route path="/developpement-web" element={<DeveloppementWeb />} />
+                  <Route path="/marketing-digital" element={<MarketingDigital />} />
+                  <Route path="/conseil-strategique" element={<ConseilStrategique />} />
+                  <Route path="/innovation-ux" element={<InnovationUX />} />
+                  <Route path="/analytics" element={<Analytics />} />
+                  <Route path="/inside-link" element={<InsideLink />} />
+                  <Route path="/collaborations" element={<Collaborations />} />
+                  <Route path="/blog" element={<Blog />} />
+                  <Route path="/blog/:slug" element={<BlogPost />} />
+                  {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+                  <Route path="*" element={<NotFound />} />
+                </Routes>
+              </PageTransition>
+            </BrowserRouter>
+          </TooltipProvider>
+        </AnalyticsProvider>
       </QueryClientProvider>
     </ThemeProvider>
   </HelmetProvider>
