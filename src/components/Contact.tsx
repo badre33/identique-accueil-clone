@@ -70,7 +70,14 @@ export const Contact = () => {
             </div>
             <div>
               <p className="text-gray-400 text-sm">Localisation</p>
-              <p className="text-white text-lg">Maroc • France</p>
+              <a 
+                href="https://maps.app.goo.gl/q3xLY5gy8cY6U6Tj6" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-white text-lg hover:text-gray-300 transition-colors"
+              >
+                Casablanca, Maroc
+              </a>
             </div>
           </div>
 
