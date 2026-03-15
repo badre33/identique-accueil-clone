@@ -9,29 +9,49 @@ export const generateOrganizationSchema = () => ({
   "logo": "https://linkagency.ma/logo-link-agency.png",
   "image": "https://linkagency.ma/logo-link-agency.png",
   "description": "Agence de marketing digital au Maroc spécialisée en branding, communication digitale et événementiel",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Casablanca",
-    "addressLocality": "Casablanca",
-    "addressRegion": "Grand Casablanca",
-    "postalCode": "20000",
-    "addressCountry": "MA"
-  },
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+212-XXX-XXXXXX",
-    "contactType": "Customer Service",
-    "availableLanguage": ["French", "Arabic", "English"],
-    "areaServed": "MA"
-  },
+  "address": [
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "Casablanca",
+      "addressLocality": "Casablanca",
+      "addressRegion": "Grand Casablanca",
+      "postalCode": "20000",
+      "addressCountry": "MA"
+    },
+    {
+      "@type": "PostalAddress",
+      "addressLocality": "Marrakech",
+      "addressRegion": "Marrakech-Safi",
+      "postalCode": "40000",
+      "addressCountry": "MA"
+    }
+  ],
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "+212-699-024526",
+      "contactType": "customer service",
+      "availableLanguage": ["French", "Arabic", "English"],
+      "areaServed": "MA",
+      "contactOption": "TollFree"
+    },
+    {
+      "@type": "ContactPoint",
+      "email": "contact@linkagency.ma",
+      "contactType": "sales",
+      "availableLanguage": ["French", "Arabic", "English"],
+      "areaServed": "MA"
+    }
+  ],
   "areaServed": {
     "@type": "Country",
     "name": "Morocco"
   },
   "sameAs": [
-    "https://www.facebook.com/linkagency",
-    "https://www.instagram.com/linkagency",
-    "https://www.linkedin.com/company/linkagency"
+    "https://www.instagram.com/linkagency.ma",
+    "https://www.linkedin.com/company/linkagency",
+    "https://www.facebook.com/linkagency.ma",
+    "https://www.tiktok.com/@linkagency.ma"
   ],
   "knowsAbout": [
     "Marketing Digital",
