@@ -20,7 +20,7 @@ export const preloadRouteChunk = (routeName: string) => {
 
 // Préchargement intelligent basé sur le comportement utilisateur
 export const intelligentPreloading = () => {
-  let mouseoverTimer: NodeJS.Timeout;
+  let mouseoverTimer: ReturnType<typeof setTimeout>;
 
   // Précharge au hover des liens (300ms de délai)
   document.addEventListener('mouseover', (e) => {

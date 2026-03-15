@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 
 export const useServiceWorker = () => {
   useEffect(() => {
-    if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
+    if ('serviceWorker' in navigator && import.meta.env.PROD) {
       navigator.serviceWorker.register('/sw.js')
         .then((registration) => {
           console.log('Service Worker enregistré avec succès:', registration);
