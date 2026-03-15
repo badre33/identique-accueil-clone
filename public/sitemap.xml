@@ -6,116 +6,191 @@
   <!-- Page d'accueil -->
   <url>
     <loc>https://linkagency.ma/</loc>
-    <lastmod>2025-01-13</lastmod>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://linkagency.ma/" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://linkagency.ma/ar/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://linkagency.ma/en/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://linkagency.ma/" />
     <image:image>
       <image:loc>https://linkagency.ma/logo-link-agency.png</image:loc>
       <image:title>Link Agency - Agence Marketing Digital Maroc</image:title>
     </image:image>
   </url>
 
-  <!-- Services Branding -->
+  <!-- Services -->
   <url>
     <loc>https://linkagency.ma/branding</loc>
-    <lastmod>2025-01-13</lastmod>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://linkagency.ma/branding" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://linkagency.ma/ar/branding" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://linkagency.ma/en/branding" />
   </url>
 
-  <!-- Services Événementiel Corporate -->
   <url>
     <loc>https://linkagency.ma/evenementiel</loc>
-    <lastmod>2025-01-13</lastmod>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://linkagency.ma/evenementiel" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://linkagency.ma/ar/evenementiel" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://linkagency.ma/en/evenementiel" />
   </url>
 
-  <!-- Services Influence Marketing -->
   <url>
     <loc>https://linkagency.ma/influence-marketing</loc>
-    <lastmod>2025-01-13</lastmod>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://linkagency.ma/influence-marketing" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://linkagency.ma/ar/influence-marketing" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://linkagency.ma/en/influence-marketing" />
   </url>
 
-  <!-- Personal Branding -->
+  <url>
+    <loc>https://linkagency.ma/marketing-digital</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://linkagency.ma/conseil-strategique</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://linkagency.ma/developpement-web</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://linkagency.ma/innovation-ux</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
   <url>
     <loc>https://linkagency.ma/personal-branding</loc>
-    <lastmod>2025-01-13</lastmod>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://linkagency.ma/personal-branding" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://linkagency.ma/ar/personal-branding" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://linkagency.ma/en/personal-branding" />
   </url>
 
-  <!-- Contenu Digital -->
   <url>
     <loc>https://linkagency.ma/content-digital</loc>
-    <lastmod>2025-01-13</lastmod>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://linkagency.ma/content-digital" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://linkagency.ma/ar/content-digital" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://linkagency.ma/en/content-digital" />
   </url>
 
-  <!-- Inside Link -->
+  <!-- Pages institutionnelles -->
   <url>
     <loc>https://linkagency.ma/inside-link</loc>
-    <lastmod>2025-01-13</lastmod>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://linkagency.ma/inside-link" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://linkagency.ma/ar/inside-link" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://linkagency.ma/en/inside-link" />
   </url>
 
-  <!-- Collaborations -->
   <url>
     <loc>https://linkagency.ma/collaborations</loc>
-    <lastmod>2025-01-13</lastmod>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://linkagency.ma/collaborations" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://linkagency.ma/ar/collaborations" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://linkagency.ma/en/collaborations" />
   </url>
 
-  <!-- Pages locales - Casablanca -->
+  <!-- Blog - Index -->
   <url>
-    <loc>https://linkagency.ma/casablanca</loc>
-    <lastmod>2025-01-13</lastmod>
+    <loc>https://linkagency.ma/blog</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Blog - Articles piliers -->
+  <url>
+    <loc>https://linkagency.ma/blog/strategie-marque-branding-maroc</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://linkagency.ma/blog/evenementiel-strategique-marque-maroc</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog - Articles satellites -->
+  <url>
+    <loc>https://linkagency.ma/blog/marketing-digital-strategie-marque-maroc</loc>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
-  <!-- Pages locales - Rabat -->
   <url>
-    <loc>https://linkagency.ma/rabat</loc>
-    <lastmod>2025-01-13</lastmod>
+    <loc>https://linkagency.ma/blog/personal-branding-entrepreneurs-maroc</loc>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
-  <!-- Pages locales - Marrakech -->
   <url>
-    <loc>https://linkagency.ma/marrakech</loc>
-    <lastmod>2025-01-13</lastmod>
+    <loc>https://linkagency.ma/blog/seo-local-maroc-guide-complet</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://linkagency.ma/blog/reseaux-sociaux-coherence-marque-maroc</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://linkagency.ma/blog/seo-local-maroc-casablanca-rabat-marrakech-2025</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://linkagency.ma/blog/marketing-digital-maroc-tendances-2025</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://linkagency.ma/blog/branding-local-maroc-identite-2025</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://linkagency.ma/blog/reseaux-sociaux-maroc-tiktok-instagram-2025</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://linkagency.ma/blog/ecommerce-maroc-boutique-en-ligne-2025</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://linkagency.ma/blog/intelligence-artificielle-entreprises-maroc-2025</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://linkagency.ma/blog/activation-marque-evenementiel-maroc</loc>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
