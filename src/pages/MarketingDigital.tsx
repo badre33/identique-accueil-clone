@@ -213,6 +213,18 @@ const MarketingDigital = () => {
         subtitle="4 étapes pour accélérer votre croissance digitale"
       />
 
+      {/* Section SEO locale */}
+      <section className="py-16 px-8 lg:px-16 bg-muted/30">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-light text-foreground mb-6">
+            Agence marketing à Casablanca
+          </h2>
+          <p className="text-muted-foreground leading-relaxed text-lg">
+            Link Agency structure et déploie des stratégies marketing digital adaptées au marché marocain. Depuis Casablanca et Marrakech, nous accompagnons les entreprises qui souhaitent dépasser les actions tactiques ponctuelles pour construire une présence digitale cohérente et performante. Notre rôle en tant qu'agence marketing va au-delà de l'exécution : nous intervenons en amont sur le diagnostic, la définition des objectifs et la priorisation des canaux. SEO, publicité en ligne, social media, email marketing — chaque levier est sélectionné et calibré en fonction de votre secteur, de votre maturité digitale et de vos ambitions de croissance. Notre connaissance du consommateur marocain et des spécificités locales du paysage digital nous permet de concevoir des stratégies qui génèrent des résultats mesurables et un retour sur investissement démontrable.
+          </p>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 px-8 lg:px-16 bg-black text-white">
         <div className="max-w-4xl mx-auto text-center">

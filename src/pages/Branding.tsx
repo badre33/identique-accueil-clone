@@ -170,6 +170,18 @@ const Branding = () => {
         subtitle="Une méthode rigoureuse et créative pour transformer chaque marque en référence inspirante"
       />
 
+      {/* Section SEO locale */}
+      <section className="py-16 px-8 lg:px-16 bg-muted/30">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-light text-foreground mb-6">
+            Agence de branding à Casablanca
+          </h2>
+          <p className="text-muted-foreground leading-relaxed text-lg">
+            Link Agency accompagne les entreprises marocaines dans la construction d'identités de marque durables et différenciantes. Basée à Casablanca et présente à Marrakech, notre approche repose sur une méthodologie structurée : diagnostic de marque, définition du positionnement, création de la plateforme de marque et déploiement du territoire d'expression. Nous intervenons aussi bien auprès de PME en quête de structuration que de grandes entreprises souhaitant repositionner leur image. Chaque projet de branding est traité comme un investissement stratégique, avec des objectifs mesurables et un accompagnement dans la durée. Notre connaissance approfondie du marché marocain — ses codes culturels, ses dynamiques sectorielles et ses attentes consommateurs — nous permet de créer des marques qui résonnent localement tout en portant une ambition internationale.
+          </p>
+        </div>
+      </section>
+
       {/* Final CTA Section */}
       <section className="py-20 px-8 lg:px-16 bg-white">
         <div className="max-w-4xl mx-auto text-center">
