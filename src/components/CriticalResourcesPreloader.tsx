@@ -27,7 +27,7 @@ export const CriticalResourcesPreloader = () => {
       }, { timeout: 1500 });
 
       // Initialiser Google Analytics en production (différé)
-      if (process.env.NODE_ENV === 'production') {
+      if (import.meta.env.PROD) {
         requestIdleCallback(() => {
           initGA4();
         }, { timeout: 3000 });

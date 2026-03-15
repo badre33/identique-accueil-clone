@@ -41,7 +41,7 @@ const DefaultErrorFallback = ({ error, retry }: { error: AppError; retry: () => 
         </button>
       </div>
       
-      {process.env.NODE_ENV === 'development' && error.details && (
+      {import.meta.env.DEV && error.details && (
         <details className="text-left text-sm text-neutral-500 mt-4">
           <summary className="cursor-pointer font-medium">
             Détails techniques
