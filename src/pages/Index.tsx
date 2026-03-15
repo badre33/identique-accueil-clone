@@ -14,7 +14,8 @@ import { SEOHead } from "@/components/SEOHead";
 import { Footer } from "@/components/Footer";
 import { OptimizedCTAs } from "@/components/OptimizedCTAs";
 import { LocalSEOSection } from "@/components/LocalSEO";
-import { generateOrganizationSchema, generateLocalBusinessSchema, generateWebPageSchema } from "@/utils/structuredData";
+import { generateOrganizationSchema, generateLocalBusinessSchema, generateWebPageSchema, generateFAQSchema } from '@/utils/structuredData';
+import { faqsEnriched } from '@/data/content';
 
 const Index = () => {
   // Données structurées pour la page d'accueil
@@ -27,7 +28,8 @@ const Index = () => {
         "Link Agency - Agence Marketing Digital au Maroc",
         "Agence marketing digital au Maroc spécialisée en branding, communication digitale et événementiel. Services créatifs à Casablanca, Rabat et Marrakech.",
         "https://linkagency.ma/"
-      )
+      ),
+      generateFAQSchema(faqsEnriched.map(f => ({ question: f.question, answer: f.answer })))
     ]
   };
 
