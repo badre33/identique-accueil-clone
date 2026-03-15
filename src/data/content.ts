@@ -1132,7 +1132,7 @@ export const blogPosts: BlogPost[] = [
     image: '/assets/blog/activation-marque-evenementiel-maroc.jpg',
     readTime: 8,
     tags: ['activation de marque', 'événementiel', 'branding', 'expérience immersive', 'stratégie de marque maroc'],
-    metaDescription: 'Activation de marque par l\'événementiel au Maroc : méthodologie, formats immersifs, indicateurs de performance. Guide stratégique pour dirigeants et marques.',
+    metaDescription: 'Activation de marque par l\'événementiel au Maroc : méthodologie, formats immersifs et indicateurs clés. Guide stratégique pour dirigeants.',
     metaKeywords: 'activation de marque maroc, événementiel marque, expérience immersive maroc, brand activation, stratégie événementielle maroc, lancement produit maroc'
   }
 ];
