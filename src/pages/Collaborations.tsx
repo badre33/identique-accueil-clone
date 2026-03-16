@@ -6,6 +6,8 @@ import { CollaborationCard } from "@/components/collaborations/CollaborationCard
 import { CollaborationDetailsModal } from "@/components/collaborations/CollaborationDetailsModal";
 import { CTASection } from "@/components/collaborations/CTASection";
 import { FloatingContactWidget } from "@/components/FloatingContactWidget";
+import { SEOHead } from "@/components/SEOHead";
+import { generateWebPageSchema, generateBreadcrumbSchema } from "@/utils/structuredData";
 
 const Collaborations = () => {
   const [selectedCategory, setSelectedCategory] = useState("Toutes");
