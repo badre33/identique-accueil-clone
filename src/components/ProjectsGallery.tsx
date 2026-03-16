@@ -65,6 +65,15 @@ export const ProjectsGallery = () => {
       url: "https://novaspacia.com/"
     },
     {
+      title: "OCB Maroc",
+      category: "Social Media & Ads",
+      image: "/lovable-uploads/ocb-logo.png",
+      shortDescription: "Gestion complète des réseaux sociaux pour OCB Maroc : stratégie de contenu, campagnes publicitaires, et partenariats stratégiques avec des événements et artistes.",
+      description: "Accompagnement stratégique et opérationnel pour OCB Maroc dans la gestion de la marque sur le territoire marocain. Notre mission couvre la gestion complète des réseaux sociaux avec une stratégie de contenu engageante et adaptée au marché local, la conception et le pilotage de campagnes publicitaires ciblées (Meta Ads, TikTok Ads), ainsi que le développement d'une stratégie de partenariats innovante avec des événements culturels et musicaux majeurs au Maroc et des collaborations avec des artistes influents pour renforcer le positionnement de la marque auprès d'une audience jeune et connectée.",
+      year: "2025",
+      url: "#"
+    },
+    {
       title: "Artitenium",
       category: "Branding & Digital",
       image: "/lovable-uploads/ceaff19e-cebb-453b-a8e2-33fc348e3bad.png",

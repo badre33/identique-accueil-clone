@@ -220,6 +220,15 @@ const Collaborations = () => {
       type: "Concept Store"
     },
     {
+      name: "OCB Maroc",
+      url: "#",
+      category: "Tabac & Lifestyle",
+      logo: "/lovable-uploads/ocb-logo.png",
+      description: "Gestion complète des réseaux sociaux pour OCB Maroc : stratégie de contenu, campagnes publicitaires, stratégie de partenariats avec des événements et artistes pour renforcer le positionnement de la marque.",
+      year: "2025",
+      type: "Social Media & Ads"
+    },
+    {
       name: "Edwin",
       url: "https://edwin-europe.com/fr-fr/?srsltid=AfmBOoozm7D36im7r3_ZLIY46gmE5v6R9kdcNLMgPcrQBUf0TIzU2Ysh",
       category: "Mode",
@@ -230,7 +239,7 @@ const Collaborations = () => {
     }
   ];
 
-  const categories = ["Toutes", "Santé & Bien-être", "Branding Stratégique", "Branding Personnel", "Restauration", "Immobilier", "Commerce", "Tech", "Startup Studio", "Musique", "Architecture d'intérieur", "Design d'intérieur", "Écrans interactifs tactiles", "Événementiel", "Mode", "Conseil"];
+  const categories = ["Toutes", "Santé & Bien-être", "Branding Stratégique", "Branding Personnel", "Restauration", "Immobilier", "Commerce", "Tech", "Startup Studio", "Musique", "Architecture d'intérieur", "Design d'intérieur", "Écrans interactifs tactiles", "Événementiel", "Tabac & Lifestyle", "Mode", "Conseil"];
 
   const filteredCollaborations = selectedCategory === "Toutes" 
     ? collaborations 
