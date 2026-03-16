@@ -239,7 +239,7 @@ const Collaborations = () => {
     }
   ];
 
-  const categories = ["Toutes", "Santé & Bien-être", "Branding Stratégique", "Branding Personnel", "Restauration", "Immobilier", "Commerce", "Tech", "Startup Studio", "Musique", "Architecture d'intérieur", "Design d'intérieur", "Écrans interactifs tactiles", "Événementiel", "Mode", "Conseil"];
+  const categories = ["Toutes", "Santé & Bien-être", "Branding Stratégique", "Branding Personnel", "Restauration", "Immobilier", "Commerce", "Tech", "Startup Studio", "Musique", "Architecture d'intérieur", "Design d'intérieur", "Écrans interactifs tactiles", "Événementiel", "Tabac & Lifestyle", "Mode", "Conseil"];
 
   const filteredCollaborations = selectedCategory === "Toutes" 
     ? collaborations 
