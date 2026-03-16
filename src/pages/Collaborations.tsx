@@ -220,6 +220,15 @@ const Collaborations = () => {
       type: "Concept Store"
     },
     {
+      name: "OCB Maroc",
+      url: "#",
+      category: "Tabac & Lifestyle",
+      logo: "/lovable-uploads/ocb-logo.png",
+      description: "Gestion complète des réseaux sociaux pour OCB Maroc : stratégie de contenu, campagnes publicitaires, stratégie de partenariats avec des événements et artistes pour renforcer le positionnement de la marque.",
+      year: "2025",
+      type: "Social Media & Ads"
+    },
+    {
       name: "Edwin",
       url: "https://edwin-europe.com/fr-fr/?srsltid=AfmBOoozm7D36im7r3_ZLIY46gmE5v6R9kdcNLMgPcrQBUf0TIzU2Ysh",
       category: "Mode",
