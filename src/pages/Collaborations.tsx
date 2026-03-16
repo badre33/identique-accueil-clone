@@ -6,11 +6,28 @@ import { CollaborationCard } from "@/components/collaborations/CollaborationCard
 import { CollaborationDetailsModal } from "@/components/collaborations/CollaborationDetailsModal";
 import { CTASection } from "@/components/collaborations/CTASection";
 import { FloatingContactWidget } from "@/components/FloatingContactWidget";
+import { SEOHead } from "@/components/SEOHead";
+import { generateWebPageSchema, generateBreadcrumbSchema } from "@/utils/structuredData";
 
 const Collaborations = () => {
   const [selectedCategory, setSelectedCategory] = useState("Toutes");
   const [selectedCollaboration, setSelectedCollaboration] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const collaborationsSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      generateWebPageSchema(
+        "Nos Collaborations & Projets - Portfolio | Link Agency Maroc",
+        "Découvrez les collaborations et projets réalisés par Link Agency : branding, marketing digital, événementiel et communication au Maroc.",
+        "https://linkagency.ma/collaborations"
+      ),
+      generateBreadcrumbSchema([
+        { name: "Accueil", url: "https://linkagency.ma/" },
+        { name: "Collaborations", url: "https://linkagency.ma/collaborations" }
+      ])
+    ]
+  };
 
   const collaborations = [
     {
@@ -226,6 +243,13 @@ const Collaborations = () => {
 
   return (
     <div className="min-h-screen bg-white pt-16 sm:pt-20">
+      <SEOHead
+        title="Nos Collaborations & Projets - Portfolio | Link Agency Maroc"
+        description="Découvrez les collaborations et projets réalisés par Link Agency : branding, marketing digital, événementiel et communication au Maroc."
+        keywords="portfolio agence maroc, collaborations branding, projets marketing digital casablanca"
+        url="https://linkagency.ma/collaborations"
+        structuredData={collaborationsSchema}
+      />
       <Header />
       
       {/* Hero Section */}
