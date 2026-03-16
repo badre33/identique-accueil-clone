@@ -14,6 +14,21 @@ const Collaborations = () => {
   const [selectedCollaboration, setSelectedCollaboration] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  const collaborationsSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      generateWebPageSchema(
+        "Nos Collaborations & Projets - Portfolio | Link Agency Maroc",
+        "Découvrez les collaborations et projets réalisés par Link Agency : branding, marketing digital, événementiel et communication au Maroc.",
+        "https://linkagency.ma/collaborations"
+      ),
+      generateBreadcrumbSchema([
+        { name: "Accueil", url: "https://linkagency.ma/" },
+        { name: "Collaborations", url: "https://linkagency.ma/collaborations" }
+      ])
+    ]
+  };
+
   const collaborations = [
     {
       name: "Oncovita",
