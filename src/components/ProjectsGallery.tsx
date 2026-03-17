@@ -160,6 +160,7 @@ export const ProjectsGallery = () => {
                       href={project.url}
                       target="_blank"
                       rel="noopener noreferrer"
+                      aria-label={`Visiter le site de ${project.title}`}
                       className="opacity-0 group-hover:opacity-100 transition-opacity p-2 hover:bg-gray-100 rounded-full"
                       onClick={(e) => e.stopPropagation()}
                     >
