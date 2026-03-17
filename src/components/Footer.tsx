@@ -141,7 +141,7 @@ export const Footer = () => {
 
         {/* Copyright */}
         <div className="border-t border-gray-800 pt-6 text-center">
-          <p className="text-gray-500 text-sm">
+          <p className="text-gray-400 text-sm">
             © {currentYear} Link Agency. Tous droits réservés. | Agence Marketing Digital Casablanca, Maroc
           </p>
         </div>
