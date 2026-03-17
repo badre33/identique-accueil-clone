@@ -123,7 +123,7 @@ export const Footer = () => {
 
         {/* SEO Rich Text Section */}
         <div className="border-t border-gray-800 pt-8 mb-8">
-          <div className="text-xs text-gray-500 leading-relaxed">
+          <div className="text-xs text-gray-400 leading-relaxed">
             <p className="mb-3">
               <strong className="text-gray-400">Link Agency</strong> - Votre <strong className="text-gray-400">agence communication Casablanca</strong> et <strong className="text-gray-400">agence marketing Maroc</strong> de référence. 
               Spécialistes en <strong className="text-gray-400">événementiel corporate Maroc</strong>, <strong className="text-gray-400">organisation événements entreprise</strong>, <strong className="text-gray-400">campagne influence Maroc</strong> et <strong className="text-gray-400">lancement de produit</strong>.
