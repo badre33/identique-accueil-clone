@@ -42,10 +42,8 @@ export const SEOHead = ({
       {/* Canonical URL */}
       <link rel="canonical" href={url} />
       
-      {/* Hreflang pour le multilingue */}
+      {/* Hreflang */}
       <link rel="alternate" hrefLang="fr" href={url} />
-      <link rel="alternate" hrefLang="ar" href={url.replace('linkagency.ma', 'linkagency.ma/ar')} />
-      <link rel="alternate" hrefLang="en" href={url.replace('linkagency.ma', 'linkagency.ma/en')} />
       <link rel="alternate" hrefLang="x-default" href={url} />
       
       {/* Open Graph */}
