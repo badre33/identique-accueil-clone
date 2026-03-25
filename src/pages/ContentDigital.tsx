@@ -127,7 +127,7 @@ const ContentDigital = () => {
   return (
     <div className="min-h-screen bg-white pt-16 sm:pt-20">
       <SEOHead
-        title="Content Digital - Création Contenu & Réseaux Sociaux | Link Agency"
+        title="Content Digital Maroc - Création Contenu & Réseaux Sociaux | Link Agency"
         description="Production de contenus digitaux performants : réseaux sociaux, vidéos, photographie et rédaction web. Création de contenu au Maroc."
         keywords="création contenu digital maroc, réseaux sociaux, production vidéo, photographie professionnelle, rédaction web, content marketing"
         url="https://linkagency.ma/content-digital"
