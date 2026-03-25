@@ -64,128 +64,60 @@ export const generateOrganizationSchema = () => ({
   ]
 });
 
-export const generateLocalBusinessSchema = (city?: 'casablanca' | 'rabat' | 'marrakech') => {
-  const locations = {
-    casablanca: {
-      name: "Link Agency Casablanca",
-      address: {
-        "@type": "PostalAddress",
-        "streetAddress": "Centre Ville, Casablanca",
-        "addressLocality": "Casablanca",
-        "addressRegion": "Grand Casablanca",
-        "postalCode": "20000",
-        "addressCountry": "MA"
-      },
-      geo: {
-        "@type": "GeoCoordinates",
-        "latitude": 33.5731,
-        "longitude": -7.5898
-      },
-      telephone: "+212-522-XXX-XXX",
-      specialties: ["Marketing Digital", "E-commerce", "Branding Corporate"],
-      aggregateRating: {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "reviewCount": "47"
-      }
+export const generateLocalBusinessSchema = () => ({
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Link Agency",
+  "image": "https://linkagency.ma/lovable-uploads/85b45a40-6291-4f5d-a377-65024ddb1976.png",
+  "telephone": "+212-699-024526",
+  "email": "bharkaoui@linkagency.ma",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Casablanca",
+    "addressRegion": "Grand Casablanca",
+    "postalCode": "20000",
+    "addressCountry": "MA"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 33.5731,
+    "longitude": -7.5898
+  },
+  "url": "https://linkagency.ma",
+  "priceRange": "$$",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:00",
+      "closes": "18:00"
     },
-    rabat: {
-      name: "Link Agency Rabat",
-      address: {
-        "@type": "PostalAddress",
-        "streetAddress": "Agdal, Rabat",
-        "addressLocality": "Rabat",
-        "addressRegion": "Rabat-Salé-Kénitra",
-        "postalCode": "10000",
-        "addressCountry": "MA"
-      },
-      geo: {
-        "@type": "GeoCoordinates",
-        "latitude": 34.0209,
-        "longitude": -6.8416
-      },
-      telephone: "+212-537-XXX-XXX",
-      specialties: ["Communication Institutionnelle", "Relations Publiques", "Événementiel"],
-      aggregateRating: {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "32"
-      }
-    },
-    marrakech: {
-      name: "Link Agency Marrakech",
-      address: {
-        "@type": "PostalAddress",
-        "streetAddress": "Gueliz, Marrakech",
-        "addressLocality": "Marrakech",
-        "addressRegion": "Marrakech-Safi",
-        "postalCode": "40000",
-        "addressCountry": "MA"
-      },
-      geo: {
-        "@type": "GeoCoordinates",
-        "latitude": 31.6295,
-        "longitude": -7.9811
-      },
-      telephone: "+212-524-XXX-XXX",
-      specialties: ["Tourisme Digital", "Hôtellerie", "Artisanat Local"],
-      aggregateRating: {
-        "@type": "AggregateRating",
-        "ratingValue": "4.7",
-        "reviewCount": "38"
-      }
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "13:00"
     }
-  };
-
-  const location = city ? locations[city] : locations.casablanca;
-
-  return {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": location.name,
-    "image": "https://linkagency.ma/logo-link-agency.png",
-    "telephone": location.telephone,
-    "email": "contact@linkagency.ma",
-    "address": location.address,
-    "geo": location.geo,
-    "url": "https://linkagency.ma",
-    "priceRange": "$$",
-    "openingHours": [
-      "Mo-Fr 09:00-18:00",
-      "Sa 09:00-13:00"
-    ],
-    "serviceArea": {
-      "@type": "Country",
-      "name": "Morocco"
-    },
-    "areaServed": [
-      {
-        "@type": "City",
-        "name": "Casablanca"
-      },
-      {
-        "@type": "City", 
-        "name": "Rabat"
-      },
-      {
-        "@type": "City",
-        "name": "Marrakech"
-      }
-    ],
-    "aggregateRating": location.aggregateRating,
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Services Marketing Digital",
-      "itemListElement": location.specialties.map(specialty => ({
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": specialty
-        }
-      }))
-    }
-  };
-};
+  ],
+  "serviceArea": {
+    "@type": "Country",
+    "name": "Morocco"
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Casablanca" },
+    { "@type": "City", "name": "Rabat" },
+    { "@type": "City", "name": "Marrakech" }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Services Marketing Digital",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Marketing Digital" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Branding" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Événementiel" } }
+    ]
+  }
+});
 
 export const generateServiceSchema = (serviceName: string, description: string, price?: string) => ({
   "@context": "https://schema.org",
