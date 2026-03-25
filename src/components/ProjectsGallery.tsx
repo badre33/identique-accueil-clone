@@ -20,53 +20,8 @@ export const ProjectsGallery = () => {
 
   const projects = [
     {
-      title: "Oncovita",
-      category: "Santé & Bien-être",
-      image: "/lovable-uploads/oncovita-logo.jpeg",
-      shortDescription: "Association dédiée à l'accompagnement holistique des patients atteints de cancer : soigner le corps, apaiser l'esprit, nourrir l'espoir.",
-      description: "Mission complète d'accompagnement stratégique pour Oncovita, association pionnière dans le soutien aux patients atteints de cancer au Maroc. Notre intervention s'est concentrée sur la création d'une identité visuelle forte et sensible, le développement d'une stratégie de communication émotionnelle et impactante, ainsi que la mise en place d'outils digitaux pour faciliter l'accès aux services d'accompagnement. Le projet incluait la refonte de l'identité de marque, la production de contenus inspirants centrés sur l'espoir et la résilience, et le développement d'une présence digitale humaniste permettant de toucher et d'accompagner davantage de patients et leurs familles dans cette épreuve.",
-      year: "2025",
-      url: "#"
-    },
-    {
-      title: "Nexia",
-      category: "Conseil & Digitalisation",
-      image: "/lovable-uploads/05dfc79f-2a20-4241-aa4d-606f6cdd30d2.png",
-      shortDescription: "Accompagnement stratégique en digitalisation, conseil en communication et gestion des réseaux sociaux pour optimiser la présence digitale.",
-      description: "Mission d'accompagnement stratégique pour Nexia, cabinet de conseil spécialisé, dans leur transformation digitale complète. Notre intervention s'est concentrée sur l'optimisation de leur présence digitale, le développement d'une stratégie de communication moderne et la restructuration de leur approche sur les réseaux sociaux. Le projet incluait la refonte de leur stratégie de contenu, la mise en place d'outils de digitalisation performants et l'accompagnement de leurs équipes dans l'adoption des nouvelles pratiques digitales pour renforcer leur positionnement d'expert conseil auprès de leur clientèle cible.",
-      year: "2024",
-      url: "https://nexia.ma/"
-    },
-    {
-      title: "Edwin",
-      category: "Pop-up Store & Événementiel", 
-      image: "/lovable-uploads/b82bb134-7256-4325-b5ca-90d055f1629c.png",
-      shortDescription: "Mission complète de pop-up store à Bordeaux pour cette marque de jeans japonaise iconique fondée en 1947. Conception d'un espace éphémère immersif célébrant l'héritage denim japonais.",
-      description: "Création et production d'un pop-up store exceptionnel à Bordeaux pour la marque de jeans japonaise légendaire Edwin. Notre mission consistait à concevoir un espace retail éphémère qui capture l'essence de la culture denim japonaise tout en s'intégrant harmonieusement dans l'écosystème créatif bordelais. Le projet comprenait la scénographie complète de l'espace, l'organisation d'événements exclusifs mêlant art local et tradition nippone, ainsi que le développement d'une stratégie d'activation marketing sur mesure pour créer un buzz authentique et générer des ventes record sur une durée limitée.",
-      year: "2024",
-      url: "#"
-    },
-    {
-      title: "French Tech",
-      category: "Partenariat Stratégique",
-      image: "/lovable-uploads/801816e7-97bc-49c9-948c-34e3c9d49e1f.png",
-      shortDescription: "Partenaire officiel de l'écosystème French Tech Bordeaux pour l'accompagnement stratégique des startups incubées vers l'international.",
-      description: "Partenariat stratégique avec l'écosystème French Tech Bordeaux pour développer et structurer l'accompagnement des startups incubées vers l'international. Notre rôle couvre le développement de la stratégie de marque de l'écosystème bordelais, la création des outils marketing pour les programmes d'incubation, et l'accompagnement personnalisé des startups prometteuses dans leur développement commercial. Nous orchestrons les campagnes de communication, développons les stratégies de positionnement et créons les supports d'attraction pour renforcer la notoriété de French Tech Bordeaux sur la scène européenne et faciliter l'expansion internationale des entreprises incubées.",
-      year: "2022-2024",
-      url: "#"
-    },
-    {
-      title: "Nova Spacia",
-      category: "Branding & Digital",
-      image: "/lovable-uploads/novaspacia-logo.svg",
-      shortDescription: "Création d'identité visuelle et développement web pour Nova Spacia, entreprise spécialisée dans l'aménagement d'espaces professionnels et commerciaux.",
-      description: "Accompagnement complet de Nova Spacia dans le développement de leur image de marque et présence digitale. Notre mission incluait la conception d'une identité visuelle moderne et professionnelle, le développement d'un site web performant mettant en valeur leurs services d'aménagement d'espaces, ainsi qu'une stratégie de communication digitale adaptée à leur positionnement premium sur le marché de l'aménagement professionnel.",
-      year: "2026",
-      url: "https://novaspacia.com/"
-    },
-    {
       title: "OCB Maroc",
-      category: "Social Media & Ads",
+      category: "Social Media & Ads — Maroc",
       image: "/lovable-uploads/ocb-logo.png",
       shortDescription: "Gestion complète des réseaux sociaux pour OCB Maroc : stratégie de contenu, campagnes publicitaires, et partenariats stratégiques avec des événements et artistes.",
       description: "Accompagnement stratégique et opérationnel pour OCB Maroc dans la gestion de la marque sur le territoire marocain. Notre mission couvre la gestion complète des réseaux sociaux avec une stratégie de contenu engageante et adaptée au marché local, la conception et le pilotage de campagnes publicitaires ciblées (Meta Ads, TikTok Ads), ainsi que le développement d'une stratégie de partenariats innovante avec des événements culturels et musicaux majeurs au Maroc et des collaborations avec des artistes influents pour renforcer le positionnement de la marque auprès d'une audience jeune et connectée.",
@@ -75,12 +30,39 @@ export const ProjectsGallery = () => {
     },
     {
       title: "Artitenium",
-      category: "Branding & Digital",
+      category: "Branding & Digital — Maroc",
       image: "/lovable-uploads/ceaff19e-cebb-453b-a8e2-33fc348e3bad.png",
       shortDescription: "Création d'identité visuelle moderne, développement de site web et stratégie d'acquisition digitale pour cette entreprise d'aménagement d'intérieur haut de gamme.",
       description: "Transformation digitale complète d'Artitenium, entreprise spécialisée dans l'aménagement d'intérieur haut de gamme au Maroc. Notre accompagnement incluait la création d'une identité de marque sophistiquée reflétant l'excellence artisanale marocaine, le développement d'un site web premium showcase mettant en valeur leurs réalisations exceptionnelles, et l'élaboration d'une stratégie d'acquisition digitale ciblée. L'objectif était de positionner Artitenium comme la référence incontournable du design d'intérieur de luxe au Maroc, en développant une présence digitale à la hauteur de leur savoir-faire exceptionnel et en créant les outils nécessaires pour conquérir une clientèle haut de gamme exigeante.",
       year: "2024-2025",
       url: "https://artitenium.ma/"
+    },
+    {
+      title: "Nova Spacia",
+      category: "Branding & Digital — Maroc",
+      image: "/lovable-uploads/novaspacia-logo.svg",
+      shortDescription: "Création d'identité visuelle et développement web pour Nova Spacia, entreprise spécialisée dans l'aménagement d'espaces professionnels et commerciaux.",
+      description: "Accompagnement complet de Nova Spacia dans le développement de leur image de marque et présence digitale. Notre mission incluait la conception d'une identité visuelle moderne et professionnelle, le développement d'un site web performant mettant en valeur leurs services d'aménagement d'espaces, ainsi qu'une stratégie de communication digitale adaptée à leur positionnement premium sur le marché de l'aménagement professionnel.",
+      year: "2026",
+      url: "https://novaspacia.com/"
+    },
+    {
+      title: "Oncovita",
+      category: "Santé & Bien-être — Maroc",
+      image: "/lovable-uploads/oncovita-logo.jpeg",
+      shortDescription: "Association dédiée à l'accompagnement holistique des patients atteints de cancer : soigner le corps, apaiser l'esprit, nourrir l'espoir.",
+      description: "Mission complète d'accompagnement stratégique pour Oncovita, association pionnière dans le soutien aux patients atteints de cancer au Maroc. Notre intervention s'est concentrée sur la création d'une identité visuelle forte et sensible, le développement d'une stratégie de communication émotionnelle et impactante, ainsi que la mise en place d'outils digitaux pour faciliter l'accès aux services d'accompagnement. Le projet incluait la refonte de l'identité de marque, la production de contenus inspirants centrés sur l'espoir et la résilience, et le développement d'une présence digitale humaniste permettant de toucher et d'accompagner davantage de patients et leurs familles dans cette épreuve.",
+      year: "2025",
+      url: "#"
+    },
+    {
+      title: "Nexia",
+      category: "Conseil & Digitalisation — Maroc",
+      image: "/lovable-uploads/05dfc79f-2a20-4241-aa4d-606f6cdd30d2.png",
+      shortDescription: "Accompagnement stratégique en digitalisation, conseil en communication et gestion des réseaux sociaux pour optimiser la présence digitale.",
+      description: "Mission d'accompagnement stratégique pour Nexia, cabinet de conseil spécialisé, dans leur transformation digitale complète. Notre intervention s'est concentrée sur l'optimisation de leur présence digitale, le développement d'une stratégie de communication moderne et la restructuration de leur approche sur les réseaux sociaux. Le projet incluait la refonte de leur stratégie de contenu, la mise en place d'outils de digitalisation performants et l'accompagnement de leurs équipes dans l'adoption des nouvelles pratiques digitales pour renforcer leur positionnement d'expert conseil auprès de leur clientèle cible.",
+      year: "2024",
+      url: "https://nexia.ma/"
     },
     {
       title: "Personal Branding Politique",
@@ -89,6 +71,24 @@ export const ProjectsGallery = () => {
       shortDescription: "Accompagnement stratégique sur une mission de personal branding à fort enjeu pour renforcer l'image d'une dirigeante politique influente sur la scène internationale.",
       description: "Mission stratégique de personal branding pour une figure politique influente, visant à construire une image publique authentique et inspirante détachée des codes politiques traditionnels. Notre approche s'est concentrée sur l'humanisation du discours politique, la valorisation des valeurs d'espoir et de modernité, et la création d'un storytelling personnel puissant résonnant avec les enjeux contemporains. Le projet incluait la refonte complète de la stratégie de communication multicanale, la production de contenus éditoriaux et visuels premium, ainsi que la coordination d'une équipe créative dédiée pour assurer une cohérence parfaite sur tous les points de contact et renforcer l'influence de cette personnalité sur la scène politique internationale.",
       year: "2024",
+      url: "#"
+    },
+    {
+      title: "Edwin",
+      category: "Pop-up Store & Événementiel", 
+      image: "/lovable-uploads/b82bb134-7256-4325-b5ca-90d055f1629c.png",
+      shortDescription: "Mission internationale pilotée depuis Casablanca. Pop-up store à Bordeaux pour cette marque de jeans japonaise iconique fondée en 1947. Conception d'un espace éphémère immersif célébrant l'héritage denim japonais.",
+      description: "Création et production d'un pop-up store exceptionnel à Bordeaux pour la marque de jeans japonaise légendaire Edwin. Notre mission consistait à concevoir un espace retail éphémère qui capture l'essence de la culture denim japonaise tout en s'intégrant harmonieusement dans l'écosystème créatif bordelais. Le projet comprenait la scénographie complète de l'espace, l'organisation d'événements exclusifs mêlant art local et tradition nippone, ainsi que le développement d'une stratégie d'activation marketing sur mesure pour créer un buzz authentique et générer des ventes record sur une durée limitée.",
+      year: "2024",
+      url: "#"
+    },
+    {
+      title: "French Tech",
+      category: "Partenariat Stratégique",
+      image: "/lovable-uploads/801816e7-97bc-49c9-948c-34e3c9d49e1f.png",
+      shortDescription: "Projet international conduit depuis notre bureau de Casablanca. Partenaire officiel de l'écosystème French Tech Bordeaux pour l'accompagnement stratégique des startups incubées vers l'international.",
+      description: "Partenariat stratégique avec l'écosystème French Tech Bordeaux pour développer et structurer l'accompagnement des startups incubées vers l'international. Notre rôle couvre le développement de la stratégie de marque de l'écosystème bordelais, la création des outils marketing pour les programmes d'incubation, et l'accompagnement personnalisé des startups prometteuses dans leur développement commercial. Nous orchestrons les campagnes de communication, développons les stratégies de positionnement et créons les supports d'attraction pour renforcer la notoriété de French Tech Bordeaux sur la scène européenne et faciliter l'expansion internationale des entreprises incubées.",
+      year: "2022-2024",
       url: "#"
     }
   ];
