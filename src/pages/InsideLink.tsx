@@ -80,6 +80,12 @@ const InsideLink = () => {
 
   return (
     <div className="min-h-screen bg-white relative overflow-hidden pt-16 sm:pt-20">
+      <SEOHead
+        title="Inside Link Agency - Notre Équipe & Vision | Agence Marketing Maroc"
+        description="Découvrez l'équipe et la vision de Link Agency, agence marketing digital à Casablanca. 11 ans d'expérience, 75+ projets, une approche créative unique au Maroc."
+        keywords="link agency casablanca, agence marketing digital maroc, équipe créative casablanca, vision agence communication maroc"
+        url="https://linkagency.ma/inside-link"
+      />
       <ParticleBackground />
       <InteractiveBackground />
       <SideNavigation currentSection={currentSection} />

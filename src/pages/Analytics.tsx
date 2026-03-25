@@ -104,6 +104,12 @@ const Analytics = () => {
 
   return (
     <div className="min-h-screen bg-white pt-16 sm:pt-20">
+      <SEOHead
+        title="Analytics & Growth Hacking - Data & Performance | Link Agency Maroc"
+        description="Services analytics, growth hacking et optimisation de conversion au Maroc. Tableaux de bord, KPIs, A/B testing et stratégies de croissance pour votre entreprise à Casablanca."
+        keywords="analytics maroc, growth hacking casablanca, data marketing maroc, optimisation conversion, KPI digital maroc"
+        url="https://linkagency.ma/analytics"
+      />
       <Header />
       <FloatingContactWidget />
       
