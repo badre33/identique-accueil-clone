@@ -126,7 +126,7 @@ const PersonalBranding = () => {
   return (
     <div className="min-h-screen bg-white pt-16 sm:pt-20">
       <SEOHead
-        title="Personal Branding - Marque Personnelle & Positionnement Expert | Link Agency"
+        title="Personal Branding au Maroc - Marque Personnelle & Positionnement | Link Agency"
         description="Développez votre marque personnelle avec notre accompagnement complet : identité, positionnement expert, communication digitale et croissance d'audience."
         keywords="personal branding maroc, marque personnelle, développement personnel, linkedin, positionnement expert, influence digitale"
         url="https://linkagency.ma/personal-branding"

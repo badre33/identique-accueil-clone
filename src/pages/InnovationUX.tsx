@@ -128,7 +128,7 @@ const InnovationUX = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-yellow-50 via-white to-orange-50 pt-16 sm:pt-20">
       <SEOHead
-        title="Innovation & UX Design - Expériences Utilisateur Exceptionnelles | Link Agency"
+        title="Innovation & UX Design au Maroc - Expériences Digitales | Link Agency"
         description="Conception UX/UI professionnelle au Maroc : recherche utilisateur, design d'interfaces, prototypage interactif et tests pour optimiser l'expérience client."
         keywords="ux design maroc, ui design, expérience utilisateur, prototypage, tests utilisateurs, design thinking casablanca, ux ui designer"
         url="https://linkagency.ma/innovation-ux"
