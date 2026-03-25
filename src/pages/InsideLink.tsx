@@ -1,3 +1,4 @@
+import { SEOHead } from "@/components/SEOHead";
 import { useState, useEffect } from "react";
 import { ArrowLeft, Target, Palette, Users, Lightbulb, Linkedin, History, Download } from "lucide-react";
 import { Link } from "react-router-dom";
