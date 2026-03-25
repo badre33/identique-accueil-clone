@@ -19,34 +19,6 @@ export const FAQ = () => {
 
   const categories = ["all", ...Array.from(new Set(faqsEnriched.map(faq => faq.category)))];
 
-  // Générer les données structurées FAQ
-  useEffect(() => {
-    const faqSchema = generateFAQSchema(faqsEnriched.map(faq => ({
-      question: faq.question,
-      answer: faq.answer
-    })));
-    
-    // Injecter le schema dans le head
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.text = JSON.stringify(faqSchema);
-    script.id = 'faq-schema';
-    
-    // Supprimer l'ancien schema s'il existe
-    const existingScript = document.getElementById('faq-schema');
-    if (existingScript) {
-      existingScript.remove();
-    }
-    
-    document.head.appendChild(script);
-    
-    return () => {
-      const scriptToRemove = document.getElementById('faq-schema');
-      if (scriptToRemove) {
-        scriptToRemove.remove();
-      }
-    };
-  }, []);
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
