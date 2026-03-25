@@ -108,7 +108,7 @@ export const ProjectsGallery = () => {
         <div className="text-center mb-20">
           <div className="inline-flex items-center space-x-2 bg-black text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
             <ExternalLink className="w-4 h-4" />
-            <span>Nos réalisations</span>
+            <span>Nos réalisations au Maroc & à l'international</span>
           </div>
           <h2 className="text-5xl lg:text-6xl font-light mb-8 text-transparent bg-clip-text bg-gradient-to-r from-black via-gray-800 to-black">
             Projets récents
