@@ -184,6 +184,8 @@ export const generateFAQSchema = (faqs: Array<{question: string, answer: string}
   }))
 });
 
+// IMPORTANT: N'utiliser generateReviewSchema qu'avec de vrais avis vérifiés.
+// Les faux avis dans les données structurées violent les guidelines Google et peuvent entraîner une pénalité.
 export const generateReviewSchema = (reviews: Array<{
   author: string,
   rating: number,
@@ -193,11 +195,6 @@ export const generateReviewSchema = (reviews: Array<{
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "Link Agency",
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": reviews.reduce((acc, review) => acc + review.rating, 0) / reviews.length,
-    "reviewCount": reviews.length
-  },
   "review": reviews.map(review => ({
     "@type": "Review",
     "author": {
