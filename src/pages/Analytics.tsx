@@ -1,3 +1,4 @@
+import { SEOHead } from "@/components/SEOHead";
 import { Header } from "@/components/Header";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, TrendingUp, BarChart, Target, Zap, Users, Eye, ChevronRight, Star, CheckCircle, PieChart, Activity, Calendar } from "lucide-react";
