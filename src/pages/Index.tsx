@@ -27,8 +27,7 @@ const Index = () => {
         "Link Agency - Agence Marketing Digital au Maroc",
         "Agence marketing digital au Maroc spécialisée en branding, communication digitale et événementiel. Services créatifs à Casablanca, Rabat et Marrakech.",
         "https://linkagency.ma/"
-      ),
-      generateFAQSchema(faqsEnriched.map(f => ({ question: f.question, answer: f.answer })))
+      )
     ]
   };
 

@@ -1,6 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Plus, Minus, HelpCircle, Search } from "lucide-react";
-import { generateFAQSchema } from "@/utils/structuredData";
 import { faqsEnriched } from "@/data/content";
 
 export const FAQ = () => {
