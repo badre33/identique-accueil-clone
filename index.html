@@ -1,122 +1,125 @@
-
 <!doctype html>
 <html lang="fr-MA">
   <head>
     <meta charset="UTF-8" />
-    <!-- Préconnexions DNS critiques - AVANT tout autre ressource pour optimiser FCP -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
-    <link rel="dns-prefetch" href="https://images.unsplash.com" />
-    
-    <link rel="icon" type="image/png" href="/lovable-uploads/85b45a40-6291-4f5d-a377-65024ddb1976.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/lovable-uploads/85b45a40-6291-4f5d-a377-65024ddb1976.png" />
-    <link rel="manifest" href="/manifest.json" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <meta name="theme-color" content="#8b5cf6" />
-    
-    <!-- CSS critique inline pour améliorer FCP -->
-    <style>
-      /* Critical CSS - évite le FOUC et améliore FCP */
-      *{margin:0;padding:0;box-sizing:border-box}
-      html{scroll-behavior:smooth}
-      body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto',sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;background:#fff;color:#1a1a1a}
-      #root{min-height:100vh}
-      /* Contenu initial visible immédiatement pour FCP */
-      #root:empty::before{content:'';display:block;width:100%;height:100vh;background:linear-gradient(135deg,#f5f3ff 0%,#ffffff 100%)}
-    </style>
-  
-    <!-- Préchargement de l'image LCP Hero -->
-    <link rel="preload" href="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=200&h=150&fit=crop&fm=webp&q=75" as="image" fetchpriority="high" />
-  
-    <!-- Police Inter - chargement non-bloquant -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" media="print" onload="this.media='all'" />
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" /></noscript>
-    
-    <title>Link Agency - Agence Communication Maroc | Branding & Marketing Digital Casablanca</title>
-    <meta name="description" content="Link Agency, agence de communication au Maroc spécialisée en branding, marketing digital et événementiel. Transformez votre entreprise en référence incontournable à Casablanca, Rabat et partout au Maroc." />
-    <meta name="keywords" content="agence communication maroc, branding maroc, marketing digital casablanca, agence pub maroc, communication digitale rabat, création logo maroc, stratégie marketing maroc, événementiel maroc, agence créative casablanca, publicité maroc" />
+    <meta name="theme-color" content="#000000" />
+
+    <!-- ══ SEO CORE ══ -->
+    <title>Link Agency - Agence Marketing Digital au Maroc | Branding & Communication Casablanca</title>
+    <meta name="description" content="Agence marketing digital au Maroc spécialisée en branding, communication digitale et événementiel corporate. 75+ projets réalisés. Casablanca, Rabat, Marrakech." />
+    <meta name="keywords" content="agence marketing digital maroc, branding maroc, communication digitale casablanca, événementiel maroc, agence créative casablanca, marketing digital casablanca, branding casablanca" />
     <meta name="author" content="Link Agency" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <link rel="canonical" href="https://linkagency.ma/" />
+
+    <!-- ══ HREFLANG (fr only — no fake ar/en versions) ══ -->
+    <link rel="alternate" hreflang="fr" href="https://linkagency.ma/" />
+    <link rel="alternate" hreflang="x-default" href="https://linkagency.ma/" />
+
+    <!-- ══ GEO LOCAL ══ -->
     <meta name="geo.region" content="MA" />
     <meta name="geo.placename" content="Casablanca, Maroc" />
     <meta name="geo.position" content="33.5731;-7.5898" />
     <meta name="ICBM" content="33.5731, -7.5898" />
     <meta name="language" content="fr-MA" />
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="Link Agency - Agence Communication Maroc | Branding & Marketing Digital" />
-    <meta property="og:description" content="Agence de communication au Maroc spécialisée en branding, marketing digital et événementiel. Votre partenaire stratégique à Casablanca, Rabat et partout au Maroc." />
+
+    <!-- ══ OPEN GRAPH ══ -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://linkagency.ma" />
+    <meta property="og:url" content="https://linkagency.ma/" />
+    <meta property="og:site_name" content="Link Agency" />
+    <meta property="og:locale" content="fr_MA" />
+    <meta property="og:title" content="Link Agency - Agence Marketing Digital au Maroc | Branding & Communication" />
+    <meta property="og:description" content="Agence marketing digital au Maroc spécialisée en branding, communication digitale et événementiel corporate. 75+ projets. Casablanca, Rabat, Marrakech." />
     <meta property="og:image" content="https://linkagency.ma/lovable-uploads/85b45a40-6291-4f5d-a377-65024ddb1976.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:locale" content="fr_MA" />
-    <meta property="og:site_name" content="Link Agency" />
-    
-    <!-- Twitter Card -->
+
+    <!-- ══ TWITTER CARD ══ -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Link Agency - Agence Communication Maroc | Branding & Marketing Digital" />
-    <meta name="twitter:description" content="Agence de communication au Maroc spécialisée en branding, marketing digital et événementiel. Votre partenaire stratégique à Casablanca, Rabat." />
+    <meta name="twitter:site" content="@LinkAgencyMA" />
+    <meta name="twitter:title" content="Link Agency - Agence Marketing Digital au Maroc" />
+    <meta name="twitter:description" content="Agence marketing digital au Maroc spécialisée en branding, communication digitale et événementiel. Casablanca, Rabat, Marrakech." />
     <meta name="twitter:image" content="https://linkagency.ma/lovable-uploads/85b45a40-6291-4f5d-a377-65024ddb1976.png" />
-    <meta name="twitter:creator" content="@linkagency_ma" />
-    
-    <!-- Schema.org JSON-LD -->
+
+    <!-- ══ SCHEMA.ORG (statique — lu par Google sans JS) ══ -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Link Agency",
-      "alternateName": "Link Agency Maroc",
-      "url": "https://linkagency.ma",
-      "logo": "https://linkagency.ma/lovable-uploads/85b45a40-6291-4f5d-a377-65024ddb1976.png",
-      "description": "Agence de communication au Maroc spécialisée en branding, marketing digital et événementiel",
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "MA",
-        "addressLocality": "Casablanca"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 33.5731,
-        "longitude": -7.5898
-      },
-      "areaServed": [
+      "@graph": [
         {
-          "@type": "Country",
-          "name": "Maroc"
+          "@type": "Organization",
+          "name": "Link Agency",
+          "alternateName": "Link Agency Maroc",
+          "url": "https://linkagency.ma",
+          "logo": "https://linkagency.ma/lovable-uploads/85b45a40-6291-4f5d-a377-65024ddb1976.png",
+          "foundingDate": "2014",
+          "description": "Agence marketing digital au Maroc spécialisée en branding, communication digitale et événementiel corporate.",
+          "telephone": "+212-699-024526",
+          "email": "bharkaoui@linkagency.ma",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Résidence Azur, 131 Bd d'Anfa",
+            "addressLocality": "Casablanca",
+            "postalCode": "20000",
+            "addressCountry": "MA"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 33.5731,
+            "longitude": -7.5898
+          },
+          "areaServed": {"@type": "Country", "name": "Morocco"},
+          "sameAs": [
+            "https://www.instagram.com/linkagency.ma",
+            "https://www.linkedin.com/company/linkagency",
+            "https://www.facebook.com/linkagency.ma"
+          ]
         },
         {
-          "@type": "City",
-          "name": "Casablanca"
-        },
-        {
-          "@type": "City",
-          "name": "Rabat"
+          "@type": "LocalBusiness",
+          "name": "Link Agency",
+          "image": "https://linkagency.ma/lovable-uploads/85b45a40-6291-4f5d-a377-65024ddb1976.png",
+          "telephone": "+212-699-024526",
+          "email": "bharkaoui@linkagency.ma",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Résidence Azur, 131 Bd d'Anfa",
+            "addressLocality": "Casablanca",
+            "postalCode": "20000",
+            "addressCountry": "MA"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 33.5731,
+            "longitude": -7.5898
+          },
+          "url": "https://linkagency.ma",
+          "priceRange": "$$",
+          "openingHoursSpecification": [
+            {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "18:00"},
+            {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "13:00"}
+          ]
         }
-      ],
-      "serviceType": [
-        "Branding",
-        "Communication digitale",
-        "Marketing digital",
-        "Événementiel",
-        "Création graphique",
-        "Stratégie de communication"
-      ],
-      "knowsAbout": [
-        "Branding",
-        "Marketing digital",
-        "Communication digitale",
-        "Événementiel",
-        "Design graphique",
-        "Stratégie marketing"
       ]
     }
     </script>
+
+    <!-- ══ PERFORMANCE ══ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://images.unsplash.com" />
+    <link rel="icon" type="image/png" href="/lovable-uploads/85b45a40-6291-4f5d-a377-65024ddb1976.png" />
+    <link rel="apple-touch-icon" href="/lovable-uploads/85b45a40-6291-4f5d-a377-65024ddb1976.png" />
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- Critical CSS -->
+    <style>
+      *{margin:0;padding:0;box-sizing:border-box}
+      html{scroll-behavior:smooth}
+      body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;background:#fff;color:#1a1a1a}
+      #root{min-height:100vh}
+    </style>
   </head>
   <body>
     <div id="root"></div>
