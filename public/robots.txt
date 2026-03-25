@@ -40,6 +40,10 @@ Disallow: /src/
 
 Disallow: /.env*
 
+Disallow: /en/
+
+Disallow: /ar/
+
 # Allow all assets
 
 Allow: /assets/
