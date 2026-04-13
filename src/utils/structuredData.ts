@@ -38,7 +38,7 @@ export const generateOrganizationSchema = () => ({
     },
     {
       "@type": "ContactPoint",
-      "email": "contact@linkagency.ma",
+      "email": "bharkaoui@linkagency.ma",
       "contactType": "sales",
       "availableLanguage": ["French", "Arabic", "English"],
       "areaServed": "MA"

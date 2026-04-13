@@ -110,11 +110,11 @@ export const Footer = () => {
               </li>
               <li>
                 <a 
-                  href="mailto:contact@linkagency.ma" 
+                  href="mailto:bharkaoui@linkagency.ma" 
                   className="text-gray-400 hover:text-white transition-colors text-sm flex items-center space-x-2"
                 >
                   <Mail className="w-4 h-4 flex-shrink-0" />
-                  <span>contact@linkagency.ma</span>
+                  <span>bharkaoui@linkagency.ma</span>
                 </a>
               </li>
             </ul>
