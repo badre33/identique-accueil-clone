@@ -101,7 +101,9 @@ const InsideLink = () => {
             <img 
               src="/lovable-uploads/85b45a40-6291-4f5d-a377-65024ddb1976.png" 
               alt="Link Agency Logo" 
-              className="h-12 w-auto object-contain transition-transform duration-300 hover:scale-105"
+              width={120}
+              height={48}
+              className="h-12 w-auto max-w-[120px] shrink-0 object-contain transition-transform duration-300 hover:scale-105"
             />
           </div>
         </div>
