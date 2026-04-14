@@ -214,7 +214,7 @@ const InsideLink = () => {
                     <img 
                       src="/lovable-uploads/d53262f8-9a1f-43dd-b2bc-b199945981c1.png"
                       alt="Ayman Nejmi"
-                      className="w-full aspect-[4/5] object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                      className="w-full aspect-[4/5] object-cover object-center transition-transform duration-700 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent transition-opacity duration-500 group-hover:opacity-30"></div>
                     <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-2 group-hover:translate-y-0">
