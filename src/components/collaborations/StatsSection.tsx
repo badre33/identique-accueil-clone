@@ -3,10 +3,10 @@ import { Users, Award, Globe, Zap } from "lucide-react";
 
 export const StatsSection = () => {
   const stats = [
-    { icon: Users, number: "18+", label: "Collaborations actives" },
-    { icon: Award, number: "50+", label: "Projets réalisés" },
-    { icon: Globe, number: "3", label: "Pays d'intervention" },
-    { icon: Zap, number: "95%", label: "Taux de satisfaction" }
+    { icon: Users, number: "50+", label: "Clients accompagnés" },
+    { icon: Award, number: "200+", label: "Projets réalisés" },
+    { icon: Globe, number: "15+", label: "Secteurs couverts" },
+    { icon: Zap, number: "8 ans", label: "Track record au Maroc" }
   ];
 
   return (
