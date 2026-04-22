@@ -1,5 +1,5 @@
 
-import { Quote, Sparkles, ArrowRight } from "lucide-react";
+import { Quote, Briefcase, Building2, BarChart3, ArrowRight } from "lucide-react";
 
 export const Philosophy = () => {
   return (
@@ -35,19 +35,22 @@ export const Philosophy = () => {
         <div className="flex justify-center mb-12">
           <div className="inline-flex items-center space-x-2 bg-white/80 backdrop-blur-sm border border-gray-200 text-gray-700 px-6 py-3 rounded-full text-sm font-medium shadow-lg">
             <Quote className="w-4 h-4" />
-            <span>Notre philosophie</span>
+            <span>Link Agency en bref</span>
           </div>
         </div>
 
         {/* Citation principale avec effet de machine à écrire */}
         <div className="text-center mb-16">
           <h2 className="text-5xl lg:text-7xl font-light text-black leading-tight mb-8 animate-fade-in">
-            Une marque ne s'impose pas,
+            Link Agency
             <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-400 via-gray-600 to-black hover:from-black hover:via-gray-700 hover:to-black transition-all duration-1000">
-              elle inspire.
+              en bref.
             </span>
           </h2>
+          <p className="text-lg lg:text-2xl text-gray-600 max-w-4xl mx-auto font-light leading-relaxed">
+            Stratégie. Contenu. Performance.
+          </p>
           
           {/* Ligne décorative animée */}
           <div className="relative flex justify-center mb-12">
@@ -60,31 +63,31 @@ export const Philosophy = () => {
         <div className="grid md:grid-cols-3 gap-8 mb-20">
           <div className="group bg-white/60 backdrop-blur-sm border border-gray-200 rounded-2xl p-8 hover:shadow-2xl hover:bg-white transition-all duration-500 hover:-translate-y-2">
             <div className="w-12 h-12 bg-gradient-to-br from-black to-gray-700 rounded-xl mb-6 flex items-center justify-center group-hover:rotate-12 transition-transform">
-              <Sparkles className="w-6 h-6 text-white" />
+              <Building2 className="w-6 h-6 text-white" />
             </div>
-            <h3 className="text-xl font-light mb-4 text-black">Créativité</h3>
+            <h3 className="text-xl font-light mb-4 text-black">Partenaire des marques établies</h3>
             <p className="text-gray-600 leading-relaxed">
-              Nous transformons les idées en expériences mémorables qui captivent et inspirent votre audience.
+              Agence digitale basée à Casablanca, présence Maroc × France. Nous accompagnons des directions marketing et communication sur des dispositifs qui doivent performer, pas simplement exister.
             </p>
           </div>
 
           <div className="group bg-white/60 backdrop-blur-sm border border-gray-200 rounded-2xl p-8 hover:shadow-2xl hover:bg-white transition-all duration-500 hover:-translate-y-2" style={{ animationDelay: '0.1s' }}>
             <div className="w-12 h-12 bg-gradient-to-br from-gray-600 to-black rounded-xl mb-6 flex items-center justify-center group-hover:rotate-12 transition-transform">
-              <div className="w-6 h-6 border-2 border-white rounded-full"></div>
+              <Briefcase className="w-6 h-6 text-white" />
             </div>
-            <h3 className="text-xl font-light mb-4 text-black">Authenticité</h3>
+            <h3 className="text-xl font-light mb-4 text-black">Méthodes rodées, exécution intégrée</h3>
             <p className="text-gray-600 leading-relaxed">
-              Chaque projet reflète l'essence unique de votre marque avec une approche personnalisée et sincère.
+              Stratégie de croissance, identité de marque, production de contenu, social media, achat média et événements corporate sont pilotés dans un même cadre d'exigence.
             </p>
           </div>
 
           <div className="group bg-white/60 backdrop-blur-sm border border-gray-200 rounded-2xl p-8 hover:shadow-2xl hover:bg-white transition-all duration-500 hover:-translate-y-2" style={{ animationDelay: '0.2s' }}>
             <div className="w-12 h-12 bg-gradient-to-br from-black to-gray-700 rounded-xl mb-6 flex items-center justify-center group-hover:rotate-12 transition-transform">
-              <div className="w-6 h-6 bg-white rounded-full"></div>
+              <BarChart3 className="w-6 h-6 text-white" />
             </div>
-            <h3 className="text-xl font-light mb-4 text-black">Excellence</h3>
+            <h3 className="text-xl font-light mb-4 text-black">Résultats business mesurables</h3>
             <p className="text-gray-600 leading-relaxed">
-              Notre engagement envers la qualité se reflète dans chaque détail de nos créations et services.
+              50+ clients accompagnés, 200+ projets réalisés, 15+ secteurs couverts. Nos références incluent la banque, l'assurance, le retail, l'e-commerce et l'industrie au Maroc.
             </p>
           </div>
         </div>
@@ -94,20 +97,20 @@ export const Philosophy = () => {
           <div className="absolute top-6 left-6 text-6xl text-gray-200 font-serif">"</div>
           <div className="relative z-10 max-w-4xl">
             <p className="text-2xl lg:text-3xl text-gray-700 font-light leading-relaxed italic mb-8">
-              Chaque interaction avec votre marque est une opportunité de créer une connexion émotionnelle durable avec votre audience. C'est dans cette rencontre que naît la magie de l'engagement authentique.
+              Nous concevons des stratégies de croissance intégrées, des identités de marque cohérentes et des dispositifs de performance qui génèrent de vrais résultats business pour nos clients.
             </p>
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-black font-medium">Link Agency</p>
-                <p className="text-gray-500 text-sm">Créateurs d'expériences</p>
+                <p className="text-gray-500 text-sm">Stratégie. Contenu. Performance.</p>
               </div>
               <a 
-                href="https://wa.me/212699024526?text=Bonjour%2C%20votre%20philosophie%20m'inspire%21%20Parlons%20de%20mon%20projet"
+                href="https://wa.me/212699024526?text=Bonjour%2C%20je%20souhaite%20%C3%A9changer%20sur%20mon%20dispositif%20digital"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group bg-black text-white px-6 py-3 rounded-full hover:bg-gray-800 transition-all duration-300 flex items-center space-x-2 hover:scale-105"
               >
-                <span className="text-sm font-medium">Échangeons</span>
+                <span className="text-sm font-medium">Échanger sur votre dispositif</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </a>
             </div>

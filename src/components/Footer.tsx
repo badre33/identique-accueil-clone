@@ -13,7 +13,7 @@ export const Footer = () => {
           <div>
             <h3 className="text-xl font-semibold mb-4">Link Agency</h3>
             <p className="text-gray-400 text-sm leading-relaxed mb-4">
-              Agence marketing digital au Maroc spécialisée en branding, communication digitale, événementiel corporate et influence marketing. Excellence créative à Casablanca.
+              Agence digitale basée à Casablanca, partenaire des marques établies au Maroc. Stratégie, contenu, performance et événements corporate pilotés en studio.
             </p>
             <a 
               href="https://maps.app.goo.gl/q3xLY5gy8cY6U6Tj6" 
@@ -22,7 +22,7 @@ export const Footer = () => {
               className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors text-sm mb-2"
             >
               <MapPin className="w-4 h-4 flex-shrink-0" />
-              <span>Casablanca, Maroc</span>
+              <span>Maroc × France</span>
             </a>
           </div>
 
@@ -125,16 +125,16 @@ export const Footer = () => {
         <div className="border-t border-gray-800 pt-8 mb-8">
           <div className="text-xs text-gray-400 leading-relaxed">
             <p className="mb-3">
-              <strong className="text-gray-400">Link Agency</strong> - Votre <strong className="text-gray-400">agence communication Casablanca</strong> et <strong className="text-gray-400">agence marketing Maroc</strong> de référence. 
-              Spécialistes en <strong className="text-gray-400">événementiel corporate Maroc</strong>, <strong className="text-gray-400">organisation événements entreprise</strong>, <strong className="text-gray-400">campagne influence Maroc</strong> et <strong className="text-gray-400">lancement de produit</strong>.
+              <strong className="text-gray-400">Link Agency</strong> - <strong className="text-gray-400">agence digitale Maroc</strong> et <strong className="text-gray-400">agence communication Casablanca</strong> au service des directions marketing de marques établies. 
+              Nous intervenons sur le <strong className="text-gray-400">social media Maroc</strong>, la <strong className="text-gray-400">production vidéo Maroc</strong>, les <strong className="text-gray-400">campagnes Meta Ads Maroc</strong> et l'<strong className="text-gray-400">événementiel corporate Maroc</strong>.
             </p>
             <p className="mb-3">
-              Notre <strong className="text-gray-400">agence événementielle Casablanca</strong> propose des services complets : conception créative, production événementielle, coordination logistique et coverage média. 
-              Nous collaborons avec les meilleurs <strong className="text-gray-400">influenceurs Maroc</strong> pour des campagnes d'impact maximisant votre visibilité.
+              Notre studio interne conçoit les dispositifs éditoriaux et publicitaires de secteurs exigeants : banque, assurance, retail, e-commerce, industrie et services B2B. 
+              Nous combinons <strong className="text-gray-400">community management Casablanca</strong>, contenus bilingues FR/AR/Darija, reporting et optimisation continue du ROI.
             </p>
             <p>
-              <strong className="text-gray-400">Agence digitale Maroc</strong> basée à Casablanca, nous intervenons également à Rabat et Marrakech. 
-              De la stratégie à l'exécution, Link Agency transforme vos ambitions en réalité avec créativité et excellence opérationnelle.
+              <strong className="text-gray-400">Agence marketing banque assurance Maroc</strong>, nous accompagnons plus de 50 clients à travers 200+ projets. 
+              De la stratégie à l'exécution, Link Agency pilote des dispositifs cohérents, mesurables et alignés sur les enjeux business de ses clients.
             </p>
           </div>
         </div>
@@ -142,7 +142,7 @@ export const Footer = () => {
         {/* Copyright */}
         <div className="border-t border-gray-800 pt-6 text-center">
           <p className="text-gray-400 text-sm">
-            © {currentYear} Link Agency. Tous droits réservés. | Agence Marketing Digital Casablanca, Maroc
+            © {currentYear} Link Agency. Tous droits réservés. | Stratégie. Contenu. Performance.
           </p>
         </div>
       </div>
