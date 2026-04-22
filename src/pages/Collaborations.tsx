@@ -19,7 +19,7 @@ const Collaborations = () => {
     "@graph": [
       generateWebPageSchema(
         "Nos Collaborations & Projets - Portfolio | Link Agency Maroc",
-        "Découvrez les collaborations et projets réalisés par Link Agency : branding, marketing digital, événementiel et communication au Maroc.",
+        "Portfolio Link Agency : 200+ projets réalisés pour Attijariwafa Bank, AXA, RMA, Subway, YouCan, Nova Spacia, OCB et plus de 50 marques au Maroc.",
         "https://linkagency.ma/collaborations"
       ),
       generateBreadcrumbSchema([
@@ -31,6 +31,33 @@ const Collaborations = () => {
 
   const collaborations = [
     {
+      name: "L'Bankalik par Attijariwafa Bank",
+      url: "#",
+      category: "Banque",
+      logo: "/lovable-uploads/155dc759-4923-4ddc-8251-334cb8ba3ad7.png",
+      description: "Stratégie éditoriale institutionnelle, contenus pédagogiques bilingues FR/AR, community management et pilotage Meta Ads pour des objectifs de notoriété, lead generation et conversion.",
+      year: "2025",
+      type: "Social Media & Ads"
+    },
+    {
+      name: "AXA Assurance Maroc",
+      url: "#",
+      category: "Assurance",
+      logo: "/lovable-uploads/86dfbcc8-1b16-4656-9047-427ad8d69523.png",
+      description: "Contenus institutionnels, motion design produit, community management quotidien et campagnes Meta Ads avec A/B testing créatif pour optimiser le CPL.",
+      year: "2025",
+      type: "Contenu & Performance"
+    },
+    {
+      name: "RMA",
+      url: "#",
+      category: "Assurance",
+      logo: "/lovable-uploads/29365e8a-7e4d-4041-ad14-37f38d1bde1b.png",
+      description: "Production de contenus institutionnels, Reels de sensibilisation, campagnes de renouvellement et rédaction bilingue FR/AR pour les temps forts de la marque.",
+      year: "2025",
+      type: "Social Media"
+    },
+    {
       name: "Oncovita",
       url: "#",
       category: "Santé & Bien-être",
@@ -40,13 +67,13 @@ const Collaborations = () => {
       type: "Branding & Communication"
     },
     {
-      name: "Branding global / Entrepreneur et holding multisectorielle",
+      name: "YouCan",
       url: "#",
-      category: "Branding Stratégique",
+      category: "E-commerce",
       logo: "/lovable-uploads/44ffaff6-3a76-466f-ba0b-04f88d100bb0.png",
-      description: "Refonte stratégique d'image et structuration du branding personnel d'un entrepreneur marocain avec sa holding multisectorielle (architecture, éducation, gastronomie, coworking).",
+      description: "Accompagnement éditorial et performance pour une plateforme e-commerce marocaine en forte croissance, avec des contenus orientés acquisition et conversion.",
       year: "2024",
-      type: "Branding Global"
+      type: "Performance & Contenu"
     },
     {
       name: "Personal Branding Politique",
@@ -62,7 +89,7 @@ const Collaborations = () => {
       url: "https://www.instagram.com/subwaymaroc/?hl=fr",
       category: "Restauration",
       logo: "/lovable-uploads/c66a2b50-92d9-4a9d-a394-09ff44b3d1b2.png",
-      description: "Stratégie marketing digital et création de contenu pour la franchise de restauration rapide leader au Maroc.",
+      description: "Présence digitale complète : ligne éditoriale, création de posts, community management, campagnes awareness et drive-to-store géolocalisées, supports offline et activations en restaurant.",
       year: "2023-2024",
       type: "Marketing Digital"
     },
@@ -103,22 +130,13 @@ const Collaborations = () => {
       type: "Branding"
     },
     {
-      name: "French Tech",
-      url: "#",
-      category: "Tech",
-      logo: "/lovable-uploads/801816e7-97bc-49c9-948c-34e3c9d49e1f.png",
-      description: "Partenaire officiel de l'écosystème French Tech pour l'accompagnement des startups marocaines.",
-      year: "2022-2024",
-      type: "Partenariat"
-    },
-    {
-      name: "The Family",
-      url: "https://www.thefamily.co/",
-      category: "Startup Studio",
-      logo: "/lovable-uploads/ae1bb8f8-ff5a-4b2d-8a17-aacf539b492a.png",
-      description: "Collaboration stratégique avec ce startup studio européen pour l'expansion sur le marché africain.",
-      year: "2023",
-      type: "Conseil Stratégique"
+      name: "La Maison Amoud",
+      url: "https://www.amoud.ma/",
+      category: "Retail",
+      logo: "/lovable-uploads/18500dfb-e7b6-4c75-8c7c-89fa212ee0a8.png",
+      description: "Dispositifs de contenu et activations de marque pour une enseigne emblématique du retail premium au Maroc.",
+      year: "2024",
+      type: "Retail & Brand Content"
     },
     {
       name: "Soulection",
@@ -134,7 +152,7 @@ const Collaborations = () => {
       url: "https://kzmfwv89vwbj1uf8kcxa.lite.vusercontent.net/",
       category: "Architecture d'intérieur",
       logo: "/lovable-uploads/ce7e28cc-c15c-48b9-b9be-03195d92927f.png",
-      description: "Développement de l'identité visuelle et présence digitale pour ce studio d'architecture d'intérieur.",
+      description: "Stratégie éditoriale B2B, visuels premium, contenus pédagogiques et campagnes Meta Ads ciblées sur dirigeants, DRH et architectes d'intérieur.",
       year: "2024",
       type: "Branding & Digital"
     },
@@ -239,7 +257,7 @@ const Collaborations = () => {
     }
   ];
 
-  const categories = ["Toutes", "Santé & Bien-être", "Branding Stratégique", "Branding Personnel", "Restauration", "Immobilier", "Commerce", "Tech", "Startup Studio", "Musique", "Architecture d'intérieur", "Design d'intérieur", "Écrans interactifs tactiles", "Événementiel", "Tabac & Lifestyle", "Mode", "Conseil"];
+  const categories = ["Toutes", "Banque", "Assurance", "Restauration", "Retail", "E-commerce", "Santé & Bien-être", "Architecture d'intérieur", "Conseil", "Événementiel", "Tabac & Lifestyle", "Mode", "Branding Personnel", "Immobilier", "Écrans interactifs tactiles"];
 
   const filteredCollaborations = selectedCategory === "Toutes" 
     ? collaborations 
@@ -253,9 +271,9 @@ const Collaborations = () => {
   return (
     <div className="min-h-screen bg-white pt-16 sm:pt-20">
       <SEOHead
-        title="Nos Collaborations & Projets - Portfolio | Link Agency Maroc"
-        description="Découvrez les collaborations et projets réalisés par Link Agency : branding, marketing digital, événementiel et communication au Maroc."
-        keywords="portfolio agence maroc, collaborations branding, projets marketing digital casablanca"
+        title="Portfolio Link Agency - Marques établies au Maroc"
+        description="Portfolio Link Agency : 200+ projets réalisés pour Attijariwafa Bank, AXA, RMA, Subway, YouCan, Nova Spacia, OCB et plus de 50 marques au Maroc."
+        keywords="portfolio agence digitale maroc, collaborations marques établies, community management casablanca, campagnes Meta Ads Maroc"
         url="https://linkagency.ma/collaborations"
         structuredData={collaborationsSchema}
       />
@@ -268,11 +286,19 @@ const Collaborations = () => {
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16">
             <h1 className="text-5xl lg:text-7xl font-light mb-8 text-transparent bg-clip-text bg-gradient-to-r from-black via-gray-800 to-black animate-fade-in">
-              Nos collaborations
+              Des dispositifs en production,
+              <span className="block">pour des marques qui comptent.</span>
             </h1>
             <p className="text-xl lg:text-2xl text-gray-700 leading-relaxed max-w-4xl mx-auto font-light mb-12">
-              Des partenariats stratégiques qui transforment les marques et créent des expériences inoubliables.
+              50+ clients accompagnés. 200+ projets réalisés. 15+ secteurs couverts. Une sélection de références qui documente notre track record sur des dispositifs éditoriaux, publicitaires et corporate à fort enjeu.
             </p>
+            <div className="flex flex-wrap justify-center gap-3 mb-12">
+              {["L'Bankalik", "AXA Assurance Maroc", "RMA", "Subway Maroc", "YouCan", "Nova Spacia", "OCB Maroc", "La Maison Amoud", "Brainlyne", "Benatna"].map((client) => (
+                <div key={client} className="px-4 py-3 rounded-2xl bg-white border border-gray-200 text-sm font-semibold text-gray-700 shadow-sm">
+                  {client}
+                </div>
+              ))}
+            </div>
             
             <StatsSection />
           </div>

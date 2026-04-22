@@ -29,16 +29,15 @@ export const FAQ = () => {
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-3 bg-white px-6 py-3 rounded-full shadow-sm mb-6">
             <HelpCircle className="w-5 h-5 text-primary" />
-            <span className="text-primary font-medium">Questions Fréquentes</span>
+            <span className="text-primary font-medium">Questions fréquentes</span>
           </div>
           
           <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-6">
-            Réponses à vos <span className="text-primary font-medium">questions</span>
+            Réponses pour les <span className="text-primary font-medium">directions marketing</span>
           </h2>
           
           <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
-            Retrouvez les réponses aux questions les plus fréquentes sur nos services 
-            de branding, marketing digital et événementiel au Maroc.
+            Retrouvez les réponses aux questions les plus fréquentes sur nos expertises, nos modes d'intervention et nos dispositifs de performance au Maroc.
           </p>
 
           {/* Barre de recherche */}
@@ -46,7 +45,7 @@ export const FAQ = () => {
             <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
             <input
               type="text"
-              placeholder="Rechercher une question..."
+               placeholder="Rechercher une question..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               className="w-full pl-12 pr-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary bg-white"
@@ -156,16 +155,16 @@ export const FAQ = () => {
         {/* CTA pour questions personnalisées */}
         <div className="text-center mt-16 p-8 bg-gradient-to-br from-primary/5 to-secondary/10 rounded-2xl">
           <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-            Vous ne trouvez pas la réponse à votre question ?
+             Vous avez un sujet spécifique ?
           </h3>
           <p className="text-gray-600 mb-6">
-            Notre équipe est à votre disposition pour répondre à toutes vos interrogations.
+             Nous pouvons cadrer vos enjeux, vos contraintes et vos objectifs lors d'un premier échange.
           </p>
           <a
             href="#contact"
             className="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-xl hover:bg-primary/90 transition-colors font-medium"
           >
-            Contactez-nous
+             Parler à Link Agency
           </a>
         </div>
       </div>

@@ -15,36 +15,36 @@ export const DynamicContent = () => {
       case 'morning':
         return {
           icon: Coffee,
-          title: 'Commençons la journée par une révolution',
-          description: 'Le matin est le moment idéal pour repenser votre stratégie de marque.',
+          title: 'Commençons la journée par un cadrage solide',
+          description: 'Le matin est souvent le meilleur moment pour prioriser les leviers d\'un dispositif digital.',
           color: 'from-yellow-400 to-orange-500'
         };
       case 'afternoon':
         return {
           icon: Sun,
-          title: 'L\'après-midi de tous les possibles',
-          description: 'Transformons vos idées en identité forte pendant que la créativité est à son apogée.',
+          title: 'L\'après-midi du pilotage précis',
+          description: 'C\'est le bon moment pour aligner contenu, performance et reporting autour d\'objectifs business clairs.',
           color: 'from-blue-400 to-cyan-500'
         };
       case 'evening':
         return {
           icon: Sunset,
-          title: 'Le coucher du soleil sur l\'ordinaire',
-          description: 'C\'est en soirée que naissent les meilleures stratégies de différenciation.',
+          title: 'La fin de journée des arbitrages utiles',
+          description: 'Les meilleures décisions arrivent souvent quand le dispositif est enfin vu dans son ensemble.',
           color: 'from-purple-500 to-pink-500'
         };
       case 'night':
         return {
           icon: Moon,
-          title: 'Quand la nuit inspire l\'excellence',
-          description: 'Les projets nocturnes sont souvent les plus audacieux. Parlons de votre vision.',
+          title: 'Quand la nuit sert la clarté stratégique',
+          description: 'Les sujets à fort enjeu méritent parfois un temps calme pour être cadrés avec précision.',
           color: 'from-indigo-500 to-purple-600'
         };
       default:
         return {
           icon: Sun,
-          title: 'Créons quelque chose d\'exceptionnel',
-          description: 'Votre marque mérite une approche unique.',
+          title: 'Structurons quelque chose de solide',
+          description: 'Votre marque mérite un dispositif cohérent, piloté et mesurable.',
           color: 'from-gray-500 to-gray-700'
         };
     }
@@ -58,7 +58,7 @@ export const DynamicContent = () => {
         return (
           <div className="mt-4 p-4 bg-blue-50 rounded-xl border-l-4 border-blue-500">
             <p className="text-blue-800 text-sm">
-              <strong>LinkedIn vous a mené ici ?</strong> Parfait ! Nous excellons dans le branding professionnel et le personal branding pour les dirigeants.
+              <strong>LinkedIn vous a mené ici ?</strong> Parfait. Nous accompagnons les équipes dirigeantes sur des sujets de positionnement, contenu et performance à fort enjeu.
             </p>
           </div>
         );
@@ -66,7 +66,7 @@ export const DynamicContent = () => {
         return (
           <div className="mt-4 p-4 bg-green-50 rounded-xl border-l-4 border-green-500">
             <p className="text-green-800 text-sm">
-              <strong>Vous nous avez trouvés sur Google ?</strong> Excellente recherche ! Nous aidons les entreprises à dominer leur marché grâce au branding stratégique.
+              <strong>Vous nous avez trouvés sur Google ?</strong> Vous êtes au bon endroit si vous cherchez un partenaire digital pour une marque déjà installée.
             </p>
           </div>
         );
@@ -74,7 +74,7 @@ export const DynamicContent = () => {
         return (
           <div className="mt-4 p-4 bg-purple-50 rounded-xl border-l-4 border-purple-500">
             <p className="text-purple-800 text-sm">
-              <strong>Venu des réseaux sociaux ?</strong> Nous créons des identités qui marquent les esprits, en ligne comme hors ligne.
+              <strong>Venu des réseaux sociaux ?</strong> Nous concevons des dispositifs éditoriaux et media qui renforcent la cohérence de marque sur chaque canal.
             </p>
           </div>
         );

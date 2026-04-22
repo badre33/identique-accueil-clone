@@ -9,18 +9,18 @@ export const AnimatedStats = () => {
   const stats = [
     {
       icon: Clock,
-      value: 11,
+      value: 8,
       suffix: '+',
       label: 'Années d\'expérience',
-      description: 'Dans le branding et la stratégie digitale',
+      description: 'Au service des directions marketing et communication',
       color: 'from-blue-500 to-cyan-500'
     },
     {
       icon: Users,
-      value: 50,
+      value: 200,
       suffix: '+',
       label: 'Projets réalisés',
-      description: 'Startups, PME et grands comptes accompagnés',
+      description: 'Pour des marques établies et des groupes de référence',
       color: 'from-purple-500 to-pink-500'
     },
     {
@@ -28,15 +28,15 @@ export const AnimatedStats = () => {
       value: 15,
       suffix: '+',
       label: 'Secteurs d\'activité',
-      description: 'Tech, finance, santé, retail et plus',
+      description: 'Banque, assurance, retail, industrie, e-commerce et plus',
       color: 'from-green-500 to-emerald-500'
     },
     {
       icon: TrendingUp,
-      value: 200,
-      suffix: '%',
-      label: 'Croissance moyenne',
-      description: 'Impact sur la visibilité de nos clients',
+      value: 50,
+      suffix: '+',
+      label: 'Clients accompagnés',
+      description: 'Avec une logique de pilotage, de reporting et de performance',
       color: 'from-orange-500 to-red-500'
     }
   ];
@@ -97,10 +97,10 @@ export const AnimatedStats = () => {
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-5xl lg:text-6xl font-light mb-6 text-black">
-            Notre Impact en Chiffres
+            Notre track record
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Des résultats concrets qui témoignent de notre expertise et de notre engagement
+            Des chiffres qui reflètent la maturité de notre positionnement et la solidité de nos références
           </p>
         </div>
 

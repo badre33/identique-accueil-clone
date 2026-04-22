@@ -38,10 +38,10 @@ export const ProjectDetailsModal = ({ project, isOpen, onClose }: ProjectDetails
         };
       case "French Tech":
         return {
-          impact: "20+ startups accompagnées vers l'international depuis Bordeaux",
+          impact: "Programme structuré de visibilité et d'accompagnement pour un écosystème innovation",
           services: ["Branding écosystème", "Marketing stratégique", "Développement business", "Accompagnement incubés"],
-          results: ["5 levées de fonds réussies", "Expansion européenne", "Écosystème bordelais renforcé", "Notoriété internationale"],
-          challenge: "Développer et positionner l'écosystème French Tech bordelais sur la scène internationale"
+          results: ["Notoriété internationale renforcée", "Écosystème bordelais structuré", "Visibilité accrue des programmes", "Déploiement éditorial cohérent"],
+          challenge: "Développer et positionner un écosystème innovation sur la scène internationale"
         };
       case "Soulection":
         return {
@@ -66,10 +66,10 @@ export const ProjectDetailsModal = ({ project, isOpen, onClose }: ProjectDetails
         };
       default:
         return {
-          impact: "Résultats exceptionnels",
-          services: ["Stratégie", "Créativité", "Exécution"],
-          results: ["Objectifs dépassés"],
-          challenge: "Défi relevé avec excellence"
+          impact: "Dispositif structuré et livré avec exigence",
+          services: ["Stratégie", "Production", "Pilotage"],
+          results: ["Objectifs business servis"],
+          challenge: "Défi traité avec une exécution cohérente et mesurable"
         };
     }
   };
@@ -187,17 +187,17 @@ export const ProjectDetailsModal = ({ project, isOpen, onClose }: ProjectDetails
 
         {/* CTA Section - Texte blanc sur fond sombre */}
         <div className="mt-8 bg-gradient-to-r from-black to-gray-800 rounded-2xl p-8 text-center text-white">
-          <h3 className="text-2xl font-light mb-4 text-white">Prêt à créer votre success story ?</h3>
+          <h3 className="text-2xl font-light mb-4 text-white">Vous avez un dispositif comparable à piloter ?</h3>
           <p className="text-gray-200 mb-6 text-lg">
-            Découvrez comment nous pouvons transformer votre vision en réalité exceptionnelle.
+            Échangeons sur vos enjeux de marque, de contenu, de performance ou d'activation.
           </p>
           <a
-            href="https://wa.me/212699024526?text=Bonjour%2C%20j'aimerais%20discuter%20de%20mon%20projet"
+            href="https://wa.me/212699024526?text=Bonjour%2C%20je%20souhaite%20%C3%A9changer%20sur%20un%20dispositif%20digital%20comparable"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-white text-black px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 hover:scale-105 shadow-lg inline-block"
           >
-            Discutons de votre projet
+            Discuter de votre dispositif
           </a>
         </div>
       </DialogContent>

@@ -8,10 +8,10 @@ export const CTASection = () => {
       
       <div className="max-w-4xl mx-auto relative z-10 text-center">
         <h2 className="text-4xl lg:text-5xl font-light mb-8 text-white">
-          Rejoignez nos collaborations d'exception
+          Parlons de votre prochain dispositif.
         </h2>
         <p className="text-xl text-gray-300 leading-relaxed mb-12 max-w-3xl mx-auto">
-          Nous sélectionnons nos partenaires avec soin pour créer ensemble des projets qui marquent les esprits et transforment les industries.
+          Un premier échange pour cadrer vos enjeux, arbitrer les priorités et construire un plan d'accompagnement cohérent avec vos objectifs business.
         </p>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
@@ -30,12 +30,12 @@ export const CTASection = () => {
         </div>
         
         <a 
-          href="https://wa.me/212699024526?text=Bonjour%2C%20j'aimerais%20découvrir%20vos%20références%20et%20échanger%20sur%20mon%20projet"
+            href="https://wa.me/212699024526?text=Bonjour%2C%20je%20souhaite%20%C3%A9changer%20sur%20notre%20dispositif%20digital"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center space-x-4 bg-white text-black px-10 py-5 rounded-full hover:bg-gray-100 transition-all duration-300 text-lg font-medium hover:scale-105 hover:shadow-2xl group"
         >
-          <span>Démarrer une collaboration</span>
+            <span>Discuter de votre dispositif</span>
           <ExternalLink className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
         </a>
       </div>

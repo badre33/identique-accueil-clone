@@ -82,8 +82,8 @@ const InsideLink = () => {
     <div className="min-h-screen bg-white relative overflow-hidden pt-16 sm:pt-20">
       <SEOHead
         title="Inside Link Agency - Notre Équipe & Vision | Agence Marketing Maroc"
-        description="Découvrez l'équipe et la vision de Link Agency, agence marketing digital à Casablanca. 11 ans d'expérience, 75+ projets, une approche créative unique au Maroc."
-        keywords="link agency casablanca, agence marketing digital maroc, équipe créative casablanca, vision agence communication maroc"
+        description="Découvrez l'équipe et la vision de Link Agency, agence digitale à Casablanca. 8 ans d'expérience, 200+ projets, une approche stratégique dédiée aux marques établies au Maroc."
+        keywords="link agency casablanca, agence digitale maroc, équipe senior casablanca, stratégie marque maroc"
         url="https://linkagency.ma/inside-link"
       />
       <ParticleBackground />
@@ -127,8 +127,8 @@ const InsideLink = () => {
             
             <ScrollReveal delay={600} direction="up">
               <div className="text-2xl lg:text-3xl text-neutral-600 leading-relaxed max-w-4xl mx-auto font-light">
-                <TypewriterText 
-                  text="Deux fondateurs. Une vision claire. Un seul objectif : bâtir des marques qui imposent le respect."
+                 <TypewriterText 
+                   text="Deux fondateurs. Une vision claire. Un seul objectif : piloter des dispositifs qui font performer les marques établies."
                   speed={30}
                   delay={1000}
                 />
@@ -181,7 +181,7 @@ const InsideLink = () => {
                     
                     <p className="text-lg text-neutral-600 leading-relaxed">
                       Badreddine est un architecte du positionnement.<br />
-                      Ancien caporal dans les forces d'élite françaises, passé par la tech, l'entrepreneuriat et les stratégies de croissance au service de startups, institutions et grands comptes, il est aujourd'hui la force motrice derrière la direction stratégique de Link.
+                       Ancien caporal dans les forces d'élite françaises, passé par la tech, le conseil et les stratégies de croissance au service d'institutions et de grands comptes, il pilote aujourd'hui la direction stratégique de Link Agency.
                     </p>
                     
                     <div className="space-tight">
