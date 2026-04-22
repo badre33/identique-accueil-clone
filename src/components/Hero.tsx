@@ -1,5 +1,5 @@
 
-import { ArrowRight, Sparkles, Target, Users, Zap, Award, TrendingUp } from "lucide-react";
+import { ArrowRight, Sparkles, Target, Award, Building2, Briefcase, Layers } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { TouchOptimized } from "./TouchOptimized";
@@ -11,6 +11,24 @@ const Hero = () => {
   const { elementRef: subtitleRef, isVisible: subtitleVisible } = useScrollAnimation({ delay: 600 });
   const { elementRef: ctaRef, isVisible: ctaVisible } = useScrollAnimation({ delay: 800 });
   const { elementRef: statsRef, isVisible: statsVisible } = useScrollAnimation({ delay: 1000 });
+  const proofItems = [
+    { value: "50+", label: "clients" },
+    { value: "200+", label: "projets réalisés" },
+    { value: "8 ans", label: "d'expérience" },
+    { value: "15+", label: "secteurs couverts" },
+  ];
+  const clientLogos = [
+    "L'Bankalik",
+    "AXA Assurance Maroc",
+    "RMA",
+    "Subway Maroc",
+    "YouCan",
+    "Nova Spacia",
+    "OCB Maroc",
+    "La Maison Amoud",
+    "Brainlyne",
+    "Benatna",
+  ];
 
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 via-blue-50/30 to-purple-50/30 overflow-hidden">
@@ -72,7 +90,7 @@ const Hero = () => {
                 <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-purple-600 group-hover:rotate-12 group-hover:scale-110 transition-transform duration-300" />
                 <Award className="w-3 h-3 sm:w-4 sm:h-4 text-gold-500 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300" />
               </div>
-              <span className="text-xs sm:text-sm font-semibold text-slate-700 tracking-wide group-hover:text-purple-700 transition-colors duration-300">L'agence qui transforme votre vision en réalité</span>
+              <span className="text-xs sm:text-sm font-semibold text-slate-700 tracking-wide group-hover:text-purple-700 transition-colors duration-300">Stratégie. Contenu. Performance.</span>
             </div>
           </TouchOptimized>
           
@@ -83,9 +101,9 @@ const Hero = () => {
               titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
           >
-            Nous construisons des
+            L'agence digitale des
             <span className="block mt-2 sm:mt-3 bg-gradient-to-r from-blue-600 via-purple-600 via-indigo-600 to-blue-700 bg-clip-text text-transparent font-medium relative hover:from-blue-700 hover:via-purple-700 hover:to-indigo-800 transition-all duration-500">
-              marques inoubliables
+              marques établies au Maroc
               <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-blue-700/20 blur-3xl -z-10 animate-pulse group-hover:from-blue-700/30 group-hover:via-purple-700/30 group-hover:to-indigo-800/30 transition-all duration-500"></div>
             </span>
           </h1>
@@ -97,8 +115,7 @@ const Hero = () => {
               subtitleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
             }`}
           >
-            Branding stratégique, identité visuelle et expérience digitale pour les entrepreneurs qui 
-            <span className="text-slate-800 font-medium hover:text-purple-700 transition-colors duration-300 cursor-default"> refusent la médiocrité</span>.
+            Stratégie. Contenu. Performance. Depuis 8 ans, Link Agency accompagne les directions marketing de plus de 50 marques — banques, assurances, retail, e-commerce, industrie — dans la conception de leurs identités, la production de leurs contenus, le pilotage de leurs dispositifs de performance et l'activation de leurs événements corporate.
           </p>
           
           {/* Enhanced CTA Buttons - Mobile-first design with better touch targets */}
@@ -124,7 +141,7 @@ const Hero = () => {
                 {/* Pulse effect on hover */}
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-400/0 via-purple-400/20 to-indigo-400/0 opacity-0 group-hover:opacity-100 animate-pulse transition-opacity duration-500"></div>
                 <Target className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3 group-hover:rotate-12 group-hover:scale-110 transition-transform duration-300 relative z-10" />
-                <span className="relative z-10">Démarrer votre projet</span>
+                <span className="relative z-10">Discuter de votre dispositif</span>
                 <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 ml-2 sm:ml-3 group-hover:translate-x-2 group-hover:scale-110 transition-transform duration-300 relative z-10" />
               </a>
             </TouchOptimized>
@@ -142,7 +159,7 @@ const Hero = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-slate-50/0 via-slate-100/70 to-slate-50/0 translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000"></div>
                 {/* Subtle glow effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-50/0 via-purple-50/30 to-blue-50/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <span className="relative z-10 group-hover:text-slate-800 transition-colors duration-300">Découvrir notre approche</span>
+                <span className="relative z-10 group-hover:text-slate-800 transition-colors duration-300">Voir nos références</span>
                 <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 ml-2 sm:ml-3 group-hover:translate-x-2 group-hover:scale-110 transition-transform duration-300 relative z-10" />
               </Link>
             </TouchOptimized>
@@ -155,50 +172,37 @@ const Hero = () => {
               statsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
             }`}
           >
-            <p className="text-xs sm:text-sm font-medium text-slate-500 mb-6 sm:mb-8 tracking-wide uppercase hover:text-slate-600 transition-colors duration-300">Déjà choisi par des entrepreneurs ambitieux</p>
-            <div className="flex flex-col space-y-4 sm:space-y-0 sm:flex-row sm:justify-center sm:items-center sm:space-x-8 lg:space-x-12 group">
-              <TouchOptimized
-                touchTarget="large"
-                className="flex items-center justify-center space-x-3 hover:scale-110 transition-all duration-500 cursor-pointer p-3 rounded-xl hover:bg-white/50 hover:shadow-lg"
-              >
-                <div className="relative">
-                  <div className="w-6 h-6 sm:w-8 sm:h-8 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-full flex items-center justify-center hover:shadow-lg hover:shadow-emerald-500/30 transition-all duration-300">
-                    <TrendingUp className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
+            <p className="text-xs sm:text-sm font-medium text-slate-500 mb-6 sm:mb-8 tracking-wide uppercase hover:text-slate-600 transition-colors duration-300">50+ clients · 200+ projets réalisés · 8 ans · 15+ secteurs</p>
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-8 sm:mb-10">
+              {proofItems.map((item, index) => {
+                const icons = [Building2, Briefcase, Award, Layers];
+                const Icon = icons[index];
+                return (
+                  <div key={item.label} className="rounded-2xl bg-white/75 backdrop-blur-md border border-white/70 shadow-lg px-4 py-5 sm:px-6 sm:py-6">
+                    <div className="flex items-center justify-center mb-3">
+                      <div className="w-10 h-10 rounded-xl bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 flex items-center justify-center">
+                        <Icon className="w-5 h-5 text-white" />
+                      </div>
+                    </div>
+                    <div className="text-2xl sm:text-3xl font-bold text-slate-800">{item.value}</div>
+                    <div className="text-xs sm:text-sm text-slate-500 mt-1">{item.label}</div>
                   </div>
-                  <div className="absolute -top-1 -right-1 w-2 h-2 sm:w-3 sm:h-3 bg-gradient-to-r from-emerald-400 to-blue-400 rounded-full animate-ping"></div>
-                </div>
-                <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-slate-700 hover:text-emerald-600 transition-colors duration-300">75+ projets</div>
-              </TouchOptimized>
-              
-              <div className="hidden sm:block w-px h-8 sm:h-12 bg-gradient-to-b from-transparent via-slate-300 to-transparent"></div>
-              
-              <TouchOptimized
-                touchTarget="large"
-                className="flex items-center justify-center space-x-3 hover:scale-110 transition-all duration-500 delay-75 cursor-pointer p-3 rounded-xl hover:bg-white/50 hover:shadow-lg"
-              >
-                <div className="relative">
-                  <div className="w-6 h-6 sm:w-8 sm:h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center hover:shadow-lg hover:shadow-purple-500/30 transition-all duration-300">
-                    <Award className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
+                );
+              })}
+            </div>
+
+            <div className="max-w-5xl mx-auto">
+              <p className="text-xs sm:text-sm font-medium text-slate-500 mb-4 sm:mb-5 tracking-wide uppercase">Références</p>
+              <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
+                {clientLogos.map((client) => (
+                  <div
+                    key={client}
+                    className="px-4 py-3 sm:px-5 sm:py-3 rounded-2xl bg-white/80 border border-slate-200/80 shadow-sm text-sm sm:text-base font-semibold text-slate-700"
+                  >
+                    {client}
                   </div>
-                  <div className="absolute -top-1 -right-1 w-2 h-2 sm:w-3 sm:h-3 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full animate-ping delay-300"></div>
-                </div>
-                <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-slate-700 hover:text-purple-600 transition-colors duration-300">100% satisfaction</div>
-              </TouchOptimized>
-              
-              <div className="hidden sm:block w-px h-8 sm:h-12 bg-gradient-to-b from-transparent via-slate-300 to-transparent"></div>
-              
-              <TouchOptimized
-                touchTarget="large"
-                className="flex items-center justify-center space-x-3 hover:scale-110 transition-all duration-500 delay-150 cursor-pointer p-3 rounded-xl hover:bg-white/50 hover:shadow-lg"
-              >
-                <div className="relative">
-                  <div className="w-6 h-6 sm:w-8 sm:h-8 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full flex items-center justify-center hover:shadow-lg hover:shadow-blue-500/30 transition-all duration-300">
-                    <Users className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
-                  </div>
-                  <div className="absolute -top-1 -right-1 w-2 h-2 sm:w-3 sm:h-3 bg-gradient-to-r from-blue-400 to-indigo-400 rounded-full animate-ping delay-500"></div>
-                </div>
-                <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-slate-700 hover:text-blue-600 transition-colors duration-300">11+ ans d'expérience</div>
-              </TouchOptimized>
+                ))}
+              </div>
             </div>
           </div>
         </div>
