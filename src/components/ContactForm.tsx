@@ -46,29 +46,30 @@ type FormData = z.infer<typeof formSchema>;
 
 const services = [
   'Branding & Identité visuelle',
-  'Événementiel',
-  'Personal Branding',
-  'Content Digital',
-  'Stratégie de communication',
+  'Social Media Management',
+  'Création de contenu',
+  'Campagnes publicitaires',
+  'Vidéo & Motion Design',
+  'Événements corporate & activations',
   'Autre'
 ];
 
 const budgets = [
-  'Moins de 5 000€',
-  '5 000€ - 15 000€',
-  '15 000€ - 30 000€',
-  '30 000€ - 50 000€',
-  'Plus de 50 000€',
-  'À définir ensemble'
+  'Moins de 100 000 MAD',
+  '100 000 - 250 000 MAD',
+  '250 000 - 500 000 MAD',
+  '500 000 - 1 000 000 MAD',
+  'Plus de 1 000 000 MAD',
+  'À cadrer ensemble'
 ];
 
 const delais = [
-  'Urgent (moins de 2 semaines)',
-  '1 mois',
-  '2-3 mois',
-  '3-6 mois',
-  'Plus de 6 mois',
-  'Flexible'
+  'Sous 1 mois',
+  '1 à 3 mois',
+  '3 à 6 mois',
+  '6 à 12 mois',
+  'Programme annuel',
+  'À confirmer'
 ];
 
 const countryCodes = [
@@ -114,7 +115,7 @@ export const ContactForm = () => {
     // Simulate submission delay
     await new Promise(resolve => setTimeout(resolve, 1000));
     
-    const message = `🚀 NOUVEAU PROJET - Link Agency
+      const message = `🚀 NOUVELLE DEMANDE - Link Agency
 
 👤 Contact:
 - Nom: ${data.nom} ${data.prenom}
@@ -122,10 +123,10 @@ export const ContactForm = () => {
 - Téléphone: ${data.countryCode} ${data.telephone}
 - Entreprise: ${data.entreprise || 'Non renseignée'}
 
-📋 Projet:
-- Service souhaité: ${data.service}
-- Budget estimé: ${data.budget || 'Non renseigné'}
-- Délai souhaité: ${data.delai || 'Non renseigné'}
+📋 Dispositif:
+- Expertise souhaitée: ${data.service}
+- Budget digital annuel indicatif: ${data.budget || 'Non renseigné'}
+- Horizon de déploiement: ${data.delai || 'Non renseigné'}
 
 💬 Message:
 ${data.message}`;
@@ -136,8 +137,8 @@ ${data.message}`;
     setIsSubmitted(true);
     
     toast({
-      title: "Message envoyé avec succès !",
-      description: "Nous vous répondrons dans les 24h. Vous allez être redirigé vers WhatsApp.",
+      title: "Demande envoyée avec succès !",
+      description: "Nous revenons vers vous rapidement. Vous allez être redirigé vers WhatsApp.",
     });
 
     setTimeout(() => {
@@ -161,10 +162,10 @@ ${data.message}`;
         <div className="w-12 h-12 sm:w-16 sm:h-16 bg-green-500 rounded-full flex items-center justify-center mb-4 sm:mb-6 animate-pulse-subtle">
           <Check className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
         </div>
-        <h3 className="text-xl sm:text-2xl font-light text-white mb-3 sm:mb-4">Message envoyé !</h3>
+        <h3 className="text-xl sm:text-2xl font-light text-white mb-3 sm:mb-4">Demande envoyée !</h3>
         <p className="text-sm sm:text-base text-gray-300 max-w-md leading-relaxed">
-          Merci pour votre message. Notre équipe vous contactera dans les 24h. 
-          Vous allez être redirigé vers WhatsApp pour poursuivre la conversation.
+          Merci pour votre prise de contact. Notre équipe vous recontactera rapidement. 
+          Vous allez être redirigé vers WhatsApp pour poursuivre l'échange.
         </p>
       </div>
     );
@@ -184,7 +185,7 @@ ${data.message}`;
                   <FormControl>
                     <input
                       {...field}
-                      placeholder="Nom *"
+                       placeholder="Nom *"
                       className="w-full bg-transparent border-0 border-b-2 border-gray-600 pb-2 sm:pb-3 text-white placeholder:text-gray-400 focus:outline-none focus:border-white text-base sm:text-lg font-light smooth-hover pr-8"
                     />
                   </FormControl>
@@ -206,7 +207,7 @@ ${data.message}`;
                   <FormControl>
                     <input
                       {...field}
-                      placeholder="Prénom *"
+                       placeholder="Fonction *"
                       className="w-full bg-transparent border-0 border-b-2 border-gray-600 pb-2 sm:pb-3 text-white placeholder:text-gray-400 focus:outline-none focus:border-white text-base sm:text-lg font-light smooth-hover pr-8"
                     />
                   </FormControl>
@@ -307,7 +308,7 @@ ${data.message}`;
                 <FormControl>
                   <input
                     {...field}
-                    placeholder="Entreprise / Organisation"
+                     placeholder="Entreprise *"
                     className="w-full bg-transparent border-0 border-b-2 border-gray-600 pb-2 sm:pb-3 text-white placeholder:text-gray-400 focus:outline-none focus:border-white text-base sm:text-lg font-light smooth-hover pr-8"
                   />
                 </FormControl>
@@ -327,8 +328,8 @@ ${data.message}`;
             <FormItem>
               <Select onValueChange={field.onChange} value={field.value}>
                 <FormControl>
-                  <SelectTrigger aria-label="Sélectionner le service souhaité" className="bg-transparent border-0 border-b-2 border-gray-600 text-white focus:border-white rounded-none h-auto pb-2 sm:pb-3 text-base sm:text-lg font-light">
-                    <SelectValue placeholder="Service souhaité *" className="text-gray-400" />
+                     <SelectTrigger aria-label="Sélectionner l'expertise souhaitée" className="bg-transparent border-0 border-b-2 border-gray-600 text-white focus:border-white rounded-none h-auto pb-2 sm:pb-3 text-base sm:text-lg font-light">
+                     <SelectValue placeholder="Expertise souhaitée *" className="text-gray-400" />
                   </SelectTrigger>
                 </FormControl>
                 <SelectContent className="bg-black border-gray-700">
@@ -352,8 +353,8 @@ ${data.message}`;
               <FormItem>
                 <Select onValueChange={field.onChange} value={field.value}>
                   <FormControl>
-                    <SelectTrigger aria-label="Sélectionner le budget estimé" className="bg-transparent border-0 border-b-2 border-gray-600 text-white focus:border-white rounded-none h-auto pb-2 sm:pb-3 text-base sm:text-lg font-light">
-                      <SelectValue placeholder="Budget estimé" className="text-gray-400" />
+                     <SelectTrigger aria-label="Sélectionner le budget digital annuel indicatif" className="bg-transparent border-0 border-b-2 border-gray-600 text-white focus:border-white rounded-none h-auto pb-2 sm:pb-3 text-base sm:text-lg font-light">
+                       <SelectValue placeholder="Budget digital annuel indicatif" className="text-gray-400" />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent className="bg-black border-gray-700">
@@ -375,8 +376,8 @@ ${data.message}`;
               <FormItem>
                 <Select onValueChange={field.onChange} value={field.value}>
                   <FormControl>
-                    <SelectTrigger aria-label="Sélectionner le délai souhaité" className="bg-transparent border-0 border-b-2 border-gray-600 text-white focus:border-white rounded-none h-auto pb-2 sm:pb-3 text-base sm:text-lg font-light">
-                      <SelectValue placeholder="Délai souhaité" className="text-gray-400" />
+                     <SelectTrigger aria-label="Sélectionner l'horizon de déploiement" className="bg-transparent border-0 border-b-2 border-gray-600 text-white focus:border-white rounded-none h-auto pb-2 sm:pb-3 text-base sm:text-lg font-light">
+                       <SelectValue placeholder="Horizon de déploiement" className="text-gray-400" />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent className="bg-black border-gray-700">
@@ -401,7 +402,7 @@ ${data.message}`;
                 <FormControl>
                   <textarea
                     {...field}
-                    placeholder="Décrivez votre projet, vos objectifs, votre vision... *"
+                     placeholder="Décrivez votre contexte, vos objectifs business et les leviers à activer... *"
                     className="w-full bg-transparent border-0 border-b-2 border-gray-600 pb-2 sm:pb-3 text-white placeholder:text-gray-400 focus:outline-none focus:border-white resize-none text-base sm:text-lg font-light smooth-hover pr-8 min-h-[80px] sm:min-h-[100px]"
                     rows={3}
                   />
@@ -429,12 +430,12 @@ ${data.message}`;
             ) : (
               <>
                 <Send className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 smooth-hover" />
-                <span className="text-sm sm:text-base">Envoyer ma demande</span>
+                 <span className="text-sm sm:text-base">Envoyer la demande</span>
               </>
             )}
           </button>
           <p className="text-gray-400 text-xs sm:text-sm mt-3 text-center sm:text-left">
-            Réponse garantie sous 24h • Les champs marqués * sont obligatoires
+             Premier retour rapide • Les champs marqués * sont obligatoires
           </p>
         </div>
       </form>

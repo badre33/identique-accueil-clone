@@ -1142,7 +1142,7 @@ export const faqsEnriched: FAQ[] = [
   {
     id: '1',
     question: 'Combien coûte la création d\'un logo professionnel au Maroc ?',
-    answer: 'Le prix d\'un logo professionnel au Maroc varie selon la complexité : logo simple (3000-8000 MAD), identité complète avec charte graphique (15000-35000 MAD), branding complet avec stratégie (40000-80000 MAD). Chez Link Agency, nous proposons des packages adaptés à tous les budgets avec un accompagnement personnalisé.',
+    answer: 'Le cadrage d\'une identité varie selon le périmètre : système d\'identité seul, plateforme de marque, architecture éditoriale, déploiement multi-supports ou refonte globale. Nous calibrons nos recommandations pour des marques déjà installées, avec un niveau d\'exigence adapté aux enjeux business et de gouvernance.',
     category: 'Branding',
     keywords: ['prix logo maroc', 'coût création logo', 'tarif branding maroc', 'budget identité visuelle'],
     relatedServices: ['branding', 'identité visuelle']
@@ -1166,17 +1166,17 @@ export const faqsEnriched: FAQ[] = [
   {
     id: '4',
     question: 'Quel budget prévoir pour un événement d\'entreprise au Maroc ?',
-    answer: 'Budget événement corporate au Maroc : 150-400 MAD/participant selon le standing. Événement simple (50 pers) : 25000-40000 MAD. Événement premium (100 pers) : 80000-150000 MAD. Inclut lieu, restauration, animation, technique. Devis gratuit sous 48h.',
+    answer: 'Le budget dépend du format, du volume d\'invités, des exigences de production et de la couverture attendue. Nous intervenons sur des lancements produit, conventions, séminaires, soirées clients VIP et activations retail, avec une approche pilotée autour de la direction artistique, de la logistique et de la mesure d\'impact.',
     category: 'Événementiel',
     keywords: ['prix événement maroc', 'coût organisation événement', 'budget event casablanca', 'tarif événementiel'],
     relatedServices: ['evenementiel', 'organisation événements']
   },
   {
     id: '5',
-    question: 'Travaillez-vous avec des startups et petites entreprises ?',
-    answer: 'Oui ! 40% de nos clients sont des startups et PME. Nous proposons des packages adaptés aux budgets serrés : branding starter (8000 MAD), présence digitale (5000 MAD/mois), événements intimes (15000 MAD). Paiement échelonné possible.',
+    question: 'Avec quel type d\'entreprises travaillez-vous ?',
+    answer: 'Link Agency accompagne principalement des marques établies, des groupes, des enseignes retail, des acteurs du secteur financier, de l\'assurance, de l\'e-commerce, de l\'industrie et des services B2B. Notre mode d\'intervention est pensé pour des directions marketing qui recherchent un partenaire digital structuré, capable de piloter stratégie, production et performance.',
     category: 'Services',
-    keywords: ['agence startup maroc', 'branding PME', 'marketing petit budget', 'services entreprise'],
+    keywords: ['agence digitale maroc', 'marques établies maroc', 'direction marketing casablanca', 'partenaire digital maroc'],
     relatedServices: ['branding', 'content digital', 'evenementiel']
   },
   {
