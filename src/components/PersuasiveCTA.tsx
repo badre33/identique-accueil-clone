@@ -178,15 +178,15 @@ export const CTAWithStats = ({ className }: { className?: string }) => {
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8 max-w-md sm:max-w-none mx-auto mb-6 sm:mb-8">
         <div className="text-center group cursor-pointer hover:scale-105 transition-transform duration-300 p-3 sm:p-2 rounded-lg hover:bg-white/50">
           <div className="text-xl sm:text-2xl font-bold text-black mb-1 group-hover:text-blue-600 transition-colors duration-300">50+</div>
+          <div className="text-sm text-gray-600 group-hover:text-gray-700 transition-colors duration-300">Clients accompagnés</div>
+        </div>
+        <div className="text-center group cursor-pointer hover:scale-105 transition-transform duration-300 p-3 sm:p-2 rounded-lg hover:bg-white/50">
+          <div className="text-xl sm:text-2xl font-bold text-black mb-1 group-hover:text-green-600 transition-colors duration-300">200+</div>
           <div className="text-sm text-gray-600 group-hover:text-gray-700 transition-colors duration-300">Projets réalisés</div>
         </div>
         <div className="text-center group cursor-pointer hover:scale-105 transition-transform duration-300 p-3 sm:p-2 rounded-lg hover:bg-white/50">
-          <div className="text-xl sm:text-2xl font-bold text-black mb-1 group-hover:text-green-600 transition-colors duration-300">98%</div>
-          <div className="text-sm text-gray-600 group-hover:text-gray-700 transition-colors duration-300">Clients satisfaits</div>
-        </div>
-        <div className="text-center group cursor-pointer hover:scale-105 transition-transform duration-300 p-3 sm:p-2 rounded-lg hover:bg-white/50">
-          <div className="text-xl sm:text-2xl font-bold text-black mb-1 group-hover:text-purple-600 transition-colors duration-300">24h</div>
-          <div className="text-sm text-gray-600 group-hover:text-gray-700 transition-colors duration-300">Réponse garantie</div>
+          <div className="text-xl sm:text-2xl font-bold text-black mb-1 group-hover:text-purple-600 transition-colors duration-300">8 ans</div>
+          <div className="text-sm text-gray-600 group-hover:text-gray-700 transition-colors duration-300">D'expérience</div>
         </div>
       </div>
       
@@ -195,17 +195,17 @@ export const CTAWithStats = ({ className }: { className?: string }) => {
           variant="gradient"
           size="large"
           icon={<Sparkles className="w-5 h-5 sm:w-6 sm:h-6" />}
-          microCopy="Consultation gratuite de 30 minutes"
+          microCopy="Premier échange stratégique de 30 minutes"
           href="https://calendly.com/b-harkaoui-linkagency/30min"
           onClick={handleClick}
           loading={loading}
         >
-          {loading ? "Connexion..." : "Démarrer mon projet"}
+          {loading ? "Connexion..." : "Discuter de votre dispositif"}
         </PersuasiveCTA>
       </div>
 
       <p className="text-sm text-gray-500 max-w-sm mx-auto hover:text-gray-600 transition-colors duration-300 px-4">
-        ✨ Sans engagement • 🚀 Réponse rapide • 💎 Expertise garantie
+        50+ clients • 200+ projets • Studio interne
       </p>
     </div>
   );

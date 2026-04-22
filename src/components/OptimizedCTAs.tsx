@@ -6,10 +6,10 @@ import { useState } from 'react';
 export const OptimizedCTAs = {
   // CTA principal avec urgence
   PrimaryCTA: ({ 
-    title = "Transformez votre marque dès aujourd'hui",
-    subtitle = "Rejoignez plus de 150 entreprises satisfaites",
-    ctaText = "Démarrer mon projet",
-    urgencyText = "Consultation gratuite - Réponse sous 24h",
+    title = "Cadrez votre prochain dispositif digital",
+    subtitle = "50+ clients accompagnés, 200+ projets réalisés pour des marques établies au Maroc",
+    ctaText = "Discuter de votre dispositif",
+    urgencyText = "Premier échange stratégique • Réponse rapide",
     link = "/#contact"
   }) => {
     const [isHovered, setIsHovered] = useState(false);
@@ -54,13 +54,13 @@ export const OptimizedCTAs = {
 
   // CTA avec preuve sociale
   SocialProofCTA: ({ 
-    title = "Rejoignez 150+ entreprises satisfaites",
+    title = "Des références qui parlent aux directions marketing",
     stats = [
-      { value: "4.9/5", label: "Satisfaction client" },
-      { value: "98%", label: "Recommandation" },
-      { value: "24h", label: "Délai de réponse" }
+      { value: "50+", label: "Clients accompagnés" },
+      { value: "200+", label: "Projets réalisés" },
+      { value: "15+", label: "Secteurs couverts" }
     ],
-    ctaText = "Obtenir mon devis gratuit",
+    ctaText = "Voir nos références",
     link = "/#contact"
   }) => (
     <div className="bg-white border border-gray-200 rounded-2xl p-8 text-center hover:shadow-lg transition-all duration-300">
@@ -90,14 +90,14 @@ export const OptimizedCTAs = {
 
   // CTA avec bénéfices
   BenefitsCTA: ({ 
-    title = "Pourquoi choisir Link Agency ?",
+    title = "Pourquoi Link Agency ?",
     benefits = [
-      "Expertise locale Maroc depuis 11 ans",
-      "Équipe 100% dédiée à votre succès", 
-      "Résultats mesurables et ROI prouvé",
-      "Support continu post-livraison"
+      "Portefeuille de marques établies, dont banque et assurance",
+      "Studio interne : contenu, vidéo, motion, shooting et copywriting",
+      "Pilotage publicitaire rigoureux avec reporting et optimisation continue",
+      "Expertise sectorielle prouvée dans des univers régulés"
     ],
-    ctaText = "Découvrir nos services",
+    ctaText = "Découvrir nos expertises",
     link = "/#services"
   }) => (
     <div className="bg-gray-50 rounded-2xl p-8">
@@ -191,11 +191,11 @@ export const OptimizedCTAs = {
 
   // CTA contact direct
   ContactCTA: ({ 
-    title = "Parlons de votre projet",
-    subtitle = "Notre équipe est à votre écoute pour concrétiser vos ambitions",
+    title = "Parlons de votre dispositif digital",
+    subtitle = "Un premier échange pour aligner enjeux business, production et performance",
     phone = "+212 6XX XXX XXX",
     email = "bharkaoui@linkagency.ma",
-    ctaText = "Prendre rendez-vous",
+    ctaText = "Planifier un échange",
     link = "/#contact"
   }) => (
     <div className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg transition-all duration-300">
