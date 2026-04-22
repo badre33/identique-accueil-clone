@@ -20,6 +20,33 @@ export const ProjectsGallery = () => {
 
   const projects = [
     {
+      title: "L'Bankalik",
+      category: "Banque & performance digitale — Maroc",
+      image: "/lovable-uploads/155dc759-4923-4ddc-8251-334cb8ba3ad7.png",
+      shortDescription: "Stratégie éditoriale institutionnelle, contenus pédagogiques bilingues FR/AR, community management et pilotage média Meta Ads pour la banque digitale du groupe Attijariwafa Bank.",
+      description: "Gestion complète des réseaux pour L'Bankalik par Attijariwafa Bank : stratégie éditoriale institutionnelle, contenus pédagogiques bilingues FR/AR, community management, pilotage Meta Ads sur des objectifs de notoriété, lead generation et conversion. Les dispositifs sont segmentés selon les audiences clés : jeunes actifs, familles, MRE et PME, avec une couverture des temps forts groupe et des prises de parole employeur.",
+      year: "2025",
+      url: "#"
+    },
+    {
+      title: "AXA Assurance Maroc",
+      category: "Assurance & contenus institutionnels — Maroc",
+      image: "/lovable-uploads/86dfbcc8-1b16-4656-9047-427ad8d69523.png",
+      shortDescription: "Contenus institutionnels et pédagogiques, motion design, community management quotidien et campagnes Meta Ads avec optimisation du CPL.",
+      description: "Accompagnement stratégique de la présence digitale d'AXA Assurance Maroc : contenus institutionnels et pédagogiques, motion design pour vulgariser les produits auto, santé, épargne et prévoyance, community management quotidien et campagnes Meta Ads dédiées à la notoriété et à la génération de leads. Les créatifs sont pilotés en A/B testing pour optimiser le CPL.",
+      year: "2025",
+      url: "#"
+    },
+    {
+      title: "RMA",
+      category: "Assurance & social media — Maroc",
+      image: "/lovable-uploads/29365e8a-7e4d-4041-ad14-37f38d1bde1b.png",
+      shortDescription: "Production de contenus institutionnels, Reels de sensibilisation, campagnes de renouvellement et rédaction bilingue FR/AR.",
+      description: "Pour RMA, Link Agency produit des contenus institutionnels, des Reels de sensibilisation et des campagnes dédiées aux temps forts assurance : renouvellement auto, rentrée santé, prévention routière et Ramadan. Le dispositif comprend la rédaction bilingue FR/AR, la gestion des requêtes clients et la cohérence éditoriale sur l'ensemble des prises de parole.",
+      year: "2025",
+      url: "#"
+    },
+    {
       title: "OCB Maroc",
       category: "Social Media & Ads — Maroc",
       image: "/lovable-uploads/ocb-logo.png",
@@ -108,14 +135,21 @@ export const ProjectsGallery = () => {
         <div className="text-center mb-20">
           <div className="inline-flex items-center space-x-2 bg-black text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
             <ExternalLink className="w-4 h-4" />
-            <span>Nos réalisations au Maroc & à l'international</span>
+            <span>Des dispositifs en production, pour des marques qui comptent</span>
           </div>
           <h2 className="text-5xl lg:text-6xl font-light mb-8 text-transparent bg-clip-text bg-gradient-to-r from-black via-gray-800 to-black">
-            Projets récents
+            Références & cas clients
           </h2>
           <p className="text-xl lg:text-2xl text-gray-700 leading-relaxed max-w-4xl mx-auto font-light">
-            Découvrez quelques-unes de nos collaborations les plus marquantes et l'impact créatif que nous avons généré pour nos partenaires.
+            50+ clients accompagnés. 200+ projets réalisés. 15+ secteurs couverts. Une sélection de cas qui illustrent notre capacité à concevoir, produire et piloter des dispositifs à fort enjeu.
           </p>
+          <div className="flex flex-wrap justify-center gap-3 mt-10">
+            {["L'Bankalik", "AXA Assurance Maroc", "RMA", "Subway Maroc", "YouCan", "Nova Spacia", "OCB Maroc", "La Maison Amoud", "Brainlyne", "Benatna"].map((client) => (
+              <div key={client} className="px-4 py-3 rounded-2xl bg-white border border-gray-200 text-sm font-semibold text-gray-700 shadow-sm">
+                {client}
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Projects grid */}
@@ -189,12 +223,12 @@ export const ProjectsGallery = () => {
 
         <div className="text-center mt-16">
           <a 
-            href="https://wa.me/212699024526?text=Bonjour%2C%20j'aimerais%20discuter%20de%20mon%20projet"
+            href="https://wa.me/212699024526?text=Bonjour%2C%20je%20souhaite%20%C3%A9changer%20sur%20un%20dispositif%20digital%20%C3%A0%20enjeu"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center space-x-3 bg-black text-white px-8 py-4 rounded-full hover:bg-gray-800 transition-all duration-300 hover:scale-105 hover:shadow-2xl text-lg font-medium"
           >
-            <span>Discutons de votre projet</span>
+            <span>Discuter de votre dispositif</span>
             <ArrowRight className="w-5 h-5" />
           </a>
         </div>

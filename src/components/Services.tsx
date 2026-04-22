@@ -1,5 +1,5 @@
 
-import { Code, Palette, Megaphone, Users, Lightbulb, TrendingUp } from "lucide-react";
+import { Palette, Megaphone, Camera, MonitorPlay, LayoutGrid, CalendarRange } from "lucide-react";
 import { TouchOptimized } from "./TouchOptimized";
 import { ResponsiveGrid } from "./ResponsiveGrid";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
@@ -13,57 +13,57 @@ export const Services = () => {
   const services = [
     {
       icon: Palette,
-      title: "Branding & Identité",
-      description: "Création d'identités visuelles fortes et mémorables qui reflètent l'essence de votre marque",
-      features: ["Logo & Charte graphique", "Identité visuelle complète", "Guidelines de marque"],
+      title: "Branding & Identité visuelle",
+      description: "Nous concevons des identités de marque mémorables, de la création de logo à la charte graphique complète.",
+      features: ["Logo & système d'identité", "Charte graphique complète", "Design print et digital"],
       color: "from-blue-500 to-purple-600",
       bgImage: "https://images.unsplash.com/photo-1558655146-d09347e92766?w=300&h=225&fit=crop&fm=webp&q=30",
       link: "/branding"
     },
     {
-      icon: Code,
-      title: "Développement Web",
-      description: "Sites web performants et applications sur mesure avec les dernières technologies",
-      features: ["Sites web responsives", "Applications web", "E-commerce"],
+      icon: LayoutGrid,
+      title: "Social Media Management",
+      description: "Nous gérons vos réseaux sociaux au quotidien : stratégie éditoriale, community management et reporting.",
+      features: ["Stratégie éditoriale FR/AR/Darija", "Community management quotidien", "Reporting mensuel"],
       color: "from-green-500 to-blue-600",
       bgImage: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=300&h=225&fit=crop&fm=webp&q=30",
-      link: "/developpement-web"
-    },
-    {
-      icon: Megaphone,
-      title: "Marketing Digital",
-      description: "Stratégies digitales personnalisées pour booster votre visibilité en ligne",
-      features: ["SEO & Référencement", "Publicité en ligne", "Analytics & Reporting"],
-      color: "from-purple-500 to-pink-600",
-      bgImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=300&h=225&fit=crop&fm=webp&q=30",
       link: "/marketing-digital"
     },
     {
-      icon: Users,
-      title: "Événementiel Corporate",
-      description: "Organisation d'événements corporate d'exception : conférences, lancements, séminaires",
-      features: ["Conception événementielle", "Production & logistique", "Coverage média"],
+      icon: Camera,
+      title: "Création de contenu",
+      description: "Notre studio interne produit des visuels, vidéos, motion designs et shootings adaptés à chaque plateforme.",
+      features: ["Shooting studio & décor", "Motion design", "Production photo et vidéo"],
+      color: "from-purple-500 to-pink-600",
+      bgImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=300&h=225&fit=crop&fm=webp&q=30",
+      link: "/content-digital"
+    },
+    {
+      icon: Megaphone,
+      title: "Campagnes publicitaires",
+      description: "Nous concevons et pilotons des campagnes Meta Ads, Google Ads et TikTok Ads avec un suivi rigoureux du ROI.",
+      features: ["Meta · Google · TikTok", "A/B testing", "Optimisation ROAS · Lead generation"],
       color: "from-blue-500 to-indigo-600",
       bgImage: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=300&h=225&fit=crop&fm=webp&q=30",
-      link: "/evenementiel"
+      link: "/marketing-digital"
     },
     {
-      icon: TrendingUp,
-      title: "Influence Marketing",
-      description: "Campagnes d'influence avec créateurs et KOL pour booster votre visibilité",
-      features: ["Casting influenceurs", "Production contenu", "Analytics ROI"],
+      icon: MonitorPlay,
+      title: "Vidéo & Motion Design",
+      description: "Du concept au montage final, nous produisons des contenus vidéo engageants pour vos marques et vos campagnes.",
+      features: ["Spots publicitaires", "Formats Reels & TikTok", "Vidéos corporate · Animations"],
       color: "from-purple-500 to-pink-600",
       bgImage: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=300&h=225&fit=crop&fm=webp&q=30",
-      link: "/influence-marketing"
+      link: "/content-digital"
     },
     {
-      icon: Lightbulb,
-      title: "Conseil Stratégique",
-      description: "Accompagnement personnalisé pour définir et atteindre vos objectifs business",
-      features: ["Audit & Diagnostic", "Stratégie digitale", "Formation équipes"],
+      icon: CalendarRange,
+      title: "Événements corporate & activations de marque",
+      description: "Nous concevons les événements B2B et activations qui accompagnent les temps forts des grandes marques.",
+      features: ["Lancements produit & conventions", "Séminaires & soirées VIP", "Activations retail & salons"],
       color: "from-orange-500 to-red-600",
       bgImage: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=300&h=225&fit=crop&fm=webp&q=30",
-      link: "/conseil-strategique"
+      link: "/evenementiel"
     },
   ];
 
@@ -125,19 +125,19 @@ export const Services = () => {
           >
             <div className="inline-flex items-center px-4 py-2 sm:px-6 sm:py-3 bg-gradient-to-r from-blue-100 to-purple-100 rounded-full border border-blue-200/50 hover:scale-105 transition-all duration-300">
               <Palette className="w-4 h-4 sm:w-5 sm:h-5 text-blue-600 mr-2" />
-              <span className="text-xs sm:text-sm font-semibold text-blue-700 tracking-wide">Nos Services</span>
+              <span className="text-xs sm:text-sm font-semibold text-blue-700 tracking-wide">Nos expertises</span>
             </div>
           </TouchOptimized>
           
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light text-slate-900 mb-4 sm:mb-6 leading-tight tracking-tight">
-            Excellence dans chaque
+            6 pôles intégrés,
             <span className="block mt-2 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent font-medium">
-              domaine d'expertise
+              pilotés en studio
             </span>
           </h2>
           
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-600 max-w-4xl mx-auto leading-relaxed font-light px-4 sm:px-0">
-            Des solutions complètes et personnalisées pour propulser votre entreprise vers de nouveaux sommets
+            Branding, social media, production, acquisition, vidéo et activations : des expertises conçues pour des directions marketing qui exigent cohérence, vitesse d'exécution et résultats business.
           </p>
         </div>
 
@@ -207,7 +207,7 @@ export const Services = () => {
                       {/* Hover Arrow Effect */}
                       <div className="mt-4 sm:mt-6 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-500">
                         <div className={`inline-flex items-center text-xs sm:text-sm font-semibold bg-gradient-to-r ${service.color} bg-clip-text text-transparent`}>
-                          <span>En savoir plus</span>
+                           <span>Voir l'expertise</span>
                           <svg className="w-3 h-3 sm:w-4 sm:h-4 ml-1 sm:ml-2 transform group-hover:translate-x-1 transition-transform duration-300" fill="currentColor" viewBox="0 0 20 20">
                             <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586L10.293 4.707a1 1 0 010-1.414z" clipRule="evenodd" />
                           </svg>
@@ -236,7 +236,7 @@ export const Services = () => {
               rel="noopener noreferrer"
               className="group inline-flex items-center justify-center px-8 sm:px-12 py-4 sm:py-6 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 text-white rounded-2xl font-semibold text-base sm:text-lg hover:from-blue-700 hover:via-purple-700 hover:to-indigo-800 transform hover:scale-105 hover:-translate-y-2 transition-all duration-700 shadow-2xl hover:shadow-3xl w-full sm:w-auto hover:shadow-purple-500/25"
             >
-              <span>Discutons de votre projet</span>
+              <span>Discuter de votre dispositif</span>
               <svg className="w-5 h-5 sm:w-6 sm:h-6 ml-2 sm:ml-3 group-hover:translate-x-2 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
