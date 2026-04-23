@@ -198,7 +198,7 @@ const PersonalBranding = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-light mb-6 text-black">Nos services en Personal Branding</h2>
             <p className="text-xl text-gray-600 font-light max-w-3xl mx-auto">
-              Construisez une marque personnelle puissante, visible et crédible.
+              Une offre dédiée aux profils exposés qui doivent maîtriser leur image, leurs messages et leur régularité éditoriale.
             </p>
           </div>
           
@@ -233,16 +233,16 @@ const PersonalBranding = () => {
       <WorkflowTimeline 
         steps={workflowSteps}
         title="Notre processus Personal Branding"
-        subtitle="4 étapes clés pour construire une marque personnelle puissante"
+        subtitle="4 étapes pour cadrer, produire et piloter une présence personnelle cohérente"
       />
 
       {/* Why Choose Us Section */}
       <section className="py-20 px-8 lg:px-16 bg-gradient-to-br from-gray-50 to-purple-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-light mb-6 text-black">Pourquoi nous choisir ?</h2>
+            <h2 className="text-4xl font-light mb-6 text-black">Pourquoi Link Agency ?</h2>
             <p className="text-xl text-gray-600 font-light">
-              Notre expertise au service de votre réussite
+              Une approche sobre et stratégique pour les profils qui ont déjà un niveau d’exposition à tenir.
             </p>
           </div>
           
@@ -266,16 +266,16 @@ const PersonalBranding = () => {
       <section className="py-20 px-8 lg:px-16 bg-black text-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl lg:text-5xl font-light mb-8">
-            Prêt à devenir une référence dans votre domaine ?
+            Parlons de votre présence personnelle.
           </h2>
           <p className="text-xl text-gray-300 mb-10 font-light leading-relaxed">
-            Construisons ensemble votre marque personnelle et faisons de vous un leader reconnu dans votre secteur.
+            Un premier échange pour clarifier vos enjeux d’image, vos publics prioritaires et votre cadre éditorial.
           </p>
           <Button 
             onClick={handleContact}
             className="bg-purple-600 text-white hover:bg-purple-700 px-12 py-6 text-lg transform hover:scale-105 transition-all duration-300"
           >
-            Commencer maintenant
+            Planifier un échange
           </Button>
         </div>
       </section>

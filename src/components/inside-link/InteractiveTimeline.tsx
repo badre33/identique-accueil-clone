@@ -18,7 +18,7 @@ const timelineEvents: TimelineEvent[] = [
     id: 1,
     year: '2019',
     title: 'Les Débuts',
-    description: 'Badreddine et Ayman se rencontrent et découvrent leur passion commune pour le branding stratégique.',
+    description: 'Badreddine et Ayman se rencontrent et identifient une vision commune du branding stratégique.',
     icon: Users,
     color: 'from-blue-500 to-cyan-500',
     location: 'Paris, France'
@@ -27,7 +27,7 @@ const timelineEvents: TimelineEvent[] = [
     id: 2,
     year: '2021',
     title: 'Première Collaboration',
-    description: 'Premier projet ensemble : refonte complète de l\'identité d\'une startup tech parisienne.',
+    description: 'Premier mandat structurant : refonte complète de l\'identité d\'une marque tech parisienne.',
     icon: Lightbulb,
     color: 'from-green-500 to-emerald-500',
     location: 'Paris, France'
@@ -44,7 +44,7 @@ const timelineEvents: TimelineEvent[] = [
     id: 4,
     year: '2023',
     title: 'Naissance de Link',
-    description: 'Création officielle de Link Agency avec une vision claire : révolutionner le branding.',
+    description: 'Création officielle de Link Agency avec une ambition claire : structurer des dispositifs de marque plus exigeants.',
     icon: Rocket,
     color: 'from-orange-500 to-red-500',
     location: 'Casablanca'
@@ -53,7 +53,7 @@ const timelineEvents: TimelineEvent[] = [
     id: 5,
     year: '2024',
     title: 'Expansion',
-    description: 'Plus de 50 projets réalisés, expansion vers les grands comptes et reconnaissance internationale.',
+    description: 'Montée en puissance du portefeuille clients, développement vers les grands comptes et rayonnement international.',
     icon: Calendar,
     color: 'from-indigo-500 to-purple-500'
   }
