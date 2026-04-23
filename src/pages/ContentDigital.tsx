@@ -15,7 +15,7 @@ const ContentDigital = () => {
       generateServiceSchema(
         "Création de Contenu Digital & Réseaux Sociaux",
         "Production de contenus digitaux engageants pour réseaux sociaux, vidéos, photographie et rédaction web au Maroc",
-        "À partir de 2500 MAD"
+        "Sur devis"
       ),
       generateWebPageSchema(
         "Content Digital - Création Contenu & Réseaux Sociaux | Link Agency",
@@ -33,34 +33,34 @@ const ContentDigital = () => {
     {
       icon: <Smartphone className="w-6 h-6 sm:w-8 sm:h-8" />,
       title: "Réseaux sociaux",
-      description: "Création de contenu engageant pour toutes vos plateformes sociales.",
-      details: "Stratégie éditoriale personnalisée, planning de publication, community management et analyse des performances pour maximiser votre présence digitale."
+      description: "Dispositifs éditoriaux conçus pour des prises de parole cohérentes sur l’ensemble de vos plateformes.",
+      details: "Stratégie éditoriale FR/AR/Darija, planning de publication, community management et reporting pour piloter votre présence digitale."
     },
     {
       icon: <Video className="w-6 h-6 sm:w-8 sm:h-8" />,
       title: "Production vidéo",
-      description: "Réalisation de vidéos professionnelles pour vos campagnes digitales.",
-      details: "De la conception à la post-production, nous créons des contenus vidéo qui captivent votre audience et renforcent votre message de marque."
+      description: "Production vidéo pensée pour vos campagnes, vos réseaux sociaux et vos temps forts de marque.",
+      details: "Du concept à la post-production, nous produisons des formats publicitaires, corporate et social media alignés à vos objectifs."
     },
     {
       icon: <Camera className="w-6 h-6 sm:w-8 sm:h-8" />,
       title: "Photographie",
-      description: "Shooting photo professionnel pour alimenter vos contenus.",
-      details: "Séances photo sur-mesure, retouche professionnelle et création d'une banque d'images cohérente avec votre identité visuelle."
+      description: "Production photo premium pour structurer vos assets de marque et vos campagnes.",
+      details: "Shooting studio ou terrain, direction artistique, retouche et constitution d’une banque d’images cohérente avec votre identité."
     },
     {
       icon: <Edit className="w-6 h-6 sm:w-8 sm:h-8" />,
       title: "Rédaction web",
-      description: "Création de contenus textuels optimisés pour le web.",
-      details: "Articles de blog, newsletters, posts réseaux sociaux et contenus SEO qui renforcent votre expertise et améliorent votre visibilité."
+      description: "Copywriting éditorial et commercial pour vos prises de parole digitales.",
+      details: "Articles, newsletters, scripts vidéo, captions social media et contenus SEO conçus pour renforcer clarté, cohérence et conversion."
     }
   ];
 
   const stats = [
-    { number: "500+", label: "Contenus créés", icon: <Edit className="w-5 h-5 sm:w-6 sm:h-6" /> },
-    { number: "2M+", label: "Vues générées", icon: <TrendingUp className="w-5 h-5 sm:w-6 sm:h-6" /> },
-    { number: "98%", label: "Taux de satisfaction", icon: <Star className="w-5 h-5 sm:w-6 sm:h-6" /> },
-    { number: "24h", label: "Temps de réponse", icon: <Zap className="w-5 h-5 sm:w-6 sm:h-6" /> }
+    { number: "200+", label: "Projets livrés", icon: <Edit className="w-5 h-5 sm:w-6 sm:h-6" /> },
+    { number: "50+", label: "Clients accompagnés", icon: <TrendingUp className="w-5 h-5 sm:w-6 sm:h-6" /> },
+    { number: "FR / AR / Darija", label: "Rédaction native", icon: <Star className="w-5 h-5 sm:w-6 sm:h-6" /> },
+    { number: "Studio interne", label: "Production intégrée", icon: <Zap className="w-5 h-5 sm:w-6 sm:h-6" /> }
   ];
 
   const advantages = [
@@ -71,18 +71,18 @@ const ContentDigital = () => {
     },
     {
       icon: <Users className="w-5 h-5 sm:w-6 sm:h-6" />,
-      title: "Équipe créative",
-      description: "Des experts en création de contenu passionnés par l'innovation digitale."
+      title: "Studio interne",
+      description: "Direction artistique, motion, vidéo, photo et copywriting réunis dans une chaîne de production intégrée."
     },
     {
       icon: <TrendingUp className="w-5 h-5 sm:w-6 sm:h-6" />,
       title: "Performance mesurée",
-      description: "Suivi des KPIs et optimisation continue pour maximiser l'impact."
+      description: "Lecture des performances, arbitrages éditoriaux et optimisation continue selon vos KPIs métier."
     },
     {
       icon: <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6" />,
       title: "Qualité garantie",
-      description: "Processus de validation rigoureux pour des contenus irréprochables."
+      description: "Circuits de validation clairs pour produire des contenus fiables, cohérents et exploitables rapidement."
     }
   ];
 
@@ -119,7 +119,7 @@ const ContentDigital = () => {
 
   const handleContact = () => {
     const phoneNumber = "212699024526";
-    const message = "Bonjour, je souhaite créer mes contenus digitaux avec Link Agency.";
+    const message = "Bonjour, je souhaite échanger sur un dispositif content digital avec Link Agency.";
     const encodedMessage = encodeURIComponent(message);
     window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
   };
@@ -128,8 +128,8 @@ const ContentDigital = () => {
     <div className="min-h-screen bg-white pt-16 sm:pt-20">
       <SEOHead
         title="Content Digital Maroc - Création Contenu & Réseaux Sociaux | Link Agency"
-        description="Production de contenus digitaux performants : réseaux sociaux, vidéos, photographie et rédaction web. Création de contenu au Maroc."
-        keywords="création contenu digital maroc, réseaux sociaux, production vidéo, photographie professionnelle, rédaction web, content marketing"
+        description="Production de contenu digital au Maroc : social media, production vidéo, photographie et copywriting pour marques établies à Casablanca."
+        keywords="production vidéo Maroc, agence social media Maroc, content marketing maroc, community management casablanca, rédaction web maroc"
         url="https://linkagency.ma/content-digital"
         type="service"
         structuredData={contentSchema}
@@ -156,16 +156,16 @@ const ContentDigital = () => {
                 <span className="gradient-primary bg-clip-text text-transparent">Digital</span>
               </h1>
               <p className="text-lg sm:text-xl text-gray-700 leading-relaxed mb-4 sm:mb-6 font-light">
-                Nous créons des contenus digitaux performants qui captivent votre audience et génèrent de l'engagement authentique.
+                Nous produisons les contenus qui structurent la prise de parole de marques établies sur les réseaux sociaux, en campagne et sur leurs supports propriétaires.
               </p>
               <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-6 sm:mb-8 font-light">
-                De la stratégie à la diffusion, nous transformons vos idées en contenus qui marquent les esprits et renforcent votre présence digitale.
+                De la stratégie éditoriale à la production, notre studio interne livre des contenus conçus pour la cohérence de marque, la lisibilité des offres et la performance.
               </p>
               <Button 
                 onClick={handleContact}
                 className="btn-primary text-base sm:text-lg"
               >
-                Créer vos contenus
+                Discuter de votre production
               </Button>
             </div>
             
@@ -213,7 +213,7 @@ const ContentDigital = () => {
           <div className="text-center mb-12 sm:mb-16 space-content">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light mb-4 sm:mb-6 text-black">Nos services content digital</h2>
             <p className="text-lg sm:text-xl text-gray-600 font-light max-w-3xl mx-auto">
-              Une approche complète pour créer, diffuser et optimiser vos contenus digitaux sur tous les canaux.
+              Une production pensée pour les directions marketing qui doivent alimenter plusieurs canaux sans diluer leur image de marque.
             </p>
           </div>
           
@@ -243,9 +243,9 @@ const ContentDigital = () => {
       <section className="section-padding gradient-subtle">
         <div className="container-max">
           <div className="text-center mb-12 sm:mb-16 space-content">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light mb-4 sm:mb-6 text-black">Pourquoi nous choisir ?</h2>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light mb-4 sm:mb-6 text-black">Pourquoi Link Agency ?</h2>
             <p className="text-lg sm:text-xl text-gray-600 font-light max-w-3xl mx-auto">
-              Notre expertise au service de votre succès digital.
+              Un studio intégré pour produire vite, bien et dans le cadre éditorial de grandes marques.
             </p>
           </div>
           
@@ -280,16 +280,16 @@ const ContentDigital = () => {
       <section className="section-padding gradient-primary">
         <div className="max-w-4xl mx-auto text-center space-content">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light mb-4 sm:mb-6 text-white">
-            Prêt à transformer votre présence digitale ?
+            Parlons de votre dispositif éditorial.
           </h2>
           <p className="text-lg sm:text-xl text-white/90 leading-relaxed mb-6 sm:mb-8 font-light">
-            Collaborons pour créer des contenus qui marquent et engagent votre audience.
+            Nous cadrons vos besoins, vos canaux prioritaires et votre rythme de production pour déployer un dispositif cohérent.
           </p>
           <Button 
             onClick={handleContact}
             className="bg-white text-black hover:bg-gray-100 px-6 py-3 sm:px-8 sm:py-4 text-base sm:text-lg font-medium interactive-button"
           >
-            Démarrer votre projet
+            Échanger avec l'équipe
           </Button>
         </div>
       </section>

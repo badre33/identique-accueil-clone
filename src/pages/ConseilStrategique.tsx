@@ -14,11 +14,11 @@ const ConseilStrategique = () => {
       generateServiceSchema(
         "Conseil Stratégique & Transformation Digitale",
         "Accompagnement stratégique complet pour accélérer votre transformation digitale : audit, stratégie et accompagnement au Maroc",
-        "À partir de 6000 MAD"
+        "Sur devis"
       ),
       generateWebPageSchema(
         "Conseil Stratégique Digital - Audit & Transformation | Link Agency Maroc",
-        "Cabinet conseil stratégique au Maroc : audit entreprise, stratégie digitale, transformation digitale et formation équipes pour accélérer votre croissance.",
+        "Conseil stratégique digital au Maroc pour structurer gouvernance, priorités marketing et feuille de route de marques établies.",
         "https://linkagency.ma/conseil-strategique"
       ),
       generateBreadcrumbSchema([
@@ -32,56 +32,56 @@ const ConseilStrategique = () => {
     {
       icon: <Target className="w-8 h-8" />,
       title: "Audit & Diagnostic",
-      subtitle: "Identifiez vos leviers de croissance",
-      description: "Analyse complète de votre entreprise, votre marché et votre écosystème digital pour identifier les opportunités et axes d'amélioration stratégiques."
+      subtitle: "Clarifiez vos priorités business",
+      description: "Analyse de votre organisation, de votre marché et de vos dispositifs existants pour identifier les priorités d’arbitrage et les opportunités business."
     },
     {
       icon: <Lightbulb className="w-8 h-8" />,
       title: "Stratégie Digitale",
-      subtitle: "Définissez votre feuille de route",
-      description: "Élaboration d'une stratégie digitale sur-mesure alignée avec vos objectifs business. Vision claire, objectifs SMART et plan d'action opérationnel."
+      subtitle: "Cadrez votre feuille de route",
+      description: "Formalisation d’une stratégie digitale alignée à vos objectifs business, vos contraintes internes et vos horizons de déploiement."
     },
     {
       icon: <Users className="w-8 h-8" />,
       title: "Accompagnement",
-      subtitle: "Concrétisez votre vision",
-      description: "Support continu dans la mise en œuvre de votre stratégie. Coaching des équipes, optimisation des processus et pilotage de la transformation digitale."
+      subtitle: "Déployer avec méthode",
+      description: "Accompagnement des équipes, cadrage des chantiers prioritaires et pilotage de la transformation avec une gouvernance claire."
     },
     {
       icon: <TrendingUp className="w-8 h-8" />,
       title: "Formation Équipes",
-      subtitle: "Montez en compétences",
-      description: "Programmes de formation sur-mesure pour vos équipes : marketing digital, outils digitaux, méthodologies agiles et best practices du secteur."
+      subtitle: "Renforcer les équipes",
+      description: "Sessions ciblées pour aligner vos équipes marketing et communication sur les outils, indicateurs et méthodes utiles à l’exécution."
     }
   ];
 
   const stats = [
-    { number: "100+", label: "Entreprises accompagnées" },
-    { number: "25M DH", label: "Croissance générée" },
-    { number: "4.9/5", label: "Satisfaction clients" },
-    { number: "85%", label: "Objectifs atteints" }
+    { number: "50+", label: "Marques accompagnées" },
+    { number: "200+", label: "Projets déployés" },
+    { number: "15+", label: "Secteurs couverts" },
+    { number: "8 ans", label: "Expérience terrain" }
   ];
 
   const advantages = [
     {
       icon: <Award className="w-6 h-6" />,
-      title: "Expertise reconnue",
-      description: "Des consultants seniors avec plus de 10 ans d'expérience"
+      title: "Lecture stratégique senior",
+      description: "Une capacité à cadrer enjeux business, gouvernance marketing et trajectoire digitale dans des environnements complexes."
     },
     {
       icon: <Briefcase className="w-6 h-6" />,
       title: "Approche pragmatique",
-      description: "Des recommandations actionnables et mesurables"
+      description: "Des recommandations directement exploitables, reliées à des priorités opérationnelles et à des indicateurs clairs."
     },
     {
       icon: <Users className="w-6 h-6" />,
-      title: "Accompagnement personnalisé",
-      description: "Un consultant dédié tout au long du projet"
+      title: "Cadre de pilotage clair",
+      description: "Un interlocuteur senior pour orchestrer ateliers, arbitrages et déploiement avec vos équipes."
     },
     {
       icon: <CheckCircle className="w-6 h-6" />,
-      title: "Résultats garantis",
-      description: "Engagement sur l'atteinte de vos objectifs"
+      title: "Méthode orientée résultats",
+      description: "Des plans d’action priorisés pour sécuriser exécution, reporting et progression mesurable."
     }
   ];
 
@@ -89,28 +89,28 @@ const ConseilStrategique = () => {
     {
       number: "1",
       title: "Diagnostic Stratégique",
-      description: "Audit complet de votre organisation, analyse SWOT, étude de marché et identification des opportunités de croissance.",
+      description: "Audit de l’organisation, étude de marché et identification des leviers prioritaires pour structurer vos décisions marketing et digitales.",
       duration: "2-3 semaines",
       icon: <FileText className="w-8 h-8" />
     },
     {
       number: "2",
       title: "Élaboration Stratégie",
-      description: "Co-construction de votre stratégie digitale avec vision, objectifs, KPIs et feuille de route détaillée sur 12-24 mois.",
+      description: "Construction d’une feuille de route avec objectifs, KPIs, gouvernance et séquencement des chantiers sur 12 à 24 mois.",
       duration: "3-4 semaines",
       icon: <Target className="w-8 h-8" />
     },
     {
       number: "3",
       title: "Plan d'Action",
-      description: "Définition des quick wins, priorisation des initiatives et création du plan d'exécution avec ressources et budgets.",
+      description: "Priorisation des initiatives, allocation des ressources et cadrage du plan d’exécution avec budgets et responsabilités.",
       duration: "2 semaines",
       icon: <Lightbulb className="w-8 h-8" />
     },
     {
       number: "4",
       title: "Accompagnement",
-      description: "Suivi de la mise en œuvre, coaching des équipes, ajustements et optimisations continues pour garantir le succès.",
+      description: "Suivi de mise en œuvre, accompagnement des équipes et ajustements continus pour garder le cap sur les objectifs.",
       duration: "6-12 mois",
       icon: <TrendingUp className="w-8 h-8" />
     }
@@ -118,7 +118,7 @@ const ConseilStrategique = () => {
 
   const handleContact = () => {
     const phoneNumber = "212699024526";
-    const message = "Bonjour, je souhaite bénéficier d'un conseil stratégique avec Link Agency.";
+    const message = "Bonjour, je souhaite échanger sur un accompagnement en conseil stratégique avec Link Agency.";
     const encodedMessage = encodeURIComponent(message);
     window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
   };
@@ -127,8 +127,8 @@ const ConseilStrategique = () => {
     <div className="min-h-screen bg-white pt-16 sm:pt-20">
       <SEOHead
         title="Conseil Stratégique Digital - Audit & Transformation | Link Agency Maroc"
-        description="Cabinet conseil stratégique au Maroc : audit entreprise, stratégie digitale, transformation digitale et formation équipes pour accélérer votre croissance."
-        keywords="conseil stratégique maroc, consulting digital, stratégie digitale, transformation digitale, audit entreprise, cabinet conseil casablanca"
+        description="Conseil stratégique digital au Maroc pour structurer gouvernance, priorités marketing et feuille de route de marques établies."
+        keywords="conseil stratégique maroc, agence digitale Maroc, consulting digital casablanca, transformation digitale maroc, marketing digital maroc"
         url="https://linkagency.ma/conseil-strategique"
         type="service"
         structuredData={conseilSchema}
@@ -150,16 +150,16 @@ const ConseilStrategique = () => {
                 Conseil Stratégique
               </h1>
               <h2 className="text-2xl font-light mb-8 text-gray-800">
-                Accélérez votre transformation digitale avec un accompagnement expert
+                Cadrez vos priorités marketing et digitales avec une méthode claire.
               </h2>
               <p className="text-lg text-gray-700 leading-relaxed mb-8 font-light">
-                Nous vous aidons à définir et mettre en œuvre une stratégie digitale ambitieuse et réaliste pour atteindre vos objectifs de croissance.
+                Nous accompagnons les directions marketing et communication dans la structuration de leurs priorités, de leur gouvernance et de leur feuille de route digitale.
               </p>
               <Button 
                 onClick={handleContact}
                 className="bg-black text-white hover:bg-gray-800 px-8 py-6 text-lg transform hover:scale-105 transition-all duration-300"
               >
-                Parler à un consultant
+                Discuter de votre feuille de route
               </Button>
             </div>
             
@@ -198,7 +198,7 @@ const ConseilStrategique = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-light mb-6 text-black">Nos services de Conseil</h2>
             <p className="text-xl text-gray-600 font-light max-w-3xl mx-auto">
-              Un accompagnement complet pour réussir votre transformation
+              Un accompagnement structuré pour clarifier les décisions, les responsabilités et les indicateurs de pilotage.
             </p>
           </div>
           
@@ -233,16 +233,16 @@ const ConseilStrategique = () => {
       <WorkflowTimeline 
         steps={workflowSteps}
         title="Notre méthodologie de conseil"
-        subtitle="4 phases pour transformer votre stratégie en résultats"
+        subtitle="4 phases pour cadrer vos enjeux, prioriser les chantiers et piloter l’exécution"
       />
 
       {/* Why Choose Us Section */}
       <section className="py-20 px-8 lg:px-16 bg-gradient-to-br from-gray-50 to-orange-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-light mb-6 text-black">Pourquoi nous choisir ?</h2>
+            <h2 className="text-4xl font-light mb-6 text-black">Pourquoi Link Agency ?</h2>
             <p className="text-xl text-gray-600 font-light">
-              Notre expertise au service de votre réussite
+              Une approche de terrain pour des organisations qui ont besoin de clarté, pas de discours générique.
             </p>
           </div>
           
@@ -266,16 +266,16 @@ const ConseilStrategique = () => {
       <section className="py-20 px-8 lg:px-16 bg-black text-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl lg:text-5xl font-light mb-8">
-            Prêt à accélérer votre croissance ?
+            Parlons de vos priorités stratégiques.
           </h2>
           <p className="text-xl text-gray-300 mb-10 font-light leading-relaxed">
-            Discutons de vos défis et construisons ensemble la stratégie qui fera décoller votre entreprise.
+            Un premier échange pour cartographier vos enjeux, identifier les leviers prioritaires et cadrer une trajectoire réaliste.
           </p>
           <Button 
             onClick={handleContact}
             className="bg-orange-600 text-white hover:bg-orange-700 px-12 py-6 text-lg transform hover:scale-105 transition-all duration-300"
           >
-            Réserver un audit gratuit
+            Planifier un premier échange
           </Button>
         </div>
       </section>

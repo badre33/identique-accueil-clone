@@ -18,7 +18,7 @@ const DeveloppementWeb = () => {
       generateServiceSchema(
         "Développement Web & Applications",
         "Création de sites web performants et applications sur-mesure avec les dernières technologies",
-        "À partir de 5000 MAD"
+        "Sur devis"
       ),
       generateWebPageSchema(
         "Développement Web - Sites & Applications sur-mesure | Link Agency",
@@ -42,19 +42,19 @@ const DeveloppementWeb = () => {
     {
       icon: <Monitor className="w-8 h-8" />,
       title: "Applications Web",
-      description: "Applications web complexes et solutions métier personnalisées pour votre entreprise.",
+      description: "Applications web et outils métier conçus pour structurer des opérations déjà en croissance.",
       details: "SaaS, plateformes collaboratives, systèmes de gestion, interfaces d'administration avec architecture scalable et sécurisée."
     },
     {
       icon: <Smartphone className="w-8 h-8" />,
       title: "E-commerce",
-      description: "Boutiques en ligne performantes avec systèmes de paiement et gestion intégrés.",
+      description: "Dispositifs e-commerce robustes avec intégrations métiers et suivi de performance.",
       details: "Solutions e-commerce complètes : catalogues produits, paniers, paiements sécurisés, gestion des stocks et analytics avancés."
     },
     {
       icon: <Database className="w-8 h-8" />,
       title: "Backend & API",
-      description: "Architecture backend robuste et APIs sécurisées pour vos applications.",
+      description: "Architectures backend et APIs sécurisées pour connecter vos outils, flux et plateformes.",
       details: "Développement d'APIs REST/GraphQL, bases de données optimisées, authentification et sécurité avancée."
     }
   ];
@@ -70,22 +70,22 @@ const DeveloppementWeb = () => {
     {
       icon: <Code className="w-6 h-6" />,
       title: "Technologies Modernes",
-      description: "React, Vue.js, Node.js, PHP, Python - Nous utilisons les meilleures technologies."
+      description: "Des choix techniques alignés à vos besoins métiers, à la sécurité et à la maintenabilité de vos outils."
     },
     {
       icon: <Shield className="w-6 h-6" />,
       title: "Sécurité Avancée",
-      description: "Protection HTTPS, authentification sécurisée et respect des standards de sécurité."
+      description: "Authentification, protection des données et architecture pensée pour des environnements professionnels exigeants."
     },
     {
       icon: <Zap className="w-6 h-6" />,
       title: "Performance Optimale",
-      description: "Sites ultra-rapides avec optimisation des images, cache et CDN."
+      description: "Performance front-end, stabilité technique et temps de chargement maîtrisés pour vos parcours clés."
     },
     {
       icon: <TrendingUp className="w-6 h-6" />,
       title: "SEO Optimisé",
-      description: "Structure technique SEO-friendly pour un meilleur référencement naturel."
+      description: "Bases techniques propres pour soutenir visibilité organique, qualité d’indexation et expérience utilisateur."
     }
   ];
 
@@ -93,35 +93,35 @@ const DeveloppementWeb = () => {
     {
       number: "01",
       title: "Analyse & Conception",
-      description: "Étude de vos besoins, architecture technique et maquettes fonctionnelles",
+      description: "Cadrage des besoins, architecture technique et priorisation des parcours clés",
       duration: "5-10 jours",
       icon: <Code className="w-6 h-6" />
     },
     {
       number: "02",
       title: "Développement",
-      description: "Codage frontend et backend avec tests continus",
+      description: "Développement front-end et back-end avec validations régulières",
       duration: "15-30 jours",
       icon: <Monitor className="w-6 h-6" />
     },
     {
       number: "03",
       title: "Tests & Optimisation",
-      description: "Tests complets, optimisation des performances et corrections",
+      description: "Recette, optimisation des performances et sécurisation des livrables",
       duration: "3-7 jours",
       icon: <CheckCircle className="w-6 h-6" />
     },
     {
       number: "04",
       title: "Mise en ligne & Formation",
-      description: "Déploiement, formation équipe et support technique",
+      description: "Mise en ligne, transmission aux équipes et support de prise en main",
       duration: "2-3 jours",
       icon: <Zap className="w-6 h-6" />
     }
   ];
 
   const handleContact = () => {
-    const message = "Bonjour, je souhaite discuter d'un projet de développement web avec Link Agency.";
+    const message = "Bonjour, je souhaite échanger sur un besoin de développement web avec Link Agency.";
     window.open(`https://wa.me/212699024526?text=${encodeURIComponent(message)}`, '_blank');
   };
 
@@ -129,7 +129,7 @@ const DeveloppementWeb = () => {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 pt-16 sm:pt-20">
       <SEOHead
         title="Développement Web - Sites & Applications sur-mesure | Link Agency Maroc"
-        description="Création de sites web performants, applications web professionnelles et solutions e-commerce au Maroc. Technologies modernes : React, Vue.js, Node.js."
+        description="Développement web au Maroc : sites performants, applications métier, e-commerce et architectures techniques pour marques établies."
         keywords="développement web maroc, création site web, application web, e-commerce, react, vue.js, développeur web casablanca, agence web"
         url="https://linkagency.ma/developpement-web"
         type="service"
@@ -161,8 +161,8 @@ const DeveloppementWeb = () => {
             </h1>
             
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Nous créons des sites web performants et des applications modernes avec les dernières technologies. 
-              Solutions personnalisées pour propulser votre présence digitale.
+              Nous concevons des sites, plateformes et outils web qui soutiennent vos opérations marketing, commerciales et de marque. 
+              Des dispositifs techniques pensés pour la performance, la sécurité et la maintenabilité.
             </p>
           </div>
 
@@ -189,7 +189,7 @@ const DeveloppementWeb = () => {
               Nos Services de Développement
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Solutions complètes pour tous vos besoins de développement web
+              Des environnements techniques pensés pour des marques qui ont besoin de fiabilité, de clarté et d’évolutivité.
             </p>
           </div>
 
@@ -215,7 +215,7 @@ const DeveloppementWeb = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Pourquoi Choisir Link Agency ?
+              Pourquoi Link Agency ?
             </h2>
           </div>
 
@@ -241,7 +241,7 @@ const DeveloppementWeb = () => {
               Notre Processus de Développement
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Une méthodologie éprouvée pour garantir la réussite de votre projet
+              Une méthode claire pour cadrer, produire, tester et déployer sans perdre en qualité.
             </p>
           </div>
           
@@ -253,17 +253,17 @@ const DeveloppementWeb = () => {
       <section className="py-20 px-8 lg:px-16 bg-gradient-to-br from-blue-600 to-indigo-700 text-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Prêt à Développer Votre Projet Web ?
+            Parlons de votre dispositif web.
           </h2>
           <p className="text-xl mb-8 opacity-90">
-            Discutons de vos besoins et créons ensemble une solution sur-mesure
+            Cadrons vos besoins, vos parcours prioritaires et les contraintes techniques avant de lancer la production.
           </p>
           <Button 
             onClick={handleContact}
             size="lg"
             className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold rounded-xl"
           >
-            Démarrer votre projet
+            Échanger avec l'équipe
           </Button>
         </div>
       </section>
