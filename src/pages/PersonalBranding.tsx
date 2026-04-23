@@ -13,12 +13,12 @@ const PersonalBranding = () => {
     "@graph": [
       generateServiceSchema(
         "Personal Branding & Développement de Marque Personnelle",
-        "Construisez une marque personnelle puissante avec stratégie, communication digitale et développement d'audience au Maroc",
-        "À partir de 5000 MAD"
+        "Accompagnement en personal branding pour dirigeants, experts et porte-parole au Maroc",
+        "Sur devis"
       ),
       generateWebPageSchema(
-        "Personal Branding - Marque Personnelle & Positionnement Expert | Link Agency",
-        "Développez votre marque personnelle avec notre accompagnement complet : identité, positionnement expert, communication digitale et croissance d'audience.",
+        "Personal Branding au Maroc pour Dirigeants & Experts | Link Agency",
+        "Personal branding au Maroc pour dirigeants et experts : positionnement, ligne éditoriale et prise de parole digitale cohérente.",
         "https://linkagency.ma/personal-branding"
       ),
       generateBreadcrumbSchema([
@@ -126,9 +126,9 @@ const PersonalBranding = () => {
   return (
     <div className="min-h-screen bg-white pt-16 sm:pt-20">
       <SEOHead
-        title="Personal Branding au Maroc - Marque Personnelle & Positionnement | Link Agency"
-        description="Développez votre marque personnelle avec notre accompagnement complet : identité, positionnement expert, communication digitale et croissance d'audience."
-        keywords="personal branding maroc, marque personnelle, développement personnel, linkedin, positionnement expert, influence digitale"
+        title="Personal Branding au Maroc pour Dirigeants & Experts | Link Agency"
+        description="Personal branding au Maroc pour dirigeants et experts : positionnement, ligne éditoriale, contenus et pilotage de la présence digitale."
+        keywords="personal branding maroc, dirigeant linkedin maroc, positionnement expert, marque personnelle casablanca, communication dirigeant"
         url="https://linkagency.ma/personal-branding"
         type="service"
         structuredData={personalBrandingSchema}
@@ -150,16 +150,16 @@ const PersonalBranding = () => {
                 Personal Branding
               </h1>
               <h2 className="text-2xl font-light mb-8 text-gray-800">
-                Construisez une marque personnelle puissante, visible et crédible.
+                Structurer une parole crédible pour dirigeants, experts et figures publiques.
               </h2>
               <p className="text-lg text-gray-700 leading-relaxed mb-8 font-light">
-                Notre approche allie stratégie, storytelling et performance digitale pour faire de vous une figure d'autorité dans votre domaine.
+                Notre approche relie positionnement, ligne éditoriale et production de contenus pour construire une présence claire, cohérente et crédible.
               </p>
               <Button 
                 onClick={handleContact}
                 className="bg-black text-white hover:bg-gray-800 px-8 py-6 text-lg transform hover:scale-105 transition-all duration-300"
               >
-                Développer votre marque
+                Discuter de votre prise de parole
               </Button>
             </div>
             
