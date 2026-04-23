@@ -17,14 +17,14 @@ const Analytics = () => {
     {
       icon: <Target className="w-6 h-6 sm:w-8 sm:h-8" />,
       title: "Growth Hacking",
-      description: "Stratégies de croissance rapide basées sur la data.",
-      details: "Expérimentations, tests A/B, optimisation du funnel de conversion et techniques de croissance innovantes."
+      description: "Pilotage data-driven pour accélérer des dispositifs digitaux déjà en production.",
+      details: "Expérimentations, tests A/B, optimisation du funnel de conversion et arbitrages continus pour améliorer ROI, ROAS et CPL."
     },
     {
       icon: <Eye className="w-6 h-6 sm:w-8 sm:h-8" />,
       title: "Conversion Rate Optimization",
-      description: "Amélioration continue de vos taux de conversion.",
-      details: "Analyse UX, tests multivariés, optimisation des parcours utilisateur et maximisation de votre ROI."
+      description: "Optimisation continue des parcours et des taux de conversion.",
+      details: "Analyse UX, tests multivariés, optimisation des parcours utilisateurs et amélioration mesurable de la rentabilité média."
     },
     {
       icon: <PieChart className="w-6 h-6 sm:w-8 sm:h-8" />,
@@ -35,32 +35,32 @@ const Analytics = () => {
   ];
 
   const stats = [
-    { number: "+150%", label: "Croissance moyenne", icon: <TrendingUp className="w-5 h-5 sm:w-6 sm:h-6" /> },
-    { number: "95%", label: "Amélioration ROI", icon: <Target className="w-5 h-5 sm:w-6 sm:h-6" /> },
-    { number: "50+", label: "Projets optimisés", icon: <BarChart className="w-5 h-5 sm:w-6 sm:h-6" /> },
-    { number: "24/7", label: "Monitoring", icon: <Activity className="w-5 h-5 sm:w-6 sm:h-6" /> }
+    { number: "200+", label: "Projets pilotés", icon: <TrendingUp className="w-5 h-5 sm:w-6 sm:h-6" /> },
+    { number: "50+", label: "Marques accompagnées", icon: <Target className="w-5 h-5 sm:w-6 sm:h-6" /> },
+    { number: "15+", label: "Secteurs couverts", icon: <BarChart className="w-5 h-5 sm:w-6 sm:h-6" /> },
+    { number: "8 ans", label: "Expérience terrain", icon: <Activity className="w-5 h-5 sm:w-6 sm:h-6" /> }
   ];
 
   const advantages = [
     {
       icon: <TrendingUp className="w-5 h-5 sm:w-6 sm:h-6" />,
       title: "Croissance mesurable",
-      description: "Stratégies basées sur la data pour une croissance sustainable et mesurable."
+      description: "KPIs métier, tableaux de bord et arbitrages réguliers pour relier la donnée aux résultats business."
     },
     {
       icon: <Zap className="w-5 h-5 sm:w-6 sm:h-6" />,
       title: "Optimisation continue",
-      description: "Tests et améliorations permanents pour maximiser vos performances."
+      description: "Optimisation continue des audiences, créatifs et parcours pour améliorer la rentabilité média."
     },
     {
       icon: <Users className="w-5 h-5 sm:w-6 sm:h-6" />,
-      title: "Expertise spécialisée",
-      description: "Équipe d'experts en analytics et growth marketing à votre service."
+      title: "Pilotage senior",
+      description: "Un pilotage expérimenté pour cadrer reporting, tracking et prise de décision marketing."
     },
     {
       icon: <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6" />,
-      title: "ROI garanti",
-      description: "Approche axée résultats avec garantie d'amélioration de votre retour sur investissement."
+      title: "Cadre de mesure clair",
+      description: "Des indicateurs définis en amont pour suivre précisément contribution business, ROI et conversions."
     }
   ];
 
@@ -97,7 +97,7 @@ const Analytics = () => {
 
   const handleContact = () => {
     const phoneNumber = "212699024526";
-    const message = "Bonjour, je souhaite optimiser ma croissance avec Link Agency.";
+    const message = "Bonjour, je souhaite échanger sur un dispositif analytics et performance avec Link Agency.";
     const encodedMessage = encodeURIComponent(message);
     window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
   };
@@ -105,9 +105,9 @@ const Analytics = () => {
   return (
     <div className="min-h-screen bg-white pt-16 sm:pt-20">
       <SEOHead
-        title="Analytics & Growth Hacking - Data & Performance | Link Agency Maroc"
-        description="Services analytics, growth hacking et optimisation de conversion au Maroc. Tableaux de bord, KPIs, A/B testing et stratégies de croissance pour votre entreprise à Casablanca."
-        keywords="analytics maroc, growth hacking casablanca, data marketing maroc, optimisation conversion, KPI digital maroc"
+        title="Analytics & Performance Marketing Maroc | Link Agency"
+        description="Agence analytics et performance marketing au Maroc : tableaux de bord, KPIs métier, A/B testing, optimisation des conversions et pilotage ROI pour marques établies à Casablanca."
+        keywords="analytics maroc, performance marketing maroc, campagnes Meta Ads Maroc, optimisation conversion, KPI digital casablanca"
         url="https://linkagency.ma/analytics"
       />
       <Header />
@@ -131,16 +131,16 @@ const Analytics = () => {
                 <span className="gradient-primary bg-clip-text text-transparent">& Analytics</span>
               </h1>
               <p className="text-lg sm:text-xl text-gray-700 leading-relaxed mb-4 sm:mb-6 font-light">
-                Accélérez votre croissance grâce à l'analytics avancé et aux stratégies de growth hacking basées sur la data.
+                Nous structurons les indicateurs, le reporting et les expérimentations qui permettent aux directions marketing de piloter leur performance digitale.
               </p>
               <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-6 sm:mb-8 font-light">
-                De l'analyse de performance à l'optimisation continue, nous transformons vos données en leviers de croissance.
+                De la lecture des données à l'optimisation des campagnes, nous relions vos investissements media à des résultats business mesurables.
               </p>
               <Button 
                 onClick={handleContact}
                 className="btn-primary text-base sm:text-lg"
               >
-                Booster votre croissance
+                Discuter de votre pilotage data
               </Button>
             </div>
             
@@ -187,7 +187,7 @@ const Analytics = () => {
           <div className="text-center mb-12 sm:mb-16 space-content">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light mb-4 sm:mb-6 text-black">Nos services analytics & croissance</h2>
             <p className="text-lg sm:text-xl text-gray-600 font-light max-w-3xl mx-auto">
-              Une approche data-driven pour optimiser chaque aspect de votre performance digitale.
+              Un dispositif complet pour mesurer, arbitrer et optimiser la performance de marques déjà installées.
             </p>
           </div>
           
@@ -215,9 +215,9 @@ const Analytics = () => {
       <section className="section-padding gradient-subtle">
         <div className="container-max">
           <div className="text-center mb-12 sm:mb-16 space-content">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light mb-4 sm:mb-6 text-black">Pourquoi nous choisir ?</h2>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light mb-4 sm:mb-6 text-black">Pourquoi Link Agency ?</h2>
             <p className="text-lg sm:text-xl text-gray-600 font-light max-w-3xl mx-auto">
-              Notre expertise data au service de votre croissance.
+              Une lecture business de la donnée, pensée pour des équipes marketing exigeantes.
             </p>
           </div>
           
@@ -244,22 +244,22 @@ const Analytics = () => {
       <WorkflowTimeline 
         steps={workflowSteps}
         title="Notre processus analytics & croissance"
-        subtitle="Une méthodologie éprouvée pour transformer vos données en croissance mesurable"
+        subtitle="Une méthodologie claire pour structurer vos KPIs, vos tests et vos arbitrages de performance"
       />
 
       <section className="section-padding gradient-primary">
         <div className="max-w-4xl mx-auto text-center space-content">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light mb-4 sm:mb-6 text-white">
-            Prêt à accélérer votre croissance ?
+            Parlons de votre pilotage performance.
           </h2>
           <p className="text-lg sm:text-xl text-white/90 leading-relaxed mb-6 sm:mb-8 font-light">
-            Transformons vos données en leviers de croissance avec des stratégies basées sur l'analytics.
+            Cartographions vos données, vos objectifs et vos priorités média pour construire un cadre de performance exploitable.
           </p>
           <Button 
             onClick={handleContact}
             className="bg-white text-black hover:bg-gray-100 px-6 py-3 sm:px-8 sm:py-4 text-base sm:text-lg font-medium interactive-button"
           >
-            Démarrer votre croissance
+            Échanger avec l'équipe
           </Button>
         </div>
       </section>
