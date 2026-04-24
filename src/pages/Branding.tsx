@@ -17,8 +17,8 @@ const Branding = () => {
     "@graph": [
       generateServiceSchema(
         "Services Branding & Identité Visuelle",
-        "Création d'identité visuelle complète et stratégie de marque : logo, charte graphique, positionnement et branding au Maroc",
-        "À partir de 5000 MAD"
+        "Conception d'identités de marque cohérentes pour marques établies au Maroc : logo, charte graphique, positionnement et plateforme de marque.",
+        "Sur devis"
       ),
       generateWebPageSchema(
         "Branding & Identité Visuelle - Création Logo & Charte Graphique | Link Agency",
@@ -35,55 +35,55 @@ const Branding = () => {
     {
       icon: <Palette className="w-8 h-8" />,
       title: "Identité visuelle",
-      subtitle: "Créez une signature visuelle unique et reconnaissable.",
-      description: "Nous concevons des logos, chartes graphiques, palettes de couleurs, typographies et éléments iconographiques qui traduisent vos valeurs, votre ambition et votre style. Une identité pensée pour durer."
+      subtitle: "Système d'identité cohérent et déployable.",
+      description: "Logo, charte graphique, palette, typographies et iconographie : un système d'identité complet, conçu pour assurer la cohérence sur tous les points de contact et pour s'industrialiser à l'échelle d'une organisation."
     },
     {
       icon: <Target className="w-8 h-8" />,
       title: "Positionnement",
-      subtitle: "Affirmez votre différence sur le marché.",
-      description: "Nous vous aidons à clarifier votre promesse de marque, à structurer votre proposition de valeur et à identifier les leviers différenciateurs qui créeront l'adhésion auprès de vos cibles."
+      subtitle: "Clarification stratégique de la promesse de marque.",
+      description: "Diagnostic concurrentiel, structuration de la proposition de valeur et identification des territoires de différenciation. Un cadre de positionnement opérationnel pour aligner direction marketing, communication et commerciale."
     },
     {
       icon: <Compass className="w-8 h-8" />,
       title: "Stratégie de marque",
-      subtitle: "Bâtissez une fondation stratégique solide.",
-      description: "Nous structurons votre territoire de marque à travers une vision claire, un storytelling cohérent et une stratégie de développement qui aligne identité, ambition et marché."
+      subtitle: "Plateforme de marque structurée.",
+      description: "Vision, mission, valeurs, archétype, ton, narratif : une plateforme de marque documentée qui sert de référentiel pour toutes les prises de parole et tous les déploiements opérationnels."
     },
     {
       icon: <LayoutDashboard className="w-8 h-8" />,
       title: "Brand Guidelines",
-      subtitle: "Assurez la cohérence de votre image dans le temps.",
-      description: "Nous créons des guides complets et sur mesure (guidelines de marque) pour garantir une application fidèle de votre identité visuelle et éditoriale, en interne comme en externe."
+      subtitle: "Référentiel d'application complet.",
+      description: "Guidelines visuelles et éditoriales détaillées pour garantir l'application fidèle de l'identité par les équipes internes, les agences partenaires et les prestataires externes. Un livrable de gouvernance de marque."
     }
   ];
 
   const workflowSteps = [
     {
       number: "1",
-      title: "Recherche & Immersion",
-      description: "Nous étudions votre marché, vos concurrents et vos utilisateurs pour identifier les véritables leviers d'impact. Cette phase d'immersion garantit la pertinence stratégique de nos recommandations.",
+      title: "Audit & Diagnostic",
+      description: "Audit de la marque existante, étude concurrentielle approfondie et analyse des perceptions clients. Cartographie des écarts entre identité actuelle et ambition stratégique.",
       duration: "1-2 semaines",
       icon: <Search className="w-8 h-8" />
     },
     {
       number: "2",
       title: "Stratégie de Marque",
-      description: "Nous construisons une architecture de marque claire, forte et alignée sur vos ambitions. Positionnement, vision, ton, ADN : chaque choix est guidé par une cohérence stratégique globale.",
+      description: "Construction de la plateforme de marque : positionnement, architecture, ton, narratif. Validation avec les parties prenantes internes et alignement de la direction.",
       duration: "2-3 semaines",
       icon: <Target className="w-8 h-8" />
     },
     {
       number: "3",
-      title: "Création & Design",
-      description: "Nous traduisons votre stratégie en un univers visuel et narratif unique : logo, charte graphique, contenus, expérience. Chaque détail est pensé pour capter, engager et inspirer.",
+      title: "Système d'identité",
+      description: "Conception du système visuel et éditorial : logo, charte, déclinaisons, gabarits. Production des livrables d'application sur les supports prioritaires.",
       duration: "3-4 semaines",
       icon: <Lightbulb className="w-8 h-8" />
     },
     {
       number: "4",
-      title: "Déploiement & Activation",
-      description: "Nous accompagnons le lancement ou la refonte avec une mise en œuvre maîtrisée : kit de communication, stratégie digitale, contenu, événements. Votre marque prend vie, avec impact et élégance.",
+      title: "Déploiement & Gouvernance",
+      description: "Pilotage du déploiement opérationnel : guidelines, formation des équipes, accompagnement des agences partenaires et suivi de la cohérence dans le temps.",
       duration: "2-4 semaines",
       icon: <Rocket className="w-8 h-8" />
     }
@@ -91,7 +91,7 @@ const Branding = () => {
 
   const handleContact = () => {
     const phoneNumber = "212699024526";
-    const message = "Bonjour, je souhaite développer ma marque avec Link Agency.";
+    const message = "Bonjour, je souhaite échanger sur un projet de branding ou de refonte d'identité avec Link Agency.";
     const encodedMessage = encodeURIComponent(message);
     window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
   };
@@ -99,9 +99,9 @@ const Branding = () => {
   return (
     <div className="min-h-screen bg-white pt-16 sm:pt-20">
       <SEOHead
-        title="Branding & Identité Visuelle au Maroc - Création Logo & Charte | Link Agency"
-        description="Services complets de branding au Maroc : création d'identité visuelle, logo, charte graphique, positionnement et stratégie de marque."
-        keywords="branding maroc, identité visuelle, création logo, charte graphique, positionnement marque, stratégie de marque casablanca"
+        title="Branding & Identité de Marque au Maroc — Refonte & Plateforme | Link Agency"
+        description="Agence branding pour marques établies au Maroc : refonte d'identité, plateforme de marque, charte graphique et gouvernance. Casablanca & Marrakech."
+        keywords="agence branding maroc, refonte identité visuelle, plateforme de marque, charte graphique entreprise, agence branding casablanca, brand strategy maroc"
         url="https://linkagency.ma/branding"
         type="service"
         structuredData={brandingSchema}
@@ -119,16 +119,16 @@ const Branding = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <h1 className="text-5xl lg:text-6xl font-light mb-8 text-black leading-tight">
-                Branding
+                Branding & Identité
               </h1>
               <p className="text-xl text-gray-700 leading-relaxed mb-8 font-light">
-                Link Agency élabore des identités de marque puissantes, alignées sur votre vision et votre audience. Chaque service est pensé pour renforcer votre positionnement stratégique, affirmer votre image et bâtir une marque durable et mémorable.
+                Link Agency conçoit des plateformes de marque pour des organisations établies. Refontes d'identité, systèmes visuels, guidelines de gouvernance : nos livrables s'inscrivent dans la durée et soutiennent l'industrialisation de votre marque sur tous les points de contact.
               </p>
               <Button 
                 onClick={handleContact}
                 className="bg-black text-white hover:bg-gray-800 px-8 py-6 text-lg"
               >
-                Parlons de votre vision
+                Planifier un échange
               </Button>
             </div>
             
@@ -146,7 +146,7 @@ const Branding = () => {
       {/* Services Details */}
       <section className="py-20 px-8 lg:px-16">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-light mb-16 text-black text-center">Nos services branding</h2>
+          <h2 className="text-4xl font-light mb-16 text-black text-center">Nos expertises en branding</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {brandingServices.map((service, index) => (
@@ -166,8 +166,8 @@ const Branding = () => {
       {/* Workflow Timeline */}
       <WorkflowTimeline 
         steps={workflowSteps}
-        title="Notre processus de création de marque"
-        subtitle="Une méthode rigoureuse et créative pour transformer chaque marque en référence inspirante"
+        title="Notre méthodologie branding"
+        subtitle="Un processus structuré pour construire et déployer une plateforme de marque cohérente"
       />
 
       {/* Section SEO locale */}
@@ -177,7 +177,7 @@ const Branding = () => {
             Agence de branding à Casablanca
           </h2>
           <p className="text-muted-foreground leading-relaxed text-lg">
-            Link Agency accompagne les entreprises marocaines dans la construction d'identités de marque durables et différenciantes. Basée à Casablanca et présente à Marrakech, notre approche repose sur une méthodologie structurée : diagnostic de marque, définition du positionnement, création de la plateforme de marque et déploiement du territoire d'expression. Nous intervenons aussi bien auprès de PME en quête de structuration que de grandes entreprises souhaitant repositionner leur image. Chaque projet de branding est traité comme un investissement stratégique, avec des objectifs mesurables et un accompagnement dans la durée. Notre connaissance approfondie du marché marocain — ses codes culturels, ses dynamiques sectorielles et ses attentes consommateurs — nous permet de créer des marques qui résonnent localement tout en portant une ambition internationale.
+            Link Agency accompagne les directions marketing et communication d'organisations établies dans la structuration et la refonte de leurs identités de marque. Basée à Casablanca et présente à Marrakech, notre approche repose sur une méthodologie rigoureuse : audit de marque, diagnostic concurrentiel, définition du positionnement, conception de la plateforme et déploiement gouverné. Nous intervenons sur des refontes d'identité d'entreprises installées, des architectures de marque multi-entités, et des projets de repositionnement post-fusion ou post-pivot stratégique. Chaque mandat est traité comme un investissement structurant, avec un livrable de gouvernance permettant à vos équipes internes et agences partenaires d'appliquer la marque dans la durée. Notre connaissance des codes sectoriels marocains — banque, assurance, retail, industrie — nous permet de produire des identités qui s'inscrivent dans le marché local tout en répondant aux exigences des grandes organisations.
           </p>
         </div>
       </section>
@@ -186,16 +186,16 @@ const Branding = () => {
       <section className="py-20 px-8 lg:px-16 bg-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-light mb-8 text-black">
-            Prêt à transformer votre marque ?
+            Prêt à structurer votre plateforme de marque ?
           </h2>
           <p className="text-xl text-gray-600 mb-12 font-light leading-relaxed">
-            Discutons de votre projet et créons ensemble une identité de marque qui marquera les esprits.
+            Cadrons ensemble votre projet de refonte ou de structuration. Premier échange sans engagement pour qualifier le périmètre et chiffrer un plan d'accompagnement.
           </p>
           <Button 
             onClick={handleContact}
             className="bg-black text-white hover:bg-gray-800 px-12 py-6 text-lg"
           >
-            Démarrer votre projet
+            Planifier un échange
           </Button>
         </div>
       </section>
