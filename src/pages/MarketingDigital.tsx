@@ -13,12 +13,12 @@ const MarketingDigital = () => {
     "@graph": [
       generateServiceSchema(
         "Marketing Digital & Stratégies Digitales",
-        "Stratégies marketing digital complètes : SEO, publicité en ligne, social media et analytics au Maroc",
-        "À partir de 4000 MAD"
+        "Pilotage de dispositifs marketing digital pour marques établies au Maroc : SEO, campagnes Meta/Google/TikTok, social media et analytics avancées.",
+        "Sur devis"
       ),
       generateWebPageSchema(
-        "Marketing Digital - SEO, Publicité & Social Media | Link Agency Maroc",
-        "Stratégies marketing digital sur-mesure pour booster votre visibilité : SEO, publicité en ligne, social media marketing et analytics au Maroc.",
+        "Marketing Digital — Pilotage SEO, Paid Media & Social pour marques établies | Link Agency Maroc",
+        "Pilotage marketing digital pour directions marketing au Maroc : SEO, Meta Ads, Google Ads, TikTok Ads, social media management et reporting ROI.",
         "https://linkagency.ma/marketing-digital"
       ),
       generateBreadcrumbSchema([
@@ -32,62 +32,62 @@ const MarketingDigital = () => {
     {
       icon: <Search className="w-8 h-8" />,
       title: "SEO & Référencement",
-      subtitle: "Propulsez votre visibilité organique",
-      description: "Optimisation SEO avancée pour améliorer votre positionnement dans les résultats de recherche. Audit technique, optimisation on-page et off-page, stratégie de contenu et netlinking."
+      subtitle: "Acquisition organique pilotée",
+      description: "Audit technique, optimisation on-page, stratégie de contenu pillar/satellite et netlinking maîtrisé. Reporting mensuel sur les positions, le trafic qualifié et la contribution business."
     },
     {
       icon: <Target className="w-8 h-8" />,
-      title: "Publicité en ligne",
-      subtitle: "Campagnes ciblées et performantes",
-      description: "Gestion de campagnes publicitaires sur Google Ads, Meta Ads, LinkedIn Ads. Ciblage précis, optimisation continue et maximisation du ROI."
+      title: "Campagnes Paid Media",
+      subtitle: "Meta · Google · TikTok · LinkedIn",
+      description: "Pilotage de campagnes performance et notoriété. Setup tracking, A/B testing créatif, optimisation continue du ROAS et du CPL, reporting détaillé par canal et par audience."
     },
     {
       icon: <Share2 className="w-8 h-8" />,
       title: "Social Media Marketing",
-      subtitle: "Engagez votre communauté",
-      description: "Stratégie social media complète : création de contenu, community management, publicité sociale et développement de votre présence sur tous les réseaux."
+      subtitle: "Stratégie éditoriale FR/AR/Darija",
+      description: "Stratégie éditoriale, calendrier de publication, community management quotidien et production de contenus natifs. Couverture des temps forts marque et institutionnels."
     },
     {
       icon: <BarChart className="w-8 h-8" />,
       title: "Analytics & Reporting",
-      subtitle: "Pilotez par la data",
-      description: "Mise en place de tracking avancé, analyse des performances, rapports détaillés et recommandations pour optimiser vos campagnes marketing."
+      subtitle: "Pilotage data-driven du dispositif",
+      description: "Mise en place de tracking avancé (GA4, GTM, conversions API), tableaux de bord consolidés, analyse de performance et recommandations d'optimisation."
     }
   ];
 
   const stats = [
-    { number: "300%", label: "ROI moyen" },
-    { number: "150+", label: "Campagnes réussies" },
-    { number: "2M+", label: "Impressions générées" },
-    { number: "98%", label: "Clients satisfaits" }
+    { number: "50+", label: "Marques accompagnées" },
+    { number: "200+", label: "Dispositifs pilotés" },
+    { number: "8 ans", label: "D'expérience" },
+    { number: "15+", label: "Secteurs couverts" }
   ];
 
   const workflowSteps = [
     {
       number: "1",
-      title: "Audit & Analyse",
-      description: "Analyse approfondie de votre présence digitale, votre marché et vos concurrents pour identifier les opportunités de croissance.",
+      title: "Audit & Diagnostic",
+      description: "Audit complet de la présence digitale existante, analyse concurrentielle et cartographie des leviers prioritaires d'acquisition et de conversion.",
       duration: "1-2 semaines",
       icon: <Search className="w-8 h-8" />
     },
     {
       number: "2",
-      title: "Stratégie Digitale",
-      description: "Définition d'une stratégie marketing complète avec objectifs SMART, KPIs et plan d'action détaillé sur tous les canaux.",
+      title: "Cadrage du dispositif",
+      description: "Définition des objectifs business, des KPIs (ROAS, CPL, CAC), des audiences cibles et de l'arbitrage budgétaire entre canaux.",
       duration: "2 semaines",
       icon: <Target className="w-8 h-8" />
     },
     {
       number: "3",
-      title: "Déploiement",
-      description: "Lancement des campagnes, mise en place du tracking et activation de tous les leviers marketing définis dans la stratégie.",
+      title: "Activation",
+      description: "Setup tracking complet, lancement des campagnes, mise en production des contenus et activation des leviers organiques et paid.",
       duration: "2-3 semaines",
       icon: <TrendingUp className="w-8 h-8" />
     },
     {
       number: "4",
-      title: "Optimisation Continue",
-      description: "Suivi des performances, A/B testing, optimisations et ajustements réguliers pour maximiser les résultats.",
+      title: "Pilotage continu",
+      description: "A/B testing systématique, optimisation hebdomadaire, reporting mensuel et arbitrages stratégiques avec votre direction marketing.",
       duration: "En continu",
       icon: <BarChart className="w-8 h-8" />
     }
@@ -95,7 +95,7 @@ const MarketingDigital = () => {
 
   const handleContact = () => {
     const phoneNumber = "212699024526";
-    const message = "Bonjour, je souhaite développer ma stratégie de marketing digital avec Link Agency.";
+    const message = "Bonjour, je souhaite échanger sur le pilotage de notre dispositif marketing digital avec Link Agency.";
     const encodedMessage = encodeURIComponent(message);
     window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
   };
@@ -103,9 +103,9 @@ const MarketingDigital = () => {
   return (
     <div className="min-h-screen bg-white pt-16 sm:pt-20">
       <SEOHead
-        title="Marketing Digital - SEO, Publicité & Social Media | Link Agency Maroc"
-        description="Stratégies marketing digital sur-mesure pour booster votre visibilité : SEO, publicité en ligne, social media marketing et analytics au Maroc."
-        keywords="marketing digital maroc, agence marketing digital, SEO maroc, publicité en ligne, social media marketing, google ads, meta ads"
+        title="Marketing Digital — Pilotage SEO, Paid Media & Social | Link Agency Maroc"
+        description="Pilotage marketing digital pour directions marketing de marques établies au Maroc : SEO, campagnes Meta/Google/TikTok, social media et reporting ROI."
+        keywords="agence marketing digital maroc, pilotage paid media casablanca, agence SEO maroc, campagnes meta ads maroc, agence social media casablanca, reporting ROI digital"
         url="https://linkagency.ma/marketing-digital"
         type="service"
         structuredData={marketingSchema}
@@ -127,16 +127,16 @@ const MarketingDigital = () => {
                 Marketing Digital
               </h1>
               <h2 className="text-2xl font-light mb-8 text-gray-800">
-                Stratégies digitales sur-mesure pour booster votre croissance
+                Pilotage intégré de votre dispositif d'acquisition
               </h2>
               <p className="text-lg text-gray-700 leading-relaxed mb-8 font-light">
-                Nous créons et déployons des stratégies marketing digitales performantes qui génèrent des résultats mesurables et un ROI optimal.
+                Nous concevons et pilotons les dispositifs marketing digital de marques établies. SEO, paid media, social et analytics : un pilotage intégré, mesurable et orienté ROI business.
               </p>
               <Button 
                 onClick={handleContact}
                 className="bg-black text-white hover:bg-gray-800 px-8 py-6 text-lg transform hover:scale-105 transition-all duration-300"
               >
-                Booster ma visibilité
+                Discuter de notre dispositif
               </Button>
             </div>
             
@@ -173,9 +173,9 @@ const MarketingDigital = () => {
       <section className="py-20 px-8 lg:px-16">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-light mb-6 text-black">Nos services en Marketing Digital</h2>
+            <h2 className="text-4xl lg:text-5xl font-light mb-6 text-black">Nos expertises Marketing Digital</h2>
             <p className="text-xl text-gray-600 font-light max-w-3xl mx-auto">
-              Des solutions complètes pour maximiser votre présence en ligne
+              Quatre leviers pilotés en intégration pour maximiser la performance business
             </p>
           </div>
           
@@ -209,8 +209,8 @@ const MarketingDigital = () => {
       {/* Workflow Timeline */}
       <WorkflowTimeline 
         steps={workflowSteps}
-        title="Notre processus Marketing Digital"
-        subtitle="4 étapes pour accélérer votre croissance digitale"
+        title="Notre méthodologie de pilotage"
+        subtitle="Un dispositif structuré, du diagnostic à l'optimisation continue"
       />
 
       {/* Section SEO locale */}
@@ -220,7 +220,7 @@ const MarketingDigital = () => {
             Agence marketing à Casablanca
           </h2>
           <p className="text-muted-foreground leading-relaxed text-lg">
-            Link Agency structure et déploie des stratégies marketing digital adaptées au marché marocain. Depuis Casablanca et Marrakech, nous accompagnons les entreprises qui souhaitent dépasser les actions tactiques ponctuelles pour construire une présence digitale cohérente et performante. Notre rôle en tant qu'agence marketing va au-delà de l'exécution : nous intervenons en amont sur le diagnostic, la définition des objectifs et la priorisation des canaux. SEO, publicité en ligne, social media, email marketing — chaque levier est sélectionné et calibré en fonction de votre secteur, de votre maturité digitale et de vos ambitions de croissance. Notre connaissance du consommateur marocain et des spécificités locales du paysage digital nous permet de concevoir des stratégies qui génèrent des résultats mesurables et un retour sur investissement démontrable.
+            Link Agency pilote les dispositifs marketing digital de marques établies au Maroc — banque, assurance, retail, e-commerce, industrie. Depuis Casablanca et Marrakech, nous accompagnons les directions marketing dans la structuration de leurs dispositifs d'acquisition et de conversion. Notre rôle dépasse l'exécution tactique : nous intervenons sur le cadrage stratégique, la priorisation budgétaire entre canaux et le pilotage rigoureux de la performance. SEO, paid media (Meta, Google, TikTok, LinkedIn), social media et analytics — chaque levier est calibré en fonction de votre maturité digitale, de vos objectifs business et de vos contraintes sectorielles, notamment dans les univers régulés. Notre approche s'appuie sur un reporting mensuel structuré et des arbitrages partagés avec vos équipes internes.
           </p>
         </div>
       </section>
@@ -229,16 +229,16 @@ const MarketingDigital = () => {
       <section className="py-20 px-8 lg:px-16 bg-black text-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl lg:text-5xl font-light mb-8">
-            Prêt à booster votre visibilité en ligne ?
+            Prêt à structurer votre dispositif digital ?
           </h2>
           <p className="text-xl text-gray-300 mb-10 font-light leading-relaxed">
-            Développons ensemble une stratégie marketing digital performante pour atteindre vos objectifs de croissance.
+            Premier échange pour cartographier votre présence actuelle, identifier les leviers prioritaires et chiffrer un plan de pilotage.
           </p>
           <Button 
             onClick={handleContact}
             className="bg-purple-600 text-white hover:bg-purple-700 px-12 py-6 text-lg transform hover:scale-105 transition-all duration-300"
           >
-            Démarrer maintenant
+            Planifier un échange
           </Button>
         </div>
       </section>

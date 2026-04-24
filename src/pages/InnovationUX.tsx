@@ -17,12 +17,12 @@ const InnovationUX = () => {
     "@graph": [
       generateServiceSchema(
         "Innovation & UX Design",
-        "Conception d'expériences utilisateur exceptionnelles : recherche UX, UI design, prototypage interactif et tests utilisateurs au Maroc",
-        "À partir de 3000 MAD"
+        "Conception d'expériences digitales pour marques établies au Maroc : recherche UX, UI design, prototypage et tests utilisateurs.",
+        "Sur devis"
       ),
       generateWebPageSchema(
-        "Innovation & UX Design - Expériences Utilisateur Exceptionnelles | Link Agency",
-        "Conception UX/UI, prototypage et tests utilisateurs pour créer des expériences digitales centrées sur vos clients au Maroc.",
+        "UX/UI Design pour marques établies au Maroc | Link Agency",
+        "Conception UX/UI, prototypage et tests utilisateurs pour les directions digitales de marques établies au Maroc.",
         "https://linkagency.ma/innovation-ux"
       ),
       generateBreadcrumbSchema([
@@ -60,10 +60,10 @@ const InnovationUX = () => {
   ];
 
   const stats = [
-    { number: "150+", label: "Interfaces conçues", icon: <Palette className="w-6 h-6" /> },
-    { number: "85%", label: "Amélioration UX", icon: <Target className="w-6 h-6" /> },
-    { number: "95%", label: "Satisfaction utilisateur", icon: <Star className="w-6 h-6" /> },
-    { number: "48h", label: "Premier prototype", icon: <Zap className="w-6 h-6" /> }
+    { number: "50+", label: "Marques accompagnées", icon: <Palette className="w-6 h-6" /> },
+    { number: "200+", label: "Projets livrés", icon: <Target className="w-6 h-6" /> },
+    { number: "8 ans", label: "D'expérience", icon: <Star className="w-6 h-6" /> },
+    { number: "15+", label: "Secteurs couverts", icon: <Zap className="w-6 h-6" /> }
   ];
 
   const advantages = [
@@ -121,16 +121,16 @@ const InnovationUX = () => {
   ];
 
   const handleContact = () => {
-    const message = "Bonjour, je souhaite discuter d'un projet UX/UI avec Link Agency.";
+    const message = "Bonjour, je souhaite échanger sur un projet UX/UI avec Link Agency.";
     window.open(`https://wa.me/212699024526?text=${encodeURIComponent(message)}`, '_blank');
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-yellow-50 via-white to-orange-50 pt-16 sm:pt-20">
       <SEOHead
-        title="Innovation & UX Design au Maroc - Expériences Digitales | Link Agency"
-        description="Conception UX/UI professionnelle au Maroc : recherche utilisateur, design d'interfaces, prototypage interactif et tests pour optimiser l'expérience client."
-        keywords="ux design maroc, ui design, expérience utilisateur, prototypage, tests utilisateurs, design thinking casablanca, ux ui designer"
+        title="UX/UI Design au Maroc — Conception pour marques établies | Link Agency"
+        description="UX/UI design pour directions digitales de marques établies au Maroc : recherche utilisateur, design d'interfaces, prototypage et tests."
+        keywords="agence UX maroc, UI design casablanca, expérience utilisateur entreprise, prototypage interfaces, design system maroc"
         url="https://linkagency.ma/innovation-ux"
         type="service"
         structuredData={uxSchema}
@@ -156,13 +156,12 @@ const InnovationUX = () => {
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              Expériences Utilisateur
-              <span className="block text-orange-600">Exceptionnelles</span>
+              Conception d'interfaces
+              <span className="block text-orange-600">pour marques établies</span>
             </h1>
             
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Nous concevons des expériences digitales centrées sur vos utilisateurs. 
-              UX/UI Design, prototypage et tests pour maximiser l'engagement et la satisfaction.
+              Nous concevons les expériences digitales de marques installées : applications, plateformes clients, espaces self-care, design systems. Recherche utilisateur, design et tests intégrés au cycle produit.
             </p>
           </div>
 
@@ -285,17 +284,17 @@ const InnovationUX = () => {
       <section className="py-20 px-8 lg:px-16 bg-gradient-to-br from-orange-600 to-yellow-600 text-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Prêt à Révolutionner Votre UX ?
+            Prêt à structurer votre expérience digitale ?
           </h2>
           <p className="text-xl mb-8 opacity-90">
-            Créons ensemble une expérience utilisateur qui marquera vos clients
+            Premier échange pour cadrer le périmètre de conception et chiffrer un plan d'accompagnement.
           </p>
           <Button 
             onClick={handleContact}
             size="lg"
             className="bg-white text-orange-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold rounded-xl"
           >
-            Démarrer votre projet UX
+            Planifier un échange
           </Button>
         </div>
       </section>

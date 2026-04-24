@@ -14,7 +14,7 @@ const InfluenceMarketing = () => {
     "@graph": [
       generateServiceSchema(
         "Influence Marketing & Collaborations Créateurs Maroc",
-        "Agence influence marketing à Casablanca et Marrakech : campagnes avec influenceurs et créateurs de contenu marocains. Product seeding, micro-influence, KOL premium, unboxings, ambassador program et lancements de produits. Service premium dans tout le Maroc.",
+        "Pilotage de campagnes d'influence pour marques établies au Maroc : casting d'influenceurs et KOL, product seeding, programmes ambassadeurs, lancements produit. Casablanca, Marrakech et national.",
         "Sur devis"
       ),
       generateWebPageSchema(
@@ -140,7 +140,7 @@ const InfluenceMarketing = () => {
 
   const handleContact = () => {
     const phoneNumber = "212699024526";
-    const message = "Bonjour, je souhaite lancer une campagne d'influence marketing avec Link Agency.";
+    const message = "Bonjour, je souhaite échanger sur une campagne d'influence marketing avec Link Agency.";
     const encodedMessage = encodeURIComponent(message);
     window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
   };
@@ -177,16 +177,16 @@ const InfluenceMarketing = () => {
                 <span className="block text-3xl lg:text-4xl text-gray-600 mt-2">Casablanca & Marrakech</span>
               </h1>
               <p className="text-xl text-gray-700 leading-relaxed mb-8 font-light">
-                Agence d'influence marketing basée à Casablanca et Marrakech. Amplifiez votre visibilité avec des campagnes stratégiques : du product seeding aux ambassadeurs long-terme, nous connectons votre marque aux meilleurs influenceurs et créateurs de contenu du Maroc.
+                Pilotage de campagnes d'influence pour marques établies. Casting qualifié, négociation des conditions, supervision créative et reporting de performance : un dispositif structuré aligné avec vos enjeux de marque et vos objectifs business.
               </p>
               <Button 
                 onClick={handleContact}
                 className="bg-black text-white hover:bg-gray-800 px-8 py-6 text-lg hover-scale"
               >
-                Lancer une campagne d'influence
+                Discuter d'une campagne
               </Button>
               <p className="text-gray-600 text-sm mt-4 font-light">
-                +1000 influenceurs qualifiés • Casting sur-mesure • Production premium • ROI garanti
+                Database +1000 profils qualifiés · Casting sur-mesure · Supervision créative · Reporting détaillé
               </p>
             </div>
             
@@ -310,15 +310,15 @@ const InfluenceMarketing = () => {
               </div>
             </div>
             <div className="bg-white p-8 rounded-xl shadow-lg border border-purple-100">
-              <h3 className="text-2xl font-light mb-6 text-black">Lancez votre campagne d'influence</h3>
+              <h3 className="text-2xl font-light mb-6 text-black">Cadrons votre campagne d'influence</h3>
               <p className="text-gray-600 mb-6">
-                Discutons de votre projet et connectons votre marque aux meilleurs créateurs du Maroc.
+                Premier échange pour qualifier le périmètre, le casting cible et chiffrer un plan d'activation.
               </p>
               <Button 
                 onClick={handleContact}
                 className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700 py-4 text-lg"
               >
-                Contactez-nous maintenant
+                Planifier un échange
               </Button>
             </div>
           </div>

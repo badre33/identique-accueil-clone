@@ -175,7 +175,7 @@ const Evenementiel = () => {
 
   const handleContact = () => {
     const phoneNumber = "212699024526";
-    const message = "Bonjour, je souhaite organiser un événement avec Link Agency.";
+    const message = "Bonjour, je souhaite échanger sur l'organisation d'un événement corporate avec Link Agency.";
     const encodedMessage = encodeURIComponent(message);
     window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
   };
@@ -212,16 +212,16 @@ const Evenementiel = () => {
                 <span className="block text-3xl lg:text-4xl text-gray-600 mt-2">Casablanca & Marrakech</span>
               </h1>
               <p className="text-xl text-gray-700 leading-relaxed mb-8 font-light">
-                Agence événementielle basée à Casablanca et Marrakech. Organisation d'événements corporate d'exception dans tout le Maroc. De la conception à la réalisation, nous transformons vos événements d'entreprise en expériences mémorables.
+                Conception et production d'événements corporate au service de la stratégie de marque : lancements produit, conventions internes, séminaires de direction, soirées clients VIP, activations retail et stands sur salons professionnels.
               </p>
               <Button 
                 onClick={handleContact}
                 className="bg-black text-white hover:bg-gray-800 px-8 py-6 text-lg hover-scale"
               >
-                Parlons de votre événement
+                Discuter de votre événement
               </Button>
               <p className="text-gray-600 text-sm mt-4 font-light">
-                150+ événements organisés • Équipe experte • Couverture 360° • Support 24/7
+                Lancements produit · Conventions · Séminaires · Soirées VIP · Activations · Salons B2B
               </p>
             </div>
             
