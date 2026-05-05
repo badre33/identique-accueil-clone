@@ -19,20 +19,20 @@ const cityContent = {
       'E-commerce',
       'Industrie',
       'Services B2B',
-      'Startups Tech'
+      'Industrie & Énergie'
     ],
     caseStudies: [
       {
-        client: 'Entreprise Casablancaise',
-        sector: 'E-commerce',
-        result: '+300% de ventes en ligne',
-        description: 'Transformation digitale complète d\'une entreprise traditionnelle casablancaise'
+        client: 'Groupe Retail National',
+        sector: 'Retail & Distribution',
+        result: '+300% de performance e-commerce',
+        description: 'Refonte du dispositif digital et pilotage acquisition pour un acteur retail établi à Casablanca'
       },
       {
-        client: 'Startup Casa',
-        sector: 'Fintech',
-        result: '50K utilisateurs en 6 mois',
-        description: 'Lancement réussi d\'une application financière sur le marché marocain'
+        client: 'Acteur Bancaire Marocain',
+        sector: 'Banque & Assurance',
+        result: 'Dispositif digital structurant',
+        description: 'Pilotage de la communication digitale et du contenu institutionnel pour une marque financière de référence'
       }
     ],
     localPartners: [

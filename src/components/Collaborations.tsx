@@ -17,7 +17,7 @@ export const Collaborations = () => {
       url: "#",
       category: "Tech",
       logo: "/lovable-uploads/801816e7-97bc-49c9-948c-34e3c9d49e1f.png",
-      description: "Partenaire officiel de l'écosystème French Tech pour l'accompagnement des startups marocaines.",
+      description: "Partenariat institutionnel avec l'écosystème French Tech pour structurer l'accompagnement stratégique des entreprises à l'international.",
       year: "2022-2024",
       type: "Partenariat"
     },
