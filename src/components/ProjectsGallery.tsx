@@ -113,8 +113,8 @@ export const ProjectsGallery = () => {
       title: "French Tech",
       category: "Partenariat Stratégique",
       image: "/lovable-uploads/801816e7-97bc-49c9-948c-34e3c9d49e1f.png",
-      shortDescription: "Projet international conduit depuis notre bureau de Casablanca. Partenaire officiel de l'écosystème French Tech Bordeaux pour l'accompagnement stratégique des startups incubées vers l'international.",
-      description: "Partenariat stratégique avec l'écosystème French Tech Bordeaux pour développer et structurer l'accompagnement des startups incubées vers l'international. Notre rôle couvre le développement de la stratégie de marque de l'écosystème bordelais, la création des outils marketing pour les programmes d'incubation, et l'accompagnement personnalisé des startups prometteuses dans leur développement commercial. Nous orchestrons les campagnes de communication, développons les stratégies de positionnement et créons les supports d'attraction pour renforcer la notoriété de French Tech Bordeaux sur la scène européenne et faciliter l'expansion internationale des entreprises incubées.",
+      shortDescription: "Mandat international conduit depuis notre bureau de Casablanca. Partenaire institutionnel de l'écosystème French Tech Bordeaux pour structurer l'accompagnement stratégique des entreprises incubées vers l'international.",
+      description: "Partenariat institutionnel avec l'écosystème French Tech Bordeaux pour structurer l'accompagnement stratégique des entreprises incubées à l'international. Notre rôle couvre la consolidation de la stratégie de marque de l'écosystème bordelais, la conception des outils marketing pour les programmes d'incubation et l'accompagnement personnalisé des entreprises à fort potentiel dans leur développement commercial. Nous orchestrons les campagnes de communication, déployons les stratégies de positionnement et concevons les supports d'attraction pour renforcer la notoriété de French Tech Bordeaux sur la scène européenne et faciliter l'expansion internationale des entreprises accompagnées.",
       year: "2022-2024",
       url: "#"
     }

@@ -27,7 +27,7 @@ export const CollaborationDetailsModal = ({ collaboration, isOpen, onClose }: Co
         return {
           impact: "Positionnement unifié sur 4 secteurs d'activité",
           services: ["Stratégie de marque globale", "Identité visuelle unifiée", "Personal branding", "Architecture de marque"],
-          results: ["Image cohérente multi-secteurs", "Notoriété entrepreneuriale renforcée", "Synergies entre activités"],
+          results: ["Image cohérente multi-secteurs", "Autorité dirigeante renforcée", "Synergies entre activités"],
           challenge: "Créer une cohérence de marque entre des activités très différentes (architecture, éducation, gastronomie, coworking)"
         };
       case "Personal Branding Politique":
@@ -46,7 +46,7 @@ export const CollaborationDetailsModal = ({ collaboration, isOpen, onClose }: Co
         };
       case "French Tech":
         return {
-          impact: "20+ startups accompagnées vers l'international",
+          impact: "20+ entreprises accompagnées vers l'international",
           services: ["Branding écosystème", "Marketing stratégique", "Développement business", "Accompagnement incubés"],
           results: ["5 levées de fonds réussies", "Expansion européenne", "Notoriété internationale"],
           challenge: "Positionner l'écosystème French Tech bordelais sur la scène internationale"

@@ -104,7 +104,7 @@ export const blogPosts: BlogPost[] = [
     <h3>L'accompagnement dans la durée</h3>
     <p>La livraison d'une charte graphique n'est pas une fin. Nous proposons des formules d'accompagnement pour garantir la cohérence du déploiement et l'évolution maîtrisée de la marque dans le temps.</p>
     
-    <p>Notre équipe réunit stratèges, directeurs artistiques et experts digital pour une approche intégrée du branding. Nous intervenons auprès d'entreprises de toutes tailles, de la startup en création à la grande entreprise en repositionnement.</p>
+    <p>Notre équipe réunit stratèges, directeurs artistiques et experts digital pour une approche intégrée du branding. Nous intervenons principalement auprès de marques établies, de groupes multi-secteurs et de directions marketing en repositionnement.</p>
 
     <h2>Conclusion : le branding comme décision stratégique</h2>
     <p>Dans un marché marocain de plus en plus concurrentiel, la stratégie de marque n'est plus un luxe réservé aux multinationales. Elle devient une nécessité pour toute entreprise souhaitant construire une préférence durable auprès de ses clients.</p>
@@ -1194,18 +1194,18 @@ export const testimonials: Testimonial[] = [
   {
     id: '1',
     name: 'Youssef Benali',
-    company: 'TechStart Maroc',
-    role: 'CEO & Fondateur',
-    content: 'Link Agency a transformé notre startup tech en une marque reconnue. Leur approche du branding adaptée au marché marocain nous a permis de lever 2M MAD en 6 mois. L\'équipe comprend parfaitement les enjeux locaux.',
+    company: 'Groupe Industriel Marocain',
+    role: 'Directeur Marketing & Communication',
+    content: 'Link Agency a structuré la refonte complète de notre plateforme de marque. Leur approche stratégique, adaptée aux enjeux du marché marocain, a permis d\'unifier notre communication sur l\'ensemble de nos filiales et de renforcer significativement notre notoriété auprès des décideurs.',
     rating: 5,
     image: '/lovable-uploads/29365e8a-7e4d-4041-ad14-37f38d1bde1b.png',
-    service: 'Branding Complet',
+    service: 'Plateforme de marque & Gouvernance',
     date: '2024-01-10',
-    projectType: 'Identité de marque startup tech',
+    projectType: 'Refonte de plateforme de marque corporate',
     results: [
-      { metric: 'Levée de fonds', value: '2M MAD en 6 mois' },
-      { metric: 'Notoriété', value: '+300% en 1 an' },
-      { metric: 'Clients acquis', value: '+150 entreprises' }
+      { metric: 'Notoriété assistée', value: '+300% en 18 mois' },
+      { metric: 'Cohérence multi-marques', value: '6 filiales unifiées' },
+      { metric: 'Engagement digital', value: '+220% sur LinkedIn' }
     ]
   },
   {

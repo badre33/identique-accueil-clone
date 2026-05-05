@@ -39,7 +39,7 @@ export const JoinTeamSection = () => {
             Prêt à Construire Quelque Chose d'Exceptionnel ?
           </h2>
           <p className="text-xl lg:text-2xl text-gray-200 max-w-4xl mx-auto leading-relaxed">
-            Que vous soyez une startup ambitieuse ou une entreprise établie, nous sommes là pour transformer votre vision en réalité marquante.
+            Que vous pilotiez une marque établie ou un groupe multi-marques, nous structurons votre dispositif de communication pour en faire un véritable levier de performance.
           </p>
         </div>
 
