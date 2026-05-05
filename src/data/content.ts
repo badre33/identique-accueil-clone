@@ -920,11 +920,11 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: '14',
-    title: 'E-commerce au Maroc 2025 : Comment Lancer et Développer Votre Boutique en Ligne',
-    excerpt: 'Le guide complet pour réussir dans le e-commerce marocain en 2025 : plateformes, paiement, logistique, marketing et réglementations.',
+    title: 'E-commerce au Maroc 2025 : Cadre Stratégique pour les Directions Retail & Marketing',
+    excerpt: 'Lecture stratégique du marché e-commerce marocain en 2025 à destination des dirigeants et directions marketing : architecture de plateforme, paiement, logistique, pilotage de la performance et conformité.',
     content: `
-    <h2>L'explosion du e-commerce marocain</h2>
-    <p>Le marché e-commerce marocain atteint 45 milliards MAD en 2025, avec une croissance de 25% par an. Les opportunités sont immenses pour les entrepreneurs locaux.</p>
+    <h2>Un marché e-commerce devenu structurant pour les marques établies</h2>
+    <p>Le marché e-commerce marocain atteint 45 milliards MAD en 2025, avec une croissance annuelle de 25%. Pour les marques établies, les enseignes retail et les directions marketing, le canal digital n'est plus un canal complémentaire : il devient une composante centrale du dispositif commercial et de la relation client.</p>
     
     <h3>Chiffres clés 2025</h3>
     <ul>
@@ -935,42 +935,41 @@ export const blogPosts: BlogPost[] = [
       <li><strong>Top catégories</strong> : Mode, électronique, beauté, maison</li>
     </ul>
     
-    <h2>Choisir sa plateforme</h2>
-    <h3>Options pour le Maroc</h3>
+    <h2>Architecture de plateforme : un choix de gouvernance</h2>
+    <h3>Options structurantes pour le marché marocain</h3>
     <ul>
-      <li><strong>Shopify</strong> : Idéal pour débuter, intégration paiement MAD</li>
-      <li><strong>WooCommerce</strong> : Flexible, nécessite hébergement</li>
-      <li><strong>Jumia Seller</strong> : Marketplace avec logistique intégrée</li>
-      <li><strong>Avito Boutique</strong> : Pour produits occasion/artisanat</li>
-      <li><strong>Sur-mesure</strong> : Pour projets complexes</li>
+      <li><strong>Shopify Plus</strong> : industrialisation rapide pour les marques retail mono ou multi-pays</li>
+      <li><strong>WooCommerce / Headless</strong> : flexibilité éditoriale et intégration aux SI existants</li>
+      <li><strong>Marketplaces (Jumia, Amazon)</strong> : levier de couverture, à piloter en complément du DTC</li>
+      <li><strong>Plateformes sur-mesure / Composable Commerce</strong> : pour les groupes au catalogue complexe et aux exigences d'intégration ERP/PIM/CRM</li>
     </ul>
     
-    <h2>Solutions de paiement marocaines</h2>
+    <h2>Solutions de paiement : enjeu d'expérience et de conversion</h2>
     <ul>
-      <li><strong>CMI (Centre Monétique Interbancaire)</strong> : Paiement CB local</li>
-      <li><strong>PayPal</strong> : Pour clients internationaux</li>
-      <li><strong>Cash on Delivery</strong> : Encore 60% des transactions !</li>
-      <li><strong>M-Wallet</strong> : Paiement mobile en croissance</li>
+      <li><strong>CMI (Centre Monétique Interbancaire)</strong> : standard de paiement carte local</li>
+      <li><strong>Solutions internationales (PayPal, Stripe via partenaires)</strong> : pour les flux cross-border</li>
+      <li><strong>Cash on Delivery</strong> : encore 60% des transactions, à industrialiser sans dégrader la marge</li>
+      <li><strong>M-Wallet et paiement mobile</strong> : courbe d'adoption forte, à intégrer au funnel</li>
     </ul>
     
-    <h2>Logistique e-commerce au Maroc</h2>
-    <p>Partenaires de livraison fiables :</p>
+    <h2>Logistique : levier d'expérience client et de rentabilité</h2>
+    <p>Partenaires logistiques structurants pour un dispositif national :</p>
     <ul>
       <li><strong>Amana</strong> : Filiale de Barid Al-Maghrib</li>
       <li><strong>Colis Express</strong> : Réseau national dense</li>
       <li><strong>GLS Maroc</strong> : Qualité premium</li>
-      <li><strong>Points relais</strong> : Solution économique (+15% adoption)</li>
+      <li><strong>Réseaux de points relais</strong> : levier d'optimisation du coût de livraison (+15% d'adoption)</li>
     </ul>
     
-    <h2>Marketing e-commerce gagnant</h2>
+    <h2>Pilotage marketing : performance et brand equity</h2>
     <ol>
-      <li><strong>SEO produits</strong> : Optimisez fiches avec mots-clés locaux</li>
-      <li><strong>Google Shopping</strong> : Maintenant disponible au Maroc</li>
-      <li><strong>Retargeting</strong> : Récupérez 20% des paniers abandonnés</li>
-      <li><strong>Influenceurs</strong> : Micro-influenceurs locaux = meilleur ROI</li>
+      <li><strong>SEO produits & catégorie</strong> : architecture de catalogue alignée sur l'intention locale</li>
+      <li><strong>Google Shopping & Performance Max</strong> : déploiement structuré sur le marché marocain</li>
+      <li><strong>Retargeting & CRM</strong> : récupération des paniers abandonnés et activation du parc client</li>
+      <li><strong>Influence sectorielle</strong> : créateurs locaux qualifiés, intégrés à un dispositif média mesurable</li>
     </ol>
     
-    <p>Link Agency accompagne les e-commerçants marocains de la création à la croissance. Demandez votre stratégie e-commerce personnalisée.</p>
+    <p>Link Agency accompagne les directions marketing, retail et e-commerce des marques établies dans la conception, le déploiement et le pilotage de leurs dispositifs digitaux au Maroc. Intervention sur devis, calibrée sur la maturité et les enjeux du dispositif.</p>
     `,
     author: 'E-commerce Team',
     publishDate: '2025-10-15',
@@ -978,9 +977,9 @@ export const blogPosts: BlogPost[] = [
     category: 'digital',
     image: '/assets/blog/ecommerce-maroc-2025.jpg',
     readTime: 12,
-    tags: ['e-commerce', 'boutique en ligne', 'paiement maroc', 'livraison', 'shopify maroc'],
-    metaDescription: 'Guide e-commerce Maroc 2025 : lancer votre boutique en ligne. Plateformes, paiement CMI, logistique, marketing digital pour réussir au Maroc.',
-    metaKeywords: 'ecommerce maroc 2025, boutique en ligne maroc, paiement en ligne maroc, shopify maroc, vente en ligne casablanca'
+    tags: ['e-commerce', 'retail digital', 'paiement maroc', 'logistique', 'shopify plus maroc'],
+    metaDescription: 'E-commerce Maroc 2025 : cadre stratégique pour directions retail & marketing. Plateformes, paiement CMI, logistique et pilotage de la performance digitale.',
+    metaKeywords: 'ecommerce maroc 2025, retail digital maroc, paiement en ligne maroc, shopify plus maroc, direction marketing ecommerce casablanca'
   },
   {
     id: '15',
