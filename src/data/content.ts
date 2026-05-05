@@ -341,55 +341,55 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: '4',
-    title: 'Personal Branding pour Entrepreneurs : Devenez une Référence au Maroc',
-    excerpt: 'Comment les entrepreneurs marocains peuvent construire leur marque personnelle sur LinkedIn et les réseaux sociaux pour développer leur influence et leur business.',
+    title: 'Personal Branding des Dirigeants : Construire une Voix d\'Autorité au Maroc',
+    excerpt: 'Comment les dirigeants et directions marketing marocaines structurent la marque personnelle de leurs leaders pour renforcer leur influence sectorielle et leur capital réputationnel.',
     content: `
-    <h2>Pourquoi le Personal Branding est crucial au Maroc</h2>
-    <p>Dans un marché où les relations personnelles sont essentielles, le personal branding devient un levier stratégique majeur pour les entrepreneurs et leaders marocains.</p>
+    <h2>Pourquoi le Personal Branding des dirigeants est devenu un actif stratégique au Maroc</h2>
+    <p>Dans un marché où la confiance se construit autant sur la marque corporate que sur la voix de ses dirigeants, le personal branding s'impose comme un levier de pilotage stratégique pour les comités de direction et les directions marketing & communication.</p>
     
     <h3>Les chiffres du Personal Branding au Maroc</h3>
     <ul>
       <li>68% des décideurs marocains consultent le profil LinkedIn avant un meeting</li>
-      <li>Les entrepreneurs avec personal branding fort génèrent 3x plus d'opportunités</li>
+      <li>Les dirigeants disposant d'une marque personnelle structurée génèrent 3x plus d'opportunités d'affaires qualifiées</li>
       <li>LinkedIn compte +2M de professionnels marocains actifs</li>
-      <li>Le taux d'engagement moyen est 5x plus élevé sur un profil personnel que sur une page entreprise</li>
+      <li>Le taux d'engagement moyen est 5x plus élevé sur le profil d'un dirigeant que sur la page corporate</li>
     </ul>
     
     <h2>Stratégie Personal Branding en 5 Étapes</h2>
     
     <h3>1. Définir votre positionnement unique</h3>
-    <p><strong>Votre expertise :</strong> Identifiez votre domaine de spécialisation et votre proposition de valeur unique. Qu'est-ce qui vous différencie des autres acteurs de votre secteur ?</p>
-    <p><strong>Votre audience cible :</strong> Entrepreneurs, investisseurs, clients B2B, médias ? Définissez précisément qui vous souhaitez influencer.</p>
+    <p><strong>Votre expertise :</strong> Identifiez la zone d'autorité du dirigeant et son angle différenciant au sein de l'écosystème sectoriel. Quelle thèse défend-il, et sur quel terrain est-il légitime à prendre la parole ?</p>
+    <p><strong>Votre audience cible :</strong> Pairs sectoriels, comités d'investissement, grands comptes B2B, institutionnels, médias spécialisés ? Définissez précisément les cercles d'influence à adresser.</p>
     
     <h3>2. Optimiser vos profils sociaux</h3>
-    <p><strong>LinkedIn :</strong> Photo professionnelle, titre accrocheur (pas juste "CEO"), résumé storytelling, recommandations stratégiques.</p>
-    <p><strong>Instagram :</strong> Bio claire avec CTA, highlights structurés, esthétique cohérente qui reflète vos valeurs.</p>
-    <p><strong>Twitter/X :</strong> Positionnement d'expert avec partages de veille et opinions argumentées.</p>
+    <p><strong>LinkedIn :</strong> Photographie corporate maîtrisée, titre porteur de positionnement (au-delà du seul intitulé de fonction), résumé éditorialisé, recommandations choisies pour leur cohérence stratégique.</p>
+    <p><strong>Instagram :</strong> Bio claire alignée sur la marque corporate, highlights structurés, direction artistique cohérente avec la plateforme de marque de l'entreprise.</p>
+    <p><strong>Twitter/X :</strong> Posture d'expert sectoriel, veille analytique et prises de position argumentées sur les sujets structurants du secteur.</p>
     
     <h3>3. Créer du contenu à forte valeur ajoutée</h3>
     <p><strong>Formats qui performent au Maroc :</strong></p>
     <ul>
       <li>Posts LinkedIn longs (1300-2000 caractères) avec storytelling personnel</li>
-      <li>Carrousels Instagram éducatifs (10 slides)</li>
-      <li>Vidéos courtes type Reels/TikTok (30-60 secondes)</li>
-      <li>Lives et podcasts pour approfondir votre expertise</li>
+      <li>Carrousels LinkedIn éditorialisés (8 à 10 slides) traitant d'un enjeu sectoriel</li>
+      <li>Formats vidéo courts (60-90 secondes) sur la vision marché</li>
+      <li>Lives, keynotes et podcasts pour asseoir l'autorité d'expertise</li>
     </ul>
     
-    <p><strong>Thématiques à aborder :</strong></p>
+    <p><strong>Lignes éditoriales recommandées :</strong></p>
     <ul>
-      <li>Vos apprentissages et échecs (authenticité)</li>
-      <li>Conseils pratiques dans votre domaine</li>
-      <li>Vision du marché marocain et tendances</li>
-      <li>Coulisses de votre entreprise (behind the scenes)</li>
+      <li>Lectures de marché et analyses sectorielles</li>
+      <li>Cadres de décision et retours d'expérience exécutifs</li>
+      <li>Vision long terme sur le marché marocain et son intégration africaine</li>
+      <li>Décryptage des transformations en cours dans l'organisation</li>
     </ul>
     
     <h3>4. Construire votre réseau stratégique</h3>
-    <p>Ne collectionnez pas les connexions, créez des relations authentiques :</p>
+    <p>L'enjeu n'est pas le volume de connexions, mais la qualité du capital relationnel sectoriel :</p>
     <ul>
-      <li>Commentez intelligemment sur les posts de leaders de votre secteur</li>
-      <li>Partagez le contenu d'autres avec votre analyse personnelle</li>
-      <li>Organisez ou participez à des événements networking</li>
-      <li>Créez des collaborations avec des profils complémentaires</li>
+      <li>Engagez des échanges argumentés avec les leaders du secteur</li>
+      <li>Relayez les analyses tierces avec une lecture personnelle qualifiée</li>
+      <li>Intervenez dans les forums professionnels, conventions et plateaux médias</li>
+      <li>Construisez des prises de parole croisées avec des pairs et institutionnels</li>
     </ul>
     
     <h3>5. Mesurer et optimiser</h3>
@@ -397,53 +397,53 @@ export const blogPosts: BlogPost[] = [
     <ul>
       <li>Taux d'engagement (objectif : 5-10%)</li>
       <li>Croissance de l'audience (objectif : +10-15% par mois)</li>
-      <li>Opportunités business générées</li>
-      <li>Mentions et partages de votre contenu</li>
-      <li>Messages directs et demandes de collaboration</li>
+      <li>Opportunités business et partenariats stratégiques générés</li>
+      <li>Mentions médias, citations et reprises de contenu</li>
+      <li>Sollicitations institutionnelles, jurys, prises de parole</li>
     </ul>
     
     <h2>Erreurs fréquentes à éviter</h2>
     <ol>
       <li><strong>L'auto-promotion excessive :</strong> Règle 80/20 - 80% de valeur, 20% de promotion</li>
-      <li><strong>L'incohérence :</strong> Publier aléatoirement sans stratégie éditoriale</li>
-      <li><strong>Ignorer les interactions :</strong> Répondre aux commentaires est crucial</li>
-      <li><strong>Copier les codes étrangers :</strong> Adapter votre communication au contexte marocain</li>
-      <li><strong>Négliger le offline :</strong> Le networking physique reste essentiel au Maroc</li>
+      <li><strong>L'incohérence éditoriale :</strong> Publier sans charte ni gouvernance de prise de parole</li>
+      <li><strong>Le désalignement avec la marque corporate :</strong> Toute prise de parole engage l'organisation</li>
+      <li><strong>L'absence d'adaptation au contexte marocain :</strong> Codes culturels, sensibilité institutionnelle, multilinguisme</li>
+      <li><strong>La sous-estimation du offline :</strong> Conventions sectorielles et relations institutionnelles restent décisives</li>
     </ol>
     
-    <h2>Cas d'usage : Entrepreneur tech marocain</h2>
-    <p><strong>Situation initiale :</strong> Fondateur de startup SaaS inconnu, difficultés à lever des fonds.</p>
+    <h2>Cas d'usage : dirigeant d'une ETI marocaine en repositionnement</h2>
+    <p><strong>Situation initiale :</strong> Directeur général d'un acteur sectoriel reconnu en B2B mais quasi inexistant sur les canaux digitaux, à un moment de repositionnement stratégique de l'entreprise.</p>
     <p><strong>Stratégie déployée :</strong></p>
     <ul>
-      <li>Repositionnement LinkedIn en expert tech & entrepreneuriat</li>
-      <li>Publication 3x/semaine de contenu éducatif sur le business au Maroc</li>
-      <li>Participation à des podcasts et événements</li>
-      <li>Partage transparent du parcours entrepreneurial</li>
+      <li>Repositionnement LinkedIn en voix de référence sur les enjeux du secteur</li>
+      <li>Publication 3x/semaine de contenus analytiques sur le marché marocain</li>
+      <li>Interventions ciblées sur podcasts sectoriels et conventions professionnelles</li>
+      <li>Mise en cohérence systématique avec la communication corporate</li>
     </ul>
     <p><strong>Résultats en 6 mois :</strong></p>
     <ul>
       <li>+8500 followers LinkedIn (vs 400 initialement)</li>
-      <li>Levée de 1.5M MAD suite à connexions LinkedIn</li>
-      <li>3 opportunités médias (interviews, articles)</li>
-      <li>Pipeline commercial +40% grâce à l'inbound</li>
+      <li>Trois partenariats stratégiques sectoriels initiés via LinkedIn</li>
+      <li>5 prises de parole médias (interviews, tribunes, plateaux)</li>
+      <li>Pipeline commercial inbound +40% sur les comptes stratégiques</li>
     </ul>
     
-    <h2>Budget et ressources</h2>
-    <p><strong>Investissement temps :</strong> 5-8h/semaine pour une stratégie efficace</p>
-    <p><strong>Budget contenu :</strong> 3000-8000 MAD/mois (shooting photo, design graphique, copywriting)</p>
-    <p><strong>Formation :</strong> 5000-15000 MAD pour un accompagnement personal branding</p>
+    <h2>Gouvernance et ressources</h2>
+    <p><strong>Engagement du dirigeant :</strong> 3 à 5 heures hebdomadaires, structurées autour d'un calendrier éditorial cadré.</p>
+    <p><strong>Dispositif de production :</strong> Direction éditoriale, copywriting, direction artistique et coordination média pris en charge par un partenaire dédié.</p>
+    <p><strong>Modalité d'accompagnement :</strong> Sur devis, en fonction du périmètre, de la fréquence et du niveau d'enjeu réputationnel.</p>
     
-    <p>Chez Link Agency, nous accompagnons les entrepreneurs et leaders dans la construction de leur marque personnelle. De la stratégie à la production de contenu, nous vous aidons à devenir une voix qui compte au Maroc.</p>
+    <p>Chez Link Agency, nous accompagnons les dirigeants et les directions marketing & communication dans la structuration de la marque personnelle de leurs leaders. De la plateforme de prise de parole à la production éditoriale, nous installons des voix qui comptent dans l'écosystème marocain.</p>
     `,
     author: 'Branding Team',
     publishDate: '2024-02-01',
-    slug: 'personal-branding-entrepreneurs-maroc',
+    slug: 'personal-branding-dirigeants-maroc',
     category: 'branding',
     image: '/assets/blog/personal-branding.jpg',
     readTime: 10,
-    tags: ['personal branding', 'linkedin', 'entrepreneurs', 'maroc', 'influence'],
-    metaDescription: 'Guide complet Personal Branding pour entrepreneurs marocains : stratégie LinkedIn, création contenu, networking et développement d\'influence au Maroc.',
-    metaKeywords: 'personal branding maroc, linkedin maroc, influence digitale, entrepreneur maroc, marque personnelle, coaching personal branding casablanca'
+    tags: ['personal branding', 'linkedin', 'dirigeants', 'maroc', 'influence'],
+    metaDescription: 'Guide Personal Branding des dirigeants au Maroc : stratégie LinkedIn, ligne éditoriale exécutive, gouvernance de prise de parole et capital réputationnel.',
+    metaKeywords: 'personal branding dirigeants maroc, linkedin maroc, influence digitale, marque personnelle CEO, executive branding casablanca, leadership communication maroc'
   },
   {
     id: '5',
@@ -920,11 +920,11 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: '14',
-    title: 'E-commerce au Maroc 2025 : Comment Lancer et Développer Votre Boutique en Ligne',
-    excerpt: 'Le guide complet pour réussir dans le e-commerce marocain en 2025 : plateformes, paiement, logistique, marketing et réglementations.',
+    title: 'E-commerce au Maroc 2025 : Cadre Stratégique pour les Directions Retail & Marketing',
+    excerpt: 'Lecture stratégique du marché e-commerce marocain en 2025 à destination des dirigeants et directions marketing : architecture de plateforme, paiement, logistique, pilotage de la performance et conformité.',
     content: `
-    <h2>L'explosion du e-commerce marocain</h2>
-    <p>Le marché e-commerce marocain atteint 45 milliards MAD en 2025, avec une croissance de 25% par an. Les opportunités sont immenses pour les entrepreneurs locaux.</p>
+    <h2>Un marché e-commerce devenu structurant pour les marques établies</h2>
+    <p>Le marché e-commerce marocain atteint 45 milliards MAD en 2025, avec une croissance annuelle de 25%. Pour les marques établies, les enseignes retail et les directions marketing, le canal digital n'est plus un canal complémentaire : il devient une composante centrale du dispositif commercial et de la relation client.</p>
     
     <h3>Chiffres clés 2025</h3>
     <ul>
@@ -935,42 +935,41 @@ export const blogPosts: BlogPost[] = [
       <li><strong>Top catégories</strong> : Mode, électronique, beauté, maison</li>
     </ul>
     
-    <h2>Choisir sa plateforme</h2>
-    <h3>Options pour le Maroc</h3>
+    <h2>Architecture de plateforme : un choix de gouvernance</h2>
+    <h3>Options structurantes pour le marché marocain</h3>
     <ul>
-      <li><strong>Shopify</strong> : Idéal pour débuter, intégration paiement MAD</li>
-      <li><strong>WooCommerce</strong> : Flexible, nécessite hébergement</li>
-      <li><strong>Jumia Seller</strong> : Marketplace avec logistique intégrée</li>
-      <li><strong>Avito Boutique</strong> : Pour produits occasion/artisanat</li>
-      <li><strong>Sur-mesure</strong> : Pour projets complexes</li>
+      <li><strong>Shopify Plus</strong> : industrialisation rapide pour les marques retail mono ou multi-pays</li>
+      <li><strong>WooCommerce / Headless</strong> : flexibilité éditoriale et intégration aux SI existants</li>
+      <li><strong>Marketplaces (Jumia, Amazon)</strong> : levier de couverture, à piloter en complément du DTC</li>
+      <li><strong>Plateformes sur-mesure / Composable Commerce</strong> : pour les groupes au catalogue complexe et aux exigences d'intégration ERP/PIM/CRM</li>
     </ul>
     
-    <h2>Solutions de paiement marocaines</h2>
+    <h2>Solutions de paiement : enjeu d'expérience et de conversion</h2>
     <ul>
-      <li><strong>CMI (Centre Monétique Interbancaire)</strong> : Paiement CB local</li>
-      <li><strong>PayPal</strong> : Pour clients internationaux</li>
-      <li><strong>Cash on Delivery</strong> : Encore 60% des transactions !</li>
-      <li><strong>M-Wallet</strong> : Paiement mobile en croissance</li>
+      <li><strong>CMI (Centre Monétique Interbancaire)</strong> : standard de paiement carte local</li>
+      <li><strong>Solutions internationales (PayPal, Stripe via partenaires)</strong> : pour les flux cross-border</li>
+      <li><strong>Cash on Delivery</strong> : encore 60% des transactions, à industrialiser sans dégrader la marge</li>
+      <li><strong>M-Wallet et paiement mobile</strong> : courbe d'adoption forte, à intégrer au funnel</li>
     </ul>
     
-    <h2>Logistique e-commerce au Maroc</h2>
-    <p>Partenaires de livraison fiables :</p>
+    <h2>Logistique : levier d'expérience client et de rentabilité</h2>
+    <p>Partenaires logistiques structurants pour un dispositif national :</p>
     <ul>
       <li><strong>Amana</strong> : Filiale de Barid Al-Maghrib</li>
       <li><strong>Colis Express</strong> : Réseau national dense</li>
       <li><strong>GLS Maroc</strong> : Qualité premium</li>
-      <li><strong>Points relais</strong> : Solution économique (+15% adoption)</li>
+      <li><strong>Réseaux de points relais</strong> : levier d'optimisation du coût de livraison (+15% d'adoption)</li>
     </ul>
     
-    <h2>Marketing e-commerce gagnant</h2>
+    <h2>Pilotage marketing : performance et brand equity</h2>
     <ol>
-      <li><strong>SEO produits</strong> : Optimisez fiches avec mots-clés locaux</li>
-      <li><strong>Google Shopping</strong> : Maintenant disponible au Maroc</li>
-      <li><strong>Retargeting</strong> : Récupérez 20% des paniers abandonnés</li>
-      <li><strong>Influenceurs</strong> : Micro-influenceurs locaux = meilleur ROI</li>
+      <li><strong>SEO produits & catégorie</strong> : architecture de catalogue alignée sur l'intention locale</li>
+      <li><strong>Google Shopping & Performance Max</strong> : déploiement structuré sur le marché marocain</li>
+      <li><strong>Retargeting & CRM</strong> : récupération des paniers abandonnés et activation du parc client</li>
+      <li><strong>Influence sectorielle</strong> : créateurs locaux qualifiés, intégrés à un dispositif média mesurable</li>
     </ol>
     
-    <p>Link Agency accompagne les e-commerçants marocains de la création à la croissance. Demandez votre stratégie e-commerce personnalisée.</p>
+    <p>Link Agency accompagne les directions marketing, retail et e-commerce des marques établies dans la conception, le déploiement et le pilotage de leurs dispositifs digitaux au Maroc. Intervention sur devis, calibrée sur la maturité et les enjeux du dispositif.</p>
     `,
     author: 'E-commerce Team',
     publishDate: '2025-10-15',
@@ -978,9 +977,9 @@ export const blogPosts: BlogPost[] = [
     category: 'digital',
     image: '/assets/blog/ecommerce-maroc-2025.jpg',
     readTime: 12,
-    tags: ['e-commerce', 'boutique en ligne', 'paiement maroc', 'livraison', 'shopify maroc'],
-    metaDescription: 'Guide e-commerce Maroc 2025 : lancer votre boutique en ligne. Plateformes, paiement CMI, logistique, marketing digital pour réussir au Maroc.',
-    metaKeywords: 'ecommerce maroc 2025, boutique en ligne maroc, paiement en ligne maroc, shopify maroc, vente en ligne casablanca'
+    tags: ['e-commerce', 'retail digital', 'paiement maroc', 'logistique', 'shopify plus maroc'],
+    metaDescription: 'E-commerce Maroc 2025 : cadre stratégique pour directions retail & marketing. Plateformes, paiement CMI, logistique et pilotage de la performance digitale.',
+    metaKeywords: 'ecommerce maroc 2025, retail digital maroc, paiement en ligne maroc, shopify plus maroc, direction marketing ecommerce casablanca'
   },
   {
     id: '15',
