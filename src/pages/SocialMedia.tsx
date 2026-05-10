@@ -5,7 +5,9 @@ import { Link } from "react-router-dom";
 import { FloatingContactWidget } from "@/components/FloatingContactWidget";
 import { WorkflowTimeline } from "@/components/WorkflowTimeline";
 import { SEOHead } from "@/components/SEOHead";
-import { generateServiceSchema, generateWebPageSchema, generateBreadcrumbSchema } from "@/utils/structuredData";
+import { generateServiceSchema, generateWebPageSchema, generateBreadcrumbSchema, generateFAQSchema } from "@/utils/structuredData";
+import { ServiceFAQ } from "@/components/ServiceFAQ";
+import { serviceFaqs } from "@/data/serviceFaqs";
 
 const SocialMedia = () => {
   const schema = {
@@ -24,7 +26,8 @@ const SocialMedia = () => {
       generateBreadcrumbSchema([
         { name: "Accueil", url: "https://linkagency.ma/" },
         { name: "Social Media & E-réputation", url: "https://linkagency.ma/social-media" }
-      ])
+      ]),
+      generateFAQSchema(serviceFaqs["social-media"])
     ]
   };
 
@@ -241,6 +244,8 @@ const SocialMedia = () => {
           </Button>
         </div>
       </section>
+
+      <ServiceFAQ faqs={serviceFaqs["social-media"]} />
 
       <FloatingContactWidget />
     </div>

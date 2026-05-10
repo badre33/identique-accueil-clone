@@ -6,7 +6,9 @@ import { FloatingContactWidget } from "@/components/FloatingContactWidget";
 import { WorkflowTimeline } from "@/components/WorkflowTimeline";
 import { SEOHead } from "@/components/SEOHead";
 import { LocationSection } from "@/components/LocationSection";
-import { generateServiceSchema, generateWebPageSchema, generateBreadcrumbSchema } from "@/utils/structuredData";
+import { generateServiceSchema, generateWebPageSchema, generateBreadcrumbSchema, generateFAQSchema } from "@/utils/structuredData";
+import { ServiceFAQ } from "@/components/ServiceFAQ";
+import { serviceFaqs } from "@/data/serviceFaqs";
 import { generatePageMeta } from "@/utils/seoHelpers";
 
 const Evenementiel = () => {
@@ -30,6 +32,7 @@ const Evenementiel = () => {
         { name: "Accueil", url: "https://linkagency.ma/" },
         { name: "Événementiel Corporate", url: "https://linkagency.ma/evenementiel" }
       ]),
+      generateFAQSchema(serviceFaqs["evenementiel"]),
       {
         "@type": "Organization",
         "@id": "https://linkagency.ma/#organization",
