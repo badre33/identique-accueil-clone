@@ -13,18 +13,18 @@ const ContentDigital = () => {
     "@context": "https://schema.org",
     "@graph": [
       generateServiceSchema(
-        "Création de Contenu Digital & Réseaux Sociaux",
-        "Production de contenus digitaux engageants pour réseaux sociaux, vidéos, photographie et rédaction web au Maroc",
+        "SEO, SEO Arabe & Contenu Éditorial Maroc",
+        "Référencement naturel FR · AR · Darija et production de contenus piliers pour générer 20 à 30 % de croissance organique au Maroc.",
         "Sur devis"
       ),
       generateWebPageSchema(
-        "Content Digital - Création Contenu & Réseaux Sociaux | Link Agency",
-        "Production de contenus digitaux performants : réseaux sociaux, vidéos, photographie et rédaction web. Création de contenu au Maroc.",
+        "SEO, SEO Arabe & Contenu Éditorial Maroc | Link Agency",
+        "SEO trilingue (français, arabe, darija) et stratégie de contenu pillar/satellite pour les marques marocaines. 20 à 30 % de croissance organique.",
         "https://linkagency.ma/content-digital"
       ),
       generateBreadcrumbSchema([
         { name: "Accueil", url: "https://linkagency.ma/" },
-        { name: "Content Digital", url: "https://linkagency.ma/content-digital" }
+        { name: "SEO & Contenu Éditorial", url: "https://linkagency.ma/content-digital" }
       ])
     ]
   };

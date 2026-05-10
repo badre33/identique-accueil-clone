@@ -77,7 +77,7 @@ export const JoinTeamSection = () => {
 
         <div className="text-center">
           <p className="text-gray-400 text-lg mb-4">
-            Ou retrouvez-nous sur nos réseaux professionnels
+            Ou retrouvez le fondateur sur LinkedIn
           </p>
           <div className="flex justify-center space-x-6">
             <a 
@@ -86,16 +86,7 @@ export const JoinTeamSection = () => {
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-white transition-colors"
             >
-              LinkedIn - Badreddine
-            </a>
-            <span className="text-gray-600">•</span>
-            <a 
-              href="https://www.linkedin.com/in/ayman-nejmi-9926681a6/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white transition-colors"
-            >
-              LinkedIn - Ayman
+              LinkedIn — Badreddine Harkaoui
             </a>
           </div>
         </div>

@@ -1,6 +1,6 @@
 import { Header } from "@/components/Header";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Lightbulb, Target, Users, TrendingUp, CheckCircle, FileText, Briefcase, Award } from "lucide-react";
+import { ArrowLeft, LineChart, Target, Users, TrendingUp, CheckCircle, FileText, Briefcase, Award, Activity, BarChart3, Workflow } from "lucide-react";
 import { Link } from "react-router-dom";
 import { FloatingContactWidget } from "@/components/FloatingContactWidget";
 import { WorkflowTimeline } from "@/components/WorkflowTimeline";
@@ -12,106 +12,106 @@ const ConseilStrategique = () => {
     "@context": "https://schema.org",
     "@graph": [
       generateServiceSchema(
-        "Conseil Stratégique & Transformation Digitale",
-        "Accompagnement stratégique complet pour accélérer votre transformation digitale : audit, stratégie et accompagnement au Maroc",
+        "Stratégie & Pilotage Performance Marketing Maroc",
+        "Pilotage P&L digital, attribution multi-touch et Revenue Performance Orchestration pour les marques régulées au Maroc (banque, assurance, crédit consommation).",
         "Sur devis"
       ),
       generateWebPageSchema(
-        "Conseil Stratégique Digital - Audit & Transformation | Link Agency Maroc",
-        "Conseil stratégique digital au Maroc pour structurer gouvernance, priorités marketing et feuille de route de marques établies.",
+        "Stratégie & Pilotage Performance Marketing Maroc | Link Agency",
+        "Pilotage P&L digital, attribution multi-touch, RevOps & lead scoring qualifié pour les marques régulées au Maroc — méthodologie Link Performance System.",
         "https://linkagency.ma/conseil-strategique"
       ),
       generateBreadcrumbSchema([
         { name: "Accueil", url: "https://linkagency.ma/" },
-        { name: "Conseil Stratégique", url: "https://linkagency.ma/conseil-strategique" }
+        { name: "Stratégie & Pilotage Performance", url: "https://linkagency.ma/conseil-strategique" }
       ])
     ]
   };
 
   const consultingServices = [
     {
+      icon: <BarChart3 className="w-8 h-8" />,
+      title: "P&L Digital & Attribution Multi-Touch",
+      subtitle: "Chaque dirham relié à un revenu",
+      description: "Modélisation de votre P&L marketing, déploiement de l'attribution multi-touch (GA4, server-side, data-driven) et lecture par canal, par campagne, par produit."
+    },
+    {
+      icon: <Activity className="w-8 h-8" />,
+      title: "Revenue Performance Orchestration",
+      subtitle: "Orchestrer vos canaux comme un seul système",
+      description: "Mise en cohérence Acquisition → Qualification → Conversion → Optimisation. Sortie de la logique en silos pour piloter la performance commerciale globale."
+    },
+    {
+      icon: <Workflow className="w-8 h-8" />,
+      title: "Lead Scoring & RevOps",
+      subtitle: "Industrialiser la qualification des leads",
+      description: "Intégration CRM (Salesforce, HubSpot, systèmes bancaires), scoring des leads, boucle marketing → call center → closing avec WhatsApp Business et automation."
+    },
+    {
       icon: <Target className="w-8 h-8" />,
-      title: "Audit & Diagnostic",
-      subtitle: "Clarifiez vos priorités business",
-      description: "Analyse de votre organisation, de votre marché et de vos dispositifs existants pour identifier les priorités d’arbitrage et les opportunités business."
-    },
-    {
-      icon: <Lightbulb className="w-8 h-8" />,
-      title: "Stratégie Digitale",
-      subtitle: "Cadrez votre feuille de route",
-      description: "Formalisation d’une stratégie digitale alignée à vos objectifs business, vos contraintes internes et vos horizons de déploiement."
-    },
-    {
-      icon: <Users className="w-8 h-8" />,
-      title: "Accompagnement",
-      subtitle: "Déployer avec méthode",
-      description: "Accompagnement des équipes, cadrage des chantiers prioritaires et pilotage de la transformation avec une gouvernance claire."
-    },
-    {
-      icon: <TrendingUp className="w-8 h-8" />,
-      title: "Formation Équipes",
-      subtitle: "Renforcer les équipes",
-      description: "Sessions ciblées pour aligner vos équipes marketing et communication sur les outils, indicateurs et méthodes utiles à l’exécution."
+      title: "Pilotage CPL · CPA · LTV",
+      subtitle: "Indicateurs financiers, pas tactiques",
+      description: "Construction de tableaux de bord financiers (CAC, LTV, payback period, LTV/CAC ratio) destinés aux directions générales et financières."
     }
   ];
 
   const stats = [
-    { number: "50+", label: "Marques accompagnées" },
-    { number: "200+", label: "Projets déployés" },
-    { number: "15+", label: "Secteurs couverts" },
-    { number: "8 ans", label: "Expérience terrain" }
+    { number: "11+", label: "Années secteurs régulés" },
+    { number: "10", label: "Experts senior" },
+    { number: "−47%", label: "CPL moyen observé" },
+    { number: "3 à 5x", label: "LTV/CAC ratio cible" }
   ];
 
   const advantages = [
     {
       icon: <Award className="w-6 h-6" />,
-      title: "Lecture stratégique senior",
-      description: "Une capacité à cadrer enjeux business, gouvernance marketing et trajectoire digitale dans des environnements complexes."
+      title: "Modèle hybride agence + cabinet",
+      description: "Exécution créative + cabinet de pilotage data. Un seul partenaire pour la stratégie, l'orchestration et la livraison."
     },
     {
       icon: <Briefcase className="w-6 h-6" />,
-      title: "Approche pragmatique",
-      description: "Des recommandations directement exploitables, reliées à des priorités opérationnelles et à des indicateurs clairs."
+      title: "Spécialisation secteurs régulés",
+      description: "Banque, assurance, crédit consommation. Maîtrise des contraintes Bank Al-Maghrib, ACAPS et Loi 09-08 (CNDP)."
     },
     {
-      icon: <Users className="w-6 h-6" />,
-      title: "Cadre de pilotage clair",
-      description: "Un interlocuteur senior pour orchestrer ateliers, arbitrages et déploiement avec vos équipes."
+      icon: <LineChart className="w-6 h-6" />,
+      title: "Lecture financière du marketing",
+      description: "Tableaux de bord destinés aux DG et DAF : CAC, LTV, payback. Le marketing devient un investissement mesurable, pas un centre de coût."
     },
     {
       icon: <CheckCircle className="w-6 h-6" />,
-      title: "Méthode orientée résultats",
-      description: "Des plans d’action priorisés pour sécuriser exécution, reporting et progression mesurable."
+      title: "Activation J+1",
+      description: "Méthodologie Link Performance System opérationnelle dès le premier mois. Pas de phase de cadrage interminable."
     }
   ];
 
   const workflowSteps = [
     {
       number: "1",
-      title: "Diagnostic Stratégique",
-      description: "Audit de l’organisation, étude de marché et identification des leviers prioritaires pour structurer vos décisions marketing et digitales.",
+      title: "Acquire — Audit performance & P&L digital",
+      description: "Diagnostic 360° : canaux d'acquisition, qualité du tracking, attribution actuelle, structure de coûts. Modélisation du P&L digital et identification des fuites de performance.",
       duration: "2-3 semaines",
       icon: <FileText className="w-8 h-8" />
     },
     {
       number: "2",
-      title: "Élaboration Stratégie",
-      description: "Construction d’une feuille de route avec objectifs, KPIs, gouvernance et séquencement des chantiers sur 12 à 24 mois.",
+      title: "Qualify — Lead scoring & intégration CRM",
+      description: "Mise en place du scoring qualifié, intégration CRM ↔ plateformes Ads, boucle WhatsApp Business + call center. Chaque lead devient traçable et qualifiable.",
       duration: "3-4 semaines",
       icon: <Target className="w-8 h-8" />
     },
     {
       number: "3",
-      title: "Plan d'Action",
-      description: "Priorisation des initiatives, allocation des ressources et cadrage du plan d’exécution avec budgets et responsabilités.",
-      duration: "2 semaines",
-      icon: <Lightbulb className="w-8 h-8" />
+      title: "Convert — Orchestration multi-canal",
+      description: "Pilotage coordonné Meta · Google · TikTok · LinkedIn · SEO. Optimisation des parcours de conversion, A/B testing systématique, automation marketing.",
+      duration: "Continu",
+      icon: <Activity className="w-8 h-8" />
     },
     {
       number: "4",
-      title: "Accompagnement",
-      description: "Suivi de mise en œuvre, accompagnement des équipes et ajustements continus pour garder le cap sur les objectifs.",
-      duration: "6-12 mois",
+      title: "Optimize — Pilotage P&L & itération",
+      description: "Tableaux de bord mensuels orientés business (CAC, LTV, ROAS, payback). COPIL stratégique avec votre direction. Itération continue pour améliorer le LTV/CAC ratio.",
+      duration: "Mensuel",
       icon: <TrendingUp className="w-8 h-8" />
     }
   ];
@@ -126,9 +126,9 @@ const ConseilStrategique = () => {
   return (
     <div className="min-h-screen bg-white pt-16 sm:pt-20">
       <SEOHead
-        title="Conseil Stratégique Digital - Audit & Transformation | Link Agency Maroc"
-        description="Conseil stratégique digital au Maroc pour structurer gouvernance, priorités marketing et feuille de route de marques établies."
-        keywords="conseil stratégique maroc, agence digitale Maroc, consulting digital casablanca, transformation digitale maroc, marketing digital maroc"
+        title="Stratégie & Pilotage Performance Marketing Maroc | Link Agency"
+        description="Pilotage P&L digital, attribution multi-touch, RevOps et lead scoring qualifié pour les marques régulées au Maroc (banque, assurance, crédit conso). Méthodologie Link Performance System."
+        keywords="pilotage performance marketing maroc, P&L digital, attribution multi-touch, RevOps maroc, marketing banque assurance, lead scoring casablanca, conseil stratégique digital maroc"
         url="https://linkagency.ma/conseil-strategique"
         type="service"
         structuredData={conseilSchema}
@@ -147,30 +147,30 @@ const ConseilStrategique = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <h1 className="text-5xl lg:text-6xl font-light mb-6 text-black leading-tight">
-                Conseil Stratégique
+                Stratégie &amp; Pilotage Performance
               </h1>
               <h2 className="text-2xl font-light mb-8 text-gray-800">
-                Cadrez vos priorités marketing et digitales avec une méthode claire.
+                Transformez chaque dirham marketing en performance commerciale mesurable.
               </h2>
               <p className="text-lg text-gray-700 leading-relaxed mb-8 font-light">
-                Nous accompagnons les directions marketing et communication dans la structuration de leurs priorités, de leur gouvernance et de leur feuille de route digitale.
+                Pilotage P&amp;L digital, attribution multi-touch et Revenue Performance Orchestration pour les marques établies et les secteurs régulés au Maroc — banque, assurance, crédit consommation. Modèle hybride unique : agence d'exécution + cabinet de pilotage data.
               </p>
               <Button 
                 onClick={handleContact}
                 className="bg-black text-white hover:bg-gray-800 px-8 py-6 text-lg transform hover:scale-105 transition-all duration-300"
               >
-                Discuter de votre feuille de route
+                Auditer votre P&amp;L digital
               </Button>
             </div>
             
             <div className="relative">
               <div className="w-96 h-96 bg-gradient-to-br from-orange-200 to-red-200 rounded-full flex items-center justify-center mx-auto relative">
-                <Lightbulb className="w-32 h-32 text-orange-600" />
+                <LineChart className="w-32 h-32 text-orange-600" />
                 <div className="absolute -top-4 -right-4 w-24 h-24 bg-white rounded-full shadow-lg flex items-center justify-center">
                   <Target className="w-12 h-12 text-blue-500" />
                 </div>
                 <div className="absolute -bottom-4 -left-4 w-20 h-20 bg-white rounded-full shadow-lg flex items-center justify-center">
-                  <TrendingUp className="w-10 h-10 text-green-500" />
+                  <BarChart3 className="w-10 h-10 text-green-500" />
                 </div>
               </div>
             </div>
@@ -196,9 +196,9 @@ const ConseilStrategique = () => {
       <section className="py-20 px-8 lg:px-16">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-light mb-6 text-black">Nos services de Conseil</h2>
+            <h2 className="text-4xl lg:text-5xl font-light mb-6 text-black">Nos 4 leviers de pilotage performance</h2>
             <p className="text-xl text-gray-600 font-light max-w-3xl mx-auto">
-              Un accompagnement structuré pour clarifier les décisions, les responsabilités et les indicateurs de pilotage.
+              Un dispositif intégré pour orchestrer la performance commerciale digitale, du tracking à la lecture financière.
             </p>
           </div>
           
@@ -232,17 +232,17 @@ const ConseilStrategique = () => {
       {/* Workflow Timeline */}
       <WorkflowTimeline 
         steps={workflowSteps}
-        title="Notre méthodologie de conseil"
-        subtitle="4 phases pour cadrer vos enjeux, prioriser les chantiers et piloter l’exécution"
+        title="Link Performance System — la méthodologie en 4 temps"
+        subtitle="Acquire → Qualify → Convert → Optimize. Le système qui transforme votre marketing digital en P&L mesurable."
       />
 
       {/* Why Choose Us Section */}
       <section className="py-20 px-8 lg:px-16 bg-gradient-to-br from-gray-50 to-orange-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-light mb-6 text-black">Pourquoi Link Agency ?</h2>
+            <h2 className="text-4xl font-light mb-6 text-black">Pourquoi les marques régulées choisissent Link Agency</h2>
             <p className="text-xl text-gray-600 font-light">
-              Une approche de terrain pour des organisations qui ont besoin de clarté, pas de discours générique.
+              Le seul modèle au Maroc qui combine exécution créative et pilotage financier de la performance.
             </p>
           </div>
           
@@ -266,16 +266,16 @@ const ConseilStrategique = () => {
       <section className="py-20 px-8 lg:px-16 bg-black text-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl lg:text-5xl font-light mb-8">
-            Parlons de vos priorités stratégiques.
+            Auditons votre P&amp;L digital ensemble.
           </h2>
           <p className="text-xl text-gray-300 mb-10 font-light leading-relaxed">
-            Un premier échange pour cartographier vos enjeux, identifier les leviers prioritaires et cadrer une trajectoire réaliste.
+            Premier diagnostic de votre attribution actuelle, identification des fuites de performance et estimation du potentiel d'amélioration de votre LTV/CAC ratio.
           </p>
           <Button 
             onClick={handleContact}
             className="bg-orange-600 text-white hover:bg-orange-700 px-12 py-6 text-lg transform hover:scale-105 transition-all duration-300"
           >
-            Planifier un premier échange
+            Demander un audit performance
           </Button>
         </div>
       </section>
