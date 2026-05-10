@@ -22,7 +22,7 @@ export const ProjectsGallery = () => {
     {
       title: "L'Bankalik",
       category: "Banque & performance digitale, Maroc",
-      image: "/lovable-uploads/155dc759-4923-4ddc-8251-334cb8ba3ad7.png",
+      image: "/lovable-uploads/lbankalik-logo.png",
       shortDescription: "Stratégie éditoriale institutionnelle, contenus pédagogiques bilingues FR/AR, community management et pilotage média Meta Ads pour la banque digitale du groupe Attijariwafa Bank.",
       description: "Gestion complète des réseaux pour L'Bankalik par Attijariwafa Bank : stratégie éditoriale institutionnelle, contenus pédagogiques bilingues FR/AR, community management, pilotage Meta Ads sur des objectifs de notoriété, lead generation et conversion. Les dispositifs sont segmentés selon les audiences clés : jeunes actifs, familles, MRE et PME, avec une couverture des temps forts groupe et des prises de parole employeur.",
       year: "2025",
@@ -31,7 +31,7 @@ export const ProjectsGallery = () => {
     {
       title: "AXA Assurance Maroc",
       category: "Assurance & contenus institutionnels, Maroc",
-      image: "/lovable-uploads/86dfbcc8-1b16-4656-9047-427ad8d69523.png",
+      image: "/lovable-uploads/axa-logo.png",
       shortDescription: "Contenus institutionnels et pédagogiques, motion design, community management quotidien et campagnes Meta Ads avec optimisation du CPL.",
       description: "Accompagnement stratégique de la présence digitale d'AXA Assurance Maroc : contenus institutionnels et pédagogiques, motion design pour vulgariser les produits auto, santé, épargne et prévoyance, community management quotidien et campagnes Meta Ads dédiées à la notoriété et à la génération de leads. Les créatifs sont pilotés en A/B testing pour optimiser le CPL.",
       year: "2025",
@@ -40,7 +40,7 @@ export const ProjectsGallery = () => {
     {
       title: "RMA",
       category: "Assurance & social media, Maroc",
-      image: "/lovable-uploads/29365e8a-7e4d-4041-ad14-37f38d1bde1b.png",
+      image: "/lovable-uploads/rma-logo.jpg",
       shortDescription: "Production de contenus institutionnels, Reels de sensibilisation, campagnes de renouvellement et rédaction bilingue FR/AR.",
       description: "Pour RMA, Link Agency produit des contenus institutionnels, des Reels de sensibilisation et des campagnes dédiées aux temps forts assurance : renouvellement auto, rentrée santé, prévention routière et Ramadan. Le dispositif comprend la rédaction bilingue FR/AR, la gestion des requêtes clients et la cohérence éditoriale sur l'ensemble des prises de parole.",
       year: "2025",
