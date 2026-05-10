@@ -58,7 +58,7 @@ const MarketingDigital = () => {
   const stats = [
     { number: "50+", label: "Marques accompagnées" },
     { number: "200+", label: "Dispositifs pilotés" },
-    { number: "8 ans", label: "D'expérience" },
+    { number: "11 ans", label: "D'expérience" },
     { number: "15+", label: "Secteurs couverts" }
   ];
 
