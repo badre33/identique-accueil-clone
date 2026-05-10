@@ -13,12 +13,12 @@ const MarketingDigital = () => {
     "@graph": [
       generateServiceSchema(
         "Acquisition Payante & Lead Generation Maroc",
-        "Campagnes Meta · Google · TikTok · LinkedIn Ads avec lead scoring qualifié pour les secteurs régulés au Maroc — banque, assurance, crédit consommation.",
+        "Campagnes Meta · Google · TikTok · LinkedIn Ads avec lead scoring qualifié pour les secteurs régulés au Maroc : banque, assurance, crédit consommation.",
         "Sur devis"
       ),
       generateWebPageSchema(
         "Acquisition Payante & Lead Generation Maroc | Link Agency",
-        "Campagnes Meta Ads, Google Ads, TikTok Ads, LinkedIn Ads et social media — pilotage CPL, lead scoring qualifié et reporting ROI pour les marques régulées au Maroc.",
+        "Campagnes Meta Ads, Google Ads, TikTok Ads, LinkedIn Ads et social media : pilotage CPL, lead scoring qualifié et reporting ROI pour les marques régulées au Maroc.",
         "https://linkagency.ma/marketing-digital"
       ),
       generateBreadcrumbSchema([

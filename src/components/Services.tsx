@@ -23,7 +23,7 @@ export const Services = () => {
     {
       icon: Megaphone,
       title: "Acquisition payante & Lead Generation Maroc",
-      description: "Nous concevons et pilotons des campagnes Meta, Google, TikTok et LinkedIn Ads avec lead scoring qualifié — spécialisation secteurs régulés (banque, assurance, crédit consommation).",
+      description: "Nous concevons et pilotons des campagnes Meta, Google, TikTok et LinkedIn Ads avec lead scoring qualifié : spécialisation secteurs régulés (banque, assurance, crédit consommation).",
       features: ["Meta · Google · TikTok · LinkedIn Ads", "Lead scoring & qualification", "Optimisation CPL secteurs régulés"],
       color: "from-blue-500 to-indigo-600",
       bgImage: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=300&h=225&fit=crop&fm=webp&q=30",

@@ -86,7 +86,7 @@ export const JoinTeamSection = () => {
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-white transition-colors"
             >
-              LinkedIn — Badreddine Harkaoui
+              LinkedIn : Badreddine Harkaoui
             </a>
           </div>
         </div>

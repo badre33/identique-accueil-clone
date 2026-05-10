@@ -188,12 +188,12 @@ const InsideLink = () => {
                   <div className="space-content">
                     <div className="space-tight">
                       <h2 className="text-neutral-900 mb-3">Badreddine Harkaoui</h2>
-                      <p className="text-xl text-neutral-500 font-light">Fondateur &amp; Strategic Growth Architect — Expert pilotage performance &amp; revenue orchestration.</p>
+                      <p className="text-xl text-neutral-500 font-light">Fondateur &amp; Strategic Growth Architect : Expert pilotage performance &amp; revenue orchestration.</p>
                     </div>
                     
                     <p className="text-lg text-neutral-600 leading-relaxed">
                       Badreddine est l'architecte de la performance commerciale de Link Agency.<br />
-                      Plus de 11 ans d'expérience auprès de grandes marques régulées au Maroc — banque, assurance, crédit consommation — il pilote des dispositifs marketing hybrides qui combinent exécution créative et orchestration data de la performance.
+                      Plus de 11 ans d'expérience auprès de grandes marques régulées au Maroc : banque, assurance, crédit consommation : il pilote des dispositifs marketing hybrides qui combinent exécution créative et orchestration data de la performance.
                     </p>
                     <p className="text-lg text-neutral-600 leading-relaxed">
                       Ancien caporal dans les forces d'élite françaises, passé par la tech, le conseil stratégique et la croissance B2C, il a forgé une approche unique : chaque dirham marketing devient un actif mesurable, chaque campagne s'inscrit dans un P&amp;L digital, chaque lead s'attribue à une source précise.
@@ -326,7 +326,7 @@ const InsideLink = () => {
                 <AnimatedCard hoverScale={1.05}>
                   <VirtualBusinessCard
                     name="Badreddine Harkaoui"
-                    title="Fondateur — Strategic Growth Architect"
+                    title="Fondateur : Strategic Growth Architect"
                     image="/lovable-uploads/da131874-d340-4dc9-b1e7-5fc5f24a0f40.png"
                     linkedinUrl="https://www.linkedin.com/in/badreddine-harkaoui-nexiafiducia/"
                     email="bharkaoui@linkagency.ma"

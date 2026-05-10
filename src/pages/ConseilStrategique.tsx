@@ -18,7 +18,7 @@ const ConseilStrategique = () => {
       ),
       generateWebPageSchema(
         "Stratégie & Pilotage Performance Marketing Maroc | Link Agency",
-        "Pilotage P&L digital, attribution multi-touch, RevOps & lead scoring qualifié pour les marques régulées au Maroc — méthodologie Link Performance System.",
+        "Pilotage P&L digital, attribution multi-touch, RevOps & lead scoring qualifié pour les marques régulées au Maroc : méthodologie Link Performance System.",
         "https://linkagency.ma/conseil-strategique"
       ),
       generateBreadcrumbSchema([
@@ -88,28 +88,28 @@ const ConseilStrategique = () => {
   const workflowSteps = [
     {
       number: "1",
-      title: "Acquire — Audit performance & P&L digital",
+      title: "Acquire : Audit performance & P&L digital",
       description: "Diagnostic 360° : canaux d'acquisition, qualité du tracking, attribution actuelle, structure de coûts. Modélisation du P&L digital et identification des fuites de performance.",
       duration: "2-3 semaines",
       icon: <FileText className="w-8 h-8" />
     },
     {
       number: "2",
-      title: "Qualify — Lead scoring & intégration CRM",
+      title: "Qualify : Lead scoring & intégration CRM",
       description: "Mise en place du scoring qualifié, intégration CRM ↔ plateformes Ads, boucle WhatsApp Business + call center. Chaque lead devient traçable et qualifiable.",
       duration: "3-4 semaines",
       icon: <Target className="w-8 h-8" />
     },
     {
       number: "3",
-      title: "Convert — Orchestration multi-canal",
+      title: "Convert : Orchestration multi-canal",
       description: "Pilotage coordonné Meta · Google · TikTok · LinkedIn · SEO. Optimisation des parcours de conversion, A/B testing systématique, automation marketing.",
       duration: "Continu",
       icon: <Activity className="w-8 h-8" />
     },
     {
       number: "4",
-      title: "Optimize — Pilotage P&L & itération",
+      title: "Optimize : Pilotage P&L & itération",
       description: "Tableaux de bord mensuels orientés business (CAC, LTV, ROAS, payback). COPIL stratégique avec votre direction. Itération continue pour améliorer le LTV/CAC ratio.",
       duration: "Mensuel",
       icon: <TrendingUp className="w-8 h-8" />
@@ -153,7 +153,7 @@ const ConseilStrategique = () => {
                 Transformez chaque dirham marketing en performance commerciale mesurable.
               </h2>
               <p className="text-lg text-gray-700 leading-relaxed mb-8 font-light">
-                Pilotage P&amp;L digital, attribution multi-touch et Revenue Performance Orchestration pour les marques établies et les secteurs régulés au Maroc — banque, assurance, crédit consommation. Modèle hybride unique : agence d'exécution + cabinet de pilotage data.
+                Pilotage P&amp;L digital, attribution multi-touch et Revenue Performance Orchestration pour les marques établies et les secteurs régulés au Maroc : banque, assurance, crédit consommation. Modèle hybride unique : agence d'exécution + cabinet de pilotage data.
               </p>
               <Button 
                 onClick={handleContact}
@@ -232,7 +232,7 @@ const ConseilStrategique = () => {
       {/* Workflow Timeline */}
       <WorkflowTimeline 
         steps={workflowSteps}
-        title="Link Performance System — la méthodologie en 4 temps"
+        title="Link Performance System : la méthodologie en 4 temps"
         subtitle="Acquire → Qualify → Convert → Optimize. Le système qui transforme votre marketing digital en P&L mesurable."
       />
 
