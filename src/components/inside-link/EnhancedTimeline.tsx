@@ -21,7 +21,7 @@ interface TimelineEvent {
 const timelineEvents: TimelineEvent[] = [
   {
     id: 1,
-    year: '2014',
+    year: '2007',
     title: 'Forces d\'élite & rigueur',
     description: 'Badreddine sert dans les forces d\'élite françaises et y forge sa discipline opérationnelle.',
     detailedDescription: 'Caporal dans les forces d\'élite françaises, Badreddine y développe les fondamentaux qui structureront plus tard sa méthode : rigueur d\'exécution, planification stratégique, performance sous contrainte.',
@@ -45,20 +45,20 @@ const timelineEvents: TimelineEvent[] = [
   {
     id: 3,
     year: '2020',
-    title: 'Spécialisation secteurs régulés',
-    description: 'Focalisation sur les secteurs régulés : banque, assurance, crédit consommation au Maroc.',
-    detailedDescription: 'Badreddine se spécialise dans l\'accompagnement marketing des grandes marques régulées au Maroc, en intégrant les contraintes de Bank Al-Maghrib, ACAPS et CNDP. Naissance de la conviction que le marketing digital doit être piloté comme un P&L.',
+    title: 'Stratégies 360° & performance',
+    description: 'Pilotage de stratégies marketing intégrées pour des marques de tous secteurs au Maroc.',
+    detailedDescription: 'Badreddine accompagne des marques de tous secteurs (services, retail, industrie, finance, e-commerce) sur des dispositifs 360° : branding, contenu, social, paid, événementiel. Naissance de la conviction qu\'aucune action ne se justifie hors d\'une vision stratégique globale et mesurable.',
     icon: Award,
     color: 'from-purple-500 to-pink-500',
     location: 'Casablanca, Maroc',
-    achievements: ['Expertise banque · assurance · crédit', 'Compliance BAM · ACAPS · CNDP', 'Approche P&L digital'],
+    achievements: ['Approche 360° intégrée', 'Vision stratégique de bout en bout', 'Marketing piloté comme un P&L'],
   },
   {
     id: 4,
     year: '2023',
     title: 'Création de Link Agency',
     description: 'Badreddine fonde Link Agency à Casablanca avec une vision hybride unique au Maroc.',
-    detailedDescription: 'Création officielle de Link Agency par Badreddine Harkaoui, fondateur unique. La vision : un modèle hybride agence d\'exécution + cabinet de pilotage data, dédié aux marques établies et aux secteurs régulés au Maroc.',
+    detailedDescription: 'Création officielle de Link Agency par Badreddine Harkaoui, fondateur unique. La vision : un modèle hybride agence d\'exécution + cabinet de pilotage stratégique, où branding, contenu, social, paid et événementiel sont alignés sur un même objectif de performance commerciale.',
     icon: Rocket,
     color: 'from-orange-500 to-red-500',
     location: 'Casablanca, Maroc',
@@ -67,13 +67,13 @@ const timelineEvents: TimelineEvent[] = [
   {
     id: 5,
     year: '2026',
-    title: 'Référence des marques régulées',
-    description: 'Link Agency devient la référence du marketing digital piloté pour les grandes marques marocaines.',
-    detailedDescription: 'Link Agency consolide son positionnement de référence sur les secteurs régulés (banque, assurance, crédit conso). 10 experts senior, méthodologie Link Performance System déployée, présence renforcée à Casablanca et Marrakech.',
+    title: 'Agence de stratégie & performance',
+    description: 'Link Agency s\'impose comme partenaire stratégique des marques qui veulent aligner image et performance commerciale.',
+    detailedDescription: 'Link Agency consolide son positionnement d\'agence de stratégie et performance, tous secteurs confondus. 10 experts senior, méthodologie Link Performance System déployée, présence renforcée à Casablanca et Marrakech.',
     icon: Calendar,
     color: 'from-indigo-500 to-purple-500',
     location: 'Casablanca · Marrakech',
-    achievements: ['10 experts senior', 'Link Performance System', 'Référence secteurs régulés'],
+    achievements: ['10 experts senior', 'Link Performance System', 'Stratégie 360° tous secteurs'],
   }
 ];
 

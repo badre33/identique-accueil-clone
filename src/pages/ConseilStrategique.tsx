@@ -13,12 +13,12 @@ const ConseilStrategique = () => {
     "@graph": [
       generateServiceSchema(
         "Stratégie & Pilotage Performance Marketing Maroc",
-        "Pilotage P&L digital, attribution multi-touch et Revenue Performance Orchestration pour les marques régulées au Maroc (banque, assurance, crédit consommation).",
+        "Pilotage P&L digital, attribution multi-touch et Revenue Performance Orchestration pour les marques au Maroc, tous secteurs confondus.",
         "Sur devis"
       ),
       generateWebPageSchema(
         "Stratégie & Pilotage Performance Marketing Maroc | Link Agency",
-        "Pilotage P&L digital, attribution multi-touch, RevOps & lead scoring qualifié pour les marques régulées au Maroc — méthodologie Link Performance System.",
+        "Pilotage P&L digital, attribution multi-touch, RevOps & lead scoring qualifié pour les marques au Maroc : méthodologie Link Performance System.",
         "https://linkagency.ma/conseil-strategique"
       ),
       generateBreadcrumbSchema([
@@ -56,7 +56,7 @@ const ConseilStrategique = () => {
   ];
 
   const stats = [
-    { number: "11+", label: "Années secteurs régulés" },
+    { number: "11+", label: "Années d'expérience stratégique" },
     { number: "10", label: "Experts senior" },
     { number: "−47%", label: "CPL moyen observé" },
     { number: "3 à 5x", label: "LTV/CAC ratio cible" }
@@ -70,8 +70,8 @@ const ConseilStrategique = () => {
     },
     {
       icon: <Briefcase className="w-6 h-6" />,
-      title: "Spécialisation secteurs régulés",
-      description: "Banque, assurance, crédit consommation. Maîtrise des contraintes Bank Al-Maghrib, ACAPS et Loi 09-08 (CNDP)."
+      title: "Vision stratégique 360°",
+      description: "De la plateforme de marque à la performance media : aucune action n'existe hors d'une stratégie globale alignée sur vos objectifs business."
     },
     {
       icon: <LineChart className="w-6 h-6" />,
@@ -88,28 +88,28 @@ const ConseilStrategique = () => {
   const workflowSteps = [
     {
       number: "1",
-      title: "Acquire — Audit performance & P&L digital",
+      title: "Acquire : Audit performance & P&L digital",
       description: "Diagnostic 360° : canaux d'acquisition, qualité du tracking, attribution actuelle, structure de coûts. Modélisation du P&L digital et identification des fuites de performance.",
       duration: "2-3 semaines",
       icon: <FileText className="w-8 h-8" />
     },
     {
       number: "2",
-      title: "Qualify — Lead scoring & intégration CRM",
+      title: "Qualify : Lead scoring & intégration CRM",
       description: "Mise en place du scoring qualifié, intégration CRM ↔ plateformes Ads, boucle WhatsApp Business + call center. Chaque lead devient traçable et qualifiable.",
       duration: "3-4 semaines",
       icon: <Target className="w-8 h-8" />
     },
     {
       number: "3",
-      title: "Convert — Orchestration multi-canal",
+      title: "Convert : Orchestration multi-canal",
       description: "Pilotage coordonné Meta · Google · TikTok · LinkedIn · SEO. Optimisation des parcours de conversion, A/B testing systématique, automation marketing.",
       duration: "Continu",
       icon: <Activity className="w-8 h-8" />
     },
     {
       number: "4",
-      title: "Optimize — Pilotage P&L & itération",
+      title: "Optimize : Pilotage P&L & itération",
       description: "Tableaux de bord mensuels orientés business (CAC, LTV, ROAS, payback). COPIL stratégique avec votre direction. Itération continue pour améliorer le LTV/CAC ratio.",
       duration: "Mensuel",
       icon: <TrendingUp className="w-8 h-8" />
@@ -127,7 +127,7 @@ const ConseilStrategique = () => {
     <div className="min-h-screen bg-white pt-16 sm:pt-20">
       <SEOHead
         title="Stratégie & Pilotage Performance Marketing Maroc | Link Agency"
-        description="Pilotage P&L digital, attribution multi-touch, RevOps et lead scoring qualifié pour les marques régulées au Maroc (banque, assurance, crédit conso). Méthodologie Link Performance System."
+        description="Pilotage P&L digital, attribution multi-touch, RevOps et lead scoring qualifié pour les marques au Maroc, tous secteurs confondus. Méthodologie Link Performance System."
         keywords="pilotage performance marketing maroc, P&L digital, attribution multi-touch, RevOps maroc, marketing banque assurance, lead scoring casablanca, conseil stratégique digital maroc"
         url="https://linkagency.ma/conseil-strategique"
         type="service"
@@ -153,7 +153,7 @@ const ConseilStrategique = () => {
                 Transformez chaque dirham marketing en performance commerciale mesurable.
               </h2>
               <p className="text-lg text-gray-700 leading-relaxed mb-8 font-light">
-                Pilotage P&amp;L digital, attribution multi-touch et Revenue Performance Orchestration pour les marques établies et les secteurs régulés au Maroc — banque, assurance, crédit consommation. Modèle hybride unique : agence d'exécution + cabinet de pilotage data.
+                Pilotage P&amp;L digital, attribution multi-touch et Revenue Performance Orchestration pour les marques au Maroc, tous secteurs confondus. Modèle hybride unique : agence d'exécution + cabinet de pilotage stratégique.
               </p>
               <Button 
                 onClick={handleContact}
@@ -232,7 +232,7 @@ const ConseilStrategique = () => {
       {/* Workflow Timeline */}
       <WorkflowTimeline 
         steps={workflowSteps}
-        title="Link Performance System — la méthodologie en 4 temps"
+        title="Link Performance System : la méthodologie en 4 temps"
         subtitle="Acquire → Qualify → Convert → Optimize. Le système qui transforme votre marketing digital en P&L mesurable."
       />
 
@@ -240,7 +240,7 @@ const ConseilStrategique = () => {
       <section className="py-20 px-8 lg:px-16 bg-gradient-to-br from-gray-50 to-orange-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-light mb-6 text-black">Pourquoi les marques régulées choisissent Link Agency</h2>
+            <h2 className="text-4xl font-light mb-6 text-black">Pourquoi les marques choisissent Link Agency</h2>
             <p className="text-xl text-gray-600 font-light">
               Le seul modèle au Maroc qui combine exécution créative et pilotage financier de la performance.
             </p>

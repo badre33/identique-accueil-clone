@@ -47,7 +47,7 @@ export const intelligentPreloading = () => {
 };
 
 // Optimisation des ressources critiques
-// Note: preconnects and font preloads are already in index.html — no need to duplicate them here
+// Note: preconnects and font preloads are already in index.html : no need to duplicate them here
 export const optimizeCriticalResources = () => {
   // All critical preconnects and font preloads are handled in index.html
   // to avoid duplicate link tags that hurt Lighthouse scores
