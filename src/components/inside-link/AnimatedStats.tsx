@@ -9,7 +9,7 @@ export const AnimatedStats = () => {
   const stats = [
     {
       icon: Clock,
-      value: 8,
+      value: 11,
       suffix: '+',
       label: 'Années d\'expérience',
       description: 'Au service des directions marketing et communication',
