@@ -2,14 +2,38 @@
 
 export const generateOrganizationSchema = () => ({
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": ["Organization", "ProfessionalService"],
   "name": "Link Agency",
   "alternateName": "Link Agency Maroc",
+  "legalName": "Link Agency",
+  "slogan": "Stratégie, marque et performance — une vision intégrée pour marques établies au Maroc.",
   "url": "https://linkagency.ma",
   "logo": "https://linkagency.ma/lovable-uploads/85b45a40-6291-4f5d-a377-65024ddb1976.png",
   "image": "https://linkagency.ma/lovable-uploads/85b45a40-6291-4f5d-a377-65024ddb1976.png",
   "foundingDate": "2023",
-  "description": "Agence de marketing digital au Maroc spécialisée en branding, communication digitale et événementiel",
+  "foundingLocation": {
+    "@type": "Place",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Casablanca",
+      "addressCountry": "MA"
+    }
+  },
+  "founder": {
+    "@type": "Person",
+    "name": "Badr Harkaoui",
+    "jobTitle": "Fondateur & Directeur",
+    "worksFor": { "@type": "Organization", "name": "Link Agency" },
+    "nationality": "MA",
+    "knowsAbout": [
+      "Marketing Stratégique",
+      "Branding",
+      "Communication Digitale",
+      "Performance Media",
+      "Conseil Marketing"
+    ]
+  },
+  "description": "Agence de marketing digital 360° au Maroc, basée à Casablanca et Marrakech. Stratégie, branding, contenu, performance media, événementiel et influence pour marques établies B2B et B2C.",
   "address": [
     {
       "@type": "PostalAddress",
@@ -56,11 +80,30 @@ export const generateOrganizationSchema = () => ({
   ],
   "knowsAbout": [
     "Marketing Digital",
+    "Marketing Stratégique 360°",
     "Branding",
+    "Identité de marque",
     "Communication Digitale",
-    "Événementiel",
+    "Social Media Management",
+    "Performance Media",
+    "SEO",
+    "Marketing d'Influence",
+    "Événementiel Corporate",
     "Design Graphique",
-    "Stratégie Marketing"
+    "Stratégie Marketing B2B",
+    "Stratégie Marketing B2C",
+    "Acquisition client",
+    "E-réputation"
+  ],
+  "knowsLanguage": ["fr", "ar", "en"],
+  "makesOffer": [
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Conseil Stratégique Marketing" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Marketing Digital & Performance Media" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Branding & Identité de Marque" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Content & Production Digitale" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Social Media & Communication" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Influence Marketing" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Événementiel Corporate" } }
   ]
 });
 
