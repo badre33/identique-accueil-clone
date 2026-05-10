@@ -6,7 +6,9 @@ import { FloatingContactWidget } from "@/components/FloatingContactWidget";
 import { QuoteCalculator } from "@/components/QuoteCalculator";
 import { WorkflowTimeline } from "@/components/WorkflowTimeline";
 import { SEOHead } from "@/components/SEOHead";
-import { generateServiceSchema, generateWebPageSchema, generateBreadcrumbSchema } from "@/utils/structuredData";
+import { generateServiceSchema, generateWebPageSchema, generateBreadcrumbSchema, generateFAQSchema } from "@/utils/structuredData";
+import { ServiceFAQ } from "@/components/ServiceFAQ";
+import { serviceFaqs } from "@/data/serviceFaqs";
 
 const ContentDigital = () => {
   const contentSchema = {
@@ -25,7 +27,8 @@ const ContentDigital = () => {
       generateBreadcrumbSchema([
         { name: "Accueil", url: "https://linkagency.ma/" },
         { name: "SEO & Contenu Éditorial", url: "https://linkagency.ma/content-digital" }
-      ])
+      ]),
+      generateFAQSchema(serviceFaqs["content-digital"])
     ]
   };
 
@@ -135,6 +138,7 @@ const ContentDigital = () => {
         structuredData={contentSchema}
       />
       <Header />
+      <ServiceFAQ faqs={serviceFaqs["content-digital"]} />
       <FloatingContactWidget />
       
       <section className="pt-24 sm:pt-32 pb-16 sm:pb-20 section-padding gradient-subtle relative overflow-hidden">

@@ -6,7 +6,9 @@ import { FloatingContactWidget } from "@/components/FloatingContactWidget";
 import { WorkflowTimeline } from "@/components/WorkflowTimeline";
 import { SEOHead } from "@/components/SEOHead";
 import { LocationSection } from "@/components/LocationSection";
-import { generateServiceSchema, generateWebPageSchema, generateBreadcrumbSchema } from "@/utils/structuredData";
+import { generateServiceSchema, generateWebPageSchema, generateBreadcrumbSchema, generateFAQSchema } from "@/utils/structuredData";
+import { ServiceFAQ } from "@/components/ServiceFAQ";
+import { serviceFaqs } from "@/data/serviceFaqs";
 
 const InfluenceMarketing = () => {
   const influenceSchema = {
@@ -327,6 +329,8 @@ const InfluenceMarketing = () => {
           </div>
         </div>
       </section>
+      
+      <ServiceFAQ faqs={serviceFaqs["influence-marketing"]} />
       
       <FloatingContactWidget />
     </div>

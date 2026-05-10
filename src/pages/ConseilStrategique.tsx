@@ -5,7 +5,9 @@ import { Link } from "react-router-dom";
 import { FloatingContactWidget } from "@/components/FloatingContactWidget";
 import { WorkflowTimeline } from "@/components/WorkflowTimeline";
 import { SEOHead } from "@/components/SEOHead";
-import { generateServiceSchema, generateWebPageSchema, generateBreadcrumbSchema } from "@/utils/structuredData";
+import { generateServiceSchema, generateWebPageSchema, generateBreadcrumbSchema, generateFAQSchema } from "@/utils/structuredData";
+import { ServiceFAQ } from "@/components/ServiceFAQ";
+import { serviceFaqs } from "@/data/serviceFaqs";
 
 const ConseilStrategique = () => {
   const conseilSchema = {
@@ -24,7 +26,8 @@ const ConseilStrategique = () => {
       generateBreadcrumbSchema([
         { name: "Accueil", url: "https://linkagency.ma/" },
         { name: "Stratégie & Pilotage Performance", url: "https://linkagency.ma/conseil-strategique" }
-      ])
+      ]),
+      generateFAQSchema(serviceFaqs["conseil-strategique"])
     ]
   };
 
@@ -279,6 +282,8 @@ const ConseilStrategique = () => {
           </Button>
         </div>
       </section>
+      
+      <ServiceFAQ faqs={serviceFaqs["conseil-strategique"]} />
       
       <FloatingContactWidget />
     </div>

@@ -5,7 +5,9 @@ import { Link } from "react-router-dom";
 import { FloatingContactWidget } from "@/components/FloatingContactWidget";
 import { WorkflowTimeline } from "@/components/WorkflowTimeline";
 import { SEOHead } from "@/components/SEOHead";
-import { generateServiceSchema, generateWebPageSchema, generateBreadcrumbSchema } from "@/utils/structuredData";
+import { generateServiceSchema, generateWebPageSchema, generateBreadcrumbSchema, generateFAQSchema } from "@/utils/structuredData";
+import { ServiceFAQ } from "@/components/ServiceFAQ";
+import { serviceFaqs } from "@/data/serviceFaqs";
 import { generatePageMeta } from "@/utils/seoHelpers";
 
 const InnovationUX = () => {
@@ -28,7 +30,8 @@ const InnovationUX = () => {
       generateBreadcrumbSchema([
         { name: "Accueil", url: "https://linkagency.ma/" },
         { name: "Innovation & UX", url: "https://linkagency.ma/innovation-ux" }
-      ])
+      ]),
+      generateFAQSchema(serviceFaqs["innovation-ux"])
     ]
   };
 
@@ -298,6 +301,8 @@ const InnovationUX = () => {
           </Button>
         </div>
       </section>
+      
+      <ServiceFAQ faqs={serviceFaqs["innovation-ux"]} />
       
       <FloatingContactWidget />
     </div>

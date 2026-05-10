@@ -5,7 +5,9 @@ import { Link } from "react-router-dom";
 import { FloatingContactWidget } from "@/components/FloatingContactWidget";
 import { WorkflowTimeline } from "@/components/WorkflowTimeline";
 import { SEOHead } from "@/components/SEOHead";
-import { generateServiceSchema, generateWebPageSchema, generateBreadcrumbSchema } from "@/utils/structuredData";
+import { generateServiceSchema, generateWebPageSchema, generateBreadcrumbSchema, generateFAQSchema } from "@/utils/structuredData";
+import { ServiceFAQ } from "@/components/ServiceFAQ";
+import { serviceFaqs } from "@/data/serviceFaqs";
 import { generatePageMeta } from "@/utils/seoHelpers";
 
 const Branding = () => {
@@ -28,7 +30,8 @@ const Branding = () => {
       generateBreadcrumbSchema([
         { name: "Accueil", url: "https://linkagency.ma/" },
         { name: "Services Branding", url: "https://linkagency.ma/branding" }
-      ])
+      ]),
+      generateFAQSchema(serviceFaqs["branding"])
     ]
   };
   const brandingServices = [
@@ -203,6 +206,8 @@ const Branding = () => {
           </Button>
         </div>
       </section>
+      
+      <ServiceFAQ faqs={serviceFaqs["branding"]} />
       
       <FloatingContactWidget />
     </div>
