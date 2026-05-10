@@ -191,12 +191,15 @@ const InfluenceMarketing = () => {
             </div>
             
             <div className="relative animate-fade-in">
-              <div className="absolute -inset-4 bg-gradient-to-r from-purple-200 to-pink-200 rounded-2xl blur-xl opacity-20"></div>
-              <img 
-                src="/lovable-uploads/b82bb134-7256-4325-b5ca-90d055f1629c.png" 
-                alt="Influence Marketing Services" 
-                className="relative w-full h-auto rounded-xl shadow-2xl hover-scale"
-              />
+              <div className="w-96 h-96 bg-gradient-to-br from-purple-100 to-pink-100 rounded-full flex items-center justify-center mx-auto relative">
+                <Sparkles className="w-32 h-32 text-purple-600" />
+                <div className="absolute -top-4 -right-4 w-24 h-24 bg-white rounded-full shadow-lg flex items-center justify-center">
+                  <Heart className="w-12 h-12 text-pink-500" />
+                </div>
+                <div className="absolute -bottom-4 -left-4 w-20 h-20 bg-white rounded-full shadow-lg flex items-center justify-center">
+                  <Users className="w-10 h-10 text-purple-700" />
+                </div>
+              </div>
             </div>
           </div>
         </div>
