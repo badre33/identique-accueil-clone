@@ -8,6 +8,7 @@ import { SEOHead } from "@/components/SEOHead";
 import { LocationSection } from "@/components/LocationSection";
 import { generateServiceSchema, generateWebPageSchema, generateBreadcrumbSchema, generateFAQSchema } from "@/utils/structuredData";
 import { ServiceFAQ } from "@/components/ServiceFAQ";
+import { LocalCitiesLinks } from "@/components/LocalCitiesLinks";
 import { serviceFaqs } from "@/data/serviceFaqs";
 
 const InfluenceMarketing = () => {
@@ -329,6 +330,8 @@ const InfluenceMarketing = () => {
           </div>
         </div>
       </section>
+      
+      <LocalCitiesLinks />
       
       <ServiceFAQ faqs={serviceFaqs["influence-marketing"]} />
       

@@ -7,6 +7,7 @@ import { WorkflowTimeline } from "@/components/WorkflowTimeline";
 import { SEOHead } from "@/components/SEOHead";
 import { generateServiceSchema, generateWebPageSchema, generateBreadcrumbSchema, generateFAQSchema } from "@/utils/structuredData";
 import { ServiceFAQ } from "@/components/ServiceFAQ";
+import { LocalCitiesLinks } from "@/components/LocalCitiesLinks";
 import { serviceFaqs } from "@/data/serviceFaqs";
 import { generatePageMeta } from "@/utils/seoHelpers";
 
@@ -206,6 +207,8 @@ const Branding = () => {
           </Button>
         </div>
       </section>
+      
+      <LocalCitiesLinks />
       
       <ServiceFAQ faqs={serviceFaqs["branding"]} />
       
