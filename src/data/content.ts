@@ -606,7 +606,7 @@ export const blogPosts: BlogPost[] = [
     
     <p><strong>ROI attendu :</strong> Les premiers résultats apparaissent après 3-6 mois, avec un ROI moyen de 300-500% après 12 mois d'optimisation continue.</p>
     
-    <p>Link Agency accompagne les entreprises marocaines dans leur stratégie SEO local depuis 10 ans. Contactez-nous pour un audit gratuit de votre visibilité en ligne.</p>
+    <p>Link Agency accompagne les entreprises marocaines dans leur stratégie SEO local depuis plus de 11 ans. Contactez-nous pour un audit gratuit de votre visibilité en ligne.</p>
     `,
     author: 'SEO Team',
     publishDate: '2024-01-28',
@@ -849,7 +849,7 @@ export const blogPosts: BlogPost[] = [
       <li>Négliger la dimension digitale du branding</li>
     </ol>
     
-    <p>Link Agency accompagne les marques marocaines dans leur stratégie de branding local depuis 10 ans. Nos créations ont remporté plusieurs awards nationaux et internationaux.</p>
+    <p>Link Agency accompagne les marques marocaines dans leur stratégie de branding local depuis plus de 11 ans. Nos créations ont remporté plusieurs awards nationaux et internationaux.</p>
     `,
     author: 'Branding Team Link Agency',
     publishDate: '2025-12-05',
