@@ -62,7 +62,7 @@ const InnovationUX = () => {
   const stats = [
     { number: "50+", label: "Marques accompagnées", icon: <Palette className="w-6 h-6" /> },
     { number: "200+", label: "Projets livrés", icon: <Target className="w-6 h-6" /> },
-    { number: "8 ans", label: "D'expérience", icon: <Star className="w-6 h-6" /> },
+    { number: "11 ans", label: "D'expérience", icon: <Star className="w-6 h-6" /> },
     { number: "15+", label: "Secteurs couverts", icon: <Zap className="w-6 h-6" /> }
   ];
 
