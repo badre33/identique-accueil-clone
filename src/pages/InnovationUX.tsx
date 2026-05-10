@@ -155,7 +155,7 @@ const InnovationUX = () => {
               <span className="text-orange-800 font-semibold">Innovation & UX</span>
             </div>
             
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+            <h1 className="text-5xl lg:text-6xl font-light text-black leading-tight mb-6">
               Conception d'interfaces
               <span className="block text-orange-600">pour marques établies</span>
             </h1>

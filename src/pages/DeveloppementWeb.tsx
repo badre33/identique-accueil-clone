@@ -155,7 +155,7 @@ const DeveloppementWeb = () => {
               <span className="text-blue-800 font-semibold">Développement Web</span>
             </div>
             
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+            <h1 className="text-5xl lg:text-6xl font-light text-black leading-tight mb-6">
               Sites Web & Applications
               <span className="block text-blue-600">Sur-Mesure</span>
             </h1>
