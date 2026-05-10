@@ -14,6 +14,7 @@ import { SEOHead } from "@/components/SEOHead";
 import { Footer } from "@/components/Footer";
 import { OptimizedCTAs } from "@/components/OptimizedCTAs";
 import { LocalSEOSection } from "@/components/LocalSEO";
+import { LocalCitiesLinks } from "@/components/LocalCitiesLinks";
 import { generateOrganizationSchema, generateLocalBusinessSchema, generateWebPageSchema } from '@/utils/structuredData';
 
 const Index = () => {
@@ -61,8 +62,9 @@ const Index = () => {
       </section>
       
       <ProjectsGallery />
-      
-      
+
+      <LocalCitiesLinks />
+
       <FAQ />
       <div id="contact">
         <Contact />
