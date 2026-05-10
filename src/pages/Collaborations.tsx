@@ -34,7 +34,7 @@ const Collaborations = () => {
       name: "L'Bankalik par Attijariwafa Bank",
       url: "#",
       category: "Banque",
-      logo: "/lovable-uploads/155dc759-4923-4ddc-8251-334cb8ba3ad7.png",
+      logo: "/lovable-uploads/lbankalik-logo.png",
       description: "Stratégie éditoriale institutionnelle, contenus pédagogiques bilingues FR/AR, community management et pilotage Meta Ads pour des objectifs de notoriété, lead generation et conversion.",
       year: "2025",
       type: "Social Media & Ads"
@@ -43,7 +43,7 @@ const Collaborations = () => {
       name: "AXA Assurance Maroc",
       url: "#",
       category: "Assurance",
-      logo: "/lovable-uploads/86dfbcc8-1b16-4656-9047-427ad8d69523.png",
+      logo: "/lovable-uploads/axa-logo.png",
       description: "Contenus institutionnels, motion design produit, community management quotidien et campagnes Meta Ads avec A/B testing créatif pour optimiser le CPL.",
       year: "2025",
       type: "Contenu & Performance"
@@ -52,7 +52,7 @@ const Collaborations = () => {
       name: "RMA",
       url: "#",
       category: "Assurance",
-      logo: "/lovable-uploads/29365e8a-7e4d-4041-ad14-37f38d1bde1b.png",
+      logo: "/lovable-uploads/rma-logo.jpg",
       description: "Production de contenus institutionnels, Reels de sensibilisation, campagnes de renouvellement et rédaction bilingue FR/AR pour les temps forts de la marque.",
       year: "2025",
       type: "Social Media"
@@ -70,7 +70,7 @@ const Collaborations = () => {
       name: "YouCan",
       url: "#",
       category: "E-commerce",
-      logo: "/lovable-uploads/44ffaff6-3a76-466f-ba0b-04f88d100bb0.png",
+      logo: "/lovable-uploads/youcan-logo.png",
       description: "Accompagnement éditorial et performance pour une plateforme e-commerce marocaine en forte croissance, avec des contenus orientés acquisition et conversion.",
       year: "2024",
       type: "Performance & Contenu"
