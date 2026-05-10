@@ -54,7 +54,7 @@ export const Services = () => {
       features: ["Stratégie éditoriale FR/AR/Darija", "Community management & modération", "E-réputation & gestion de crise"],
       color: "from-green-500 to-blue-600",
       bgImage: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=300&h=225&fit=crop&fm=webp&q=30",
-      link: "/marketing-digital"
+      link: "/social-media"
     },
     {
       icon: CalendarRange,
