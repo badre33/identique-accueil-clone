@@ -35,7 +35,7 @@ const timelineEvents: TimelineEvent[] = [
     id: 2,
     year: '2017',
     title: 'Tech, conseil & croissance',
-    description: 'Premières expériences en tech, conseil stratégique et accompagnement de la croissance B2C.',
+    description: 'Premières expériences en tech, conseil stratégique et accompagnement de la croissance B2B et B2C.',
     detailedDescription: 'Badreddine évolue dans la tech et le conseil stratégique, accompagne plusieurs structures sur leurs problématiques de croissance et pose les bases d\'une approche hybride combinant exécution opérationnelle et pilotage data.',
     icon: Lightbulb,
     color: 'from-green-500 to-emerald-500',
