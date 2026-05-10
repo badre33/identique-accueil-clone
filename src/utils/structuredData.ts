@@ -107,7 +107,7 @@ export const generateOrganizationSchema = () => ({
   ]
 });
 
-type LocalCity = "casablanca" | "marrakech";
+type LocalCity = "casablanca" | "marrakech" | "rabat";
 const CITY_DATA: Record<LocalCity, { locality: string; region: string; postalCode: string; lat: number; lng: number; url: string }> = {
   casablanca: {
     locality: "Casablanca",
@@ -124,6 +124,14 @@ const CITY_DATA: Record<LocalCity, { locality: string; region: string; postalCod
     lat: 31.6295,
     lng: -7.9811,
     url: "https://linkagency.ma/agence-marketing-digital-marrakech",
+  },
+  rabat: {
+    locality: "Rabat",
+    region: "Rabat-Salé-Kénitra",
+    postalCode: "10000",
+    lat: 34.0209,
+    lng: -6.8416,
+    url: "https://linkagency.ma/agence-communication-rabat",
   },
 };
 
