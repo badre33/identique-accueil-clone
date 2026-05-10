@@ -17,6 +17,8 @@ export const Breadcrumb = () => {
     'inside-link': 'Inside Link',
     'collaborations': 'Collaborations',
     'blog': 'Blog',
+    'agence-marketing-digital-casablanca': 'Agence Casablanca',
+    'agence-marketing-digital-marrakech': 'Agence Marrakech',
   };
 
   if (pathnames.length === 0) return null;
