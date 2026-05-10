@@ -1452,6 +1452,136 @@ export const blogPosts: BlogPost[] = [
     tags: ['ROI', 'تسويق رقمي', 'CAC', 'LTV', 'CRM', 'إسناد', 'Attribution', 'لوحة قيادة'],
     metaDescription: 'دليل قياس ROI للتسويق الرقمي بالمغرب للمديرين الماليين : نماذج الإسناد، CAC، LTV، تكامل CRM ولوحات قيادة مالية.',
     metaKeywords: 'ROI تسويق رقمي المغرب, قياس عائد الاستثمار, CAC, LTV, إسناد متعدد النقاط, لوحة قيادة تسويقية'
+  },
+  {
+    id: 'local-casablanca',
+    title: "Choisir une Agence Marketing Digital à Casablanca : 7 Critères Stratégiques pour les Directions Marketing",
+    excerpt: "Guide opérationnel pour évaluer et sélectionner une agence marketing digital à Casablanca. Critères, signaux faibles et méthode de short-list pour les marques établies au Maroc.",
+    content: `
+    <h2>Le marché des agences digitales à Casablanca en 2026 : densité et opacité</h2>
+    <p>Casablanca concentre l'écrasante majorité des agences marketing digital du Maroc. Cette densité, qui pourrait sembler une opportunité pour les annonceurs, crée en réalité une difficulté structurelle : comment distinguer un véritable partenaire stratégique d'un prestataire d'exécution déguisé ? Pour une direction marketing établie, le coût d'erreur d'un mauvais choix d'agence se chiffre en mois de production perdus, en budgets média mal alloués et en perte de confiance interne.</p>
+    <p>Cet article propose une grille d'évaluation rigoureuse, issue de notre expérience terrain auprès de marques établies à Casablanca, dans la finance, le retail, l'industrie et les services B2B.</p>
+
+    <h2>Critère 1 : la qualité du cadrage stratégique en avant-vente</h2>
+    <p>Une agence digne de ce nom ne se contente pas de répondre à un brief : elle le challenge. Lors du premier rendez-vous, observez la nature des questions posées. Une agence sérieuse cherchera à comprendre votre modèle économique, vos cycles de vente, votre saisonnalité, votre concurrence et vos contraintes internes avant de parler livrables. Si la conversation dérive immédiatement vers les outils, les formats créatifs ou les budgets média, c'est un signal faible.</p>
+
+    <h2>Critère 2 : la maîtrise du marché casablancais</h2>
+    <p>Le marché de Casablanca a ses codes : audiences, médias, partenaires, créateurs, prestataires techniques, contraintes administratives. Une agence implantée localement à Casablanca dispose d'un réseau opérationnel qui réduit drastiquement les délais d'exécution. À l'inverse, une agence purement digitale, sans ancrage physique, peut sous-estimer les contraintes spécifiques au marché marocain : modes de paiement, comportements d'audience, langues d'usage.</p>
+
+    <h2>Critère 3 : la profondeur de l'offre intégrée</h2>
+    <p>Le marketing digital ne se réduit plus au paid media ou au SEO. Les directions marketing les plus matures cherchent un partenaire capable de penser l'écosystème global : <a href="/branding">stratégie de marque</a>, <a href="/marketing-digital">acquisition payante</a>, <a href="/social-media">social media</a>, <a href="/content-digital">production de contenu</a>, <a href="/evenementiel">événementiel</a> et <a href="/influence-marketing">influence</a>. Une offre fragmentée oblige à multiplier les prestataires et à porter en interne le coût de coordination.</p>
+
+    <h2>Critère 4 : la rigueur du pilotage et du reporting</h2>
+    <p>Demandez à voir un exemple anonymisé de reporting mensuel. Une agence solide produit des dashboards orientés business — ROAS, CPL, CAC, contribution incrémentale — pas des extractions GA4 brutes. Si l'agence n'est pas capable de relier ses actions aux indicateurs business, vous porterez seul le travail de traduction.</p>
+
+    <h2>Critère 5 : la stabilité de l'équipe</h2>
+    <p>Le secteur des agences à Casablanca connaît un turnover important. Une équipe stable est un signal fort : elle traduit une qualité managériale, une rentabilité saine et une capacité à fidéliser les talents. Demandez explicitement qui sera votre interlocuteur pendant les 12 prochains mois.</p>
+
+    <h2>Critère 6 : la transparence sur le modèle économique</h2>
+    <p>Méfiez-vous des agences qui rémunèrent leurs équipes commerciales sur les budgets média transférés : ce modèle crée un conflit d'intérêt structurel. Privilégiez les agences en honoraires fixes, où la valeur est dans le conseil et l'exécution, pas dans le volume média intermédié.</p>
+
+    <h2>Critère 7 : les références sectorielles et la confidentialité</h2>
+    <p>Une agence sérieuse partage des références sectorielles pertinentes — sans nécessairement les nommer publiquement. La discrétion est souvent un signal de maturité : les marques établies à Casablanca n'aiment pas voir leur logo en première page d'un site d'agence.</p>
+
+    <h2>Méthode de short-list recommandée</h2>
+    <p>Notre recommandation pour une direction marketing : engager une short-list de 3 agences maximum, organiser un brief commun, demander une réponse en 2 semaines, et noter chaque agence sur les 7 critères ci-dessus. La meilleure agence n'est pas la moins chère, ni la plus créative en présentation : c'est celle qui démontre la meilleure compréhension de votre business.</p>
+
+    <h2>Pour aller plus loin</h2>
+    <p>Si vous souhaitez évaluer Link Agency comme partenaire potentiel pour vos enjeux marketing à Casablanca, découvrez notre <a href="/agence-marketing-digital-casablanca">page dédiée à notre offre casablancaise</a> ou contactez-nous pour un premier échange confidentiel.</p>
+    `,
+    author: 'Link Agency',
+    publishDate: '2026-05-10',
+    slug: 'choisir-agence-marketing-digital-casablanca',
+    category: 'conseils',
+    image: '/assets/blog/agence-casablanca.jpg',
+    readTime: 9,
+    tags: ['agence casablanca', 'marketing digital', 'sélection agence', 'direction marketing', 'maroc'],
+    metaDescription: "Comment choisir une agence marketing digital à Casablanca : 7 critères stratégiques pour les directions marketing de marques établies au Maroc.",
+    metaKeywords: "agence marketing digital casablanca, choisir agence digitale maroc, agence communication casablanca, agence SEO casablanca, agence social media casablanca"
+  },
+  {
+    id: 'local-marrakech',
+    title: "Marketing Hôtelier à Marrakech : Codes, Leviers et Stratégies Digitales pour les Acteurs Premium",
+    excerpt: "Analyse des spécificités du marketing hôtelier à Marrakech. Codes esthétiques, leviers d'acquisition internationale et stratégies digitales pour riads, hôtels et marques lifestyle.",
+    content: `
+    <h2>Marrakech, destination unique : pourquoi le marketing hôtelier y obéit à des règles propres</h2>
+    <p>Marrakech est l'une des cinq destinations urbaines les plus recherchées au monde sur les moteurs de voyage. Cette singularité touristique impose au marketing hôtelier marrakchi une discipline particulière : la concurrence ne se joue pas seulement entre établissements locaux, mais avec les destinations rivales — Bali, Mykonos, Tulum, Cap-Ferret. Pour les acteurs premium implantés à Marrakech, la qualité du dispositif marketing détermine directement le taux d'occupation, la durée moyenne de séjour et le panier moyen.</p>
+
+    <h2>Code 1 : l'esthétique premium comme prérequis non négociable</h2>
+    <p>La clientèle internationale qui choisit Marrakech recherche un imaginaire visuel précis : matières, lumières, géométries, codes lifestyle. Une marque hôtelière marrakchie qui présente des visuels banalisés ou des productions amateurs disqualifie immédiatement sa proposition de valeur. La <a href="/content-digital">production de contenu visuel</a> — photographie, vidéo, motion design — est le premier poste d'investissement marketing à arbitrer.</p>
+
+    <h2>Code 2 : un branding cohérent du logo à l'expérience sur place</h2>
+    <p>L'écart entre la promesse de marque digitale et l'expérience physique est immédiatement visible — et immédiatement sanctionné dans les avis clients. Les marques hôtelières les plus performantes à Marrakech investissent dans une <a href="/branding">stratégie de marque</a> qui irrigue l'ensemble des points de contact : signature visuelle, ton de voix, codes éditoriaux, signalétique sur place, packaging amenities.</p>
+
+    <h2>Code 3 : un social media multilingue, calibré pour les marchés émetteurs</h2>
+    <p>Les principaux marchés émetteurs vers Marrakech sont la France, l'Espagne, le Royaume-Uni, l'Allemagne et de plus en plus les marchés du Golfe. Une <a href="/social-media">stratégie social media</a> efficace doit produire en français, en anglais, et idéalement en arabe pour la clientèle régionale. Les formats Instagram et TikTok dominent, avec une logique éditoriale orientée inspiration plus que conversion directe.</p>
+
+    <h2>Levier 1 : le SEO destination, sous-exploité par la majorité des établissements</h2>
+    <p>"Hôtel à Marrakech", "riad médina Marrakech", "hôtel luxe palmeraie" : ces requêtes touristiques drainent des dizaines de milliers de recherches mensuelles. La majorité des établissements marrakchis dépendent excessivement des OTA (Booking, Expedia) qui captent 15 à 25 % de commission. Une stratégie SEO bien menée permet de récupérer une part significative du trafic direct.</p>
+
+    <h2>Levier 2 : l'influence marketing, naturel à Marrakech</h2>
+    <p>Marrakech est l'une des destinations les plus instagrammées au monde. Une <a href="/influence-marketing">stratégie d'influence</a> bien construite — sourcing de créateurs internationaux, briefs créatifs précis, séjours en partenariat — démultiplie la notoriété d'un établissement à un coût largement inférieur à la publicité traditionnelle.</p>
+
+    <h2>Levier 3 : les campagnes paid media internationales</h2>
+    <p>Meta Ads et Google Ads permettent un ciblage précis par marché émetteur, langue, intérêt et niveau de revenu. Pour un établissement premium marrakchi, un budget mensuel structuré allouant 60 % à la prospection internationale et 40 % au retargeting permet de remplir les périodes creuses et de lisser le taux d'occupation annuel.</p>
+
+    <h2>Levier 4 : l'événementiel comme accélérateur de notoriété</h2>
+    <p>Les soirées d'inauguration, takeovers de chefs, partenariats festivals (Marrakech du rire, FIFM, FNH) ou événements privés constituent des accélérateurs puissants. La conception de ces <a href="/evenementiel">événements de marque</a> demande une coordination précise entre stratégie image, production sur place et amplification digitale.</p>
+
+    <h2>Pour aller plus loin</h2>
+    <p>Si vous pilotez le marketing d'un hôtel, riad, restaurant ou marque lifestyle à Marrakech, découvrez notre <a href="/agence-marketing-digital-marrakech">offre dédiée aux acteurs marrakchis</a> ou contactez-nous pour un audit confidentiel de votre dispositif actuel.</p>
+    `,
+    author: 'Link Agency',
+    publishDate: '2026-05-10',
+    slug: 'marketing-hotelier-marrakech-strategie',
+    category: 'digital',
+    image: '/assets/blog/marketing-marrakech.jpg',
+    readTime: 8,
+    tags: ['marrakech', 'hôtellerie', 'marketing touristique', 'lifestyle', 'luxe', 'maroc'],
+    metaDescription: "Marketing hôtelier à Marrakech : codes esthétiques, leviers d'acquisition internationale et stratégies digitales pour les acteurs premium de la destination.",
+    metaKeywords: "marketing hôtelier marrakech, agence marketing marrakech, marketing touristique maroc, agence hôtellerie luxe, branding hôtel marrakech, social media hôtellerie"
+  },
+  {
+    id: 'local-rabat',
+    title: "Communication Institutionnelle à Rabat : Enjeux, Codes et Bonnes Pratiques pour 2026",
+    excerpt: "Analyse des enjeux de communication institutionnelle à Rabat. Codes, bonnes pratiques et leviers pour ministères, ONG, ambassades et organismes internationaux.",
+    content: `
+    <h2>Rabat, capitale de la communication d'autorité au Maroc</h2>
+    <p>Rabat concentre les institutions politiques, administratives et diplomatiques du Royaume. Pour les organismes qui y opèrent — ministères, agences publiques, ONG internationales, ambassades, organismes financiers internationaux — la communication ne relève pas du marketing classique. Elle obéit à des codes spécifiques : autorité, rigueur, neutralité de ton, respect protocolaire et capacité à adresser plusieurs publics simultanément (citoyens, partenaires institutionnels, bailleurs internationaux, médias).</p>
+
+    <h2>Enjeu 1 : structurer une plateforme de marque institutionnelle</h2>
+    <p>Trop d'institutions communiquent sans <a href="/branding">plateforme de marque formalisée</a>. Conséquence : des messages contradictoires d'une direction à l'autre, des chartes graphiques fragmentées, des prises de parole non alignées. La première étape d'une communication institutionnelle solide est la formalisation d'un référentiel partagé : mission, valeurs, promesse, ton, codes visuels.</p>
+
+    <h2>Enjeu 2 : maîtriser le multilinguisme français-arabe-anglais</h2>
+    <p>À Rabat, le multilinguisme n'est pas un confort éditorial — c'est une obligation opérationnelle. Les communications doivent être nativement déclinées en français (langue de travail des élites administratives), en arabe (langue officielle, audience citoyenne) et souvent en anglais (partenaires internationaux). Cela suppose des équipes éditoriales pluriculturelles capables de produire dans chaque langue, pas de simplement traduire.</p>
+
+    <h2>Enjeu 3 : conjuguer prise de parole digitale et codes protocolaires</h2>
+    <p>Les institutions doivent désormais être présentes sur les réseaux sociaux — LinkedIn, X, Facebook, parfois Instagram — sans perdre la dignité de leur posture institutionnelle. L'animation des présences sociales d'une institution publique ou d'une ONG demande une <a href="/social-media">expertise éditoriale spécifique</a> : ton mesuré, vérification systématique, modération anticipée des sujets sensibles.</p>
+
+    <h2>Enjeu 4 : produire des contenus institutionnels structurants</h2>
+    <p>Rapports annuels, livres blancs, brochures programmes, synthèses de politiques publiques : les contenus institutionnels sont des objets éditoriaux complexes qui demandent une vraie discipline de production. La <a href="/content-digital">production éditoriale institutionnelle</a> combine rigueur rédactionnelle, pédagogie graphique et cohérence chartique.</p>
+
+    <h2>Bonne pratique 1 : sécuriser la gouvernance de la communication</h2>
+    <p>Au sein d'une institution, la communication est souvent diluée entre plusieurs directions. La nomination d'un responsable communication transversal, doté d'un mandat clair et d'un référentiel partagé, est un prérequis à toute démarche structurante. Sans gouvernance, les chartes restent lettre morte.</p>
+
+    <h2>Bonne pratique 2 : anticiper la gestion de crise</h2>
+    <p>Les institutions sont par nature exposées aux crises — médiatiques, politiques, opérationnelles. Anticiper la gestion de crise par des procédures documentées, des matrices de prise de parole et des entraînements réguliers est une <a href="/conseil-strategique">démarche de conseil stratégique</a> indispensable.</p>
+
+    <h2>Bonne pratique 3 : mesurer la perception, pas seulement la portée</h2>
+    <p>Pour une institution, le vrai indicateur de performance n'est pas le nombre de vues mais la perception : confiance, légitimité, crédibilité auprès des audiences clés. Cela suppose la mise en place d'études barométriques régulières, complémentaires des indicateurs digitaux.</p>
+
+    <h2>Pour aller plus loin</h2>
+    <p>Si vous pilotez la communication d'une institution, ONG ou organisme international à Rabat, découvrez notre <a href="/agence-communication-rabat">page dédiée à la communication institutionnelle</a> ou contactez-nous pour un échange confidentiel sur votre dispositif.</p>
+    `,
+    author: 'Link Agency',
+    publishDate: '2026-05-10',
+    slug: 'communication-institutionnelle-rabat',
+    category: 'conseils',
+    image: '/assets/blog/communication-rabat.jpg',
+    readTime: 8,
+    tags: ['rabat', 'communication institutionnelle', 'ONG', 'institutions publiques', 'maroc'],
+    metaDescription: "Communication institutionnelle à Rabat : enjeux, codes et bonnes pratiques pour ministères, ONG, ambassades et organismes internationaux au Maroc.",
+    metaKeywords: "communication institutionnelle rabat, agence communication rabat, agence ONG rabat, communication publique maroc, agence institutionnelle maroc"
   }
 ];
 

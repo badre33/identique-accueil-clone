@@ -210,4 +210,26 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- Blog - Articles satellites locaux -->
+  <url>
+    <loc>https://linkagency.ma/blog/choisir-agence-marketing-digital-casablanca</loc>
+    <lastmod>2026-05-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://linkagency.ma/blog/marketing-hotelier-marrakech-strategie</loc>
+    <lastmod>2026-05-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://linkagency.ma/blog/communication-institutionnelle-rabat</loc>
+    <lastmod>2026-05-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
