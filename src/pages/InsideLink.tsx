@@ -94,7 +94,7 @@ const InsideLink = () => {
     <div className="min-h-screen bg-white relative overflow-hidden pt-16 sm:pt-20">
       <SEOHead
         title="Inside Link Agency - Notre Équipe & Vision | Agence Marketing Maroc"
-        description="Découvrez l'équipe et la vision de Link Agency, agence digitale à Casablanca. 8 ans d'expérience, 200+ projets, une approche stratégique dédiée aux marques établies au Maroc."
+        description="Découvrez l'équipe et la vision de Link Agency, agence digitale à Casablanca. 11 ans d'expérience, 200+ projets, une approche stratégique dédiée aux marques établies au Maroc."
         keywords="link agency casablanca, agence digitale maroc, équipe senior casablanca, stratégie marque maroc"
         url="https://linkagency.ma/inside-link"
       />
@@ -196,7 +196,7 @@ const InsideLink = () => {
                       Plus de 11 ans d'expérience auprès de marques marocaines de tous secteurs (services, retail, industrie, e-commerce, finance), aux côtés desquelles il a piloté des dispositifs 360° qui alignent branding, contenu, paid et événementiel sur un même objectif business.
                     </p>
                     <p className="text-lg text-neutral-600 leading-relaxed">
-                      Ancien caporal des forces d'élite françaises (engagé en 2007), passé par la tech, le conseil stratégique, la croissance B2C et un cabinet fiduciaire de référence, il a forgé une conviction simple : on ne fait pas du branding pour faire du branding, ni des posts pour faire des posts. Tout part d'une stratégie. Chaque création, chaque campagne, chaque événement sert l'image de marque ET la performance commerciale.
+                      Ancien caporal des forces d'élite françaises (engagé en 2007), passé par la tech, le conseil stratégique, la croissance B2B et B2C et un cabinet fiduciaire de référence, il a forgé une conviction simple : on ne fait pas du branding pour faire du branding, ni des posts pour faire des posts. Tout part d'une stratégie. Chaque création, chaque campagne, chaque événement sert l'image de marque ET la performance commerciale.
                     </p>
                     
                     <div className="space-tight">

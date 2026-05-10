@@ -185,7 +185,7 @@ export const CTAWithStats = ({ className }: { className?: string }) => {
           <div className="text-sm text-gray-600 group-hover:text-gray-700 transition-colors duration-300">Projets réalisés</div>
         </div>
         <div className="text-center group cursor-pointer hover:scale-105 transition-transform duration-300 p-3 sm:p-2 rounded-lg hover:bg-white/50">
-          <div className="text-xl sm:text-2xl font-bold text-black mb-1 group-hover:text-purple-600 transition-colors duration-300">8 ans</div>
+          <div className="text-xl sm:text-2xl font-bold text-black mb-1 group-hover:text-purple-600 transition-colors duration-300">11 ans</div>
           <div className="text-sm text-gray-600 group-hover:text-gray-700 transition-colors duration-300">D'expérience</div>
         </div>
       </div>

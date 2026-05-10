@@ -38,7 +38,7 @@ const Analytics = () => {
     { number: "200+", label: "Projets pilotés", icon: <TrendingUp className="w-5 h-5 sm:w-6 sm:h-6" /> },
     { number: "50+", label: "Marques accompagnées", icon: <Target className="w-5 h-5 sm:w-6 sm:h-6" /> },
     { number: "15+", label: "Secteurs couverts", icon: <BarChart className="w-5 h-5 sm:w-6 sm:h-6" /> },
-    { number: "8 ans", label: "Expérience terrain", icon: <Activity className="w-5 h-5 sm:w-6 sm:h-6" /> }
+    { number: "11 ans", label: "Expérience terrain", icon: <Activity className="w-5 h-5 sm:w-6 sm:h-6" /> }
   ];
 
   const advantages = [

@@ -6,7 +6,7 @@ export const StatsSection = () => {
     { icon: Users, number: "50+", label: "Clients accompagnés" },
     { icon: Award, number: "200+", label: "Projets réalisés" },
     { icon: Globe, number: "15+", label: "Secteurs couverts" },
-    { icon: Zap, number: "8 ans", label: "Track record au Maroc" }
+    { icon: Zap, number: "11 ans", label: "Track record au Maroc" }
   ];
 
   return (

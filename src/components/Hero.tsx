@@ -14,7 +14,7 @@ const Hero = () => {
   const proofItems = [
     { value: "50+", label: "clients" },
     { value: "200+", label: "projets réalisés" },
-    { value: "8 ans", label: "d'expérience" },
+    { value: "11 ans", label: "d'expérience" },
     { value: "15+", label: "secteurs couverts" },
   ];
   const clientLogos = [
@@ -115,7 +115,7 @@ const Hero = () => {
               subtitleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
             }`}
           >
-            Stratégie. Contenu. Performance. Depuis 8 ans, Link Agency accompagne les directions marketing de plus de 50 marques, banques, assurances, retail, e-commerce, industrie, dans la conception de leurs identités, la production de leurs contenus, le pilotage de leurs dispositifs de performance et l'activation de leurs événements corporate.
+            Stratégie. Contenu. Performance. Avec 11 ans d'expérience cumulée, Link Agency accompagne les directions marketing de plus de 50 marques, banques, assurances, retail, e-commerce, industrie, dans la conception de leurs identités, la production de leurs contenus, le pilotage de leurs dispositifs de performance et l'activation de leurs événements corporate.
           </p>
           
           {/* Enhanced CTA Buttons - Mobile-first design with better touch targets */}
@@ -172,7 +172,7 @@ const Hero = () => {
               statsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
             }`}
           >
-            <p className="text-xs sm:text-sm font-medium text-slate-500 mb-6 sm:mb-8 tracking-wide uppercase hover:text-slate-600 transition-colors duration-300">50+ clients · 200+ projets réalisés · 8 ans · 15+ secteurs</p>
+            <p className="text-xs sm:text-sm font-medium text-slate-500 mb-6 sm:mb-8 tracking-wide uppercase hover:text-slate-600 transition-colors duration-300">50+ clients · 200+ projets réalisés · 11 ans d'expérience · 15+ secteurs</p>
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-8 sm:mb-10">
               {proofItems.map((item, index) => {
                 const icons = [Building2, Briefcase, Award, Layers];
