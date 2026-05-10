@@ -99,7 +99,7 @@ const Branding = () => {
   return (
     <div className="min-h-screen bg-white pt-16 sm:pt-20">
       <SEOHead
-        title="Branding & Identité de Marque au Maroc — Refonte & Plateforme | Link Agency"
+        title="Branding & Identité de Marque au Maroc, Refonte & Plateforme | Link Agency"
         description="Agence branding pour marques établies au Maroc : refonte d'identité, plateforme de marque, charte graphique et gouvernance. Casablanca & Marrakech."
         keywords="agence branding maroc, refonte identité visuelle, plateforme de marque, charte graphique entreprise, agence branding casablanca, brand strategy maroc"
         url="https://linkagency.ma/branding"
@@ -177,7 +177,7 @@ const Branding = () => {
             Agence de branding à Casablanca
           </h2>
           <p className="text-muted-foreground leading-relaxed text-lg">
-            Link Agency accompagne les directions marketing et communication d'organisations établies dans la structuration et la refonte de leurs identités de marque. Basée à Casablanca et présente à Marrakech, notre approche repose sur une méthodologie rigoureuse : audit de marque, diagnostic concurrentiel, définition du positionnement, conception de la plateforme et déploiement gouverné. Nous intervenons sur des refontes d'identité d'entreprises installées, des architectures de marque multi-entités, et des projets de repositionnement post-fusion ou post-pivot stratégique. Chaque mandat est traité comme un investissement structurant, avec un livrable de gouvernance permettant à vos équipes internes et agences partenaires d'appliquer la marque dans la durée. Notre connaissance des codes sectoriels marocains — banque, assurance, retail, industrie — nous permet de produire des identités qui s'inscrivent dans le marché local tout en répondant aux exigences des grandes organisations.
+            Link Agency accompagne les directions marketing et communication d'organisations établies dans la structuration et la refonte de leurs identités de marque. Basée à Casablanca et présente à Marrakech, notre approche repose sur une méthodologie rigoureuse : audit de marque, diagnostic concurrentiel, définition du positionnement, conception de la plateforme et déploiement gouverné. Nous intervenons sur des refontes d'identité d'entreprises installées, des architectures de marque multi-entités, et des projets de repositionnement post-fusion ou post-pivot stratégique. Chaque mandat est traité comme un investissement structurant, avec un livrable de gouvernance permettant à vos équipes internes et agences partenaires d'appliquer la marque dans la durée. Notre connaissance des codes sectoriels marocains, banque, assurance, retail, industrie, nous permet de produire des identités qui s'inscrivent dans le marché local tout en répondant aux exigences des grandes organisations.
           </p>
         </div>
       </section>

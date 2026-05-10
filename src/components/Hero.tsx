@@ -115,7 +115,7 @@ const Hero = () => {
               subtitleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
             }`}
           >
-            Stratégie. Contenu. Performance. Depuis 8 ans, Link Agency accompagne les directions marketing de plus de 50 marques — banques, assurances, retail, e-commerce, industrie — dans la conception de leurs identités, la production de leurs contenus, le pilotage de leurs dispositifs de performance et l'activation de leurs événements corporate.
+            Stratégie. Contenu. Performance. Depuis 8 ans, Link Agency accompagne les directions marketing de plus de 50 marques, banques, assurances, retail, e-commerce, industrie, dans la conception de leurs identités, la production de leurs contenus, le pilotage de leurs dispositifs de performance et l'activation de leurs événements corporate.
           </p>
           
           {/* Enhanced CTA Buttons - Mobile-first design with better touch targets */}

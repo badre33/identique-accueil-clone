@@ -21,7 +21,7 @@ export const ProjectsGallery = () => {
   const projects = [
     {
       title: "L'Bankalik",
-      category: "Banque & performance digitale — Maroc",
+      category: "Banque & performance digitale, Maroc",
       image: "/lovable-uploads/155dc759-4923-4ddc-8251-334cb8ba3ad7.png",
       shortDescription: "Stratégie éditoriale institutionnelle, contenus pédagogiques bilingues FR/AR, community management et pilotage média Meta Ads pour la banque digitale du groupe Attijariwafa Bank.",
       description: "Gestion complète des réseaux pour L'Bankalik par Attijariwafa Bank : stratégie éditoriale institutionnelle, contenus pédagogiques bilingues FR/AR, community management, pilotage Meta Ads sur des objectifs de notoriété, lead generation et conversion. Les dispositifs sont segmentés selon les audiences clés : jeunes actifs, familles, MRE et PME, avec une couverture des temps forts groupe et des prises de parole employeur.",
@@ -30,7 +30,7 @@ export const ProjectsGallery = () => {
     },
     {
       title: "AXA Assurance Maroc",
-      category: "Assurance & contenus institutionnels — Maroc",
+      category: "Assurance & contenus institutionnels, Maroc",
       image: "/lovable-uploads/86dfbcc8-1b16-4656-9047-427ad8d69523.png",
       shortDescription: "Contenus institutionnels et pédagogiques, motion design, community management quotidien et campagnes Meta Ads avec optimisation du CPL.",
       description: "Accompagnement stratégique de la présence digitale d'AXA Assurance Maroc : contenus institutionnels et pédagogiques, motion design pour vulgariser les produits auto, santé, épargne et prévoyance, community management quotidien et campagnes Meta Ads dédiées à la notoriété et à la génération de leads. Les créatifs sont pilotés en A/B testing pour optimiser le CPL.",
@@ -39,7 +39,7 @@ export const ProjectsGallery = () => {
     },
     {
       title: "RMA",
-      category: "Assurance & social media — Maroc",
+      category: "Assurance & social media, Maroc",
       image: "/lovable-uploads/29365e8a-7e4d-4041-ad14-37f38d1bde1b.png",
       shortDescription: "Production de contenus institutionnels, Reels de sensibilisation, campagnes de renouvellement et rédaction bilingue FR/AR.",
       description: "Pour RMA, Link Agency produit des contenus institutionnels, des Reels de sensibilisation et des campagnes dédiées aux temps forts assurance : renouvellement auto, rentrée santé, prévention routière et Ramadan. Le dispositif comprend la rédaction bilingue FR/AR, la gestion des requêtes clients et la cohérence éditoriale sur l'ensemble des prises de parole.",
@@ -48,7 +48,7 @@ export const ProjectsGallery = () => {
     },
     {
       title: "OCB Maroc",
-      category: "Social Media & Ads — Maroc",
+      category: "Social Media & Ads, Maroc",
       image: "/lovable-uploads/ocb-logo.png",
       shortDescription: "Gestion complète des réseaux sociaux pour OCB Maroc : stratégie de contenu, campagnes publicitaires, et partenariats stratégiques avec des événements et artistes.",
       description: "Accompagnement stratégique et opérationnel pour OCB Maroc dans la gestion de la marque sur le territoire marocain. Notre mission couvre la gestion complète des réseaux sociaux avec une stratégie de contenu engageante et adaptée au marché local, la conception et le pilotage de campagnes publicitaires ciblées (Meta Ads, TikTok Ads), ainsi que le développement d'une stratégie de partenariats innovante avec des événements culturels et musicaux majeurs au Maroc et des collaborations avec des artistes influents pour renforcer le positionnement de la marque auprès d'une audience jeune et connectée.",
@@ -57,7 +57,7 @@ export const ProjectsGallery = () => {
     },
     {
       title: "Artitenium",
-      category: "Branding & Digital — Maroc",
+      category: "Branding & Digital, Maroc",
       image: "/lovable-uploads/ceaff19e-cebb-453b-a8e2-33fc348e3bad.png",
       shortDescription: "Création d'identité visuelle moderne, développement de site web et stratégie d'acquisition digitale pour cette entreprise d'aménagement d'intérieur haut de gamme.",
       description: "Transformation digitale complète d'Artitenium, entreprise spécialisée dans l'aménagement d'intérieur haut de gamme au Maroc. Notre accompagnement incluait la création d'une identité de marque sophistiquée reflétant l'excellence artisanale marocaine, le développement d'un site web premium showcase mettant en valeur leurs réalisations exceptionnelles, et l'élaboration d'une stratégie d'acquisition digitale ciblée. L'objectif était de positionner Artitenium comme la référence incontournable du design d'intérieur de luxe au Maroc, en développant une présence digitale à la hauteur de leur savoir-faire exceptionnel et en créant les outils nécessaires pour conquérir une clientèle haut de gamme exigeante.",
@@ -66,7 +66,7 @@ export const ProjectsGallery = () => {
     },
     {
       title: "Nova Spacia",
-      category: "Branding & Digital — Maroc",
+      category: "Branding & Digital, Maroc",
       image: "/lovable-uploads/novaspacia-logo.svg",
       shortDescription: "Création d'identité visuelle et développement web pour Nova Spacia, entreprise spécialisée dans l'aménagement d'espaces professionnels et commerciaux.",
       description: "Accompagnement complet de Nova Spacia dans le développement de leur image de marque et présence digitale. Notre mission incluait la conception d'une identité visuelle moderne et professionnelle, le développement d'un site web performant mettant en valeur leurs services d'aménagement d'espaces, ainsi qu'une stratégie de communication digitale adaptée à leur positionnement premium sur le marché de l'aménagement professionnel.",
@@ -75,7 +75,7 @@ export const ProjectsGallery = () => {
     },
     {
       title: "Oncovita",
-      category: "Santé & Bien-être — Maroc",
+      category: "Santé & Bien-être, Maroc",
       image: "/lovable-uploads/oncovita-logo.jpeg",
       shortDescription: "Association dédiée à l'accompagnement holistique des patients atteints de cancer : soigner le corps, apaiser l'esprit, nourrir l'espoir.",
       description: "Mission complète d'accompagnement stratégique pour Oncovita, association pionnière dans le soutien aux patients atteints de cancer au Maroc. Notre intervention s'est concentrée sur la création d'une identité visuelle forte et sensible, le développement d'une stratégie de communication émotionnelle et impactante, ainsi que la mise en place d'outils digitaux pour faciliter l'accès aux services d'accompagnement. Le projet incluait la refonte de l'identité de marque, la production de contenus inspirants centrés sur l'espoir et la résilience, et le développement d'une présence digitale humaniste permettant de toucher et d'accompagner davantage de patients et leurs familles dans cette épreuve.",
@@ -84,7 +84,7 @@ export const ProjectsGallery = () => {
     },
     {
       title: "Nexia",
-      category: "Conseil & Digitalisation — Maroc",
+      category: "Conseil & Digitalisation, Maroc",
       image: "/lovable-uploads/05dfc79f-2a20-4241-aa4d-606f6cdd30d2.png",
       shortDescription: "Accompagnement stratégique en digitalisation, conseil en communication et gestion des réseaux sociaux pour optimiser la présence digitale.",
       description: "Mission d'accompagnement stratégique pour Nexia, cabinet de conseil spécialisé, dans leur transformation digitale complète. Notre intervention s'est concentrée sur l'optimisation de leur présence digitale, le développement d'une stratégie de communication moderne et la restructuration de leur approche sur les réseaux sociaux. Le projet incluait la refonte de leur stratégie de contenu, la mise en place d'outils de digitalisation performants et l'accompagnement de leurs équipes dans l'adoption des nouvelles pratiques digitales pour renforcer leur positionnement d'expert conseil auprès de leur clientèle cible.",
