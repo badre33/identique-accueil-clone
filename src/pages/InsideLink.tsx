@@ -1,6 +1,6 @@
 import { SEOHead } from "@/components/SEOHead";
 import { useState, useEffect } from "react";
-import { ArrowLeft, Target, Palette, Users, Lightbulb, Linkedin, History, Download } from "lucide-react";
+import { ArrowLeft, Target, Palette, Users, Lightbulb, Linkedin, History, Download, LineChart, Search, Code2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { FloatingContactWidget } from "@/components/FloatingContactWidget";
 import { SideNavigation } from "@/components/inside-link/SideNavigation";
@@ -53,27 +53,39 @@ const InsideLink = () => {
 
   const skillsData = [
     {
+      icon: LineChart,
+      title: "Pilotage P&L Digital",
+      description: "Attribution multi-touch, RevOps et orchestration de la performance commerciale. Chaque dirham investi devient un actif mesurable.",
+      gradient: "from-slate-700 to-slate-900"
+    },
+    {
       icon: Target,
-      title: "Stratégie de Positionnement",
-      description: "Nous analysons votre marché et définissons votre positionnement unique pour vous démarquer de la concurrence.",
+      title: "Acquisition & Lead Generation",
+      description: "Meta · Google · TikTok · LinkedIn Ads avec lead scoring qualifié, spécialisation banque, assurance et crédit consommation.",
       gradient: "from-blue-500 to-cyan-500"
     },
     {
-      icon: Palette,
-      title: "Design & Identité Visuelle",
-      description: "Création d'identités visuelles mémorables qui reflètent parfaitement l'essence de votre marque.",
-      gradient: "from-purple-500 to-pink-500"
-    },
-    {
-      icon: Lightbulb,
-      title: "Innovation & Créativité",
-      description: "Approches créatives et innovations pour faire rayonner votre marque dans un monde saturé.",
+      icon: Search,
+      title: "SEO Trilingue FR · AR · Darija",
+      description: "Référencement naturel bilingue français-arabe avec expertise rare au Maroc, capable de générer 20 à 30 % de croissance organique.",
       gradient: "from-green-500 to-emerald-500"
     },
     {
+      icon: Palette,
+      title: "Branding & Identité Visuelle",
+      description: "Création d'identités de marque mémorables et systèmes de design cohérents pour les marques régulées et établies.",
+      gradient: "from-purple-500 to-pink-500"
+    },
+    {
+      icon: Code2,
+      title: "UX/UI & CRO",
+      description: "Conception de parcours de conversion, A/B testing systématique et design system pour transformer le trafic en leads qualifiés.",
+      gradient: "from-indigo-500 to-blue-500"
+    },
+    {
       icon: Users,
-      title: "Expérience Client",
-      description: "Optimisation de chaque point de contact pour créer des expériences client exceptionnelles.",
+      title: "CRM & Marketing Automation",
+      description: "Intégration CRM, WhatsApp Business et automation pour boucler la chaîne lead → call center → closing en moins d'une heure.",
       gradient: "from-orange-500 to-red-500"
     }
   ];
