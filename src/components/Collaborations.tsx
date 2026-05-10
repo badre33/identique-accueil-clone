@@ -66,10 +66,46 @@ export const Collaborations = () => {
       description: "Stratégie de repositionnement et campagne de communication pour cette marque de mode iconique.",
       year: "2024",
       type: "Fashion"
+    },
+    {
+      name: "L'Bankalik (Attijariwafa Bank)",
+      url: "https://www.lbankalik.ma/",
+      category: "Banque",
+      logo: "/lovable-uploads/lbankalik-logo.png",
+      description: "Accompagnement en communication digitale et activation de marque pour la néobanque du groupe Attijariwafa Bank.",
+      year: "2024",
+      type: "Banque & Digital"
+    },
+    {
+      name: "AXA Assurance Maroc",
+      url: "https://www.axa.ma/",
+      category: "Assurance",
+      logo: "/lovable-uploads/axa-logo.png",
+      description: "Stratégie de communication et production de contenus pour renforcer la proximité de la marque avec ses assurés au Maroc.",
+      year: "2024",
+      type: "Assurance & Communication"
+    },
+    {
+      name: "YouCan",
+      url: "https://youcan.shop/",
+      category: "E-commerce",
+      logo: "/lovable-uploads/youcan-logo.png",
+      description: "Collaboration marketing et création de contenus pour la plateforme e-commerce qui propulse les marchands marocains.",
+      year: "2024",
+      type: "SaaS & E-commerce"
+    },
+    {
+      name: "RMA (Royale Marocaine d'Assurance)",
+      url: "https://www.rmaassurance.com/",
+      category: "Assurance",
+      logo: "/lovable-uploads/rma-logo.jpg",
+      description: "Conseil stratégique et accompagnement en communication de marque pour l'un des leaders de l'assurance au Maroc.",
+      year: "2024",
+      type: "Assurance & Branding"
     }
   ];
 
-  const categories = ["Branding Personnel", "Tech", "Musique", "Digital", "Conseil", "Mode", "Aménagement"];
+  const categories = ["Branding Personnel", "Tech", "Musique", "Digital", "Conseil", "Mode", "Aménagement", "Banque", "Assurance", "E-commerce"];
 
   return (
     <section className="py-32 px-8 lg:px-16 bg-gradient-to-br from-gray-50 via-white to-gray-100 relative overflow-hidden">
