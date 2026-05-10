@@ -12,13 +12,13 @@ const MarketingDigital = () => {
     "@context": "https://schema.org",
     "@graph": [
       generateServiceSchema(
-        "Marketing Digital & Stratégies Digitales",
-        "Pilotage de dispositifs marketing digital pour marques établies au Maroc : SEO, campagnes Meta/Google/TikTok, social media et analytics avancées.",
+        "Acquisition Payante & Lead Generation Maroc",
+        "Campagnes Meta · Google · TikTok · LinkedIn Ads avec lead scoring qualifié pour les secteurs régulés au Maroc — banque, assurance, crédit consommation.",
         "Sur devis"
       ),
       generateWebPageSchema(
-        "Marketing Digital, Pilotage SEO, Paid Media & Social pour marques établies | Link Agency Maroc",
-        "Pilotage marketing digital pour directions marketing au Maroc : SEO, Meta Ads, Google Ads, TikTok Ads, social media management et reporting ROI.",
+        "Acquisition Payante & Lead Generation Maroc | Link Agency",
+        "Campagnes Meta Ads, Google Ads, TikTok Ads, LinkedIn Ads et social media — pilotage CPL, lead scoring qualifié et reporting ROI pour les marques régulées au Maroc.",
         "https://linkagency.ma/marketing-digital"
       ),
       generateBreadcrumbSchema([
