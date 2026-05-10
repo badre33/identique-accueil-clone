@@ -60,7 +60,7 @@ export const EditorialQuote = ({ children, author }: EditorialQuoteProps) => (
     </blockquote>
     {author && (
       <figcaption className="mt-4 pl-8 text-sm text-muted-foreground font-medium">
-        — {author}
+       , {author}
       </figcaption>
     )}
   </figure>

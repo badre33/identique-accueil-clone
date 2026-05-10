@@ -17,7 +17,7 @@ const MarketingDigital = () => {
         "Sur devis"
       ),
       generateWebPageSchema(
-        "Marketing Digital — Pilotage SEO, Paid Media & Social pour marques établies | Link Agency Maroc",
+        "Marketing Digital, Pilotage SEO, Paid Media & Social pour marques établies | Link Agency Maroc",
         "Pilotage marketing digital pour directions marketing au Maroc : SEO, Meta Ads, Google Ads, TikTok Ads, social media management et reporting ROI.",
         "https://linkagency.ma/marketing-digital"
       ),
@@ -103,7 +103,7 @@ const MarketingDigital = () => {
   return (
     <div className="min-h-screen bg-white pt-16 sm:pt-20">
       <SEOHead
-        title="Marketing Digital — Pilotage SEO, Paid Media & Social | Link Agency Maroc"
+        title="Marketing Digital, Pilotage SEO, Paid Media & Social | Link Agency Maroc"
         description="Pilotage marketing digital pour directions marketing de marques établies au Maroc : SEO, campagnes Meta/Google/TikTok, social media et reporting ROI."
         keywords="agence marketing digital maroc, pilotage paid media casablanca, agence SEO maroc, campagnes meta ads maroc, agence social media casablanca, reporting ROI digital"
         url="https://linkagency.ma/marketing-digital"
@@ -220,7 +220,7 @@ const MarketingDigital = () => {
             Agence marketing à Casablanca
           </h2>
           <p className="text-muted-foreground leading-relaxed text-lg">
-            Link Agency pilote les dispositifs marketing digital de marques établies au Maroc — banque, assurance, retail, e-commerce, industrie. Depuis Casablanca et Marrakech, nous accompagnons les directions marketing dans la structuration de leurs dispositifs d'acquisition et de conversion. Notre rôle dépasse l'exécution tactique : nous intervenons sur le cadrage stratégique, la priorisation budgétaire entre canaux et le pilotage rigoureux de la performance. SEO, paid media (Meta, Google, TikTok, LinkedIn), social media et analytics — chaque levier est calibré en fonction de votre maturité digitale, de vos objectifs business et de vos contraintes sectorielles, notamment dans les univers régulés. Notre approche s'appuie sur un reporting mensuel structuré et des arbitrages partagés avec vos équipes internes.
+            Link Agency pilote les dispositifs marketing digital de marques établies au Maroc, banque, assurance, retail, e-commerce, industrie. Depuis Casablanca et Marrakech, nous accompagnons les directions marketing dans la structuration de leurs dispositifs d'acquisition et de conversion. Notre rôle dépasse l'exécution tactique : nous intervenons sur le cadrage stratégique, la priorisation budgétaire entre canaux et le pilotage rigoureux de la performance. SEO, paid media (Meta, Google, TikTok, LinkedIn), social media et analytics, chaque levier est calibré en fonction de votre maturité digitale, de vos objectifs business et de vos contraintes sectorielles, notamment dans les univers régulés. Notre approche s'appuie sur un reporting mensuel structuré et des arbitrages partagés avec vos équipes internes.
           </p>
         </div>
       </section>

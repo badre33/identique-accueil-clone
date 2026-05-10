@@ -1050,7 +1050,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Activation de Marque par l\'Événementiel au Maroc : Méthodologie et Leviers Stratégiques',
     excerpt: 'Comment transformer un événement en véritable levier d\'activation de marque au Maroc. Méthodologie, formats immersifs et indicateurs de performance pour dirigeants et responsables marketing.',
     content: `
-    <p><strong>L'activation de marque désigne l'ensemble des dispositifs qui permettent à une marque de passer d'une existence théorique — un logo, un positionnement, une charte — à une expérience concrète, vécue et mémorisable par ses publics cibles. L'événementiel constitue l'un des canaux les plus puissants pour réaliser cette transition.</strong></p>
+    <p><strong>L'activation de marque désigne l'ensemble des dispositifs qui permettent à une marque de passer d'une existence théorique, un logo, un positionnement, une charte, à une expérience concrète, vécue et mémorisable par ses publics cibles. L'événementiel constitue l'un des canaux les plus puissants pour réaliser cette transition.</strong></p>
 
     <h2>Pourquoi l'activation de marque est devenue un enjeu stratégique au Maroc</h2>
     <p>Le marché marocain se caractérise par une densification concurrentielle rapide. Dans ce contexte, disposer d'une identité de marque solide ne suffit plus. Encore faut-il que cette identité soit vécue, ressentie et partagée par les publics visés. C'est précisément le rôle de l'activation de marque.</p>
@@ -1095,7 +1095,7 @@ export const blogPosts: BlogPost[] = [
     <p>La phase de pré-événement vise à générer de l'intérêt et de l'engagement. Campagnes teasing sur les réseaux sociaux, invitations personnalisées, contenus exclusifs : chaque point de contact doit préparer l'audience à l'expérience qui l'attend. Cette phase est aussi l'occasion de qualifier les participants et de personnaliser leur parcours.</p>
 
     <h3>Pendant l'événement : maximiser l'expérience</h3>
-    <p>Le jour J, chaque détail compte. La scénographie, l'accueil, le rythme, les interactions, la qualité des contenus présentés : tout doit incarner la marque de manière cohérente. Les dispositifs de capture de contenu — photos, vidéos, témoignages en direct — permettent d'amplifier la portée de l'activation au-delà des seuls participants présents.</p>
+    <p>Le jour J, chaque détail compte. La scénographie, l'accueil, le rythme, les interactions, la qualité des contenus présentés : tout doit incarner la marque de manière cohérente. Les dispositifs de capture de contenu, photos, vidéos, témoignages en direct, permettent d'amplifier la portée de l'activation au-delà des seuls participants présents.</p>
 
     <h3>Après l'événement : capitaliser et prolonger</h3>
     <p>La phase post-événement est souvent négligée, alors qu'elle conditionne le retour sur investissement à long terme. Partage de contenus, remerciements personnalisés, synthèses exclusives, enquêtes de satisfaction : ces actions prolongent la relation initiée lors de l'activation et nourrissent le capital de marque. Un événement sans suivi est une opportunité gaspillée.</p>
