@@ -198,7 +198,17 @@ const InsideLink = () => {
                     <p className="text-lg text-neutral-600 leading-relaxed">
                       Ancien caporal des forces d'élite françaises (engagé en 2007), passé par la tech, le conseil stratégique, la croissance B2B et B2C et un cabinet fiduciaire de référence, il a forgé une conviction simple : on ne fait pas du branding pour faire du branding, ni des posts pour faire des posts. Tout part d'une stratégie. Chaque création, chaque campagne, chaque événement sert l'image de marque ET la performance commerciale.
                     </p>
-                    
+
+                    <div className="space-tight">
+                      <div className="flex items-center space-x-4">
+                        <Users className="w-7 h-7 text-black" />
+                        <span className="text-lg font-medium text-neutral-800">Quelques marques accompagnées :</span>
+                      </div>
+                      <p className="text-lg text-neutral-600 leading-relaxed ml-11">
+                        L'Bankalik (Attijariwafa Bank), AXA Assurance Maroc, RMA, Nexia, SGTM Immobilier, Subway Maroc, YouCan, Oncovita, La Maison Amoud, Achibest Food, Soulection, Artitenium, DWP, Focus M, Secret Events, Umbra Festival, Casablanca Music Week, Mom Corporation, OK Daddy, Épicerie Bordelaise, OCB Maroc, Edwin, et bien d'autres marques marocaines et internationales sur des dispositifs branding, contenu, performance, événementiel et personal branding.
+                      </p>
+                    </div>
+
                     <div className="space-tight">
                       <div className="flex items-center space-x-4">
                         <Target className="w-7 h-7 text-black transform hover:rotate-12 transition-transform duration-300 morph-icon" />
