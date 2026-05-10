@@ -27,7 +27,7 @@ const timelineEvents: TimelineEvent[] = [
     id: 2,
     year: '2017',
     title: 'Tech, conseil & croissance',
-    description: 'Premières missions en tech, conseil stratégique et croissance B2C. Naissance de l\'approche hybride exécution + data.',
+    description: 'Premières missions en tech, conseil stratégique et croissance B2B et B2C. Naissance de l\'approche hybride exécution + data.',
     icon: Lightbulb,
     color: 'from-green-500 to-emerald-500',
     location: 'Paris · Casablanca'
