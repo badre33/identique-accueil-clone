@@ -32,6 +32,7 @@ const Evenementiel = () => {
         { name: "Accueil", url: "https://linkagency.ma/" },
         { name: "Événementiel Corporate", url: "https://linkagency.ma/evenementiel" }
       ]),
+      generateFAQSchema(serviceFaqs["evenementiel"]),
       {
         "@type": "Organization",
         "@id": "https://linkagency.ma/#organization",
