@@ -16,7 +16,7 @@ interface TimelineEvent {
 const timelineEvents: TimelineEvent[] = [
   {
     id: 1,
-    year: '2014',
+    year: '2007',
     title: 'Forces d\'élite & rigueur',
     description: 'Badreddine sert dans les forces d\'élite françaises et y forge la discipline qui structurera son approche stratégique.',
     icon: Users,
@@ -35,8 +35,8 @@ const timelineEvents: TimelineEvent[] = [
   {
     id: 3,
     year: '2020',
-    title: 'Spécialisation secteurs régulés',
-    description: 'Focalisation sur banque, assurance et crédit consommation au Maroc. Le marketing digital piloté comme un P&L devient sa signature.',
+    title: 'Stratégies 360° & performance',
+    description: 'Pilotage de dispositifs marketing intégrés pour des marques de tous secteurs au Maroc. Le marketing piloté comme un P&L devient sa signature.',
     icon: Award,
     color: 'from-purple-500 to-pink-500',
     location: 'Casablanca, Maroc'
@@ -53,8 +53,8 @@ const timelineEvents: TimelineEvent[] = [
   {
     id: 5,
     year: '2026',
-    title: 'Référence marques régulées',
-    description: 'Link Agency devient la référence du marketing digital piloté pour les grandes marques marocaines (banque, assurance, crédit).',
+    title: 'Agence de stratégie & performance',
+    description: 'Link Agency devient le partenaire stratégique des marques qui veulent aligner branding, contenu, paid et événementiel sur un objectif de performance commerciale.',
     icon: Calendar,
     color: 'from-indigo-500 to-purple-500',
     location: 'Casablanca · Marrakech'

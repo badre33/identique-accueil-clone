@@ -8,7 +8,7 @@ export const generateOrganizationSchema = () => ({
   "url": "https://linkagency.ma",
   "logo": "https://linkagency.ma/lovable-uploads/85b45a40-6291-4f5d-a377-65024ddb1976.png",
   "image": "https://linkagency.ma/lovable-uploads/85b45a40-6291-4f5d-a377-65024ddb1976.png",
-  "foundingDate": "2014",
+  "foundingDate": "2023",
   "description": "Agence de marketing digital au Maroc spécialisée en branding, communication digitale et événementiel",
   "address": [
     {
