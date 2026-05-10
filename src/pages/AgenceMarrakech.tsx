@@ -44,7 +44,7 @@ const AgenceMarrakech = () => {
   const schema = {
     "@context": "https://schema.org",
     "@graph": [
-      generateLocalBusinessSchema(),
+      generateLocalBusinessSchema("marrakech"),
       generateServiceSchema(
         "Agence Marketing Digital à Marrakech",
         "Agence marketing digital à Marrakech : branding, communication, social media, production de contenu et événementiel pour hôtellerie, luxe et lifestyle.",
