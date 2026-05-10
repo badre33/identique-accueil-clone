@@ -133,11 +133,15 @@ const Branding = () => {
             </div>
             
             <div className="relative">
-              <img 
-                src="/lovable-uploads/f0a7c042-b0e0-48e5-9453-52ec37cbe21f.png" 
-                alt="Branding Services" 
-                className="w-full h-auto rounded-lg shadow-lg"
-              />
+              <div className="w-96 h-96 bg-gradient-to-br from-gray-100 to-gray-200 rounded-full flex items-center justify-center mx-auto relative">
+                <Palette className="w-32 h-32 text-gray-700" />
+                <div className="absolute -top-4 -right-4 w-24 h-24 bg-white rounded-full shadow-lg flex items-center justify-center">
+                  <Compass className="w-12 h-12 text-black" />
+                </div>
+                <div className="absolute -bottom-4 -left-4 w-20 h-20 bg-white rounded-full shadow-lg flex items-center justify-center">
+                  <Target className="w-10 h-10 text-gray-800" />
+                </div>
+              </div>
             </div>
           </div>
         </div>
