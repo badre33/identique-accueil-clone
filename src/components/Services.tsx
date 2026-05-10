@@ -23,8 +23,8 @@ export const Services = () => {
     {
       icon: Megaphone,
       title: "Acquisition payante & Lead Generation Maroc",
-      description: "Nous concevons et pilotons des campagnes Meta, Google, TikTok et LinkedIn Ads avec lead scoring qualifié : spécialisation secteurs régulés (banque, assurance, crédit consommation).",
-      features: ["Meta · Google · TikTok · LinkedIn Ads", "Lead scoring & qualification", "Optimisation CPL secteurs régulés"],
+      description: "Nous concevons et pilotons des campagnes Meta, Google, TikTok et LinkedIn Ads avec lead scoring qualifié, pour des marques de tous secteurs au Maroc.",
+      features: ["Meta · Google · TikTok · LinkedIn Ads", "Lead scoring & qualification", "Optimisation CPL & ROAS"],
       color: "from-blue-500 to-indigo-600",
       bgImage: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=300&h=225&fit=crop&fm=webp&q=30",
       link: "/marketing-digital"
@@ -137,7 +137,7 @@ export const Services = () => {
           </h2>
           
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-600 max-w-4xl mx-auto leading-relaxed font-light px-4 sm:px-0">
-            Stratégie & pilotage performance, acquisition payante, SEO bilingue, branding, communication et activations : un modèle hybride agence + cabinet de pilotage data, pensé pour les marques régulées au Maroc.
+            Stratégie & pilotage performance, acquisition payante, SEO bilingue, branding, communication et activations : un modèle hybride agence + cabinet de pilotage stratégique, pour les marques qui veulent aligner image et performance commerciale.
           </p>
         </div>
 

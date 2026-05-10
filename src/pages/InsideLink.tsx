@@ -73,7 +73,7 @@ const InsideLink = () => {
     {
       icon: Palette,
       title: "Branding & Identité Visuelle",
-      description: "Création d'identités de marque mémorables et systèmes de design cohérents pour les marques régulées et établies.",
+      description: "Création d'identités de marque mémorables et systèmes de design cohérents, du démarrage d'une marque à la refonte d'enseignes établies.",
       gradient: "from-purple-500 to-pink-500"
     },
     {
@@ -188,15 +188,15 @@ const InsideLink = () => {
                   <div className="space-content">
                     <div className="space-tight">
                       <h2 className="text-neutral-900 mb-3">Badreddine Harkaoui</h2>
-                      <p className="text-xl text-neutral-500 font-light">Fondateur &amp; Strategic Growth Architect : Expert pilotage performance &amp; revenue orchestration.</p>
+                      <p className="text-xl text-neutral-500 font-light">Fondateur &amp; Strategic Growth Architect. Expert en stratégie 360°, pilotage performance et orchestration commerciale.</p>
                     </div>
                     
                     <p className="text-lg text-neutral-600 leading-relaxed">
                       Badreddine est l'architecte de la performance commerciale de Link Agency.<br />
-                      Plus de 11 ans d'expérience auprès de grandes marques régulées au Maroc : banque, assurance, crédit consommation : il pilote des dispositifs marketing hybrides qui combinent exécution créative et orchestration data de la performance.
+                      Plus de 11 ans d'expérience auprès de marques marocaines de tous secteurs (services, retail, industrie, e-commerce, finance), aux côtés desquelles il a piloté des dispositifs 360° qui alignent branding, contenu, paid et événementiel sur un même objectif business.
                     </p>
                     <p className="text-lg text-neutral-600 leading-relaxed">
-                      Ancien caporal dans les forces d'élite françaises, passé par la tech, le conseil stratégique et la croissance B2C, il a forgé une approche unique : chaque dirham marketing devient un actif mesurable, chaque campagne s'inscrit dans un P&amp;L digital, chaque lead s'attribue à une source précise.
+                      Ancien caporal des forces d'élite françaises (engagé en 2007), passé par la tech, le conseil stratégique, la croissance B2C et un cabinet fiduciaire de référence, il a forgé une conviction simple : on ne fait pas du branding pour faire du branding, ni des posts pour faire des posts. Tout part d'une stratégie. Chaque création, chaque campagne, chaque événement sert l'image de marque ET la performance commerciale.
                     </p>
                     
                     <div className="space-tight">
@@ -205,11 +205,11 @@ const InsideLink = () => {
                         <span className="text-lg font-medium text-neutral-800">Expertises stratégiques :</span>
                       </div>
                       <ul className="space-y-3 ml-11 text-neutral-600">
-                        <li className="hover:text-neutral-800 transition-colors cursor-default">• Pilotage P&amp;L digital &amp; attribution multi-touch,</li>
-                        <li className="hover:text-neutral-800 transition-colors cursor-default">• Revenue performance orchestration (RevOps),</li>
-                        <li className="hover:text-neutral-800 transition-colors cursor-default">• Acquisition payante &amp; lead scoring qualifié (banque, assurance, crédit conso),</li>
-                        <li className="hover:text-neutral-800 transition-colors cursor-default">• Branding exécutif &amp; positionnement de marques régulées,</li>
-                        <li className="hover:text-neutral-800 transition-colors cursor-default">• Transformation digitale &amp; déploiement de dispositifs complexes.</li>
+                        <li className="hover:text-neutral-800 transition-colors cursor-default">• Stratégie de marque 360° et plateforme de positionnement,</li>
+                        <li className="hover:text-neutral-800 transition-colors cursor-default">• Branding, identité visuelle et direction artistique,</li>
+                        <li className="hover:text-neutral-800 transition-colors cursor-default">• Pilotage P&amp;L digital, attribution et orchestration des canaux,</li>
+                        <li className="hover:text-neutral-800 transition-colors cursor-default">• Acquisition payante, social media et lead generation,</li>
+                        <li className="hover:text-neutral-800 transition-colors cursor-default">• Activations, événements et déploiement opérationnel de dispositifs complexes.</li>
                       </ul>
                     </div>
                     

@@ -95,7 +95,7 @@ export const OptimizedCTAs = {
       "Portefeuille de marques établies, dont banque et assurance",
       "Studio interne : contenu, vidéo, motion, shooting et copywriting",
       "Pilotage publicitaire rigoureux avec reporting et optimisation continue",
-      "Expertise sectorielle prouvée dans des univers régulés"
+      "Expertise sectorielle large : services, retail, industrie, finance, e-commerce"
     ],
     ctaText = "Découvrir nos expertises",
     link = "/#services"

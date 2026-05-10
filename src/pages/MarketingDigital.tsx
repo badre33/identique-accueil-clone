@@ -13,12 +13,12 @@ const MarketingDigital = () => {
     "@graph": [
       generateServiceSchema(
         "Acquisition Payante & Lead Generation Maroc",
-        "Campagnes Meta · Google · TikTok · LinkedIn Ads avec lead scoring qualifié pour les secteurs régulés au Maroc : banque, assurance, crédit consommation.",
+        "Campagnes Meta · Google · TikTok · LinkedIn Ads avec lead scoring qualifié, pour des marques de tous secteurs au Maroc.",
         "Sur devis"
       ),
       generateWebPageSchema(
         "Acquisition Payante & Lead Generation Maroc | Link Agency",
-        "Campagnes Meta Ads, Google Ads, TikTok Ads, LinkedIn Ads et social media : pilotage CPL, lead scoring qualifié et reporting ROI pour les marques régulées au Maroc.",
+        "Campagnes Meta Ads, Google Ads, TikTok Ads, LinkedIn Ads et social media : pilotage CPL, lead scoring qualifié et reporting ROI pour les marques au Maroc.",
         "https://linkagency.ma/marketing-digital"
       ),
       generateBreadcrumbSchema([
@@ -220,7 +220,7 @@ const MarketingDigital = () => {
             Agence marketing à Casablanca
           </h2>
           <p className="text-muted-foreground leading-relaxed text-lg">
-            Link Agency pilote les dispositifs marketing digital de marques établies au Maroc, banque, assurance, retail, e-commerce, industrie. Depuis Casablanca et Marrakech, nous accompagnons les directions marketing dans la structuration de leurs dispositifs d'acquisition et de conversion. Notre rôle dépasse l'exécution tactique : nous intervenons sur le cadrage stratégique, la priorisation budgétaire entre canaux et le pilotage rigoureux de la performance. SEO, paid media (Meta, Google, TikTok, LinkedIn), social media et analytics, chaque levier est calibré en fonction de votre maturité digitale, de vos objectifs business et de vos contraintes sectorielles, notamment dans les univers régulés. Notre approche s'appuie sur un reporting mensuel structuré et des arbitrages partagés avec vos équipes internes.
+            Link Agency pilote les dispositifs marketing digital de marques au Maroc, tous secteurs confondus : services, retail, e-commerce, industrie, finance. Depuis Casablanca et Marrakech, nous accompagnons les directions marketing et les dirigeants dans la structuration de leurs dispositifs d'acquisition et de conversion. Notre rôle dépasse l'exécution tactique : nous intervenons sur le cadrage stratégique, la priorisation budgétaire entre canaux et le pilotage rigoureux de la performance. SEO, paid media (Meta, Google, TikTok, LinkedIn), social media et analytics : chaque levier est calibré en fonction de votre maturité digitale, de vos objectifs business et de vos contraintes spécifiques. Notre approche s'appuie sur un reporting mensuel structuré et des arbitrages partagés avec vos équipes internes.
           </p>
         </div>
       </section>
