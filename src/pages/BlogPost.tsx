@@ -34,6 +34,7 @@ const BlogPost = () => {
   }
 
   const isPillar = isPillarArticle(post.content);
+  const isArabic = post.slug.endsWith('-ar') || /[\u0600-\u06FF]/.test(post.title);
 
   const blogPostSchema = {
     "@context": "https://schema.org",
@@ -63,7 +64,7 @@ const BlogPost = () => {
         "wordCount": post.content.length,
         "timeRequired": `PT${post.readTime}M`,
         "articleSection": post.category,
-        "inLanguage": "fr-FR"
+        "inLanguage": isArabic ? "ar-MA" : "fr-MA"
       },
       generateWebPageSchema(
         post.title,
