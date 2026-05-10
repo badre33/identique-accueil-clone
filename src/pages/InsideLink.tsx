@@ -128,7 +128,7 @@ const InsideLink = () => {
             <ScrollReveal delay={600} direction="up">
               <div className="text-2xl lg:text-3xl text-neutral-600 leading-relaxed max-w-4xl mx-auto font-light">
                  <TypewriterText 
-                   text="Deux fondateurs. Une vision claire. Un seul objectif : piloter des dispositifs qui font performer les marques établies."
+                   text="Un fondateur. Une vision : transformer chaque dirham marketing en performance commerciale mesurable pour les marques établies au Maroc."
                   speed={30}
                   delay={1000}
                 />
@@ -144,11 +144,11 @@ const InsideLink = () => {
         </section>
       </SectionTransition>
 
-      {/* Fondateurs Section */}
+      {/* Fondateur Section */}
       <SectionTransition variant="slide">
         <section id="founders" className="section-padding relative pattern-dots">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
+          <div className="max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 gap-20">
               
               {/* Badreddine Harkaoui */}
               <ScrollReveal delay={200} direction="left">
@@ -176,88 +176,36 @@ const InsideLink = () => {
                   <div className="space-content">
                     <div className="space-tight">
                       <h2 className="text-neutral-900 mb-3">Badreddine Harkaoui</h2>
-                      <p className="text-xl text-neutral-500 font-light">Strategic Growth Architect – Ex-militaire. Serial Consultant. Brand Strategist.</p>
+                      <p className="text-xl text-neutral-500 font-light">Fondateur &amp; Strategic Growth Architect — Expert pilotage performance &amp; revenue orchestration.</p>
                     </div>
                     
                     <p className="text-lg text-neutral-600 leading-relaxed">
-                      Badreddine est un architecte du positionnement.<br />
-                       Ancien caporal dans les forces d'élite françaises, passé par la tech, le conseil et les stratégies de croissance au service d'institutions et de grands comptes, il pilote aujourd'hui la direction stratégique de Link Agency.
+                      Badreddine est l'architecte de la performance commerciale de Link Agency.<br />
+                      Plus de 11 ans d'expérience auprès de grandes marques régulées au Maroc — banque, assurance, crédit consommation — il pilote des dispositifs marketing hybrides qui combinent exécution créative et orchestration data de la performance.
+                    </p>
+                    <p className="text-lg text-neutral-600 leading-relaxed">
+                      Ancien caporal dans les forces d'élite françaises, passé par la tech, le conseil stratégique et la croissance B2C, il a forgé une approche unique : chaque dirham marketing devient un actif mesurable, chaque campagne s'inscrit dans un P&amp;L digital, chaque lead s'attribue à une source précise.
                     </p>
                     
                     <div className="space-tight">
                       <div className="flex items-center space-x-4">
                         <Target className="w-7 h-7 text-black transform hover:rotate-12 transition-transform duration-300 morph-icon" />
-                        <span className="text-lg font-medium text-neutral-800">Expert en :</span>
+                        <span className="text-lg font-medium text-neutral-800">Expertises stratégiques :</span>
                       </div>
                       <ul className="space-y-3 ml-11 text-neutral-600">
-                        <li className="hover:text-neutral-800 transition-colors cursor-default">• stratégie de contenu à fort impact,</li>
-                        <li className="hover:text-neutral-800 transition-colors cursor-default">• campagnes de branding exécutif,</li>
-                        <li className="hover:text-neutral-800 transition-colors cursor-default">• transformation digitale et déploiement de projets complexes.</li>
+                        <li className="hover:text-neutral-800 transition-colors cursor-default">• Pilotage P&amp;L digital &amp; attribution multi-touch,</li>
+                        <li className="hover:text-neutral-800 transition-colors cursor-default">• Revenue performance orchestration (RevOps),</li>
+                        <li className="hover:text-neutral-800 transition-colors cursor-default">• Acquisition payante &amp; lead scoring qualifié (banque, assurance, crédit conso),</li>
+                        <li className="hover:text-neutral-800 transition-colors cursor-default">• Branding exécutif &amp; positionnement de marques régulées,</li>
+                        <li className="hover:text-neutral-800 transition-colors cursor-default">• Transformation digitale &amp; déploiement de dispositifs complexes.</li>
                       </ul>
                     </div>
                     
                     <blockquote className="border-l-4 border-black pl-8 italic text-xl text-neutral-700 font-light">
                       <TypewriterText 
-                        text="Je ne construis pas des marques pour qu'elles plaisent. Je les construis pour qu'on ne puisse pas les ignorer."
+                        text="Je ne livre pas des campagnes. Je livre des dispositifs qui transforment chaque dirham investi en performance commerciale mesurable."
                         speed={40}
                         delay={2000}
-                      />
-                    </blockquote>
-                  </div>
-                </AnimatedCard>
-              </ScrollReveal>
-
-              {/* Ayman Nejmi */}
-              <ScrollReveal delay={400} direction="right">
-                <AnimatedCard className="group card-elevated" hoverScale={1.01} glowEffect>
-                  <div className="relative mb-10 overflow-hidden rounded-3xl">
-                    <img 
-                      src="/lovable-uploads/d53262f8-9a1f-43dd-b2bc-b199945981c1.png"
-                      alt="Ayman Nejmi"
-                      className="w-full aspect-[4/5] object-cover object-center transition-transform duration-700 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent transition-opacity duration-500 group-hover:opacity-30"></div>
-                    <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-2 group-hover:translate-y-0">
-                      <MagneticButton 
-                        href="https://www.linkedin.com/in/ayman-nejmi-9926681a6/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="bg-white/90 backdrop-blur-sm p-4 rounded-full hover:bg-white transition-all duration-300 hover:scale-110 interactive-button"
-                        onClick={playClickSound}
-                      >
-                        <Linkedin className="w-6 h-6 text-blue-600" />
-                      </MagneticButton>
-                    </div>
-                  </div>
-                  
-                  <div className="space-content">
-                    <div className="space-tight">
-                      <h2 className="text-neutral-900 mb-3">Ayman Nejmi</h2>
-                      <p className="text-xl text-neutral-500 font-light">Creative Technologist – Designer. Coder. Esthète du branding.</p>
-                    </div>
-                    
-                    <p className="text-lg text-neutral-600 leading-relaxed">
-                      Ayman, c'est l'ingénieur du ressenti.<br />
-                      Entre direction artistique, développement front-end et branding visuel, il incarne l'obsession du détail et du design qui frappe juste. Issu de l'univers produit et design system, il sait traduire une identité en interface, une stratégie en sensation.
-                    </p>
-                    
-                    <div className="space-tight">
-                      <div className="flex items-center space-x-4">
-                        <Palette className="w-7 h-7 text-black transform hover:rotate-12 transition-transform duration-300 morph-icon" />
-                        <span className="text-lg font-medium text-neutral-800">Spécialiste de :</span>
-                      </div>
-                      <ul className="space-y-3 ml-11 text-neutral-600">
-                        <li className="hover:text-neutral-800 transition-colors cursor-default">• l'expérience utilisateur émotionnelle,</li>
-                        <li className="hover:text-neutral-800 transition-colors cursor-default">• l'identité visuelle cohérente,</li>
-                        <li className="hover:text-neutral-800 transition-colors cursor-default">• la fusion tech x branding.</li>
-                      </ul>
-                    </div>
-                    
-                    <blockquote className="border-l-4 border-black pl-8 italic text-xl text-neutral-700 font-light">
-                      <TypewriterText 
-                        text="Une marque forte ne se dit pas belle. Elle se fait sentir, sans même parler."
-                        speed={40}
-                        delay={4000}
                       />
                     </blockquote>
                   </div>
@@ -361,32 +309,17 @@ const InsideLink = () => {
               </div>
             </ScrollReveal>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-16 justify-items-center">
+            <div className="grid grid-cols-1 gap-16 justify-items-center">
               <ScrollReveal delay={300} direction="left">
                 <AnimatedCard hoverScale={1.05}>
                   <VirtualBusinessCard
                     name="Badreddine Harkaoui"
-                    title="Strategic Growth Architect"
+                    title="Fondateur — Strategic Growth Architect"
                     image="/lovable-uploads/da131874-d340-4dc9-b1e7-5fc5f24a0f40.png"
                     linkedinUrl="https://www.linkedin.com/in/badreddine-harkaoui-nexiafiducia/"
                     email="bharkaoui@linkagency.ma"
                     phone="+212699024526"
                     whatsapp="+212699024526"
-                    website="https://linkagency.ma/"
-                  />
-                </AnimatedCard>
-              </ScrollReveal>
-              
-              <ScrollReveal delay={500} direction="right">
-                <AnimatedCard hoverScale={1.05}>
-                  <VirtualBusinessCard
-                    name="Ayman Nejmi"
-                    title="Creative Technologist"
-                    image="/lovable-uploads/d53262f8-9a1f-43dd-b2bc-b199945981c1.png"
-                    linkedinUrl="https://www.linkedin.com/in/ayman-nejmi-9926681a6/"
-                    email="ayman@linkagency.ma"
-                    phone="+212 669-866831"
-                    whatsapp="+212669866831"
                     website="https://linkagency.ma/"
                   />
                 </AnimatedCard>

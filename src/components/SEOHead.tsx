@@ -12,6 +12,7 @@ interface SEOHeadProps {
   author?: string;
   locale?: 'fr_FR' | 'ar_MA' | 'en_US';
   structuredData?: any;
+  alternateLanguages?: Array<{ hrefLang: string; href: string }>;
 }
 
 export const SEOHead = ({
@@ -25,7 +26,8 @@ export const SEOHead = ({
   modifiedTime,
   author = "Link Agency",
   locale = "fr_FR",
-  structuredData
+  structuredData,
+  alternateLanguages
 }: SEOHeadProps) => {
   const siteName = "Link Agency";
   const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
@@ -45,6 +47,9 @@ export const SEOHead = ({
       {/* Hreflang */}
       <link rel="alternate" hrefLang="fr" href={url} />
       <link rel="alternate" hrefLang="x-default" href={url} />
+      {alternateLanguages?.map((alt) => (
+        <link key={alt.hrefLang} rel="alternate" hrefLang={alt.hrefLang} href={alt.href} />
+      ))}
       
       {/* Open Graph */}
       <meta property="og:title" content={fullTitle} />

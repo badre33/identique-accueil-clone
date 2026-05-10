@@ -1,5 +1,5 @@
 
-import { Palette, Megaphone, Camera, MonitorPlay, LayoutGrid, CalendarRange } from "lucide-react";
+import { Palette, Megaphone, Search, LayoutGrid, CalendarRange, LineChart } from "lucide-react";
 import { TouchOptimized } from "./TouchOptimized";
 import { ResponsiveGrid } from "./ResponsiveGrid";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
@@ -12,8 +12,35 @@ export const Services = () => {
 
   const services = [
     {
+      icon: LineChart,
+      title: "Stratégie & Pilotage Performance Maroc",
+      description: "Nous orchestrons votre P&L digital : attribution multi-touch, RevOps et pilotage data de chaque dirham investi pour transformer le marketing en performance commerciale mesurable.",
+      features: ["P&L digital & attribution multi-touch", "Revenue Performance Orchestration", "Pilotage CPL · CPA · LTV"],
+      color: "from-slate-700 to-slate-900",
+      bgImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=300&h=225&fit=crop&fm=webp&q=30",
+      link: "/conseil-strategique"
+    },
+    {
+      icon: Megaphone,
+      title: "Acquisition payante & Lead Generation Maroc",
+      description: "Nous concevons et pilotons des campagnes Meta, Google, TikTok et LinkedIn Ads avec lead scoring qualifié — spécialisation secteurs régulés (banque, assurance, crédit consommation).",
+      features: ["Meta · Google · TikTok · LinkedIn Ads", "Lead scoring & qualification", "Optimisation CPL secteurs régulés"],
+      color: "from-blue-500 to-indigo-600",
+      bgImage: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=300&h=225&fit=crop&fm=webp&q=30",
+      link: "/marketing-digital"
+    },
+    {
+      icon: Search,
+      title: "SEO, SEO Arabe & Contenu éditorial Maroc",
+      description: "Référencement naturel FR · AR · Darija. Nous générons 20 à 30 % de croissance organique grâce à une expertise SEO bilingue rare au Maroc.",
+      features: ["SEO FR · AR · Darija", "Stratégie de contenu pilier", "Production studio interne"],
+      color: "from-green-500 to-emerald-600",
+      bgImage: "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=300&h=225&fit=crop&fm=webp&q=30",
+      link: "/content-digital"
+    },
+    {
       icon: Palette,
-      title: "Branding & Identité visuelle",
+      title: "Branding & Identité visuelle Maroc",
       description: "Nous concevons des identités de marque mémorables, de la création de logo à la charte graphique complète.",
       features: ["Logo & système d'identité", "Charte graphique complète", "Design print et digital"],
       color: "from-blue-500 to-purple-600",
@@ -22,43 +49,16 @@ export const Services = () => {
     },
     {
       icon: LayoutGrid,
-      title: "Social Media Management",
-      description: "Nous gérons vos réseaux sociaux au quotidien : stratégie éditoriale, community management et reporting.",
-      features: ["Stratégie éditoriale FR/AR/Darija", "Community management quotidien", "Reporting mensuel"],
+      title: "Social Media, Communication & E-réputation Maroc",
+      description: "Stratégie éditoriale, community management quotidien, gestion de crise et e-réputation pour les marques exposées.",
+      features: ["Stratégie éditoriale FR/AR/Darija", "Community management & modération", "E-réputation & gestion de crise"],
       color: "from-green-500 to-blue-600",
       bgImage: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=300&h=225&fit=crop&fm=webp&q=30",
       link: "/marketing-digital"
     },
     {
-      icon: Camera,
-      title: "Création de contenu",
-      description: "Notre studio interne produit des visuels, vidéos, motion designs et shootings adaptés à chaque plateforme.",
-      features: ["Shooting studio & décor", "Motion design", "Production photo et vidéo"],
-      color: "from-purple-500 to-pink-600",
-      bgImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=300&h=225&fit=crop&fm=webp&q=30",
-      link: "/content-digital"
-    },
-    {
-      icon: Megaphone,
-      title: "Campagnes publicitaires",
-      description: "Nous concevons et pilotons des campagnes Meta Ads, Google Ads et TikTok Ads avec un suivi rigoureux du ROI.",
-      features: ["Meta · Google · TikTok", "A/B testing", "Optimisation ROAS · Lead generation"],
-      color: "from-blue-500 to-indigo-600",
-      bgImage: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=300&h=225&fit=crop&fm=webp&q=30",
-      link: "/marketing-digital"
-    },
-    {
-      icon: MonitorPlay,
-      title: "Vidéo & Motion Design",
-      description: "Du concept au montage final, nous produisons des contenus vidéo engageants pour vos marques et vos campagnes.",
-      features: ["Spots publicitaires", "Formats Reels & TikTok", "Vidéos corporate · Animations"],
-      color: "from-purple-500 to-pink-600",
-      bgImage: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=300&h=225&fit=crop&fm=webp&q=30",
-      link: "/content-digital"
-    },
-    {
       icon: CalendarRange,
-      title: "Événements corporate & activations de marque",
+      title: "Événements corporate & activations Maroc",
       description: "Nous concevons les événements B2B et activations qui accompagnent les temps forts des grandes marques.",
       features: ["Lancements produit & conventions", "Séminaires & soirées VIP", "Activations retail & salons"],
       color: "from-orange-500 to-red-600",
@@ -132,12 +132,12 @@ export const Services = () => {
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light text-slate-900 mb-4 sm:mb-6 leading-tight tracking-tight">
             6 pôles intégrés,
             <span className="block mt-2 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent font-medium">
-              pilotés en studio
+              du pilotage stratégique à l'exécution
             </span>
           </h2>
           
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-600 max-w-4xl mx-auto leading-relaxed font-light px-4 sm:px-0">
-            Branding, social media, production, acquisition, vidéo et activations : des expertises conçues pour des directions marketing qui exigent cohérence, vitesse d'exécution et résultats business.
+            Stratégie & pilotage performance, acquisition payante, SEO bilingue, branding, communication et activations : un modèle hybride agence + cabinet de pilotage data, pensé pour les marques régulées au Maroc.
           </p>
         </div>
 

@@ -34,6 +34,7 @@ const BlogPost = () => {
   }
 
   const isPillar = isPillarArticle(post.content);
+  const isArabic = post.slug.endsWith('-ar') || /[\u0600-\u06FF]/.test(post.title);
 
   const blogPostSchema = {
     "@context": "https://schema.org",
@@ -63,7 +64,7 @@ const BlogPost = () => {
         "wordCount": post.content.length,
         "timeRequired": `PT${post.readTime}M`,
         "articleSection": post.category,
-        "inLanguage": "fr-FR"
+        "inLanguage": isArabic ? "ar-MA" : "fr-MA"
       },
       generateWebPageSchema(
         post.title,
@@ -95,7 +96,11 @@ const BlogPost = () => {
       <Header />
       
       {/* Article Header */}
-      <article className="pt-24 sm:pt-28 pb-16 sm:pb-20">
+      <article
+        className="pt-24 sm:pt-28 pb-16 sm:pb-20"
+        dir={isArabic ? 'rtl' : 'ltr'}
+        lang={isArabic ? 'ar-MA' : 'fr-MA'}
+      >
         <div className="max-w-3xl mx-auto px-5 sm:px-6 lg:px-8">
           {/* Breadcrumb */}
           <nav className="mb-6 sm:mb-8">

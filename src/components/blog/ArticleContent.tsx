@@ -52,7 +52,7 @@ export const ArticleContent = ({ content, isPillar = false }: ArticleContentProp
     const enhanced = enhanceContent(content);
     return DOMPurify.sanitize(enhanced, {
       ALLOWED_TAGS: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'ul', 'ol', 'li', 'strong', 'em', 'a', 'br', 'blockquote', 'code', 'pre', 'img', 'div', 'span', 'figure', 'figcaption'],
-      ALLOWED_ATTR: ['href', 'target', 'rel', 'src', 'alt', 'title', 'class', 'aria-hidden']
+      ALLOWED_ATTR: ['href', 'target', 'rel', 'src', 'alt', 'title', 'class', 'aria-hidden', 'dir', 'lang']
     });
   }, [content]);
 
