@@ -107,26 +107,47 @@ export const generateOrganizationSchema = () => ({
   ]
 });
 
-export const generateLocalBusinessSchema = () => ({
+type LocalCity = "casablanca" | "marrakech";
+const CITY_DATA: Record<LocalCity, { locality: string; region: string; postalCode: string; lat: number; lng: number; url: string }> = {
+  casablanca: {
+    locality: "Casablanca",
+    region: "Grand Casablanca",
+    postalCode: "20000",
+    lat: 33.5731,
+    lng: -7.5898,
+    url: "https://linkagency.ma/agence-marketing-digital-casablanca",
+  },
+  marrakech: {
+    locality: "Marrakech",
+    region: "Marrakech-Safi",
+    postalCode: "40000",
+    lat: 31.6295,
+    lng: -7.9811,
+    url: "https://linkagency.ma/agence-marketing-digital-marrakech",
+  },
+};
+
+export const generateLocalBusinessSchema = (city: LocalCity = "casablanca") => ({
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "name": "Link Agency",
+  "@id": `https://linkagency.ma/#localbusiness-${city}`,
+  "name": `Link Agency ${CITY_DATA[city].locality}`,
   "image": "https://linkagency.ma/lovable-uploads/85b45a40-6291-4f5d-a377-65024ddb1976.png",
   "telephone": "+212-699-024526",
   "email": "bharkaoui@linkagency.ma",
   "address": {
     "@type": "PostalAddress",
-    "addressLocality": "Casablanca",
-    "addressRegion": "Grand Casablanca",
-    "postalCode": "20000",
+    "addressLocality": CITY_DATA[city].locality,
+    "addressRegion": CITY_DATA[city].region,
+    "postalCode": CITY_DATA[city].postalCode,
     "addressCountry": "MA"
   },
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": 33.5731,
-    "longitude": -7.5898
+    "latitude": CITY_DATA[city].lat,
+    "longitude": CITY_DATA[city].lng
   },
-  "url": "https://linkagency.ma",
+  "url": CITY_DATA[city].url,
   "priceRange": "$$",
   "openingHoursSpecification": [
     {
@@ -178,7 +199,19 @@ export const generateServiceSchema = (serviceName: string, description: string, 
   },
   "serviceType": "Marketing Digital",
   "category": "Creative Services",
-  ...(price && { "priceRange": price })
+  ...(price && {
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "MAD",
+      "price": "0",
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "priceCurrency": "MAD",
+        "description": price
+      },
+      "availability": "https://schema.org/InStock"
+    }
+  })
 });
 
 export const generateWebPageSchema = (title: string, description: string, url: string) => ({
@@ -187,7 +220,7 @@ export const generateWebPageSchema = (title: string, description: string, url: s
   "name": title,
   "description": description,
   "url": url,
-  "inLanguage": "fr-FR",
+  "inLanguage": "fr-MA",
   "isPartOf": {
     "@type": "WebSite",
     "name": "Link Agency",
