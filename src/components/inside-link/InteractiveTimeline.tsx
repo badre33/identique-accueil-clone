@@ -16,46 +16,48 @@ interface TimelineEvent {
 const timelineEvents: TimelineEvent[] = [
   {
     id: 1,
-    year: '2019',
-    title: 'Les Débuts',
-    description: 'Badreddine et Ayman se rencontrent et identifient une vision commune du branding stratégique.',
+    year: '2014',
+    title: 'Forces d\'élite & rigueur',
+    description: 'Badreddine sert dans les forces d\'élite françaises et y forge la discipline qui structurera son approche stratégique.',
     icon: Users,
-    color: 'from-blue-500 to-cyan-500',
-    location: 'Paris, France'
+    color: 'from-slate-700 to-slate-900',
+    location: 'France'
   },
   {
     id: 2,
-    year: '2021',
-    title: 'Première Collaboration',
-    description: 'Premier mandat structurant : refonte complète de l\'identité d\'une marque tech parisienne.',
+    year: '2017',
+    title: 'Tech, conseil & croissance',
+    description: 'Premières missions en tech, conseil stratégique et croissance B2C. Naissance de l\'approche hybride exécution + data.',
     icon: Lightbulb,
     color: 'from-green-500 to-emerald-500',
-    location: 'Paris, France'
+    location: 'Paris · Casablanca'
   },
   {
     id: 3,
-    year: '2022',
-    title: 'Expertise Reconnue',
-    description: 'Développement de leur méthodologie unique mêlant stratégie militaire et design thinking.',
+    year: '2020',
+    title: 'Spécialisation secteurs régulés',
+    description: 'Focalisation sur banque, assurance et crédit consommation au Maroc. Le marketing digital piloté comme un P&L devient sa signature.',
     icon: Award,
-    color: 'from-purple-500 to-pink-500'
+    color: 'from-purple-500 to-pink-500',
+    location: 'Casablanca, Maroc'
   },
   {
     id: 4,
     year: '2023',
-    title: 'Naissance de Link',
-    description: 'Création officielle de Link Agency avec une ambition claire : structurer des dispositifs de marque plus exigeants.',
+    title: 'Création de Link Agency',
+    description: 'Badreddine fonde Link Agency à Casablanca : modèle hybride agence + cabinet de pilotage data, unique au Maroc.',
     icon: Rocket,
     color: 'from-orange-500 to-red-500',
     location: 'Casablanca'
   },
   {
     id: 5,
-    year: '2024',
-    title: 'Expansion',
-    description: 'Montée en puissance du portefeuille clients, développement vers les grands comptes et rayonnement international.',
+    year: '2026',
+    title: 'Référence marques régulées',
+    description: 'Link Agency devient la référence du marketing digital piloté pour les grandes marques marocaines (banque, assurance, crédit).',
     icon: Calendar,
-    color: 'from-indigo-500 to-purple-500'
+    color: 'from-indigo-500 to-purple-500',
+    location: 'Casablanca · Marrakech'
   }
 ];
 
