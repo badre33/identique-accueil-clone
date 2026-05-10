@@ -44,7 +44,7 @@ const AgenceCasablanca = () => {
   const schema = {
     "@context": "https://schema.org",
     "@graph": [
-      generateLocalBusinessSchema(),
+      generateLocalBusinessSchema("casablanca"),
       generateServiceSchema(
         "Agence Marketing Digital à Casablanca",
         "Agence marketing digital à Casablanca : branding, communication, SEO, paid media, social media et événementiel corporate pour marques établies au Maroc.",
