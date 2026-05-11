@@ -10,9 +10,10 @@
   --card-foreground: 222.2 84% 4.9%;
   --popover: 0 0% 100%;
   --popover-foreground: 222.2 84% 4.9%;
-  /* Charte officielle Link Agency — Rouge corporate #C8102E */
-  --primary: 351 86% 41%;
-  --primary-foreground: 0 0% 100%;
+  /* Primary brand — bleu/violet signature */
+  --primary: 262.1 83.3% 57.8%;
+  --primary-foreground: 210 40% 98%;
+  --primary-hover: 262.1 83.3% 48%;
   --secondary: 210 40% 96%;
   --secondary-foreground: 222.2 84% 4.9%;
   --muted: 210 40% 96%;
@@ -23,16 +24,17 @@
   --destructive-foreground: 210 40% 98%;
   --border: 214.3 31.8% 91.4%;
   --input: 214.3 31.8% 91.4%;
-  --ring: 351 86% 41%;
+  --ring: 262.1 83.3% 57.8%;
   --radius: 0.75rem;
 
-  /* ══ Tokens de marque (charte mai 2026) ══ */
-  --brand-red: 351 86% 41%;        /* #C8102E — CTA, accents critiques */
-  --brand-red-hover: 351 86% 35%;  /* Hover plus profond */
-  --brand-gold: 35 38% 54%;        /* #B8935A — Premium, élégance */
-  --brand-ink: 0 0% 4%;            /* #0A0A0A — Noir profond */
-  --brand-paper: 0 0% 98%;         /* #FAFAFA — Blanc cassé */
-  --brand-graphite: 0 0% 20%;      /* Gris corporate */
+  /* ══ Tokens de marque ══ */
+  --brand-blue: 220 90% 56%;       /* Bleu signature */
+  --brand-violet: 262 83% 58%;     /* Violet signature */
+  --brand-indigo: 245 75% 52%;     /* Indigo profond */
+  --brand-gold: 35 38% 54%;        /* Or — accent premium */
+  --brand-ink: 222.2 84% 4.9%;     /* Encre */
+  --brand-paper: 0 0% 98%;         /* Papier */
+  --brand-graphite: 215 20% 35%;   /* Graphite */
 }
 
 .dark {
@@ -42,8 +44,8 @@
   --card-foreground: 210 40% 98%;
   --popover: 222.2 84% 4.9%;
   --popover-foreground: 210 40% 98%;
-  --primary: 351 86% 48%;
-  --primary-foreground: 0 0% 100%;
+  --primary: 262.1 83.3% 65%;
+  --primary-foreground: 210 40% 98%;
   --secondary: 217.2 32.6% 17.5%;
   --secondary-foreground: 210 40% 98%;
   --muted: 217.2 32.6% 17.5%;
@@ -54,7 +56,7 @@
   --destructive-foreground: 210 40% 98%;
   --border: 217.2 32.6% 17.5%;
   --input: 217.2 32.6% 17.5%;
-  --ring: 351 86% 48%;
+  --ring: 262.1 83.3% 65%;
 }
 
 * {

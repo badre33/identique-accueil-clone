@@ -30,8 +30,9 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				brand: {
-					red: 'hsl(var(--brand-red))',
-					'red-hover': 'hsl(var(--brand-red-hover))',
+					blue: 'hsl(var(--brand-blue))',
+					violet: 'hsl(var(--brand-violet))',
+					indigo: 'hsl(var(--brand-indigo))',
 					gold: 'hsl(var(--brand-gold))',
 					ink: 'hsl(var(--brand-ink))',
 					paper: 'hsl(var(--brand-paper))',

@@ -101,7 +101,7 @@ export const Header = () => {
                 href="https://calendly.com/b-harkaoui-linkagency/30min"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="ml-2 inline-flex items-center px-5 py-2.5 bg-primary text-primary-foreground rounded-lg text-sm font-semibold hover:bg-[hsl(var(--brand-red-hover))] transition-colors shadow-sm"
+                className="ml-2 inline-flex items-center px-5 py-2.5 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 text-white rounded-lg text-sm font-semibold hover:from-blue-700 hover:via-purple-700 hover:to-indigo-800 transition-all shadow-sm hover:shadow-md"
               >
                 Planifier un échange
               </a>
@@ -197,7 +197,7 @@ export const Header = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setIsMenuOpen(false)}
-                className="mt-6 block text-center px-4 py-4 bg-primary text-primary-foreground rounded-xl text-base font-semibold hover:bg-[hsl(var(--brand-red-hover))] transition-colors"
+                className="mt-6 block text-center px-4 py-4 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 text-white rounded-xl text-base font-semibold hover:from-blue-700 hover:via-purple-700 hover:to-indigo-800 transition-all"
               >
                 Planifier un échange stratégique
               </a>
