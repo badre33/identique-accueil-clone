@@ -137,6 +137,149 @@ const cases = [
     ],
     services: ["personal-branding", "conseil-strategique"],
   },
+  {
+    sector: "Télécoms — Maroc",
+    client: "Orange Maroc",
+    title: "Pilotage cross-plateforme performance & branding",
+    challenge: "Coordonner un dispositif media unifié performance et branding sur l'ensemble des leviers paid pour un opérateur télécom national.",
+    approach: "Trading desk programmatique (DV360, CM360), Meta Ads et Google Ads en orchestration full-funnel, tracking cross-canal et reporting consolidé.",
+    kpis: [
+      { icon: TrendingUp, label: "Couverture", value: "Nationale" },
+      { icon: Target, label: "Levier paid", value: "Cross-plateforme" },
+      { icon: Eye, label: "Pilotage", value: "Unifié" },
+    ],
+    services: ["marketing-digital", "content-digital"],
+  },
+  {
+    sector: "Industrie & Mining — OCP / OCP Africa",
+    client: "OCP & OCP Africa",
+    title: "Campagnes corporate de couverture nationale",
+    challenge: "Déployer un dispositif de communication corporate à l'échelle nationale et continentale pour un acteur industriel de référence.",
+    approach: "Stratégie media programmatique, production de contenus institutionnels et pilotage cross-plateforme pour la couverture grand public et décideurs.",
+    kpis: [
+      { icon: Eye, label: "Couverture", value: "Nationale + Afrique" },
+      { icon: Target, label: "Format", value: "Corporate full-funnel" },
+      { icon: TrendingUp, label: "Pilotage", value: "Programmatique" },
+    ],
+    services: ["marketing-digital", "branding"],
+  },
+  {
+    sector: "Banque postale — Maroc",
+    client: "Barid Al-Maghrib / Al Barid Bank",
+    title: "Lead generation et optimisation funnel pour la banque postale",
+    challenge: "Optimiser le coût par lead et le taux de conversion sur un dispositif d'acquisition multi-produits financiers grand public.",
+    approach: "Setup tracking server-side, structuration des campagnes Search & Social en full-funnel, A/B testing créatifs et optimisation continue CPL/CTR.",
+    kpis: [
+      { icon: Target, label: "CPL", value: "Optimisé" },
+      { icon: TrendingUp, label: "CTR & conversion", value: "En hausse" },
+      { icon: Eye, label: "Tracking", value: "Server-side" },
+    ],
+    services: ["marketing-digital", "content-digital"],
+  },
+  {
+    sector: "Institutionnel — Aéroports du Maroc",
+    client: "Aéroports du Maroc",
+    title: "Reach et trafic qualifié pour un acteur institutionnel",
+    challenge: "Générer un reach maîtrisé et un trafic qualifié sur les services aéroportuaires nationaux dans une logique de notoriété et d'usage.",
+    approach: "Pilotage cross-plateforme (Meta, Google, programmatique), formats display et vidéo, ciblages géolocalisés sur les bassins voyageurs.",
+    kpis: [
+      { icon: Eye, label: "Reach", value: "National qualifié" },
+      { icon: Users, label: "Trafic", value: "Voyageurs ciblés" },
+      { icon: Target, label: "Mix", value: "Display + Vidéo" },
+    ],
+    services: ["marketing-digital", "content-digital"],
+  },
+  {
+    sector: "Pharma & Santé — Maroc",
+    client: "Pharma 5",
+    title: "Stratégie multicanal B2B & B2C pour un laboratoire pharmaceutique",
+    challenge: "Articuler une stratégie d'acquisition à la fois B2B (professionnels de santé) et B2C (grand public) sur un secteur réglementé.",
+    approach: "Google Ads et Meta Ads structurés par audience, copywriting conformité, CRM HubSpot et nurturing par segment.",
+    kpis: [
+      { icon: Target, label: "Audiences", value: "B2B + B2C" },
+      { icon: TrendingUp, label: "Levier", value: "Search + Social" },
+      { icon: Users, label: "CRM", value: "HubSpot intégré" },
+    ],
+    services: ["marketing-digital", "content-digital"],
+  },
+  {
+    sector: "Industrie agroalimentaire — Mutandis",
+    client: "Mutandis Group",
+    title: "Activation digitale d'un groupe industriel diversifié",
+    challenge: "Déployer une stratégie digitale cohérente sur un portefeuille de marques grand public d'un groupe industriel coté.",
+    approach: "Stratégies Google Ads et Meta Ads adaptées par marque, brief créatif unifié et reporting consolidé groupe.",
+    kpis: [
+      { icon: Target, label: "Périmètre", value: "Multi-marques" },
+      { icon: TrendingUp, label: "Levier", value: "Paid full-funnel" },
+      { icon: Eye, label: "Reporting", value: "Consolidé groupe" },
+    ],
+    services: ["marketing-digital", "branding"],
+  },
+  {
+    sector: "Agroalimentaire — Aiguebelle",
+    client: "Aiguebelle",
+    title: "Activation de marque sur un acteur historique de l'agroalimentaire",
+    challenge: "Réinscrire une marque héritage dans la conversation digitale tout en générant des performances mesurables.",
+    approach: "Campagnes performance Google Ads et Meta Ads, contenus natifs et activations social media ciblées.",
+    kpis: [
+      { icon: TrendingUp, label: "Performance", value: "Mesurable" },
+      { icon: Eye, label: "Notoriété", value: "Réactivée" },
+      { icon: Users, label: "Communauté", value: "Engagée" },
+    ],
+    services: ["marketing-digital", "social-media", "branding"],
+  },
+  {
+    sector: "Finance — Maroc",
+    client: "Wafasalaf",
+    title: "Direction artistique et social media pour un leader du crédit",
+    challenge: "Renforcer la cohérence visuelle et la régularité éditoriale d'un acteur leader du crédit à la consommation au Maroc.",
+    approach: "Direction artistique pilier, motion design produit, ligne éditoriale recentrée sur l'usage et community management quotidien.",
+    kpis: [
+      { icon: TrendingUp, label: "Cohérence visuelle", value: "Pilier établi" },
+      { icon: Users, label: "Community", value: "Géré au quotidien" },
+      { icon: Eye, label: "Production", value: "Motion + Social" },
+    ],
+    services: ["branding", "social-media", "content-digital"],
+  },
+  {
+    sector: "Assurance — Maroc",
+    client: "RMA Assurance",
+    title: "Production de contenus institutionnels et campagnes de renouvellement",
+    challenge: "Maintenir une présence digitale institutionnelle régulière et soutenir les temps forts de renouvellement par des dispositifs ciblés.",
+    approach: "Production de Reels de sensibilisation, rédaction bilingue FR/AR, campagnes saisonnières de renouvellement et gestion de l'e-réputation.",
+    kpis: [
+      { icon: Eye, label: "Présence", value: "Institutionnelle régulière" },
+      { icon: Target, label: "Renouvellement", value: "Campagnes ciblées" },
+      { icon: Users, label: "Bilingue", value: "FR / AR" },
+    ],
+    services: ["content-digital", "social-media", "branding"],
+  },
+  {
+    sector: "Institutionnel — Fondation Al Mada / AMDIE / CDG",
+    client: "Fondation Al Mada · AMDIE · CDG",
+    title: "Stratégies éditoriales corporate pour les grands acteurs institutionnels",
+    challenge: "Structurer la voix éditoriale d'institutions de référence dans des environnements à fort enjeu réputationnel.",
+    approach: "Stratégies éditoriales pilier, copywriting corporate, formats long-form et corporate film pour la légitimité institutionnelle.",
+    kpis: [
+      { icon: Eye, label: "Périmètre", value: "Institutionnel" },
+      { icon: Target, label: "Format", value: "Long-form + Film" },
+      { icon: TrendingUp, label: "Voix éditoriale", value: "Structurée" },
+    ],
+    services: ["content-digital", "branding", "conseil-strategique"],
+  },
+  {
+    sector: "Grands comptes financiers — Maroc",
+    client: "Saham · Allianz · Wafa Assurance · Arab Bank · Dekra · Safran",
+    title: "Portefeuille grands comptes accompagné en stratégie & branding",
+    challenge: "Piloter le positionnement digital et la stratégie de marque de grands comptes financiers, industriels et certificateurs dans un cadre conforme aux contraintes BAM.",
+    approach: "Refonte du discours de marque, structuration de partenariats stratégiques et lancement de solutions digitales internes — référence pilotée par Badreddine Harkaoui (fondateur Link Agency, ex-Nexia Morocco).",
+    kpis: [
+      { icon: Target, label: "Portefeuille", value: "10+ grands comptes" },
+      { icon: Eye, label: "Secteur", value: "Finance · Industrie" },
+      { icon: TrendingUp, label: "Conformité", value: "Cadre BAM" },
+    ],
+    services: ["branding", "conseil-strategique"],
+  },
 ];
 
 const serviceLabels: Record<string, string> = {
@@ -155,7 +298,7 @@ const EtudesDeCas = () => {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     "name": "Études de cas — Link Agency Maroc",
-    "description": "10 études de cas chiffrées de campagnes marketing digital, branding, social media et événementiel menées au Maroc et à l'international par Link Agency.",
+    "description": "21 études de cas de campagnes marketing digital, branding, social media et événementiel menées au Maroc et à l'international par Link Agency : Subway, Honda, Orange, OCP, Pharma 5, AXA, Wafasalaf, L'Bankalik, Brainlyne et plus.",
     "url": "https://linkagency.ma/etudes-de-cas",
     "hasPart": cases.map((c) => ({
       "@type": "CreativeWork",
@@ -169,7 +312,7 @@ const EtudesDeCas = () => {
     <div className="min-h-screen bg-white pt-16 sm:pt-20">
       <SEOHead
         title="Études de Cas — Résultats Marketing Digital Maroc | Link Agency"
-        description="10 études de cas chiffrées : Subway Maroc, SGTM Immobilier, Honda Maroc (Tokyo Days), L'Bankalik, AXA, YouCan, Edwin et plus. Résultats mesurables au Maroc."
+        description="21 études de cas : Subway, SGTM, Honda Tokyo Days, L'Bankalik, AXA, Orange, OCP, Pharma 5, Wafasalaf, RMA, Aiguebelle, Mutandis, Aéroports du Maroc, Brainlyne et plus."
         keywords="études de cas marketing digital maroc, résultats agence communication casablanca, case studies branding maroc, ROI marketing digital"
         url="https://linkagency.ma/etudes-de-cas"
         structuredData={structuredData}
