@@ -58,7 +58,7 @@ const expertises = [
 const accounts = [
   'Attijari Wafabank', 'Wafasalaf', 'AXA Assurance Maroc', 'RMA',
   'Fondation Al Mada', 'Saham', 'Allianz', 'Arab Bank',
-  'Orange Maroc', 'OCP', 'OCP Africa', 'Safran',
+  'Orange Maroc', 'Safran',
   'Honda Motor', 'Ford', 'Pharma 5', 'Mutandis Group',
   'Aiguebelle', 'Barid Al-Maghrib', 'Al Barid Bank', 'Aéroports du Maroc',
   'Dekra', 'Brainlyne (US)',

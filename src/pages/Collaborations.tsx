@@ -270,7 +270,7 @@ const Collaborations = () => {
       name: "Wafasalaf",
       url: "#",
       category: "Finance",
-      logo: "/brands/wafasalaf.svg",
+      logo: "/brands/wafasalaf.png",
       description: "Direction artistique, social media et production de contenus financiers. Mission menée par le pôle Direction Artistique & Community Management de Link Agency.",
       year: "Référence équipe",
       type: "Brand & Social"
@@ -288,25 +288,16 @@ const Collaborations = () => {
       name: "Orange Maroc",
       url: "#",
       category: "Télécoms",
-      logo: "/brands/orange-maroc.svg",
+      logo: "/brands/orange-maroc.png",
       description: "Initiative Digital — pilotage cross-plateforme performance et branding (DV360, Meta, Google Ads). Mission menée par le pôle Trading Desk & Programmatique de Link Agency.",
       year: "Référence équipe",
       type: "Performance & Trading"
     },
     {
-      name: "OCP / OCP Africa",
-      url: "#",
-      category: "Industrie",
-      logo: "/brands/ocp.svg",
-      description: "Campagnes couverture nationale et corporate digital. Comptes pilotés par le pôle Trading Desk de Link Agency et par Badreddine Harkaoui (fondateur, ex-Nexia Morocco).",
-      year: "Référence équipe",
-      type: "Corporate & Media"
-    },
-    {
       name: "Safran",
       url: "#",
       category: "Industrie",
-      logo: "/brands/safran.svg",
+      logo: "/brands/safran.png",
       description: "Stratégie de marque et communication corporate. Référence pilotée par Badreddine Harkaoui (fondateur Link Agency, ex-Nexia Morocco).",
       year: "Référence équipe",
       type: "Corporate"
@@ -333,7 +324,7 @@ const Collaborations = () => {
       name: "Pharma 5",
       url: "#",
       category: "Santé & Bien-être",
-      logo: "/brands/pharma-5.svg",
+      logo: "/brands/pharma-5.png",
       description: "Stratégies B2B et B2C multicanal — Google Ads et Meta Ads. Mission menée par le pôle Paid Social & Acquisition de Link Agency.",
       year: "Référence équipe",
       type: "Performance"
@@ -342,7 +333,7 @@ const Collaborations = () => {
       name: "Mutandis Group",
       url: "#",
       category: "Industrie",
-      logo: "/brands/mutandis.svg",
+      logo: "/brands/mutandis.png",
       description: "Stratégies déployées sur Google Ads et Meta Ads pour les marques du groupe. Mission menée par le pôle Paid Social & Acquisition de Link Agency.",
       year: "Référence équipe",
       type: "Performance"
@@ -405,7 +396,7 @@ const Collaborations = () => {
       name: "Wafa Assurance",
       url: "#",
       category: "Assurance",
-      logo: "/brands/wafa-assurance.svg",
+      logo: "/brands/wafa-assurance.png",
       description: "Stratégie de marque et accompagnement digital. Référence pilotée par Badreddine Harkaoui (fondateur Link Agency, ex-Nexia Morocco).",
       year: "Référence équipe",
       type: "Strategy"
@@ -414,7 +405,7 @@ const Collaborations = () => {
       name: "Dekra",
       url: "#",
       category: "Industrie",
-      logo: "/brands/dekra.svg",
+      logo: "/brands/dekra.png",
       description: "Refonte du discours de marque et structuration de partenariats stratégiques. Référence pilotée par Badreddine Harkaoui (fondateur Link Agency, ex-Nexia Morocco).",
       year: "Référence équipe",
       type: "Brand Strategy"
@@ -468,7 +459,7 @@ const Collaborations = () => {
             <div className="flex flex-wrap justify-center gap-3 mb-12">
               {[
                 "Attijari Wafabank", "Wafasalaf", "AXA Assurance Maroc", "RMA",
-                "Fondation Al Mada", "Orange Maroc", "OCP", "Honda Motor",
+                "Fondation Al Mada", "Orange Maroc", "Honda Motor",
                 "Pharma 5", "Mutandis Group", "Aiguebelle", "Barid Al-Maghrib",
                 "Aéroports du Maroc", "Brainlyne",
                 "L'Bankalik", "Subway Maroc", "YouCan", "SGTM Immobilier"
