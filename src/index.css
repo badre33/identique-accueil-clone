@@ -10,8 +10,9 @@
   --card-foreground: 222.2 84% 4.9%;
   --popover: 0 0% 100%;
   --popover-foreground: 222.2 84% 4.9%;
-  --primary: 262.1 83.3% 57.8%;
-  --primary-foreground: 210 40% 98%;
+  /* Charte officielle Link Agency — Rouge corporate #C8102E */
+  --primary: 351 86% 41%;
+  --primary-foreground: 0 0% 100%;
   --secondary: 210 40% 96%;
   --secondary-foreground: 222.2 84% 4.9%;
   --muted: 210 40% 96%;
@@ -22,8 +23,16 @@
   --destructive-foreground: 210 40% 98%;
   --border: 214.3 31.8% 91.4%;
   --input: 214.3 31.8% 91.4%;
-  --ring: 262.1 83.3% 57.8%;
+  --ring: 351 86% 41%;
   --radius: 0.75rem;
+
+  /* ══ Tokens de marque (charte mai 2026) ══ */
+  --brand-red: 351 86% 41%;        /* #C8102E — CTA, accents critiques */
+  --brand-red-hover: 351 86% 35%;  /* Hover plus profond */
+  --brand-gold: 35 38% 54%;        /* #B8935A — Premium, élégance */
+  --brand-ink: 0 0% 4%;            /* #0A0A0A — Noir profond */
+  --brand-paper: 0 0% 98%;         /* #FAFAFA — Blanc cassé */
+  --brand-graphite: 0 0% 20%;      /* Gris corporate */
 }
 
 .dark {
@@ -33,8 +42,8 @@
   --card-foreground: 210 40% 98%;
   --popover: 222.2 84% 4.9%;
   --popover-foreground: 210 40% 98%;
-  --primary: 262.1 83.3% 57.8%;
-  --primary-foreground: 210 40% 98%;
+  --primary: 351 86% 48%;
+  --primary-foreground: 0 0% 100%;
   --secondary: 217.2 32.6% 17.5%;
   --secondary-foreground: 210 40% 98%;
   --muted: 217.2 32.6% 17.5%;
@@ -45,7 +54,7 @@
   --destructive-foreground: 210 40% 98%;
   --border: 217.2 32.6% 17.5%;
   --input: 217.2 32.6% 17.5%;
-  --ring: 262.1 83.3% 57.8%;
+  --ring: 351 86% 48%;
 }
 
 * {
@@ -59,13 +68,23 @@ html {
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
   line-height: 1.6;
+  font-weight: 400;
   color: var(--foreground);
   background-color: var(--background);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* ══ Typographie Montserrat (charte) ══ */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+h1 { font-weight: 800; letter-spacing: -0.03em; }
 
 /* Classes utilitaires critiques - utilise l'animation Tailwind existante */
 
