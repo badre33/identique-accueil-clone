@@ -484,7 +484,13 @@ const Collaborations = () => {
               50+ clients accompagnés. 200+ projets réalisés. 15+ secteurs couverts. Une sélection de références qui documente notre track record sur des dispositifs éditoriaux, publicitaires et corporate à fort enjeu.
             </p>
             <div className="flex flex-wrap justify-center gap-3 mb-12">
-              {["L'Bankalik", "AXA Assurance Maroc", "RMA", "Subway Maroc", "YouCan", "Nova Spacia", "OCB Maroc", "La Maison Amoud", "Brainlyne", "Benatna"].map((client) => (
+              {[
+                "Attijari Wafabank", "Wafasalaf", "AXA Assurance Maroc", "RMA",
+                "Fondation Al Mada", "Orange Maroc", "OCP", "Honda Motor",
+                "Pharma 5", "Mutandis Group", "Aiguebelle", "Barid Al-Maghrib",
+                "Aéroports du Maroc", "AMDIE", "CDG", "Brainlyne",
+                "L'Bankalik", "Subway Maroc", "YouCan", "SGTM Immobilier"
+              ].map((client) => (
                 <div key={client} className="px-4 py-3 rounded-2xl bg-white border border-gray-200 text-sm font-semibold text-gray-700 shadow-sm">
                   {client}
                 </div>
