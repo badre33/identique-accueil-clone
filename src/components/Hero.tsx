@@ -13,9 +13,13 @@ const Hero = () => {
   ];
 
   const clientLogos = [
-    "Subway Maroc", "SGTM Immobilier", "Honda Maroc", "Pharma 5",
-    "Mutandis Group", "Aiguebelle", "L'Bankalik", "AXA Assurance Maroc",
-    "Attijari Wafabank", "Orange Maroc", "OCP Africa", "Aéroports du Maroc",
+    "Attijari Wafabank", "Wafasalaf", "Wafa Assurance", "AXA Assurance Maroc",
+    "RMA", "Saham", "Allianz", "Arab Bank",
+    "Fondation Al Mada", "CDG", "Orange Maroc", "OCP",
+    "OCP Africa", "Safran", "Honda Motor", "Ford",
+    "Pharma 5", "Mutandis Group", "Aiguebelle", "Barid Al-Maghrib",
+    "Al Barid Bank", "Aéroports du Maroc", "AMDIE", "Dekra",
+    "Brainlyne", "Subway Maroc", "SGTM Immobilier", "L'Bankalik",
   ];
 
   const waUrl = buildWhatsAppUrl(
