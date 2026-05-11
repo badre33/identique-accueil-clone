@@ -42,9 +42,8 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-white pt-16 sm:pt-20">
       <SEOHead
-        title="Link Agency - Agence Marketing Digital au Maroc | Branding & Communication"
-        description="Agence marketing digital au Maroc spécialisée en branding, communication digitale et événementiel. Services créatifs à Casablanca, Rabat et Marrakech."
-        keywords="agence marketing digital maroc, branding maroc, communication digitale casablanca, événementiel maroc, agence créative rabat, marketing digital casablanca"
+        title="Link Agency — Cabinet Conseil Communication Corporate au Maroc"
+        description="Cabinet conseil en communication corporate au Maroc. Branding, stratégie digitale, événementiel pour grands comptes. 11 ans · 200+ missions. Casablanca · Rabat · Marrakech."
         url="https://linkagency.ma/"
         type="website"
         structuredData={structuredData}

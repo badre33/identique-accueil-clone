@@ -17,9 +17,9 @@ export const generatePageMeta = (page: string) => {
     image?: string;
   }> = {
     home: {
-      title: "Link Agency - Agence Marketing Digital au Maroc | Branding & Communication",
-      description: "Agence marketing digital au Maroc spécialisée en branding, communication digitale et événementiel. Services créatifs à Casablanca, Rabat et Marrakech.",
-      keywords: "agence marketing digital maroc, branding maroc, communication digitale casablanca, événementiel maroc, agence créative rabat"
+      title: "Link Agency — Cabinet Conseil Communication Corporate au Maroc",
+      description: "Cabinet conseil en communication corporate au Maroc. Branding, stratégie digitale, événementiel pour grands comptes. 11 ans, 200+ missions. Casablanca, Rabat, Marrakech.",
+      keywords: ""
     },
     branding: {
       title: "Stratégie de Marque & Branding au Maroc - Conseil Expert | Link Agency",
