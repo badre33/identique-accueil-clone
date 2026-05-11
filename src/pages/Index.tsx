@@ -17,7 +17,9 @@ import { LocalSEOSection } from "@/components/LocalSEO";
 import { LocalCitiesLinks } from "@/components/LocalCitiesLinks";
 import { ClientLogosMarquee } from "@/components/ClientLogosMarquee";
 import { KeyStats } from "@/components/KeyStats";
-import { generateOrganizationSchema, generateLocalBusinessSchema, generateWebPageSchema } from '@/utils/structuredData';
+import { TestimonialsEnhanced } from "@/components/TestimonialsEnhanced";
+import { faqsEnriched } from "@/data/content";
+import { generateOrganizationSchema, generateLocalBusinessSchema, generateWebPageSchema, generateFAQSchema } from '@/utils/structuredData';
 
 const Index = () => {
   // Données structurées pour la page d'accueil
@@ -30,6 +32,9 @@ const Index = () => {
         "Link Agency - Agence Marketing Digital au Maroc",
         "Agence marketing digital au Maroc spécialisée en branding, communication digitale et événementiel. Services créatifs à Casablanca, Rabat et Marrakech.",
         "https://linkagency.ma/"
+      ),
+      generateFAQSchema(
+        faqsEnriched.slice(0, 8).map((f) => ({ question: f.question, answer: f.answer }))
       )
     ]
   };
@@ -68,6 +73,8 @@ const Index = () => {
       <ProjectsGallery />
 
       <LocalCitiesLinks />
+
+      <TestimonialsEnhanced />
 
       <FAQ />
       <div id="contact">
