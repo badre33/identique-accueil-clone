@@ -19,12 +19,24 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				sans: ['Montserrat', 'system-ui', '-apple-system', 'sans-serif'],
+				display: ['Montserrat', 'system-ui', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				brand: {
+					red: 'hsl(var(--brand-red))',
+					'red-hover': 'hsl(var(--brand-red-hover))',
+					gold: 'hsl(var(--brand-gold))',
+					ink: 'hsl(var(--brand-ink))',
+					paper: 'hsl(var(--brand-paper))',
+					graphite: 'hsl(var(--brand-graphite))',
+				},
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'

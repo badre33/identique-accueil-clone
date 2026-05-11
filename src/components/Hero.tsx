@@ -90,7 +90,7 @@ const Hero = () => {
                 <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-purple-600 group-hover:rotate-12 group-hover:scale-110 transition-transform duration-300" />
                 <Award className="w-3 h-3 sm:w-4 sm:h-4 text-gold-500 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300" />
               </div>
-              <span className="text-xs sm:text-sm font-semibold text-slate-700 tracking-wide group-hover:text-purple-700 transition-colors duration-300">Stratégie. Contenu. Performance.</span>
+              <span className="text-xs sm:text-sm font-semibold text-slate-700 tracking-wide group-hover:text-primary transition-colors duration-300">Cabinet conseil · Performance digitale · Casablanca · Marrakech</span>
             </div>
           </TouchOptimized>
           
@@ -101,10 +101,9 @@ const Hero = () => {
               titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
           >
-            L'agence digitale des
-            <span className="block mt-2 sm:mt-3 bg-gradient-to-r from-blue-600 via-purple-600 via-indigo-600 to-blue-700 bg-clip-text text-transparent font-medium relative hover:from-blue-700 hover:via-purple-700 hover:to-indigo-800 transition-all duration-500">
-              marques établies au Maroc
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-blue-700/20 blur-3xl -z-10 animate-pulse group-hover:from-blue-700/30 group-hover:via-purple-700/30 group-hover:to-indigo-800/30 transition-all duration-500"></div>
+            La stratégie marketing
+            <span className="block mt-2 sm:mt-3 text-primary font-semibold relative">
+              qui génère vos leads.
             </span>
           </h1>
           
@@ -115,7 +114,7 @@ const Hero = () => {
               subtitleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
             }`}
           >
-            Stratégie. Contenu. Performance. Avec 11 ans d'expérience cumulée, Link Agency accompagne les directions marketing de plus de 50 marques, banques, assurances, retail, e-commerce, industrie, dans la conception de leurs identités, la production de leurs contenus, le pilotage de leurs dispositifs de performance et l'activation de leurs événements corporate.
+            Cabinet conseil en performance digitale au Maroc. Nous accompagnons les directions marketing des banques, assurances, retail et industrie dans la conception de stratégies mesurables : branding, acquisition, contenu, événementiel corporate. 11 ans d'expérience, 50+ comptes accompagnés, 200+ projets livrés.
           </p>
           
           {/* Enhanced CTA Buttons - Mobile-first design with better touch targets */}
@@ -141,7 +140,7 @@ const Hero = () => {
                 {/* Pulse effect on hover */}
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-400/0 via-purple-400/20 to-indigo-400/0 opacity-0 group-hover:opacity-100 animate-pulse transition-opacity duration-500"></div>
                 <Target className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3 group-hover:rotate-12 group-hover:scale-110 transition-transform duration-300 relative z-10" />
-                <span className="relative z-10">Discuter de votre dispositif</span>
+                <span className="relative z-10">Planifier un échange stratégique</span>
                 <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 ml-2 sm:ml-3 group-hover:translate-x-2 group-hover:scale-110 transition-transform duration-300 relative z-10" />
               </a>
             </TouchOptimized>
@@ -152,14 +151,14 @@ const Hero = () => {
               className="w-full sm:w-auto"
             >
               <Link
-                to="/inside-link"
+                to="/etudes-de-cas"
                 className="group relative inline-flex items-center justify-center px-8 sm:px-10 py-4 sm:py-5 bg-white/90 backdrop-blur-md text-slate-900 rounded-2xl font-semibold text-base sm:text-lg hover:bg-white transform hover:scale-105 hover:-translate-y-2 transition-all duration-700 shadow-xl hover:shadow-2xl border-2 border-slate-200/50 hover:border-slate-300/70 overflow-hidden w-full sm:min-w-[280px] hover:shadow-slate-500/20"
               >
                 {/* Enhanced shimmer effect for secondary button */}
                 <div className="absolute inset-0 bg-gradient-to-r from-slate-50/0 via-slate-100/70 to-slate-50/0 translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000"></div>
                 {/* Subtle glow effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-50/0 via-purple-50/30 to-blue-50/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <span className="relative z-10 group-hover:text-slate-800 transition-colors duration-300">Voir nos références</span>
+                <span className="relative z-10 group-hover:text-slate-800 transition-colors duration-300">Voir nos études de cas</span>
                 <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 ml-2 sm:ml-3 group-hover:translate-x-2 group-hover:scale-110 transition-transform duration-300 relative z-10" />
               </Link>
             </TouchOptimized>
