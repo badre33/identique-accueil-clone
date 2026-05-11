@@ -47,35 +47,32 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
   // Initialiser les analytics
   useEffect(() => {
     if (!isInitialized) {
-      try {
-        // Initialiser GA4 si activé
-        if (enableGA4) {
-          initGA4();
+      // Defer all analytics initialization to idle time and split into
+      // multiple microtasks so we never produce a single long task that
+      // blocks input (improves Max Potential FID / TBT).
+      const runStep = (fn: () => void) => {
+        try { fn(); } catch (error) {
+          console.error('❌ Analytics init step failed:', error);
         }
+      };
 
-        // Initialiser le tracking des performances
-        if (enablePerformanceTracking) {
-          trackPagePerformance();
+      const schedule = (fn: () => void, timeout = 2000) => {
+        if (typeof window !== 'undefined' && 'requestIdleCallback' in window) {
+          (window as any).requestIdleCallback(() => runStep(fn), { timeout });
+        } else {
+          setTimeout(() => runStep(fn), 0);
         }
+      };
 
-        // Initialiser le tracking du scroll
-        if (enableScrollTracking) {
-          initScrollTracking();
-        }
+      if (enableGA4) schedule(initGA4, 3000);
+      if (enablePerformanceTracking) schedule(trackPagePerformance, 2000);
+      if (enableScrollTracking) schedule(initScrollTracking, 2500);
+      if (enableHeatmaps) schedule(initHeatmapTracking, 3000);
+      schedule(setupDefaultABTests, 2000);
 
-        // Initialiser le tracking heatmap
-        if (enableHeatmaps) {
-          initHeatmapTracking();
-        }
-
-        // Configurer les tests A/B par défaut
-        setupDefaultABTests();
-
-        setIsInitialized(true);
-        console.log('✅ Analytics initialisés avec succès');
-      } catch (error) {
-        console.error('❌ Erreur lors de l\'initialisation des analytics:', error);
-      }
+      // Mark provider as initialized synchronously so consumers (trackEvent)
+      // remain usable; underlying handlers are no-ops until their step runs.
+      setIsInitialized(true);
     }
   }, [isInitialized, enableGA4, enableHeatmaps, enableScrollTracking, enablePerformanceTracking]);
 
