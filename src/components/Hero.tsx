@@ -2,6 +2,7 @@ import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { buildWhatsAppUrl } from "@/config/contact";
 import { trackEvent } from "@/lib/tracking";
+import heroArchitecture from "@/assets/hero-architecture.jpg";
 
 const Hero = () => {
   const proofItems = [
@@ -78,32 +79,33 @@ const Hero = () => {
           </div>
 
           {/* Right column — vertical meta */}
-          <aside className="lg:col-span-4 lg:border-l lg:border-border lg:pl-10 flex flex-col justify-between gap-12">
-            <div>
-              <p className="text-[11px] tracking-[0.2em] uppercase text-foreground/50 mb-4">
-                Édition
-              </p>
-              <p className="text-sm text-foreground/70 leading-relaxed">
-                Casablanca · Marrakech<br />
-                Édition 2026 — Pratique consolidée depuis 2014
-              </p>
-            </div>
-
-            <div>
-              <p className="text-[11px] tracking-[0.2em] uppercase text-foreground/50 mb-4">
+          {/* Right column — editorial photograph */}
+          <aside className="lg:col-span-4 flex flex-col">
+            <figure className="relative h-[420px] lg:h-[560px] w-full overflow-hidden bg-foreground/5">
+              <img
+                src={heroArchitecture}
+                alt="Tours du quartier d'affaires de Casablanca, capitale économique du Maroc"
+                width={1024}
+                height={1280}
+                fetchPriority="high"
+                decoding="async"
+                className="absolute inset-0 w-full h-full object-cover grayscale-[15%]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent" />
+              <figcaption className="absolute bottom-4 left-4 right-4 flex items-end justify-between text-[10px] tracking-[0.18em] uppercase text-background/90 mix-blend-difference">
+                <span>Casablanca — Quartier d'affaires</span>
+                <span>Fig. 01</span>
+              </figcaption>
+            </figure>
+            <div className="mt-6 pt-6 border-t border-border">
+              <p className="text-[11px] tracking-[0.2em] uppercase text-foreground/50 mb-3">
                 Disciplines
               </p>
-              <ul className="space-y-2 text-sm text-foreground/80">
+              <ul className="space-y-1.5 text-sm text-foreground/80">
                 <li>— Stratégie & Marque</li>
                 <li>— Performance digitale</li>
                 <li>— Influence & Événementiel</li>
               </ul>
-            </div>
-
-            <div className="text-sm text-foreground/60 leading-relaxed">
-              <span className="text-foreground font-medium">Note d'édition.</span>{" "}
-              Cette page est destinée aux directions marketing et générales en
-              quête d'une approche mesurable et durable de la performance.
             </div>
           </aside>
         </div>
