@@ -46,19 +46,50 @@ export const ConversionTracker: React.FC<ConversionTrackerProps> = ({
     }
 
     if (conversionType === 'scroll') {
-      const handleScroll = () => {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-        const scrollPercent = (scrollTop / docHeight) * 100;
-        
-        if (scrollPercent >= (triggerValue || 75)) {
-          track();
-          window.removeEventListener('scroll', handleScroll);
-        }
+      let cachedDocHeight = 0;
+      let ticking = false;
+      const threshold = triggerValue || 75;
+
+      const updateDocHeight = () => {
+        requestAnimationFrame(() => {
+          cachedDocHeight =
+            document.documentElement.scrollHeight - window.innerHeight;
+        });
       };
 
+      let resizeTimeout: ReturnType<typeof setTimeout>;
+      const handleResize = () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(updateDocHeight, 200);
+      };
+
+      const handleScroll = () => {
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(() => {
+          if (cachedDocHeight > 0) {
+            const scrollTop =
+              window.pageYOffset || document.documentElement.scrollTop;
+            const scrollPercent = (scrollTop / cachedDocHeight) * 100;
+            if (scrollPercent >= threshold) {
+              track();
+              window.removeEventListener('scroll', handleScroll);
+              window.removeEventListener('resize', handleResize);
+            }
+          }
+          ticking = false;
+        });
+      };
+
+      // Defer initial layout read
+      requestAnimationFrame(updateDocHeight);
       window.addEventListener('scroll', handleScroll, { passive: true });
-      return () => window.removeEventListener('scroll', handleScroll);
+      window.addEventListener('resize', handleResize, { passive: true });
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+        window.removeEventListener('resize', handleResize);
+        clearTimeout(resizeTimeout);
+      };
     }
   }, [conversionType, triggerValue, isInitialized, hasTracked]);
 
