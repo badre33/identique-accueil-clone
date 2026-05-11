@@ -17,7 +17,7 @@ import { LocalSEOSection } from "@/components/LocalSEO";
 import { LocalCitiesLinks } from "@/components/LocalCitiesLinks";
 import { ClientLogosMarquee } from "@/components/ClientLogosMarquee";
 import { KeyStats } from "@/components/KeyStats";
-import { TestimonialsEnhanced } from "@/components/TestimonialsEnhanced";
+import { TeamCredentials } from "@/components/TeamCredentials";
 import { faqsEnriched } from "@/data/content";
 import { generateOrganizationSchema, generateLocalBusinessSchema, generateWebPageSchema, generateFAQSchema } from '@/utils/structuredData';
 
@@ -74,7 +74,7 @@ const Index = () => {
 
       <LocalCitiesLinks />
 
-      <TestimonialsEnhanced />
+      <TeamCredentials />
 
       <FAQ />
       <div id="contact">
