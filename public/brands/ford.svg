@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 80" width="220" height="80" role="img" aria-label="Ford">
+  <style>
+    .wm{font-family:'Helvetica Neue',Arial,sans-serif;font-weight:300;letter-spacing:0.04em;}
+  </style>
+  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" class="wm" font-size="36" fill="#111">Ford</text>
+</svg>
