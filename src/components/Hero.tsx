@@ -84,16 +84,16 @@ const Hero = () => {
             <figure className="relative h-[420px] lg:h-[560px] w-full overflow-hidden bg-foreground/5">
               <img
                 src={heroArchitecture}
-                alt="Tours du quartier d'affaires de Casablanca, capitale économique du Maroc"
+                alt="Composition architecturale moderniste — verre, béton et lumière"
                 width={1024}
-                height={1280}
+                height={1024}
                 fetchPriority="high"
                 decoding="async"
-                className="absolute inset-0 w-full h-full object-cover grayscale-[15%]"
+                className="absolute inset-0 w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/30 via-transparent to-transparent" />
               <figcaption className="absolute bottom-4 left-4 right-4 flex items-end justify-between text-[10px] tracking-[0.18em] uppercase text-background/90 mix-blend-difference">
-                <span>Casablanca — Quartier d'affaires</span>
+                <span>Structure & précision</span>
                 <span>Fig. 01</span>
               </figcaption>
             </figure>
