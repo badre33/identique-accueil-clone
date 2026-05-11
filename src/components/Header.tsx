@@ -48,6 +48,7 @@ export const Header = () => {
     { label: 'Accueil', action: () => scrollToSection('accueil') },
     { label: 'Services', action: () => scrollToSection('services') },
     { label: 'Blog', to: '/blog' },
+    { label: 'Études de cas', to: '/etudes-de-cas' },
     { label: 'Collaborations', to: '/collaborations' },
     { label: 'Inside Link', to: '/inside-link' },
     { label: 'Contact', action: () => scrollToSection('contact') },
