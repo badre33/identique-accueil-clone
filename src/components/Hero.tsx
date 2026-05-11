@@ -84,17 +84,16 @@ const Hero = () => {
             <figure className="relative h-[420px] lg:h-[560px] w-full overflow-hidden bg-foreground/5">
               <img
                 src={heroArchitecture}
-                alt="Composition architecturale moderniste — verre, béton et lumière"
-                width={1024}
-                height={1024}
+                alt="Casablanca Finance City — quartier d'affaires de Casablanca, Maroc"
+                width={1200}
+                height={1600}
                 fetchPriority="high"
                 decoding="async"
                 className="absolute inset-0 w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/30 via-transparent to-transparent" />
-              <figcaption className="absolute bottom-4 left-4 right-4 flex items-end justify-between text-[10px] tracking-[0.18em] uppercase text-background/90 mix-blend-difference">
-                <span>Structure & précision</span>
-                <span>Fig. 01</span>
+              <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 via-foreground/10 to-transparent" />
+              <figcaption className="absolute bottom-4 left-4 right-4 text-[10px] tracking-[0.18em] uppercase text-background/95 leading-relaxed">
+                Casablanca Finance City — capitale économique du Maroc
               </figcaption>
             </figure>
             <div className="mt-6 pt-6 border-t border-border">
