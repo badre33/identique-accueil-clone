@@ -43,7 +43,8 @@ const Hero = () => {
               La stratégie marketing
               <br />
               <span className="italic font-light text-foreground/70">qui </span>
-              <span className="text-primary">génère vos leads.</span>
+              <span className="text-primary">génère vos leads</span>
+              <span className="italic font-light text-foreground/70"> au Maroc.</span>
             </h1>
 
             <p className="mt-10 max-w-2xl text-lg lg:text-xl leading-relaxed text-foreground/70 font-normal">
