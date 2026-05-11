@@ -113,6 +113,10 @@ export default {
 					'50%': {
 						transform: 'scale(1.02)'
 					}
+				},
+				'marquee': {
+					'0%': { transform: 'translateX(0)' },
+					'100%': { transform: 'translateX(-50%)' }
 				}
 			},
 			animation: {
@@ -120,7 +124,8 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in-up': 'fade-in-up 0.6s ease-out',
 				'slide-in-right': 'slide-in-right 0.4s ease-out',
-				'pulse-subtle': 'pulse-subtle 2s ease-in-out infinite'
+				'pulse-subtle': 'pulse-subtle 2s ease-in-out infinite',
+				'marquee': 'marquee 40s linear infinite'
 			},
 			transitionTimingFunction: {
 				'out-expo': 'cubic-bezier(0.19, 1, 0.22, 1)',
