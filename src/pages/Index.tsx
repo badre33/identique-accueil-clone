@@ -15,6 +15,8 @@ import { Footer } from "@/components/Footer";
 import { OptimizedCTAs } from "@/components/OptimizedCTAs";
 import { LocalSEOSection } from "@/components/LocalSEO";
 import { LocalCitiesLinks } from "@/components/LocalCitiesLinks";
+import { ClientLogosMarquee } from "@/components/ClientLogosMarquee";
+import { KeyStats } from "@/components/KeyStats";
 import { generateOrganizationSchema, generateLocalBusinessSchema, generateWebPageSchema } from '@/utils/structuredData';
 
 const Index = () => {
@@ -47,6 +49,8 @@ const Index = () => {
       <div id="accueil">
         <Hero />
       </div>
+      <ClientLogosMarquee />
+      <KeyStats />
       <div id="services">
         <Services />
       </div>
