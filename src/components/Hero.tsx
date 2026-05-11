@@ -89,7 +89,7 @@ const Hero = () => {
                 height={1600}
                 fetchPriority="high"
                 decoding="async"
-                className="absolute inset-0 w-full h-full object-cover"
+                className="absolute inset-0 w-full h-full object-cover grayscale contrast-[1.05]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 via-foreground/10 to-transparent" />
               <figcaption className="absolute bottom-4 left-4 right-4 text-[10px] tracking-[0.18em] uppercase text-background/95 leading-relaxed">
