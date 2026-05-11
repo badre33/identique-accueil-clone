@@ -61,7 +61,7 @@ const accounts = [
   'Orange Maroc', 'OCP', 'OCP Africa', 'Safran',
   'Honda Motor', 'Ford', 'Pharma 5', 'Mutandis Group',
   'Aiguebelle', 'Barid Al-Maghrib', 'Al Barid Bank', 'Aéroports du Maroc',
-  'AMDIE', 'CDG', 'Dekra', 'Brainlyne (US)',
+  'Dekra', 'Brainlyne (US)',
 ];
 
 export const TeamCredentials = () => {
