@@ -18,7 +18,7 @@ interface SEOHeadProps {
 export const SEOHead = ({
   title = "Link Agency - Agence Marketing Digital au Maroc | Branding & Communication",
   description = "Agence marketing digital au Maroc spécialisée en branding, communication digitale et événementiel. Services créatifs à Casablanca, Rabat et Marrakech.",
-  keywords = "agence marketing digital maroc, branding maroc, communication digitale, événementiel maroc, casablanca, rabat, marrakech",
+  keywords,
   image = "https://linkagency.ma/og-default.jpg",
   url = "https://linkagency.ma",
   type = "website",
@@ -37,7 +37,7 @@ export const SEOHead = ({
       {/* Balises meta de base */}
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
+      {keywords && <meta name="keywords" content={keywords} />}
       <meta name="author" content={author} />
       <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
       
