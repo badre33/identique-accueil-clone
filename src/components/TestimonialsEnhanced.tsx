@@ -136,7 +136,7 @@ export const TestimonialsEnhanced = () => {
                       src={testimonial.image} 
                       alt={testimonial.name}
                       className="w-12 h-12 rounded-full object-cover"
-                    / loading="lazy" decoding="async">
+                     loading="lazy" decoding="async" />
                   ) : (
                     testimonial.name.split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase()
                   )}

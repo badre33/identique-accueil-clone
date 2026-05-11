@@ -179,7 +179,7 @@ END:VCARD`;
               alt={name}
               className="w-12 h-12 rounded-full object-cover border-2 border-white/30 flex-shrink-0 shadow-lg object-top"
               style={{ objectPosition: '50% 30%' }}
-            / loading="lazy" decoding="async">
+             loading="lazy" decoding="async" />
           </div>
 
           <div className="flex items-center justify-between">
