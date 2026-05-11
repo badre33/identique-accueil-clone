@@ -102,7 +102,7 @@ const Hero = () => {
             }`}
           >
             La stratégie marketing
-            <span className="block mt-2 sm:mt-3 text-primary font-semibold relative">
+            <span className="block mt-2 sm:mt-3 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 bg-clip-text text-transparent font-semibold relative">
               qui génère vos leads.
             </span>
           </h1>

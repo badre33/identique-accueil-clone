@@ -1,11 +1,43 @@
 
 import { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import { cn } from '@/lib/utils';
+
+const servicePillars = [
+  {
+    title: 'Stratégie & Marque',
+    description: 'Identité, branding et conseil stratégique',
+    items: [
+      { label: 'Branding & Identité', to: '/branding' },
+      { label: 'Conseil stratégique', to: '/conseil-strategique' },
+      { label: 'Personal branding', to: '/personal-branding' },
+    ],
+  },
+  {
+    title: 'Performance Digitale',
+    description: 'Acquisition, contenu, SEO et analytics',
+    items: [
+      { label: 'Marketing digital', to: '/marketing-digital' },
+      { label: 'Social media', to: '/social-media' },
+      { label: 'Content digital', to: '/content-digital' },
+      { label: 'Développement web', to: '/developpement-web' },
+      { label: 'Analytics', to: '/analytics' },
+    ],
+  },
+  {
+    title: 'Influence & Événementiel',
+    description: 'Événements corporate et campagnes d\'influence',
+    items: [
+      { label: 'Événementiel corporate', to: '/evenementiel' },
+    ],
+  },
+];
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [mobileServicesExpanded, setMobileServicesExpanded] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -46,7 +78,6 @@ export const Header = () => {
 
   const navigationItems = [
     { label: 'Accueil', action: () => scrollToSection('accueil') },
-    { label: 'Services', action: () => scrollToSection('services') },
     { label: 'Blog', to: '/blog' },
     { label: 'Études de cas', to: '/etudes-de-cas' },
     { label: 'Collaborations', to: '/collaborations' },
@@ -78,7 +109,57 @@ export const Header = () => {
 
             {/* Desktop Navigation - Right side */}
             <nav className="hidden lg:flex items-center space-x-3 xl:space-x-5">
-              {navigationItems.map((item) => (
+              {/* Accueil */}
+              <button
+                onClick={() => scrollToSection('accueil')}
+                className="text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors px-3 py-2 rounded-lg hover:bg-gray-50"
+              >
+                Accueil
+              </button>
+
+              {/* Services dropdown */}
+              <div
+                className="relative"
+                onMouseEnter={() => setIsServicesOpen(true)}
+                onMouseLeave={() => setIsServicesOpen(false)}
+              >
+                <button
+                  onClick={() => setIsServicesOpen(!isServicesOpen)}
+                  className="inline-flex items-center text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors px-3 py-2 rounded-lg hover:bg-gray-50"
+                  aria-expanded={isServicesOpen}
+                  aria-haspopup="true"
+                >
+                  Services
+                  <ChevronDown className={cn('w-4 h-4 ml-1 transition-transform', isServicesOpen && 'rotate-180')} />
+                </button>
+                {isServicesOpen && (
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1 w-[720px] bg-white rounded-2xl shadow-2xl border border-gray-100 p-6 grid grid-cols-3 gap-6 z-[10000]">
+                    {servicePillars.map((pillar) => (
+                      <div key={pillar.title}>
+                        <h3 className="text-xs font-bold uppercase tracking-wider bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 bg-clip-text text-transparent mb-1">
+                          {pillar.title}
+                        </h3>
+                        <p className="text-xs text-gray-500 mb-3">{pillar.description}</p>
+                        <ul className="space-y-1">
+                          {pillar.items.map((it) => (
+                            <li key={it.to}>
+                              <Link
+                                to={it.to}
+                                onClick={() => setIsServicesOpen(false)}
+                                className="block text-sm text-gray-700 hover:text-purple-700 hover:bg-purple-50/50 px-2 py-1.5 rounded-md transition-colors"
+                              >
+                                {it.label}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {navigationItems.slice(1).map((item) => (
                 item.to ? (
                   <Link 
                     key={item.label}
@@ -101,7 +182,7 @@ export const Header = () => {
                 href="https://calendly.com/b-harkaoui-linkagency/30min"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="ml-2 inline-flex items-center px-5 py-2.5 bg-primary text-primary-foreground rounded-lg text-sm font-semibold hover:bg-[hsl(var(--brand-red-hover))] transition-colors shadow-sm"
+                className="ml-2 inline-flex items-center px-5 py-2.5 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 text-white rounded-lg text-sm font-semibold hover:from-blue-700 hover:via-purple-700 hover:to-indigo-800 transition-all shadow-sm hover:shadow-md"
               >
                 Planifier un échange
               </a>
@@ -168,7 +249,51 @@ export const Header = () => {
             {/* Navigation */}
             <nav className="flex-1 px-6 py-8 overflow-y-auto">
               <div className="space-y-2">
-                {navigationItems.map((item) => (
+                {/* Accueil */}
+                <button
+                  onClick={() => { scrollToSection('accueil'); setIsMenuOpen(false); }}
+                  className="w-full text-left px-4 py-4 text-lg font-light text-black hover:text-gray-600 hover:bg-gray-50 rounded-xl transition-all duration-200"
+                >
+                  Accueil
+                </button>
+
+                {/* Services accordion */}
+                <div>
+                  <button
+                    onClick={() => setMobileServicesExpanded(!mobileServicesExpanded)}
+                    className="w-full flex items-center justify-between px-4 py-4 text-lg font-light text-black hover:text-gray-600 hover:bg-gray-50 rounded-xl transition-all duration-200"
+                    aria-expanded={mobileServicesExpanded}
+                  >
+                    Services
+                    <ChevronDown className={cn('w-5 h-5 transition-transform', mobileServicesExpanded && 'rotate-180')} />
+                  </button>
+                  {mobileServicesExpanded && (
+                    <div className="pl-4 pb-2 space-y-4 mt-2">
+                      {servicePillars.map((pillar) => (
+                        <div key={pillar.title}>
+                          <h4 className="text-xs font-bold uppercase tracking-wider bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 bg-clip-text text-transparent px-3 mb-1">
+                            {pillar.title}
+                          </h4>
+                          <ul className="space-y-1">
+                            {pillar.items.map((it) => (
+                              <li key={it.to}>
+                                <Link
+                                  to={it.to}
+                                  onClick={() => setIsMenuOpen(false)}
+                                  className="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-lg"
+                                >
+                                  {it.label}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+
+                {navigationItems.slice(1).map((item) => (
                   <div key={item.label} className="block">
                     {item.to ? (
                       <Link 
@@ -197,7 +322,7 @@ export const Header = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setIsMenuOpen(false)}
-                className="mt-6 block text-center px-4 py-4 bg-primary text-primary-foreground rounded-xl text-base font-semibold hover:bg-[hsl(var(--brand-red-hover))] transition-colors"
+                className="mt-6 block text-center px-4 py-4 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 text-white rounded-xl text-base font-semibold hover:from-blue-700 hover:via-purple-700 hover:to-indigo-800 transition-all"
               >
                 Planifier un échange stratégique
               </a>
