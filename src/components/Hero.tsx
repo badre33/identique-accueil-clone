@@ -13,9 +13,9 @@ const Hero = () => {
   ];
 
   const clientLogos = [
-    "L'Bankalik", "AXA Assurance Maroc", "RMA", "Subway Maroc",
-    "YouCan", "Nova Spacia", "OCB Maroc", "La Maison Amoud",
-    "Brainlyne", "Benatna",
+    "Subway Maroc", "SGTM Immobilier", "Honda Maroc", "Pharma 5",
+    "Mutandis Group", "Aiguebelle", "L'Bankalik", "AXA Assurance Maroc",
+    "Attijari Wafabank", "Orange Maroc", "OCP Africa", "Aéroports du Maroc",
   ];
 
   const waUrl = buildWhatsAppUrl(

@@ -8,6 +8,58 @@ import { Link } from "react-router-dom";
 
 const cases = [
   {
+    sector: "Restauration / QSR",
+    client: "Subway Maroc",
+    title: "Activation social media nationale d'une enseigne QSR",
+    challenge: "Faire émerger Subway Maroc dans un univers concurrentiel saturé et transformer le canal social en moteur de génération de leads pour les nouvelles ouvertures.",
+    approach: "Direction artistique, ligne éditoriale native, production hebdomadaire, community management proactif et activations DM-to-conversion.",
+    kpis: [
+      { icon: Users, label: "Followers organiques", value: "+8 500" },
+      { icon: Target, label: "Leads qualifiés générés", value: "150+" },
+      { icon: TrendingUp, label: "Réponse DM < 2h", value: "97%" },
+    ],
+    services: ["social-media", "content-digital", "branding"],
+  },
+  {
+    sector: "Immobilier — Casablanca",
+    client: "SGTM Immobilier",
+    title: "Multiplier par 3,5 l'engagement social d'un acteur immobilier établi",
+    challenge: "Réinscrire un acteur historique de l'immobilier dans la conversation digitale et renforcer sa désirabilité auprès des acquéreurs urbains.",
+    approach: "Refonte de la ligne éditoriale, direction artistique premium, formats verticaux signature et calibrage paid social ciblé.",
+    kpis: [
+      { icon: TrendingUp, label: "Taux d'engagement", value: "2,1% → 7,4%" },
+      { icon: Eye, label: "Reach mensuel qualifié", value: "x3,5" },
+      { icon: Users, label: "Communauté active", value: "+62%" },
+    ],
+    services: ["social-media", "branding", "content-digital"],
+  },
+  {
+    sector: "Automobile — Maroc",
+    client: "Honda Maroc — Campagne Tokyo Days 2025",
+    title: "Lead generation automobile : un CPL plancher sur le marché marocain",
+    challenge: "Générer des leads qualifiés à très haut niveau de conversion sur un événement constructeur national, tout en maximisant la couverture social media.",
+    approach: "Trading desk programmatique (DV360, YouTube pre-roll), Meta Ads structuré full-funnel, tracking GTM/CM360, A/B testing créatifs et retargeting cross-canal.",
+    kpis: [
+      { icon: Target, label: "Coût par lead", value: "4,10 DH" },
+      { icon: TrendingUp, label: "CTR campagne", value: "3,10%" },
+      { icon: Eye, label: "Couverture nationale", value: "Multi-canal" },
+    ],
+    services: ["marketing-digital", "content-digital"],
+  },
+  {
+    sector: "Tech B2B — International",
+    client: "Brainlyne (US)",
+    title: "Croissance organique soutenue d'un acteur B2B US",
+    challenge: "Accélérer la croissance du trafic organique et structurer une présence éditoriale crédible sur un marché B2B compétitif.",
+    approach: "Stratégie de contenu pilier, optimisation SEO sémantique, copywriting brand-led et corporate film pour l'autorité éditoriale.",
+    kpis: [
+      { icon: TrendingUp, label: "Croissance organique", value: "+60%" },
+      { icon: Target, label: "Pipeline éditorial", value: "Industrialisé" },
+      { icon: Users, label: "Audience qualifiée", value: "Internationale" },
+    ],
+    services: ["content-digital", "branding", "marketing-digital"],
+  },
+  {
     sector: "Banque & Néobanque",
     client: "L'Bankalik — Groupe Attijariwafa Bank",
     title: "Activation digitale d'une néobanque marocaine",
@@ -103,7 +155,7 @@ const EtudesDeCas = () => {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     "name": "Études de cas — Link Agency Maroc",
-    "description": "6 études de cas chiffrées de campagnes marketing digital, branding et événementiel menées au Maroc par Link Agency.",
+    "description": "10 études de cas chiffrées de campagnes marketing digital, branding, social media et événementiel menées au Maroc et à l'international par Link Agency.",
     "url": "https://linkagency.ma/etudes-de-cas",
     "hasPart": cases.map((c) => ({
       "@type": "CreativeWork",
@@ -117,7 +169,7 @@ const EtudesDeCas = () => {
     <div className="min-h-screen bg-white pt-16 sm:pt-20">
       <SEOHead
         title="Études de Cas — Résultats Marketing Digital Maroc | Link Agency"
-        description="6 études de cas chiffrées : branding, social media, événementiel et influence au Maroc. Découvrez les résultats concrets obtenus pour AXA, L'Bankalik, YouCan, Edwin et plus."
+        description="10 études de cas chiffrées : Subway Maroc, SGTM Immobilier, Honda Maroc (Tokyo Days), L'Bankalik, AXA, YouCan, Edwin et plus. Résultats mesurables au Maroc."
         keywords="études de cas marketing digital maroc, résultats agence communication casablanca, case studies branding maroc, ROI marketing digital"
         url="https://linkagency.ma/etudes-de-cas"
         structuredData={structuredData}
