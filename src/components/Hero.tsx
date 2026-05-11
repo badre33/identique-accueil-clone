@@ -2,7 +2,7 @@ import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { buildWhatsAppUrl } from "@/config/contact";
 import { trackEvent } from "@/lib/tracking";
-import heroArchitecture from "@/assets/hero-architecture.jpg";
+import heroArchitecture from "@/assets/hero-architecture.webp";
 
 const Hero = () => {
   const proofItems = [
