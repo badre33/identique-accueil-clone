@@ -254,10 +254,180 @@ const Collaborations = () => {
       description: "Stratégie de repositionnement et campagne de communication pour cette marque de mode iconique.",
       year: "2024",
       type: "Fashion"
+    },
+    // ─── Comptes accompagnés par les membres de l'équipe Link Agency
+    // (missions menées dans leurs fonctions actuelles ou précédentes — source : dossier technique)
+    {
+      name: "Attijari Wafabank",
+      url: "#",
+      category: "Banque",
+      description: "Stratégie de marque, direction artistique et community management. Mission menée par Ayman Nejmi (DA & CM Link Agency).",
+      year: "Référence équipe",
+      type: "Brand & Social"
+    },
+    {
+      name: "Wafasalaf",
+      url: "#",
+      category: "Finance",
+      description: "Direction artistique, social media et production de contenus financiers. Mission menée par Ayman Nejmi (Link Agency).",
+      year: "Référence équipe",
+      type: "Brand & Social"
+    },
+    {
+      name: "Fondation Al Mada",
+      url: "#",
+      category: "Institutionnel",
+      description: "Stratégie éditoriale et communication corporate institutionnelle. Mission menée par Wissal Walkas (Link Agency).",
+      year: "Référence équipe",
+      type: "Corporate"
+    },
+    {
+      name: "Orange Maroc",
+      url: "#",
+      category: "Télécoms",
+      description: "Initiative Digital — pilotage cross-plateforme performance et branding (DV360, Meta, Google Ads). Mission menée par Anouar Bizzari (Trading Desk Link Agency).",
+      year: "Référence équipe",
+      type: "Performance & Trading"
+    },
+    {
+      name: "OCP / OCP Africa",
+      url: "#",
+      category: "Industrie",
+      description: "Campagnes couverture nationale et corporate digital. Comptes pilotés par Anouar Bizzari (Trading Desk) et Badreddine Harkaoui (ex-Nexia Morocco).",
+      year: "Référence équipe",
+      type: "Corporate & Media"
+    },
+    {
+      name: "Safran",
+      url: "#",
+      category: "Industrie",
+      description: "Stratégie de marque et communication corporate. Référence pilotée par Badreddine Harkaoui chez Nexia Morocco.",
+      year: "Référence équipe",
+      type: "Corporate"
+    },
+    {
+      name: "Honda Motor — Tokyo Days 2025",
+      url: "#",
+      category: "Automobile",
+      description: "Campagne nationale Tokyo Days 2025 — CTR 3,10% / CPL 4,10 DH. Mission menée par Abdeslam El Qourchi (Paid Social Link Agency).",
+      year: "2025",
+      type: "Paid Media"
+    },
+    {
+      name: "Ford",
+      url: "#",
+      category: "Automobile",
+      description: "Direction artistique et social media. Mission menée par Ayman Nejmi (Link Agency).",
+      year: "Référence équipe",
+      type: "Brand & Social"
+    },
+    {
+      name: "Pharma 5",
+      url: "#",
+      category: "Santé & Bien-être",
+      description: "Stratégies B2B et B2C multicanal — Google Ads et Meta Ads. Mission menée par Abdeslam El Qourchi (Link Agency).",
+      year: "Référence équipe",
+      type: "Performance"
+    },
+    {
+      name: "Mutandis Group",
+      url: "#",
+      category: "Industrie",
+      description: "Stratégies déployées sur Google Ads et Meta Ads pour les marques du groupe. Mission menée par Abdeslam El Qourchi (Link Agency).",
+      year: "Référence équipe",
+      type: "Performance"
+    },
+    {
+      name: "Aiguebelle",
+      url: "#",
+      category: "Agroalimentaire",
+      description: "Campagnes performance et activation de marque. Mission menée par Abdeslam El Qourchi (Link Agency).",
+      year: "Référence équipe",
+      type: "Performance"
+    },
+    {
+      name: "Barid Al-Maghrib / Al Barid Bank",
+      url: "#",
+      category: "Banque",
+      description: "Lead generation, optimisation CPL/CTR/conversion sur l'ensemble des leviers paid. Mission menée par Anouar Bizzari (Trading Desk Link Agency).",
+      year: "Référence équipe",
+      type: "Lead Gen & Trading"
+    },
+    {
+      name: "Aéroports du Maroc",
+      url: "#",
+      category: "Institutionnel",
+      description: "Campagnes reach et trafic qualifié sur dispositifs cross-plateforme. Mission menée par Anouar Bizzari (Link Agency).",
+      year: "Référence équipe",
+      type: "Reach & Brand"
+    },
+    {
+      name: "AMDIE",
+      url: "#",
+      category: "Institutionnel",
+      description: "Stratégie éditoriale et communication institutionnelle d'attractivité économique. Mission menée par Wissal Walkas (Link Agency).",
+      year: "Référence équipe",
+      type: "Corporate"
+    },
+    {
+      name: "CDG",
+      url: "#",
+      category: "Finance",
+      description: "Stratégie éditoriale et corporate film. Mission menée par Wissal Walkas (Link Agency).",
+      year: "Référence équipe",
+      type: "Corporate"
+    },
+    {
+      name: "Saham",
+      url: "#",
+      category: "Assurance",
+      description: "Refonte de plateforme de marque et stratégie digitale. Référence pilotée par Badreddine Harkaoui chez Nexia Morocco.",
+      year: "Référence équipe",
+      type: "Brand Strategy"
+    },
+    {
+      name: "Allianz",
+      url: "#",
+      category: "Assurance",
+      description: "Stratégie de communication et conformité réglementaire BAM. Référence pilotée par Badreddine Harkaoui chez Nexia Morocco.",
+      year: "Référence équipe",
+      type: "Brand Strategy"
+    },
+    {
+      name: "Arab Bank",
+      url: "#",
+      category: "Banque",
+      description: "Stratégie digitale et positionnement institutionnel. Référence pilotée par Badreddine Harkaoui chez Nexia Morocco.",
+      year: "Référence équipe",
+      type: "Strategy"
+    },
+    {
+      name: "Wafa Assurance",
+      url: "#",
+      category: "Assurance",
+      description: "Stratégie de marque et accompagnement digital. Référence pilotée par Badreddine Harkaoui chez Nexia Morocco.",
+      year: "Référence équipe",
+      type: "Strategy"
+    },
+    {
+      name: "Dekra",
+      url: "#",
+      category: "Industrie",
+      description: "Refonte du discours de marque et structuration de partenariats stratégiques. Référence pilotée par Badreddine Harkaoui chez Nexia Morocco.",
+      year: "Référence équipe",
+      type: "Brand Strategy"
+    },
+    {
+      name: "Brainlyne (US)",
+      url: "#",
+      category: "Tech B2B",
+      description: "+60% de croissance organique sur 12 mois — pipeline éditorial industrialisé. Mission menée par Wissal Walkas (Link Agency).",
+      year: "2024-2025",
+      type: "SEO & Contenu"
     }
   ];
 
-  const categories = ["Toutes", "Banque", "Assurance", "Restauration", "Retail", "E-commerce", "Santé & Bien-être", "Architecture d'intérieur", "Conseil", "Événementiel", "Tabac & Lifestyle", "Mode", "Branding Personnel", "Immobilier", "Écrans interactifs tactiles"];
+  const categories = ["Toutes", "Banque", "Finance", "Assurance", "Télécoms", "Industrie", "Automobile", "Tech B2B", "Institutionnel", "Restauration", "Retail", "E-commerce", "Santé & Bien-être", "Agroalimentaire", "Architecture d'intérieur", "Conseil", "Événementiel", "Tabac & Lifestyle", "Mode", "Branding Personnel", "Immobilier", "Écrans interactifs tactiles"];
 
   const filteredCollaborations = selectedCategory === "Toutes" 
     ? collaborations 
