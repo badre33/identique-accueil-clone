@@ -5,8 +5,29 @@ import { ArrowLeft, TrendingUp, BarChart, Target, Zap, Users, Eye, ChevronRight,
 import { Link } from "react-router-dom";
 import { FloatingContactWidget } from "@/components/FloatingContactWidget";
 import { WorkflowTimeline } from "@/components/WorkflowTimeline";
+import { generateServiceSchema, generateWebPageSchema, generateBreadcrumbSchema } from "@/utils/structuredData";
 
 const Analytics = () => {
+  const analyticsSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      generateServiceSchema(
+        "Analytics, Performance Marketing & CRO Maroc",
+        "Analytics, growth, A/B testing et CRO pour marques établies au Maroc. Tableaux de bord, KPIs métier, optimisation des campagnes Meta/Google et pilotage du ROI à Casablanca, Marrakech et Rabat.",
+        "Sur devis"
+      ),
+      generateWebPageSchema(
+        "Analytics & Performance Marketing Maroc | Link Agency",
+        "Analytics et performance marketing au Maroc : KPIs, A/B testing, CRO et pilotage ROI pour directions marketing exigeantes.",
+        "https://linkagency.ma/analytics"
+      ),
+      generateBreadcrumbSchema([
+        { name: "Accueil", url: "https://linkagency.ma/" },
+        { name: "Analytics & Performance", url: "https://linkagency.ma/analytics" }
+      ])
+    ]
+  };
+
   const analyticsServices = [
     {
       icon: <BarChart className="w-6 h-6 sm:w-8 sm:h-8" />,
@@ -109,6 +130,7 @@ const Analytics = () => {
         description="Agence analytics et performance marketing au Maroc : tableaux de bord, KPIs métier, A/B testing, optimisation des conversions et pilotage ROI pour marques établies à Casablanca."
         keywords="analytics maroc, performance marketing maroc, campagnes Meta Ads Maroc, optimisation conversion, KPI digital casablanca"
         url="https://linkagency.ma/analytics"
+        structuredData={analyticsSchema}
       />
       <Header />
       <FloatingContactWidget />

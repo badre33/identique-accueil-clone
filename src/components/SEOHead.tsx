@@ -19,7 +19,7 @@ export const SEOHead = ({
   title = "Link Agency - Agence Marketing Digital au Maroc | Branding & Communication",
   description = "Agence marketing digital au Maroc spécialisée en branding, communication digitale et événementiel. Services créatifs à Casablanca, Rabat et Marrakech.",
   keywords = "agence marketing digital maroc, branding maroc, communication digitale, événementiel maroc, casablanca, rabat, marrakech",
-  image = "https://linkagency.ma/logo-link-agency.png",
+  image = "https://linkagency.ma/og-default.jpg",
   url = "https://linkagency.ma",
   type = "website",
   publishedTime,
