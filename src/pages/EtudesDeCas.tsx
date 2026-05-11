@@ -8,6 +8,58 @@ import { Link } from "react-router-dom";
 
 const cases = [
   {
+    sector: "Restauration / QSR",
+    client: "Subway Maroc",
+    title: "Activation social media nationale d'une enseigne QSR",
+    challenge: "Faire émerger Subway Maroc dans un univers concurrentiel saturé et transformer le canal social en moteur de génération de leads pour les nouvelles ouvertures.",
+    approach: "Direction artistique, ligne éditoriale native, production hebdomadaire, community management proactif et activations DM-to-conversion.",
+    kpis: [
+      { icon: Users, label: "Followers organiques", value: "+8 500" },
+      { icon: Target, label: "Leads qualifiés générés", value: "150+" },
+      { icon: TrendingUp, label: "Réponse DM < 2h", value: "97%" },
+    ],
+    services: ["social-media", "content-digital", "branding"],
+  },
+  {
+    sector: "Immobilier — Casablanca",
+    client: "SGTM Immobilier",
+    title: "Multiplier par 3,5 l'engagement social d'un acteur immobilier établi",
+    challenge: "Réinscrire un acteur historique de l'immobilier dans la conversation digitale et renforcer sa désirabilité auprès des acquéreurs urbains.",
+    approach: "Refonte de la ligne éditoriale, direction artistique premium, formats verticaux signature et calibrage paid social ciblé.",
+    kpis: [
+      { icon: TrendingUp, label: "Taux d'engagement", value: "2,1% → 7,4%" },
+      { icon: Eye, label: "Reach mensuel qualifié", value: "x3,5" },
+      { icon: Users, label: "Communauté active", value: "+62%" },
+    ],
+    services: ["social-media", "branding", "content-digital"],
+  },
+  {
+    sector: "Automobile — Maroc",
+    client: "Honda Maroc — Campagne Tokyo Days 2025",
+    title: "Lead generation automobile : un CPL plancher sur le marché marocain",
+    challenge: "Générer des leads qualifiés à très haut niveau de conversion sur un événement constructeur national, tout en maximisant la couverture social media.",
+    approach: "Trading desk programmatique (DV360, YouTube pre-roll), Meta Ads structuré full-funnel, tracking GTM/CM360, A/B testing créatifs et retargeting cross-canal.",
+    kpis: [
+      { icon: Target, label: "Coût par lead", value: "4,10 DH" },
+      { icon: TrendingUp, label: "CTR campagne", value: "3,10%" },
+      { icon: Eye, label: "Couverture nationale", value: "Multi-canal" },
+    ],
+    services: ["marketing-digital", "content-digital"],
+  },
+  {
+    sector: "Tech B2B — International",
+    client: "Brainlyne (US)",
+    title: "Croissance organique soutenue d'un acteur B2B US",
+    challenge: "Accélérer la croissance du trafic organique et structurer une présence éditoriale crédible sur un marché B2B compétitif.",
+    approach: "Stratégie de contenu pilier, optimisation SEO sémantique, copywriting brand-led et corporate film pour l'autorité éditoriale.",
+    kpis: [
+      { icon: TrendingUp, label: "Croissance organique", value: "+60%" },
+      { icon: Target, label: "Pipeline éditorial", value: "Industrialisé" },
+      { icon: Users, label: "Audience qualifiée", value: "Internationale" },
+    ],
+    services: ["content-digital", "branding", "marketing-digital"],
+  },
+  {
     sector: "Banque & Néobanque",
     client: "L'Bankalik — Groupe Attijariwafa Bank",
     title: "Activation digitale d'une néobanque marocaine",
