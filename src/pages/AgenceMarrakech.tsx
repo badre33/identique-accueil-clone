@@ -4,6 +4,7 @@ import { ArrowLeft, MapPin, Sparkles, Camera, Globe, CheckCircle2, Phone, Mail, 
 import { Link } from "react-router-dom";
 import { FloatingContactWidget } from "@/components/FloatingContactWidget";
 import { SEOHead } from "@/components/SEOHead";
+import marrakechHero from "@/assets/marrakech-hero.webp";
 import {
   generateServiceSchema,
   generateWebPageSchema,
@@ -98,7 +99,8 @@ const AgenceMarrakech = () => {
 
       {/* Hero */}
       <section className="pt-32 pb-20 px-8 lg:px-16 bg-gradient-to-br from-orange-50 via-white to-amber-50 relative overflow-hidden">
-        <div className="max-w-6xl mx-auto relative">
+        <div className="max-w-6xl mx-auto relative grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
+          <div className="lg:col-span-3">
           <Link to="/" className="inline-flex items-center text-gray-600 hover:text-black transition-colors mb-8">
             <ArrowLeft className="w-4 h-4 mr-2" /> Retour à l'accueil
           </Link>
@@ -126,6 +128,19 @@ const AgenceMarrakech = () => {
                 <Mail className="w-4 h-4 mr-2" /> bharkaoui@linkagency.ma
               </Button>
             </a>
+          </div>
+          </div>
+          <div className="lg:col-span-2">
+            <img
+              src={marrakechHero}
+              alt="Vue panoramique des toits ocre de la médina de Marrakech au coucher du soleil avec le minaret de la Koutoubia et l'Atlas en arrière-plan"
+              width={1600}
+              height={896}
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
+              className="w-full h-auto rounded-2xl shadow-2xl object-cover aspect-[4/3]"
+            />
           </div>
         </div>
       </section>

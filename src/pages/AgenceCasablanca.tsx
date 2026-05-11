@@ -4,6 +4,7 @@ import { ArrowLeft, MapPin, Building2, TrendingUp, Target, CheckCircle2, Phone, 
 import { Link } from "react-router-dom";
 import { FloatingContactWidget } from "@/components/FloatingContactWidget";
 import { SEOHead } from "@/components/SEOHead";
+import casablancaHero from "@/assets/casablanca-hero.webp";
 import {
   generateServiceSchema,
   generateWebPageSchema,
@@ -98,7 +99,8 @@ const AgenceCasablanca = () => {
 
       {/* Hero */}
       <section className="pt-32 pb-20 px-8 lg:px-16 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden">
-        <div className="max-w-6xl mx-auto relative">
+        <div className="max-w-6xl mx-auto relative grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
+          <div className="lg:col-span-3">
           <Link to="/" className="inline-flex items-center text-gray-600 hover:text-black transition-colors mb-8">
             <ArrowLeft className="w-4 h-4 mr-2" /> Retour à l'accueil
           </Link>
@@ -126,6 +128,19 @@ const AgenceCasablanca = () => {
                 <Mail className="w-4 h-4 mr-2" /> bharkaoui@linkagency.ma
               </Button>
             </a>
+          </div>
+          </div>
+          <div className="lg:col-span-2">
+            <img
+              src={casablancaHero}
+              alt="Vue aérienne de la skyline de Casablanca au coucher du soleil avec la silhouette de la Mosquée Hassan II et le quartier d'affaires"
+              width={1600}
+              height={896}
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
+              className="w-full h-auto rounded-2xl shadow-2xl object-cover aspect-[4/3]"
+            />
           </div>
         </div>
       </section>
