@@ -77,7 +77,7 @@ export const Header = () => {
             </Link>
 
             {/* Desktop Navigation - Right side */}
-            <nav className="hidden lg:flex items-center space-x-4 xl:space-x-6">
+            <nav className="hidden lg:flex items-center space-x-3 xl:space-x-5">
               {navigationItems.map((item) => (
                 item.to ? (
                   <Link 
@@ -97,6 +97,14 @@ export const Header = () => {
                   </button>
                 )
               ))}
+              <a
+                href="https://calendly.com/b-harkaoui-linkagency/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ml-2 inline-flex items-center px-5 py-2.5 bg-primary text-primary-foreground rounded-lg text-sm font-semibold hover:bg-[hsl(var(--brand-red-hover))] transition-colors shadow-sm"
+              >
+                Planifier un échange
+              </a>
             </nav>
 
             {/* Mobile menu button */}
@@ -184,6 +192,15 @@ export const Header = () => {
                   </div>
                 ))}
               </div>
+              <a
+                href="https://calendly.com/b-harkaoui-linkagency/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsMenuOpen(false)}
+                className="mt-6 block text-center px-4 py-4 bg-primary text-primary-foreground rounded-xl text-base font-semibold hover:bg-[hsl(var(--brand-red-hover))] transition-colors"
+              >
+                Planifier un échange stratégique
+              </a>
             </nav>
           </div>
         </div>
