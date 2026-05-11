@@ -96,6 +96,9 @@ const Hero = () => {
                 Casablanca Finance City — capitale économique du Maroc
               </figcaption>
             </figure>
+            <p className="mt-2 text-[10px] text-foreground/40 leading-snug">
+              Photo : AyourAchtouk · <a href="https://commons.wikimedia.org/wiki/File:Casablanca_Finance_City_31.jpg" target="_blank" rel="noopener noreferrer" className="underline hover:text-foreground/60">Wikimedia Commons</a> · CC BY-SA 4.0
+            </p>
             <div className="mt-6 pt-6 border-t border-border">
               <p className="text-[11px] tracking-[0.2em] uppercase text-foreground/50 mb-3">
                 Disciplines
