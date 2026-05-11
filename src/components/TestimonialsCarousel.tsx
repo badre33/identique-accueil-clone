@@ -128,7 +128,7 @@ export const TestimonialsCarousel = () => {
                             src={testimonial.image} 
                             alt={testimonial.name}
                             className="w-24 h-24 lg:w-32 lg:h-32 rounded-full object-cover mx-auto lg:mx-0 border-4 border-white shadow-xl"
-                          />
+                          / loading="lazy" decoding="async">
                           <div className="absolute -bottom-2 -right-2 bg-green-500 text-white p-2 rounded-full shadow-lg">
                             <Quote className="w-4 h-4" />
                           </div>

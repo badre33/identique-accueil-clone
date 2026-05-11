@@ -97,7 +97,7 @@ export const CollaborationDetailsModal = ({ collaboration, isOpen, onClose }: Co
                   src={collaboration.logo} 
                   alt={collaboration.name}
                   className="max-h-24 max-w-full object-contain hover:scale-105 transition-transform duration-500"
-                />
+                / loading="lazy" decoding="async">
               </div>
             )}
             

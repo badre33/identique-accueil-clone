@@ -108,7 +108,7 @@ export const ProjectDetailsModal = ({ project, isOpen, onClose }: ProjectDetails
                 src={project.image} 
                 alt={project.title}
                 className="w-full h-full object-contain p-6 hover:scale-105 transition-transform duration-500"
-              />
+              / loading="lazy" decoding="async">
             </div>
             
             <div className="flex items-center justify-between bg-white rounded-xl p-4 shadow-sm border border-gray-100">
