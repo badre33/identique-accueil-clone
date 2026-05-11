@@ -34,6 +34,7 @@ const SocialMedia = () => <LazyWrapper importFunc={() => import('./pages/SocialM
 const AgenceCasablanca = () => <LazyWrapper importFunc={() => import('./pages/AgenceCasablanca')} />;
 const AgenceMarrakech = () => <LazyWrapper importFunc={() => import('./pages/AgenceMarrakech')} />;
 const AgenceRabat = () => <LazyWrapper importFunc={() => import('./pages/AgenceRabat')} />;
+const EtudesDeCas = () => <LazyWrapper importFunc={() => import('./pages/EtudesDeCas')} />;
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -75,6 +76,7 @@ const App = () => (
                   <Route path="/agence-marketing-digital-casablanca" element={<AgenceCasablanca />} />
                   <Route path="/agence-marketing-digital-marrakech" element={<AgenceMarrakech />} />
                   <Route path="/agence-communication-rabat" element={<AgenceRabat />} />
+                  <Route path="/etudes-de-cas" element={<EtudesDeCas />} />
                   <Route path="/inside-link" element={<InsideLink />} />
                   <Route path="/collaborations" element={<Collaborations />} />
                   <Route path="/blog" element={<Blog />} />
