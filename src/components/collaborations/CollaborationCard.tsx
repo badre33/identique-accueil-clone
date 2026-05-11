@@ -39,7 +39,7 @@ export const CollaborationCard = ({ collaboration, index, onClick }: Collaborati
                 src={collaboration.logo} 
                 alt={`${collaboration.name} logo`}
                 className={getLogoClasses(collaboration.name)}
-                onError={(e) => {
+                onError={(e) = loading="lazy" decoding="async"> {
                   e.currentTarget.style.display = 'none';
                 }}
               />
