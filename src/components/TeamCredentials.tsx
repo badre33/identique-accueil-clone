@@ -1,67 +1,57 @@
 import { Award, CheckCircle2, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-// Équipe Link Agency — données issues du dossier technique (10 profils seniors)
-const team = [
+// Pôles d'expertise — anonymisés (seul le fondateur est nommé)
+const expertises = [
   {
-    name: 'Badreddine Harkaoui',
-    role: 'Fondateur & Directeur de mission',
+    role: 'Stratégie & Pilotage de mission',
     expertise: 'Stratégie digitale · Branding · Pilotage grands comptes',
-    track: 'Ex-Consultant Stratégie Nexia Morocco — portefeuille AXA, Wafa Assurance, Saham, Allianz, Arab Bank, Orange, OCP, Safran, Dekra. 75+ projets livrés. Sélectionné 212 Founders (CDG Invest).',
+    track: 'Direction de mission engagée par Badreddine Harkaoui — fondateur. Portefeuille piloté incluant AXA, Wafa Assurance, Saham, Allianz, Arab Bank, Orange, OCP, Safran, Dekra. 75+ projets livrés. Sélectionné 212 Founders (CDG Invest).',
   },
   {
-    name: 'Julien Bucaille',
-    role: 'Revenue Performance Orchestration (JBScale)',
+    role: 'Revenue Performance Orchestration',
     expertise: 'Pilotage commercial · Funnel · RevOps',
-    track: '14 ans chez Salesforce (jusqu\'à SVP Sales) · 4 ans chez Oracle sur comptes stratégiques du secteur financier.',
+    track: 'Pôle senior cumulant 14 ans chez Salesforce (jusqu\'à SVP Sales) et 4 ans chez Oracle sur comptes stratégiques du secteur financier.',
   },
   {
-    name: 'Rachid Naguib',
     role: 'Data & Analytics',
     expertise: 'Power BI · SQL · Python · GA4 · Attribution multi-touch',
-    track: '−40% temps de reporting · +20% taux de conversion via optimisation des indicateurs d\'acquisition (Grown Media).',
+    track: 'Missions menées : −40% de temps de reporting · +20% de taux de conversion via optimisation des indicateurs d\'acquisition.',
   },
   {
-    name: 'Anouar Bizzari',
     role: 'Trading Desk & Programmatique',
     expertise: 'DV360 · CM360 · Meta · Google Ads · TikTok · LinkedIn',
-    track: 'Orange Maroc, Barid Al-Maghrib / Al Barid Bank, OCP Africa, Aéroports du Maroc — campagnes performance et couverture nationale.',
+    track: 'Comptes pilotés : Orange Maroc, Barid Al-Maghrib / Al Barid Bank, OCP Africa, Aéroports du Maroc — campagnes performance et couverture nationale.',
   },
   {
-    name: 'Abdeslam El Qourchi',
     role: 'Paid Social & Stratégie d\'acquisition',
     expertise: 'Google Ads · Meta Ads · HubSpot · Brevo',
     track: 'Stratégies déployées pour Honda Motor (Tokyo Days 2025 — CTR 3,10% / CPL 4,10 DH), Mutandis Group, Pharma 5, Aiguebelle.',
   },
   {
-    name: 'Aissam Laguig',
     role: 'SEO & Contenu Arabic / Darija',
     expertise: 'Semrush · Screaming Frog · GEO/IA',
     track: '+340% de croissance de trafic organique en moyenne · 25+ projets délivrés · 98% de satisfaction client.',
   },
   {
-    name: 'Ayman Nejmi',
     role: 'Direction Artistique & Community Management',
     expertise: 'Stratégie marque · Motion Design · Social Media',
-    track: 'Attijari Wafabank, Wafasalaf, AXA, RMA, Fondation Al Mada, Orange, Ford — secteurs financier et assurance.',
+    track: 'Comptes pilotés : Attijari Wafabank, Wafasalaf, AXA, RMA, Fondation Al Mada, Orange, Ford — secteurs financier et assurance.',
   },
   {
-    name: 'Wissal Walkas',
     role: 'Stratégie éditoriale & E-réputation',
     expertise: 'SEO · SEA/SMO · Copywriting · Brand · Corporate film',
     track: '+60% de croissance organique (Brainlyne US) · Stratégies AXA Assurance Maroc, AMDIE, CDG, Attijari Wafabank.',
   },
   {
-    name: 'Zakariaa Guismi',
     role: 'UX/UI & CRO',
     expertise: 'Hotjar · Figma · A/B testing · Core Web Vitals',
-    track: 'Expert CRO senior — optimisation parcours utilisateur et taux de conversion sur dispositifs e-commerce et lead gen.',
+    track: 'Optimisation de parcours utilisateur et de taux de conversion sur dispositifs e-commerce et lead generation.',
   },
   {
-    name: 'Ihssane Safar',
     role: 'CRM & Marketing Automation',
     expertise: 'HubSpot · Salesforce · Sarbacane · Parcours automatisés',
-    track: 'Ex-BMW Group Financial Services — Welcome Pack 25-30% d\'ouverture · Winback 18-22% · Base CRM +25% activable.',
+    track: 'Pôle issu du secteur financier (BMW Group Financial Services) — Welcome Pack 25-30% d\'ouverture · Winback 18-22% · Base CRM +25% activable.',
   },
 ];
 
@@ -78,37 +68,34 @@ export const TeamCredentials = () => {
   return (
     <section className="py-24 px-6 sm:px-8 lg:px-16 bg-white" aria-labelledby="team-credentials-title">
       <div className="max-w-7xl mx-auto">
-        {/* Header sobre, ton consulting */}
         <div className="max-w-3xl mb-16">
           <div className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.2em] text-gray-500 mb-6">
             <Award className="w-4 h-4" />
             <span>L'équipe Link Agency</span>
           </div>
           <h2 id="team-credentials-title" className="text-4xl md:text-5xl font-light text-foreground mb-6 leading-tight">
-            10 profils seniors. <span className="font-medium text-primary">60+ années</span> d'expérience cumulée.
+            10 pôles d'expertise. <span className="font-medium text-primary">60+ années</span> d'expérience cumulée.
           </h2>
           <p className="text-lg text-gray-600 leading-relaxed">
-            Une équipe de spécialistes ayant déjà piloté des dispositifs digitaux pour les grands comptes
-            financiers, industriels et institutionnels marocains. Chaque profil engage un track record vérifiable.
+            Une équipe de spécialistes seniors, dirigée par <span className="font-medium text-foreground">Badreddine Harkaoui</span>,
+            ayant déjà piloté des dispositifs digitaux pour les grands comptes financiers, industriels et
+            institutionnels marocains. Chaque pôle engage un track record vérifiable.
           </p>
         </div>
 
-        {/* Grille équipe */}
         <div className="grid md:grid-cols-2 gap-x-12 gap-y-10 mb-20">
-          {team.map((member) => (
-            <article key={member.name} className="border-l-2 border-primary/20 pl-6 hover:border-primary transition-colors">
-              <h3 className="text-xl font-medium text-foreground mb-1">{member.name}</h3>
-              <p className="text-sm font-medium text-primary mb-2">{member.role}</p>
-              <p className="text-sm text-gray-500 mb-3">{member.expertise}</p>
+          {expertises.map((pole) => (
+            <article key={pole.role} className="border-l-2 border-primary/20 pl-6 hover:border-primary transition-colors">
+              <h3 className="text-xl font-medium text-foreground mb-2">{pole.role}</h3>
+              <p className="text-sm text-gray-500 mb-3">{pole.expertise}</p>
               <p className="text-sm text-gray-700 leading-relaxed flex gap-2">
                 <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 shrink-0" aria-hidden="true" />
-                <span>{member.track}</span>
+                <span>{pole.track}</span>
               </p>
             </article>
           ))}
         </div>
 
-        {/* Comptes accompagnés */}
         <div className="border-t border-gray-100 pt-16">
           <div className="max-w-3xl mb-10">
             <p className="text-xs font-medium uppercase tracking-[0.2em] text-gray-500 mb-4">
@@ -118,7 +105,7 @@ export const TeamCredentials = () => {
               Des marques de référence au Maroc et à l'international.
             </h3>
             <p className="text-sm text-gray-500 italic">
-              Missions menées par les membres de l'équipe Link Agency, dans leurs fonctions actuelles
+              Missions menées par les pôles d'expertise de Link Agency, dans leurs fonctions actuelles
               ou précédentes. Détail des contextes et méthodologies disponible sur demande.
             </p>
           </div>
@@ -131,7 +118,6 @@ export const TeamCredentials = () => {
           </ul>
         </div>
 
-        {/* CTA sobre */}
         <div className="mt-16 flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between border-t border-gray-100 pt-10">
           <p className="text-base text-gray-700 max-w-xl">
             Vous souhaitez voir les études de cas détaillées (Subway, SGTM, Honda, Brainlyne…) ?

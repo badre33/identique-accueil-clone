@@ -262,7 +262,7 @@ const Collaborations = () => {
       url: "#",
       category: "Banque",
       logo: "/brands/attijari-wafabank.svg",
-      description: "Stratégie de marque, direction artistique et community management. Mission menée par Ayman Nejmi (DA & CM Link Agency).",
+      description: "Stratégie de marque, direction artistique et community management. Mission menée par le pôle Direction Artistique & Community Management de Link Agency.",
       year: "Référence équipe",
       type: "Brand & Social"
     },
@@ -271,7 +271,7 @@ const Collaborations = () => {
       url: "#",
       category: "Finance",
       logo: "/brands/wafasalaf.svg",
-      description: "Direction artistique, social media et production de contenus financiers. Mission menée par Ayman Nejmi (Link Agency).",
+      description: "Direction artistique, social media et production de contenus financiers. Mission menée par le pôle Direction Artistique & Community Management de Link Agency.",
       year: "Référence équipe",
       type: "Brand & Social"
     },
@@ -280,7 +280,7 @@ const Collaborations = () => {
       url: "#",
       category: "Institutionnel",
       logo: "/brands/fondation-al-mada.svg",
-      description: "Stratégie éditoriale et communication corporate institutionnelle. Mission menée par Wissal Walkas (Link Agency).",
+      description: "Stratégie éditoriale et communication corporate institutionnelle. Mission menée par le pôle Stratégie éditoriale & E-réputation de Link Agency.",
       year: "Référence équipe",
       type: "Corporate"
     },
@@ -289,7 +289,7 @@ const Collaborations = () => {
       url: "#",
       category: "Télécoms",
       logo: "/brands/orange-maroc.svg",
-      description: "Initiative Digital — pilotage cross-plateforme performance et branding (DV360, Meta, Google Ads). Mission menée par Anouar Bizzari (Trading Desk Link Agency).",
+      description: "Initiative Digital — pilotage cross-plateforme performance et branding (DV360, Meta, Google Ads). Mission menée par le pôle Trading Desk & Programmatique de Link Agency.",
       year: "Référence équipe",
       type: "Performance & Trading"
     },
@@ -298,7 +298,7 @@ const Collaborations = () => {
       url: "#",
       category: "Industrie",
       logo: "/brands/ocp.svg",
-      description: "Campagnes couverture nationale et corporate digital. Comptes pilotés par Anouar Bizzari (Trading Desk) et Badreddine Harkaoui (ex-Nexia Morocco).",
+      description: "Campagnes couverture nationale et corporate digital. Comptes pilotés par le pôle Trading Desk de Link Agency et par Badreddine Harkaoui (fondateur, ex-Nexia Morocco).",
       year: "Référence équipe",
       type: "Corporate & Media"
     },
@@ -307,7 +307,7 @@ const Collaborations = () => {
       url: "#",
       category: "Industrie",
       logo: "/brands/safran.svg",
-      description: "Stratégie de marque et communication corporate. Référence pilotée par Badreddine Harkaoui chez Nexia Morocco.",
+      description: "Stratégie de marque et communication corporate. Référence pilotée par Badreddine Harkaoui (fondateur Link Agency, ex-Nexia Morocco).",
       year: "Référence équipe",
       type: "Corporate"
     },
@@ -316,7 +316,7 @@ const Collaborations = () => {
       url: "#",
       category: "Automobile",
       logo: "/brands/honda-motor.svg",
-      description: "Campagne nationale Tokyo Days 2025 — CTR 3,10% / CPL 4,10 DH. Mission menée par Abdeslam El Qourchi (Paid Social Link Agency).",
+      description: "Campagne nationale Tokyo Days 2025 — CTR 3,10% / CPL 4,10 DH. Mission menée par le pôle Paid Social & Acquisition de Link Agency.",
       year: "2025",
       type: "Paid Media"
     },
@@ -325,7 +325,7 @@ const Collaborations = () => {
       url: "#",
       category: "Automobile",
       logo: "/brands/ford.svg",
-      description: "Direction artistique et social media. Mission menée par Ayman Nejmi (Link Agency).",
+      description: "Direction artistique et social media. Mission menée par le pôle Direction Artistique & Community Management de Link Agency.",
       year: "Référence équipe",
       type: "Brand & Social"
     },
@@ -334,7 +334,7 @@ const Collaborations = () => {
       url: "#",
       category: "Santé & Bien-être",
       logo: "/brands/pharma-5.svg",
-      description: "Stratégies B2B et B2C multicanal — Google Ads et Meta Ads. Mission menée par Abdeslam El Qourchi (Link Agency).",
+      description: "Stratégies B2B et B2C multicanal — Google Ads et Meta Ads. Mission menée par le pôle Paid Social & Acquisition de Link Agency.",
       year: "Référence équipe",
       type: "Performance"
     },
@@ -343,7 +343,7 @@ const Collaborations = () => {
       url: "#",
       category: "Industrie",
       logo: "/brands/mutandis.svg",
-      description: "Stratégies déployées sur Google Ads et Meta Ads pour les marques du groupe. Mission menée par Abdeslam El Qourchi (Link Agency).",
+      description: "Stratégies déployées sur Google Ads et Meta Ads pour les marques du groupe. Mission menée par le pôle Paid Social & Acquisition de Link Agency.",
       year: "Référence équipe",
       type: "Performance"
     },
@@ -352,7 +352,7 @@ const Collaborations = () => {
       url: "#",
       category: "Agroalimentaire",
       logo: "/brands/aiguebelle.svg",
-      description: "Campagnes performance et activation de marque. Mission menée par Abdeslam El Qourchi (Link Agency).",
+      description: "Campagnes performance et activation de marque. Mission menée par le pôle Paid Social & Acquisition de Link Agency.",
       year: "Référence équipe",
       type: "Performance"
     },
@@ -361,7 +361,7 @@ const Collaborations = () => {
       url: "#",
       category: "Banque",
       logo: "/brands/barid-al-maghrib.svg",
-      description: "Lead generation, optimisation CPL/CTR/conversion sur l'ensemble des leviers paid. Mission menée par Anouar Bizzari (Trading Desk Link Agency).",
+      description: "Lead generation, optimisation CPL/CTR/conversion sur l'ensemble des leviers paid. Mission menée par le pôle Trading Desk & Programmatique de Link Agency.",
       year: "Référence équipe",
       type: "Lead Gen & Trading"
     },
@@ -370,7 +370,7 @@ const Collaborations = () => {
       url: "#",
       category: "Institutionnel",
       logo: "/brands/aeroports-du-maroc.svg",
-      description: "Campagnes reach et trafic qualifié sur dispositifs cross-plateforme. Mission menée par Anouar Bizzari (Link Agency).",
+      description: "Campagnes reach et trafic qualifié sur dispositifs cross-plateforme. Mission menée par le pôle Trading Desk & Programmatique de Link Agency.",
       year: "Référence équipe",
       type: "Reach & Brand"
     },
@@ -379,7 +379,7 @@ const Collaborations = () => {
       url: "#",
       category: "Institutionnel",
       logo: "/brands/amdie.svg",
-      description: "Stratégie éditoriale et communication institutionnelle d'attractivité économique. Mission menée par Wissal Walkas (Link Agency).",
+      description: "Stratégie éditoriale et communication institutionnelle d'attractivité économique. Mission menée par le pôle Stratégie éditoriale & E-réputation de Link Agency.",
       year: "Référence équipe",
       type: "Corporate"
     },
@@ -388,7 +388,7 @@ const Collaborations = () => {
       url: "#",
       category: "Finance",
       logo: "/brands/cdg.svg",
-      description: "Stratégie éditoriale et corporate film. Mission menée par Wissal Walkas (Link Agency).",
+      description: "Stratégie éditoriale et corporate film. Mission menée par le pôle Stratégie éditoriale & E-réputation de Link Agency.",
       year: "Référence équipe",
       type: "Corporate"
     },
@@ -397,7 +397,7 @@ const Collaborations = () => {
       url: "#",
       category: "Assurance",
       logo: "/brands/saham.svg",
-      description: "Refonte de plateforme de marque et stratégie digitale. Référence pilotée par Badreddine Harkaoui chez Nexia Morocco.",
+      description: "Refonte de plateforme de marque et stratégie digitale. Référence pilotée par Badreddine Harkaoui (fondateur Link Agency, ex-Nexia Morocco).",
       year: "Référence équipe",
       type: "Brand Strategy"
     },
@@ -406,7 +406,7 @@ const Collaborations = () => {
       url: "#",
       category: "Assurance",
       logo: "/brands/allianz.svg",
-      description: "Stratégie de communication et conformité réglementaire BAM. Référence pilotée par Badreddine Harkaoui chez Nexia Morocco.",
+      description: "Stratégie de communication et conformité réglementaire BAM. Référence pilotée par Badreddine Harkaoui (fondateur Link Agency, ex-Nexia Morocco).",
       year: "Référence équipe",
       type: "Brand Strategy"
     },
@@ -415,7 +415,7 @@ const Collaborations = () => {
       url: "#",
       category: "Banque",
       logo: "/brands/arab-bank.svg",
-      description: "Stratégie digitale et positionnement institutionnel. Référence pilotée par Badreddine Harkaoui chez Nexia Morocco.",
+      description: "Stratégie digitale et positionnement institutionnel. Référence pilotée par Badreddine Harkaoui (fondateur Link Agency, ex-Nexia Morocco).",
       year: "Référence équipe",
       type: "Strategy"
     },
@@ -424,7 +424,7 @@ const Collaborations = () => {
       url: "#",
       category: "Assurance",
       logo: "/brands/wafa-assurance.svg",
-      description: "Stratégie de marque et accompagnement digital. Référence pilotée par Badreddine Harkaoui chez Nexia Morocco.",
+      description: "Stratégie de marque et accompagnement digital. Référence pilotée par Badreddine Harkaoui (fondateur Link Agency, ex-Nexia Morocco).",
       year: "Référence équipe",
       type: "Strategy"
     },
@@ -433,7 +433,7 @@ const Collaborations = () => {
       url: "#",
       category: "Industrie",
       logo: "/brands/dekra.svg",
-      description: "Refonte du discours de marque et structuration de partenariats stratégiques. Référence pilotée par Badreddine Harkaoui chez Nexia Morocco.",
+      description: "Refonte du discours de marque et structuration de partenariats stratégiques. Référence pilotée par Badreddine Harkaoui (fondateur Link Agency, ex-Nexia Morocco).",
       year: "Référence équipe",
       type: "Brand Strategy"
     },
@@ -442,7 +442,7 @@ const Collaborations = () => {
       url: "#",
       category: "Tech B2B",
       logo: "/brands/brainlyne.svg",
-      description: "+60% de croissance organique sur 12 mois — pipeline éditorial industrialisé. Mission menée par Wissal Walkas (Link Agency).",
+      description: "+60% de croissance organique sur 12 mois — pipeline éditorial industrialisé. Mission menée par le pôle Stratégie éditoriale & E-réputation de Link Agency.",
       year: "2024-2025",
       type: "SEO & Contenu"
     }
