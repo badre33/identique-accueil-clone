@@ -12,8 +12,6 @@ interface TrackEventParams {
 
 declare global {
   interface Window {
-    gtag?: (...args: unknown[]) => void;
-    dataLayer?: unknown[];
     plausible?: (event: string, opts?: { props?: Record<string, unknown> }) => void;
     fbq?: (...args: unknown[]) => void;
   }
