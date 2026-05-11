@@ -12,6 +12,7 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import { LazyWrapper } from "@/components/LazyWrapper";
 import { CriticalResourcesPreloader } from "@/components/CriticalResourcesPreloader";
 import { AnalyticsProvider } from "@/components/Analytics";
+import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 
@@ -35,6 +36,7 @@ const AgenceCasablanca = () => <LazyWrapper importFunc={() => import('./pages/Ag
 const AgenceMarrakech = () => <LazyWrapper importFunc={() => import('./pages/AgenceMarrakech')} />;
 const AgenceRabat = () => <LazyWrapper importFunc={() => import('./pages/AgenceRabat')} />;
 const EtudesDeCas = () => <LazyWrapper importFunc={() => import('./pages/EtudesDeCas')} />;
+const Secteurs = () => <LazyWrapper importFunc={() => import('./pages/Secteurs')} />;
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -77,6 +79,7 @@ const App = () => (
                   <Route path="/agence-marketing-digital-marrakech" element={<AgenceMarrakech />} />
                   <Route path="/agence-communication-rabat" element={<AgenceRabat />} />
                   <Route path="/etudes-de-cas" element={<EtudesDeCas />} />
+                  <Route path="/secteurs" element={<Secteurs />} />
                   <Route path="/inside-link" element={<InsideLink />} />
                   <Route path="/collaborations" element={<Collaborations />} />
                   <Route path="/blog" element={<Blog />} />
@@ -85,6 +88,7 @@ const App = () => (
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </PageTransition>
+              <StickyMobileCTA />
             </BrowserRouter>
           </TooltipProvider>
         </AnalyticsProvider>

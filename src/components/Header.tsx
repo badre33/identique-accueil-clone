@@ -179,7 +179,7 @@ export const Header = () => {
                 )
               ))}
               <a
-                href="https://calendly.com/b-harkaoui-linkagency/30min"
+                href="https://wa.me/212699024526?text=Bonjour%20Link%20Agency%2C%20je%20souhaite%20%C3%A9changer%20sur%20un%20projet%20marketing.%20Pourrions-nous%20planifier%20un%20appel%20%3F"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="ml-2 inline-flex items-center px-5 py-2.5 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 text-white rounded-lg text-sm font-semibold hover:from-blue-700 hover:via-purple-700 hover:to-indigo-800 transition-all shadow-sm hover:shadow-md"
@@ -318,7 +318,7 @@ export const Header = () => {
                 ))}
               </div>
               <a
-                href="https://calendly.com/b-harkaoui-linkagency/30min"
+                href="https://wa.me/212699024526?text=Bonjour%20Link%20Agency%2C%20je%20souhaite%20%C3%A9changer%20sur%20un%20projet%20marketing.%20Pourrions-nous%20planifier%20un%20appel%20%3F"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setIsMenuOpen(false)}

@@ -130,7 +130,7 @@ const Hero = () => {
               className="w-full sm:w-auto"
             >
               <a
-                href="https://calendly.com/b-harkaoui-linkagency/30min"
+                href="https://wa.me/212699024526?text=Bonjour%20Link%20Agency%2C%20je%20souhaite%20%C3%A9changer%20sur%20un%20projet%20marketing.%20Pourrions-nous%20planifier%20un%20appel%20%3F"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group relative inline-flex items-center justify-center px-8 sm:px-10 py-4 sm:py-5 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 text-white rounded-2xl font-semibold text-base sm:text-lg hover:from-blue-700 hover:via-purple-700 hover:to-indigo-800 transform hover:scale-105 hover:-translate-y-2 transition-all duration-700 shadow-2xl hover:shadow-3xl overflow-hidden w-full sm:min-w-[280px] hover:shadow-purple-500/25"
