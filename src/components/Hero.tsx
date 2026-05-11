@@ -98,7 +98,7 @@ const Hero = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 via-foreground/10 to-transparent" />
               <figcaption className="absolute bottom-4 left-4 right-4 text-[10px] tracking-[0.18em] uppercase text-background/95 leading-relaxed">
-                Casablanca Finance City — capitale économique du Maroc
+                Casablanca Finance City — hub financier de la région MENA
               </figcaption>
             </figure>
             <p className="mt-2 text-[10px] text-foreground/40 leading-snug">
