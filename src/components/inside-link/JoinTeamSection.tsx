@@ -24,7 +24,7 @@ export const JoinTeamSection = () => {
       title: 'Rendez-vous Stratégique',
       description: 'Planifions un call de 30 minutes',
       action: 'Réserver un créneau',
-      href: 'https://calendly.com/b-harkaoui-linkagency/30min',
+      href: 'https://wa.me/212699024526?text=Bonjour%20Link%20Agency%2C%20je%20souhaite%20%C3%A9changer%20sur%20un%20projet%20marketing.%20Pourrions-nous%20planifier%20un%20appel%20%3F',
       color: 'from-purple-500 to-pink-500'
     }
   ];
