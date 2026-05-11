@@ -470,8 +470,7 @@ const Collaborations = () => {
                 "Attijari Wafabank", "Wafasalaf", "AXA Assurance Maroc", "RMA",
                 "Fondation Al Mada", "Orange Maroc", "OCP", "Honda Motor",
                 "Pharma 5", "Mutandis Group", "Aiguebelle", "Barid Al-Maghrib",
-                "Aéroports du Maroc", "AMDIE", "CDG", "Brainlyne",
-                // AMDIE & CDG retirés sur demande client
+                "Aéroports du Maroc", "Brainlyne",
                 "L'Bankalik", "Subway Maroc", "YouCan", "SGTM Immobilier"
               ].map((client) => (
                 <div key={client} className="px-4 py-3 rounded-2xl bg-white border border-gray-200 text-sm font-semibold text-gray-700 shadow-sm">
