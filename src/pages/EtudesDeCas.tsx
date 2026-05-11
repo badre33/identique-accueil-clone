@@ -298,7 +298,7 @@ const EtudesDeCas = () => {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     "name": "Études de cas — Link Agency Maroc",
-    "description": "10 études de cas chiffrées de campagnes marketing digital, branding, social media et événementiel menées au Maroc et à l'international par Link Agency.",
+    "description": "21 études de cas de campagnes marketing digital, branding, social media et événementiel menées au Maroc et à l'international par Link Agency : Subway, Honda, Orange, OCP, Pharma 5, AXA, Wafasalaf, L'Bankalik, Brainlyne et plus.",
     "url": "https://linkagency.ma/etudes-de-cas",
     "hasPart": cases.map((c) => ({
       "@type": "CreativeWork",
@@ -312,7 +312,7 @@ const EtudesDeCas = () => {
     <div className="min-h-screen bg-white pt-16 sm:pt-20">
       <SEOHead
         title="Études de Cas — Résultats Marketing Digital Maroc | Link Agency"
-        description="10 études de cas chiffrées : Subway Maroc, SGTM Immobilier, Honda Maroc (Tokyo Days), L'Bankalik, AXA, YouCan, Edwin et plus. Résultats mesurables au Maroc."
+        description="21 études de cas : Subway, SGTM, Honda Tokyo Days, L'Bankalik, AXA, Orange, OCP, Pharma 5, Wafasalaf, RMA, Aiguebelle, Mutandis, Aéroports du Maroc, Brainlyne et plus."
         keywords="études de cas marketing digital maroc, résultats agence communication casablanca, case studies branding maroc, ROI marketing digital"
         url="https://linkagency.ma/etudes-de-cas"
         structuredData={structuredData}
