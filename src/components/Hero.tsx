@@ -56,7 +56,7 @@ const Hero = () => {
                 href={waUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={() => trackEvent("cta_whatsapp_click", { location: "hero_primary" })}
+                onClick={() => trackEvent("cta_whatsapp_click", { category: "lead", label: "hero_primary" })}
                 className="group inline-flex items-center justify-between gap-6 px-7 py-4 bg-foreground text-background hover:bg-primary transition-colors duration-300 rounded-none"
               >
                 <span className="text-base font-medium tracking-tight">
