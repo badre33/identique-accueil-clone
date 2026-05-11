@@ -261,7 +261,7 @@ const Collaborations = () => {
       name: "Attijari Wafabank",
       url: "#",
       category: "Banque",
-      logo: "/brands/attijari-wafabank.svg",
+      logo: "/brands/attijari-wafabank.png",
       description: "Stratégie de marque, direction artistique et community management. Mission menée par le pôle Direction Artistique & Community Management de Link Agency.",
       year: "Référence équipe",
       type: "Brand & Social"
@@ -279,7 +279,7 @@ const Collaborations = () => {
       name: "Fondation Al Mada",
       url: "#",
       category: "Institutionnel",
-      logo: "/brands/fondation-al-mada.svg",
+      logo: "/brands/fondation-al-mada.webp",
       description: "Stratégie éditoriale et communication corporate institutionnelle. Mission menée par le pôle Stratégie éditoriale & E-réputation de Link Agency.",
       year: "Référence équipe",
       type: "Corporate"
@@ -315,7 +315,7 @@ const Collaborations = () => {
       name: "Honda Motor — Tokyo Days 2025",
       url: "#",
       category: "Automobile",
-      logo: "/brands/honda-motor.svg",
+      logo: "/brands/honda-motor.png",
       description: "Campagne nationale Tokyo Days 2025 — CTR 3,10% / CPL 4,10 DH. Mission menée par le pôle Paid Social & Acquisition de Link Agency.",
       year: "2025",
       type: "Paid Media"
@@ -324,7 +324,7 @@ const Collaborations = () => {
       name: "Ford",
       url: "#",
       category: "Automobile",
-      logo: "/brands/ford.svg",
+      logo: "/brands/ford.png",
       description: "Direction artistique et social media. Mission menée par le pôle Direction Artistique & Community Management de Link Agency.",
       year: "Référence équipe",
       type: "Brand & Social"
@@ -360,7 +360,7 @@ const Collaborations = () => {
       name: "Barid Al-Maghrib / Al Barid Bank",
       url: "#",
       category: "Banque",
-      logo: "/brands/barid-al-maghrib.svg",
+      logo: "/brands/al-barid-bank.png",
       description: "Lead generation, optimisation CPL/CTR/conversion sur l'ensemble des leviers paid. Mission menée par le pôle Trading Desk & Programmatique de Link Agency.",
       year: "Référence équipe",
       type: "Lead Gen & Trading"
@@ -369,28 +369,10 @@ const Collaborations = () => {
       name: "Aéroports du Maroc",
       url: "#",
       category: "Institutionnel",
-      logo: "/brands/aeroports-du-maroc.svg",
+      logo: "/brands/aeroports-du-maroc.png",
       description: "Campagnes reach et trafic qualifié sur dispositifs cross-plateforme. Mission menée par le pôle Trading Desk & Programmatique de Link Agency.",
       year: "Référence équipe",
       type: "Reach & Brand"
-    },
-    {
-      name: "AMDIE",
-      url: "#",
-      category: "Institutionnel",
-      logo: "/brands/amdie.svg",
-      description: "Stratégie éditoriale et communication institutionnelle d'attractivité économique. Mission menée par le pôle Stratégie éditoriale & E-réputation de Link Agency.",
-      year: "Référence équipe",
-      type: "Corporate"
-    },
-    {
-      name: "CDG",
-      url: "#",
-      category: "Finance",
-      logo: "/brands/cdg.svg",
-      description: "Stratégie éditoriale et corporate film. Mission menée par le pôle Stratégie éditoriale & E-réputation de Link Agency.",
-      year: "Référence équipe",
-      type: "Corporate"
     },
     {
       name: "Saham",
@@ -405,7 +387,7 @@ const Collaborations = () => {
       name: "Allianz",
       url: "#",
       category: "Assurance",
-      logo: "/brands/allianz.svg",
+      logo: "/brands/allianz.png",
       description: "Stratégie de communication et conformité réglementaire BAM. Référence pilotée par Badreddine Harkaoui (fondateur Link Agency, ex-Nexia Morocco).",
       year: "Référence équipe",
       type: "Brand Strategy"
@@ -414,7 +396,7 @@ const Collaborations = () => {
       name: "Arab Bank",
       url: "#",
       category: "Banque",
-      logo: "/brands/arab-bank.svg",
+      logo: "/brands/arab-bank.png",
       description: "Stratégie digitale et positionnement institutionnel. Référence pilotée par Badreddine Harkaoui (fondateur Link Agency, ex-Nexia Morocco).",
       year: "Référence équipe",
       type: "Strategy"
@@ -441,7 +423,7 @@ const Collaborations = () => {
       name: "Brainlyne (US)",
       url: "#",
       category: "Tech B2B",
-      logo: "/brands/brainlyne.svg",
+      logo: "/brands/brainlyne.png",
       description: "+60% de croissance organique sur 12 mois — pipeline éditorial industrialisé. Mission menée par le pôle Stratégie éditoriale & E-réputation de Link Agency.",
       year: "2024-2025",
       type: "SEO & Contenu"
@@ -488,7 +470,7 @@ const Collaborations = () => {
                 "Attijari Wafabank", "Wafasalaf", "AXA Assurance Maroc", "RMA",
                 "Fondation Al Mada", "Orange Maroc", "OCP", "Honda Motor",
                 "Pharma 5", "Mutandis Group", "Aiguebelle", "Barid Al-Maghrib",
-                "Aéroports du Maroc", "AMDIE", "CDG", "Brainlyne",
+                "Aéroports du Maroc", "Brainlyne",
                 "L'Bankalik", "Subway Maroc", "YouCan", "SGTM Immobilier"
               ].map((client) => (
                 <div key={client} className="px-4 py-3 rounded-2xl bg-white border border-gray-200 text-sm font-semibold text-gray-700 shadow-sm">
