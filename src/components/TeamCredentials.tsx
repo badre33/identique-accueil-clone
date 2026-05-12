@@ -6,7 +6,7 @@ const expertises = [
   {
     role: 'Stratégie & Pilotage de mission',
     expertise: 'Stratégie digitale · Branding · Pilotage grands comptes',
-    track: 'Direction de mission engagée par Badreddine Harkaoui — fondateur. Portefeuille piloté incluant AXA, Wafa Assurance, Saham, Allianz, Arab Bank, Orange, OCP, Safran, Dekra. 75+ projets livrés. Sélectionné 212 Founders (CDG Invest).',
+    track: 'Direction de mission engagée par Badreddine Harkaoui — fondateur. Portefeuille piloté incluant AXA, Wafa Assurance, Allianz, Arab Bank, Orange, OCP, Safran, Dekra. 75+ projets livrés. Sélectionné 212 Founders (CDG Invest).',
   },
   {
     role: 'Revenue Performance Orchestration',
@@ -57,7 +57,7 @@ const expertises = [
 
 const accounts = [
   'Attijari Wafabank', 'Wafasalaf', 'AXA Assurance Maroc', 'RMA',
-  'Fondation Al Mada', 'Saham', 'Allianz', 'Arab Bank',
+  'Fondation Al Mada', 'Allianz', 'Arab Bank',
   'Orange Maroc', 'Safran',
   'Honda Motor', 'Ford', 'Pharma 5', 'Mutandis Group',
   'Aiguebelle', 'Barid Al-Maghrib', 'Al Barid Bank', 'Aéroports du Maroc',

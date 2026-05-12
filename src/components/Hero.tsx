@@ -14,7 +14,7 @@ const Hero = () => {
 
   const clientLogos = [
     "Attijari Wafabank", "Wafasalaf", "Wafa Assurance", "AXA Assurance Maroc",
-    "RMA", "Saham", "Allianz", "Arab Bank",
+    "RMA", "Allianz", "Arab Bank",
     "Fondation Al Mada", "Orange Maroc", "Safran",
     "Honda Motor", "Ford",
     "Pharma 5", "Mutandis Group", "Aiguebelle", "Barid Al-Maghrib",

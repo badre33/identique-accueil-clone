@@ -366,15 +366,6 @@ const Collaborations = () => {
       type: "Reach & Brand"
     },
     {
-      name: "Saham",
-      url: "#",
-      category: "Assurance",
-      logo: "/brands/saham.svg",
-      description: "Refonte de plateforme de marque et stratégie digitale. Référence pilotée par Badreddine Harkaoui (fondateur Link Agency, ex-Nexia Morocco).",
-      year: "Référence équipe",
-      type: "Brand Strategy"
-    },
-    {
       name: "Allianz",
       url: "#",
       category: "Assurance",
@@ -407,6 +398,51 @@ const Collaborations = () => {
       category: "Industrie",
       logo: "/brands/dekra.png",
       description: "Refonte du discours de marque et structuration de partenariats stratégiques. Référence pilotée par Badreddine Harkaoui (fondateur Link Agency, ex-Nexia Morocco).",
+      year: "Référence équipe",
+      type: "Brand Strategy"
+    },
+    {
+      name: "OCP",
+      url: "#",
+      category: "Industrie",
+      logo: "/brands/ocp.svg",
+      description: "Communication corporate et institutionnelle pour le leader mondial des phosphates. Référence pilotée par Badreddine Harkaoui (fondateur Link Agency, ex-Nexia Morocco).",
+      year: "Référence équipe",
+      type: "Corporate Communication"
+    },
+    {
+      name: "OCP Africa",
+      url: "#",
+      category: "Industrie",
+      logo: "/brands/ocp-africa.svg",
+      description: "Stratégie de positionnement pan-africain. Communication B2B et content stratégique pour les marchés africains.",
+      year: "Référence équipe",
+      type: "Brand Strategy"
+    },
+    {
+      name: "CDG",
+      url: "#",
+      category: "Finance",
+      logo: "/brands/cdg.svg",
+      description: "Caisse de Dépôt et de Gestion — communication institutionnelle. Référence pilotée par Badreddine Harkaoui (fondateur Link Agency, ex-Nexia Morocco). Partenariat avec 212 Founders (CDG Invest).",
+      year: "Référence équipe",
+      type: "Corporate Communication"
+    },
+    {
+      name: "AMDIE",
+      url: "#",
+      category: "Institutionnel",
+      logo: "/brands/amdie.svg",
+      description: "Agence Marocaine de Développement des Investissements et des Exportations — positionnement international et campagnes d'attractivité économique.",
+      year: "Référence équipe",
+      type: "Institutional Strategy"
+    },
+    {
+      name: "Oncovita",
+      url: "#",
+      category: "Santé & Bien-être",
+      logo: "/brands/oncovita.svg",
+      description: "Positionnement de marque et stratégie de contenu pour acteur santé spécialisé en oncologie.",
       year: "Référence équipe",
       type: "Brand Strategy"
     },

@@ -270,7 +270,7 @@ const cases = [
   },
   {
     sector: "Grands comptes financiers — Maroc",
-    client: "Saham · Allianz · Wafa Assurance · Arab Bank · Dekra · Safran",
+    client: "Allianz · Wafa Assurance · Arab Bank · Dekra · Safran",
     title: "Portefeuille grands comptes — stratégie marketing & growth (Nexia)",
     challenge: "Pilotage du positionnement digital et de la stratégie de marque d'un portefeuille de grands comptes financiers, industriels et certificateurs en environnement régulé (BAM, ACAPS, contraintes fiduciaires).",
     approach: "Mission de Stratégie Marketing & Growth menée sur les standards Nexia International — pilotage d'un portefeuille de 10+ grands comptes du secteur (référence directe pilotée par Badreddine Harkaoui, fondateur Link Agency).",
