@@ -4,6 +4,7 @@ import { ArrowLeft, Target, Palette, Users, Lightbulb, Linkedin, History, Downlo
 import { Link } from "react-router-dom";
 import { FloatingContactWidget } from "@/components/FloatingContactWidget";
 import { SideNavigation } from "@/components/inside-link/SideNavigation";
+import TeamShowcase from "@/components/inside-link/TeamShowcase";
 import { AnimatedStats } from "@/components/inside-link/AnimatedStats";
 import { VisionSection } from "@/components/inside-link/VisionSection";
 import { JoinTeamSection } from "@/components/inside-link/JoinTeamSection";
@@ -237,6 +238,11 @@ const InsideLink = () => {
           </div>
         </section>
       </SectionTransition>
+
+      {/* Notre équipe — 10 pôles d'expertise */}
+      <ScrollReveal delay={200}>
+        <TeamShowcase />
+      </ScrollReveal>
 
       {/* 3D Skills Section */}
       <SectionTransition variant="scale">

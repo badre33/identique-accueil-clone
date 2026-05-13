@@ -237,10 +237,11 @@ END:VCARD`;
             
             <button
               onClick={generateVCard}
-              className="download-btn flex items-center space-x-1 bg-white text-black px-3 py-2 rounded-lg hover:bg-gray-100 transition-all duration-300 text-xs font-semibold shadow-lg hover:shadow-xl transform hover:scale-105"
+              className="download-btn flex items-center gap-2 bg-white text-black px-4 py-2.5 rounded-lg hover:bg-gray-100 transition-all duration-300 text-sm font-bold shadow-xl hover:shadow-2xl transform hover:scale-105 ring-2 ring-white/30"
+              aria-label="Télécharger la carte de visite"
             >
-              <Download className="w-3 h-3" />
-              <span>Télécharger</span>
+              <Download className="w-4 h-4" />
+              <span>Ma carte</span>
             </button>
           </div>
         </div>
@@ -248,6 +249,19 @@ END:VCARD`;
         {/* Shine effect */}
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 rounded-2xl"></div>
       </div>
+
+      {/* CTA Download principal — bien visible sous la carte */}
+      <button
+        onClick={generateVCard}
+        className="mt-6 inline-flex items-center justify-center gap-3 bg-black text-white px-8 py-4 rounded-xl hover:bg-gray-800 transition-all duration-300 font-semibold shadow-lg hover:shadow-2xl hover:scale-[1.02] w-full sm:w-auto"
+        aria-label={`Télécharger la carte de visite de ${name}`}
+      >
+        <Download className="w-5 h-5" />
+        <span>Télécharger la carte de visite (.vcf)</span>
+      </button>
+      <p className="mt-3 text-xs text-neutral-500 text-center">
+        Compatible avec iPhone, Android, Outlook et tous les carnets d'adresses.
+      </p>
     </div>
   );
 };
