@@ -18,7 +18,7 @@ const Hero = () => {
     "Fondation Al Mada", "Orange Maroc", "Safran",
     "Honda Motor", "Ford",
     "Pharma 5", "Mutandis Group", "Aiguebelle", "Barid Al-Maghrib",
-    "Al Barid Bank", "Aéroports du Maroc", "AMDIE", "Dekra",
+    "Al Barid Bank", "Aéroports du Maroc", "Dekra",
     "Brainlyne", "Subway Maroc", "SGTM Immobilier", "L'Bankalik",
   ];
 

@@ -152,19 +152,6 @@ const cases = [
     services: ["marketing-digital", "content-digital"],
   },
   {
-    sector: "Industrie & Mining — OCP / OCP Africa",
-    client: "OCP & OCP Africa",
-    title: "Campagnes corporate — couverture nationale & continentale",
-    challenge: "Acteur industriel de référence : déployer une couverture nationale (OCP) et continentale (OCP Africa) sur des dispositifs corporate complexes.",
-    approach: "Trading Desk & Programmatique : structuration des campagnes, paramétrage média, audiences/formats/placements, reporting performance + branding.",
-    kpis: [
-      { icon: Eye, label: "Périmètre", value: "National + Afrique" },
-      { icon: Target, label: "Levier", value: "Trading desk programmatique" },
-      { icon: TrendingUp, label: "Pilotage", value: "Performance + branding" },
-    ],
-    services: ["marketing-digital", "branding"],
-  },
-  {
     sector: "Banque postale — Maroc",
     client: "Barid Al-Maghrib / Al Barid Bank",
     title: "Trading Desk acquisition & trafic qualifié pour la banque postale",
@@ -256,11 +243,11 @@ const cases = [
     services: ["content-digital", "social-media", "branding"],
   },
   {
-    sector: "Institutionnel — Fondation Al Mada / AMDIE / CDG",
-    client: "Fondation Al Mada · AMDIE · CDG",
+    sector: "Institutionnel — Fondation Al Mada",
+    client: "Fondation Al Mada",
     title: "Stratégie éditoriale & copywriting corporate institutionnel",
-    challenge: "Institutions de référence (fondation, agence d'investissement, caisse de dépôt) : structurer la voix éditoriale en environnement à fort enjeu réputationnel.",
-    approach: "Stratégies éditoriales et copywriting corporate portés par le pôle Stratégie éditoriale & Brand Content de Link Agency (références : AXA Assurance Maroc, AMDIE, CDG, Fondation Al Mada).",
+    challenge: "Institution de référence : structurer la voix éditoriale en environnement à fort enjeu réputationnel.",
+    approach: "Stratégie éditoriale et copywriting corporate portés par le pôle Stratégie éditoriale & Brand Content de Link Agency (références : AXA Assurance Maroc, Attijari Wafabank, Fondation Al Mada).",
     kpis: [
       { icon: Target, label: "Périmètre", value: "Editorial corporate" },
       { icon: Eye, label: "Cadre", value: "Institutionnel régulé" },
@@ -299,7 +286,7 @@ const EtudesDeCas = () => {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     "name": "Études de cas — Link Agency Maroc",
-    "description": "21 études de cas de campagnes marketing digital, branding, social media et événementiel menées au Maroc et à l'international par Link Agency : Subway, Honda, Orange, OCP, Pharma 5, AXA, Wafasalaf, L'Bankalik, Brainlyne et plus.",
+    "description": "Études de cas de campagnes marketing digital, branding, social media et événementiel menées au Maroc et à l'international par Link Agency : Subway, Honda, Orange, Pharma 5, AXA, Wafasalaf, L'Bankalik, Brainlyne et plus.",
     "url": "https://linkagency.ma/etudes-de-cas",
     "hasPart": cases.map((c) => ({
       "@type": "CreativeWork",
@@ -313,7 +300,7 @@ const EtudesDeCas = () => {
     <div className="min-h-screen bg-white pt-16 sm:pt-20">
       <SEOHead
         title="Études de Cas — Résultats Marketing Digital Maroc | Link Agency"
-        description="21 études de cas : Subway, SGTM, Honda Tokyo Days, L'Bankalik, AXA, Orange, OCP, Pharma 5, Wafasalaf, RMA, Aiguebelle, Mutandis, Aéroports du Maroc, Brainlyne et plus."
+        description="Études de cas : Subway, SGTM, Honda Tokyo Days, L'Bankalik, AXA, Orange, Pharma 5, Wafasalaf, RMA, Aiguebelle, Mutandis, Aéroports du Maroc, Brainlyne et plus."
         keywords="études de cas marketing digital maroc, résultats agence communication casablanca, case studies branding maroc, ROI marketing digital"
         url="https://linkagency.ma/etudes-de-cas"
         structuredData={structuredData}

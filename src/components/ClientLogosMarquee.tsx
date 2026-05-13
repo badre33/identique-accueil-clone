@@ -4,11 +4,7 @@ type LogoEntry = { name: string; src?: string };
 
 // Marques classées par tier d'autorité — apparaissent en boucle continue.
 const logos: LogoEntry[] = [
-  // Tier 1 — Institutionnels & Grandes Banques
-  { name: "OCP", src: "/brands/ocp.svg" },
-  { name: "OCP Africa", src: "/brands/ocp-africa.svg" },
-  { name: "CDG", src: "/brands/cdg.svg" },
-  { name: "AMDIE", src: "/brands/amdie.svg" },
+  // Tier 1 — Institutionnels & Grandes Banques marocaines
   { name: "Aéroports du Maroc", src: "/brands/aeroports-du-maroc.png" },
   { name: "Barid Al-Maghrib", src: "/brands/barid-al-maghrib.svg" },
   { name: "Al Barid Bank", src: "/brands/al-barid-bank.png" },
