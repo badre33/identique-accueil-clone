@@ -1,10 +1,11 @@
 import { SEOHead } from "@/components/SEOHead";
 import { useState, useEffect } from "react";
-import { ArrowLeft, Target, Palette, Users, Lightbulb, Linkedin, History, Download, LineChart, Search, Code2 } from "lucide-react";
+import { ArrowLeft, Target, Palette, Users, Lightbulb, Linkedin, History, LineChart, Search, Code2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { FloatingContactWidget } from "@/components/FloatingContactWidget";
 import { SideNavigation } from "@/components/inside-link/SideNavigation";
 import TeamShowcase from "@/components/inside-link/TeamShowcase";
+import NetworkSection from "@/components/inside-link/NetworkSection";
 import { AnimatedStats } from "@/components/inside-link/AnimatedStats";
 import { VisionSection } from "@/components/inside-link/VisionSection";
 import { JoinTeamSection } from "@/components/inside-link/JoinTeamSection";
@@ -13,7 +14,6 @@ import { MagneticButton } from "@/components/inside-link/MagneticButton";
 import { ParticleBackground } from "@/components/inside-link/ParticleBackground";
 import { InteractiveBackground } from "@/components/inside-link/InteractiveBackground";
 import { ThreeDHoverCard } from "@/components/inside-link/ThreeDHoverCard";
-import { VirtualBusinessCard } from "@/components/inside-link/VirtualBusinessCard";
 import { EnhancedTimeline } from "@/components/inside-link/EnhancedTimeline";
 import { GameifiedBrandingQuiz } from "@/components/inside-link/GameifiedBrandingQuiz";
 import { PersonalizedWelcome } from "@/components/inside-link/PersonalizedWelcome";
@@ -244,6 +244,11 @@ const InsideLink = () => {
         <TeamShowcase />
       </ScrollReveal>
 
+      {/* Réseau Maroc — partenaires sélectionnés */}
+      <ScrollReveal delay={200}>
+        <NetworkSection />
+      </ScrollReveal>
+
       {/* 3D Skills Section */}
       <SectionTransition variant="scale">
         <section id="skills" className="section-padding gradient-subtle relative pattern-diagonal">
@@ -323,40 +328,6 @@ const InsideLink = () => {
 
       {/* Virtual Business Cards Section */}
       <SectionTransition>
-        <section id="cards" className="section-padding gradient-subtle relative pattern-dots">
-          <div className="max-w-6xl mx-auto">
-            <ScrollReveal delay={200}>
-              <div className="text-center mb-20 space-content">
-                <div className="flex items-center justify-center space-x-4 mb-10">
-                  <Download className="w-10 h-10 transform hover:rotate-12 transition-transform duration-300" />
-                  <h2 className="text-neutral-900">Nos Contacts</h2>
-                </div>
-                <p className="text-xl text-neutral-500 max-w-3xl mx-auto">
-                  Téléchargez nos cartes de visite virtuelles pour rester en contact
-                </p>
-              </div>
-            </ScrollReveal>
-            
-            <div className="grid grid-cols-1 gap-16 justify-items-center">
-              <ScrollReveal delay={300} direction="left">
-                <AnimatedCard hoverScale={1.05}>
-                  <VirtualBusinessCard
-                    name="Badreddine Harkaoui"
-                    title="Fondateur : Strategic Growth Architect"
-                    image="/lovable-uploads/da131874-d340-4dc9-b1e7-5fc5f24a0f40.png"
-                    linkedinUrl="https://www.linkedin.com/in/badreddine-harkaoui-nexiafiducia/"
-                    email="bharkaoui@linkagency.ma"
-                    phone="+212699024526"
-                    whatsapp="+212699024526"
-                    website="https://linkagency.ma/"
-                  />
-                </AnimatedCard>
-              </ScrollReveal>
-            </div>
-          </div>
-        </section>
-      </SectionTransition>
-
       {/* Pourquoi Link Section */}
       <ScrollReveal delay={200}>
         <section id="mission" className="section-padding bg-black text-white relative overflow-hidden">
@@ -364,19 +335,19 @@ const InsideLink = () => {
             <div className="text-center mb-16">
               <div className="flex items-center justify-center space-x-4 mb-8">
                 <Lightbulb className="w-10 h-10 text-white transform hover:rotate-12 transition-transform duration-300" />
-                <h2 className="text-white text-4xl lg:text-5xl font-light">Pourquoi nous avons fondé Link</h2>
+                <h2 className="text-white text-4xl lg:text-5xl font-light">Pourquoi j'ai fondé Link</h2>
               </div>
             </div>
             
             <div className="space-y-8 text-lg lg:text-xl leading-relaxed font-light max-w-4xl mx-auto">
               <p className="text-gray-100 text-center">
-                Parce que nous étions fatigués de voir des marques fades, des identités génériques et des fondateurs brillants mal présentés.
+                Parce que j'étais fatigué de voir des marques fades, des identités génériques et des fondateurs brillants mal présentés.
               </p>
               <p className="text-gray-100 text-center">
-                Parce qu'on voulait créer une agence différente : radicalement stratégique, obsessionnellement esthétique.
+                Parce que je voulais créer une agence différente : radicalement stratégique, obsessionnellement esthétique.
               </p>
               <p className="text-white text-xl lg:text-2xl font-normal text-center mt-12">
-                Une agence où la rigueur militaire croise le design, où l'exécution est un art, et où chaque client est traité comme une marque de demain.
+                Une agence où la rigueur militaire croise le design, où l'exécution est un art, et où chaque client est traité comme une marque de demain. Puis j'ai structuré l'équipe qui me permet aujourd'hui de tenir cette promesse.
               </p>
             </div>
             

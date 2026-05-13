@@ -75,21 +75,7 @@ export const JoinTeamSection = () => {
           })}
         </div>
 
-        <div className="text-center">
-          <p className="text-gray-400 text-lg mb-4">
-            Ou retrouvez le fondateur sur LinkedIn
-          </p>
-          <div className="flex justify-center space-x-6">
-            <a 
-              href="https://www.linkedin.com/in/badreddine-harkaoui-nexiafiducia/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white transition-colors"
-            >
-              LinkedIn de Badreddine Harkaoui
-            </a>
-          </div>
-        </div>
+
       </div>
     </section>
   );

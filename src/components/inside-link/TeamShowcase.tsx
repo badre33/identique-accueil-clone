@@ -18,6 +18,8 @@ type Member = {
   focus: string;
   expertise: string;
   experience: string;
+  tools: string[];
+  methods: string[];
   Icon: any;
   accent: string;
 };
@@ -28,8 +30,10 @@ const members: Member[] = [
     initials: "S.M.",
     focus: "Direction des missions corporate",
     expertise:
-      "Pilotage P&L digital, attribution multi-touch, orchestration RevOps. Cadrage de dispositifs complexes pour banques, assurances et industriels.",
-    experience: "14 ans · Ex-Salesforce SVP Sales",
+      "Cadrage stratégique de dispositifs complexes, pilotage P&L digital, orchestration multi-pôles. Lecture business, alignement marque-performance et arbitrage de portefeuille de campagnes pour des comptes en environnement régulé.",
+    experience: "14 ans · Ex-Salesforce SVP Sales · 4 ans Oracle comptes financiers",
+    tools: ["Salesforce", "Notion", "Looker", "Tableau"],
+    methods: ["Diagnostic 360°", "RevOps", "OKR", "Attribution multi-touch"],
     Icon: LineChart,
     accent: "from-slate-700 to-slate-900",
   },
@@ -38,8 +42,10 @@ const members: Member[] = [
     initials: "L.A.",
     focus: "Performance media & lead generation",
     expertise:
-      "Meta · Google · TikTok · LinkedIn Ads. Lead scoring qualifié, optimisation CPL/ROAS pour comptes B2B exigeants.",
-    experience: "9 ans · Médias digital MENA",
+      "Architecture et pilotage de campagnes paid sur Meta, Google, TikTok, LinkedIn. Lead scoring, qualification, optimisation CPL/ROAS. Comptes pilotés : Honda (Tokyo Days 2025 — CPL 4,10 DH), Pharma 5, Mutandis, Aiguebelle.",
+    experience: "9 ans · Médias digital MENA · +600 campagnes pilotées",
+    tools: ["Meta Ads Manager", "Google Ads", "TikTok Ads", "LinkedIn Campaign Manager"],
+    methods: ["Lead scoring HubSpot", "A/B testing créatif", "Pixel auditing"],
     Icon: Target,
     accent: "from-blue-500 to-indigo-600",
   },
@@ -48,28 +54,34 @@ const members: Member[] = [
     initials: "K.B.",
     focus: "Référencement bilingue FR · AR · Darija",
     expertise:
-      "Stratégie de contenu pilier, SEO technique, content marketing AR/Darija. 25+ projets délivrés au Maroc et international.",
-    experience: "8 ans · +340% trafic organique moyen",
+      "Stratégie de contenu pilier, SEO technique, audit Core Web Vitals, optimisation E-E-A-T. Spécialiste rare du SEO arabe et Darija. Cas pilier : +60 % de croissance organique sur 12 mois pour Brainlyne (US).",
+    experience: "8 ans · +340 % trafic organique moyen · 25+ projets délivrés",
+    tools: ["Semrush", "Ahrefs", "Screaming Frog", "Search Console"],
+    methods: ["Topic clustering", "Cocon sémantique", "GEO (AI Overviews)"],
     Icon: Search,
     accent: "from-green-500 to-emerald-600",
   },
   {
-    role: "Direction Artistique",
+    role: "Direction Artistique & Branding",
     initials: "N.E.",
-    focus: "Branding & identité visuelle",
+    focus: "Identité visuelle & systèmes de design",
     expertise:
-      "Direction artistique de marques corporate : logos, systèmes d'identité, motion design, design system. Spécialiste secteurs financier et assurance.",
-    experience: "11 ans · Comptes pilotés : Attijari, AXA, RMA",
+      "Création d'identités de marque corporate : logos, systèmes typographiques, charte d'application, motion design, design system. Comptes pilotés (en mission ou en agence précédente) : Attijari Wafabank, AXA Assurance Maroc, RMA, Fondation Al Mada, Orange Maroc, Ford.",
+    experience: "11 ans · Direction artistique secteurs financier et assurance",
+    tools: ["Figma", "Adobe Suite", "After Effects", "Cinema 4D"],
+    methods: ["Design tokens", "Brand systems", "Motion guidelines"],
     Icon: Palette,
     accent: "from-purple-500 to-pink-500",
   },
   {
-    role: "Lead Communication Corporate",
+    role: "Lead Stratégie Éditoriale",
     initials: "I.A.",
-    focus: "Stratégie éditoriale & E-réputation",
+    focus: "Copywriting corporate & E-réputation",
     expertise:
-      "Stratégie éditoriale, copywriting corporate, gestion de crise, e-réputation. Production de contenus institutionnels pour grands comptes.",
-    experience: "10 ans · Pôle éditorial senior",
+      "Plateformes éditoriales, charte de voix, rédaction de tribunes de dirigeants, gestion de crise réputationnelle. Production de contenus institutionnels pour groupes financiers et industriels.",
+    experience: "10 ans · Pôle éditorial senior · Stratégies AXA, Attijari Wafabank, Fondation Al Mada",
+    tools: ["BuzzSumo", "Talkwalker", "Notion", "WordPress"],
+    methods: ["Tonality framework", "Editorial planning", "Crisis playbook"],
     Icon: PenTool,
     accent: "from-amber-500 to-orange-500",
   },
@@ -78,8 +90,10 @@ const members: Member[] = [
     initials: "Y.T.",
     focus: "Community management & paid social",
     expertise:
-      "Stratégie sociale FR/AR/Darija, community management, modération de marques exposées, paid social cross-plateforme.",
-    experience: "7 ans · 200K+ communautés gérées",
+      "Stratégie sociale FR/AR/Darija, modération de marques exposées, paid social cross-plateforme, sourcing créateurs. Pilotage d'audiences cumulées de 2M+ pour comptes assurance & banque.",
+    experience: "7 ans · 200K+ communautés gérées · Reels & TikTok natifs",
+    tools: ["Sprout Social", "Meta Business Suite", "CapCut", "Canva Pro"],
+    methods: ["Calendriers éditoriaux", "UGC management", "Social listening"],
     Icon: Megaphone,
     accent: "from-rose-500 to-red-500",
   },
@@ -88,8 +102,10 @@ const members: Member[] = [
     initials: "H.S.",
     focus: "Événements B2B & activations",
     expertise:
-      "Conception et production d'événements corporate : lancements, séminaires, soirées VIP, salons. Coordination logistique et créative.",
-    experience: "12 ans · 200+ événements livrés",
+      "Conception et production d'événements corporate : lancements produit, conventions, séminaires, soirées VIP, salons. Coordination logistique, scénographie, captation, amplification digitale.",
+    experience: "12 ans · 200+ événements livrés · MICE Maroc & France",
+    tools: ["Eventbrite", "Adobe Premiere", "Notion", "Outils logistique propres"],
+    methods: ["Production en cellule", "Backstage protocols", "Amplification digitale"],
     Icon: Calendar,
     accent: "from-cyan-500 to-blue-500",
   },
@@ -98,8 +114,10 @@ const members: Member[] = [
     initials: "A.R.",
     focus: "BI, attribution & reporting",
     expertise:
-      "Power BI · SQL · Python · GA4. Modélisation d'attribution multi-touch, tableaux de bord exécutifs, audit de performance.",
-    experience: "6 ans · −40% temps de reporting",
+      "Modélisation d'attribution multi-touch, tableaux de bord exécutifs, audit de performance, intégration GA4 + CRM. Standardisation du reporting pour gain de 40 % de temps sur les comptes pilotés.",
+    experience: "6 ans · Power BI / SQL / Python · GA4 certifié",
+    tools: ["Power BI", "GA4", "BigQuery", "Looker Studio", "Python"],
+    methods: ["Attribution modeling", "Cohort analysis", "Funnel analysis"],
     Icon: BarChart3,
     accent: "from-teal-500 to-cyan-500",
   },
@@ -108,8 +126,10 @@ const members: Member[] = [
     initials: "M.B.",
     focus: "Conversion & expérience utilisateur",
     expertise:
-      "Audit UX, A/B testing systématique, design system, optimisation de tunnels de conversion. Spécialiste e-commerce et lead generation.",
-    experience: "8 ans · Hotjar · Figma · Core Web Vitals",
+      "Audit UX, conception de parcours, A/B testing systématique, design system, optimisation des Core Web Vitals. Spécialiste tunnels e-commerce et lead generation.",
+    experience: "8 ans · Hotjar / Figma / VWO · Sites à 100K+ sessions/mois",
+    tools: ["Figma", "Hotjar", "VWO", "Lighthouse", "Maze"],
+    methods: ["Heuristic audit", "5-second tests", "Funnel analytics"],
     Icon: Code2,
     accent: "from-violet-500 to-purple-500",
   },
@@ -118,8 +138,10 @@ const members: Member[] = [
     initials: "F.E.",
     focus: "Parcours automatisés & lifecycle",
     expertise:
-      "HubSpot · Salesforce · Sarbacane. Parcours Welcome / Nurturing / Winback. Activation et réactivation de bases CRM.",
+      "Parcours Welcome / Nurturing / Winback. Activation et réactivation de bases CRM. Welcome Pack 25-30 % d'ouverture · Winback 18-22 % · réactivation +25 % d'une base CRM.",
     experience: "9 ans · Ex-BMW Group Financial Services",
+    tools: ["HubSpot", "Salesforce Marketing Cloud", "Sarbacane", "Mailchimp"],
+    methods: ["Lifecycle marketing", "Segmentation RFM", "Drip campaigns"],
     Icon: Users,
     accent: "from-fuchsia-500 to-pink-500",
   },
@@ -189,6 +211,25 @@ export const TeamShowcase = () => {
               <p className="text-sm text-gray-700 leading-relaxed mb-4">
                 {m.expertise}
               </p>
+
+              <div className="space-y-3 mb-4">
+                <div>
+                  <p className="text-[10px] font-semibold uppercase tracking-wider text-gray-400 mb-1.5">Outils maîtrisés</p>
+                  <div className="flex flex-wrap gap-1.5">
+                    {m.tools.map((t) => (
+                      <span key={t} className="text-[11px] px-2 py-0.5 bg-gray-100 text-gray-700 rounded-md font-medium">{t}</span>
+                    ))}
+                  </div>
+                </div>
+                <div>
+                  <p className="text-[10px] font-semibold uppercase tracking-wider text-gray-400 mb-1.5">Méthodes</p>
+                  <div className="flex flex-wrap gap-1.5">
+                    {m.methods.map((mt) => (
+                      <span key={mt} className="text-[11px] px-2 py-0.5 bg-white border border-gray-200 text-gray-600 rounded-md">{mt}</span>
+                    ))}
+                  </div>
+                </div>
+              </div>
 
               <div className="pt-4 border-t border-gray-100">
                 <p className="text-xs font-medium text-gray-500 flex items-center gap-2">
