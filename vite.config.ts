@@ -24,21 +24,13 @@ export default defineConfig(({ mode }) => ({
     // Optimisations pour la production
     rollupOptions: {
       output: {
-        manualChunks: (id) => {
-          if (id.includes('node_modules')) {
-            // React + react-dom + scheduler doivent être dans le MÊME chunk
-            // sinon react-dom essaie d'utiliser React.createContext avant que React soit prêt
-            if (id.includes('/react/') || id.includes('/react-dom/') || id.includes('/scheduler/') || id.includes('/react-router')) {
-              return 'react-vendor';
-            }
-            if (id.includes('@radix-ui')) return 'radix';
-            if (id.includes('@tanstack/react-query')) return 'query';
-            if (id.includes('recharts') || id.includes('d3-')) return 'charts';
-            if (id.includes('react-hook-form') || id.includes('@hookform') || id.includes('zod')) return 'forms';
-            if (id.includes('lucide-react')) return 'icons';
-            if (id.includes('react-helmet')) return 'helmet';
-            return 'vendor';
-          }
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          router: ['react-router-dom'],
+          ui: ['@radix-ui/react-dialog', '@radix-ui/react-popover', '@radix-ui/react-select'],
+          query: ['@tanstack/react-query'],
+          charts: ['recharts'],
+          forms: ['react-hook-form', '@hookform/resolvers', 'zod'],
         },
       },
     },
