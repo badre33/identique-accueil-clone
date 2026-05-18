@@ -2,7 +2,6 @@ import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { buildWhatsAppUrl } from "@/config/contact";
 import { trackEvent } from "@/lib/tracking";
-import heroArchitecture from "@/assets/hero-architecture.webp";
 
 const Hero = () => {
   const proofItems = [
@@ -88,7 +87,7 @@ const Hero = () => {
           <aside className="lg:col-span-4 flex flex-col">
             <figure className="relative h-[420px] lg:h-[560px] w-full overflow-hidden bg-foreground/5">
               <img
-                src={heroArchitecture}
+                src="/hero-architecture.webp"
                 alt="Casablanca Finance City — quartier d'affaires de Casablanca, Maroc"
                 width={1200}
                 height={1600}
