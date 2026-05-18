@@ -25,10 +25,12 @@ export default defineConfig(({ mode }) => ({
     rollupOptions: {
       output: {
         manualChunks: (id) => {
-          // Séparer les vendors lourds dans des chunks dédiés
           if (id.includes('node_modules')) {
-            if (id.includes('react-dom')) return 'react-dom';
-            if (id.includes('react/') || id.includes('react-router')) return 'react';
+            // React + react-dom + scheduler doivent être dans le MÊME chunk
+            // sinon react-dom essaie d'utiliser React.createContext avant que React soit prêt
+            if (id.includes('/react/') || id.includes('/react-dom/') || id.includes('/scheduler/') || id.includes('/react-router')) {
+              return 'react-vendor';
+            }
             if (id.includes('@radix-ui')) return 'radix';
             if (id.includes('@tanstack/react-query')) return 'query';
             if (id.includes('recharts') || id.includes('d3-')) return 'charts';
