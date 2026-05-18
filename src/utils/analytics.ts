@@ -1,7 +1,7 @@
 // Analytics et tracking avancé pour Link Agency
 
 // Configuration Google Analytics 4
-const GA4_MEASUREMENT_ID = 'G-XXXXXXXXXX'; // À remplacer par votre ID GA4
+const GA4_MEASUREMENT_ID = 'G-F077M674TY'; // GA4 propriété linkagency.ma
 const IS_DEVELOPMENT = import.meta.env.DEV;
 
 // Initialisation Google Analytics 4 - Chargement différé pour optimiser les performances
