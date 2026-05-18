@@ -326,8 +326,6 @@ const InsideLink = () => {
         </section>
       </ScrollReveal>
 
-      {/* Virtual Business Cards Section */}
-      <SectionTransition>
       {/* Pourquoi Link Section */}
       <ScrollReveal delay={200}>
         <section id="mission" className="section-padding bg-black text-white relative overflow-hidden">
