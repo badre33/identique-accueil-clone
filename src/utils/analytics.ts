@@ -4,61 +4,14 @@
 const GA4_MEASUREMENT_ID = 'G-F077M674TY'; // GA4 propriété linkagency.ma
 const IS_DEVELOPMENT = import.meta.env.DEV;
 
-// Initialisation Google Analytics 4 - Chargement différé pour optimiser les performances
+// Initialisation Google Analytics 4 - NO-OP : GA4 est désormais chargé directement
+// via le snippet officiel dans index.html (<head>). Cette fonction reste exportée
+// pour ne pas casser les imports existants mais ne fait plus rien.
 export const initGA4 = () => {
-  // Ne charger GA4 que si ce n'est pas un placeholder
-  if (GA4_MEASUREMENT_ID === 'G-XXXXXXXXXX') {
-    if (IS_DEVELOPMENT) {
-      console.log('⚠️ Google Analytics non configuré (ID placeholder)');
-    }
-    return;
-  }
-
-  // Vérifier si on est dans un environnement browser
-  if (typeof window === 'undefined') return;
-
-  // Différer le chargement jusqu'à ce que la page soit complètement chargée
-  const loadGA4 = () => {
-    // Initialiser gtag avant de charger le script
-    window.dataLayer = window.dataLayer || [];
-    function gtag(...args: any[]) {
-      window.dataLayer.push(args);
-    }
-    (window as any).gtag = gtag;
-
-    gtag('js', new Date());
-    gtag('config', GA4_MEASUREMENT_ID, {
-      page_title: document.title,
-      page_location: window.location.href,
-      anonymize_ip: true,
-      allow_google_signals: false,
-    });
-
-    // Charger le script GA4 de manière asynchrone
-    const script = document.createElement('script');
-    script.async = true;
-    script.src = `https://www.googletagmanager.com/gtag/js?id=${GA4_MEASUREMENT_ID}`;
-    document.head.appendChild(script);
-
-    if (IS_DEVELOPMENT) {
-      console.log('✅ Google Analytics 4 initialisé (chargement différé)');
-    }
-  };
-
-  // Utiliser requestIdleCallback pour charger pendant les moments d'inactivité
-  const hasRequestIdleCallback = 'requestIdleCallback' in window;
-  
-  if (hasRequestIdleCallback) {
-    (window as any).requestIdleCallback(() => {
-      setTimeout(loadGA4, 2000);
-    }, { timeout: 5000 });
-  } else if (document.readyState === 'complete') {
-    setTimeout(loadGA4, 3000);
-  } else {
-    const win = window as Window;
-    win.addEventListener('load', () => {
-      setTimeout(loadGA4, 3000);
-    });
+  // Le tag GA4 est chargé via index.html avant React → pas de double init,
+  // pas d'override de window.gtag, les /collect partent bien vers Google.
+  if (IS_DEVELOPMENT) {
+    console.log('ℹ️ initGA4() : no-op — GA4 chargé via index.html');
   }
 };
 
