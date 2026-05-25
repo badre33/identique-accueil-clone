@@ -111,39 +111,75 @@ export const ContactForm = () => {
 
   const onSubmit = async (data: FormData) => {
     setIsSubmitting(true);
-    
-    // Simulate submission delay
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-      const message = `🚀 NOUVELLE DEMANDE - Link Agency
 
-👤 Contact:
-- Nom: ${data.nom} ${data.prenom}
-- Email: ${data.email}
-- Téléphone: ${data.countryCode} ${data.telephone}
-- Entreprise: ${data.entreprise || 'Non renseignée'}
+    const summary = `Nom: ${data.nom} ${data.prenom}
+Email: ${data.email}
+Téléphone: ${data.countryCode} ${data.telephone}
+Entreprise: ${data.entreprise || 'Non renseignée'}
+Expertise souhaitée: ${data.service}
+Budget: ${data.budget || 'Non renseigné'}
+Horizon: ${data.delai || 'Non renseigné'}
 
-📋 Dispositif:
-- Expertise souhaitée: ${data.service}
-- Budget digital annuel indicatif: ${data.budget || 'Non renseigné'}
-- Horizon de déploiement: ${data.delai || 'Non renseigné'}
-
-💬 Message:
+Message:
 ${data.message}`;
 
-    const whatsappUrl = `https://wa.me/212699024526?text=${encodeURIComponent(message)}`;
-    
+    // 1) Soumission Netlify Forms (backend + email auto vers bharkaoui@linkagency.ma)
+    const formBody = new URLSearchParams({
+      'form-name': 'contact',
+      'bot-field': '',
+      nom: data.nom,
+      prenom: data.prenom,
+      email: data.email,
+      telephone: `${data.countryCode} ${data.telephone}`,
+      entreprise: data.entreprise || '',
+      service: data.service,
+      budget: data.budget || '',
+      delai: data.delai || '',
+      message: data.message,
+      summary,
+    }).toString();
+
+    let netlifyOk = false;
+    try {
+      const res = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: formBody,
+      });
+      netlifyOk = res.ok;
+    } catch (e) {
+      netlifyOk = false;
+    }
+
+    // 2) Tracking GA4
+    try {
+      const w = window as unknown as { gtag?: (...args: unknown[]) => void };
+      if (typeof w.gtag === 'function') {
+        w.gtag('event', 'generate_lead', {
+          event_category: 'lead',
+          event_label: data.service,
+          value: 1,
+          form_status: netlifyOk ? 'ok' : 'fallback_whatsapp',
+        });
+      }
+    } catch {}
+
+    // 3) Message WhatsApp préparé (option bonus, plus principal)
+    const waMessage = `🚀 NOUVELLE DEMANDE - Link Agency
+
+${summary}`;
+    const whatsappUrl = `https://wa.me/212699024526?text=${encodeURIComponent(waMessage)}`;
+    (window as unknown as { __lastLeadWA?: string }).__lastLeadWA = whatsappUrl;
+
     setIsSubmitting(false);
     setIsSubmitted(true);
-    
-    toast({
-      title: "Demande envoyée avec succès !",
-      description: "Nous revenons vers vous rapidement. Vous allez être redirigé vers WhatsApp.",
-    });
 
-    setTimeout(() => {
-      window.open(whatsappUrl, '_blank');
-    }, 2000);
+    toast({
+      title: netlifyOk ? 'Demande envoyée avec succès !' : 'Demande enregistrée',
+      description: netlifyOk
+        ? 'Notre équipe revient vers vous sous 24h. Vous pouvez aussi nous joindre sur WhatsApp.'
+        : 'Une copie a été préparée pour WhatsApp si vous préférez un contact instantané.',
+    });
   };
 
   const getFieldIcon = (fieldName: keyof FormData, value: string) => {
@@ -157,23 +193,39 @@ ${data.message}`;
   };
 
   if (isSubmitted) {
+    const waUrl =
+      (typeof window !== 'undefined' &&
+        (window as unknown as { __lastLeadWA?: string }).__lastLeadWA) ||
+      'https://wa.me/212699024526';
     return (
       <div className="flex flex-col items-center justify-center min-h-[300px] sm:min-h-[400px] text-center px-4">
         <div className="w-12 h-12 sm:w-16 sm:h-16 bg-green-500 rounded-full flex items-center justify-center mb-4 sm:mb-6 animate-pulse-subtle">
           <Check className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
         </div>
-        <h3 className="text-xl sm:text-2xl font-light text-white mb-3 sm:mb-4">Demande envoyée !</h3>
-        <p className="text-sm sm:text-base text-gray-300 max-w-md leading-relaxed">
-          Merci pour votre prise de contact. Notre équipe vous recontactera rapidement. 
-          Vous allez être redirigé vers WhatsApp pour poursuivre l'échange.
+        <h3 className="text-xl sm:text-2xl font-light text-white mb-3 sm:mb-4">Demande reçue !</h3>
+        <p className="text-sm sm:text-base text-gray-300 max-w-md leading-relaxed mb-6">
+          Merci. Notre équipe vous recontacte sous 24h sur l'email indiqué.
+          Vous pouvez aussi poursuivre directement par WhatsApp.
         </p>
+        <a
+          href={waUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 px-5 py-3 bg-white text-black rounded-full text-sm font-medium hover:bg-gray-100 transition-colors"
+        >
+          Continuer sur WhatsApp
+        </a>
       </div>
     );
   }
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 sm:space-y-6 max-w-lg">
+      <form name="contact" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 sm:space-y-6 max-w-lg">
+        <input type="hidden" name="form-name" value="contact" />
+        <p className="hidden" aria-hidden="true">
+          <label>Ne pas remplir : <input name="bot-field" /></label>
+        </p>
         {/* Informations personnelles */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <FormField

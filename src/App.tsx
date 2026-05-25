@@ -37,6 +37,7 @@ const AgenceMarrakech = () => <LazyWrapper importFunc={() => import('./pages/Age
 const AgenceRabat = () => <LazyWrapper importFunc={() => import('./pages/AgenceRabat')} />;
 const EtudesDeCas = () => <LazyWrapper importFunc={() => import('./pages/EtudesDeCas')} />;
 const Secteurs = () => <LazyWrapper importFunc={() => import('./pages/Secteurs')} />;
+const Contact = () => <LazyWrapper importFunc={() => import('./pages/Contact')} />;
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -84,6 +85,7 @@ const App = () => (
                   <Route path="/collaborations" element={<Collaborations />} />
                   <Route path="/blog" element={<Blog />} />
                   <Route path="/blog/:slug" element={<BlogPost />} />
+                  <Route path="/contact" element={<Contact />} />
                   {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                   <Route path="*" element={<NotFound />} />
                 </Routes>
