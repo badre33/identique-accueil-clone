@@ -1,9 +1,9 @@
 import { Link, useLocation } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { useEffect } from "react";
 import { Home, BookOpen, Briefcase, Mail, ArrowRight } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { SEOHead } from "@/components/SEOHead";
 
 const NotFound = () => {
   const location = useLocation();
@@ -26,11 +26,14 @@ const NotFound = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
-      <SEOHead
-        title="Page non trouvée - 404 | Link Agency"
-        description="La page que vous recherchez n'existe pas ou a été déplacée. Explorez nos services de branding, marketing digital et événementiel au Maroc."
-        url={`https://linkagency.ma${location.pathname}`}
-      />
+      <Helmet>
+        <title>Page non trouvée - 404 | Link Agency</title>
+        <meta name="description" content="La page que vous recherchez n'existe pas ou a été déplacée. Explorez nos services de branding, marketing digital et événementiel au Maroc." />
+        {/* CRUCIAL : empêche Google d'indexer les 404 comme soft 404 */}
+        <meta name="robots" content="noindex, follow" />
+        <meta name="googlebot" content="noindex, follow" />
+        {/* Pas de canonical pour les 404 (évite les signaux contradictoires) */}
+      </Helmet>
       <Header />
       
       <main className="flex-1 flex items-center justify-center px-6 py-24">
