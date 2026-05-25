@@ -42,8 +42,8 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-white pt-16 sm:pt-20">
       <SEOHead
-        title="Link Agency — Cabinet Conseil Communication Corporate au Maroc"
-        description="Cabinet conseil en communication corporate au Maroc. Branding, stratégie digitale, événementiel pour grands comptes. 11 ans · 200+ missions. Casablanca · Rabat · Marrakech."
+        title="Link Agency — Agence Marketing au Maroc | Branding, Social Media, Performance"
+        description="Agence marketing au Maroc depuis 2015. Branding, social media, performance, événementiel. 11 ans, 200+ missions, fondateur senior qui pilote chaque dossier. Casablanca · Rabat · Marrakech."
         url="https://linkagency.ma/"
         type="website"
         structuredData={structuredData}

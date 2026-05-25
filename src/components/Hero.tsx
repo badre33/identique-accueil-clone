@@ -1,14 +1,14 @@
-import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight, MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import { buildWhatsAppUrl } from "@/config/contact";
 import { trackEvent } from "@/lib/tracking";
 
 const Hero = () => {
   const proofItems = [
-    { value: "11", unit: "ans", label: "d'expertise au Maroc" },
-    { value: "50+", unit: "", label: "comptes accompagnés" },
-    { value: "200+", unit: "", label: "projets livrés" },
-    { value: "15+", unit: "", label: "secteurs couverts" },
+    { value: "11", unit: "ans", label: "au service des marques au Maroc" },
+    { value: "200+", unit: "", label: "missions livrées depuis 2015" },
+    { value: "30+", unit: "", label: "marques accompagnées" },
+    { value: "6", unit: "", label: "expertises intégrées" },
   ];
 
   const clientLogos = [
@@ -22,7 +22,7 @@ const Hero = () => {
   ];
 
   const waUrl = buildWhatsAppUrl(
-    "Bonjour Link Agency, je souhaite échanger sur un projet marketing."
+    "Bonjour, je souhaite échanger sur un projet marketing."
   );
 
   return (
@@ -38,22 +38,24 @@ const Hero = () => {
             <div className="flex items-center gap-3 mb-10">
               <span className="h-px w-10 bg-foreground/40" />
               <span className="text-[11px] tracking-[0.2em] uppercase text-foreground/60 font-medium">
-                Cabinet conseil — Performance digitale — Casablanca · Marrakech
+                Agence marketing au Maroc — depuis 2015 — Casablanca · Rabat · Marrakech
               </span>
             </div>
 
             <h1 className="text-[2.5rem] sm:text-5xl lg:text-7xl xl:text-[5.5rem] leading-[1.02] tracking-[-0.035em] font-semibold text-foreground">
-              La stratégie marketing
+              Le marketing au Maroc,
               <br />
-              <span className="italic font-light text-foreground/70">qui </span>
-              <span className="text-primary">génère vos leads</span>
-              <span className="italic font-light text-foreground/70"> au Maroc.</span>
+              <span className="italic font-light text-foreground/70">sans </span>
+              <span className="text-primary">le théâtre</span>
+              <span className="italic font-light text-foreground/70"> des grosses agences.</span>
             </h1>
 
             <p className="mt-10 max-w-2xl text-lg lg:text-xl leading-relaxed text-foreground/70 font-normal">
-              Nous accompagnons les directions marketing des banques, assurances,
-              retail et industrie au Maroc dans la conception de stratégies
-              mesurables : branding, acquisition, contenu, événementiel corporate.
+              Branding, social media, performance, événementiel. 11 ans
+              d'expertise, un fondateur senior qui pilote chaque dossier. Pas de
+              comité de 8 personnes. Pas de chargé de compte qui change tous les
+              6 mois. Juste des livrables au niveau des meilleurs, à des prix
+              qui ont du sens.
             </p>
 
             <div className="mt-12 flex flex-col sm:flex-row gap-4">
@@ -64,25 +66,26 @@ const Hero = () => {
                 onClick={() => trackEvent("cta_whatsapp_click", { category: "lead", label: "hero_primary" })}
                 className="group inline-flex items-center justify-between gap-6 px-7 py-4 bg-foreground text-background hover:bg-primary transition-colors duration-300 rounded-none"
               >
-                <span className="text-base font-medium tracking-tight">
-                  Planifier un échange stratégique
+                <span className="inline-flex items-center gap-3 text-base font-medium tracking-tight">
+                  <MessageCircle className="w-5 h-5" />
+                  Discuter sur WhatsApp
                 </span>
                 <ArrowUpRight className="w-5 h-5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </a>
 
               <Link
-                to="/etudes-de-cas"
+                to="/contact"
+                onClick={() => trackEvent("cta_devis_click", { category: "lead", label: "hero_secondary" })}
                 className="group inline-flex items-center gap-3 px-7 py-4 text-foreground border border-foreground/20 hover:border-foreground transition-colors duration-300"
               >
                 <span className="text-base font-medium tracking-tight">
-                  Voir nos études de cas
+                  Demander un devis
                 </span>
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </div>
           </div>
 
-          {/* Right column — vertical meta */}
           {/* Right column — editorial photograph */}
           <aside className="lg:col-span-4 flex flex-col">
             <figure className="relative h-[420px] lg:h-[560px] w-full overflow-hidden bg-foreground/5">
@@ -108,12 +111,41 @@ const Hero = () => {
                 Disciplines
               </p>
               <ul className="space-y-1.5 text-sm text-foreground/80">
-                <li>— Stratégie & Marque</li>
-                <li>— Performance digitale</li>
-                <li>— Influence & Événementiel</li>
+                <li>— Branding & Identité</li>
+                <li>— Social Media & Contenu</li>
+                <li>— Performance & Acquisition</li>
+                <li>— Événementiel Corporate</li>
               </ul>
             </div>
           </aside>
+        </div>
+
+        {/* Challenger differentiation band */}
+        <div className="mt-24 lg:mt-28 bg-foreground text-background px-8 py-10 lg:px-12 lg:py-12">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            <div className="lg:col-span-5">
+              <p className="text-[11px] tracking-[0.2em] uppercase text-background/60 mb-3">
+                Pourquoi nous choisir
+              </p>
+              <h2 className="text-3xl lg:text-4xl leading-tight tracking-tight font-semibold">
+                Sélectionnés face à des agences <span className="text-primary">14 fois plus chères.</span>
+              </h2>
+            </div>
+            <div className="lg:col-span-7 lg:pl-8 lg:border-l border-background/20">
+              <p className="text-base lg:text-lg leading-relaxed text-background/85">
+                La qualité d'une grande agence ne dépend pas de la taille de l'agence.
+                Elle dépend du senior qui pilote, de la rigueur du process, et de la
+                transparence des livrables. Link Agency, c'est ça : un fondateur
+                opérationnel, une méthode codifiée, et zéro intermédiaire.
+              </p>
+              <div className="mt-6 flex flex-wrap gap-x-8 gap-y-2 text-sm text-background/70">
+                <span>— Devis sous 48h</span>
+                <span>— Onboarding en 7 jours</span>
+                <span>— Reporting transparent mensuel</span>
+                <span>— Aucun engagement long</span>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Editorial divider */}
@@ -148,7 +180,7 @@ const Hero = () => {
           <div className="flex items-center gap-3 mb-8">
             <span className="h-px w-10 bg-foreground/40" />
             <span className="text-[11px] tracking-[0.2em] uppercase text-foreground/60 font-medium">
-              Références sélectionnées
+              Ils nous ont fait confiance
             </span>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-x-6 gap-y-3">
