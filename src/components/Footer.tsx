@@ -124,13 +124,13 @@ export const Footer = () => {
         <div className="border-t border-gray-800 pt-8 mb-8">
           <div className="text-xs text-gray-400 leading-relaxed">
             <p className="mb-3">
-              <strong className="text-gray-300">Link Agency</strong> — <strong className="text-gray-300">cabinet conseil marketing digital Maroc</strong> et <strong className="text-gray-300">agence communication Casablanca</strong>. Nous accompagnons les directions marketing dans la conception de stratégies mesurables : <strong className="text-gray-300">social media Maroc</strong>, <strong className="text-gray-300">production vidéo</strong>, <strong className="text-gray-300">campagnes Meta & Google Ads</strong>, <strong className="text-gray-300">événementiel corporate</strong>.
+              <strong className="text-gray-300">Link Agency</strong> — <strong className="text-gray-300">agence marketing digital Maroc</strong> et <strong className="text-gray-300">agence communication Casablanca</strong>. Nous accompagnons les directions marketing dans la conception de stratégies mesurables : <strong className="text-gray-300">social media Maroc</strong>, <strong className="text-gray-300">production vidéo</strong>, <strong className="text-gray-300">campagnes Meta & Google Ads</strong>, <strong className="text-gray-300">événementiel corporate</strong>.
             </p>
             <p className="mb-3">
               Notre studio interne conçoit les dispositifs éditoriaux et publicitaires de secteurs exigeants : <Link to="/secteurs" className="text-gray-300 underline hover:text-white">banque, assurance, retail, e-commerce, industrie et services B2B</Link>. Nous combinons <strong className="text-gray-300">community management Casablanca</strong>, contenus bilingues FR/AR/Darija, reporting et optimisation continue du ROI.
             </p>
             <p>
-              <strong className="text-gray-300">Cabinet conseil marketing banque & assurance Maroc</strong>, Link Agency accompagne plus de 50 clients à travers 200+ projets. De la stratégie à l'exécution, nous pilotons des dispositifs cohérents, mesurables et alignés sur vos enjeux business.
+              <strong className="text-gray-300">Agence marketing pour banque et assurance au Maroc</strong>, Link Agency accompagne plus de 50 clients à travers 200+ projets. De la stratégie à l'exécution, nous pilotons des dispositifs cohérents, mesurables et alignés sur vos enjeux business.
             </p>
           </div>
         </div>
