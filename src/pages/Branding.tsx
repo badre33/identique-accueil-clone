@@ -103,8 +103,8 @@ const Branding = () => {
   return (
     <div className="min-h-screen bg-white pt-16 sm:pt-20">
       <SEOHead
-        title="Branding & Identité de Marque au Maroc, Refonte & Plateforme | Link Agency"
-        description="Agence branding pour marques établies au Maroc : refonte d'identité, plateforme de marque, charte graphique et gouvernance. Casablanca & Marrakech."
+        title="Agence Branding au Maroc — Création Logo, Charte Graphique, Identité de Marque | Link Agency"
+        description="Agence branding au Maroc : création de logo, charte graphique, plateforme de marque, refonte d'identité. PME, ETI et grands comptes. Casablanca, Rabat, Marrakech."
         keywords="agence branding maroc, refonte identité visuelle, plateforme de marque, charte graphique entreprise, agence branding casablanca, brand strategy maroc"
         url="https://linkagency.ma/branding"
         type="service"
@@ -126,13 +126,13 @@ const Branding = () => {
                 Branding & Identité
               </h1>
               <p className="text-xl text-gray-700 leading-relaxed mb-8 font-light">
-                Link Agency conçoit des plateformes de marque pour des organisations établies. Refontes d'identité, systèmes visuels, guidelines de gouvernance : nos livrables s'inscrivent dans la durée et soutiennent l'industrialisation de votre marque sur tous les points de contact.
+                Identité de marque, logo, charte graphique, plateforme de marque. De la PME qui se lance à l'ETI qui se repositionne, nous concevons des marques qui se distinguent. 11 ans d'expérience au Maroc, fondateur senior sur chaque dossier.
               </p>
               <Button 
                 onClick={handleContact}
                 className="bg-black text-white hover:bg-gray-800 px-8 py-6 text-lg"
               >
-                Planifier un échange
+                Discuter sur WhatsApp
               </Button>
             </div>
             
@@ -182,10 +182,10 @@ const Branding = () => {
       <section className="py-16 px-8 lg:px-16 bg-muted/30">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-light text-foreground mb-6">
-            Agence de branding à Casablanca
+            Agence branding au Maroc — Casablanca, Rabat, Marrakech
           </h2>
           <p className="text-muted-foreground leading-relaxed text-lg">
-            Link Agency accompagne les directions marketing et communication d'organisations établies dans la structuration et la refonte de leurs identités de marque. Basée à Casablanca et présente à Marrakech, notre approche repose sur une méthodologie rigoureuse : audit de marque, diagnostic concurrentiel, définition du positionnement, conception de la plateforme et déploiement gouverné. Nous intervenons sur des refontes d'identité d'entreprises installées, des architectures de marque multi-entités, et des projets de repositionnement post-fusion ou post-pivot stratégique. Chaque mandat est traité comme un investissement structurant, avec un livrable de gouvernance permettant à vos équipes internes et agences partenaires d'appliquer la marque dans la durée. Notre connaissance des codes sectoriels marocains, banque, assurance, retail, industrie, nous permet de produire des identités qui s'inscrivent dans le marché local tout en répondant aux exigences des grandes organisations.
+            Link Agency accompagne PME, ETI, filiales et grands comptes au Maroc dans la création et la refonte de leur identité de marque. Logo, charte graphique, plateforme de marque, guidelines : nos livrables sont conçus pour durer et pour être utilisables par vos équipes internes comme par vos prestataires externes. Que vous lanciez une nouvelle marque, repositionniez une activité, fusionniez deux entités ou modernisiez une identité vieillissante, nous structurons un projet de branding clair, livrable en 4 à 8 semaines, avec un fondateur senior qui pilote chaque étape. Notre connaissance des codes sectoriels marocains — banque, assurance, retail, industrie, services, immobilier, food, tech — nous permet de produire des identités qui parlent au marché local tout en répondant aux standards internationaux.
           </p>
         </div>
       </section>
@@ -194,16 +194,16 @@ const Branding = () => {
       <section className="py-20 px-8 lg:px-16 bg-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-light mb-8 text-black">
-            Prêt à structurer votre plateforme de marque ?
+            Un projet de marque à lancer ou à refondre ?
           </h2>
           <p className="text-xl text-gray-600 mb-12 font-light leading-relaxed">
-            Cadrons ensemble votre projet de refonte ou de structuration. Premier échange sans engagement pour qualifier le périmètre et chiffrer un plan d'accompagnement.
+            Échangez directement avec le fondateur sur WhatsApp. Premier retour sous 24h, devis sous 48h, sans engagement.
           </p>
           <Button 
             onClick={handleContact}
             className="bg-black text-white hover:bg-gray-800 px-12 py-6 text-lg"
           >
-            Planifier un échange
+            Discuter sur WhatsApp
           </Button>
         </div>
       </section>

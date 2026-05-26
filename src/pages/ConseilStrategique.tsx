@@ -130,8 +130,8 @@ const ConseilStrategique = () => {
   return (
     <div className="min-h-screen bg-white pt-16 sm:pt-20">
       <SEOHead
-        title="Stratégie & Pilotage Performance Marketing Maroc | Link Agency"
-        description="Pilotage P&L digital, attribution multi-touch, RevOps et lead scoring qualifié pour les marques au Maroc, tous secteurs confondus. Méthodologie Link Performance System."
+        title="Conseil Stratégique Marketing au Maroc — Audit, Plan, Roadmap | Link Agency"
+        description="Conseil stratégique marketing au Maroc : audit, plan stratégique, roadmap d'activation. Pour PME en structuration, ETI en repositionnement, filiales étrangères. 11 ans d'expérience."
         keywords="pilotage performance marketing maroc, P&L digital, attribution multi-touch, RevOps maroc, marketing banque assurance, lead scoring casablanca, conseil stratégique digital maroc"
         url="https://linkagency.ma/conseil-strategique"
         type="service"
@@ -157,7 +157,7 @@ const ConseilStrategique = () => {
                 Transformez chaque dirham marketing en performance commerciale mesurable.
               </h2>
               <p className="text-lg text-gray-700 leading-relaxed mb-8 font-light">
-                Pilotage P&amp;L digital, attribution multi-touch et Revenue Performance Orchestration pour les marques au Maroc, tous secteurs confondus. Modèle hybride unique : agence d'exécution + cabinet de pilotage stratégique.
+                Audit marketing, plan stratégique, roadmap d'activation et pilotage opérationnel. Pour les PME qui veulent structurer leur communication, les ETI qui se repositionnent, les filiales qui démarrent au Maroc. 11 ans d'expérience, méthode codifiée, livrable opérationnel à 4-6 semaines. Modèle hybride : agence d'exécution + cabinet de pilotage stratégique.
               </p>
               <Button 
                 onClick={handleContact}

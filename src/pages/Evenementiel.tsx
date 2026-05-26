@@ -187,8 +187,8 @@ const Evenementiel = () => {
   return (
     <div className="min-h-screen bg-white pt-16 sm:pt-20">
       <SEOHead
-        title="Événementiel Corporate - Agence Casablanca & Marrakech | Link Agency"
-        description="Agence événementielle corporate à Casablanca et Marrakech : organisation professionnelle de conférences, lancements produits, séminaires, team-building et événements institutionnels au Maroc. Méthodologie Link Agency : conception → production → coordination → coverage. Service dans tout le Maroc."
+        title="Agence Événementiel Corporate au Maroc — Séminaires, Lancements | Link Agency"
+        description="Agence événementiel corporate au Maroc : lancements produits, séminaires, conventions, soirées clients, activations. Production de A à Z. Casablanca, Rabat, Marrakech."
         keywords="événementiel corporate casablanca, événementiel corporate marrakech, agence événementielle casablanca, agence événementielle marrakech, organisation événements entreprise maroc, agence communication casablanca, agence marketing marrakech, événements institutionnels maroc"
         url="https://linkagency.ma/evenementiel"
         type="service"
@@ -216,7 +216,7 @@ const Evenementiel = () => {
                 <span className="block text-3xl lg:text-4xl text-gray-600 mt-2">Casablanca & Marrakech</span>
               </h1>
               <p className="text-xl text-gray-700 leading-relaxed mb-8 font-light">
-                Conception et production d'événements corporate au service de la stratégie de marque : lancements produit, conventions internes, séminaires de direction, soirées clients VIP, activations retail et stands sur salons professionnels.
+                Lancements produits, séminaires d'entreprise, conventions, soirées corporate, activations retail. Production événementielle de A à Z pour PME, ETI et filiales au Maroc. Casablanca, Rabat, Marrakech. Du brief à la livraison sans intermédiaire, et stands sur salons professionnels.
               </p>
               <Button 
                 onClick={handleContact}

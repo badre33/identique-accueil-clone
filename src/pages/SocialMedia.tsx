@@ -118,8 +118,8 @@ const SocialMedia = () => {
   return (
     <div className="min-h-screen bg-white pt-16 sm:pt-20">
       <SEOHead
-        title="Social Media, Communication & E-réputation Maroc | Link Agency"
-        description="Agence social media et e-réputation à Casablanca : stratégie éditoriale FR/AR/Darija, community management, communication corporate et gestion de crise pour grandes marques."
+        title="Agence Social Media au Maroc — Community Management FR, AR, Darija | Link Agency"
+        description="Agence social media au Maroc : community management, contenu créatif, Meta Ads, reporting trilingue FR, AR, Darija. PME, ETI et grands comptes. Casablanca, Rabat, Marrakech."
         keywords="agence social media maroc, community management casablanca, e-réputation maroc, gestion de crise digitale, communication corporate maroc"
         url="https://linkagency.ma/social-media"
         type="service"
@@ -144,7 +144,7 @@ const SocialMedia = () => {
                 Pour les marques exposées au Maroc
               </h2>
               <p className="text-lg text-gray-700 leading-relaxed mb-8 font-light">
-                Nous orchestrons votre présence sociale en français, arabe et darija : stratégie éditoriale, community management quotidien, communication corporate, veille e-réputation et cellule de crise activable à tout moment.
+                Community management, contenu créatif, campagnes Meta Ads et reporting trilingue FR, AR, Darija. De la PME qui démarre sa présence digitale à la marque établie qui veut professionnaliser sa communication. Fondateur senior sur chaque dossier à tout moment.
               </p>
               <Button
                 onClick={handleContact}
@@ -241,7 +241,7 @@ const SocialMedia = () => {
             onClick={handleContact}
             className="bg-emerald-600 text-white hover:bg-emerald-700 px-12 py-6 text-lg transform hover:scale-105 transition-all duration-300"
           >
-            Planifier un échange
+            Discuter sur WhatsApp
           </Button>
         </div>
       </section>

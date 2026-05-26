@@ -107,8 +107,8 @@ const MarketingDigital = () => {
   return (
     <div className="min-h-screen bg-white pt-16 sm:pt-20">
       <SEOHead
-        title="Marketing Digital, Pilotage SEO, Paid Media & Social | Link Agency Maroc"
-        description="Pilotage marketing digital pour directions marketing de marques établies au Maroc : SEO, campagnes Meta/Google/TikTok, social media et reporting ROI."
+        title="Agence Marketing Digital au Maroc — SEO, Google Ads, Meta Ads | Link Agency"
+        description="Agence marketing digital au Maroc : SEO, Google Ads, Meta Ads, landing pages, automation. ROI mesurable, reporting transparent. PME, ETI, filiales. Casablanca, Rabat, Marrakech."
         keywords="agence marketing digital maroc, pilotage paid media casablanca, agence SEO maroc, campagnes meta ads maroc, agence social media casablanca, reporting ROI digital"
         url="https://linkagency.ma/marketing-digital"
         type="service"
@@ -134,7 +134,7 @@ const MarketingDigital = () => {
                 Pilotage intégré de votre dispositif d'acquisition
               </h2>
               <p className="text-lg text-gray-700 leading-relaxed mb-8 font-light">
-                Nous concevons et pilotons les dispositifs marketing digital de marques établies. SEO, paid media, social et analytics : un pilotage intégré, mesurable et orienté ROI business.
+                SEO, Google Ads, Meta Ads, landing pages, marketing automation. Stratégie digitale orientée résultats mesurables. Pour les PME ambitieuses, ETI en croissance et filiales qui veulent un partenaire local rigoureux. 11 ans au Maroc, reporting transparent mensuel.
               </p>
               <Button 
                 onClick={handleContact}
@@ -242,7 +242,7 @@ const MarketingDigital = () => {
             onClick={handleContact}
             className="bg-purple-600 text-white hover:bg-purple-700 px-12 py-6 text-lg transform hover:scale-105 transition-all duration-300"
           >
-            Planifier un échange
+            Discuter sur WhatsApp
           </Button>
         </div>
       </section>
