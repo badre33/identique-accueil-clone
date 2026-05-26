@@ -155,7 +155,7 @@ export const blogPosts: BlogPost[] = [
     <p>Application de l'identité sur l'ensemble des supports : papeterie, signalétique, site web, réseaux sociaux, supports commerciaux, packaging. Cette phase transforme la stratégie en réalité tangible.</p>
     
     <h3>Phase 6 : Accompagnement et gouvernance (continu)</h3>
-    <p>Formation des équipes, mise en place d'une gouvernance de marque, suivi de la cohérence dans la durée. Une marque forte nécessite une vigilance permanente.</p>
+    <p>Formation des équipes, mise en place d'une structure de marque cohérente, suivi de la cohérence dans la durée. Une marque forte nécessite une vigilance permanente.</p>
 
     <h2>Erreurs fréquentes à éviter dans une démarche de branding</h2>
     <p>L'expérience terrain révèle des écueils récurrents que tout dirigeant devrait anticiper.</p>
@@ -202,7 +202,7 @@ export const blogPosts: BlogPost[] = [
     <h3>L'accompagnement dans la durée</h3>
     <p>La livraison d'une charte graphique n'est pas une fin. Nous proposons des formules d'accompagnement pour garantir la cohérence du déploiement et l'évolution maîtrisée de la marque dans le temps.</p>
     
-    <p>Notre équipe réunit stratèges, directeurs artistiques et experts digital pour une approche intégrée du branding. Nous intervenons principalement auprès de marques établies, de groupes multi-secteurs et de directions marketing en repositionnement.</p>
+    <p>Notre équipe réunit stratèges, directeurs artistiques et experts digital pour une approche intégrée du branding. Nous intervenons principalement auprès de marques au Maroc, de groupes multi-secteurs et de directions marketing en repositionnement.</p>
 
     <h2>Conclusion : le branding comme décision stratégique</h2>
     <p>Dans un marché marocain de plus en plus concurrentiel, la stratégie de marque n'est plus un luxe réservé aux multinationales. Elle devient une nécessité pour toute entreprise souhaitant construire une préférence durable auprès de ses clients.</p>
@@ -1021,8 +1021,8 @@ export const blogPosts: BlogPost[] = [
     title: 'E-commerce au Maroc 2025 : Cadre Stratégique pour les Directions Retail & Marketing',
     excerpt: 'Lecture stratégique du marché e-commerce marocain en 2025 à destination des dirigeants et directions marketing : architecture de plateforme, paiement, logistique, pilotage de la performance et conformité.',
     content: `
-    <h2>Un marché e-commerce devenu structurant pour les marques établies</h2>
-    <p>Le marché e-commerce marocain atteint 45 milliards MAD en 2025, avec une croissance annuelle de 25%. Pour les marques établies, les enseignes retail et les directions marketing, le canal digital n'est plus un canal complémentaire : il devient une composante centrale du dispositif commercial et de la relation client.</p>
+    <h2>Un marché e-commerce devenu structurant pour les marques au Maroc</h2>
+    <p>Le marché e-commerce marocain atteint 45 milliards MAD en 2025, avec une croissance annuelle de 25%. Pour les marques au Maroc, les enseignes retail et les directions marketing, le canal digital n'est plus un canal complémentaire : il devient une composante centrale du dispositif commercial et de la relation client.</p>
     
     <h3>Chiffres clés 2025</h3>
     <ul>
@@ -1036,7 +1036,7 @@ export const blogPosts: BlogPost[] = [
     <h2>Architecture de plateforme : un choix de gouvernance</h2>
     <h3>Options structurantes pour le marché marocain</h3>
     <ul>
-      <li><strong>Shopify Plus</strong> : industrialisation rapide pour les marques retail mono ou multi-pays</li>
+      <li><strong>Shopify Plus</strong> : déploiement à l'échelle rapide pour les marques retail mono ou multi-pays</li>
       <li><strong>WooCommerce / Headless</strong> : flexibilité éditoriale et intégration aux SI existants</li>
       <li><strong>Marketplaces (Jumia, Amazon)</strong> : levier de couverture, à piloter en complément du DTC</li>
       <li><strong>Plateformes sur-mesure / Composable Commerce</strong> : pour les groupes au catalogue complexe et aux exigences d'intégration ERP/PIM/CRM</li>
@@ -1067,7 +1067,7 @@ export const blogPosts: BlogPost[] = [
       <li><strong>Influence sectorielle</strong> : créateurs locaux qualifiés, intégrés à un dispositif média mesurable</li>
     </ol>
     
-    <p>Link Agency accompagne les directions marketing, retail et e-commerce des marques établies dans la conception, le déploiement et le pilotage de leurs dispositifs digitaux au Maroc. Intervention sur devis, calibrée sur la maturité et les enjeux du dispositif.</p>
+    <p>Link Agency accompagne les directions marketing, retail et e-commerce des marques au Maroc dans la conception, le déploiement et le pilotage de leurs dispositifs digitaux au Maroc. Intervention sur devis, calibrée sur la maturité et les enjeux du dispositif.</p>
     `,
     author: 'E-commerce Team',
     publishDate: '2025-10-15',
@@ -1554,11 +1554,11 @@ export const blogPosts: BlogPost[] = [
   {
     id: 'local-casablanca',
     title: "Choisir une Agence Marketing Digital à Casablanca : 7 Critères Stratégiques pour les Directions Marketing",
-    excerpt: "Guide opérationnel pour évaluer et sélectionner une agence marketing digital à Casablanca. Critères, signaux faibles et méthode de short-list pour les marques établies au Maroc.",
+    excerpt: "Guide opérationnel pour évaluer et sélectionner une agence marketing digital à Casablanca. Critères, signaux faibles et méthode de short-list pour les marques au Maroc au Maroc.",
     content: `
     <h2>Le marché des agences digitales à Casablanca en 2026 : densité et opacité</h2>
     <p>Casablanca concentre l'écrasante majorité des agences marketing digital du Maroc. Cette densité, qui pourrait sembler une opportunité pour les annonceurs, crée en réalité une difficulté structurelle : comment distinguer un véritable partenaire stratégique d'un prestataire d'exécution déguisé ? Pour une direction marketing établie, le coût d'erreur d'un mauvais choix d'agence se chiffre en mois de production perdus, en budgets média mal alloués et en perte de confiance interne.</p>
-    <p>Cet article propose une grille d'évaluation rigoureuse, issue de notre expérience terrain auprès de marques établies à Casablanca, dans la finance, le retail, l'industrie et les services B2B.</p>
+    <p>Cet article propose une grille d'évaluation rigoureuse, issue de notre expérience terrain auprès de marques au Maroc à Casablanca, dans la finance, le retail, l'industrie et les services B2B.</p>
 
     <h2>Critère 1 : la qualité du cadrage stratégique en avant-vente</h2>
     <p>Une agence digne de ce nom ne se contente pas de répondre à un brief : elle le challenge. Lors du premier rendez-vous, observez la nature des questions posées. Une agence sérieuse cherchera à comprendre votre modèle économique, vos cycles de vente, votre saisonnalité, votre concurrence et vos contraintes internes avant de parler livrables. Si la conversation dérive immédiatement vers les outils, les formats créatifs ou les budgets média, c'est un signal faible.</p>
@@ -1579,7 +1579,7 @@ export const blogPosts: BlogPost[] = [
     <p>Méfiez-vous des agences qui rémunèrent leurs équipes commerciales sur les budgets média transférés : ce modèle crée un conflit d'intérêt structurel. Privilégiez les agences en honoraires fixes, où la valeur est dans le conseil et l'exécution, pas dans le volume média intermédié.</p>
 
     <h2>Critère 7 : les références sectorielles et la confidentialité</h2>
-    <p>Une agence sérieuse partage des références sectorielles pertinentes — sans nécessairement les nommer publiquement. La discrétion est souvent un signal de maturité : les marques établies à Casablanca n'aiment pas voir leur logo en première page d'un site d'agence.</p>
+    <p>Une agence sérieuse partage des références sectorielles pertinentes — sans nécessairement les nommer publiquement. La discrétion est souvent un signal de maturité : les marques au Maroc à Casablanca n'aiment pas voir leur logo en première page d'un site d'agence.</p>
 
     <h2>Méthode de short-list recommandée</h2>
     <p>Notre recommandation pour une direction marketing : engager une short-list de 3 agences maximum, organiser un brief commun, demander une réponse en 2 semaines, et noter chaque agence sur les 7 critères ci-dessus. La meilleure agence n'est pas la moins chère, ni la plus créative en présentation : c'est celle qui démontre la meilleure compréhension de votre business.</p>
@@ -1594,7 +1594,7 @@ export const blogPosts: BlogPost[] = [
     image: '/assets/blog/agence-casablanca.jpg',
     readTime: 9,
     tags: ['agence casablanca', 'marketing digital', 'sélection agence', 'direction marketing', 'maroc'],
-    metaDescription: "Comment choisir une agence marketing digital à Casablanca : 7 critères stratégiques pour les directions marketing de marques établies au Maroc.",
+    metaDescription: "Comment choisir une agence marketing digital à Casablanca : 7 critères stratégiques pour les directions marketing de marques au Maroc au Maroc.",
     metaKeywords: "agence marketing digital casablanca, choisir agence digitale maroc, agence communication casablanca, agence SEO casablanca, agence social media casablanca"
   },
   {
@@ -1720,9 +1720,9 @@ export const faqsEnriched: FAQ[] = [
   {
     id: '5',
     question: 'Avec quel type d\'entreprises travaillez-vous ?',
-    answer: 'Link Agency accompagne principalement des marques établies, des groupes, des enseignes retail, des acteurs du secteur financier, de l\'assurance, de l\'e-commerce, de l\'industrie et des services B2B. Notre mode d\'intervention est pensé pour des directions marketing qui recherchent un partenaire digital structuré, capable de piloter stratégie, production et performance.',
+    answer: 'Link Agency accompagne principalement des marques au Maroc, des groupes, des enseignes retail, des acteurs du secteur financier, de l\'assurance, de l\'e-commerce, de l\'industrie et des services B2B. Notre mode d\'intervention est pensé pour des directions marketing qui recherchent un partenaire digital structuré, capable de piloter stratégie, production et performance.',
     category: 'Services',
-    keywords: ['agence digitale maroc', 'marques établies maroc', 'direction marketing casablanca', 'partenaire digital maroc'],
+    keywords: ['agence digitale maroc', 'marques au Maroc maroc', 'direction marketing casablanca', 'partenaire digital maroc'],
     relatedServices: ['branding', 'content digital', 'evenementiel']
   },
   {

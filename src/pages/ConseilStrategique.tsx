@@ -16,7 +16,7 @@ const ConseilStrategique = () => {
     "@graph": [
       generateServiceSchema(
         "Stratégie & Pilotage Performance Marketing Maroc",
-        "Pilotage P&L digital, attribution multi-touch et Revenue Performance Orchestration pour les marques au Maroc, tous secteurs confondus.",
+        "Pilotage P&L digital, attribution multi-touch et Pilotage commercial digital pour les marques au Maroc, tous secteurs confondus.",
         "Sur devis"
       ),
       generateWebPageSchema(
@@ -41,7 +41,7 @@ const ConseilStrategique = () => {
     },
     {
       icon: <Activity className="w-8 h-8" />,
-      title: "Revenue Performance Orchestration",
+      title: "Pilotage commercial digital",
       subtitle: "Orchestrer vos canaux comme un seul système",
       description: "Mise en cohérence Acquisition → Qualification → Conversion → Optimisation. Sortie de la logique en silos pour piloter la performance commerciale globale."
     },

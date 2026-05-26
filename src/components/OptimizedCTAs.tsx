@@ -7,7 +7,7 @@ export const OptimizedCTAs = {
   // CTA principal avec urgence
   PrimaryCTA: ({ 
     title = "Cadrez votre prochain dispositif digital",
-    subtitle = "50+ clients accompagnés, 200+ projets réalisés pour des marques établies au Maroc",
+    subtitle = "50+ clients accompagnés, 200+ projets réalisés pour des marques au Maroc au Maroc",
     ctaText = "Discuter de votre dispositif",
     urgencyText = "Premier échange stratégique • Réponse rapide",
     link = "/#contact"
@@ -92,7 +92,7 @@ export const OptimizedCTAs = {
   BenefitsCTA: ({ 
     title = "Pourquoi Link Agency ?",
     benefits = [
-      "Portefeuille de marques établies, dont banque et assurance",
+      "Portefeuille de marques au Maroc, dont banque et assurance",
       "Studio interne : contenu, vidéo, motion, shooting et copywriting",
       "Pilotage publicitaire rigoureux avec reporting et optimisation continue",
       "Expertise sectorielle large : services, retail, industrie, finance, e-commerce"

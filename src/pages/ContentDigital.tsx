@@ -132,7 +132,7 @@ const ContentDigital = () => {
     <div className="min-h-screen bg-white pt-16 sm:pt-20">
       <SEOHead
         title="Content Digital Maroc - Création Contenu & Réseaux Sociaux | Link Agency"
-        description="Production de contenu digital au Maroc : social media, production vidéo, photographie et copywriting pour marques établies à Casablanca."
+        description="Production de contenu digital au Maroc : social media, production vidéo, photographie et copywriting pour marques au Maroc à Casablanca."
         keywords="production vidéo Maroc, agence social media Maroc, content marketing maroc, community management casablanca, rédaction web maroc"
         url="https://linkagency.ma/content-digital"
         type="service"
@@ -162,7 +162,7 @@ const ContentDigital = () => {
                 <span className="gradient-primary bg-clip-text text-transparent">Digital</span>
               </h1>
               <p className="text-lg sm:text-xl text-gray-700 leading-relaxed mb-4 sm:mb-6 font-light">
-                Nous produisons les contenus qui structurent la prise de parole de marques établies sur les réseaux sociaux, en campagne et sur leurs supports propriétaires.
+                Nous produisons les contenus qui structurent la prise de parole de marques au Maroc sur les réseaux sociaux, en campagne et sur leurs supports propriétaires.
               </p>
               <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-6 sm:mb-8 font-light">
                 De la stratégie éditoriale à la production, notre studio interne livre des contenus conçus pour la cohérence de marque, la lisibilité des offres et la performance.

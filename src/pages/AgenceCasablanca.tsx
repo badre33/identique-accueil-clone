@@ -48,12 +48,12 @@ const AgenceCasablanca = () => {
       generateLocalBusinessSchema("casablanca"),
       generateServiceSchema(
         "Agence Marketing Digital à Casablanca",
-        "Agence marketing digital à Casablanca : branding, communication, SEO, paid media, social media et événementiel corporate pour marques établies au Maroc.",
+        "Agence marketing digital à Casablanca : branding, communication, SEO, paid media, social media et événementiel corporate pour marques au Maroc au Maroc.",
         "Sur devis"
       ),
       generateWebPageSchema(
         "Agence Marketing Digital à Casablanca | Link Agency Maroc",
-        "Link Agency, agence marketing digital à Casablanca. Branding, communication, SEO, paid media, social et événementiel pour marques établies au Maroc.",
+        "Link Agency, agence marketing digital à Casablanca. Branding, communication, SEO, paid media, social et événementiel pour marques au Maroc au Maroc.",
         "https://linkagency.ma/agence-marketing-digital-casablanca"
       ),
       generateBreadcrumbSchema([
@@ -89,7 +89,7 @@ const AgenceCasablanca = () => {
     <div className="min-h-screen bg-white pt-16 sm:pt-20">
       <SEOHead
         title="Agence Marketing Digital à Casablanca | Link Agency Maroc"
-        description="Agence marketing digital à Casablanca : branding, communication, SEO, paid media, social media et événementiel corporate pour les marques établies au Maroc."
+        description="Agence marketing digital à Casablanca : branding, communication, SEO, paid media, social media et événementiel corporate pour les marques au Maroc au Maroc."
         keywords="agence marketing digital casablanca, agence communication casablanca, agence branding casablanca, agence SEO casablanca, agence social media casablanca, agence événementielle casablanca"
         url="https://linkagency.ma/agence-marketing-digital-casablanca"
         type="service"
@@ -113,7 +113,7 @@ const AgenceCasablanca = () => {
             Agence Marketing Digital à Casablanca
           </h1>
           <h2 className="text-2xl font-light mb-8 text-gray-800 max-w-3xl">
-            Branding, communication digitale et événementiel pour les marques établies au cœur de la capitale économique
+            Branding, communication digitale et événementiel pour les marques au Maroc au cœur de la capitale économique
           </h2>
           <p className="text-lg text-gray-700 leading-relaxed mb-10 font-light max-w-3xl">
             Link Agency accompagne depuis Casablanca les directions marketing et les dirigeants de marques marocaines ambitieuses. Notre rôle : structurer vos dispositifs de communication et d'acquisition avec rigueur, créativité et exigence business. Nous intervenons sur la stratégie de marque, le marketing digital, le social media, l'événementiel corporate et l'influence marketing.

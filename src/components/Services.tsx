@@ -15,7 +15,7 @@ export const Services = () => {
       icon: LineChart,
       title: "Stratégie & Pilotage Performance Maroc",
       description: "Nous orchestrons votre P&L digital : attribution multi-touch, RevOps et pilotage data de chaque dirham investi pour transformer le marketing en performance commerciale mesurable.",
-      features: ["P&L digital & attribution multi-touch", "Revenue Performance Orchestration", "Pilotage CPL · CPA · LTV"],
+      features: ["P&L digital & attribution multi-touch", "Pilotage commercial digital", "Pilotage CPL · CPA · LTV"],
       color: "from-slate-700 to-slate-900",
       bgImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=300&h=225&fit=crop&fm=webp&q=30",
       link: "/conseil-strategique"
@@ -50,7 +50,7 @@ export const Services = () => {
     {
       icon: LayoutGrid,
       title: "Social Media, Communication & E-réputation Maroc",
-      description: "Stratégie éditoriale, community management quotidien, gestion de crise et e-réputation pour les marques exposées.",
+      description: "Stratégie éditoriale, community management quotidien, gestion de crise et e-réputation pour les marques au Maroc.",
       features: ["Stratégie éditoriale FR/AR/Darija", "Community management & modération", "E-réputation & gestion de crise"],
       color: "from-green-500 to-blue-600",
       bgImage: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=300&h=225&fit=crop&fm=webp&q=30",

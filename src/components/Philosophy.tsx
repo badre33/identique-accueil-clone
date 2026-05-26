@@ -65,9 +65,9 @@ export const Philosophy = () => {
             <div className="w-12 h-12 bg-gradient-to-br from-black to-gray-700 rounded-xl mb-6 flex items-center justify-center group-hover:rotate-12 transition-transform">
               <Building2 className="w-6 h-6 text-white" />
             </div>
-            <h3 className="text-xl font-light mb-4 text-black">Partenaire des marques établies</h3>
+            <h3 className="text-xl font-light mb-4 text-black">Partenaire des marques au Maroc</h3>
             <p className="text-gray-600 leading-relaxed">
-              Agence digitale basée à Casablanca, présence Maroc × France. Nous accompagnons des directions marketing et communication sur des dispositifs qui doivent performer, pas simplement exister.
+              Agence digitale basée à Casablanca, présence Maroc × France. Nous accompagnons des directeurs marketing et communication sur des dispositifs qui doivent performer, pas simplement exister.
             </p>
           </div>
 

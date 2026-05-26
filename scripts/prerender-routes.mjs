@@ -23,13 +23,13 @@ const BASE = 'https://linkagency.ma';
 // ════════════════════════════════════════════════════════════════════
 const ROUTES = {
   '/branding': {
-    title: 'Agence Branding au Maroc — Création Logo, Charte Graphique, Identité de Marque | Link Agency',
+    title: 'Agence Branding Maroc — Logo, Charte, Identité de Marque | Link Agency',
     description: "Agence branding au Maroc : création de logo, charte graphique, plateforme de marque, refonte d'identité. PME, ETI et grands comptes. Casablanca, Rabat, Marrakech.",
     h1: 'Branding corporate au Maroc',
   },
   '/evenementiel': {
-    title: 'Agence Événementiel Corporate au Maroc — Séminaires, Lancements | Link Agency',
-    description: "Agence événementiel corporate au Maroc : lancements produits, séminaires, conventions, soirées clients, activations. Production de A à Z. Casablanca, Rabat, Marrakech.",
+    title: 'Agence Événementiel Corporate Maroc | Link Agency',
+    description: "Lancements, séminaires, conventions, soirées clients. Production de A à Z au Maroc. Casablanca, Rabat, Marrakech.",
     h1: 'Événementiel corporate au Maroc',
   },
   '/influence-marketing': {
@@ -53,17 +53,17 @@ const ROUTES = {
     h1: 'Développement web',
   },
   '/marketing-digital': {
-    title: 'Agence Marketing Digital au Maroc — SEO, Google Ads, Meta Ads | Link Agency',
-    description: 'Agence marketing digital au Maroc : SEO, Google Ads, Meta Ads, landing pages, automation. ROI mesurable, reporting transparent. PME, ETI, filiales. Casablanca, Rabat, Marrakech.',
+    title: 'Agence Marketing Digital Maroc — SEO, Ads, Performance | Link Agency',
+    description: 'SEO, Google Ads, Meta Ads, landing pages, automation. ROI mesurable, reporting transparent. PME, ETI, filiales. Casablanca, Rabat.',
     h1: 'Marketing digital au Maroc',
   },
   '/social-media': {
-    title: 'Agence Social Media au Maroc — Community Management FR, AR, Darija | Link Agency',
-    description: 'Agence social media au Maroc : community management, contenu créatif, Meta Ads, reporting trilingue FR, AR, Darija. PME, ETI et grands comptes. Casablanca, Rabat, Marrakech.',
+    title: 'Agence Social Media Maroc — Community Management FR/AR | Link Agency',
+    description: 'Community management, contenu créatif, Meta Ads, reporting trilingue FR/AR/Darija. PME, ETI, grands comptes au Maroc.',
     h1: 'Social media management',
   },
   '/conseil-strategique': {
-    title: 'Conseil Stratégique Marketing au Maroc — Audit, Plan, Roadmap | Link Agency',
+    title: 'Conseil Stratégique Marketing Maroc | Link Agency',
     description: "Conseil stratégique marketing au Maroc : audit, plan stratégique, roadmap d'activation. Pour PME en structuration, ETI en repositionnement, filiales étrangères. 11 ans d'expérience.",
     h1: 'Conseil stratégique',
   },
@@ -78,8 +78,8 @@ const ROUTES = {
     h1: 'Analytics & data marketing',
   },
   '/agence-marketing-digital-casablanca': {
-    title: 'Agence Marketing Digital à Casablanca — Link Agency',
-    description: "Agence marketing digital basée à Casablanca : branding, social media, SEO, Google Ads, Meta Ads. 11 ans au service des marques marocaines. Fondateur senior sur chaque dossier.",
+    title: 'Agence Marketing Digital à Casablanca | Link Agency',
+    description: "Agence marketing digital à Casablanca : branding, social media, SEO, Ads. 11 ans au service des marques.",
     h1: 'Agence marketing digital à Casablanca',
   },
   '/agence-marketing-digital-marrakech': {

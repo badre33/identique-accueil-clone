@@ -428,7 +428,7 @@ const Collaborations = () => {
       <SEOHead
         title="Portfolio Link Agency - Marques établies au Maroc"
         description="Portfolio Link Agency : 200+ projets réalisés pour Attijariwafa Bank, AXA, RMA, Subway, YouCan, Nova Spacia, OCB et plus de 50 marques au Maroc."
-        keywords="portfolio agence digitale maroc, collaborations marques établies, community management casablanca, campagnes Meta Ads Maroc"
+        keywords="portfolio agence digitale maroc, collaborations marques au Maroc, community management casablanca, campagnes Meta Ads Maroc"
         url="https://linkagency.ma/collaborations"
         structuredData={collaborationsSchema}
       />

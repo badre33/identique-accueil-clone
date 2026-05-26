@@ -95,7 +95,7 @@ const InsideLink = () => {
     <div className="min-h-screen bg-white relative overflow-hidden pt-16 sm:pt-20">
       <SEOHead
         title="Inside Link Agency - Notre Équipe & Vision | Agence Marketing Maroc"
-        description="Découvrez l'équipe et la vision de Link Agency, agence digitale à Casablanca. 11 ans d'expérience, 200+ projets, une approche stratégique dédiée aux marques établies au Maroc."
+        description="Découvrez l'équipe et la vision de Link Agency, agence digitale à Casablanca. 11 ans d'expérience, 200+ projets, une approche stratégique dédiée aux marques au Maroc au Maroc."
         keywords="link agency casablanca, agence digitale maroc, équipe senior casablanca, stratégie marque maroc"
         url="https://linkagency.ma/inside-link"
       />
@@ -141,7 +141,7 @@ const InsideLink = () => {
             <ScrollReveal delay={600} direction="up">
               <div className="text-2xl lg:text-3xl text-neutral-600 leading-relaxed max-w-4xl mx-auto font-light">
                  <TypewriterText 
-                   text="Un fondateur. Une vision : transformer chaque dirham marketing en performance commerciale mesurable pour les marques établies au Maroc."
+                   text="Un fondateur. Une vision : transformer chaque dirham marketing en performance commerciale mesurable pour les marques au Maroc au Maroc."
                   speed={30}
                   delay={1000}
                 />

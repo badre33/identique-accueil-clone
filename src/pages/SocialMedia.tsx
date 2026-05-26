@@ -16,7 +16,7 @@ const SocialMedia = () => {
     "@graph": [
       generateServiceSchema(
         "Social Media, Communication & E-réputation Maroc",
-        "Stratégie éditoriale FR/AR/Darija, community management quotidien, gestion de crise et e-réputation pour les marques exposées au Maroc.",
+        "Stratégie éditoriale FR/AR/Darija, community management quotidien, gestion de crise et e-réputation pour les marques au Maroc au Maroc.",
         "Sur devis"
       ),
       generateWebPageSchema(
@@ -141,7 +141,7 @@ const SocialMedia = () => {
                 Social Media, Communication &amp; E-réputation
               </h1>
               <h2 className="text-2xl font-light mb-8 text-gray-800">
-                Pour les marques exposées au Maroc
+                Pour les marques au Maroc au Maroc
               </h2>
               <p className="text-lg text-gray-700 leading-relaxed mb-8 font-light">
                 Community management, contenu créatif, campagnes Meta Ads et reporting trilingue FR, AR, Darija. De la PME qui démarre sa présence digitale à la marque établie qui veut professionnaliser sa communication. Fondateur senior sur chaque dossier à tout moment.

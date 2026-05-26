@@ -9,7 +9,7 @@ const expertises = [
     track: 'Direction de mission engagée par Badreddine Harkaoui — fondateur. Portefeuille piloté incluant AXA, Wafa Assurance, Allianz, Arab Bank, Orange, Safran, Dekra. 75+ projets livrés. Sélectionné 212 Founders.',
   },
   {
-    role: 'Revenue Performance Orchestration',
+    role: 'Pilotage commercial digital',
     expertise: 'Pilotage commercial · Funnel · RevOps',
     track: 'Pôle senior cumulant 14 ans chez Salesforce (jusqu\'à SVP Sales) et 4 ans chez Oracle sur comptes stratégiques du secteur financier.',
   },

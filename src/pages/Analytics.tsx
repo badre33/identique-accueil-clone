@@ -13,7 +13,7 @@ const Analytics = () => {
     "@graph": [
       generateServiceSchema(
         "Analytics, Performance Marketing & CRO Maroc",
-        "Analytics, growth, A/B testing et CRO pour marques établies au Maroc. Tableaux de bord, KPIs métier, optimisation des campagnes Meta/Google et pilotage du ROI à Casablanca, Marrakech et Rabat.",
+        "Analytics, growth, A/B testing et CRO pour marques au Maroc au Maroc. Tableaux de bord, KPIs métier, optimisation des campagnes Meta/Google et pilotage du ROI à Casablanca, Marrakech et Rabat.",
         "Sur devis"
       ),
       generateWebPageSchema(
@@ -127,7 +127,7 @@ const Analytics = () => {
     <div className="min-h-screen bg-white pt-16 sm:pt-20">
       <SEOHead
         title="Analytics & Performance Marketing Maroc | Link Agency"
-        description="Agence analytics et performance marketing au Maroc : tableaux de bord, KPIs métier, A/B testing, optimisation des conversions et pilotage ROI pour marques établies à Casablanca."
+        description="Agence analytics et performance marketing au Maroc : tableaux de bord, KPIs métier, A/B testing, optimisation des conversions et pilotage ROI pour marques au Maroc à Casablanca."
         keywords="analytics maroc, performance marketing maroc, campagnes Meta Ads Maroc, optimisation conversion, KPI digital casablanca"
         url="https://linkagency.ma/analytics"
         structuredData={analyticsSchema}

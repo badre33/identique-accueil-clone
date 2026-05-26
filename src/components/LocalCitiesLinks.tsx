@@ -5,7 +5,7 @@ const cities = [
   {
     name: "Casablanca",
     label: "Agence Marketing Digital à Casablanca",
-    desc: "Branding, paid media et social pour les marques établies de la capitale économique.",
+    desc: "Branding, paid media et social pour les marques au Maroc de la capitale économique.",
     href: "/agence-marketing-digital-casablanca",
   },
   {

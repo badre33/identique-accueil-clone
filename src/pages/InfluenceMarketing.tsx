@@ -17,7 +17,7 @@ const InfluenceMarketing = () => {
     "@graph": [
       generateServiceSchema(
         "Influence Marketing & Collaborations Créateurs Maroc",
-        "Pilotage de campagnes d'influence pour marques établies au Maroc : casting d'influenceurs et KOL, product seeding, programmes ambassadeurs, lancements produit. Casablanca, Marrakech et national.",
+        "Pilotage de campagnes d'influence pour marques au Maroc au Maroc : casting d'influenceurs et KOL, product seeding, programmes ambassadeurs, lancements produit. Casablanca, Marrakech et national.",
         "Sur devis"
       ),
       generateWebPageSchema(
@@ -180,7 +180,7 @@ const InfluenceMarketing = () => {
                 <span className="block text-3xl lg:text-4xl text-gray-600 mt-2">Casablanca & Marrakech</span>
               </h1>
               <p className="text-xl text-gray-700 leading-relaxed mb-8 font-light">
-                Pilotage de campagnes d'influence pour marques établies. Casting qualifié, négociation des conditions, supervision créative et reporting de performance : un dispositif structuré aligné avec vos enjeux de marque et vos objectifs business.
+                Pilotage de campagnes d'influence pour marques au Maroc. Casting qualifié, négociation des conditions, supervision créative et reporting de performance : un dispositif structuré aligné avec vos enjeux de marque et vos objectifs business.
               </p>
               <Button 
                 onClick={handleContact}

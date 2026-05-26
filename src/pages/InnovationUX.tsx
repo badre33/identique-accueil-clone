@@ -20,12 +20,12 @@ const InnovationUX = () => {
     "@graph": [
       generateServiceSchema(
         "Innovation & UX Design",
-        "Conception d'expériences digitales pour marques établies au Maroc : recherche UX, UI design, prototypage et tests utilisateurs.",
+        "Conception d'expériences digitales pour marques au Maroc au Maroc : recherche UX, UI design, prototypage et tests utilisateurs.",
         "Sur devis"
       ),
       generateWebPageSchema(
-        "UX/UI Design pour marques établies au Maroc | Link Agency",
-        "Conception UX/UI, prototypage et tests utilisateurs pour les directions digitales de marques établies au Maroc.",
+        "UX/UI Design pour marques au Maroc au Maroc | Link Agency",
+        "Conception UX/UI, prototypage et tests utilisateurs pour les directions digitales de marques au Maroc au Maroc.",
         "https://linkagency.ma/innovation-ux"
       ),
       generateBreadcrumbSchema([
@@ -132,8 +132,8 @@ const InnovationUX = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-yellow-50 via-white to-orange-50 pt-16 sm:pt-20">
       <SEOHead
-        title="UX/UI Design au Maroc, Conception pour marques établies | Link Agency"
-        description="UX/UI design pour directions digitales de marques établies au Maroc : recherche utilisateur, design d'interfaces, prototypage et tests."
+        title="UX/UI Design au Maroc, Conception pour marques au Maroc | Link Agency"
+        description="UX/UI design pour directions digitales de marques au Maroc au Maroc : recherche utilisateur, design d'interfaces, prototypage et tests."
         keywords="agence UX maroc, UI design casablanca, expérience utilisateur entreprise, prototypage interfaces, design system maroc"
         url="https://linkagency.ma/innovation-ux"
         type="service"
@@ -161,7 +161,7 @@ const InnovationUX = () => {
             
             <h1 className="text-5xl lg:text-6xl font-light text-black leading-tight mb-6">
               Conception d'interfaces
-              <span className="block text-orange-600">pour marques établies</span>
+              <span className="block text-orange-600">pour marques au Maroc</span>
             </h1>
             
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">

@@ -20,7 +20,7 @@ const Branding = () => {
     "@graph": [
       generateServiceSchema(
         "Services Branding & Identité Visuelle",
-        "Conception d'identités de marque cohérentes pour marques établies au Maroc : logo, charte graphique, positionnement et plateforme de marque.",
+        "Conception d'identités de marque cohérentes pour marques au Maroc au Maroc : logo, charte graphique, positionnement et plateforme de marque.",
         "Sur devis"
       ),
       generateWebPageSchema(
@@ -58,7 +58,7 @@ const Branding = () => {
       icon: <LayoutDashboard className="w-8 h-8" />,
       title: "Brand Guidelines",
       subtitle: "Référentiel d'application complet.",
-      description: "Guidelines visuelles et éditoriales détaillées pour garantir l'application fidèle de l'identité par les équipes internes, les agences partenaires et les prestataires externes. Un livrable de gouvernance de marque."
+      description: "Guidelines visuelles et éditoriales détaillées pour garantir l'application fidèle de l'identité par les équipes internes, les agences partenaires et les prestataires externes. Un livrable de structure de marque cohérente."
     }
   ];
 
