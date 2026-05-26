@@ -154,7 +154,7 @@ const ConseilStrategique = () => {
                 Stratégie &amp; Pilotage Performance
               </h1>
               <h2 className="text-2xl font-light mb-8 text-gray-800">
-                Transformez chaque dirham marketing en performance commerciale mesurable.
+                Du conseil stratégique à l'activation opérationnelle.
               </h2>
               <p className="text-lg text-gray-700 leading-relaxed mb-8 font-light">
                 Audit marketing, plan stratégique, roadmap d'activation et pilotage opérationnel. Pour les PME qui veulent structurer leur communication, les ETI qui se repositionnent, les filiales qui démarrent au Maroc. 11 ans d'expérience, méthode codifiée, livrable opérationnel à 4-6 semaines. Modèle hybride : agence d'exécution + cabinet de pilotage stratégique.
@@ -200,7 +200,7 @@ const ConseilStrategique = () => {
       <section className="py-20 px-8 lg:px-16">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-light mb-6 text-black">Nos 4 leviers de pilotage performance</h2>
+            <h2 className="text-4xl lg:text-5xl font-light mb-6 text-black">Nos 4 expertises de conseil stratégique</h2>
             <p className="text-xl text-gray-600 font-light max-w-3xl mx-auto">
               Un dispositif intégré pour orchestrer la performance commerciale digitale, du tracking à la lecture financière.
             </p>
@@ -244,7 +244,7 @@ const ConseilStrategique = () => {
       <section className="py-20 px-8 lg:px-16 bg-gradient-to-br from-gray-50 to-orange-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-light mb-6 text-black">Pourquoi les marques choisissent Link Agency</h2>
+            <h2 className="text-4xl font-light mb-6 text-black">Pourquoi nos clients nous choisissent</h2>
             <p className="text-xl text-gray-600 font-light">
               Le seul modèle au Maroc qui combine exécution créative et pilotage financier de la performance.
             </p>
@@ -270,7 +270,7 @@ const ConseilStrategique = () => {
       <section className="py-20 px-8 lg:px-16 bg-black text-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl lg:text-5xl font-light mb-8">
-            Auditons votre P&amp;L digital ensemble.
+            Échangeons sur votre projet stratégique.
           </h2>
           <p className="text-xl text-gray-300 mb-10 font-light leading-relaxed">
             Premier diagnostic de votre attribution actuelle, identification des fuites de performance et estimation du potentiel d'amélioration de votre LTV/CAC ratio.

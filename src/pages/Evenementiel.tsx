@@ -397,10 +397,10 @@ const Evenementiel = () => {
       <section className="py-16 px-8 lg:px-16 bg-muted/30">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-light text-foreground mb-6">
-            Agence événementielle stratégique à Casablanca
+            Agence événementiel corporate au Maroc — Casablanca, Rabat, Marrakech
           </h2>
           <p className="text-muted-foreground leading-relaxed text-lg">
-            Link Agency conçoit et produit des événements corporate qui servent une ambition de marque. Basée à Casablanca et active à Marrakech, notre agence événementielle intervient sur l'ensemble de la chaîne de valeur : stratégie d'activation, conception créative, production logistique et mesure d'impact. Lancements de produits, conférences institutionnelles, séminaires d'entreprise ou activations de marque immersives, chaque format est pensé pour créer une expérience mémorable alignée avec le positionnement de la marque. Notre expertise du marché marocain nous permet d'intégrer les codes culturels locaux, les exigences protocolaires et les standards de qualité internationaux dans une même prestation. Nous accompagnons les dirigeants et directeurs marketing qui considèrent l'événementiel non comme une dépense ponctuelle, mais comme un levier stratégique de construction de marque et de relation client.
+            Link Agency conçoit et produit des événements corporate au Maroc, pour PME, ETI, filiales et grands comptes. Lancements de produits, séminaires d'entreprise, conventions internes, soirées clients, activations retail, conférences institutionnelles, soirées de prestige : chaque format est pensé pour servir un objectif business clair (notoriété, fidélisation, recrutement, motivation interne). Notre prestation couvre toute la chaîne : conception créative, scénographie, production logistique, coordination prestataires, captation vidéo et photo, gestion invités, mesure d'impact. Basés à Casablanca, nous opérons à Rabat, Marrakech, Tanger, Agadir, et partout au Maroc selon vos besoins. 11 ans d'expérience, un fondateur opérationnel sur chaque dossier, et un réseau de partenaires production sélectionnés pour la qualité et la fiabilité.
           </p>
         </div>
       </section>

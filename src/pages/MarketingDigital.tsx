@@ -221,10 +221,10 @@ const MarketingDigital = () => {
       <section className="py-16 px-8 lg:px-16 bg-muted/30">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-light text-foreground mb-6">
-            Agence marketing à Casablanca
+            Agence marketing digital au Maroc — Casablanca, Rabat, Marrakech
           </h2>
           <p className="text-muted-foreground leading-relaxed text-lg">
-            Link Agency pilote les dispositifs marketing digital de marques au Maroc, tous secteurs confondus : services, retail, e-commerce, industrie, finance. Depuis Casablanca et Marrakech, nous accompagnons les directions marketing et les dirigeants dans la structuration de leurs dispositifs d'acquisition et de conversion. Notre rôle dépasse l'exécution tactique : nous intervenons sur le cadrage stratégique, la priorisation budgétaire entre canaux et le pilotage rigoureux de la performance. SEO, paid media (Meta, Google, TikTok, LinkedIn), social media et analytics : chaque levier est calibré en fonction de votre maturité digitale, de vos objectifs business et de vos contraintes spécifiques. Notre approche s'appuie sur un reporting mensuel structuré et des arbitrages partagés avec vos équipes internes.
+            Link Agency conçoit et pilote des dispositifs marketing digital orientés résultats au Maroc. SEO, Google Ads, Meta Ads, LinkedIn Ads, landing pages, marketing automation, e-mailing, analytics : nous prenons en charge l'ensemble de la chaîne d'acquisition et de conversion pour les PME ambitieuses, les ETI en croissance et les filiales étrangères. Notre approche est rigoureuse et mesurable : audit du dispositif existant, priorisation des canaux selon votre marché, déploiement opérationnel par étapes, et reporting mensuel transparent avec KPIs clairs définis dès le brief. Pas de jargon, pas d'agence intermédiaire : un fondateur senior pilote chaque dossier avec 11 ans d'expérience au Maroc, dans les secteurs services, retail, e-commerce, industrie, finance, hôtellerie, immobilier.
           </p>
         </div>
       </section>

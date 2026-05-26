@@ -221,10 +221,10 @@ const SocialMedia = () => {
       <section className="py-16 px-8 lg:px-16 bg-muted/30">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-light text-foreground mb-6">
-            Agence social media &amp; e-réputation à Casablanca
+            Agence social media au Maroc — Casablanca, Rabat, Marrakech
           </h2>
           <p className="text-muted-foreground leading-relaxed text-lg">
-            Link Agency accompagne les marques exposées au Maroc dans la gestion quotidienne de leur présence sociale, de leur communication corporate et de leur réputation en ligne. Depuis Casablanca et Marrakech, nos équipes éditoriales et community managers, natifs francophones, arabophones et darija, opèrent sur Instagram, LinkedIn, Facebook, TikTok, X et YouTube. Nous structurons des plateformes éditoriales solides, calibrons des contenus alignés sur la plateforme de marque, animons les communautés, et activons une cellule de crise lorsque la pression médiatique l'exige. La veille e-réputation est continue : monitoring des mentions, analyse de sentiment, détection des signaux faibles et reporting actionnable pour les directions générales et marketing.
+            Link Agency gère la présence sociale des PME, ETI et grands comptes au Maroc. Community management, création de contenu, campagnes Meta Ads, Google Ads et reporting : nos équipes éditoriales et community managers, natifs francophones, arabophones et darija, opèrent sur Instagram, LinkedIn, Facebook, TikTok, X et YouTube. Nous concevons des plannings éditoriaux clairs, produisons du contenu créatif aligné sur votre marque, lançons des campagnes payantes mesurées, et vous livrons un reporting mensuel transparent. Pour les marques B2B comme B2C, dans les secteurs banque, assurance, retail, e-commerce, industrie, immobilier, food, tech, hôtellerie. Onboarding en 7 jours, contact direct avec le fondateur, aucun engagement long imposé.
           </p>
         </div>
       </section>
