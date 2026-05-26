@@ -77,12 +77,12 @@ export const Header = () => {
   };
 
   const navigationItems = [
-    { label: 'Accueil', action: () => scrollToSection('accueil') },
+    { label: 'Accueil', to: '/' },
     { label: 'Blog', to: '/blog' },
     { label: 'Études de cas', to: '/etudes-de-cas' },
     { label: 'Collaborations', to: '/collaborations' },
     { label: 'Inside Link', to: '/inside-link' },
-    { label: 'Contact', action: () => scrollToSection('contact') },
+    { label: 'Contact', to: '/contact' },
   ];
 
   return (
