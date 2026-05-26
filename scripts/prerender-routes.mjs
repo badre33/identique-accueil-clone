@@ -77,6 +77,16 @@ const ROUTES = {
     description: 'GA4, dashboards de pilotage, attribution multi-canal et reporting ROI pour directions marketing au Maroc.',
     h1: 'Analytics & data marketing',
   },
+  '/creation-site-web-agadir': {
+    title: 'Création de Site Web à Agadir | Agence Web Souss-Massa | Link Agency',
+    description: "Agence web à Agadir : création de site internet, e-commerce, plateforme sur-mesure. PME et entreprises de la région Souss-Massa. Devis 48h, mobile-first, SEO local.",
+    h1: 'Création de site web à Agadir',
+  },
+  '/creation-site-web-tanger': {
+    title: 'Création de Site Web à Tanger | Agence Web Tanger-Tétouan | Link Agency',
+    description: "Agence web à Tanger : création de site internet, e-commerce, plateforme sur-mesure. PME et entreprises de la région Tanger-Tétouan. Devis 48h, mobile-first, SEO local.",
+    h1: 'Création de site web à Tanger',
+  },
   '/agence-marketing-digital-casablanca': {
     title: 'Agence Marketing Digital à Casablanca | Link Agency',
     description: "Agence marketing digital à Casablanca : branding, social media, SEO, Ads. 11 ans au service des marques.",

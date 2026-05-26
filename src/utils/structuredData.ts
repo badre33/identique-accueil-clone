@@ -107,7 +107,7 @@ export const generateOrganizationSchema = () => ({
   ]
 });
 
-type LocalCity = "casablanca" | "marrakech" | "rabat";
+type LocalCity = "casablanca" | "marrakech" | "rabat" | "agadir" | "tanger";
 const CITY_DATA: Record<LocalCity, { locality: string; region: string; postalCode: string; lat: number; lng: number; url: string }> = {
   casablanca: {
     locality: "Casablanca",
@@ -132,6 +132,22 @@ const CITY_DATA: Record<LocalCity, { locality: string; region: string; postalCod
     lat: 34.0209,
     lng: -6.8416,
     url: "https://linkagency.ma/agence-communication-rabat",
+  },
+  agadir: {
+    locality: "Agadir",
+    region: "Souss-Massa",
+    postalCode: "80000",
+    lat: 30.4278,
+    lng: -9.5981,
+    url: "https://linkagency.ma/creation-site-web-agadir",
+  },
+  tanger: {
+    locality: "Tanger",
+    region: "Tanger-Tétouan-Al Hoceima",
+    postalCode: "90000",
+    lat: 35.7595,
+    lng: -5.8340,
+    url: "https://linkagency.ma/creation-site-web-tanger",
   },
 };
 

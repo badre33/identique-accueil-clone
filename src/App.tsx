@@ -35,6 +35,8 @@ const SocialMedia = () => <LazyWrapper importFunc={() => import('./pages/SocialM
 const AgenceCasablanca = () => <LazyWrapper importFunc={() => import('./pages/AgenceCasablanca')} />;
 const AgenceMarrakech = () => <LazyWrapper importFunc={() => import('./pages/AgenceMarrakech')} />;
 const AgenceRabat = () => <LazyWrapper importFunc={() => import('./pages/AgenceRabat')} />;
+const AgenceWebAgadir = () => <LazyWrapper importFunc={() => import('./pages/AgenceWebAgadir')} />;
+const AgenceWebTanger = () => <LazyWrapper importFunc={() => import('./pages/AgenceWebTanger')} />;
 const EtudesDeCas = () => <LazyWrapper importFunc={() => import('./pages/EtudesDeCas')} />;
 const Secteurs = () => <LazyWrapper importFunc={() => import('./pages/Secteurs')} />;
 const Contact = () => <LazyWrapper importFunc={() => import('./pages/Contact')} />;
@@ -86,6 +88,8 @@ const App = () => (
                   <Route path="/blog" element={<Blog />} />
                   <Route path="/blog/:slug" element={<BlogPost />} />
                   <Route path="/contact" element={<Contact />} />
+                  <Route path="/creation-site-web-agadir" element={<AgenceWebAgadir />} />
+                  <Route path="/creation-site-web-tanger" element={<AgenceWebTanger />} />
                   {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                   <Route path="*" element={<NotFound />} />
                 </Routes>
