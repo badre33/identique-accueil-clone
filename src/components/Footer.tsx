@@ -34,7 +34,7 @@ export const Footer = () => {
               className="inline-flex items-center gap-2 px-4 py-2.5 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 text-white text-sm font-semibold rounded-lg hover:from-blue-700 hover:via-purple-700 hover:to-indigo-800 transition-all"
             >
               <MessageCircle className="w-4 h-4" />
-              Planifier un échange
+              Discuter sur WhatsApp
             </a>
           </div>
 
