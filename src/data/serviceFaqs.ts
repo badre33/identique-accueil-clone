@@ -224,4 +224,31 @@ export const serviceFaqs: Record<string, FAQItem[]> = {
         "Oui. Nous proposons des audits UX complets : analyse heuristique, benchmark, tests utilisateurs, recommandations priorisées et roadmap d'amélioration.",
     },
   ],
+  analytics: [
+    {
+      question: "Qu'est-ce que vous couvrez en analytics & data marketing ?",
+      answer:
+        "Tracking GA4, Google Tag Manager, dashboards Looker Studio, attribution multi-canal, intégration CRM, server-side tagging, KPIs business (CAC, LTV, ROAS, contribution incrémentale). Notre objectif : transformer la donnée brute en pilotage business actionnable.",
+    },
+    {
+      question: "Combien coûte la mise en place d'un tracking complet ?",
+      answer:
+        "Selon le périmètre : configuration GA4 + GTM basique à partir de 15 kMAD en one-shot, dashboards multi-canaux et attribution avancée 30 à 60 kMAD. Maintenance et reporting mensuel ensuite : à partir de 5 kMAD/mois.",
+    },
+    {
+      question: "Pouvez-vous auditer un tracking existant ?",
+      answer:
+        "Oui. Audit complet du tracking GA4, GTM, pixels, server-side tagging, fiabilité des conversions, qualité des données CRM. Livrable : rapport d'audit + plan d'action priorisé. Mission de 2 à 4 semaines selon complexité.",
+    },
+    {
+      question: "Intégrez-vous le tracking avec un CRM existant ?",
+      answer:
+        "Oui. HubSpot, Salesforce, Pipedrive, Zoho, ou CRM custom. Nous configurons la remontée des conversions qualifiées (leads transformés en clients) pour mesurer le vrai CAC marketing et optimiser les budgets paid en conséquence.",
+    },
+    {
+      question: "Comment garantissez-vous la conformité RGPD au Maroc ?",
+      answer:
+        "Mise en place de bannières de consentement (Consent Mode v2), respect de la loi 09-08 sur la protection des données personnelles au Maroc, anonymisation des IPs, durées de rétention configurées. Audit RGPD en option pour les secteurs régulés.",
+    },
+  ]
 };

@@ -5,13 +5,14 @@ import { ArrowLeft, TrendingUp, BarChart, Target, Zap, Users, Eye, ChevronRight,
 import { Link } from "react-router-dom";
 import { FloatingContactWidget } from "@/components/FloatingContactWidget";
 import { WorkflowTimeline } from "@/components/WorkflowTimeline";
-import { generateServiceSchema, generateWebPageSchema, generateBreadcrumbSchema } from "@/utils/structuredData";
+import { generateServiceSchema, generateFAQSchema, generateWebPageSchema, generateBreadcrumbSchema } from "@/utils/structuredData";
+import { serviceFaqs } from '@/data/serviceFaqs';
 
 const Analytics = () => {
   const analyticsSchema = {
     "@context": "https://schema.org",
     "@graph": [
-      generateServiceSchema(
+      generateServiceSchema, generateFAQSchema(
         "Analytics, Performance Marketing & CRO Maroc",
         "Analytics, growth, A/B testing et CRO pour marques au Maroc au Maroc. Tableaux de bord, KPIs métier, optimisation des campagnes Meta/Google et pilotage du ROI à Casablanca, Marrakech et Rabat.",
         "Sur devis"
@@ -24,7 +25,8 @@ const Analytics = () => {
       generateBreadcrumbSchema([
         { name: "Accueil", url: "https://linkagency.ma/" },
         { name: "Analytics & Performance", url: "https://linkagency.ma/analytics" }
-      ])
+      ]),
+      generateFAQSchema(serviceFaqs["analytics"])
     ]
   };
 

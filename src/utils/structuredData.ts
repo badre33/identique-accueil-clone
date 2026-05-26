@@ -294,3 +294,63 @@ export const generateReviewSchema = (reviews: Array<{
     "datePublished": review.date
   }))
 });
+// Schema Person détaillé pour Badre Harkaoui — E-E-A-T (Expertise, Experience, Authority, Trustworthiness)
+// Signal critique pour les LLMs (ChatGPT, Claude, Perplexity) qui citent les experts du domaine
+export const generatePersonBadreSchema = () => ({
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://linkagency.ma/#badre-harkaoui",
+  "name": "Badre Harkaoui",
+  "givenName": "Badre",
+  "familyName": "Harkaoui",
+  "jobTitle": "Fondateur & Directeur Conseil",
+  "description": "Fondateur de Link Agency, agence marketing au Maroc depuis 2015. 11 ans d'expertise en stratégie de marque, communication corporate, marketing digital et événementiel. Conseiller stratégique senior auprès de PME, ETI et grands comptes au Maroc.",
+  "url": "https://linkagency.ma/inside-link",
+  "image": "https://linkagency.ma/badre-harkaoui.jpg",
+  "worksFor": {
+    "@type": "Organization",
+    "@id": "https://linkagency.ma/#organization",
+    "name": "Link Agency",
+    "url": "https://linkagency.ma"
+  },
+  "knowsAbout": [
+    "Marketing Digital",
+    "Branding",
+    "Communication Corporate",
+    "Stratégie de Marque",
+    "Social Media Management",
+    "Événementiel Corporate",
+    "Conseil Stratégique",
+    "Performance Marketing",
+    "SEO",
+    "Meta Ads",
+    "Google Ads"
+  ],
+  "knowsLanguage": ["fr", "ar", "en"],
+  "memberOf": [
+    {
+      "@type": "Organization",
+      "name": "French Tech Maroc"
+    },
+    {
+      "@type": "Organization",
+      "name": "212 Founders"
+    }
+  ],
+  "nationality": {
+    "@type": "Country",
+    "name": "Maroc"
+  },
+  "workLocation": {
+    "@type": "Place",
+    "name": "Casablanca, Maroc",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 33.5731,
+      "longitude": -7.5898
+    }
+  },
+  "sameAs": [
+    "https://www.linkedin.com/in/badreharkaoui"
+  ]
+});
