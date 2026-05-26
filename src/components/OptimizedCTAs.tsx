@@ -1,5 +1,6 @@
 import { ArrowRight, Zap, Target, TrendingUp, Users, CheckCircle, Clock, Phone, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { buildWhatsAppUrl } from '@/config/contact';
 import { useState } from 'react';
 
 // CTAs optimisés pour différentes sections
@@ -10,7 +11,7 @@ export const OptimizedCTAs = {
     subtitle = "50+ clients accompagnés, 200+ projets réalisés pour des marques au Maroc au Maroc",
     ctaText = "Discuter de votre dispositif",
     urgencyText = "Premier échange stratégique • Réponse rapide",
-    link = "/#contact"
+    link = buildWhatsAppUrl("Bonjour, je souhaite échanger sur un projet.")
   }) => {
     const [isHovered, setIsHovered] = useState(false);
 
@@ -31,8 +32,7 @@ export const OptimizedCTAs = {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
-            <Link 
-              to={link}
+            <a href={link} target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-white text-primary px-8 py-4 rounded-xl hover:bg-gray-50 transition-all duration-300 font-semibold text-lg group transform hover:scale-105"
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
@@ -40,7 +40,7 @@ export const OptimizedCTAs = {
               <Zap className={`w-5 h-5 transition-all duration-300 ${isHovered ? 'rotate-12' : ''}`} />
               {ctaText}
               <ArrowRight className={`w-5 h-5 transition-transform duration-300 ${isHovered ? 'translate-x-1' : ''}`} />
-            </Link>
+            </a>
           </div>
           
           <div className="flex items-center justify-center gap-2 text-sm opacity-90">
@@ -61,7 +61,7 @@ export const OptimizedCTAs = {
       { value: "15+", label: "Secteurs couverts" }
     ],
     ctaText = "Voir nos références",
-    link = "/#contact"
+    link = buildWhatsAppUrl("Bonjour, je souhaite échanger sur un projet.")
   }) => (
     <div className="bg-white border border-gray-200 rounded-2xl p-8 text-center hover:shadow-lg transition-all duration-300">
       <h3 className="text-2xl font-semibold text-foreground mb-6">
@@ -77,14 +77,13 @@ export const OptimizedCTAs = {
         ))}
       </div>
       
-      <Link 
-        to={link}
+      <a href={link} target="_blank" rel="noopener noreferrer"
         className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-xl hover:bg-primary/90 transition-colors font-medium group"
       >
         <Target className="w-4 h-4" />
         {ctaText}
         <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-      </Link>
+      </a>
     </div>
   ),
 
@@ -115,14 +114,13 @@ export const OptimizedCTAs = {
       </div>
       
       <div className="text-center">
-        <Link 
-          to={link}
+        <a href={link} target="_blank" rel="noopener noreferrer"
           className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-xl hover:bg-primary/90 transition-colors font-medium group"
         >
           <Users className="w-4 h-4" />
           {ctaText}
           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-        </Link>
+        </a>
       </div>
     </div>
   ),
@@ -141,7 +139,7 @@ export const OptimizedCTAs = {
     currentPrice = "Gratuit",
     ctaText = "Réserver ma place",
     urgencyText = "Plus que 2 places disponibles",
-    link = "/#contact"
+    link = buildWhatsAppUrl("Bonjour, je souhaite échanger sur un projet.")
   }) => (
     <div className="bg-gradient-to-br from-red-50 to-orange-50 border-2 border-red-200 rounded-2xl p-8 text-center relative">
       {/* Badge urgence */}
@@ -174,14 +172,13 @@ export const OptimizedCTAs = {
         </div>
       </div>
       
-      <Link 
-        to={link}
+      <a href={link} target="_blank" rel="noopener noreferrer"
         className="inline-flex items-center gap-2 bg-red-500 text-white px-8 py-4 rounded-xl hover:bg-red-600 transition-colors font-semibold text-lg mb-4 group transform hover:scale-105"
       >
         <TrendingUp className="w-5 h-5" />
         {ctaText}
         <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-      </Link>
+      </a>
       
       <p className="text-sm text-red-600 font-medium">
         ⏰ {urgencyText}
@@ -196,7 +193,7 @@ export const OptimizedCTAs = {
     phone = "+212 6XX XXX XXX",
     email = "bharkaoui@linkagency.ma",
     ctaText = "Discuter sur WhatsApp",
-    link = "/#contact"
+    link = buildWhatsAppUrl("Bonjour, je souhaite échanger sur un projet.")
   }) => (
     <div className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg transition-all duration-300">
       <h3 className="text-2xl font-semibold text-foreground mb-4 text-center">
@@ -222,13 +219,12 @@ export const OptimizedCTAs = {
       </div>
       
       <div className="text-center">
-        <Link 
-          to={link}
+        <a href={link} target="_blank" rel="noopener noreferrer"
           className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-xl hover:bg-primary/90 transition-colors font-medium group w-full justify-center"
         >
           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           {ctaText}
-        </Link>
+        </a>
       </div>
     </div>
   )

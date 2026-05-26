@@ -171,13 +171,15 @@ export const TestimonialsEnhanced = () => {
               booster votre présence digitale au Maroc.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link 
-                to="/#contact"
+              <a
+                href="https://wa.me/212699024526?text=Bonjour%2C%20je%20souhaite%20demander%20un%20devis%20pour%20un%20projet%20marketing."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-xl hover:bg-primary/90 transition-colors font-medium group"
               >
-                Demander un devis gratuit
+                Demander un devis sur WhatsApp
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
+              </a>
               <Link 
                 to="/collaborations"
                 className="inline-flex items-center gap-2 bg-white text-primary px-8 py-4 rounded-xl border border-primary/20 hover:bg-primary/5 transition-colors font-medium"

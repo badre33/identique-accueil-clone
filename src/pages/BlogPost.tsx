@@ -192,11 +192,15 @@ const BlogPost = () => {
               <p className="text-muted-foreground mb-6 text-base max-w-lg mx-auto">
                 Notre équipe d'experts est là pour conseiller et réaliser vos ambitions.
               </p>
-              <Link to="/#contact">
+              <a
+                href={`https://wa.me/212699024526?text=${encodeURIComponent("Bonjour, j'ai lu l'article \"" + post.title + "\" et je souhaite échanger sur un projet similaire.")}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-5 text-base font-medium">
-                  Parlons de votre projet
+                  Discuter sur WhatsApp
                 </Button>
-              </Link>
+              </a>
             </div>
           </div>
         </div>

@@ -130,12 +130,14 @@ export const TeamCredentials = () => {
               Voir les études de cas
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
-            <Link
-              to="/#contact"
+            <a
+              href="https://wa.me/212699024526?text=Bonjour%2C%20je%20souhaite%20%C3%A9changer%20sur%20un%20projet."
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 border border-foreground text-foreground px-6 py-3 text-sm font-medium hover:bg-foreground hover:text-white transition-colors"
             >
-              Échangeons
-            </Link>
+              Discuter sur WhatsApp
+            </a>
           </div>
         </div>
       </div>
