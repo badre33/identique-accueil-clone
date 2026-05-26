@@ -3,6 +3,104 @@ import { BlogPost, FAQ, Testimonial } from '@/types/content';
 // Articles de blog optimisés SEO pour le Maroc
 export const blogPosts: BlogPost[] = [
   {
+    id: 'top-agences-casa-2026',
+    title: "Top 10 Agences Marketing à Casablanca en 2026 : Panorama, Critères et Grille de Choix",
+    excerpt: "Comparatif objectif des 10 agences marketing les plus en vue à Casablanca en 2026. Critères de sélection, positionnements, tarifs estimés et grille de décision selon votre profil d'annonceur.",
+    content: `
+    <h2>Casablanca, capitale incontestée des agences marketing au Maroc</h2>
+    <p>Plus de 60 % des agences marketing du Maroc sont implantées à Casablanca. La ville concentre les budgets des grands groupes, les sièges des marques nationales, et naturellement les acteurs capables de les servir. Pour un directeur marketing, un dirigeant de PME ambitieuse ou un responsable communication d'une filiale étrangère, la question n'est donc plus de savoir s'il faut chercher son agence à Casablanca — mais comment trier dans une offre devenue pléthorique.</p>
+    <p>Cet article propose un panorama des dix agences marketing les plus en vue à Casablanca en 2026. Il ne s'agit pas d'un classement par chiffre d'affaires ou par notoriété abstraite, mais d'une cartographie par positionnement : à chaque besoin son type d'agence, et à chaque agence son terrain de jeu.</p>
+
+    <h2>Pourquoi le choix d'une agence est devenu plus difficile en 2026</h2>
+    <p>Trois évolutions structurelles compliquent le choix d'une agence marketing au Maroc cette année.</p>
+    <p>D'abord, la <strong>multiplication des acteurs</strong>. Entre les agences historiques, les nouvelles boutiques digitales lancées par d'anciens employés des grandes agences internationales, les freelances seniors qui se présentent comme agences et les nouvelles structures positionnées sur des niches (influence, vidéo, SEO arabe), il existe désormais plusieurs centaines de prestataires actifs dans le grand Casablanca. La densité crée le brouillard.</p>
+    <p>Ensuite, l'<strong>évolution des attentes clients</strong>. Les directions marketing ne demandent plus seulement une exécution de campagnes ou un community management. Elles cherchent un partenaire capable de relier l'investissement marketing à des KPIs business (CAC, LTV, contribution incrémentale au CA). Le métier s'est sophistiqué, mais peu d'agences ont vraiment fait le saut.</p>
+    <p>Enfin, la <strong>polarisation des prix</strong>. L'écart entre les agences premium qui facturent 100 à 200 000 MAD par mois et les freelances ou structures low-cost à 5 000 MAD est devenu énorme. Au milieu, le mid-market — qui correspond à la grande majorité des PME et ETI marocaines — est mal servi : trop cher pour le bas du panier, pas assez senior pour le haut.</p>
+
+    <h2>Les 5 critères qui font vraiment la différence en 2026</h2>
+    <h3>1. Qui pilote réellement le dossier</h3>
+    <p>Dans une grande agence, le dirigeant ou le directeur de clientèle qui vend la prestation n'est presque jamais celui qui l'exécute. Vous serez confié à un chef de projet junior ou intermédiaire. Dans une boutique resserrée, c'est le fondateur ou un senior expérimenté qui pilote du début à la fin. Cette différence, invisible au moment de la signature, devient critique au bout de 3 mois.</p>
+
+    <h3>2. La transparence du modèle économique</h3>
+    <p>Méfiez-vous des agences qui se rémunèrent en commission sur les budgets média transférés : ce modèle crée un conflit d'intérêt structurel — plus vous dépensez, plus l'agence gagne. Privilégiez les agences en honoraires fixes ou en forfaits, où la valeur réside dans le conseil et l'exécution, pas dans le volume média intermédié.</p>
+
+    <h3>3. La méthode codifiée</h3>
+    <p>Une agence sérieuse peut décrire son process en 4 ou 5 étapes claires : audit, stratégie, production, activation, pilotage. Cette codification garantit la reproductibilité de la qualité. Une agence sans méthode écrite improvise — et cela se sent au premier décalage de planning ou au premier livrable raté.</p>
+
+    <h3>4. La maîtrise du marché marocain et des langues</h3>
+    <p>Le public marocain consomme en français, en arabe et en darija. Une agence qui ne maîtrise pas les trois registres perd 40 à 60 % de l'audience locale. Le SEO en arabe, le copywriting en darija sur Instagram, la créa qui parle aux deux mondes : ce sont des compétences distinctes que peu d'agences au Maroc maîtrisent vraiment.</p>
+
+    <h3>5. Le ratio qualité/prix vs vos enjeux réels</h3>
+    <p>Une marque qui réalise 50 MMAD de CA annuel n'a pas besoin de Saatchi ni de Publicis. Une PME en croissance n'a pas besoin d'une équipe de 40 personnes en agence. Le bon choix, c'est celui qui aligne la taille et la sophistication de l'agence avec votre niveau d'enjeu et votre budget. Pas plus, pas moins.</p>
+
+    <h2>Le panorama des 10 agences marketing à Casablanca en 2026</h2>
+
+    <h3>1. Hooked Digital</h3>
+    <p><strong>Positionnement</strong> : performance digitale B2B. <strong>Forces</strong> : expertise SEO et paid media, approche data-driven, content marketing. <strong>Pour qui</strong> : PME et ETI qui veulent générer des leads B2B mesurables. <strong>Tarifs estimés</strong> : 9 000 à 50 000 MAD/mois selon le périmètre.</p>
+
+    <h3>2. N7 Com Group</h3>
+    <p><strong>Positionnement</strong> : stratégie marketing globale et branding. <strong>Forces</strong> : capacité de cadrage stratégique, expérience grands comptes, créativité institutionnelle. <strong>Pour qui</strong> : entreprises qui cherchent un partenaire pour repenser leur communication corporate. <strong>Tarifs estimés</strong> : haut de fourchette mid-market à premium.</p>
+
+    <h3>3. Klem Euro RSCG</h3>
+    <p><strong>Positionnement</strong> : agence créative historique au Maroc. <strong>Forces</strong> : héritage créatif, expertise campagnes intégrées, fortes références sectorielles. <strong>Pour qui</strong> : grandes marques nationales qui veulent une signature créative forte. <strong>Tarifs estimés</strong> : segment premium.</p>
+
+    <h3>4. MAJORMEDIA</h3>
+    <p><strong>Positionnement</strong> : marketing digital et acquisition clients. <strong>Forces</strong> : campagnes publicitaires multicanal, expertise Meta et Google Ads. <strong>Pour qui</strong> : marques en croissance qui veulent accélérer leur acquisition. <strong>Tarifs estimés</strong> : mid-market.</p>
+
+    <h3>5. UBIKOM Digital</h3>
+    <p><strong>Positionnement</strong> : SEO et inbound marketing. <strong>Forces</strong> : référencement naturel, génération de leads B2B, content stratégique. <strong>Pour qui</strong> : entreprises B2B qui veulent construire un actif SEO durable. <strong>Tarifs estimés</strong> : mid-market.</p>
+
+    <h3>6. Link Agency — le challenger</h3>
+    <p><strong>Positionnement</strong> : agence boutique avec la qualité d'une grande agence et l'agilité d'un fondateur senior. <strong>Forces</strong> : un seul interlocuteur senior pilote chaque dossier, méthode codifiée (Audit → Stratégie → Production → Activation → Pilotage), expertise multi-sectorielle au Maroc, ratio qualité-prix imbattable. Sélectionnés par appel d'offres face à des agences proposant des prestations 14 fois plus chères pour un périmètre comparable. <strong>Pour qui</strong> : PME ambitieuses, ETI en croissance et filiales étrangères qui cherchent une agence accessible sans compromis sur l'expertise. <strong>Tarifs</strong> : sur devis, mid-market avec rapport qualité-prix supérieur.</p>
+
+    <h3>7. The Next Click</h3>
+    <p><strong>Positionnement</strong> : branding et communication digitale data-driven. <strong>Forces</strong> : approche data, créativité disciplinée, performance orientée. <strong>Pour qui</strong> : marques qui veulent allier créa et mesure. <strong>Tarifs estimés</strong> : mid-market à premium.</p>
+
+    <h3>8. RankUp</h3>
+    <p><strong>Positionnement</strong> : SEO, SEA et génération de leads. <strong>Forces</strong> : performance search, présence multi-villes (Casablanca, Rabat, Marrakech, Agadir). <strong>Pour qui</strong> : entreprises qui veulent dominer leur recherche locale. <strong>Tarifs estimés</strong> : entrée à mid-market.</p>
+
+    <h3>9. CPOOD</h3>
+    <p><strong>Positionnement</strong> : marketing digital orienté croissance commerciale. <strong>Forces</strong> : acquisition client, stratégie digitale intégrée. <strong>Pour qui</strong> : startups et PME en phase d'accélération. <strong>Tarifs estimés</strong> : mid-market.</p>
+
+    <h3>10. WikiDigital</h3>
+    <p><strong>Positionnement</strong> : agence web et SEO. <strong>Forces</strong> : création de sites optimisés, solutions digitales packagées. <strong>Pour qui</strong> : PME qui démarrent leur présence digitale ou refondent leur site. <strong>Tarifs estimés</strong> : entrée de marché.</p>
+
+    <h2>Comment choisir selon votre profil</h2>
+    <p>Plutôt qu'un classement absolu, voici une grille de décision selon le profil de l'annonceur.</p>
+
+    <h3>Vous êtes une PME en croissance (CA 5-50 MMAD)</h3>
+    <p>Vous cherchez un partenaire accessible mais sérieux. Évitez les grandes agences (trop chères, processus trop lourds). Privilégiez une boutique resserrée avec un fondateur ou un directeur senior qui pilote, méthode claire, et un ratio qualité-prix raisonnable. Link Agency, Hooked Digital, MAJORMEDIA correspondent à ce profil.</p>
+
+    <h3>Vous êtes une ETI ou un grand groupe national (CA > 100 MMAD)</h3>
+    <p>Vous avez les moyens d'investir mais vous cherchez encore le bon équilibre. Trois types d'agences peuvent vous servir : les grandes maisons créatives (Klem, N7), les agences hybrides positionnées sur la performance (The Next Click), ou les boutiques challengers qui livrent une qualité équivalente à moindre coût (Link Agency).</p>
+
+    <h3>Vous êtes une filiale d'un groupe international</h3>
+    <p>Vous avez besoin d'un partenaire bilingue (FR/EN), connecté aux codes des deux mondes, capable de servir d'interface entre le siège et les équipes locales. Privilégiez une agence dont le dirigeant a une expérience internationale ou de conseil senior. Link Agency, N7 Com Group, ou The Next Click correspondent à ce besoin.</p>
+
+    <h3>Vous êtes un acteur premium avec une exigence créative forte</h3>
+    <p>Klem, Mosaik, ou une boutique créative spécialisée. Vous payerez plus mais vous obtiendrez une signature créative reconnaissable.</p>
+
+    <h3>Vous voulez avant tout de la performance mesurable (acquisition de leads, ROAS)</h3>
+    <p>Hooked Digital, UBIKOM, MAJORMEDIA, RankUp. Ces agences sont configurées pour le pilotage data et la génération de leads.</p>
+
+    <h2>Le bon réflexe : faire venir 3 agences en pitch</h2>
+    <p>Quel que soit votre profil, la meilleure méthode reste la même. Établissez une short-list de 3 agences maximum (pas 5 ni 8 — vous n'aurez pas le temps de les évaluer sérieusement). Préparez un brief précis avec votre contexte, vos objectifs business, votre budget approximatif. Demandez à chaque agence une réponse en 2 semaines. Recevez chaque dirigeant ou senior en pitch d'une heure. Notez les sur les 5 critères ci-dessus.</p>
+    <p>La meilleure agence n'est pas la moins chère, ni la plus créative en présentation. C'est celle qui démontre la meilleure compréhension de votre business, propose une méthode claire, et vous met face à des seniors capables d'exécuter ce qu'ils promettent.</p>
+
+    <h2>Pour aller plus loin</h2>
+    <p>Si vous souhaitez intégrer Link Agency à votre short-list, contactez-nous directement sur WhatsApp ou via notre <a href="/contact">page contact</a>. Premier retour sous 24h, devis transparent sous 48h, sans engagement. Vous pouvez également consulter notre <a href="/agence-marketing-digital-casablanca">page dédiée à notre offre casablancaise</a>, nos <a href="/etudes-de-cas">études de cas</a>, ou notre <a href="/inside-link">méthode et nos pôles d'expertise</a>.</p>
+    `,
+    author: 'Link Agency',
+    publishDate: '2026-05-25',
+    slug: 'top-agences-marketing-casablanca-2026',
+    category: 'guide',
+    image: '/assets/blog/top-agences-casablanca-2026.jpg',
+    readTime: 11,
+    tags: ['agences marketing Casablanca', 'top agences Maroc', 'panorama agences', 'comparatif agences', 'choisir agence', 'agence marketing 2026', 'Hooked Digital', 'N7 Com', 'Klem'],
+    metaDescription: "Top 10 agences marketing à Casablanca en 2026 : panorama des acteurs majeurs, critères de sélection, tarifs estimés et grille de décision selon votre profil.",
+    metaKeywords: "top 10 agences marketing Casablanca, meilleures agences Casablanca 2026, panorama agences marketing Maroc, choisir agence Casablanca, comparatif agences marketing"
+  },
+  {
     id: '1',
     title: 'Stratégie de Marque au Maroc : Comment Construire un Branding Durable et Différenciant',
     excerpt: 'Une analyse stratégique du branding au Maroc destinée aux dirigeants et décideurs. Méthodologie, erreurs à éviter et approche conseil pour une identité de marque performante.',
