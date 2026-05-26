@@ -87,6 +87,21 @@ const ROUTES = {
     description: "Agence web à Tanger : création de site internet, e-commerce, plateforme sur-mesure. PME et entreprises de la région Tanger-Tétouan. Devis 48h, mobile-first, SEO local.",
     h1: 'Création de site web à Tanger',
   },
+  '/creation-site-web-casablanca': {
+    title: 'Création de Site Web à Casablanca | Agence Web Grand Casablanca | Link Agency',
+    description: "Agence web à Casablanca : création de site internet, e-commerce, plateforme sur-mesure. PME, ETI, CFC, filiales internationales. Devis 48h, mobile-first, SEO local.",
+    h1: 'Création de site web à Casablanca',
+  },
+  '/creation-site-web-marrakech': {
+    title: 'Création de Site Web à Marrakech | Agence Web Marrakech-Safi | Link Agency',
+    description: "Agence web à Marrakech : création de site pour hôtels, riads, restaurants, immobilier de prestige, marques lifestyle. Design premium, mobile-first, SEO international.",
+    h1: 'Création de site web à Marrakech',
+  },
+  '/creation-site-web-rabat': {
+    title: 'Création de Site Web à Rabat | Agence Web Rabat-Salé-Kénitra | Link Agency',
+    description: "Agence web à Rabat : création de site pour institutions, cabinets, professions libérales, services B2B. Conformité, accessibilité, design institutionnel.",
+    h1: 'Création de site web à Rabat',
+  },
   '/agence-marketing-digital-casablanca': {
     title: 'Agence Marketing Digital à Casablanca | Link Agency',
     description: "Agence marketing digital à Casablanca : branding, social media, SEO, Ads. 11 ans au service des marques.",

@@ -37,6 +37,9 @@ const AgenceMarrakech = () => <LazyWrapper importFunc={() => import('./pages/Age
 const AgenceRabat = () => <LazyWrapper importFunc={() => import('./pages/AgenceRabat')} />;
 const AgenceWebAgadir = () => <LazyWrapper importFunc={() => import('./pages/AgenceWebAgadir')} />;
 const AgenceWebTanger = () => <LazyWrapper importFunc={() => import('./pages/AgenceWebTanger')} />;
+const AgenceWebCasablanca = () => <LazyWrapper importFunc={() => import('./pages/AgenceWebCasablanca')} />;
+const AgenceWebMarrakech = () => <LazyWrapper importFunc={() => import('./pages/AgenceWebMarrakech')} />;
+const AgenceWebRabat = () => <LazyWrapper importFunc={() => import('./pages/AgenceWebRabat')} />;
 const EtudesDeCas = () => <LazyWrapper importFunc={() => import('./pages/EtudesDeCas')} />;
 const Secteurs = () => <LazyWrapper importFunc={() => import('./pages/Secteurs')} />;
 const Contact = () => <LazyWrapper importFunc={() => import('./pages/Contact')} />;
@@ -90,6 +93,9 @@ const App = () => (
                   <Route path="/contact" element={<Contact />} />
                   <Route path="/creation-site-web-agadir" element={<AgenceWebAgadir />} />
                   <Route path="/creation-site-web-tanger" element={<AgenceWebTanger />} />
+                  <Route path="/creation-site-web-casablanca" element={<AgenceWebCasablanca />} />
+                  <Route path="/creation-site-web-marrakech" element={<AgenceWebMarrakech />} />
+                  <Route path="/creation-site-web-rabat" element={<AgenceWebRabat />} />
                   {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                   <Route path="*" element={<NotFound />} />
                 </Routes>
