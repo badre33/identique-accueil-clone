@@ -43,19 +43,18 @@ const Hero = () => {
             </div>
 
             <h1 className="text-[2.5rem] sm:text-5xl lg:text-7xl xl:text-[5.5rem] leading-[1.02] tracking-[-0.035em] font-semibold text-foreground">
-              Le marketing au Maroc,
+              Marketing au Maroc :
               <br />
-              <span className="italic font-light text-foreground/70">sans </span>
-              <span className="text-primary">le théâtre</span>
-              <span className="italic font-light text-foreground/70"> des grosses agences.</span>
+              <span className="text-primary">la qualité d'une grande agence,</span>
+              <br />
+              <span className="italic font-light text-foreground/70">le prix d'une boutique.</span>
             </h1>
 
             <p className="mt-10 max-w-2xl text-lg lg:text-xl leading-relaxed text-foreground/70 font-normal">
-              Branding, social media, performance, événementiel. 11 ans
-              d'expertise, un fondateur senior qui pilote chaque dossier. Pas de
-              comité de 8 personnes. Pas de chargé de compte qui change tous les
-              6 mois. Juste des livrables au niveau des meilleurs, à des prix
-              qui ont du sens.
+              Branding, social media, performance, événementiel. Un fondateur
+              senior, 11 ans d'expérience au Maroc, 200+ missions livrées. Des
+              livrables au niveau des meilleurs, sans le coût d'une structure
+              de 40 personnes. Casablanca, Rabat, Marrakech.
             </p>
 
             <div className="mt-12 flex flex-col sm:flex-row gap-4">
