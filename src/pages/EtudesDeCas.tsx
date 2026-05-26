@@ -8,6 +8,20 @@ import { Link } from "react-router-dom";
 
 const cases = [
   {
+    sector: "Industrie / Grand groupe international",
+    client: "Filiale Maroc d'un grand groupe industriel",
+    title: "Sélectionnés par appel d'offres face à des agences 14× plus chères",
+    challenge: "Mission de communication digitale pour la filiale Maroc d'un grand groupe international. Appel d'offres ouvert avec 3 agences premium en lice proposant des prestations entre 100 et 200 000 MAD/mois pour un périmètre comparable.",
+    approach: "Proposition resserrée : un fondateur senior pilote chaque dossier, pas de comité ni de chargé de compte intermédiaire. Périmètre équivalent aux propositions premium (stratégie, production éditoriale, reporting mensuel). Démonstration de méthode et d'expertise sectorielle lors du pitch. Devis transparent, onboarding 7 jours.",
+    kpis: [
+      { icon: Target, label: "Appel d'offres", value: "Gagné" },
+      { icon: TrendingUp, label: "Économie vs prop. la + chère", value: "×14" },
+      { icon: Eye, label: "Onboarding livré en", value: "7 jours" },
+      { icon: Users, label: "Engagement contractuel", value: "Sans engagement long" },
+    ],
+    services: ["social-media", "content-digital", "conseil-strategique"],
+  },
+  {
     sector: "Restauration / QSR",
     client: "Subway Maroc",
     title: "Activation social media nationale d'une enseigne QSR",
