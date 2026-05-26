@@ -23,13 +23,13 @@ const BASE = 'https://linkagency.ma';
 // ════════════════════════════════════════════════════════════════════
 const ROUTES = {
   '/branding': {
-    title: 'Branding & Identité visuelle au Maroc | Link Agency',
-    description: "Création d'identité de marque, design graphique et plateforme de marque pour grands comptes au Maroc. Casablanca, Rabat, Marrakech.",
+    title: 'Agence Branding au Maroc — Création Logo, Charte Graphique, Identité de Marque | Link Agency',
+    description: "Agence branding au Maroc : création de logo, charte graphique, plateforme de marque, refonte d'identité. PME, ETI et grands comptes. Casablanca, Rabat, Marrakech.",
     h1: 'Branding corporate au Maroc',
   },
   '/evenementiel': {
-    title: 'Événementiel corporate au Maroc | Link Agency',
-    description: "Conception et production d'événements corporate, séminaires, lancements et activations de marque au Maroc. Casablanca, Rabat, Marrakech.",
+    title: 'Agence Événementiel Corporate au Maroc — Séminaires, Lancements | Link Agency',
+    description: "Agence événementiel corporate au Maroc : lancements produits, séminaires, conventions, soirées clients, activations. Production de A à Z. Casablanca, Rabat, Marrakech.",
     h1: 'Événementiel corporate au Maroc',
   },
   '/influence-marketing': {
@@ -53,18 +53,18 @@ const ROUTES = {
     h1: 'Développement web',
   },
   '/marketing-digital': {
-    title: 'Marketing digital au Maroc — SEO, SEA, Social Ads | Link Agency',
-    description: 'Stratégie et exécution digitale au Maroc : SEO, Google Ads, Meta Ads, social media. Reporting ROI et optimisation continue.',
+    title: 'Agence Marketing Digital au Maroc — SEO, Google Ads, Meta Ads | Link Agency',
+    description: 'Agence marketing digital au Maroc : SEO, Google Ads, Meta Ads, landing pages, automation. ROI mesurable, reporting transparent. PME, ETI, filiales. Casablanca, Rabat, Marrakech.',
     h1: 'Marketing digital au Maroc',
   },
   '/social-media': {
-    title: 'Social media management Maroc — FR/AR/Darija | Link Agency',
-    description: 'Community management, contenus bilingues FR/AR/Darija, campagnes payantes et reporting pour banques, retail, B2B au Maroc.',
+    title: 'Agence Social Media au Maroc — Community Management FR, AR, Darija | Link Agency',
+    description: 'Agence social media au Maroc : community management, contenu créatif, Meta Ads, reporting trilingue FR, AR, Darija. PME, ETI et grands comptes. Casablanca, Rabat, Marrakech.',
     h1: 'Social media management',
   },
   '/conseil-strategique': {
-    title: 'Conseil stratégique en communication corporate | Link Agency',
-    description: "Cadrage stratégique, plateforme de marque, audit communication et roadmap d'activation pour directions marketing au Maroc.",
+    title: 'Conseil Stratégique Marketing au Maroc — Audit, Plan, Roadmap | Link Agency',
+    description: "Conseil stratégique marketing au Maroc : audit, plan stratégique, roadmap d'activation. Pour PME en structuration, ETI en repositionnement, filiales étrangères. 11 ans d'expérience.",
     h1: 'Conseil stratégique',
   },
   '/innovation-ux': {
@@ -78,23 +78,23 @@ const ROUTES = {
     h1: 'Analytics & data marketing',
   },
   '/agence-marketing-digital-casablanca': {
-    title: 'Agence marketing digital à Casablanca | Link Agency',
-    description: "Cabinet conseil en marketing digital corporate à Casablanca. Branding, SEO, social media, événementiel pour grands comptes.",
+    title: 'Agence Marketing Digital à Casablanca — Link Agency',
+    description: "Agence marketing digital basée à Casablanca : branding, social media, SEO, Google Ads, Meta Ads. 11 ans au service des marques marocaines. Fondateur senior sur chaque dossier.",
     h1: 'Agence marketing digital à Casablanca',
   },
   '/agence-marketing-digital-marrakech': {
-    title: 'Agence marketing digital à Marrakech | Link Agency',
-    description: 'Agence communication et marketing digital à Marrakech. Branding, campagnes, événementiel pour hôtellerie, retail, immobilier.',
+    title: 'Agence Marketing Digital à Marrakech — Link Agency',
+    description: 'Agence marketing digital à Marrakech : branding, social media, événementiel, campagnes ads. Hôtellerie, retail, immobilier, services. 11 ans au Maroc.',
     h1: 'Agence marketing digital à Marrakech',
   },
   '/agence-communication-rabat': {
-    title: 'Agence communication corporate à Rabat | Link Agency',
-    description: 'Cabinet conseil en communication corporate à Rabat. Institutions, services financiers, grands comptes B2B au Maroc.',
+    title: 'Agence Communication à Rabat — Link Agency',
+    description: 'Agence communication à Rabat : institutions, services financiers, grands comptes B2B au Maroc. Branding, social media, événementiel, conseil stratégique.',
     h1: 'Agence communication à Rabat',
   },
   '/etudes-de-cas': {
-    title: 'Études de cas — réalisations Link Agency Maroc',
-    description: "Découvrez nos missions livrées au Maroc : banques, assurances, retail, événementiel corporate. Stratégies et résultats concrets.",
+    title: 'Études de cas — Link Agency au Maroc',
+    description: "Nos réalisations marketing au Maroc : banques, assurances, retail, événementiel corporate, branding. Résultats chiffrés et témoignages clients.",
     h1: 'Études de cas',
   },
   '/secteurs': {
@@ -103,8 +103,8 @@ const ROUTES = {
     h1: 'Secteurs d\'expertise',
   },
   '/inside-link': {
-    title: 'Inside Link — l\'équipe et la méthode | Link Agency',
-    description: "Découvrez l'équipe Link Agency, ses 10 pôles d'expertise, sa méthode et son réseau de partenaires au Maroc.",
+    title: "Inside Link — L'équipe, la méthode, le réseau | Link Agency",
+    description: "Découvrez les pôles d'expertise de Link Agency, sa méthode et son réseau de partenaires au Maroc. 11 ans, 200+ missions, fondateur opérationnel.",
     h1: 'Inside Link',
   },
   '/collaborations': {
@@ -113,13 +113,13 @@ const ROUTES = {
     h1: 'Nos collaborations',
   },
   '/blog': {
-    title: 'Blog — Marketing & branding au Maroc | Link Agency',
-    description: 'Analyses, guides et tendances marketing digital, branding et communication corporate au Maroc. Articles experts FR/AR.',
+    title: 'Blog — Marketing, Branding & Communication au Maroc | Link Agency',
+    description: 'Analyses, guides et tendances marketing digital, branding et communication corporate au Maroc. Articles experts FR/AR par Link Agency.',
     h1: 'Blog Link Agency',
   },
   '/contact': {
-    title: 'Contact — Link Agency | Cabinet conseil communication Maroc',
-    description: 'Contactez Link Agency pour cadrer votre dispositif corporate au Maroc. Devis sous 24h. Casablanca, Rabat, Marrakech.',
+    title: 'Contact — Link Agency | Discuter sur WhatsApp ou demander un devis',
+    description: 'Contactez Link Agency — agence marketing au Maroc. Réponse sous 24h, devis sous 48h. WhatsApp, email ou formulaire. Casablanca, Rabat, Marrakech.',
     h1: 'Parlons de votre dispositif',
   },
 };

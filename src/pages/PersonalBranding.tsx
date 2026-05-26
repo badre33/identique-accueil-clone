@@ -279,7 +279,7 @@ const PersonalBranding = () => {
             onClick={handleContact}
             className="bg-purple-600 text-white hover:bg-purple-700 px-12 py-6 text-lg transform hover:scale-105 transition-all duration-300"
           >
-            Planifier un échange
+            Discuter sur WhatsApp
           </Button>
         </div>
       </section>

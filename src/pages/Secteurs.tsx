@@ -193,7 +193,7 @@ const Secteurs = () => {
             onClick={() => trackWhatsAppClick("secteurs_bottom")}
             className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 text-white rounded-xl font-semibold hover:from-blue-700 hover:via-purple-700 hover:to-indigo-800 transition-all shadow-lg hover:shadow-xl"
           >
-            Planifier un échange stratégique <ArrowRight className="w-5 h-5" />
+            Discuter sur WhatsApp <ArrowRight className="w-5 h-5" />
           </a>
         </section>
 

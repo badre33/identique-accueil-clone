@@ -324,7 +324,7 @@ const InfluenceMarketing = () => {
                 onClick={handleContact}
                 className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700 py-4 text-lg"
               >
-                Planifier un échange
+                Discuter sur WhatsApp
               </Button>
             </div>
           </div>

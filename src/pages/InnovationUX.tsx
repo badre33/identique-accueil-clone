@@ -298,7 +298,7 @@ const InnovationUX = () => {
             size="lg"
             className="bg-white text-orange-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold rounded-xl"
           >
-            Planifier un échange
+            Discuter sur WhatsApp
           </Button>
         </div>
       </section>
