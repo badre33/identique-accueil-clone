@@ -1,29 +1,27 @@
-# ════════════════════════════════════════════════════════════════════
-# REDIRECTIONS 301 — anciennes URLs vers routes actuelles
-# Objectif : éliminer les soft 404 qui flinguent le ranking SEO
-# ════════════════════════════════════════════════════════════════════
+# Redirections 301 - anciennes URLs vers routes actuelles (anti soft-404)
 
-# Villes (URLs courtes Google → routes longues actuelles)
-/casablanca           /agence-marketing-digital-casablanca   301!
-/marrakech            /agence-marketing-digital-marrakech    301!
-/rabat                /agence-communication-rabat            301!
+# Villes (URLs courtes -> routes longues)
+/casablanca /agence-marketing-digital-casablanca 301!
+/marrakech /agence-marketing-digital-marrakech 301!
+/rabat /agence-communication-rabat 301!
 
-# Pages classiques attendues par les utilisateurs / GBP / signatures
-/a-propos             /inside-link                            301!
-/about                /inside-link                            301!
-/equipe               /inside-link                            301!
-/team                 /inside-link                            301!
-/devis                /contact                                301!
-/services             /                                       301!
+# Pages classiques attendues (GBP / signatures)
+/a-propos /inside-link 301!
+/about /inside-link 301!
+/equipe /inside-link 301!
+/team /inside-link 301!
+/devis /contact 301!
+/services / 301!
 
-# Anciennes URLs Lovable potentielles
-/home                 /                                       301!
-/accueil              /                                       301!
-/etudes               /etudes-de-cas                          301!
-/case-studies         /etudes-de-cas                          301!
-/portfolio            /etudes-de-cas                          301!
+# Anciennes URLs Lovable
+/home / 301!
+/accueil / 301!
+/etudes /etudes-de-cas 301!
+/case-studies /etudes-de-cas 301!
+/portfolio /etudes-de-cas 301!
 
-# ════════════════════════════════════════════════════════════════════
-# SPA fallback — toutes routes inconnues servies par React Router
-# ════════════════════════════════════════════════════════════════════
-/*    /index.html   200
+# Backstop trailing-slash : forme canonique sans slash sur le blog (Pretty URLs desactive cote Netlify)
+/blog/*/ /blog/:splat 301!
+
+# SPA fallback
+/* /index.html 200
