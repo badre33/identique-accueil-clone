@@ -15,7 +15,7 @@ import {
 
 const AgenceWebRabat = () => {
   const faqs = [
-    { question: "Combien coûte la création d'un site web à Rabat ?", answer: "Le prix d'un site internet à Rabat dépend du périmètre : site vitrine PME (5-7 pages) à partir de 15 000 MAD, site e-commerce à partir de 30 000 MAD, plateforme sur-mesure à partir de 60 000 MAD. Devis transparent sous 48h, sans engagement." },
+    { question: "Comment se cadre une mission de site web à Rabat ?", answer: "Chaque mission est cadrée selon le périmètre : site vitrine PME (5-7 pages), site e-commerce avec catalogue et paiement, plateforme métier sur-mesure. Première étape : un cadrage stratégique avec le fondateur pour qualifier le besoin et structurer une proposition adaptée. Cadrage sous 48h, sans engagement." },
     { question: "Quels délais pour créer un site web à Rabat ?", answer: "Un site vitrine PME prend en général 4 à 6 semaines de conception à mise en ligne. Un site e-commerce ou plateforme complexe : 8 à 14 semaines selon le périmètre fonctionnel. Onboarding démarré en 7 jours après signature." },
     { question: "Quels secteurs accompagnez-vous à Rabat ?", answer: "Hôtellerie, restauration, immobilier, services aux particuliers, commerce local, professions libérales, agroalimentaire, tourisme, et entreprises industrielles de la région Rabat-Salé-Kénitra. Nous adaptons l'esthétique et le ton aux codes locaux." },
     { question: "Êtes-vous physiquement présents à Rabat ?", answer: "Notre studio principal est à Casablanca, mais nous opérons à Rabat avec un réseau de partenaires locaux (production photo, vidéo, événementiel). Les rendez-vous stratégiques se font à distance (visio) ou en présentiel à Rabat selon les besoins du projet." },
@@ -30,7 +30,7 @@ const AgenceWebRabat = () => {
       generateServiceSchema(
         "Création de site web à Rabat",
         "Agence web à Rabat : création de site internet professionnel, e-commerce, plateforme sur-mesure. Design moderne, mobile-first, optimisé SEO local Rabat-Salé-Kénitra.",
-        "À partir de 15 000 MAD"
+        "Sur cadrage"
       ),
       generateWebPageSchema(
         "Création de Site Web à Rabat | Agence Web Rabat-Salé-Kénitra | Link Agency",
@@ -51,10 +51,10 @@ const AgenceWebRabat = () => {
   };
 
   const services = [
-    { icon: <Globe className="w-7 h-7" />, title: "Site vitrine professionnel", desc: "5-10 pages, design moderne, optimisé pour la conversion. Idéal pour les PME et services à Rabat.", from: "À partir de 15 000 MAD" },
-    { icon: <ShoppingCart className="w-7 h-7" />, title: "Site e-commerce", desc: "Boutique en ligne complète : catalogue, panier, paiement, gestion stocks. Intégration paiements marocains.", from: "À partir de 30 000 MAD" },
-    { icon: <Smartphone className="w-7 h-7" />, title: "Application web sur-mesure", desc: "Plateforme métier, espace client, outil interne. React/Next.js/TypeScript, cloud, sécurité.", from: "À partir de 60 000 MAD" },
-    { icon: <Search className="w-7 h-7" />, title: "SEO local Rabat", desc: "Référencement Google Maps, Google Business Profile, contenu géolocalisé, backlinks Rabat-Salé-Kénitra.", from: "À partir de 5 000 MAD/mois" },
+    { icon: <Globe className="w-7 h-7" />, title: "Site vitrine professionnel", desc: "5-10 pages, design moderne, optimisé pour la conversion. Idéal pour les PME et services à Rabat.", from: "Sur cadrage" },
+    { icon: <ShoppingCart className="w-7 h-7" />, title: "Site e-commerce", desc: "Boutique en ligne complète : catalogue, panier, paiement, gestion stocks. Intégration paiements marocains." },
+    { icon: <Smartphone className="w-7 h-7" />, title: "Application web sur-mesure", desc: "Plateforme métier, espace client, outil interne. React/Next.js/TypeScript, cloud, sécurité." },
+    { icon: <Search className="w-7 h-7" />, title: "SEO local Rabat", desc: "Référencement Google Maps, Google Business Profile, contenu géolocalisé, backlinks Rabat-Salé-Kénitra." },
   ];
 
   const sectors = ["Hôtellerie & restauration","Immobilier (vente, location, promoteurs)","Tourisme & loisirs","Services aux particuliers","Commerce local","Professions libérales","Agroalimentaire & coopératives","Industries Rabat-Salé-Kénitra"];
@@ -88,7 +88,7 @@ const AgenceWebRabat = () => {
                   <MessageCircle className="w-5 h-5 mr-2" />Discuter sur WhatsApp
                 </Button>
                 <Link to="/contact">
-                  <Button variant="outline" className="text-base px-7 py-6 rounded-none border-foreground/20">Demander un devis</Button>
+                  <Button variant="outline" className="text-base px-7 py-6 rounded-none border-foreground/20">Demander un cadrage</Button>
                 </Link>
               </div>
               <div className="mt-10 grid grid-cols-3 gap-6">
@@ -109,14 +109,14 @@ const AgenceWebRabat = () => {
       <section className="py-20 px-6 lg:px-12">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl lg:text-4xl font-semibold text-black mb-4">Nos prestations web à Rabat</h2>
-          <p className="text-gray-600 mb-12 max-w-2xl">Du site vitrine simple à la plateforme métier complexe, nous adaptons le périmètre à vos enjeux business et à votre budget. Prix de départ transparents, devis personnalisé sous 48h.</p>
+          <p className="text-gray-600 mb-12 max-w-2xl">Du site vitrine simple à la plateforme métier complexe, nous adaptons le périmètre à vos enjeux business. Cadrage stratégique avec le fondateur, proposition structurée sous 48h.</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((s, i) => (
               <div key={i} className="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition-shadow">
                 <div className="text-foreground mb-4">{s.icon}</div>
                 <h3 className="text-xl font-semibold text-black mb-3">{s.title}</h3>
                 <p className="text-gray-700 mb-4 leading-relaxed">{s.desc}</p>
-                <p className="text-sm font-medium text-primary">{s.from}</p>
+                
               </div>
             ))}
           </div>

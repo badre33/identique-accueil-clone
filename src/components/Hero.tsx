@@ -43,18 +43,18 @@ const Hero = () => {
             </div>
 
             <h1 className="text-[2.5rem] sm:text-5xl lg:text-7xl xl:text-[5.5rem] leading-[1.02] tracking-[-0.035em] font-semibold text-foreground">
-              Marketing au Maroc :
+              Le marketing au Maroc,
               <br />
-              <span className="text-primary">la qualité d'une grande agence,</span>
+              <span className="text-primary">livré avec méthode.</span>
               <br />
-              <span className="italic font-light text-foreground/70">le prix d'une boutique.</span>
+              <span className="italic font-light text-foreground/70">Depuis 2015.</span>
             </h1>
 
             <p className="mt-10 max-w-2xl text-lg lg:text-xl leading-relaxed text-foreground/70 font-normal">
               Branding, social media, performance, événementiel. Un fondateur
-              senior, 11 ans d'expérience au Maroc, 200+ missions livrées. Des
-              livrables au niveau des meilleurs, sans le coût d'une structure
-              de 40 personnes. Casablanca, Rabat, Marrakech.
+              senior, 11 ans d'expérience au Maroc, 200+ missions livrées. Une
+              méthode codifiée, un interlocuteur unique, des livrables
+              rigoureux. Casablanca, Rabat, Marrakech.
             </p>
 
             <div className="mt-12 flex flex-col sm:flex-row gap-4">
@@ -127,18 +127,18 @@ const Hero = () => {
                 Pourquoi nous choisir
               </p>
               <h2 className="text-3xl lg:text-4xl leading-tight tracking-tight font-semibold">
-                Sélectionnés face à des agences <span className="text-primary">14 fois plus chères.</span>
+                Sélectionnés par OCB sur <span className="text-primary">appel d'offres ouvert.</span>
               </h2>
             </div>
             <div className="lg:col-span-7 lg:pl-8 lg:border-l border-background/20">
               <p className="text-base lg:text-lg leading-relaxed text-background/85">
-                La qualité d'une grande agence ne dépend pas de la taille de l'agence.
-                Elle dépend du senior qui pilote, de la rigueur du process, et de la
-                transparence des livrables. Link Agency, c'est ça : un fondateur
-                opérationnel, une méthode codifiée, et zéro intermédiaire.
+                Ce qui fait la qualité d'une mission, c'est le senior qui pilote, la
+                rigueur du process et la transparence des livrables. Link Agency,
+                c'est ça : un fondateur opérationnel, une méthode codifiée, et zéro
+                intermédiaire entre vous et l'expert qui exécute.
               </p>
               <div className="mt-6 flex flex-wrap gap-x-8 gap-y-2 text-sm text-background/70">
-                <span>— Devis sous 48h</span>
+                <span>— Cadrage sous 48h</span>
                 <span>— Onboarding en 7 jours</span>
                 <span>— Reporting transparent mensuel</span>
                 <span>— Aucun engagement long</span>

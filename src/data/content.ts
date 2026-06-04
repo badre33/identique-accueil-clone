@@ -30,8 +30,8 @@ export const blogPosts: BlogPost[] = [
     <h3>4. La maîtrise du marché marocain et des langues</h3>
     <p>Le public marocain consomme en français, en arabe et en darija. Une agence qui ne maîtrise pas les trois registres perd 40 à 60 % de l'audience locale. Le SEO en arabe, le copywriting en darija sur Instagram, la créa qui parle aux deux mondes : ce sont des compétences distinctes que peu d'agences au Maroc maîtrisent vraiment.</p>
 
-    <h3>5. Le ratio qualité/prix vs vos enjeux réels</h3>
-    <p>Une marque qui réalise 50 MMAD de CA annuel n'a pas besoin de Saatchi ni de Publicis. Une PME en croissance n'a pas besoin d'une équipe de 40 personnes en agence. Le bon choix, c'est celui qui aligne la taille et la sophistication de l'agence avec votre niveau d'enjeu et votre budget. Pas plus, pas moins.</p>
+    <h3>5. L'alignement avec votre niveau d'enjeu</h3>
+    <p>Une marque qui réalise 50 MMAD de CA annuel n'a pas les mêmes enjeux qu'un groupe coté. Le bon choix d'agence, c'est celui qui aligne sa taille, sa méthode et son expertise sectorielle sur votre niveau d'enjeu. Pas plus, pas moins.</p>
 
     <h2>Le panorama des 10 agences marketing à Casablanca en 2026</h2>
 
@@ -51,7 +51,7 @@ export const blogPosts: BlogPost[] = [
     <p><strong>Positionnement</strong> : SEO et inbound marketing. <strong>Forces</strong> : référencement naturel, génération de leads B2B, content stratégique. <strong>Pour qui</strong> : entreprises B2B qui veulent construire un actif SEO durable. <strong>Tarifs estimés</strong> : mid-market.</p>
 
     <h3>6. Link Agency — le challenger</h3>
-    <p><strong>Positionnement</strong> : agence boutique avec la qualité d'une grande agence et l'agilité d'un fondateur senior. <strong>Forces</strong> : un seul interlocuteur senior pilote chaque dossier, méthode codifiée (Audit → Stratégie → Production → Activation → Pilotage), expertise multi-sectorielle au Maroc, ratio qualité-prix imbattable. Sélectionnés par appel d'offres face à des agences proposant des prestations 14 fois plus chères pour un périmètre comparable. <strong>Pour qui</strong> : PME ambitieuses, ETI en croissance et filiales étrangères qui cherchent une agence accessible sans compromis sur l'expertise. <strong>Tarifs</strong> : sur devis, mid-market avec rapport qualité-prix supérieur.</p>
+    <p><strong>Positionnement</strong> : agence boutique pilotée par son fondateur, méthode codifiée (Audit → Stratégie → Production → Activation → Pilotage), expertise multi-sectorielle au Maroc depuis 2015. <strong>Forces</strong> : un seul interlocuteur senior sur chaque dossier, zéro intermédiaire, livrables rigoureux, méthode démontrée par appel d'offres ouvert. <strong>Pour qui</strong> : PME ambitieuses, ETI en croissance et filiales étrangères qui cherchent une agence rigoureuse, opérationnelle et engagée. <strong>Approche</strong> : sur cadrage, structurée selon le périmètre de la mission.</p>
 
     <h3>7. The Next Click</h3>
     <p><strong>Positionnement</strong> : branding et communication digitale data-driven. <strong>Forces</strong> : approche data, créativité disciplinée, performance orientée. <strong>Pour qui</strong> : marques qui veulent allier créa et mesure. <strong>Tarifs estimés</strong> : mid-market à premium.</p>
@@ -69,7 +69,7 @@ export const blogPosts: BlogPost[] = [
     <p>Plutôt qu'un classement absolu, voici une grille de décision selon le profil de l'annonceur.</p>
 
     <h3>Vous êtes une PME en croissance (CA 5-50 MMAD)</h3>
-    <p>Vous cherchez un partenaire accessible mais sérieux. Évitez les grandes agences (trop chères, processus trop lourds). Privilégiez une boutique resserrée avec un fondateur ou un directeur senior qui pilote, méthode claire, et un ratio qualité-prix raisonnable. Link Agency, Hooked Digital, MAJORMEDIA correspondent à ce profil.</p>
+    <p>Vous cherchez un partenaire accessible mais sérieux. Évitez les grandes agences (trop chères, processus trop lourds). Privilégiez une boutique resserrée avec un fondateur ou un directeur senior qui pilote, méthode claire, et un positionnement raisonnable. Link Agency, Hooked Digital, MAJORMEDIA correspondent à ce profil.</p>
 
     <h3>Vous êtes une ETI ou un grand groupe national (CA > 100 MMAD)</h3>
     <p>Vous avez les moyens d'investir mais vous cherchez encore le bon équilibre. Trois types d'agences peuvent vous servir : les grandes maisons créatives (Klem, N7), les agences hybrides positionnées sur la performance (The Next Click), ou les boutiques challengers qui livrent une qualité équivalente à moindre coût (Link Agency).</p>
