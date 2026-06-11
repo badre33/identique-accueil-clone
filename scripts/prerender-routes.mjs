@@ -167,8 +167,36 @@ const escapeHtml = (s) =>
     .replaceAll('>', '&gt;')
     .replaceAll('"', '&quot;');
 
-function applyMeta(html, { title, description, canonical, ogTitle, ogDesc }) {
+// Nav partagée injectée dans chaque <noscript> (maillage interne pour crawlers sans JS)
+const SERVICE_NAV = `
+      <nav aria-label="Services Link Agency">
+        <ul>
+          <li><a href="/branding">Branding &amp; identité de marque</a></li>
+          <li><a href="/marketing-digital">Marketing digital — SEO, Ads, performance</a></li>
+          <li><a href="/social-media">Social media &amp; community management</a></li>
+          <li><a href="/content-digital">Production de contenu digital</a></li>
+          <li><a href="/evenementiel">Événementiel corporate</a></li>
+          <li><a href="/conseil-strategique">Conseil stratégique</a></li>
+          <li><a href="/etudes-de-cas">Études de cas</a></li>
+          <li><a href="/contact">Contact &amp; devis</a></li>
+        </ul>
+      </nav>`;
+
+// Construit le bloc SEO crawlable (sans JS) propre à une route.
+function buildSeoNoscript({ h1, description }) {
+  return `<noscript>\n      <h1>${escapeHtml(h1)}</h1>\n      <p>${escapeHtml(description)}</p>${SERVICE_NAV}\n    </noscript>`;
+}
+
+function applyMeta(html, { title, description, canonical, ogTitle, ogDesc, h1 }) {
   let out = html;
+  // Remplace le bloc <noscript> SEO de la home (celui qui contient un <h1>)
+  // par un bloc propre à la route. Ne touche pas au <noscript> des fonts (qui contient <link>).
+  if (h1) {
+    out = out.replace(
+      /<noscript>\s*<h1[\s\S]*?<\/noscript>/,
+      buildSeoNoscript({ h1, description })
+    );
+  }
   out = out.replace(/<title>[^<]*<\/title>/, `<title>${escapeHtml(title)}</title>`);
   out = out.replace(
     /<meta\s+name="description"\s+content="[^"]*"\s*\/?>/,
@@ -218,6 +246,7 @@ function main() {
       title: meta.title,
       description: meta.description,
       canonical: BASE + route,
+      h1: meta.h1,
     });
     const outDir = path.join(DIST, route.replace(/^\//, ''));
     fs.mkdirSync(outDir, { recursive: true });
@@ -233,10 +262,12 @@ function main() {
     const human = slug
       .replace(/-/g, ' ')
       .replace(/\b\w/g, (c) => c.toUpperCase());
+    const description = `${human} — Analyse, guide et perspectives Link Agency sur le marketing digital et la communication corporate au Maroc.`;
     const html = applyMeta(template, {
       title: `${human} — Blog Link Agency`,
-      description: `${human} — Analyse, guide et perspectives Link Agency sur le marketing digital et la communication corporate au Maroc.`,
+      description,
       canonical: BASE + route,
+      h1: human,
     });
     const outDir = path.join(DIST, route.replace(/^\//, ''));
     fs.mkdirSync(outDir, { recursive: true });
