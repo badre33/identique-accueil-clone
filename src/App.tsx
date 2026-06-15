@@ -1,48 +1,18 @@
-
+import { Outlet } from "react-router-dom";
+import type { RouteObject } from "react-router-dom";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { HelmetProvider } from 'react-helmet-async';
 import { PageTransition } from "@/components/PageTransition";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
 import { ThemeProvider } from "@/components/ThemeProvider";
-import { LazyWrapper } from "@/components/LazyWrapper";
 import { CriticalResourcesPreloader } from "@/components/CriticalResourcesPreloader";
 import { AnalyticsProvider } from "@/components/Analytics";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
-
-// Lazy loading des pages
-const Branding = () => <LazyWrapper importFunc={() => import('./pages/Branding')} />;
-const Evenementiel = () => <LazyWrapper importFunc={() => import('./pages/Evenementiel')} />;
-const InfluenceMarketing = () => <LazyWrapper importFunc={() => import('./pages/InfluenceMarketing')} />;
-const PersonalBranding = () => <LazyWrapper importFunc={() => import('./pages/PersonalBranding')} />;
-const ContentDigital = () => <LazyWrapper importFunc={() => import('./pages/ContentDigital')} />;
-const Analytics = () => <LazyWrapper importFunc={() => import('./pages/Analytics')} />;
-const DeveloppementWeb = () => <LazyWrapper importFunc={() => import('./pages/DeveloppementWeb')} />;
-const InnovationUX = () => <LazyWrapper importFunc={() => import('./pages/InnovationUX')} />;
-const InsideLink = () => <LazyWrapper importFunc={() => import('./pages/InsideLink')} />;
-const Collaborations = () => <LazyWrapper importFunc={() => import('./pages/Collaborations')} />;
-const Blog = () => <LazyWrapper importFunc={() => import('./pages/Blog')} />;
-const BlogPost = () => <LazyWrapper importFunc={() => import('./pages/BlogPost')} />;
-const MarketingDigital = () => <LazyWrapper importFunc={() => import('./pages/MarketingDigital')} />;
-const ConseilStrategique = () => <LazyWrapper importFunc={() => import('./pages/ConseilStrategique')} />;
-const SocialMedia = () => <LazyWrapper importFunc={() => import('./pages/SocialMedia')} />;
-const AgenceCasablanca = () => <LazyWrapper importFunc={() => import('./pages/AgenceCasablanca')} />;
-const AgenceMarrakech = () => <LazyWrapper importFunc={() => import('./pages/AgenceMarrakech')} />;
-const AgenceRabat = () => <LazyWrapper importFunc={() => import('./pages/AgenceRabat')} />;
-const AgenceWebAgadir = () => <LazyWrapper importFunc={() => import('./pages/AgenceWebAgadir')} />;
-const AgenceWebTanger = () => <LazyWrapper importFunc={() => import('./pages/AgenceWebTanger')} />;
-const AgenceWebCasablanca = () => <LazyWrapper importFunc={() => import('./pages/AgenceWebCasablanca')} />;
-const AgenceWebMarrakech = () => <LazyWrapper importFunc={() => import('./pages/AgenceWebMarrakech')} />;
-const AgenceWebRabat = () => <LazyWrapper importFunc={() => import('./pages/AgenceWebRabat')} />;
-const EtudesDeCas = () => <LazyWrapper importFunc={() => import('./pages/EtudesDeCas')} />;
-const Secteurs = () => <LazyWrapper importFunc={() => import('./pages/Secteurs')} />;
-const Contact = () => <LazyWrapper importFunc={() => import('./pages/Contact')} />;
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -55,59 +25,66 @@ const queryClient = new QueryClient({
   },
 });
 
-const App = () => (
+// Layout racine : tous les providers + chrome commun, puis <Outlet/> pour la page.
+const Layout = () => (
   <ErrorBoundary>
-    <HelmetProvider>
-      <ThemeProvider>
-        <QueryClientProvider client={queryClient}>
-          <AnalyticsProvider>
-            <TooltipProvider>
-              <CriticalResourcesPreloader />
-              <Toaster />
-              <Sonner />
-            <BrowserRouter>
-              <PageTransition>
-                <Breadcrumb />
-                <Routes>
-                  <Route path="/" element={<Index />} />
-                  <Route path="/branding" element={<Branding />} />
-                  <Route path="/evenementiel" element={<Evenementiel />} />
-                  <Route path="/influence-marketing" element={<InfluenceMarketing />} />
-                  <Route path="/personal-branding" element={<PersonalBranding />} />
-                  <Route path="/content-digital" element={<ContentDigital />} />
-                  <Route path="/developpement-web" element={<DeveloppementWeb />} />
-                  <Route path="/marketing-digital" element={<MarketingDigital />} />
-                  <Route path="/social-media" element={<SocialMedia />} />
-                  <Route path="/conseil-strategique" element={<ConseilStrategique />} />
-                  <Route path="/innovation-ux" element={<InnovationUX />} />
-                  <Route path="/analytics" element={<Analytics />} />
-                  <Route path="/agence-marketing-digital-casablanca" element={<AgenceCasablanca />} />
-                  <Route path="/agence-marketing-digital-marrakech" element={<AgenceMarrakech />} />
-                  <Route path="/agence-communication-rabat" element={<AgenceRabat />} />
-                  <Route path="/etudes-de-cas" element={<EtudesDeCas />} />
-                  <Route path="/secteurs" element={<Secteurs />} />
-                  <Route path="/inside-link" element={<InsideLink />} />
-                  <Route path="/collaborations" element={<Collaborations />} />
-                  <Route path="/blog" element={<Blog />} />
-                  <Route path="/blog/:slug" element={<BlogPost />} />
-                  <Route path="/contact" element={<Contact />} />
-                  <Route path="/creation-site-web-agadir" element={<AgenceWebAgadir />} />
-                  <Route path="/creation-site-web-tanger" element={<AgenceWebTanger />} />
-                  <Route path="/creation-site-web-casablanca" element={<AgenceWebCasablanca />} />
-                  <Route path="/creation-site-web-marrakech" element={<AgenceWebMarrakech />} />
-                  <Route path="/creation-site-web-rabat" element={<AgenceWebRabat />} />
-                  {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-                  <Route path="*" element={<NotFound />} />
-                </Routes>
-              </PageTransition>
-              <StickyMobileCTA />
-            </BrowserRouter>
+    <ThemeProvider>
+      <QueryClientProvider client={queryClient}>
+        <AnalyticsProvider>
+          <TooltipProvider>
+            <CriticalResourcesPreloader />
+            <Toaster />
+            <Sonner />
+            <PageTransition>
+              <Breadcrumb />
+              <Outlet />
+            </PageTransition>
+            <StickyMobileCTA />
           </TooltipProvider>
         </AnalyticsProvider>
       </QueryClientProvider>
     </ThemeProvider>
-  </HelmetProvider>
-</ErrorBoundary>
+  </ErrorBoundary>
 );
 
-export default App;
+// Helper : route avec code-splitting au niveau route (rendu au build SSG ET
+// chargé à la demande côté client). Le module page exporte `default`.
+const page = (importFn: () => Promise<{ default: React.ComponentType }>): RouteObject['lazy'] =>
+  async () => ({ Component: (await importFn()).default });
+
+export const routes: RouteObject[] = [
+  {
+    path: "/",
+    element: <Layout />,
+    children: [
+      { index: true, element: <Index /> },
+      { path: "branding", lazy: page(() => import('./pages/Branding')) },
+      { path: "evenementiel", lazy: page(() => import('./pages/Evenementiel')) },
+      { path: "influence-marketing", lazy: page(() => import('./pages/InfluenceMarketing')) },
+      { path: "personal-branding", lazy: page(() => import('./pages/PersonalBranding')) },
+      { path: "content-digital", lazy: page(() => import('./pages/ContentDigital')) },
+      { path: "developpement-web", lazy: page(() => import('./pages/DeveloppementWeb')) },
+      { path: "marketing-digital", lazy: page(() => import('./pages/MarketingDigital')) },
+      { path: "social-media", lazy: page(() => import('./pages/SocialMedia')) },
+      { path: "conseil-strategique", lazy: page(() => import('./pages/ConseilStrategique')) },
+      { path: "innovation-ux", lazy: page(() => import('./pages/InnovationUX')) },
+      { path: "analytics", lazy: page(() => import('./pages/Analytics')) },
+      { path: "agence-marketing-digital-casablanca", lazy: page(() => import('./pages/AgenceCasablanca')) },
+      { path: "agence-marketing-digital-marrakech", lazy: page(() => import('./pages/AgenceMarrakech')) },
+      { path: "agence-communication-rabat", lazy: page(() => import('./pages/AgenceRabat')) },
+      { path: "etudes-de-cas", lazy: page(() => import('./pages/EtudesDeCas')) },
+      { path: "secteurs", lazy: page(() => import('./pages/Secteurs')) },
+      { path: "inside-link", lazy: page(() => import('./pages/InsideLink')) },
+      { path: "collaborations", lazy: page(() => import('./pages/Collaborations')) },
+      { path: "blog", lazy: page(() => import('./pages/Blog')) },
+      { path: "blog/:slug", lazy: page(() => import('./pages/BlogPost')) },
+      { path: "contact", lazy: page(() => import('./pages/Contact')) },
+      { path: "creation-site-web-agadir", lazy: page(() => import('./pages/AgenceWebAgadir')) },
+      { path: "creation-site-web-tanger", lazy: page(() => import('./pages/AgenceWebTanger')) },
+      { path: "creation-site-web-casablanca", lazy: page(() => import('./pages/AgenceWebCasablanca')) },
+      { path: "creation-site-web-marrakech", lazy: page(() => import('./pages/AgenceWebMarrakech')) },
+      { path: "creation-site-web-rabat", lazy: page(() => import('./pages/AgenceWebRabat')) },
+      { path: "*", element: <NotFound /> },
+    ],
+  },
+];

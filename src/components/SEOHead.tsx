@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet-async';
+import { Head } from 'vite-react-ssg';
 
 interface SEOHeadProps {
   title?: string;
@@ -33,7 +33,7 @@ export const SEOHead = ({
   const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
 
   return (
-    <Helmet>
+    <Head>
       {/* Balises meta de base */}
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
@@ -89,7 +89,7 @@ export const SEOHead = ({
           {JSON.stringify(structuredData)}
         </script>
       )}
-      
-    </Helmet>
+
+    </Head>
   );
 };

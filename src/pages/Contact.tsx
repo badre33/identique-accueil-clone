@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet-async';
+import { Head } from 'vite-react-ssg';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Contact as ContactSection } from '@/components/Contact';
@@ -8,7 +8,7 @@ import { FloatingContactWidget } from '@/components/FloatingContactWidget';
 const ContactPage = () => {
   return (
     <div className="min-h-screen bg-black">
-      <Helmet>
+      <Head>
         <title>Contact — Link Agency | Cabinet conseil communication corporate Maroc</title>
         <meta
           name="description"
@@ -19,7 +19,7 @@ const ContactPage = () => {
         <meta property="og:description" content="Parlons de votre dispositif. Premier retour sous 24h." />
         <meta property="og:url" content="https://linkagency.ma/contact" />
         <meta name="robots" content="index, follow" />
-      </Helmet>
+      </Head>
       <Header />
       <main className="pt-20" id="contact">
         <ContactSection />

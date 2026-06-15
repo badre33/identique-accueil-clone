@@ -15,43 +15,13 @@
       gtag('config', 'G-F077M674TY');
     </script>
 
-    <!-- ══ SEO CORE — baseline neutre, écrasé par SEOHead/Helmet par route ══ -->
-    <title>Link Agency — Agence Marketing au Maroc | Branding, Social Media, Performance</title>
-    <meta name="description" content="Agence marketing au Maroc depuis 2015. Branding, social media, performance, événementiel. 11 ans, 200+ missions, fondateur senior qui pilote chaque dossier." />
-    <meta name="author" content="Link Agency" />
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-    <link rel="canonical" href="https://linkagency.ma/" />
+    <!-- ══ SEO PAR ROUTE — title / description / canonical / hreflang / OG /
+         Twitter / geo sont injectés au build SSG par <Head> (vite-react-ssg),
+         spécifiques à chaque page. index.html ne porte plus de baseline meta
+         (sinon doublons). Seul le JSON-LD Organization/LocalBusiness sitewide
+         reste ici comme socle. ══ -->
 
-    <!-- ══ HREFLANG (fr only — no fake ar/en versions) ══ -->
-    <link rel="alternate" hreflang="fr" href="https://linkagency.ma/" />
-    <link rel="alternate" hreflang="x-default" href="https://linkagency.ma/" />
-
-    <!-- ══ GEO LOCAL ══ -->
-    <meta name="geo.region" content="MA" />
-    <meta name="geo.placename" content="Casablanca, Maroc" />
-    <meta name="geo.position" content="33.5731;-7.5898" />
-    <meta name="ICBM" content="33.5731, -7.5898" />
-    <meta name="language" content="fr-MA" />
-
-    <!-- ══ OPEN GRAPH ══ -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://linkagency.ma/" />
-    <meta property="og:site_name" content="Link Agency" />
-    <meta property="og:locale" content="fr_MA" />
-    <meta property="og:title" content="Link Agency — Agence Marketing au Maroc | Branding, Social Media, Performance" />
-    <meta property="og:description" content="Agence marketing au Maroc depuis 2015. Branding, social media, performance, événementiel. 11 ans, 200+ missions, fondateur senior qui pilote chaque dossier. Casablanca, Rabat, Marrakech." />
-    <meta property="og:image" content="https://linkagency.ma/og-default.jpg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-
-    <!-- ══ TWITTER CARD ══ -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@LinkAgencyMA" />
-    <meta name="twitter:title" content="Link Agency — Agence Marketing au Maroc | Branding, Social Media, Performance" />
-    <meta name="twitter:description" content="Agence marketing au Maroc depuis 2015. Branding, social media, performance, événementiel. 11 ans, 200+ missions, fondateur senior." />
-    <meta name="twitter:image" content="https://linkagency.ma/og-default.jpg" />
-
-    <!-- ══ SCHEMA.ORG (statique — lu par Google sans JS) ══ -->
+    <!-- ══ SCHEMA.ORG sitewide (Organization + LocalBusiness) ══ -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -136,55 +106,6 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-
-    <!-- ══ Contenu SEO crawlable sans JS (lu par GPTBot, PerplexityBot, Bing, etc.) ══
-         Invisible pour les visiteurs (JS actif) ; remplacé par le rendu React.
-         Sert de fallback texte pour les crawlers qui n'exécutent pas JavaScript. -->
-    <noscript>
-      <h1>Le marketing au Maroc, livré avec méthode. Depuis 2015.</h1>
-      <p>
-        Link Agency est une agence marketing au Maroc, basée à Casablanca et active
-        à Rabat et Marrakech depuis 2015. Branding, social media, performance et
-        événementiel : un fondateur senior, 11 ans d'expérience, 200+ missions
-        livrées. Une méthode codifiée, un interlocuteur unique, des livrables rigoureux.
-      </p>
-      <h2>Nos services</h2>
-      <ul>
-        <li>
-          <a href="/conseil-strategique"><strong>Stratégie &amp; Pilotage Performance Maroc</strong></a> —
-          Nous orchestrons votre P&amp;L digital : attribution multi-touch, RevOps et pilotage
-          data de chaque dirham investi pour transformer le marketing en performance commerciale mesurable.
-        </li>
-        <li>
-          <a href="/marketing-digital"><strong>Acquisition payante &amp; Lead Generation Maroc</strong></a> —
-          Nous concevons et pilotons des campagnes Meta, Google, TikTok et LinkedIn Ads avec lead
-          scoring qualifié, pour des marques de tous secteurs au Maroc.
-        </li>
-        <li>
-          <a href="/content-digital"><strong>SEO, SEO Arabe &amp; Contenu éditorial Maroc</strong></a> —
-          Référencement naturel FR · AR · Darija. Nous générons 20 à 30 % de croissance organique
-          grâce à une expertise SEO bilingue rare au Maroc.
-        </li>
-        <li>
-          <a href="/branding"><strong>Branding &amp; Identité visuelle Maroc</strong></a> —
-          Nous concevons des identités de marque mémorables, de la création de logo à la charte graphique complète.
-        </li>
-        <li>
-          <a href="/social-media"><strong>Social Media, Communication &amp; E-réputation Maroc</strong></a> —
-          Stratégie éditoriale, community management quotidien, gestion de crise et e-réputation pour les marques au Maroc.
-        </li>
-        <li>
-          <a href="/evenementiel"><strong>Événements corporate &amp; activations Maroc</strong></a> —
-          Nous concevons les événements B2B et activations qui accompagnent les temps forts des grandes marques.
-        </li>
-      </ul>
-      <p>
-        <a href="/etudes-de-cas">Études de cas</a> ·
-        <a href="/secteurs">Secteurs d'expertise</a> ·
-        <a href="/blog">Blog</a> ·
-        <a href="/contact">Contact &amp; devis</a>
-      </p>
-    </noscript>
 
     <!-- ══ Netlify Forms — static placeholder pour détection au build ══ -->
     <form name="contact" netlify netlify-honeypot="bot-field" hidden>

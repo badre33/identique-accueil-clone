@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
+import { Head } from 'vite-react-ssg';
 import { Building2, Shield, ShoppingBag, Factory, ArrowRight } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -89,7 +89,7 @@ const Secteurs = () => {
 
   return (
     <>
-      <Helmet>
+      <Head>
         <title>Secteurs · Banque, Assurance, Retail, Industrie | Link Agency Maroc</title>
         <meta
           name="description"
@@ -103,7 +103,7 @@ const Secteurs = () => {
         />
         <meta property="og:url" content="https://linkagency.ma/secteurs" />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
-      </Helmet>
+      </Head>
 
       <Header />
 

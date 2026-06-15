@@ -1,6 +1,6 @@
 import { SEOHead } from "@/components/SEOHead";
 import { generatePersonBadreSchema } from "@/utils/structuredData";
-import { Helmet } from "react-helmet-async";
+import { Head } from 'vite-react-ssg';
 import { useState, useEffect } from "react";
 import { ArrowLeft, Target, Palette, Users, Lightbulb, Linkedin, History, LineChart, Search, Code2 } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -95,11 +95,11 @@ const InsideLink = () => {
 
   return (
     <div className="min-h-screen bg-white relative overflow-hidden pt-16 sm:pt-20">
-        <Helmet>
+        <Head>
           <script type="application/ld+json">
             {JSON.stringify(generatePersonBadreSchema())}
           </script>
-        </Helmet>
+        </Head>
       <SEOHead
         title="Inside Link — Équipe, Méthode & Réseau | Link Agency"
         description="Découvrez l'équipe et la vision de Link Agency, agence digitale à Casablanca. 11 ans d'expérience, 200+ projets, une approche stratégique dédiée aux marques au Maroc au Maroc."
