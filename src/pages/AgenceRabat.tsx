@@ -88,7 +88,7 @@ const AgenceRabat = () => {
   return (
     <div className="min-h-screen bg-white pt-16 sm:pt-20">
       <SEOHead
-        title="Agence Communication Institutionnelle à Rabat | Link Agency Maroc"
+        title="Agence Communication à Rabat | Link Agency"
         description="Agence de communication institutionnelle à Rabat : stratégie, branding et campagnes pour institutions publiques, ONG et organismes internationaux au Maroc."
         keywords="agence communication rabat, agence institutionnelle rabat, agence marketing digital rabat, agence branding rabat, agence ONG rabat, agence communication publique maroc"
         url="https://linkagency.ma/agence-communication-rabat"

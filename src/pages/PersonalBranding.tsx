@@ -130,7 +130,7 @@ const PersonalBranding = () => {
   return (
     <div className="min-h-screen bg-white pt-16 sm:pt-20">
       <SEOHead
-        title="Personal Branding au Maroc pour Dirigeants & Experts | Link Agency"
+        title="Personal Branding Dirigeants au Maroc | Link Agency"
         description="Personal branding au Maroc pour dirigeants et experts : positionnement, ligne éditoriale, contenus et pilotage de la présence digitale."
         keywords="personal branding maroc, dirigeant linkedin maroc, positionnement expert, marque personnelle casablanca, communication dirigeant"
         url="https://linkagency.ma/personal-branding"

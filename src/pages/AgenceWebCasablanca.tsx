@@ -62,7 +62,7 @@ const AgenceWebCasablanca = () => {
   return (
     <div className="min-h-screen bg-white pt-16 sm:pt-20">
       <SEOHead
-        title="Création de Site Web à Casablanca | Agence Web Grand Casablanca | Link Agency"
+        title="Création de Site Web à Casablanca | Agence Web | Link Agency"
         description="Agence web à Casablanca : création de site internet, e-commerce, plateforme sur-mesure. PME et entreprises de la région Grand Casablanca. Devis sous 48h, mobile-first, SEO local."
         keywords="création site web casablanca, agence web casablanca, site internet casablanca, agence digitale casablanca, e-commerce casablanca, souss-massa"
         url="https://linkagency.ma/creation-site-web-casablanca"

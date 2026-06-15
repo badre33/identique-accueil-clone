@@ -118,7 +118,7 @@ const SocialMedia = () => {
   return (
     <div className="min-h-screen bg-white pt-16 sm:pt-20">
       <SEOHead
-        title="Agence Social Media au Maroc — Community Management FR, AR, Darija | Link Agency"
+        title="Agence Social Media Maroc — Community Management | Link Agency"
         description="Agence social media au Maroc : community management, contenu créatif, Meta Ads, reporting trilingue FR, AR, Darija. PME, ETI et grands comptes. Casablanca, Rabat, Marrakech."
         keywords="agence social media maroc, community management casablanca, e-réputation maroc, gestion de crise digitale, communication corporate maroc"
         url="https://linkagency.ma/social-media"

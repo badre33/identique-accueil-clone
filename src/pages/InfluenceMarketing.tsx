@@ -151,7 +151,7 @@ const InfluenceMarketing = () => {
   return (
     <div className="min-h-screen bg-white pt-16 sm:pt-20">
       <SEOHead
-        title="Influence Marketing Maroc - Agence Casablanca & Marrakech | Link Agency"
+        title="Influence Marketing au Maroc | Link Agency"
         description="Agence influence marketing à Casablanca et Marrakech : campagnes avec influenceurs maroc, collaborations créateurs de contenu, product seeding, micro-influence, KOL premium et lancement de produit. Casting → production → diffusion → analytics. Service dans tout le Maroc."
         keywords="influence marketing casablanca, influence marketing marrakech, influenceurs maroc, campagne influence maroc, lancement de produit maroc, agence marketing casablanca, agence digitale marrakech, link agency casablanca, créateurs contenu maroc, KOL maroc"
         url="https://linkagency.ma/influence-marketing"

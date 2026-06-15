@@ -62,7 +62,7 @@ const AgenceWebTanger = () => {
   return (
     <div className="min-h-screen bg-white pt-16 sm:pt-20">
       <SEOHead
-        title="Création de Site Web à Tanger | Agence Web Tanger-Tétouan | Link Agency"
+        title="Création de Site Web à Tanger | Agence Web | Link Agency"
         description="Agence web à Tanger : création de site internet, e-commerce, plateforme sur-mesure. PME et entreprises de la région Tanger-Tétouan. Devis sous 48h, mobile-first, SEO local."
         keywords="création site web tanger, agence web tanger, site internet tanger, agence digitale tanger, e-commerce tanger, tanger-tetouan"
         url="https://linkagency.ma/creation-site-web-tanger"

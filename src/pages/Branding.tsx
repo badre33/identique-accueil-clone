@@ -103,7 +103,7 @@ const Branding = () => {
   return (
     <div className="min-h-screen bg-white pt-16 sm:pt-20">
       <SEOHead
-        title="Agence Branding au Maroc — Création Logo, Charte Graphique, Identité de Marque | Link Agency"
+        title="Agence Branding au Maroc — Logo & Identité | Link Agency"
         description="Agence branding au Maroc : création de logo, charte graphique, plateforme de marque, refonte d'identité. PME, ETI et grands comptes. Casablanca, Rabat, Marrakech."
         keywords="agence branding maroc, refonte identité visuelle, plateforme de marque, charte graphique entreprise, agence branding casablanca, brand strategy maroc"
         url="https://linkagency.ma/branding"

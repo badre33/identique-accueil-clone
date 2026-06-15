@@ -132,7 +132,7 @@ const DeveloppementWeb = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 pt-16 sm:pt-20">
       <SEOHead
-        title="Développement Web - Sites & Applications sur-mesure | Link Agency Maroc"
+        title="Développement Web sur-mesure au Maroc | Link Agency"
         description="Développement web au Maroc : sites performants, applications métier, e-commerce et architectures techniques pour marques au Maroc."
         keywords="développement web maroc, création site web, application web, e-commerce, react, vue.js, développeur web casablanca, agence web"
         url="https://linkagency.ma/developpement-web"

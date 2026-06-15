@@ -62,7 +62,7 @@ const AgenceWebRabat = () => {
   return (
     <div className="min-h-screen bg-white pt-16 sm:pt-20">
       <SEOHead
-        title="Création de Site Web à Rabat | Agence Web Rabat-Salé-Kénitra | Link Agency"
+        title="Création de Site Web à Rabat | Agence Web | Link Agency"
         description="Agence web à Rabat : création de site internet, e-commerce, plateforme sur-mesure. PME et entreprises de la région Rabat-Salé-Kénitra. Devis sous 48h, mobile-first, SEO local."
         keywords="création site web rabat, agence web rabat, site internet rabat, agence digitale rabat, e-commerce rabat, souss-massa"
         url="https://linkagency.ma/creation-site-web-rabat"

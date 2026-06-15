@@ -107,7 +107,7 @@ const MarketingDigital = () => {
   return (
     <div className="min-h-screen bg-white pt-16 sm:pt-20">
       <SEOHead
-        title="Agence Marketing Digital au Maroc — SEO, Google Ads, Meta Ads | Link Agency"
+        title="Agence Marketing Digital au Maroc — SEO & Ads | Link Agency"
         description="Agence marketing digital au Maroc : SEO, Google Ads, Meta Ads, landing pages, automation. ROI mesurable, reporting transparent. PME, ETI, filiales. Casablanca, Rabat, Marrakech."
         keywords="agence marketing digital maroc, pilotage paid media casablanca, agence SEO maroc, campagnes meta ads maroc, agence social media casablanca, reporting ROI digital"
         url="https://linkagency.ma/marketing-digital"

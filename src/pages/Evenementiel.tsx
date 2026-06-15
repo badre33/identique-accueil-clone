@@ -187,7 +187,7 @@ const Evenementiel = () => {
   return (
     <div className="min-h-screen bg-white pt-16 sm:pt-20">
       <SEOHead
-        title="Agence Événementiel Corporate au Maroc — Séminaires, Lancements | Link Agency"
+        title="Agence Événementiel Corporate au Maroc | Link Agency"
         description="Agence événementiel corporate au Maroc : lancements produits, séminaires, conventions, soirées clients, activations. Production de A à Z. Casablanca, Rabat, Marrakech."
         keywords="événementiel corporate casablanca, événementiel corporate marrakech, agence événementielle casablanca, agence événementielle marrakech, organisation événements entreprise maroc, agence communication casablanca, agence marketing marrakech, événements institutionnels maroc"
         url="https://linkagency.ma/evenementiel"

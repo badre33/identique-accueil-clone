@@ -62,7 +62,7 @@ const AgenceWebMarrakech = () => {
   return (
     <div className="min-h-screen bg-white pt-16 sm:pt-20">
       <SEOHead
-        title="Création de Site Web à Marrakech | Agence Web Marrakech-Safi | Link Agency"
+        title="Création de Site Web à Marrakech | Agence Web | Link Agency"
         description="Agence web à Marrakech : création de site internet, e-commerce, plateforme sur-mesure. PME et entreprises de la région Marrakech-Safi. Devis sous 48h, mobile-first, SEO local."
         keywords="création site web marrakech, agence web marrakech, site internet marrakech, agence digitale marrakech, e-commerce marrakech, souss-massa"
         url="https://linkagency.ma/creation-site-web-marrakech"

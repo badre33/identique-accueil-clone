@@ -313,7 +313,7 @@ const EtudesDeCas = () => {
   return (
     <div className="min-h-screen bg-white pt-16 sm:pt-20">
       <SEOHead
-        title="Études de Cas — Résultats Marketing Digital Maroc | Link Agency"
+        title="Études de Cas Marketing au Maroc | Link Agency"
         description="Études de cas : Subway, SGTM, Honda Tokyo Days, L'Bankalik, AXA, Orange, Pharma 5, Wafasalaf, RMA, Aiguebelle, Mutandis, Aéroports du Maroc, Brainlyne et plus."
         keywords="études de cas marketing digital maroc, résultats agence communication casablanca, case studies branding maroc, ROI marketing digital"
         url="https://linkagency.ma/etudes-de-cas"

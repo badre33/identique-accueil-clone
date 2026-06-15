@@ -130,7 +130,7 @@ const ConseilStrategique = () => {
   return (
     <div className="min-h-screen bg-white pt-16 sm:pt-20">
       <SEOHead
-        title="Conseil Stratégique Marketing au Maroc — Audit, Plan, Roadmap | Link Agency"
+        title="Conseil Stratégique Marketing au Maroc | Link Agency"
         description="Conseil stratégique marketing au Maroc : audit, plan stratégique, roadmap d'activation. Pour PME en structuration, ETI en repositionnement, filiales étrangères. 11 ans d'expérience."
         keywords="pilotage performance marketing maroc, P&L digital, attribution multi-touch, RevOps maroc, marketing banque assurance, lead scoring casablanca, conseil stratégique digital maroc"
         url="https://linkagency.ma/conseil-strategique"

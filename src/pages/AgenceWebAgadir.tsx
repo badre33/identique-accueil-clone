@@ -62,7 +62,7 @@ const AgenceWebAgadir = () => {
   return (
     <div className="min-h-screen bg-white pt-16 sm:pt-20">
       <SEOHead
-        title="Création de Site Web à Agadir | Agence Web Souss-Massa | Link Agency"
+        title="Création de Site Web à Agadir | Agence Web | Link Agency"
         description="Agence web à Agadir : création de site internet, e-commerce, plateforme sur-mesure. PME et entreprises de la région Souss-Massa. Devis sous 48h, mobile-first, SEO local."
         keywords="création site web agadir, agence web agadir, site internet agadir, agence digitale agadir, e-commerce agadir, souss-massa"
         url="https://linkagency.ma/creation-site-web-agadir"
