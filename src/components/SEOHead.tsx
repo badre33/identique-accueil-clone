@@ -44,12 +44,11 @@ export const SEOHead = ({
       {/* Canonical URL */}
       <link rel="canonical" href={url} />
       
-      {/* Hreflang — fr-MA principal, ar-MA et en-MA pour signaler les versions multilingues */}
+      {/* Hreflang — site FR uniquement. Ne déclarer QUE les langues réellement
+          publiées : déclarer ar/en vers l'URL FR = faux signal pénalisé par GSC.
+          Rétablir ar-MA/en quand de vraies versions traduites existeront. */}
       <link rel="alternate" hrefLang="fr-MA" href={url} />
       <link rel="alternate" hrefLang="fr" href={url} />
-      <link rel="alternate" hrefLang="ar-MA" href={url} />
-      <link rel="alternate" hrefLang="ar" href={url} />
-      <link rel="alternate" hrefLang="en" href={url} />
       <link rel="alternate" hrefLang="x-default" href={url} />
       {alternateLanguages?.map((alt) => (
         <link key={alt.hrefLang} rel="alternate" hrefLang={alt.hrefLang} href={alt.href} />
