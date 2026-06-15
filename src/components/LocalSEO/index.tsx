@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { LocalBusinessCard } from './LocalBusinessCard';
-import { InteractiveMap } from './InteractiveMap';
 import { LocalContent } from './LocalContent';
+
+// Lazy-load de la carte : isole mapbox-gl (lourd + accès window au chargement)
+// hors du bundle critique ET du graphe rendu au build SSG (Node).
+const InteractiveMap = lazy(() =>
+  import('./InteractiveMap').then((m) => ({ default: m.InteractiveMap }))
+);
 
 interface LocalSEOSectionProps {
   city?: 'casablanca' | 'rabat' | 'marrakech';
@@ -22,7 +27,9 @@ export const LocalSEOSection: React.FC<LocalSEOSectionProps> = ({ city }) => {
               Trois bureaux pour vous accompagner dans vos projets digitaux
             </p>
           </div>
-          <InteractiveMap />
+          <Suspense fallback={<div className="h-[400px] animate-pulse rounded-xl bg-muted" aria-hidden="true" />}>
+            <InteractiveMap />
+          </Suspense>
         </div>
         
         {/* Cartes de présentation par ville */}
@@ -36,4 +43,4 @@ export const LocalSEOSection: React.FC<LocalSEOSectionProps> = ({ city }) => {
   );
 };
 
-export { LocalBusinessCard, InteractiveMap, LocalContent };
+export { LocalBusinessCard, LocalContent };

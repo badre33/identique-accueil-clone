@@ -1,24 +1,19 @@
-
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
-import App from "./App.tsx";
+import { ViteReactSSG } from "vite-react-ssg";
+import { routes } from "./App";
 import "./index.css";
-import { preloadCriticalImages } from './utils/imageOptimization'
+import { preloadCriticalImages } from "./utils/imageOptimization";
 
-// Précharge les images critiques de manière non-bloquante (compatible tous navigateurs)
-if (typeof window !== 'undefined' && 'requestIdleCallback' in window) {
-  requestIdleCallback(() => {
-    preloadCriticalImages();
-  }, { timeout: 2000 });
-} else {
-  // Fallback pour Safari/iOS et anciens navigateurs
-  setTimeout(() => {
-    preloadCriticalImages();
-  }, 200);
-}
-
-createRoot(document.getElementById("root")!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>
+// Entrée SSG : vite-react-ssg pré-rend chaque route en HTML réel au build,
+// puis hydrate côté client. Remplace l'ancien createRoot manuel.
+export const createRoot = ViteReactSSG(
+  { routes },
+  ({ isClient }) => {
+    if (!isClient) return;
+    // Précharge les images critiques, uniquement côté navigateur.
+    if ("requestIdleCallback" in window) {
+      requestIdleCallback(() => preloadCriticalImages(), { timeout: 2000 });
+    } else {
+      setTimeout(() => preloadCriticalImages(), 200);
+    }
+  }
 );

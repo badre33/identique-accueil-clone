@@ -12,9 +12,9 @@ const Analytics = () => {
   const analyticsSchema = {
     "@context": "https://schema.org",
     "@graph": [
-      generateServiceSchema, generateFAQSchema(
+      generateServiceSchema(
         "Analytics, Performance Marketing & CRO Maroc",
-        "Analytics, growth, A/B testing et CRO pour marques au Maroc au Maroc. Tableaux de bord, KPIs métier, optimisation des campagnes Meta/Google et pilotage du ROI à Casablanca, Marrakech et Rabat.",
+        "Analytics, growth, A/B testing et CRO pour marques au Maroc. Tableaux de bord, KPIs métier, optimisation des campagnes Meta/Google et pilotage du ROI à Casablanca, Marrakech et Rabat.",
         "Sur devis"
       ),
       generateWebPageSchema(
