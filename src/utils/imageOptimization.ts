@@ -21,8 +21,8 @@ export const imageOptimization = {
 
   // Génère des srcset pour responsive images
   generateSrcSet: (baseSrc: string, sizes: number[] = [320, 640, 1024, 1920]): string => {
-    if (baseSrc.includes('lovable-uploads')) {
-      // Pour les images Lovable, on retourne l'image originale
+    if (baseSrc.includes('assets/media')) {
+      // Les médias locaux sont servis directement, sans transformation distante.
       return baseSrc;
     }
     
@@ -48,8 +48,8 @@ export const imageOptimization = {
     
     if (supportsWebP && !src.includes('.webp') && !src.includes('data:image')) {
       // Si l'image peut être convertie en WebP
-      if (src.includes('lovable-uploads')) {
-        return src; // Les images Lovable sont déjà optimisées
+      if (src.includes('assets/media')) {
+        return src; // Les médias locaux sont déjà préparés pour le web.
       }
     }
     
@@ -60,7 +60,7 @@ export const imageOptimization = {
 // Précharge uniquement le logo (petite image) au chargement de l'app
 export const preloadCriticalImages = () => {
   const criticalImages = [
-    '/lovable-uploads/85b45a40-6291-4f5d-a377-65024ddb1976.png' // Logo uniquement
+    '/assets/brand/link-agency-logo.png' // Logo uniquement
   ];
   
   imageOptimization.preloadImages(criticalImages);

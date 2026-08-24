@@ -45,7 +45,7 @@ self.addEventListener('fetch', (event) => {
     event.request.destination === 'script' ||
     event.request.destination === 'style' ||
     event.request.destination === 'font' ||
-    url.pathname.includes('/lovable-uploads/') ||
+    url.pathname.includes('/assets/media/') ||
     url.pathname.includes('/assets/') ||
     url.pathname.match(/\.(js|css|png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$/);
 

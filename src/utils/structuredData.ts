@@ -8,8 +8,8 @@ export const generateOrganizationSchema = () => ({
   "legalName": "Link Agency",
   "slogan": "Stratégie, marque et performance — une vision intégrée pour marques établies au Maroc.",
   "url": "https://linkagency.ma",
-  "logo": "https://linkagency.ma/lovable-uploads/85b45a40-6291-4f5d-a377-65024ddb1976.png",
-  "image": "https://linkagency.ma/lovable-uploads/85b45a40-6291-4f5d-a377-65024ddb1976.png",
+  "logo": "https://linkagency.ma/assets/brand/link-agency-logo.png",
+  "image": "https://linkagency.ma/assets/brand/link-agency-logo.png",
   "foundingDate": "2015",
   "foundingLocation": {
     "@type": "Place",
@@ -156,7 +156,7 @@ export const generateLocalBusinessSchema = (city: LocalCity = "casablanca") => (
   "@type": "LocalBusiness",
   "@id": `https://linkagency.ma/#localbusiness-${city}`,
   "name": `Link Agency ${CITY_DATA[city].locality}`,
-  "image": "https://linkagency.ma/lovable-uploads/85b45a40-6291-4f5d-a377-65024ddb1976.png",
+  "image": "https://linkagency.ma/assets/brand/link-agency-logo.png",
   "telephone": "+212-699-024526",
   "email": "bharkaoui@linkagency.ma",
   "address": {

@@ -23,7 +23,7 @@ const testimonials: Testimonial[] = [
     role: "CEO",
     text: "Link Agency a transformé notre identité visuelle avec une créativité exceptionnelle. L'équipe a su capturer l'essence de notre marque et la traduire en visuels percutants qui nous démarquent vraiment.",
     rating: 5,
-    image: "/lovable-uploads/566ba4a2-ee11-42db-a054-14667389b2c6.png"
+    image: "/assets/media/566ba4a2-ee11-42db-a054-14667389b2c6.png"
   },
   {
     id: 2,
@@ -32,7 +32,7 @@ const testimonials: Testimonial[] = [
     role: "Fondateur",
     text: "Un accompagnement personnalisé du début à la fin. Notre événement de lancement a été un succès grâce à leur expertise en événementiel. Je recommande vivement !",
     rating: 5,
-    image: "/lovable-uploads/1d79743a-6078-4a50-b98c-fabf537de013.png"
+    image: "/assets/media/1d79743a-6078-4a50-b98c-fabf537de013.png"
   },
   {
     id: 3,
@@ -41,7 +41,7 @@ const testimonials: Testimonial[] = [
     role: "Directrice Marketing",
     text: "Leur approche stratégique du personal branding m'a aidée à me positionner comme experte dans mon domaine. Résultats visibles dès les premières semaines.",
     rating: 5,
-    image: "/lovable-uploads/b8c1c54b-9721-486c-81ab-dae0977cacc0.png"
+    image: "/assets/media/b8c1c54b-9721-486c-81ab-dae0977cacc0.png"
   },
   {
     id: 4,
@@ -50,7 +50,7 @@ const testimonials: Testimonial[] = [
     role: "CTO",
     text: "Une équipe professionnelle qui comprend les enjeux tech. Ils ont su créer une identité qui parle autant aux développeurs qu'aux décideurs.",
     rating: 5,
-    image: "/lovable-uploads/566ba4a2-ee11-42db-a054-14667389b2c6.png"
+    image: "/assets/media/566ba4a2-ee11-42db-a054-14667389b2c6.png"
   }
 ];
 

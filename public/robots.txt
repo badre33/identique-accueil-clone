@@ -81,7 +81,7 @@ Disallow: /.env*
 
 # Allow assets explicitly
 Allow: /assets/
-Allow: /lovable-uploads/
+Allow: /assets/media/
 Allow: /manifest.json
 Allow: /*.css$
 Allow: /*.js$

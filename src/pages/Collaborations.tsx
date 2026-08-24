@@ -34,7 +34,7 @@ const Collaborations = () => {
       name: "L'Bankalik par Attijariwafa Bank",
       url: "#",
       category: "Banque",
-      logo: "/lovable-uploads/lbankalik-logo.png",
+      logo: "/assets/media/lbankalik-logo.png",
       description: "Stratégie éditoriale institutionnelle, contenus pédagogiques bilingues FR/AR, community management et pilotage Meta Ads pour des objectifs de notoriété, lead generation et conversion.",
       year: "2025",
       type: "Social Media & Ads"
@@ -43,7 +43,7 @@ const Collaborations = () => {
       name: "AXA Assurance Maroc",
       url: "#",
       category: "Assurance",
-      logo: "/lovable-uploads/axa-logo.png",
+      logo: "/assets/media/axa-logo.png",
       description: "Contenus institutionnels, motion design produit, community management quotidien et campagnes Meta Ads avec A/B testing créatif pour optimiser le CPL.",
       year: "2025",
       type: "Contenu & Performance"
@@ -52,7 +52,7 @@ const Collaborations = () => {
       name: "RMA",
       url: "#",
       category: "Assurance",
-      logo: "/lovable-uploads/rma-logo.jpg",
+      logo: "/assets/media/rma-logo.jpg",
       description: "Production de contenus institutionnels, Reels de sensibilisation, campagnes de renouvellement et rédaction bilingue FR/AR pour les temps forts de la marque.",
       year: "2025",
       type: "Social Media"
@@ -61,7 +61,7 @@ const Collaborations = () => {
       name: "Oncovita",
       url: "#",
       category: "Santé & Bien-être",
-      logo: "/lovable-uploads/oncovita-logo.jpeg",
+      logo: "/assets/media/oncovita-logo.jpeg",
       description: "Association dédiée à l'accompagnement holistique des patients atteints de cancer : soigner le corps, apaiser l'esprit, nourrir l'espoir. Création d'identité visuelle et stratégie de communication émotionnelle.",
       year: "2025",
       type: "Branding & Communication"
@@ -70,7 +70,7 @@ const Collaborations = () => {
       name: "YouCan",
       url: "#",
       category: "E-commerce",
-      logo: "/lovable-uploads/youcan-logo.png",
+      logo: "/assets/media/youcan-logo.png",
       description: "Accompagnement éditorial et performance pour une plateforme e-commerce marocaine en forte croissance, avec des contenus orientés acquisition et conversion.",
       year: "2024",
       type: "Performance & Contenu"
@@ -79,7 +79,7 @@ const Collaborations = () => {
       name: "Personal Branding Politique",
       url: "#",
       category: "Branding Personnel",
-      logo: "/lovable-uploads/18825dfb-531b-4f17-aef9-00701ced882e.png",
+      logo: "/assets/media/18825dfb-531b-4f17-aef9-00701ced882e.png",
       description: "Accompagnement stratégique sur une mission de personal branding à fort enjeu pour renforcer l'image d'une dirigeante politique influente sur la scène internationale.",
       year: "2024",
       type: "Personal Branding"
@@ -88,7 +88,7 @@ const Collaborations = () => {
       name: "Subway Maroc",
       url: "https://www.instagram.com/subwaymaroc/?hl=fr",
       category: "Restauration",
-      logo: "/lovable-uploads/c66a2b50-92d9-4a9d-a394-09ff44b3d1b2.png",
+      logo: "/assets/media/c66a2b50-92d9-4a9d-a394-09ff44b3d1b2.png",
       description: "Présence digitale complète : ligne éditoriale, création de posts, community management, campagnes awareness et drive-to-store géolocalisées, supports offline et activations en restaurant.",
       year: "2023-2024",
       type: "Marketing Digital"
@@ -97,7 +97,7 @@ const Collaborations = () => {
       name: "SGTM Immobilier",
       url: "https://sgtm-immobilier.com/fr/accueil/",
       category: "Immobilier",
-      logo: "/lovable-uploads/a404ed81-6016-457c-b044-6027db20cf22.png",
+      logo: "/assets/media/a404ed81-6016-457c-b044-6027db20cf22.png",
       description: "Refonte complète de l'identité visuelle et développement web pour cette agence immobilière de prestige.",
       year: "2023",
       type: "Branding & Web"
@@ -106,7 +106,7 @@ const Collaborations = () => {
     //   name: "Amoud",
     //   url: "https://www.amoud.ma/",
     //   category: "Commerce",
-    //   logo: "/lovable-uploads/18500dfb-e7b6-4c75-8c7c-89fa212ee0a8.png",
+    //   logo: "/assets/media/18500dfb-e7b6-4c75-8c7c-89fa212ee0a8.png",
     //   description: "Transformation digitale complète avec une nouvelle plateforme e-commerce et stratégie omnicanale.",
     //   year: "2023",
     //   type: "E-commerce"
@@ -115,7 +115,7 @@ const Collaborations = () => {
       name: "Nexia",
       url: "https://nexia.ma/",
       category: "Conseil",
-      logo: "/lovable-uploads/05dfc79f-2a20-4241-aa4d-606f6cdd30d2.png",
+      logo: "/assets/media/05dfc79f-2a20-4241-aa4d-606f6cdd30d2.png",
       description: "Accompagnement stratégique en digitalisation, conseil en communication et gestion des réseaux sociaux pour optimiser la présence digitale.",
       year: "2024",
       type: "Conseil & Digitalisation"
@@ -124,7 +124,7 @@ const Collaborations = () => {
       name: "Achibest Food",
       url: "https://www.instagram.com/achibest_food/?hl=fr",
       category: "Restauration",
-      logo: "/lovable-uploads/632e64c5-bfb1-4507-b655-8fb324a8236f.png",
+      logo: "/assets/media/632e64c5-bfb1-4507-b655-8fb324a8236f.png",
       description: "Création d'une identité de marque forte et stratégie de communication pour cette chaîne de restauration.",
       year: "2024",
       type: "Branding"
@@ -133,7 +133,7 @@ const Collaborations = () => {
       name: "La Maison Amoud",
       url: "https://www.amoud.ma/",
       category: "Retail",
-      logo: "/lovable-uploads/18500dfb-e7b6-4c75-8c7c-89fa212ee0a8.png",
+      logo: "/assets/media/18500dfb-e7b6-4c75-8c7c-89fa212ee0a8.png",
       description: "Dispositifs de contenu et activations de marque pour une enseigne emblématique du retail premium au Maroc.",
       year: "2024",
       type: "Retail & Brand Content"
@@ -142,7 +142,7 @@ const Collaborations = () => {
       name: "Soulection",
       url: "https://soulection.com/",
       category: "Musique",
-      logo: "/lovable-uploads/b8c1c54b-9721-486c-81ab-dae0977cacc0.png",
+      logo: "/assets/media/b8c1c54b-9721-486c-81ab-dae0977cacc0.png",
       description: "Production d'événements exclusifs et stratégie de marque pour ce collectif musical international.",
       year: "2023-2024",
       type: "Événementiel"
@@ -151,7 +151,7 @@ const Collaborations = () => {
       name: "Artitenium",
       url: "https://kzmfwv89vwbj1uf8kcxa.lite.vusercontent.net/",
       category: "Architecture d'intérieur",
-      logo: "/lovable-uploads/ce7e28cc-c15c-48b9-b9be-03195d92927f.png",
+      logo: "/assets/media/ce7e28cc-c15c-48b9-b9be-03195d92927f.png",
       description: "Stratégie éditoriale B2B, visuels premium, contenus pédagogiques et campagnes Meta Ads ciblées sur dirigeants, DRH et architectes d'intérieur.",
       year: "2024",
       type: "Branding & Digital"
@@ -160,7 +160,7 @@ const Collaborations = () => {
       name: "DWP",
       url: "https://dwp.ma/",
       category: "Design d'intérieur",
-      logo: "/lovable-uploads/b800af93-e21f-4e18-af4d-9f94678f2999.png",
+      logo: "/assets/media/b800af93-e21f-4e18-af4d-9f94678f2999.png",
       description: "Création d'une stratégie de communication premium pour cette agence de design d'intérieur de luxe.",
       year: "2023",
       type: "Communication"
@@ -169,7 +169,7 @@ const Collaborations = () => {
       name: "Focus M",
       url: "https://focusm.ma/",
       category: "Écrans interactifs tactiles",
-      logo: "/lovable-uploads/db939411-f619-4958-844f-cb5d9d97a9ca.png",
+      logo: "/assets/media/db939411-f619-4958-844f-cb5d9d97a9ca.png",
       description: "Positionnement marché et stratégie commerciale pour cette entreprise tech spécialisée.",
       year: "2024",
       type: "Stratégie"
@@ -178,7 +178,7 @@ const Collaborations = () => {
       name: "Secret Events",
       url: "https://www.instagram.com/secreteventss/",
       category: "Événementiel",
-      logo: "/lovable-uploads/386ddb83-a99a-4280-8cec-8c6aea34644a.png",
+      logo: "/assets/media/386ddb83-a99a-4280-8cec-8c6aea34644a.png",
       description: "Production d'événements privés haut de gamme et gestion de l'image de marque exclusive.",
       year: "2023-2024",
       type: "Production"
@@ -187,7 +187,7 @@ const Collaborations = () => {
       name: "Umbra Festival",
       url: "https://www.instagram.com/umbra.dance/",
       category: "Événementiel",
-      logo: "/lovable-uploads/05dcf8f9-c5f0-40af-8ca3-4b1d2d1f48bc.png",
+      logo: "/assets/media/05dcf8f9-c5f0-40af-8ca3-4b1d2d1f48bc.png",
       description: "Direction artistique et production complète de ce festival de musique électronique underground.",
       year: "2023",
       type: "Festival"
@@ -196,7 +196,7 @@ const Collaborations = () => {
       name: "Beyond Fears",
       url: "https://www.instagram.com/beyond__fears/?hl=fr",
       category: "Événementiel",
-      logo: "/lovable-uploads/f90f2ce2-2e95-4f15-9766-0ad4ed8561a8.png",
+      logo: "/assets/media/f90f2ce2-2e95-4f15-9766-0ad4ed8561a8.png",
       description: "Concept créatif et production d'événements immersifs axés sur l'expérience utilisateur.",
       year: "2024",
       type: "Expérience"
@@ -205,7 +205,7 @@ const Collaborations = () => {
       name: "Casablanca Music Week",
       url: "https://guichet.com/ma-fr/event/producer/casablanca-music-week",
       category: "Événementiel",
-      logo: "/lovable-uploads/196f8a91-ab64-4dc6-9354-6fe7d9f3031e.png",
+      logo: "/assets/media/196f8a91-ab64-4dc6-9354-6fe7d9f3031e.png",
       description: "Partenaire officiel de la plus grande semaine musicale du Maroc avec plus de 50 000 participants.",
       year: "2022-2024",
       type: "Festival"
@@ -214,7 +214,7 @@ const Collaborations = () => {
       name: "Mom Corporation",
       url: "#",
       category: "Événement, Design & Marketing",
-      logo: "/lovable-uploads/0175fb15-d9a3-4f83-afbc-0486d21505f9.png",
+      logo: "/assets/media/0175fb15-d9a3-4f83-afbc-0486d21505f9.png",
       description: "Agence créative spécialisée dans les expériences de marque immersives et l'événementiel de luxe.",
       year: "2023",
       type: "Créatif"
@@ -223,7 +223,7 @@ const Collaborations = () => {
       name: "OK Daddy",
       url: "#",
       category: "Événementiel",
-      logo: "/lovable-uploads/1d79743a-6078-4a50-b98c-fabf537de013.png",
+      logo: "/assets/media/1d79743a-6078-4a50-b98c-fabf537de013.png",
       description: "Concept événementiel innovant mêlant gastronomie, musique et expériences sensorielles uniques.",
       year: "2024",
       type: "Concept"
@@ -232,7 +232,7 @@ const Collaborations = () => {
       name: "Épicerie Bordelaise",
       url: "#",
       category: "Restauration & Conférences musicales",
-      logo: "/lovable-uploads/4708f307-8187-48cb-b276-b1b4c356c679.png",
+      logo: "/assets/media/4708f307-8187-48cb-b276-b1b4c356c679.png",
       description: "Lieu culturel hybride proposant une expérience gastronomique et musicale authentique.",
       year: "2023-2024",
       type: "Concept Store"
@@ -241,7 +241,7 @@ const Collaborations = () => {
       name: "OCB Maroc",
       url: "#",
       category: "Tabac & Lifestyle",
-      logo: "/lovable-uploads/ocb-logo.png",
+      logo: "/assets/media/ocb-logo.png",
       description: "Gestion complète des réseaux sociaux pour OCB Maroc : stratégie de contenu, campagnes publicitaires, stratégie de partenariats avec des événements et artistes pour renforcer le positionnement de la marque.",
       year: "2025",
       type: "Social Media & Ads"
@@ -250,7 +250,7 @@ const Collaborations = () => {
       name: "Edwin",
       url: "https://edwin-europe.com/fr-fr/?srsltid=AfmBOoozm7D36im7r3_ZLIY46gmE5v6R9kdcNLMgPcrQBUf0TIzU2Ysh",
       category: "Mode",
-      logo: "/lovable-uploads/f08a883a-31aa-4529-bf02-a1c73a030a71.png",
+      logo: "/assets/media/f08a883a-31aa-4529-bf02-a1c73a030a71.png",
       description: "Stratégie de repositionnement et campagne de communication pour cette marque de mode iconique.",
       year: "2024",
       type: "Fashion"

@@ -118,8 +118,8 @@ export const OptimizedImage = ({
       return originalSrc;
     }
     
-    // Pour les images Lovable, essayer d'appliquer le format moderne
-    if (originalSrc.includes('lovable-uploads') && supportedFormat) {
+    // Les médias locaux sont déjà préparés pour le web.
+    if (originalSrc.includes('assets/media') && supportedFormat) {
       // Note: En production, vous devriez avoir un service de transformation d'images
       // Pour maintenant, on retourne l'image originale
       return originalSrc;

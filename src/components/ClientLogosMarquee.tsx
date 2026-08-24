@@ -14,11 +14,11 @@ const logos: LogoEntry[] = [
   { name: "Fondation Al Mada", src: "/brands/fondation-al-mada.webp" },
 
   // Tier 2 — Assurance, Banque internationale, Télécoms
-  { name: "AXA Assurance Maroc", src: "/lovable-uploads/axa-logo.png" },
-  { name: "RMA Assurance", src: "/lovable-uploads/rma-logo.jpg" },
+  { name: "AXA Assurance Maroc", src: "/assets/media/axa-logo.png" },
+  { name: "RMA Assurance", src: "/assets/media/rma-logo.jpg" },
   { name: "Allianz", src: "/brands/allianz.png" },
   { name: "Arab Bank", src: "/brands/arab-bank.png" },
-  { name: "L'Bankalik (Attijariwafa Bank)", src: "/lovable-uploads/lbankalik-logo.png" },
+  { name: "L'Bankalik (Attijariwafa Bank)", src: "/assets/media/lbankalik-logo.png" },
   { name: "Orange Maroc", src: "/brands/orange-maroc.png" },
 
   // Tier 3 — Industrie, Automobile, Pharma, Agroalimentaire
@@ -32,14 +32,14 @@ const logos: LogoEntry[] = [
   { name: "Aiguebelle", src: "/brands/aiguebelle.svg" },
 
   // Tier 4 — Tech, scaleups, références équipe
-  { name: "YouCan", src: "/lovable-uploads/youcan-logo.png" },
+  { name: "YouCan", src: "/assets/media/youcan-logo.png" },
   { name: "Brainlyne", src: "/brands/brainlyne.png" },
-  { name: "Nova Spacia", src: "/lovable-uploads/novaspacia-logo.svg" },
-  { name: "Nexia", src: "/lovable-uploads/05dfc79f-2a20-4241-aa4d-606f6cdd30d2.png" },
-  { name: "French Tech", src: "/lovable-uploads/801816e7-97bc-49c9-948c-34e3c9d49e1f.png" },
-  { name: "Soulection", src: "/lovable-uploads/b8c1c54b-9721-486c-81ab-dae0977cacc0.png" },
-  { name: "Edwin", src: "/lovable-uploads/f08a883a-31aa-4529-bf02-a1c73a030a71.png" },
-  { name: "Artitenium", src: "/lovable-uploads/ce7e28cc-c15c-48b9-b9be-03195d92927f.png" },
+  { name: "Nova Spacia", src: "/assets/media/novaspacia-logo.svg" },
+  { name: "Nexia", src: "/assets/media/05dfc79f-2a20-4241-aa4d-606f6cdd30d2.png" },
+  { name: "French Tech", src: "/assets/media/801816e7-97bc-49c9-948c-34e3c9d49e1f.png" },
+  { name: "Soulection", src: "/assets/media/b8c1c54b-9721-486c-81ab-dae0977cacc0.png" },
+  { name: "Edwin", src: "/assets/media/f08a883a-31aa-4529-bf02-a1c73a030a71.png" },
+  { name: "Artitenium", src: "/assets/media/ce7e28cc-c15c-48b9-b9be-03195d92927f.png" },
 ];
 
 const Row = ({ ariaHidden = false }: { ariaHidden?: boolean }) => (

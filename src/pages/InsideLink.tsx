@@ -119,7 +119,7 @@ const InsideLink = () => {
               <span className="font-medium">Retour à l'accueil</span>
             </MagneticButton>
             <img 
-              src="/lovable-uploads/85b45a40-6291-4f5d-a377-65024ddb1976.png" 
+              src="/assets/brand/link-agency-logo.png" 
               alt="Link Agency Logo" 
               width={120}
               height={48}
@@ -175,7 +175,7 @@ const InsideLink = () => {
                 <AnimatedCard className="group card-elevated" hoverScale={1.01} glowEffect>
                   <div className="relative mb-10 overflow-hidden rounded-3xl">
                     <img 
-                      src="/lovable-uploads/da131874-d340-4dc9-b1e7-5fc5f24a0f40.png"
+                      src="/assets/media/da131874-d340-4dc9-b1e7-5fc5f24a0f40.png"
                       alt="Badreddine Harkaoui"
                       className="w-full aspect-[4/5] object-cover object-top transition-transform duration-700 group-hover:scale-105"
                     />

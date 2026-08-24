@@ -7,7 +7,7 @@ export const Collaborations = () => {
       name: "Personal Branding Politique",
       url: "#",
       category: "Branding Personnel",
-      logo: "/lovable-uploads/18825dfb-531b-4f17-aef9-00701ced882e.png",
+      logo: "/assets/media/18825dfb-531b-4f17-aef9-00701ced882e.png",
       description: "Accompagnement stratégique sur une mission de personal branding à fort enjeu pour renforcer l'image d'une dirigeante politique influente sur la scène internationale.",
       year: "2024",
       type: "Personal Branding"
@@ -16,7 +16,7 @@ export const Collaborations = () => {
       name: "French Tech",
       url: "#",
       category: "Tech",
-      logo: "/lovable-uploads/801816e7-97bc-49c9-948c-34e3c9d49e1f.png",
+      logo: "/assets/media/801816e7-97bc-49c9-948c-34e3c9d49e1f.png",
       description: "Partenariat institutionnel avec l'écosystème French Tech pour structurer l'accompagnement stratégique des entreprises à l'international.",
       year: "2022-2024",
       type: "Partenariat"
@@ -25,7 +25,7 @@ export const Collaborations = () => {
       name: "Soulection",
       url: "https://soulection.com/",
       category: "Musique",
-      logo: "/lovable-uploads/b8c1c54b-9721-486c-81ab-dae0977cacc0.png",
+      logo: "/assets/media/b8c1c54b-9721-486c-81ab-dae0977cacc0.png",
       description: "Production d'événements exclusifs et stratégie de marque pour ce collectif musical international.",
       year: "2023-2024",
       type: "Événementiel"
@@ -34,7 +34,7 @@ export const Collaborations = () => {
       name: "Artitenium",
       url: "https://kzmfwv89vwbj1uf8kcxa.lite.vusercontent.net/",
       category: "Digital",
-      logo: "/lovable-uploads/ce7e28cc-c15c-48b9-b9be-03195d92927f.png",
+      logo: "/assets/media/ce7e28cc-c15c-48b9-b9be-03195d92927f.png",
       description: "Développement de l'identité visuelle et présence digitale pour ce studio d'architecture d'intérieur.",
       year: "2024",
       type: "Branding & Digital"
@@ -43,7 +43,7 @@ export const Collaborations = () => {
       name: "Nova Spacia",
       url: "https://novaspacia.com/",
       category: "Aménagement",
-      logo: "/lovable-uploads/novaspacia-logo.svg",
+      logo: "/assets/media/novaspacia-logo.svg",
       description: "Création d'identité visuelle et développement web pour cette entreprise spécialisée dans l'aménagement d'espaces professionnels et commerciaux.",
       year: "2026",
       type: "Branding & Digital",
@@ -53,7 +53,7 @@ export const Collaborations = () => {
       name: "Nexia",
       url: "https://nexia.ma/",
       category: "Conseil",
-      logo: "/lovable-uploads/05dfc79f-2a20-4241-aa4d-606f6cdd30d2.png",
+      logo: "/assets/media/05dfc79f-2a20-4241-aa4d-606f6cdd30d2.png",
       description: "Accompagnement stratégique en digitalisation, conseil en communication et gestion des réseaux sociaux pour optimiser la présence digitale.",
       year: "2024",
       type: "Conseil & Digitalisation"
@@ -62,7 +62,7 @@ export const Collaborations = () => {
       name: "Edwin",
       url: "https://edwin-europe.com/fr-fr/?srsltid=AfmBOoozm7D36im7r3_ZLIY46gmE5v6R9kdcNLMgPcrQBUf0TIzU2Ysh",
       category: "Mode",
-      logo: "/lovable-uploads/f08a883a-31aa-4529-bf02-a1c73a030a71.png",
+      logo: "/assets/media/f08a883a-31aa-4529-bf02-a1c73a030a71.png",
       description: "Stratégie de repositionnement et campagne de communication pour cette marque de mode iconique.",
       year: "2024",
       type: "Fashion"
@@ -71,7 +71,7 @@ export const Collaborations = () => {
       name: "L'Bankalik (Attijariwafa Bank)",
       url: "https://www.lbankalik.ma/",
       category: "Banque",
-      logo: "/lovable-uploads/lbankalik-logo.png",
+      logo: "/assets/media/lbankalik-logo.png",
       description: "Accompagnement en communication digitale et activation de marque pour la néobanque du groupe Attijariwafa Bank.",
       year: "2024",
       type: "Banque & Digital"
@@ -80,7 +80,7 @@ export const Collaborations = () => {
       name: "AXA Assurance Maroc",
       url: "https://www.axa.ma/",
       category: "Assurance",
-      logo: "/lovable-uploads/axa-logo.png",
+      logo: "/assets/media/axa-logo.png",
       description: "Stratégie de communication et production de contenus pour renforcer la proximité de la marque avec ses assurés au Maroc.",
       year: "2024",
       type: "Assurance & Communication"
@@ -89,7 +89,7 @@ export const Collaborations = () => {
       name: "YouCan",
       url: "https://youcan.shop/",
       category: "E-commerce",
-      logo: "/lovable-uploads/youcan-logo.png",
+      logo: "/assets/media/youcan-logo.png",
       description: "Collaboration marketing et création de contenus pour la plateforme e-commerce qui propulse les marchands marocains.",
       year: "2024",
       type: "SaaS & E-commerce"
@@ -98,7 +98,7 @@ export const Collaborations = () => {
       name: "RMA (Royale Marocaine d'Assurance)",
       url: "https://www.rmaassurance.com/",
       category: "Assurance",
-      logo: "/lovable-uploads/rma-logo.jpg",
+      logo: "/assets/media/rma-logo.jpg",
       description: "Conseil stratégique et accompagnement en communication de marque pour l'un des leaders de l'assurance au Maroc.",
       year: "2024",
       type: "Assurance & Branding"

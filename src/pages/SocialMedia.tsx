@@ -1,6 +1,6 @@
 import { Header } from "@/components/Header";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, MessageSquare, Users, Shield, Calendar, Megaphone, Heart, AlertTriangle, BarChart } from "lucide-react";
+import { ArrowLeft, MessageSquare, Users, Shield, Calendar, Megaphone, Target, AlertTriangle, BarChart } from "lucide-react";
 import { Link } from "react-router-dom";
 import { FloatingContactWidget } from "@/components/FloatingContactWidget";
 import { WorkflowTimeline } from "@/components/WorkflowTimeline";
@@ -64,7 +64,7 @@ const SocialMedia = () => {
       description: "Cellule activable 24/7 : qualification de la crise, élaboration des messages, séquencement des prises de parole, coordination avec la direction et les conseils juridiques."
     },
     {
-      icon: <Heart className="w-8 h-8" />,
+      icon: <Target className="w-8 h-8" />,
       title: "Influence & advocacy",
       subtitle: "Activation créateurs & ambassadeurs",
       description: "Sélection d'influenceurs et créateurs marocains, briefs créatifs, négociation, pilotage des campagnes et mesure de la performance organique et payée."

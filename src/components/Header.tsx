@@ -98,7 +98,7 @@ export const Header = () => {
               style={{ WebkitTransform: 'translateZ(0)', transform: 'translateZ(0)' }}
             >
               <img
-                src="/lovable-uploads/85b45a40-6291-4f5d-a377-65024ddb1976.png"
+                src="/assets/brand/link-agency-logo.png"
                 alt="Link Agency Logo" 
                 className="h-10 w-auto max-w-[100px] sm:max-w-[120px] md:h-12 md:max-w-[140px] object-contain"
                 loading="eager"
@@ -231,7 +231,7 @@ export const Header = () => {
             {/* Header */}
             <div className="flex items-center justify-between p-6 border-b border-gray-200">
               <img
-                src="/lovable-uploads/85b45a40-6291-4f5d-a377-65024ddb1976.png"
+                src="/assets/brand/link-agency-logo.png"
                 alt="Link Agency Logo" 
                 className="h-8 w-auto object-contain"
                 loading="eager"

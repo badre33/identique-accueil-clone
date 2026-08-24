@@ -1,6 +1,6 @@
 import { Header } from "@/components/Header";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Star, TrendingUp, Video, Users, Target, BarChart3, Package, Heart, CheckCircle, Camera, Sparkles, Zap } from "lucide-react";
+import { ArrowLeft, Star, TrendingUp, Video, Users, Target, BarChart3, Package, CheckCircle, Camera, Sparkles, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
 import { FloatingContactWidget } from "@/components/FloatingContactWidget";
 import { WorkflowTimeline } from "@/components/WorkflowTimeline";
@@ -74,7 +74,7 @@ const InfluenceMarketing = () => {
       description: "Création de contenus d'unboxing et reviews authentiques pour présenter vos produits de manière engageante."
     },
     {
-      icon: <Heart className="w-8 h-8" />,
+      icon: <Users className="w-8 h-8" />,
       title: "Ambassador Program",
       description: "Mise en place de programmes d'ambassadeurs long-terme pour créer une relation durable avec votre marque."
     },
@@ -197,7 +197,7 @@ const InfluenceMarketing = () => {
               <div className="w-96 h-96 bg-gradient-to-br from-purple-100 to-pink-100 rounded-full flex items-center justify-center mx-auto relative">
                 <Sparkles className="w-32 h-32 text-purple-600" />
                 <div className="absolute -top-4 -right-4 w-24 h-24 bg-white rounded-full shadow-lg flex items-center justify-center">
-                  <Heart className="w-12 h-12 text-pink-500" />
+                  <Star className="w-12 h-12 text-pink-500" />
                 </div>
                 <div className="absolute -bottom-4 -left-4 w-20 h-20 bg-white rounded-full shadow-lg flex items-center justify-center">
                   <Users className="w-10 h-10 text-purple-700" />

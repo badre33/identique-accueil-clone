@@ -23,7 +23,7 @@ export const Contact = () => {
       <div className="bg-neutral-900 flex flex-col justify-center p-8 lg:p-16">
         <div className="mb-12">
           <img 
-            src="/lovable-uploads/4e5435ee-9057-449a-b988-b2ed164da3e1.png" 
+            src="/assets/media/4e5435ee-9057-449a-b988-b2ed164da3e1.png" 
             alt="Link Agency Logo" 
             className="w-48 h-48 object-contain mx-auto mb-8"
           />

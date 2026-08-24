@@ -29,7 +29,7 @@ const timelineEvents: TimelineEvent[] = [
     color: 'from-slate-700 to-slate-900',
     location: 'France',
     achievements: ['Discipline opérationnelle', 'Planification stratégique', 'Exécution sous contrainte'],
-    image: '/lovable-uploads/801816e7-97bc-49c9-948c-34e3c9d49e1f.png'
+    image: '/assets/media/801816e7-97bc-49c9-948c-34e3c9d49e1f.png'
   },
   {
     id: 2,
