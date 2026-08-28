@@ -31,7 +31,7 @@ export const HomeEditorial = () => (
           </h1>
         </div>
         <div className="border-l border-white/15 pl-6 lg:mb-2">
-          <p className="text-base leading-7 text-white/68">Link Agency pilote la stratégie, l’image, les contenus et la performance des entreprises ambitieuses au Maroc — comme un pôle interne, avec une direction senior directement impliquée.</p>
+          <p className="text-base leading-7 text-white/68">Link Agency pilote la stratégie, l’image, les contenus et la performance des entreprises ambitieuses au Maroc, comme un pôle interne avec une direction senior directement impliquée.</p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row lg:flex-col">
             <Link to="/contact" onClick={() => trackEvent("cta_contact_click", { category: "lead", label: "home_hero" })} className="editorial-button-primary">Parler de votre situation <ArrowRight className="h-4 w-4" /></Link>
             <Link to="/direction-marketing-externalisee" className="editorial-button-secondary">Découvrir le modèle</Link>
@@ -45,7 +45,7 @@ export const HomeEditorial = () => (
     <section className="editorial-section bg-[#f2f0eb] text-black">
       <div className="editorial-shell">
         <div className="editorial-heading-grid">
-          <p className="editorial-eyebrow text-[#8d0b21]">Le point de départ</p>
+          <p className="editorial-eyebrow text-[#725b3a]">Le point de départ</p>
           <div><h2 className="editorial-title">Vous n’avez pas besoin de plus de prestataires.<br />Vous avez besoin d’une direction.</h2><p className="editorial-lead mt-8">Nous intervenons lorsque les actions s’accumulent mais que la marque, les messages et les partenaires ne sont plus alignés.</p></div>
         </div>
         <div className="mt-16 border-t border-black/15">
@@ -65,7 +65,7 @@ export const HomeEditorial = () => (
 
     <section id="expertises" className="editorial-section bg-white text-black">
       <div className="editorial-shell">
-        <div className="editorial-heading-grid"><p className="editorial-eyebrow text-[#8d0b21]">Expertises intégrées</p><h2 className="editorial-title">Le branding est le cœur.<br />Le marketing le met en mouvement.</h2></div>
+        <div className="editorial-heading-grid"><p className="editorial-eyebrow text-[#725b3a]">Expertises intégrées</p><h2 className="editorial-title">Le branding est le cœur.<br />Le marketing le met en mouvement.</h2></div>
         <div className="mt-16 grid border-l border-t border-black/15 md:grid-cols-2">
           {expertises.map((item) => <Link key={item.to} to={item.to} className="group min-h-72 border-b border-r border-black/15 p-7 transition-colors hover:bg-[#f2f0eb] sm:p-10"><div className="flex justify-between"><span className="text-xs text-black/35">{item.n}</span><ArrowUpRight className="h-5 w-5 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" /></div><h3 className="mt-16 text-2xl font-medium tracking-tight sm:text-3xl">{item.title}</h3><p className="mt-5 max-w-xl text-sm leading-7 text-black/60">{item.text}</p></Link>)}
         </div>
@@ -76,12 +76,12 @@ export const HomeEditorial = () => (
       <div className="editorial-shell grid gap-14 lg:grid-cols-[0.8fr_1.2fr]">
         <div><p className="editorial-eyebrow text-[#b8935a]">Pour qui</p><h2 className="editorial-title mt-7">Des organisations ambitieuses, à un moment décisif.</h2></div>
         <div className="grid gap-px bg-white/10 sm:grid-cols-2">
-          {["Entreprise établie dont le marketing manque de cap", "Marque en croissance qui doit professionnaliser son image", "Groupe ou filiale étrangère qui s’implante au Maroc", "Direction qui veut reprendre le contrôle de ses prestataires"].map(x => <div key={x} className="flex min-h-40 gap-4 bg-black p-7"><Check className="mt-0.5 h-4 w-4 shrink-0 text-[#c8102e]" /><p className="text-sm leading-6 text-white/72">{x}</p></div>)}
+          {["Entreprise établie dont le marketing manque de cap", "Marque en croissance qui doit professionnaliser son image", "Groupe ou filiale étrangère qui s’implante au Maroc", "Direction qui veut reprendre le contrôle de ses prestataires"].map(x => <div key={x} className="flex min-h-40 gap-4 bg-black p-7"><Check className="mt-0.5 h-4 w-4 shrink-0 text-[#b8935a]" /><p className="text-sm leading-6 text-white/72">{x}</p></div>)}
         </div>
       </div>
     </section>
 
-    <section className="border-t border-white/10 bg-[#c8102e] px-5 py-16 sm:px-8 sm:py-20 lg:px-12">
+    <section className="border-y border-[#b8935a]/35 bg-[#11100e] px-5 py-16 sm:px-8 sm:py-20 lg:px-12">
       <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-10 lg:flex-row lg:items-end"><div><p className="mb-5 text-[11px] font-semibold uppercase tracking-[0.24em] text-white/65">Premier échange confidentiel</p><h2 className="max-w-4xl text-4xl font-medium leading-tight tracking-[-0.045em] sm:text-6xl">Remettons une direction claire derrière votre marque.</h2></div><a href={whatsapp} target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsAppClick("home_final_cta")} className="inline-flex shrink-0 items-center justify-center gap-3 border border-white bg-white px-6 py-4 text-sm font-semibold text-black transition hover:bg-transparent hover:text-white">Échanger sur WhatsApp <ArrowUpRight className="h-4 w-4" /></a></div>
     </section>
   </main>

@@ -74,7 +74,7 @@ export const ClientLogosMarquee = memo(() => {
   return (
     <section
       aria-label="Références de missions et d'expériences Link Agency"
-      className="relative border-y border-gray-100/80 bg-gradient-to-b from-white via-gray-50/30 to-white py-12 md:py-14"
+      className="home-client-marquee relative border-y border-gray-100/80 bg-gradient-to-b from-white via-gray-50/30 to-white py-12 md:py-14"
     >
       <header className="mb-8 md:mb-10 flex flex-col items-center gap-2">
         <p className="text-[11px] md:text-xs font-medium uppercase tracking-[0.32em] text-gray-500">

@@ -28,7 +28,7 @@ export const Header = () => {
   return (
     <header className="fixed inset-x-0 top-0 z-[9999] border-b border-white/10 bg-black/90 text-white backdrop-blur-xl">
       <div className="mx-auto flex h-16 max-w-[1440px] items-center justify-between px-5 sm:h-20 sm:px-8 lg:px-12">
-        <Link to="/" className="flex items-center gap-3" aria-label="Link Agency — accueil">
+        <Link to="/" className="flex items-center gap-3" aria-label="Link Agency, accueil">
           <img src="/assets/brand/link-agency-logo.png" alt="" className="h-8 w-8 invert sm:h-9 sm:w-9" width="36" height="36" />
           <span className="text-[13px] font-semibold uppercase tracking-[0.18em]">Link Agency</span>
         </Link>
@@ -51,7 +51,7 @@ export const Header = () => {
           <Link to="/collaborations" className="editorial-nav-link">Missions</Link>
           <Link to="/blog" className="editorial-nav-link">Analyses</Link>
           <Link to="/inside-link" className="editorial-nav-link">Le cabinet</Link>
-          <Link to="/contact" onClick={() => trackEvent("cta_contact_click", { category: "lead", label: "header" })} className="border border-[#c8102e] bg-[#c8102e] px-5 py-3 text-xs font-semibold uppercase tracking-[0.14em] text-white transition hover:bg-[#a90d26]">
+          <Link to="/contact" onClick={() => trackEvent("cta_contact_click", { category: "lead", label: "header" })} className="border border-[#e8e1d5] bg-[#e8e1d5] px-5 py-3 text-xs font-semibold uppercase tracking-[0.14em] text-black transition hover:bg-transparent hover:text-[#e8e1d5]">
             Parler d’un projet
           </Link>
         </nav>
@@ -69,7 +69,7 @@ export const Header = () => {
           <Link to="/collaborations" className="mobile-editorial-link">Missions</Link>
           <Link to="/blog" className="mobile-editorial-link">Analyses</Link>
           <Link to="/inside-link" className="mobile-editorial-link">Le cabinet</Link>
-          <Link to="/contact" className="mt-8 flex items-center justify-between bg-[#c8102e] px-5 py-4 text-sm font-semibold uppercase tracking-[0.12em]">Parler d’un projet <ArrowUpRight className="h-4 w-4" /></Link>
+          <Link to="/contact" className="mt-8 flex items-center justify-between bg-[#e8e1d5] px-5 py-4 text-sm font-semibold uppercase tracking-[0.12em] text-black">Parler d’un projet <ArrowUpRight className="h-4 w-4" /></Link>
         </nav>
       </div>
     </header>

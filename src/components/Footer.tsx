@@ -31,7 +31,7 @@ export const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => trackWhatsAppClick("footer_brand")}
-              className="inline-flex items-center gap-2 bg-[#c8102e] px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#a90d26]"
+              className="inline-flex items-center gap-2 border border-[#e8e1d5] bg-[#e8e1d5] px-4 py-2.5 text-sm font-semibold text-black transition-colors hover:bg-transparent hover:text-[#e8e1d5]"
             >
               <MessageCircle className="w-4 h-4" />
               Discuter sur WhatsApp
@@ -125,7 +125,7 @@ export const Footer = () => {
         <div className="border-t border-gray-800 pt-8 mb-8">
           <div className="text-xs text-gray-400 leading-relaxed">
             <p className="mb-3">
-              <strong className="text-gray-300">Link Agency</strong> — <strong className="text-gray-300">agence marketing digital Maroc</strong> et <strong className="text-gray-300">agence communication Casablanca</strong>. Nous accompagnons les directions marketing dans la conception de stratégies mesurables : <strong className="text-gray-300">social media Maroc</strong>, <strong className="text-gray-300">production vidéo</strong>, <strong className="text-gray-300">campagnes Meta & Google Ads</strong>, <strong className="text-gray-300">événementiel corporate</strong>.
+              <strong className="text-gray-300">Link Agency</strong>, <strong className="text-gray-300">agence marketing digital Maroc</strong> et <strong className="text-gray-300">agence communication Casablanca</strong>. Nous accompagnons les directions marketing dans la conception de stratégies mesurables : <strong className="text-gray-300">social media Maroc</strong>, <strong className="text-gray-300">production vidéo</strong>, <strong className="text-gray-300">campagnes Meta et Google Ads</strong>, <strong className="text-gray-300">événementiel corporate</strong>.
             </p>
             <p className="mb-3">
               Notre réseau de spécialistes est mobilisé selon les besoins des dispositifs éditoriaux et publicitaires de secteurs exigeants : <Link to="/secteurs" className="text-gray-300 underline hover:text-white">banque, assurance, retail, e-commerce, industrie et services B2B</Link>. Nous combinons <strong className="text-gray-300">community management Casablanca</strong>, contenus bilingues FR/AR/Darija, reporting et optimisation continue.
