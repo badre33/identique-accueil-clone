@@ -15,12 +15,12 @@ import {
 
 const AgenceWebCasablanca = () => {
   const faqs = [
-    { question: "Comment se cadre une mission de site web à Casablanca ?", answer: "Chaque mission est cadrée selon le périmètre : site vitrine PME (5-7 pages), site e-commerce avec catalogue et paiement, plateforme métier sur-mesure. Première étape : un cadrage stratégique avec le fondateur pour qualifier le besoin et structurer une proposition adaptée. Cadrage sous 48h, sans engagement." },
-    { question: "Quels délais pour créer un site web à Casablanca ?", answer: "Un site vitrine PME prend en général 4 à 6 semaines de conception à mise en ligne. Un site e-commerce ou plateforme complexe : 8 à 14 semaines selon le périmètre fonctionnel. Onboarding démarré en 7 jours après signature." },
+    { question: "Comment se cadre une mission de site web à Casablanca ?", answer: "Chaque mission est cadrée selon le périmètre : site vitrine, site e-commerce ou plateforme métier sur mesure. Le premier échange avec le fondateur permet de qualifier le besoin et de structurer une proposition adaptée." },
+    { question: "Quels délais pour créer un site web à Casablanca ?", answer: "Le calendrier dépend du périmètre fonctionnel, du volume de contenu et des validations. Il est défini pendant le cadrage puis formalisé dans la proposition." },
     { question: "Quels secteurs accompagnez-vous à Casablanca ?", answer: "Hôtellerie, restauration, immobilier, services aux particuliers, commerce local, professions libérales, agroalimentaire, tourisme, et entreprises industrielles de la région Grand Casablanca. Nous adaptons l'esthétique et le ton aux codes locaux." },
     { question: "Êtes-vous physiquement présents à Casablanca ?", answer: "Notre studio principal est à Casablanca, mais nous opérons à Casablanca avec un réseau de partenaires locaux (production photo, vidéo, événementiel). Les rendez-vous stratégiques se font à distance (visio) ou en présentiel à Casablanca selon les besoins du projet." },
     { question: "Pouvez-vous gérer le SEO local Casablanca après la création du site ?", answer: "Oui. Optimisation SEO complète : référencement local Google Maps, Google Business Profile, mots-clés Casablanca + Grand Casablanca, contenu géolocalisé, backlinks régionaux. Forfait SEO mensuel ou one-shot, à votre choix." },
-    { question: "Le site sera-t-il responsive et adapté mobile ?", answer: "Évidemment. Tous nos sites sont conçus mobile-first, parfaitement responsive sur smartphone et tablette, optimisés Core Web Vitals (vitesse, accessibilité, expérience). Plus de 70% du trafic web au Maroc vient du mobile." },
+    { question: "Le site sera-t-il responsive et adapté mobile ?", answer: "Oui. Les interfaces sont conçues mobile-first, testées sur smartphone et tablette, puis optimisées pour la vitesse, l’accessibilité et les Core Web Vitals." },
   ];
 
   const schema = {
@@ -63,7 +63,7 @@ const AgenceWebCasablanca = () => {
     <div className="min-h-screen bg-white pt-16 sm:pt-20">
       <SEOHead
         title="Création de Site Web à Casablanca | Agence Web | Link Agency"
-        description="Agence web à Casablanca : création de site internet, e-commerce, plateforme sur-mesure. PME et entreprises de la région Grand Casablanca. Devis sous 48h, mobile-first, SEO local."
+        description="Agence web à Casablanca : création de site internet, e-commerce et plateforme sur mesure. Cadrage stratégique, mobile-first et SEO local."
         keywords="création site web casablanca, agence web casablanca, site internet casablanca, agence digitale casablanca, e-commerce casablanca, souss-massa"
         url="https://linkagency.ma/creation-site-web-casablanca"
         type="service"
@@ -81,7 +81,7 @@ const AgenceWebCasablanca = () => {
               <p className="text-xs tracking-[0.2em] uppercase text-primary font-medium mb-6">CASABLANCA · GRAND CASABLANCA · MAROC</p>
               <h1 className="text-4xl lg:text-5xl xl:text-6xl font-semibold leading-tight tracking-tight text-black mb-6">Création de site web à Casablanca</h1>
               <p className="text-lg lg:text-xl text-gray-700 leading-relaxed mb-8 font-light">
-                Sites vitrines, e-commerce et plateformes sur-mesure pour les entreprises d'Casablanca et de la région Grand Casablanca. Design moderne, mobile-first, optimisé pour la conversion et le SEO local. 11 ans d'expertise au Maroc.
+                Sites vitrines, e-commerce et plateformes sur mesure pour les entreprises à Casablanca et dans la région Grand Casablanca. Design mobile-first, conversion et SEO local sous un même pilotage.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button onClick={handleContact} className="bg-foreground text-background hover:bg-primary text-base px-7 py-6 rounded-none">
@@ -91,11 +91,7 @@ const AgenceWebCasablanca = () => {
                   <Button variant="outline" className="text-base px-7 py-6 rounded-none border-foreground/20">Demander un cadrage</Button>
                 </Link>
               </div>
-              <div className="mt-10 grid grid-cols-3 gap-6">
-                <div><div className="text-3xl font-semibold text-foreground">11 ans</div><div className="text-sm text-gray-500 mt-1">au Maroc</div></div>
-                <div><div className="text-3xl font-semibold text-foreground">48h</div><div className="text-sm text-gray-500 mt-1">devis</div></div>
-                <div><div className="text-3xl font-semibold text-foreground">7 jours</div><div className="text-sm text-gray-500 mt-1">onboarding</div></div>
-              </div>
+              <div className="mt-10 grid grid-cols-3 gap-6 text-sm text-gray-600"><div>Direction senior</div><div>Mobile-first</div><div>SEO local</div></div>
             </div>
             <div className="relative">
               <div className="aspect-square bg-gradient-to-br from-slate-100 via-blue-50 to-gray-50 rounded-2xl flex items-center justify-center">
@@ -109,7 +105,7 @@ const AgenceWebCasablanca = () => {
       <section className="py-20 px-6 lg:px-12">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl lg:text-4xl font-semibold text-black mb-4">Nos prestations web à Casablanca</h2>
-          <p className="text-gray-600 mb-12 max-w-2xl">Du site vitrine simple à la plateforme métier complexe, nous adaptons le périmètre à vos enjeux business. Cadrage stratégique avec le fondateur, proposition structurée sous 48h.</p>
+          <p className="text-gray-600 mb-12 max-w-2xl">Du site vitrine à la plateforme métier, le périmètre est adapté à vos enjeux business et cadré directement avec le fondateur.</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((s, i) => (
               <div key={i} className="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition-shadow">
@@ -178,7 +174,7 @@ const AgenceWebCasablanca = () => {
       <section className="py-20 px-6 lg:px-12 bg-foreground text-background">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl lg:text-4xl font-semibold mb-6">Un projet de site web à Casablanca ?</h2>
-          <p className="text-lg opacity-90 mb-10 leading-relaxed">Échangez directement avec le fondateur sur WhatsApp. Premier retour sous 24h, devis transparent sous 48h, sans engagement.</p>
+          <p className="text-lg opacity-90 mb-10 leading-relaxed">Échangez directement avec le fondateur sur WhatsApp pour qualifier le besoin et définir le bon périmètre.</p>
           <Button onClick={handleContact} className="bg-background text-foreground hover:bg-primary hover:text-white text-base px-10 py-6 rounded-none">
             <MessageCircle className="w-5 h-5 mr-2" />Discuter sur WhatsApp
           </Button>

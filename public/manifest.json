@@ -1,11 +1,11 @@
 {
-  "name": "Link Agency - Agence Digital Marketing Maroc",
+  "name": "Link Agency - Direction marketing et branding",
   "short_name": "Link Agency",
-  "description": "Agence de marketing digital au Maroc spécialisée en branding, contenu digital et événementiel",
+  "description": "Direction marketing externalisée, branding, contenu et performance pour entreprises ambitieuses au Maroc.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#000000",
+  "theme_color": "#765fc4",
   "icons": [
     {
       "src": "/assets/brand/link-agency-logo.png",
@@ -23,13 +23,5 @@
   "lang": "fr",
   "scope": "/",
   "orientation": "portrait-primary",
-  "categories": ["business", "marketing", "design"],
-  "screenshots": [
-    {
-      "src": "/assets/brand/link-agency-logo-embossed.png",
-      "sizes": "1280x720",
-      "type": "image/png",
-      "label": "Accueil Link Agency"
-    }
-  ]
+  "categories": ["business", "marketing", "design"]
 }

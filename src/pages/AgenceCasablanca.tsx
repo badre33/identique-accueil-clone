@@ -48,12 +48,12 @@ const AgenceCasablanca = () => {
       generateLocalBusinessSchema("casablanca"),
       generateServiceSchema(
         "Agence Marketing Digital à Casablanca",
-        "Agence marketing digital à Casablanca : branding, communication, SEO, paid media, social media et événementiel corporate pour marques au Maroc au Maroc.",
+        "Agence marketing digital à Casablanca : branding, communication, SEO, paid media, social media et événementiel corporate pour les marques au Maroc.",
         "Sur devis"
       ),
       generateWebPageSchema(
         "Agence Marketing Digital à Casablanca | Link Agency Maroc",
-        "Link Agency, agence marketing digital à Casablanca. Branding, communication, SEO, paid media, social et événementiel pour marques au Maroc au Maroc.",
+        "Link Agency, agence marketing digital à Casablanca. Branding, communication, SEO, paid media, social et événementiel pour les marques au Maroc.",
         "https://linkagency.ma/agence-marketing-digital-casablanca"
       ),
       generateBreadcrumbSchema([
@@ -89,7 +89,7 @@ const AgenceCasablanca = () => {
     <div className="min-h-screen bg-white pt-16 sm:pt-20">
       <SEOHead
         title="Agence Marketing Digital à Casablanca | Link Agency Maroc"
-        description="Agence marketing digital à Casablanca : branding, communication, SEO, paid media, social media et événementiel corporate pour les marques au Maroc au Maroc."
+        description="Agence marketing digital à Casablanca : branding, communication, SEO, paid media, social media et événementiel corporate pour les marques au Maroc."
         keywords="agence marketing digital casablanca, agence communication casablanca, agence branding casablanca, agence SEO casablanca, agence social media casablanca, agence événementielle casablanca"
         url="https://linkagency.ma/agence-marketing-digital-casablanca"
         type="service"
@@ -121,7 +121,7 @@ const AgenceCasablanca = () => {
 
           <div className="flex flex-wrap gap-4">
             <Button onClick={handleContact} className="bg-black text-white hover:bg-gray-800 px-8 py-6 text-lg">
-              Demander un devis
+              Échanger sur WhatsApp
             </Button>
             <a href="mailto:bharkaoui@linkagency.ma">
               <Button variant="outline" className="px-8 py-6 text-lg">
@@ -169,9 +169,9 @@ const AgenceCasablanca = () => {
           <h2 className="text-4xl font-light mb-12 text-black">Pourquoi choisir Link Agency à Casablanca</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
-              { icon: <Building2 className="w-6 h-6" />, title: "Ancrage local", desc: "Une équipe basée à Casablanca, qui connaît les codes du marché marocain, ses audiences et ses temps forts." },
+              { icon: <Building2 className="w-6 h-6" />, title: "Ancrage local", desc: "Une direction basée à Casablanca, qui connaît les codes du marché marocain, ses audiences et ses temps forts." },
               { icon: <Target className="w-6 h-6" />, title: "Pilotage business", desc: "Nous travaillons à partir de vos objectifs commerciaux, pas d'indicateurs de vanité. ROI, CPL et part de voix." },
-              { icon: <TrendingUp className="w-6 h-6" />, title: "11 ans d'expérience", desc: "Plus de 200 dispositifs pilotés, dans des secteurs aussi variés que la finance, le retail, l'industrie et la santé." },
+              { icon: <TrendingUp className="w-6 h-6" />, title: "Pilotage senior", desc: "Badre garde la stratégie, les arbitrages et la relation avec les décideurs tout au long du mandat." },
               { icon: <CheckCircle2 className="w-6 h-6" />, title: "Approche sur-mesure", desc: "Pas de packs standardisés. Chaque mission est cadrée selon votre maturité, vos contraintes et votre ambition." },
             ].map((item) => (
               <div key={item.title} className="flex gap-4">
@@ -209,10 +209,10 @@ const AgenceCasablanca = () => {
             Casablanca est le moteur économique du Maroc : capitale financière, hub portuaire, première place de l'industrie et du retail, la métropole concentre l'essentiel des budgets marketing nationaux. Pour les marques qui s'y implantent ou s'y développent, la maîtrise du marketing digital est devenue stratégique. Le marché casablancais est mature, exigeant et compétitif : les directions marketing y attendent une lecture fine des audiences, une exécution irréprochable et une discipline rigoureuse de pilotage.
           </p>
           <p className="text-gray-700 font-light leading-relaxed mb-6">
-            En tant qu'agence marketing digital à Casablanca, nous intervenons à plusieurs niveaux. Stratégie d'abord : cadrage de la plateforme de marque, positionnement, architecture des messages. Activation ensuite : pilotage SEO, campagnes paid media multi-canal (Meta, Google, TikTok, LinkedIn), production éditoriale et community management quotidien. Mesure enfin : tracking, dashboards et arbitrages partagés avec les équipes internes. Ce triptyque — stratégie, activation, mesure — structure chacun de nos accompagnements.
+            En tant qu'agence marketing digital à Casablanca, nous intervenons à plusieurs niveaux. Stratégie d'abord : cadrage de la plateforme de marque, positionnement, architecture des messages. Activation ensuite : pilotage SEO, campagnes paid media multi-canal (Meta, Google, TikTok, LinkedIn), production éditoriale et community management quotidien. Mesure enfin : tracking, tableaux de bord et arbitrages partagés avec les interlocuteurs de l’entreprise. Ce triptyque structure chacun de nos accompagnements.
           </p>
           <p className="text-gray-700 font-light leading-relaxed">
-            Notre vocation n'est pas de multiplier les livrables tactiques mais de construire des dispositifs durables, alignés avec votre ambition business. Que vous soyez une marque retail cherchant à structurer son acquisition e-commerce, un acteur B2B souhaitant renforcer sa génération de leads ou une institution casablancaise en refonte de communication, notre équipe propose une approche sobre, exigeante et mesurable.
+            Notre vocation n'est pas de multiplier les livrables tactiques mais de construire des dispositifs durables, alignés avec votre ambition business. Que vous soyez une marque retail cherchant à structurer son acquisition e-commerce, un acteur B2B souhaitant renforcer sa génération de leads ou une institution casablancaise en refonte de communication, Link Agency propose une approche sobre, exigeante et mesurable.
           </p>
         </div>
       </section>
@@ -237,11 +237,11 @@ const AgenceCasablanca = () => {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl lg:text-5xl font-light mb-8">Discutons de votre projet à Casablanca</h2>
           <p className="text-xl text-gray-300 mb-10 font-light">
-            Premier échange gratuit pour cadrer vos enjeux, identifier les leviers prioritaires et chiffrer un dispositif sur mesure.
+            Échangez directement avec le fondateur pour cadrer vos enjeux, identifier les priorités et définir le bon périmètre.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button onClick={handleContact} className="bg-white text-black hover:bg-gray-200 px-8 py-6 text-lg">
-              <Phone className="w-4 h-4 mr-2" /> WhatsApp +212 699-024526
+              <Phone className="w-4 h-4 mr-2" /> WhatsApp +212 699 024 526
             </Button>
             <a href="mailto:bharkaoui@linkagency.ma">
               <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black px-8 py-6 text-lg">

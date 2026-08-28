@@ -28,7 +28,7 @@ const AgenceMarrakech = () => {
     {
       question: "Travaillez-vous avec des marques internationales basées à Marrakech ?",
       answer:
-        "Oui. Nous accompagnons à la fois des marques marocaines et des acteurs internationaux implantés à Marrakech. Notre équipe pilote en français, anglais et arabe, et adapte les dispositifs aux audiences locales comme aux clientèles internationales.",
+        "Oui. Nous accompagnons à la fois des marques marocaines et des acteurs internationaux implantés à Marrakech. Le dispositif est piloté en français, anglais ou arabe selon les audiences locales et internationales visées.",
     },
     {
       question: "Pouvez-vous gérer la production photo et vidéo sur place ?",
@@ -121,7 +121,7 @@ const AgenceMarrakech = () => {
 
           <div className="flex flex-wrap gap-4">
             <Button onClick={handleContact} className="bg-black text-white hover:bg-gray-800 px-8 py-6 text-lg">
-              Demander un devis
+              Échanger sur WhatsApp
             </Button>
             <a href="mailto:bharkaoui@linkagency.ma">
               <Button variant="outline" className="px-8 py-6 text-lg">
@@ -212,7 +212,7 @@ const AgenceMarrakech = () => {
             En tant qu'agence marketing digital à Marrakech, Link Agency conçoit des dispositifs alignés avec l'ADN premium de la destination. Pour les hôteliers et riads, nous structurons des présences Instagram et TikTok qui captent les imaginaires touristiques tout en convertissant les recherches directes. Pour les marques lifestyle et restaurants, nous produisons des contenus natifs ancrés dans l'esthétique marrakchie. Pour les événements et activations, nous coordonnons l'amont stratégique, la production sur place et l'amplification digitale.
           </p>
           <p className="text-gray-700 font-light leading-relaxed">
-            Notre vocation : produire des dispositifs élégants, mesurables et durables, qui dépassent l'effet de mode. Que vous soyez un riad de luxe en refonte de marque, un restaurant en lancement, une enseigne lifestyle en expansion ou un acteur événementiel international, notre équipe vous accompagne avec rigueur et sensibilité créative.
+            Notre vocation : produire des dispositifs élégants, mesurables et durables, qui dépassent l'effet de mode. Que vous soyez un riad de luxe en refonte de marque, un restaurant en lancement, une enseigne lifestyle en expansion ou un acteur événementiel international, Link Agency vous accompagne avec rigueur et sensibilité créative.
           </p>
         </div>
       </section>

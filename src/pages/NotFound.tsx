@@ -21,7 +21,7 @@ const NotFound = () => {
     { name: "Marketing Digital", path: "/marketing-digital", icon: Briefcase, description: "SEO, publicité & réseaux sociaux" },
     { name: "Événementiel", path: "/evenementiel", icon: Briefcase, description: "Événements corporate & activation" },
     { name: "Blog", path: "/blog", icon: BookOpen, description: "Articles experts & tendances" },
-    { name: "Contact", path: "/contact", icon: Mail, description: "Demandez votre devis gratuit" },
+    { name: "Contact", path: "/contact", icon: Mail, description: "Présentez votre besoin" },
   ];
 
   return (

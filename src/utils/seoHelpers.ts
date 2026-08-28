@@ -18,7 +18,7 @@ export const generatePageMeta = (page: string) => {
   }> = {
     home: {
       title: "Link Agency — Cabinet Conseil Communication Corporate au Maroc",
-      description: "Cabinet conseil en communication corporate au Maroc. Branding, stratégie digitale, événementiel pour grands comptes. 11 ans, 200+ missions. Casablanca, Rabat, Marrakech.",
+      description: "Cabinet conseil en communication corporate au Maroc. Branding, stratégie digitale et événementiel pour les entreprises ambitieuses. Casablanca, Rabat, Marrakech.",
       keywords: ""
     },
     branding: {

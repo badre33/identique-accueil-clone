@@ -11,13 +11,14 @@ interface SEOHeadProps {
   modifiedTime?: string;
   author?: string;
   locale?: 'fr_FR' | 'ar_MA' | 'en_US';
-  structuredData?: any;
+  structuredData?: Record<string, unknown> | Array<Record<string, unknown>>;
+  robots?: string;
   alternateLanguages?: Array<{ hrefLang: string; href: string }>;
 }
 
 export const SEOHead = ({
-  title = "Link Agency - Agence Marketing Digital au Maroc | Branding & Communication",
-  description = "Agence marketing digital au Maroc spécialisée en branding, communication digitale et événementiel. Services créatifs à Casablanca, Rabat et Marrakech.",
+  title = "Direction marketing externalisée et branding au Maroc | Link Agency",
+  description = "Link Agency pilote la stratégie, le branding, les contenus et la performance des entreprises ambitieuses au Maroc, comme un pôle marketing externalisé.",
   keywords,
   image = "https://linkagency.ma/og-default.jpg",
   url = "https://linkagency.ma",
@@ -27,7 +28,8 @@ export const SEOHead = ({
   author = "Link Agency",
   locale = "fr_FR",
   structuredData,
-  alternateLanguages
+  alternateLanguages,
+  robots = "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
 }: SEOHeadProps) => {
   const siteName = "Link Agency";
   const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
@@ -39,7 +41,7 @@ export const SEOHead = ({
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />}
       <meta name="author" content={author} />
-      <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+      <meta name="robots" content={robots} />
       
       {/* Canonical URL */}
       <link rel="canonical" href={url} />
@@ -74,8 +76,6 @@ export const SEOHead = ({
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
       <meta name="twitter:image:alt" content={title} />
-      <meta name="twitter:site" content="@LinkAgencyMA" />
-      <meta name="twitter:creator" content="@LinkAgencyMA" />
       
       {/* Meta supplémentaires pour le SEO local */}
       <meta name="geo.region" content="MA" />

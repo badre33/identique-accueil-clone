@@ -52,7 +52,7 @@ const Row = ({ ariaHidden = false }: { ariaHidden?: boolean }) => (
         {l.src ? (
           <img
             src={l.src}
-            alt={`${l.name} — référence Link Agency`}
+            alt={`${l.name}, référence de mission ou expérience du fondateur`}
             title={l.name}
             className="h-9 md:h-11 lg:h-12 w-auto max-w-[160px] object-contain grayscale opacity-50 hover:opacity-100 hover:grayscale-0 transition-all duration-700 ease-out"
             loading="lazy"
@@ -73,28 +73,25 @@ const Row = ({ ariaHidden = false }: { ariaHidden?: boolean }) => (
 export const ClientLogosMarquee = memo(() => {
   return (
     <section
+      id="references"
       aria-label="Références de missions et d'expériences Link Agency"
-      className="home-client-marquee relative border-y border-gray-100/80 bg-gradient-to-b from-white via-gray-50/30 to-white py-12 md:py-14"
+      className="home-client-marquee relative overflow-hidden border-y border-black/15 bg-[#d8cec1] py-16 text-[#0a0a0a] md:py-20"
     >
-      <header className="mb-8 md:mb-10 flex flex-col items-center gap-2">
-        <p className="text-[11px] md:text-xs font-medium uppercase tracking-[0.32em] text-gray-500">
-          Références de missions et d'expériences
-        </p>
-        <p className="text-xs md:text-sm font-light text-gray-400 italic">
-          Interventions de Link Agency ou expériences antérieures du fondateur
-        </p>
+      <div className="pointer-events-none absolute right-0 top-0 h-full w-1/4 bg-[#765fc4] opacity-[.12]" aria-hidden="true" />
+      <header className="relative mx-auto mb-12 grid max-w-[1440px] gap-7 px-5 sm:px-8 md:mb-14 lg:grid-cols-[220px_1fr_auto] lg:items-end lg:px-12">
+        <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-[#6751b7]">00 / Références</p>
+        <h2 className="max-w-3xl text-3xl font-medium leading-[1.02] tracking-[-.045em] sm:text-5xl">Des marques exigeantes.<br /><span className="text-black/40">Des contextes très différents.</span></h2>
+        <p className="max-w-xs text-xs leading-5 text-black/50 lg:text-right">Missions Link Agency et expériences antérieures directement pilotées par le fondateur.</p>
       </header>
 
-      <div className="group relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_6%,black_94%,transparent)]">
+      <div className="group relative border-y border-black/20 py-9 [mask-image:linear-gradient(to_right,transparent,black_4%,black_96%,transparent)]">
         <div className="flex animate-marquee-mobile md:animate-marquee whitespace-nowrap group-hover:[animation-play-state:paused] motion-reduce:animate-none">
           <Row />
           <Row ariaHidden />
         </div>
       </div>
 
-      <p className="mt-6 md:mt-8 text-center text-[10px] md:text-xs text-gray-400 tracking-wide">
-        <span className="hidden md:inline">Survolez pour mettre en pause — </span>Consultez « Collaborations » pour le détail des missions.
-      </p>
+      <div className="relative mx-auto mt-7 flex max-w-[1440px] justify-between px-5 text-[9px] font-semibold uppercase tracking-[.18em] text-black/40 sm:px-8 lg:px-12"><span>Maroc / International</span><span><span className="hidden md:inline">Survolez pour arrêter — </span>Archives en mouvement</span></div>
     </section>
   );
 });

@@ -57,7 +57,7 @@ export const serviceFaqs: Record<string, FAQItem[]> = {
     {
       question: "Couvrez-vous tout le Maroc ?",
       answer:
-        "Oui. Nos équipes interviennent sur Casablanca, Marrakech, Rabat, Tanger et l'ensemble du territoire. Nous mobilisons des partenaires logistiques locaux selon la ville et la nature de l'événement.",
+        "Oui. Link Agency intervient à Casablanca, Marrakech, Rabat, Tanger et dans l’ensemble du territoire, avec des partenaires logistiques mobilisés selon la ville et la nature de l’événement.",
     },
     {
       question: "Gérez-vous la communication digitale autour de l'événement ?",
@@ -79,7 +79,7 @@ export const serviceFaqs: Record<string, FAQItem[]> = {
     {
       question: "Produisez-vous du contenu en arabe et darija ?",
       answer:
-        "Oui. Notre équipe rédige et produit en français, arabe classique et darija marocaine, selon les codes de votre marque et votre audience. Le multilinguisme est essentiel pour toucher efficacement les audiences marocaines.",
+        "Oui. La rédaction et la production peuvent être menées en français, arabe classique et darija marocaine, selon les codes de la marque et de son audience.",
     },
     {
       question: "Faites-vous du community management quotidien ?",
@@ -145,7 +145,7 @@ export const serviceFaqs: Record<string, FAQItem[]> = {
     {
       question: "Faites-vous de la production photo et vidéo ?",
       answer:
-        "Oui. Nous pilotons des productions complètes : conception, casting, shooting, post-production. Nos équipes interviennent sur Casablanca, Marrakech et Rabat avec des partenaires techniques fiables.",
+        "Oui. Nous pilotons des productions complètes : conception, casting, shooting et post-production, avec des partenaires techniques sélectionnés selon le projet et la ville.",
     },
     {
       question: "Optimisez-vous le contenu pour le SEO ?",

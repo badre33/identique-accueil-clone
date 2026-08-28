@@ -1,15 +1,15 @@
-import { ArrowRight, Check } from "lucide-react";
+import { Check } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { SEOHead } from "@/components/SEOHead";
-import { Link } from "react-router-dom";
+import { EditorialFAQ, EditorialFinalCTA, EditorialPageHero, EditorialSectionIntro } from "@/components/editorial/EditorialPage";
 import { generateBreadcrumbSchema, generateFAQSchema, generateServiceSchema, generateWebPageSchema } from "@/utils/structuredData";
 
 const faqs = [
   { question: "Qu’est-ce qu’un directeur marketing externalisé ?", answer: "C’est un responsable senior qui définit et pilote la stratégie marketing de l’entreprise sans être recruté à temps plein. Il coordonne les ressources internes et externes, arbitre les priorités et suit les résultats." },
   { question: "À quelles entreprises ce modèle convient-il ?", answer: "Il convient notamment aux entreprises en croissance, aux directions insatisfaites d’une communication fragmentée, aux filiales sans direction marketing locale et aux marques étrangères qui entrent au Maroc." },
-  { question: "Link Agency travaille-t-elle avec nos prestataires existants ?", answer: "Oui. Nous pouvons auditer, recadrer et coordonner les agences, freelances, équipes internes et partenaires déjà en place, puis compléter le dispositif uniquement lorsque c’est nécessaire." },
-  { question: "Quelles expertises peuvent être pilotées ?", answer: "Le périmètre peut couvrir la stratégie de marque, le branding, les contenus, les réseaux sociaux, le SEO, l’acquisition, les campagnes, les sites et landing pages, l’influence, l’événementiel et les outils de mesure." },
+  { question: "Link Agency travaille-t-elle avec nos prestataires existants ?", answer: "Oui. Le dispositif peut intégrer vos équipes, agences et freelances actuels. Nous auditons leur contribution, clarifions les responsabilités et complétons uniquement les expertises manquantes." },
+  { question: "Quelles expertises peuvent être pilotées ?", answer: "Le périmètre peut couvrir la stratégie de marque, le branding, les contenus, les réseaux sociaux, le SEO, l’acquisition, les campagnes, les sites, l’influence, l’événementiel et les outils de mesure." },
 ];
 
 const schema = { "@context": "https://schema.org", "@graph": [
@@ -20,35 +20,83 @@ const schema = { "@context": "https://schema.org", "@graph": [
 ] };
 
 const phases = [
-  ["01", "Cadrer", "Diagnostic de la marque, du marché, de l’organisation, des actions et des partenaires."],
-  ["02", "Décider", "Positionnement, objectifs, priorités, budget, feuille de route et indicateurs."],
-  ["03", "Orchestrer", "Coordination des ressources, production, campagnes et points de décision."],
-  ["04", "Améliorer", "Lecture des résultats, arbitrages et évolution continue du dispositif."],
+  ["01", "Cadrer", "Lire la marque, le marché, l’organisation, les actions en cours et les partenaires."],
+  ["02", "Décider", "Fixer le positionnement, les objectifs, les priorités, les budgets et les indicateurs."],
+  ["03", "Orchestrer", "Coordonner les ressources, les productions, les campagnes et les points de décision."],
+  ["04", "Améliorer", "Interpréter les résultats, arbitrer et faire évoluer le dispositif dans le temps."],
+];
+
+const scopes = [
+  "Stratégie marketing et feuille de route",
+  "Positionnement, branding et identité",
+  "Contenus, réseaux sociaux et influence",
+  "SEO, acquisition et performance",
+  "Coordination des partenaires et budgets",
+  "Reporting et arbitrages de direction",
+];
+
+const configurations = [
+  ["Direction externalisée", "Le pilotage marketing est pris en charge dans la durée, au rythme des décisions et des cycles de l’entreprise."],
+  ["Renfort de direction", "La direction générale ou marketing est épaulée sur un lancement, une transformation ou un enjeu prioritaire."],
+  ["Relais d’entrée au Maroc", "Une marque internationale dispose d’un interlocuteur local pour adapter, déployer et coordonner sa stratégie au Maroc."],
 ];
 
 const DirectionMarketingExternalisee = () => (
-  <div className="min-h-screen bg-black pt-16 text-white sm:pt-20">
+  <div className="min-h-screen bg-[#f4f1eb] pt-16 text-[#0a0a0a] sm:pt-20">
     <SEOHead title="Direction Marketing Externalisée au Maroc | Link Agency" description="Une direction marketing senior pour piloter votre stratégie, votre marque, vos partenaires et votre performance au Maroc. Modèle flexible, directement dirigé par le fondateur." url="https://linkagency.ma/direction-marketing-externalisee" structuredData={schema} />
     <Header />
     <main className="link-editorial">
-      <section className="border-b border-white/10 px-5 py-24 sm:px-8 sm:py-32 lg:px-12 lg:py-40">
-        <div className="editorial-shell grid gap-16 lg:grid-cols-[1fr_360px] lg:items-end">
-          <div><p className="editorial-eyebrow mb-7 text-[#b8935a]">Direction marketing externalisée · Maroc</p><h1 className="max-w-5xl text-[clamp(2.8rem,6.4vw,6.8rem)] font-medium leading-[.94] tracking-[-.06em]">Votre pôle marketing,<br /><span className="text-white/35">dirigé comme en interne.</span></h1></div>
-          <div className="border-l border-white/15 pl-6"><p className="text-base leading-8 text-white/65">Une direction senior pour donner le cap, coordonner les expertises et rendre chaque action plus cohérente sans recruter immédiatement une structure complète.</p><Link to="/contact" className="editorial-button-primary mt-8">Évaluer votre besoin <ArrowRight className="h-4 w-4" /></Link></div>
+      <EditorialPageHero
+        index="01 / MODÈLE"
+        eyebrow="Direction marketing externalisée · Maroc"
+        title={<>Votre pôle marketing,<br /><span className="link-cover__outline">dirigé comme en interne.</span></>}
+        description="Une direction senior pour donner le cap, coordonner les expertises et rendre chaque action plus cohérente, sans recruter immédiatement une structure complète."
+        dossierLabel="Mandat de direction"
+        dossierTitle="Le cap avant les canaux."
+        dossierBody="Badre garde la stratégie, les arbitrages et la relation de direction. Les expertises sont mobilisées selon la feuille de route, pas selon un catalogue figé."
+        accent="violet"
+        primaryLabel="Évaluer le besoin"
+        secondaryLabel="Voir les missions"
+        secondaryTo="/collaborations"
+      />
+
+      <section className="editorial-section bg-[#d8cec1]">
+        <div className="editorial-shell">
+          <EditorialSectionIntro eyebrow="La mission" title={<>Nous prenons la responsabilité du cap.<br />Puis nous organisons l’ensemble.</>} body="Link Agency s’intègre à la direction pour clarifier les décisions, coordonner les ressources et maintenir un même niveau d’exigence sur tout le dispositif." />
+          <div className="mt-16 grid border-l border-t border-black/20 sm:grid-cols-2 lg:grid-cols-4">
+            {phases.map(([number, title, description]) => (
+              <article key={number} className="editorial-index-card flex flex-col justify-between p-7">
+                <span className="font-mono text-xs text-black/35">{number}</span>
+                <div><h3 className="text-2xl font-medium tracking-[-.03em]">{title}</h3><p className="mt-5 text-sm leading-7 text-black/60">{description}</p></div>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
-      <section className="editorial-section bg-[#f2f0eb] text-[#111111]"><div className="editorial-shell"><div className="editorial-heading-grid"><p className="editorial-eyebrow text-[#725b3a]">La mission</p><div className="text-[#111111]"><h2 className="editorial-title text-[#111111]">Nous ne venons pas ajouter une couche d’exécution.<br />Nous organisons l’ensemble.</h2><p className="mt-8 max-w-3xl text-base leading-8 text-black/65 sm:text-lg">Link Agency agit comme une extension de la direction. Le fondateur garde la stratégie et les arbitrages ; les expertises nécessaires sont mobilisées selon la feuille de route.</p></div></div>
-        <div className="mt-16 grid border-l border-t border-black/15 sm:grid-cols-2 lg:grid-cols-4">{phases.map(([n,t,d]) => <article key={n} className="min-h-72 border-b border-r border-black/15 p-7"><span className="text-xs text-black/35">{n}</span><h3 className="mt-14 text-2xl font-medium">{t}</h3><p className="mt-5 text-sm leading-7 text-black/60">{d}</p></article>)}</div>
-      </div></section>
+      <section className="editorial-section bg-[#0a0a0a] text-white">
+        <div className="editorial-shell grid gap-16 lg:grid-cols-[.85fr_1.15fr]">
+          <div><p className="editorial-eyebrow text-[#b8935a]">Périmètre piloté</p><h2 className="editorial-title mt-7">Une seule logique derrière toute la marque.</h2><p className="mt-7 max-w-xl text-base leading-8 text-white/55">Le sujet n’est pas d’activer tous les leviers. Il est de choisir les bons, dans le bon ordre, avec un niveau d’exigence constant.</p></div>
+          <div className="border-t border-white/15">
+            {scopes.map((scope, index) => <div key={scope} className="grid grid-cols-[42px_1fr] items-center border-b border-white/15 py-5 text-sm text-white/75"><span className="font-mono text-[10px] text-white/30">{String(index + 1).padStart(2, "0")}</span><span className="flex items-center gap-3"><Check className="h-4 w-4 text-[#d7e942]" />{scope}</span></div>)}
+          </div>
+        </div>
+      </section>
 
-      <section className="editorial-section"><div className="editorial-shell grid gap-16 lg:grid-cols-2"><div><p className="editorial-eyebrow text-[#b8935a]">Ce que nous pilotons</p><h2 className="editorial-title mt-7">Une seule logique derrière toute la marque.</h2></div><div className="grid gap-0 border-t border-white/10">{["Stratégie marketing et feuille de route", "Positionnement, branding et identité", "Contenus, réseaux sociaux et influence", "SEO, acquisition et performance", "Coordination des partenaires et budgets", "Reporting et arbitrages de direction"].map(x => <div key={x} className="flex gap-4 border-b border-white/10 py-5 text-sm text-white/70"><Check className="h-4 w-4 text-[#b8935a]" />{x}</div>)}</div></div></section>
+      <section className="editorial-section bg-[#bfd0c8]">
+        <div className="editorial-shell">
+          <EditorialSectionIntro eyebrow="Trois configurations" title="Le niveau d’intégration s’adapte à votre réalité." body="Un mandat clair, un interlocuteur senior et un dispositif calibré selon vos ressources déjà en place." />
+          <div className="mt-16 grid border-l border-t border-black/20 md:grid-cols-3">
+            {configurations.map(([title, description], index) => <article key={title} className="editorial-index-card p-8"><span className="font-mono text-xs text-black/35">0{index + 1}</span><h3 className="mt-16 text-2xl font-medium tracking-[-.035em]">{title}</h3><p className="mt-6 text-sm leading-7 text-black/60">{description}</p></article>)}
+          </div>
+        </div>
+      </section>
 
-      <section className="editorial-section bg-white text-black"><div className="editorial-shell"><div className="editorial-heading-grid"><p className="editorial-eyebrow text-[#725b3a]">Trois configurations</p><h2 className="editorial-title">Le niveau d’intégration s’adapte à votre réalité.</h2></div><div className="mt-16 grid border-l border-t border-black/15 md:grid-cols-3">{[["Direction externalisée", "Nous prenons le pilotage du marketing dans la durée."],["Renfort de direction", "Nous épaulons une direction générale ou marketing existante sur un enjeu précis."],["Entrée au Maroc", "Nous devenons le relais local d’une marque ou d’un groupe international."]].map(([t,d]) => <article key={t} className="min-h-64 border-b border-r border-black/15 p-8"><h3 className="text-2xl font-medium">{t}</h3><p className="mt-6 text-sm leading-7 text-black/60">{d}</p></article>)}</div></div></section>
+      <section className="editorial-section bg-[#f4f1eb]">
+        <div className="editorial-shell grid gap-12 lg:grid-cols-[260px_1fr]"><p className="editorial-eyebrow text-black/45">Questions fréquentes</p><EditorialFAQ items={faqs} /></div>
+      </section>
 
-      <section className="editorial-section"><div className="editorial-shell max-w-5xl"><p className="editorial-eyebrow text-[#b8935a]">Questions fréquentes</p><div className="mt-10 border-t border-white/10">{faqs.map(item => <details key={item.question} className="group border-b border-white/10 py-6"><summary className="cursor-pointer list-none pr-10 text-lg font-medium">{item.question}</summary><p className="max-w-3xl pt-5 text-sm leading-7 text-white/60">{item.answer}</p></details>)}</div></div></section>
-
-      <section className="border-y border-[#b8935a]/35 bg-[#11100e] px-5 py-16 sm:px-8 lg:px-12"><div className="editorial-shell flex flex-col justify-between gap-8 md:flex-row md:items-center"><h2 className="max-w-3xl text-4xl font-medium tracking-[-.04em] sm:text-5xl">Voyons si ce modèle correspond à votre situation.</h2><Link to="/contact" className="inline-flex items-center justify-center gap-3 border border-[#e8e1d5] bg-[#e8e1d5] px-6 py-4 text-sm font-semibold text-black transition hover:bg-transparent hover:text-[#e8e1d5]">Prendre contact <ArrowRight className="h-4 w-4" /></Link></div></section>
+      <EditorialFinalCTA title="Voyons si ce modèle correspond à votre situation." body="Un premier échange permet de comprendre l’organisation actuelle, l’ambition et les points de friction avant de proposer un cadre d’intervention." label="Parler à Badre" accent="lime" />
     </main>
     <Footer />
   </div>

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'link-agency-v2';
+const CACHE_NAME = 'link-agency-v3-20260828';
 const STATIC_CACHE_URLS = [
   '/'
 ];

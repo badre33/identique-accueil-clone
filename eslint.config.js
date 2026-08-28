@@ -24,6 +24,9 @@ export default tseslint.config(
         { allowConstantExport: true },
       ],
       "@typescript-eslint/no-unused-vars": "off",
+      // Le dépôt contient encore quelques composants expérimentaux typés de façon
+      // permissive. On les garde visibles comme dette, sans bloquer la livraison.
+      "@typescript-eslint/no-explicit-any": "warn",
     },
   }
 );

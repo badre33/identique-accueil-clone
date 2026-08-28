@@ -7,15 +7,15 @@ interface CategoryFilterProps {
 
 export const CategoryFilter = ({ categories, selectedCategory, onCategoryChange }: CategoryFilterProps) => {
   return (
-    <div className="flex flex-wrap justify-center gap-3 mb-12">
+    <div className="mb-12 flex gap-2 overflow-x-auto border-y border-black/15 py-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
       {categories.map((category) => (
         <button
           key={category}
           onClick={() => onCategoryChange(category)}
-          className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
+          className={`shrink-0 border px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.12em] transition-colors ${
             selectedCategory === category
-              ? "bg-black text-white shadow-lg scale-105"
-              : "bg-white text-gray-700 border border-gray-200 hover:border-gray-300 hover:bg-gray-50"
+              ? "border-black bg-black text-white"
+              : "border-black/20 bg-transparent text-black/60 hover:border-black hover:text-black"
           }`}
         >
           {category}

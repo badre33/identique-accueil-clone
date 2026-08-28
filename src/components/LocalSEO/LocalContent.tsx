@@ -45,7 +45,7 @@ const cityContent = {
   rabat: {
     name: 'Rabat',
     title: 'Communication Institutionnelle à Rabat',
-    description: 'Capitale politique et administrative, Rabat abrite les institutions gouvernementales et les organismes internationaux. Notre équipe maîtrise les codes de la communication institutionnelle.',
+    description: 'Capitale politique et administrative, Rabat abrite les institutions gouvernementales et les organismes internationaux. Link Agency maîtrise les codes de la communication institutionnelle.',
     stats: {
       clients: 45,
       projects: 120,

@@ -29,28 +29,30 @@ interface Props {
 
 export const LocalCitiesLinks = ({
   title = "Link Agency au Maroc",
-  subtitle = "Une équipe ancrée dans les trois principales villes du royaume.",
+  subtitle = "Une présence active dans les trois principaux marchés du royaume.",
 }: Props) => (
-  <section className="py-20 px-8 lg:px-16 bg-gray-50">
-    <div className="max-w-6xl mx-auto">
-      <h2 className="text-4xl font-light mb-3 text-black">{title}</h2>
-      <p className="text-lg text-gray-600 font-light mb-12 max-w-3xl">{subtitle}</p>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+  <section className="editorial-section border-y border-black/15 bg-[#d8cec1] text-[#0a0a0a]">
+    <div className="editorial-shell">
+      <div className="editorial-heading-grid">
+        <p className="editorial-eyebrow text-black/45">Présence</p>
+        <div><h2 className="editorial-title">{title}</h2><p className="mt-7 max-w-3xl text-base leading-8 text-black/60 sm:text-lg">{subtitle}</p></div>
+      </div>
+      <div className="mt-14 grid border-l border-t border-black/20 md:grid-cols-3">
         {cities.map((c) => (
           <Link
             key={c.name}
             to={c.href}
-            className="group p-8 bg-white border border-gray-200 rounded-2xl hover:border-black hover:shadow-lg transition-all"
+            className="group min-h-72 border-b border-r border-black/20 p-7 transition hover:bg-[#f4f1eb]/45"
           >
-            <div className="flex items-center gap-2 text-sm text-gray-500 mb-3">
-              <MapPin className="w-4 h-4" /> {c.name}
+            <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-black/45">
+              <MapPin className="h-4 w-4" /> {c.name}
             </div>
-            <h3 className="text-xl font-medium text-black mb-3 group-hover:underline">
+            <h3 className="mt-12 text-xl font-medium leading-tight tracking-[-.03em] text-black">
               {c.label}
             </h3>
-            <p className="text-gray-600 font-light leading-relaxed mb-4">{c.desc}</p>
-            <span className="inline-flex items-center text-sm font-medium text-black">
-              Découvrir <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+            <p className="mt-5 text-sm leading-7 text-black/60">{c.desc}</p>
+            <span className="mt-7 inline-flex items-center text-xs font-semibold uppercase tracking-[0.12em] text-black">
+              Découvrir <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </span>
           </Link>
         ))}

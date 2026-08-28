@@ -30,6 +30,7 @@ export const trackConversion = (action: string, data?: Record<string, any>) => {
 
 // Tracking des interactions utilisateur
 export const trackUserInteraction = (element: string, action: string, data?: Record<string, any>) => {
+  if (typeof window === 'undefined' || window.localStorage.getItem('linkagency_cookie_consent_v1') !== 'accepted') return;
   if (typeof window !== 'undefined' && (window as any).gtag) {
     (window as any).gtag('event', action, {
       event_category: 'user_interaction',

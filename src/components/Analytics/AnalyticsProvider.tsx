@@ -37,9 +37,9 @@ interface AnalyticsProviderProps {
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
   children,
   enableGA4 = true,
-  enableHeatmaps = true,
-  enableScrollTracking = true,
-  enablePerformanceTracking = true,
+  enableHeatmaps = false,
+  enableScrollTracking = false,
+  enablePerformanceTracking = false,
   gaTrackingId
 }) => {
   const [isInitialized, setIsInitialized] = useState(false);

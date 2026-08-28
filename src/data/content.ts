@@ -8,14 +8,14 @@ export const blogPosts: BlogPost[] = [
     excerpt: "Comparatif objectif des 10 agences marketing les plus en vue à Casablanca en 2026. Critères de sélection, positionnements, tarifs estimés et grille de décision selon votre profil d'annonceur.",
     content: `
     <h2>Casablanca, capitale incontestée des agences marketing au Maroc</h2>
-    <p>Plus de 60 % des agences marketing du Maroc sont implantées à Casablanca. La ville concentre les budgets des grands groupes, les sièges des marques nationales, et naturellement les acteurs capables de les servir. Pour un directeur marketing, un dirigeant de PME ambitieuse ou un responsable communication d'une filiale étrangère, la question n'est donc plus de savoir s'il faut chercher son agence à Casablanca — mais comment trier dans une offre devenue pléthorique.</p>
+    <p>Casablanca concentre une part importante des sièges, des budgets de communication et des agences du pays. Pour un directeur marketing, un dirigeant d’entreprise ambitieuse ou un responsable communication d’une filiale étrangère, la question n’est donc plus seulement de savoir où chercher, mais comment trier une offre devenue dense.</p>
     <p>Cet article propose un panorama des dix agences marketing les plus en vue à Casablanca en 2026. Il ne s'agit pas d'un classement par chiffre d'affaires ou par notoriété abstraite, mais d'une cartographie par positionnement : à chaque besoin son type d'agence, et à chaque agence son terrain de jeu.</p>
 
     <h2>Pourquoi le choix d'une agence est devenu plus difficile en 2026</h2>
     <p>Trois évolutions structurelles compliquent le choix d'une agence marketing au Maroc cette année.</p>
-    <p>D'abord, la <strong>multiplication des acteurs</strong>. Entre les agences historiques, les nouvelles boutiques digitales lancées par d'anciens employés des grandes agences internationales, les freelances seniors qui se présentent comme agences et les nouvelles structures positionnées sur des niches (influence, vidéo, SEO arabe), il existe désormais plusieurs centaines de prestataires actifs dans le grand Casablanca. La densité crée le brouillard.</p>
+    <p>D’abord, la <strong>multiplication des acteurs</strong>. Entre agences historiques, boutiques digitales, collectifs de spécialistes et structures positionnées sur des niches comme l’influence, la vidéo ou le SEO arabe, la densité de l’offre crée du brouillard.</p>
     <p>Ensuite, l'<strong>évolution des attentes clients</strong>. Les directions marketing ne demandent plus seulement une exécution de campagnes ou un community management. Elles cherchent un partenaire capable de relier l'investissement marketing à des KPIs business (CAC, LTV, contribution incrémentale au CA). Le métier s'est sophistiqué, mais peu d'agences ont vraiment fait le saut.</p>
-    <p>Enfin, la <strong>polarisation des prix</strong>. L'écart entre les agences premium qui facturent 100 à 200 000 MAD par mois et les freelances ou structures low-cost à 5 000 MAD est devenu énorme. Au milieu, le mid-market — qui correspond à la grande majorité des PME et ETI marocaines — est mal servi : trop cher pour le bas du panier, pas assez senior pour le haut.</p>
+    <p>Enfin, la <strong>polarisation des modèles</strong>. Entre grandes agences, structures spécialisées, collectifs et indépendants, les périmètres comme les niveaux de séniorité varient fortement. Le prix seul ne permet donc pas de comparer deux propositions.</p>
 
     <h2>Les 5 critères qui font vraiment la différence en 2026</h2>
     <h3>1. Qui pilote réellement le dossier</h3>
@@ -28,7 +28,7 @@ export const blogPosts: BlogPost[] = [
     <p>Une agence sérieuse peut décrire son process en 4 ou 5 étapes claires : audit, stratégie, production, activation, pilotage. Cette codification garantit la reproductibilité de la qualité. Une agence sans méthode écrite improvise — et cela se sent au premier décalage de planning ou au premier livrable raté.</p>
 
     <h3>4. La maîtrise du marché marocain et des langues</h3>
-    <p>Le public marocain consomme en français, en arabe et en darija. Une agence qui ne maîtrise pas les trois registres perd 40 à 60 % de l'audience locale. Le SEO en arabe, le copywriting en darija sur Instagram, la créa qui parle aux deux mondes : ce sont des compétences distinctes que peu d'agences au Maroc maîtrisent vraiment.</p>
+    <p>Le public marocain consomme en français, en arabe et en darija. Ignorer l’un de ces registres limite la portée et la justesse des messages. Le SEO en arabe, le copywriting en darija et la création bilingue demandent des compétences distinctes.</p>
 
     <h3>5. L'alignement avec votre niveau d'enjeu</h3>
     <p>Une marque qui réalise 50 MMAD de CA annuel n'a pas les mêmes enjeux qu'un groupe coté. Le bon choix d'agence, c'est celui qui aligne sa taille, sa méthode et son expertise sectorielle sur votre niveau d'enjeu. Pas plus, pas moins.</p>
@@ -88,7 +88,7 @@ export const blogPosts: BlogPost[] = [
     <p>La meilleure agence n'est pas la moins chère, ni la plus créative en présentation. C'est celle qui démontre la meilleure compréhension de votre business, propose une méthode claire, et vous met face à des seniors capables d'exécuter ce qu'ils promettent.</p>
 
     <h2>Pour aller plus loin</h2>
-    <p>Si vous souhaitez intégrer Link Agency à votre short-list, contactez-nous directement sur WhatsApp ou via notre <a href="/contact">page contact</a>. Premier retour sous 24h, devis transparent sous 48h, sans engagement. Vous pouvez également consulter notre <a href="/agence-marketing-digital-casablanca">page dédiée à notre offre casablancaise</a>, nos <a href="/etudes-de-cas">études de cas</a>, ou notre <a href="/inside-link">méthode et nos pôles d'expertise</a>.</p>
+    <p>Si vous souhaitez intégrer Link Agency à votre short-list, contactez directement Badre sur WhatsApp ou utilisez notre <a href="/contact">formulaire de cadrage</a>. Vous pouvez également consulter notre <a href="/agence-marketing-digital-casablanca">page dédiée à notre offre casablancaise</a>, nos <a href="/etudes-de-cas">références</a>, ou notre <a href="/inside-link">méthode et notre modèle</a>.</p>
     `,
     author: 'Link Agency',
     publishDate: '2026-05-25',
@@ -106,7 +106,7 @@ export const blogPosts: BlogPost[] = [
     excerpt: 'Une analyse stratégique du branding au Maroc destinée aux dirigeants et décideurs. Méthodologie, erreurs à éviter et approche conseil pour une identité de marque performante.',
     content: `
     <h2>Le problème business réel : pourquoi tant de marques marocaines restent invisibles</h2>
-    <p>Le marché marocain connaît une mutation profonde. En moins d'une décennie, le nombre d'entreprises créées annuellement a doublé, atteignant plus de 95 000 nouvelles immatriculations en 2023. Cette densification concurrentielle crée un paradoxe : plus il y a d'acteurs, moins les marques sont mémorisables.</p>
+    <p>Le marché marocain se densifie et les offres deviennent plus difficiles à distinguer. Cette concurrence crée un paradoxe : plus les acteurs adoptent les mêmes codes, moins leurs marques restent mémorisables.</p>
     
     <p>Pour un dirigeant ou un fondateur, le constat est souvent le même : malgré des investissements significatifs en communication, la marque peine à s'imposer dans l'esprit des clients. Le problème ne réside pas dans le budget alloué, mais dans l'absence d'une stratégie de marque structurée. Le branding au Maroc souffre encore trop souvent d'une approche superficielle, réduite à la création d'un logo sans réflexion stratégique sous-jacente.</p>
     
@@ -173,7 +173,7 @@ export const blogPosts: BlogPost[] = [
     <p>Une identité de marque sans déploiement cohérent reste lettre morte. Le budget de déploiement (site web, supports, signalétique) doit être anticipé dès le départ, sous peine de voir la nouvelle identité cohabiter avec les anciens supports.</p>
     
     <h3>Oublier la dimension digitale</h3>
-    <p>Au Maroc, plus de 60% des premiers contacts avec une marque se font en ligne. Une identité pensée uniquement pour le print est obsolète. Le branding doit être nativement digital, adapté aux contraintes des écrans et des réseaux sociaux.</p>
+    <p>Une part croissante des premiers contacts avec une marque se fait en ligne. Une identité pensée uniquement pour le print est donc insuffisante : le branding doit fonctionner sur les écrans, les plateformes sociales et les interfaces.</p>
 
     <h2>Application concrète au contexte marocain</h2>
     <p>Le marché marocain présente des spécificités qui influencent directement la stratégie de marque.</p>
@@ -191,7 +191,7 @@ export const blogPosts: BlogPost[] = [
     <p>Casablanca, Rabat, Marrakech, Tanger : chaque ville a ses codes et ses attentes. Une marque nationale doit trouver le dénominateur commun tout en sachant adapter son expression selon les contextes locaux.</p>
 
     <h2>Comment Link Agency accompagne les entreprises sur leur stratégie de marque</h2>
-    <p>Notre approche du branding repose sur trois convictions forgées par plus de dix ans d'expérience sur le marché marocain.</p>
+    <p>Notre approche du branding repose sur trois convictions forgées depuis la création de Link Agency en 2015.</p>
     
     <h3>La stratégie avant la création</h3>
     <p>Nous refusons les projets de création de logo sans phase stratégique préalable. Chaque mission de branding débute par un diagnostic et une réflexion positionnement. Cette exigence méthodologique garantit des identités fondées sur des bases solides.</p>
@@ -202,7 +202,7 @@ export const blogPosts: BlogPost[] = [
     <h3>L'accompagnement dans la durée</h3>
     <p>La livraison d'une charte graphique n'est pas une fin. Nous proposons des formules d'accompagnement pour garantir la cohérence du déploiement et l'évolution maîtrisée de la marque dans le temps.</p>
     
-    <p>Notre équipe réunit stratèges, directeurs artistiques et experts digital pour une approche intégrée du branding. Nous intervenons principalement auprès de marques au Maroc, de groupes multi-secteurs et de directions marketing en repositionnement.</p>
+    <p>Link Agency réunit les expertises stratégiques, créatives et digitales nécessaires à chaque mandat de branding. Nous intervenons principalement auprès de marques au Maroc, de groupes multisectoriels et de directions marketing en repositionnement.</p>
 
     <h2>Conclusion : le branding comme décision stratégique</h2>
     <p>Dans un marché marocain de plus en plus concurrentiel, la stratégie de marque n'est plus un luxe réservé aux multinationales. Elle devient une nécessité pour toute entreprise souhaitant construire une préférence durable auprès de ses clients.</p>
@@ -229,7 +229,7 @@ export const blogPosts: BlogPost[] = [
     excerpt: 'Pourquoi le marketing digital seul ne suffit pas au Maroc. Analyse stratégique pour dirigeants : comment aligner vos actions digitales avec votre identité de marque.',
     content: `
     <h2>Pourquoi le marketing digital seul ne crée pas de valeur durable</h2>
-    <p>Le Maroc compte aujourd'hui plus de 30 millions d'internautes et un taux de pénétration mobile parmi les plus élevés d'Afrique. Face à ces chiffres, de nombreux dirigeants investissent massivement dans le marketing digital en espérant des résultats rapides. La réalité est plus nuancée.</p>
+    <p>Les usages numériques occupent désormais une place centrale dans la découverte, l’évaluation et l’achat. Beaucoup de dirigeants investissent donc dans le marketing digital en espérant des résultats rapides. La réalité est plus nuancée.</p>
     
     <p>Le marketing digital est un amplificateur, pas un créateur de valeur. Il diffuse un message, mais ne le construit pas. Une campagne publicitaire sur les réseaux sociaux peut générer du trafic, mais si la marque qu'elle promeut manque de clarté, de cohérence ou de différenciation, ce trafic ne se convertira pas en clients fidèles.</p>
     
@@ -310,7 +310,7 @@ export const blogPosts: BlogPost[] = [
     excerpt: 'Analyse stratégique de l\'événementiel corporate au Maroc. Méthodologie pour transformer vos événements en activations de marque durables et différenciantes.',
     content: `
     <h2>Le problème business de l'événementiel mal pensé</h2>
-    <p>Les entreprises marocaines investissent chaque année des budgets considérables dans l'événementiel. Lancements de produits, conventions d'entreprise, inaugurations, séminaires : le marché de l'événementiel corporate au Maroc représente plusieurs milliards de dirhams annuels. Pourtant, une majorité de ces investissements ne génère aucun retour mesurable.</p>
+    <p>Les entreprises marocaines consacrent des budgets importants aux lancements, conventions, inaugurations et séminaires. Pourtant, beaucoup de dispositifs sont évalués uniquement sur leur déroulement, sans méthode claire pour mesurer leur contribution à la marque ou au business.</p>
     
     <p>Le constat est récurrent : l'événement se déroule, les participants sont satisfaits sur le moment, puis tout s'évapore. Aucune trace dans la mémoire collective, aucun impact sur la perception de marque, aucune conversion commerciale traçable. L'événement devient une dépense plutôt qu'un investissement.</p>
     
@@ -409,7 +409,7 @@ export const blogPosts: BlogPost[] = [
     <p>Chaque projet événementiel débute par une immersion dans la stratégie de marque du client. Nous identifions les objectifs de perception, les messages clés, les attributs à renforcer. Cette phase garantit que l'événement servira des objectifs business précis.</p>
     
     <h3>La création conceptuelle différenciante</h3>
-    <p>Notre équipe créative développe des concepts événementiels originaux, ancrés dans l'identité de marque. Nous refusons les formats standardisés pour proposer des expériences uniques qui marquent les esprits.</p>
+    <p>Link Agency développe des concepts événementiels ancrés dans l’identité de marque, puis réunit les partenaires de production adaptés au format et au niveau d’exigence du projet.</p>
     
     <h3>L'intégration digitale native</h3>
     <p>Dès la conception, nous pensons l'événement comme un écosystème incluant sa dimension digitale. Stratégie social media, production de contenus, activation en temps réel : le digital amplifie l'expérience physique.</p>
@@ -445,12 +445,12 @@ export const blogPosts: BlogPost[] = [
     <h2>Pourquoi le Personal Branding des dirigeants est devenu un actif stratégique au Maroc</h2>
     <p>Dans un marché où la confiance se construit autant sur la marque corporate que sur la voix de ses dirigeants, le personal branding s'impose comme un levier de pilotage stratégique pour les comités de direction et les directions marketing & communication.</p>
     
-    <h3>Les chiffres du Personal Branding au Maroc</h3>
+    <h3>Les signaux qui rendent le sujet stratégique</h3>
     <ul>
-      <li>68% des décideurs marocains consultent le profil LinkedIn avant un meeting</li>
-      <li>Les dirigeants disposant d'une marque personnelle structurée génèrent 3x plus d'opportunités d'affaires qualifiées</li>
-      <li>LinkedIn compte +2M de professionnels marocains actifs</li>
-      <li>Le taux d'engagement moyen est 5x plus élevé sur le profil d'un dirigeant que sur la page corporate</li>
+      <li>Le profil du dirigeant est souvent consulté avant un échange commercial ou institutionnel</li>
+      <li>Une voix personnelle crédible complète la communication corporate</li>
+      <li>LinkedIn facilite l’accès direct aux décideurs et aux écosystèmes sectoriels</li>
+      <li>La qualité des prises de parole compte davantage que le volume de publications</li>
     </ul>
     
     <h2>Stratégie Personal Branding en 5 Étapes</h2>
@@ -493,8 +493,8 @@ export const blogPosts: BlogPost[] = [
     <h3>5. Mesurer et optimiser</h3>
     <p><strong>KPIs à suivre :</strong></p>
     <ul>
-      <li>Taux d'engagement (objectif : 5-10%)</li>
-      <li>Croissance de l'audience (objectif : +10-15% par mois)</li>
+      <li>Qualité de l’engagement et des conversations générées</li>
+      <li>Progression de l’audience réellement pertinente</li>
       <li>Opportunités business et partenariats stratégiques générés</li>
       <li>Mentions médias, citations et reprises de contenu</li>
       <li>Sollicitations institutionnelles, jurys, prises de parole</li>
@@ -502,28 +502,28 @@ export const blogPosts: BlogPost[] = [
     
     <h2>Erreurs fréquentes à éviter</h2>
     <ol>
-      <li><strong>L'auto-promotion excessive :</strong> Règle 80/20 - 80% de valeur, 20% de promotion</li>
+      <li><strong>L’auto-promotion excessive :</strong> privilégiez une forte majorité de contenu utile et réservez la promotion aux moments pertinents</li>
       <li><strong>L'incohérence éditoriale :</strong> Publier sans charte ni gouvernance de prise de parole</li>
       <li><strong>Le désalignement avec la marque corporate :</strong> Toute prise de parole engage l'organisation</li>
       <li><strong>L'absence d'adaptation au contexte marocain :</strong> Codes culturels, sensibilité institutionnelle, multilinguisme</li>
       <li><strong>La sous-estimation du offline :</strong> Conventions sectorielles et relations institutionnelles restent décisives</li>
     </ol>
     
-    <h2>Cas d'usage : dirigeant d'une ETI marocaine en repositionnement</h2>
+    <h2>Cas d’usage type : dirigeant d’une ETI marocaine en repositionnement</h2>
     <p><strong>Situation initiale :</strong> Directeur général d'un acteur sectoriel reconnu en B2B mais quasi inexistant sur les canaux digitaux, à un moment de repositionnement stratégique de l'entreprise.</p>
     <p><strong>Stratégie déployée :</strong></p>
     <ul>
       <li>Repositionnement LinkedIn en voix de référence sur les enjeux du secteur</li>
-      <li>Publication 3x/semaine de contenus analytiques sur le marché marocain</li>
+      <li>Publication régulière de contenus analytiques sur le marché marocain</li>
       <li>Interventions ciblées sur podcasts sectoriels et conventions professionnelles</li>
       <li>Mise en cohérence systématique avec la communication corporate</li>
     </ul>
-    <p><strong>Résultats en 6 mois :</strong></p>
+    <p><strong>Résultats recherchés :</strong></p>
     <ul>
-      <li>+8500 followers LinkedIn (vs 400 initialement)</li>
-      <li>Trois partenariats stratégiques sectoriels initiés via LinkedIn</li>
-      <li>5 prises de parole médias (interviews, tribunes, plateaux)</li>
-      <li>Pipeline commercial inbound +40% sur les comptes stratégiques</li>
+      <li>Une audience plus qualifiée autour du dirigeant</li>
+      <li>Des conversations et partenariats sectoriels mieux ciblés</li>
+      <li>Davantage de sollicitations éditoriales ou professionnelles pertinentes</li>
+      <li>Une contribution identifiable au développement commercial et à la réputation</li>
     </ul>
     
     <h2>Gouvernance et ressources</h2>
@@ -549,14 +549,14 @@ export const blogPosts: BlogPost[] = [
     excerpt: 'Stratégies SEO adaptées au marché marocain pour apparaître en première position sur Google. Techniques, outils et erreurs à éviter pour votre référencement local.',
     content: `
     <h2>Le SEO Local : Enjeu Majeur pour les Entreprises Marocaines</h2>
-    <p>70% des recherches Google au Maroc incluent une intention locale ("près de moi", nom de ville). Optimiser votre SEO local n'est plus optionnel, c'est vital pour votre visibilité.</p>
+    <p>De nombreuses recherches Google comportent une intention locale, comme un nom de ville ou une requête de proximité. Le SEO local permet de rendre l’entreprise visible au moment où cette intention s’exprime.</p>
     
     <h3>Spécificités du Search au Maroc</h3>
     <ul>
-      <li>Google domine avec 95% de parts de marché</li>
-      <li>60% des recherches sont sur mobile</li>
+      <li>Google reste le moteur de recherche de référence pour les usages locaux</li>
+      <li>La majorité des parcours doivent être pensés pour le mobile</li>
       <li>Recherches mixtes français/arabe/darija</li>
-      <li>Forte augmentation des recherches vocales (+40% en 2023)</li>
+      <li>Les requêtes conversationnelles et vocales élargissent les formulations à couvrir</li>
     </ul>
     
     <h2>Stratégie SEO Local Complète</h2>
@@ -651,7 +651,7 @@ export const blogPosts: BlogPost[] = [
     </ul>
     
     <h3>6. SEO Mobile-First pour le Maroc</h3>
-    <p>Avec 60% du trafic mobile, l'optimisation mobile est critique :</p>
+    <p>L’optimisation mobile est critique pour la visibilité comme pour la conversion :</p>
     <ul>
       <li><strong>Vitesse de chargement :</strong> Objectif moins de 3 secondes</li>
       <li><strong>Design responsive :</strong> Test sur différents devices</li>
@@ -664,11 +664,11 @@ export const blogPosts: BlogPost[] = [
     <p><strong>KPIs SEO Local essentiels :</strong></p>
     <ul>
       <li>Positions sur mots-clés locaux (objectif : top 3)</li>
-      <li>Vues fiche Google My Business (objectif : +20% mensuel)</li>
-      <li>Clics vers site depuis fiche (objectif : taux 15-25%)</li>
+      <li>Évolution des vues et actions depuis la fiche Google Business Profile</li>
+      <li>Clics vers le site depuis la fiche</li>
       <li>Appels téléphoniques générés</li>
       <li>Demandes d'itinéraire</li>
-      <li>Avis Google (objectif : 4.5+ avec 50+ avis)</li>
+      <li>Volume, qualité et récence des avis Google</li>
       <li>Trafic organique par ville</li>
     </ul>
     
@@ -692,19 +692,10 @@ export const blogPosts: BlogPost[] = [
       <li><strong>Oublier les avis :</strong> Répondre à TOUS les avis, positifs et négatifs</li>
     </ol>
     
-    <h2>Budget SEO Local</h2>
-    <p><strong>Investissement recommandé :</strong></p>
-    <ul>
-      <li><strong>Audit SEO initial :</strong> 5000-12000 MAD</li>
-      <li><strong>Optimisation technique :</strong> 8000-20000 MAD (one-time)</li>
-      <li><strong>Création contenu :</strong> 3000-6000 MAD/mois</li>
-      <li><strong>Netlinking :</strong> 4000-10000 MAD/mois</li>
-      <li><strong>Suivi et reporting :</strong> 2000-4000 MAD/mois</li>
-    </ul>
+    <h2>Cadrer l’investissement SEO local</h2>
+    <p>Le périmètre dépend de l’état technique du site, du nombre de villes, de la concurrence et du volume de contenu à produire. Un dispositif sérieux distingue l’audit, les corrections techniques, la création éditoriale, l’autorité externe et le suivi. Le SEO construit un actif dans la durée : aucun rendement standard ne peut être promis avant l’analyse de la situation de départ.</p>
     
-    <p><strong>ROI attendu :</strong> Les premiers résultats apparaissent après 3-6 mois, avec un ROI moyen de 300-500% après 12 mois d'optimisation continue.</p>
-    
-    <p>Link Agency accompagne les entreprises marocaines dans leur stratégie SEO local depuis plus de 11 ans. Contactez-nous pour un audit gratuit de votre visibilité en ligne.</p>
+    <p>Link Agency accompagne les entreprises marocaines dans leur stratégie de visibilité locale. Contactez directement Badre pour cadrer les priorités SEO de votre entreprise.</p>
     `,
     author: 'SEO Team',
     publishDate: '2024-01-28',
@@ -722,7 +713,7 @@ export const blogPosts: BlogPost[] = [
     excerpt: 'Les réseaux sociaux au Maroc ne sont pas une fin en soi. Analyse stratégique pour dirigeants : comment les transformer en vecteur de cohérence et d\'expression de votre identité de marque.',
     content: `
     <h2>Pourquoi les réseaux sociaux sont mal utilisés par les entreprises</h2>
-    <p>Avec plus de 23 millions d'utilisateurs actifs, les réseaux sociaux au Maroc représentent un potentiel de visibilité considérable. Pourtant, la majorité des entreprises marocaines n'en tirent pas la valeur stratégique qu'elles pourraient. Le problème n'est pas technique, il est conceptuel.</p>
+    <p>Les réseaux sociaux occupent une place majeure dans les usages numériques au Maroc. Pourtant, beaucoup d’entreprises n’en tirent pas la valeur stratégique qu’elles pourraient. Le problème n’est pas seulement technique, il est d’abord conceptuel.</p>
     
     <p>Trop de dirigeants considèrent les réseaux sociaux comme un canal de diffusion publicitaire ou un outil de community management opérationnel. Cette vision réductrice conduit à des investissements dispersés, des contenus interchangeables et une présence digitale qui ne construit rien de durable. Les publications s'accumulent sans cohérence, les messages varient au gré des tendances, et la marque devient invisible malgré une activité apparente.</p>
     
@@ -805,13 +796,13 @@ export const blogPosts: BlogPost[] = [
     excerpt: 'Comment optimiser votre présence locale sur Google pour attirer plus de clients dans les grandes villes marocaines. Stratégies Google Business Profile et citations locales.',
     content: `
     <h2>Le SEO local : un enjeu majeur pour les entreprises marocaines en 2025</h2>
-    <p>En 2025, plus de 75% des recherches locales au Maroc aboutissent à une visite en magasin dans les 24 heures. Optimiser votre présence locale n'est plus une option, c'est une nécessité vitale pour votre business.</p>
+    <p>Une recherche locale traduit souvent une intention concrète : comparer, appeler, demander un itinéraire ou se rendre sur place. Optimiser cette présence aide l’entreprise à apparaître au moment où la décision se forme.</p>
     
     <h3>État des lieux du SEO local au Maroc</h3>
     <ul>
-      <li><strong>Casablanca</strong> : 3.2 millions de recherches locales mensuelles</li>
+      <li><strong>Casablanca</strong> : forte densité de recherches et de concurrence locale</li>
       <li><strong>Rabat</strong> : 1.8 million de recherches locales mensuelles</li>
-      <li><strong>Marrakech</strong> : 2.5 millions (dont 60% touristes internationaux)</li>
+      <li><strong>Marrakech</strong> : forte composante touristique et internationale</li>
       <li><strong>Tanger</strong> : 1.2 million de recherches locales mensuelles</li>
       <li><strong>Fès</strong> : 900 000 recherches locales mensuelles</li>
     </ul>
@@ -845,7 +836,7 @@ export const blogPosts: BlogPost[] = [
       <li>FAQ locale avec questions spécifiques à chaque région</li>
     </ul>
     
-    <p>Link Agency accompagne +200 entreprises marocaines dans leur stratégie SEO local. Contactez-nous pour un audit gratuit de votre visibilité locale.</p>
+    <p>Link Agency accompagne des entreprises marocaines dans leur stratégie de visibilité locale. Contactez directement Badre pour cadrer les priorités SEO de votre entreprise.</p>
     `,
     author: 'SEO Team Link Agency',
     publishDate: '2025-11-15',
@@ -863,35 +854,35 @@ export const blogPosts: BlogPost[] = [
     excerpt: 'Intelligence artificielle, commerce social, marketing conversationnel : découvrez les tendances qui redéfinissent le marketing digital au Maroc en 2025.',
     content: `
     <h2>Le marketing digital marocain en pleine révolution</h2>
-    <p>2025 marque un tournant décisif pour le digital au Maroc. Avec 32 millions d'internautes et un taux de pénétration mobile de 95%, les opportunités n'ont jamais été aussi nombreuses.</p>
+    <p>Les usages numériques au Maroc continuent de progresser et les parcours sont largement mobiles. L’opportunité est réelle, mais elle exige une stratégie adaptée au contexte, aux langues et au niveau de maturité de chaque marque.</p>
     
     <h3>Chiffres clés du digital marocain en 2025</h3>
     <ul>
-      <li><strong>Internautes</strong> : 32 millions (+15% vs 2024)</li>
-      <li><strong>Utilisateurs mobile</strong> : 28 millions</li>
-      <li><strong>E-commerce</strong> : 45 milliards MAD de transactions</li>
-      <li><strong>Réseaux sociaux</strong> : 25 millions d'utilisateurs actifs</li>
+      <li><strong>Usages numériques</strong> : une audience large, mobile et multilingue</li>
+      <li><strong>Mobile</strong> : point d’entrée dominant pour de nombreux parcours</li>
+      <li><strong>E-commerce</strong> : croissance des usages, avec des contraintes locales de paiement et de livraison</li>
+      <li><strong>Réseaux sociaux</strong> : rôle central dans la découverte et la conversation</li>
     </ul>
     
     <h2>Les 5 tendances majeures de 2025</h2>
     
     <h3>1. L'IA générative dans le marketing</h3>
-    <p>Les entreprises marocaines adoptent massivement l'IA pour la création de contenu, le service client automatisé et l'analyse prédictive. +60% d'efficacité constatée sur les campagnes optimisées par IA.</p>
+    <p>Les entreprises marocaines explorent l’IA pour la création de contenu, le service client et l’analyse. Les gains dépendent toutefois de la qualité des données, du contrôle humain et de l’intégration aux processus existants.</p>
     
     <h3>2. Le commerce social explose</h3>
-    <p>Instagram Shopping et TikTok Shop révolutionnent l'achat en ligne au Maroc. 35% des jeunes marocains ont déjà acheté via les réseaux sociaux en 2025.</p>
+    <p>Instagram et TikTok rapprochent contenu, recommandation et achat. Leur pertinence dépend toutefois de la cible, de la disponibilité des fonctionnalités et de la capacité de la marque à produire régulièrement.</p>
     
     <h3>3. Marketing conversationnel via WhatsApp</h3>
-    <p>Avec 22 millions d'utilisateurs WhatsApp au Maroc, le marketing conversationnel devient incontournable. Chatbots, catalogues produits, paiements intégrés.</p>
+    <p>WhatsApp occupe une place importante dans les échanges commerciaux au Maroc. Il peut relier publicité, conversation, catalogue et suivi, avec une reprise humaine lorsque la demande l’exige.</p>
     
     <h3>4. Vidéo courte et Reels</h3>
-    <p>Le format vidéo court domine : TikTok, Instagram Reels, YouTube Shorts. Les marques marocaines investissent 40% de leur budget content en vidéo.</p>
+    <p>La vidéo courte structure une part importante des usages sur TikTok, Instagram Reels et YouTube Shorts. Elle doit toutefois rester cohérente avec la marque et les capacités de production.</p>
     
     <h3>5. Personnalisation avancée</h3>
-    <p>Grâce à la data first-party, les campagnes ultra-personnalisées génèrent 3x plus de conversions. Segmentation fine par ville, comportement, historique d'achat.</p>
+    <p>La donnée first-party permet une segmentation plus pertinente par ville, comportement ou historique d’achat, dans le respect du consentement et des règles de protection des données.</p>
     
     <h2>Budgets et ROI 2025</h2>
-    <p>Budget digital recommandé : 20-30% du budget marketing total. ROI moyen observé chez nos clients : 450% sur les campagnes optimisées.</p>
+    <p>La part du budget consacrée au digital doit être définie selon les objectifs, la maturité de la marque et l’économie du canal. Aucun rendement moyen ne remplace un modèle d’attribution adapté à l’entreprise.</p>
     
     <p>Chez Link Agency Casablanca, nous accompagnons les entreprises marocaines dans leur transformation digitale avec des stratégies data-driven et créatives.</p>
     `,
@@ -915,7 +906,7 @@ export const blogPosts: BlogPost[] = [
     
     <h3>Pourquoi le branding local fonctionne</h3>
     <ul>
-      <li><strong>Fierté nationale</strong> : 78% des Marocains préfèrent acheter local</li>
+      <li><strong>Ancrage local</strong> : l’origine, la proximité et la confiance peuvent soutenir la préférence</li>
       <li><strong>Authenticité</strong> : Les consommateurs fuient les marques génériques</li>
       <li><strong>Différenciation</strong> : Se démarquer des multinationales</li>
       <li><strong>Export</strong> : Le "Made in Morocco" a la cote à l'international</li>
@@ -947,7 +938,7 @@ export const blogPosts: BlogPost[] = [
       <li>Négliger la dimension digitale du branding</li>
     </ol>
     
-    <p>Link Agency accompagne les marques marocaines dans leur stratégie de branding local depuis plus de 11 ans. Nos créations ont remporté plusieurs awards nationaux et internationaux.</p>
+    <p>Link Agency accompagne les marques marocaines dans leur stratégie de branding local, du positionnement à la cohérence des points de contact.</p>
     `,
     author: 'Branding Team Link Agency',
     publishDate: '2025-12-05',
@@ -969,18 +960,18 @@ export const blogPosts: BlogPost[] = [
     
     <h3>Statistiques par plateforme (décembre 2025)</h3>
     <ul>
-      <li><strong>Facebook</strong> : 17.5 millions d'utilisateurs (audience mature 35+)</li>
-      <li><strong>Instagram</strong> : 10.2 millions d'utilisateurs (18-34 ans dominant)</li>
-      <li><strong>TikTok</strong> : 9.5 millions d'utilisateurs (explosion chez les -25 ans)</li>
-      <li><strong>LinkedIn</strong> : 3.2 millions de professionnels</li>
-      <li><strong>Snapchat</strong> : 4.8 millions d'utilisateurs (adolescents)</li>
-      <li><strong>X (Twitter)</strong> : 2.1 millions d'utilisateurs (influenceurs, médias)</li>
+      <li><strong>Facebook</strong> : couverture large et usages communautaires</li>
+      <li><strong>Instagram</strong> : image, lifestyle, retail et découverte</li>
+      <li><strong>TikTok</strong> : attention, culture et formats vidéo natifs</li>
+      <li><strong>LinkedIn</strong> : B2B, expertise et recrutement</li>
+      <li><strong>Snapchat</strong> : audiences jeunes et usages spécifiques</li>
+      <li><strong>X</strong> : actualité, médias et conversations d’influence</li>
     </ul>
     
     <h2>Stratégies par plateforme</h2>
     
     <h3>TikTok Maroc : l'incontournable</h3>
-    <p>Croissance de 40% en 2025. Les marques marocaines qui percent :</p>
+    <p>La plateforme progresse et favorise les marques capables d’adopter ses codes sans perdre leur identité :</p>
     <ul>
       <li>Contenus en darija authentique</li>
       <li>Challenges locaux et tendances marocaines</li>
@@ -992,7 +983,7 @@ export const blogPosts: BlogPost[] = [
     <p>Focus sur Instagram Shopping et Reels. Les stories génèrent 2x plus d'engagement qu'en 2024.</p>
     
     <h3>LinkedIn Maroc : l'eldorado B2B</h3>
-    <p>+35% d'utilisateurs actifs. Idéal pour le recrutement, thought leadership et génération de leads B2B.</p>
+    <p>LinkedIn est particulièrement pertinent pour le recrutement, la prise de parole d’expert et le développement de relations B2B.</p>
     
     <h2>Budgets publicitaires 2025</h2>
     <table>
@@ -1004,7 +995,7 @@ export const blogPosts: BlogPost[] = [
     <h2>Calendrier éditorial marocain</h2>
     <p>Dates clés à intégrer : Ramadan, Aïd (x2), Fête du Trône, rentrée scolaire, soldes d'hiver/été, Saint-Valentin, Black Friday.</p>
     
-    <p>L'équipe Social Media de Link Agency gère +180 comptes au Maroc. Audit gratuit de vos réseaux sur demande.</p>
+    <p>Link Agency cadre la présence sociale autour de la marque, des objectifs business et d’un système de production réaliste. Chaque accompagnement commence par une lecture du contexte et des priorités.</p>
     `,
     author: 'Social Media Team',
     publishDate: '2025-11-20',
@@ -1022,14 +1013,14 @@ export const blogPosts: BlogPost[] = [
     excerpt: 'Lecture stratégique du marché e-commerce marocain en 2025 à destination des dirigeants et directions marketing : architecture de plateforme, paiement, logistique, pilotage de la performance et conformité.',
     content: `
     <h2>Un marché e-commerce devenu structurant pour les marques au Maroc</h2>
-    <p>Le marché e-commerce marocain atteint 45 milliards MAD en 2025, avec une croissance annuelle de 25%. Pour les marques au Maroc, les enseignes retail et les directions marketing, le canal digital n'est plus un canal complémentaire : il devient une composante centrale du dispositif commercial et de la relation client.</p>
+    <p>Le commerce en ligne progresse au Maroc. Pour les marques, les enseignes retail et les directions marketing, le canal digital n’est plus seulement complémentaire : il devient une composante du dispositif commercial et de la relation client.</p>
     
-    <h3>Chiffres clés 2025</h3>
+    <h3>Dynamiques à intégrer</h3>
     <ul>
-      <li><strong>Marché total</strong> : 45 milliards MAD</li>
-      <li><strong>Acheteurs en ligne</strong> : 8.5 millions de Marocains</li>
-      <li><strong>Panier moyen</strong> : 450 MAD</li>
-      <li><strong>Mobile commerce</strong> : 65% des transactions</li>
+      <li><strong>Marché</strong> : progression des transactions et des catégories achetées en ligne</li>
+      <li><strong>Acheteurs</strong> : élargissement progressif de l’audience</li>
+      <li><strong>Panier</strong> : niveaux très variables selon la catégorie et le modèle de livraison</li>
+      <li><strong>Mobile commerce</strong> : parcours à concevoir d’abord pour les petits écrans</li>
       <li><strong>Top catégories</strong> : Mode, électronique, beauté, maison</li>
     </ul>
     
@@ -1046,7 +1037,7 @@ export const blogPosts: BlogPost[] = [
     <ul>
       <li><strong>CMI (Centre Monétique Interbancaire)</strong> : standard de paiement carte local</li>
       <li><strong>Solutions internationales (PayPal, Stripe via partenaires)</strong> : pour les flux cross-border</li>
-      <li><strong>Cash on Delivery</strong> : encore 60% des transactions, à industrialiser sans dégrader la marge</li>
+      <li><strong>Cash on Delivery</strong> : un usage encore important à industrialiser sans dégrader la marge</li>
       <li><strong>M-Wallet et paiement mobile</strong> : courbe d'adoption forte, à intégrer au funnel</li>
     </ul>
     
@@ -1056,7 +1047,7 @@ export const blogPosts: BlogPost[] = [
       <li><strong>Amana</strong> : Filiale de Barid Al-Maghrib</li>
       <li><strong>Colis Express</strong> : Réseau national dense</li>
       <li><strong>GLS Maroc</strong> : Qualité premium</li>
-      <li><strong>Réseaux de points relais</strong> : levier d'optimisation du coût de livraison (+15% d'adoption)</li>
+      <li><strong>Réseaux de points relais</strong> : un levier d’optimisation du coût et de la disponibilité de livraison</li>
     </ul>
     
     <h2>Pilotage marketing : performance et brand equity</h2>
@@ -1089,16 +1080,16 @@ export const blogPosts: BlogPost[] = [
     
     <h3>Adoption de l'IA au Maroc (2025)</h3>
     <ul>
-      <li><strong>Grandes entreprises</strong> : 45% utilisent l'IA activement</li>
-      <li><strong>PME</strong> : 22% expérimentent des outils IA</li>
-      <li><strong>Startups</strong> : 60% intègrent l'IA dès leur création</li>
-      <li><strong>ROI moyen</strong> : +35% de productivité</li>
+      <li><strong>Grandes entreprises</strong> : intégrations plus structurées dans certains métiers</li>
+      <li><strong>PME</strong> : expérimentations ciblées selon les cas d’usage</li>
+      <li><strong>Startups</strong> : intégration plus précoce des outils d’IA dans les opérations</li>
+      <li><strong>Valeur attendue</strong> : temps gagné, meilleure qualité ou décisions plus rapides selon le processus</li>
     </ul>
     
     <h2>Cas d'usage IA pour les entreprises marocaines</h2>
     
     <h3>1. Service client automatisé</h3>
-    <p>Chatbots multilingues (français, arabe, darija) sur WhatsApp et sites web. Réduction de 60% des demandes simples, disponibilité 24/7.</p>
+    <p>Les assistants multilingues en français, arabe et darija peuvent traiter certaines demandes simples sur WhatsApp ou sur un site, à condition de prévoir une reprise humaine claire.</p>
     
     <h3>2. Marketing et création de contenu</h3>
     <ul>
@@ -1238,7 +1229,7 @@ export const blogPosts: BlogPost[] = [
     excerpt: 'دليل استراتيجي شامل لاختيار وكالة تسويق رقمي بالمغرب: المعايير الأساسية، الأخطاء الشائعة، ونموذج التقييم لرؤساء الأقسام والمديرين.',
     content: `
     <h2>لماذا أصبح اختيار وكالة التسويق الرقمي قراراً استراتيجياً</h2>
-    <p>في سنة 2026، لم يعد التسويق الرقمي خياراً تكميلياً للمؤسسات المغربية، بل أصبح محرّكاً مباشراً للنمو التجاري. الشركات الرائدة في قطاعات البنوك والتأمين والقروض الاستهلاكية تستثمر اليوم بين 15% و25% من ميزانيتها التسويقية في القنوات الرقمية، واختيار الوكالة المناسبة يمكن أن يضاعف أو يدمّر العائد على الاستثمار.</p>
+    <p>لم يعد التسويق الرقمي خياراً تكميلياً للمؤسسات المغربية، بل أصبح جزءاً من النمو التجاري. تختلف نسبة الاستثمار المناسبة حسب القطاع والمنتج ونضج المؤسسة، لذلك يجب ربطها بأهداف وقياس واضحين.</p>
     <p>المشكلة الحقيقية ليست في غياب الوكالات بالمغرب، بل في تشتّت العرض: مئات الوكالات في الدار البيضاء والرباط ومراكش، تقدّم خدمات متشابهة في المظهر، مختلفة جذرياً في الجوهر. كيف يميّز المدير التنفيذي بين وكالة تنفيذية بسيطة ووكالة قادرة على قيادة P&L رقمي حقيقي؟</p>
 
     <h2>المعايير الأساسية لتقييم وكالة تسويق رقمي بالمغرب</h2>
@@ -1249,7 +1240,7 @@ export const blogPosts: BlogPost[] = [
     <p>وكالة بدون منظومة attribution multi-touch هي وكالة تنفيذية فقط. الوكالات الاستراتيجية تستثمر في أدوات القياس (GA4, Server-Side Tagging, CRM Integration) لتقديم رؤية واضحة لمصدر كل عميل محتمل وكلفة اكتسابه الحقيقية.</p>
 
     <h3>3. الخبرة في التسويق ثلاثي اللغات</h3>
-    <p>الجمهور المغربي يستهلك المحتوى بالفرنسية والعربية والدارجة. وكالة لا تتقن SEO باللغة العربية تفقد 40% إلى 60% من حجم البحث المحلي. اطلب أمثلة ملموسة لمحتوى منشور بالعربية وأداءه على Google.</p>
+    <p>الجمهور المغربي يستهلك المحتوى بالفرنسية والعربية والدارجة. تجاهل السيو باللغة العربية يحدّ من الوصول إلى جزء مهم من البحث المحلي. اطلب أمثلة ملموسة لمحتوى منشور بالعربية وأدائه على Google.</p>
 
     <h3>4. التوثيق المنهجي والشفافية</h3>
     <p>الوكالات الرائدة تقدّم منهجية موثّقة: دفاتر تحملات واضحة، dashboards شهرية، اجتماعات COPIL منتظمة. غياب هذه العناصر مؤشر على وكالة تكتيكية لا استراتيجية.</p>
@@ -1275,7 +1266,7 @@ export const blogPosts: BlogPost[] = [
     <p>✅ <strong>من هو الفريق الذي سيشتغل فعلياً على ملفّنا (سينيور أم جونيور)؟</strong></p>
 
     <h2>لماذا اختار رؤساء البنوك والتأمين Link Agency</h2>
-    <p>Link Agency هي الوكالة الهجينة الوحيدة بالمغرب التي تجمع بين تنفيذ إبداعي على أعلى مستوى وقدرة استشارية في قيادة P&L الرقمي. أكثر من 11 سنة من الخبرة في القطاعات المنظّمة، فريق من 10 خبراء سينيور بالدار البيضاء ومراكش، ومنهجية موثّقة "Link Performance System": Acquire → Qualify → Convert → Optimize.</p>
+    <p>Link Agency تجمع بين التوجيه الاستراتيجي والتنسيق التنفيذي. يقود المؤسس الملفات الرئيسية مباشرة، ويستعين بشبكة من المتخصصين حسب احتياجات كل مشروع، من دون الادعاء بوجود فريق داخلي دائم.</p>
     <p>نعمل بنموذج هجين فريد: وكالة تنفيذ + كابينه تدبير الأداء. كل درهم يُستثمر يُربط بعميل محتمل مؤهَّل، وكل حملة تندرج ضمن P&L رقمي قابل للقياس. هذا ما يميّزنا عن الوكالات التقليدية التي تقدّم خدمات منعزلة بدون رؤية شاملة للأداء التجاري.</p>
 
     <h2>خلاصة: استثمر في الاستراتيجية قبل التنفيذ</h2>
@@ -1297,7 +1288,7 @@ export const blogPosts: BlogPost[] = [
     excerpt: 'دليل تقني واستراتيجي لإطلاق حملات Meta Ads فعّالة للبنوك بالمغرب: التموضع، الاستهداف، الامتثال التنظيمي وقياس الأداء.',
     content: `
     <h2>الإعلانات الرقمية في القطاع البنكي المغربي : الواقع والإمكانات</h2>
-    <p>القطاع البنكي المغربي يستثمر سنوياً أكثر من 800 مليون درهم في الاتصال والتسويق، لكنّ حصة الرقمي لا تتجاوز 18% في المتوسط، مقارنة بـ 45% في فرنسا و60% في الإمارات. هذه الفجوة تمثّل فرصة استراتيجية للبنوك التي تجرؤ على الاستثمار المنهجي في Meta Ads (Facebook + Instagram).</p>
+    <p>يعمل القطاع البنكي المغربي في بيئة شديدة التنافس والتنظيم. تمثّل القنوات الرقمية فرصة عندما تُربط بأهداف تجارية واضحة، بقياس موثوق وتجربة تحويل متوافقة مع متطلبات القطاع.</p>
     <p>لكنّ القطاع البنكي يخضع لقيود تنظيمية صارمة من بنك المغرب وCNDP، مما يفرض منهجية متخصّصة. البنوك التي تنسخ ممارسات قطاعات أخرى (التجارة الإلكترونية، السياحة) تفشل بشكل منهجي.</p>
 
     <h2>الإطار التنظيمي : ما يمكن وما لا يمكن للبنوك القيام به</h2>
@@ -1309,7 +1300,7 @@ export const blogPosts: BlogPost[] = [
 
     <h2>هندسة حملة Meta Ads فعّالة للبنوك</h2>
     <h3>الخطوة 1 : تحديد المنتج وقصة التموضع</h3>
-    <p>كل منتج بنكي (قرض شخصي، حساب بنكي، تأمين، استثمار) يستهدف جمهوراً مختلفاً ويتطلّب رسالة مختلفة. الخطأ الشائع هو إطلاق حملة "بنك عام" بدون منتج محدّد. الحملات الناجحة تركّز على منتج واحد بقصة واضحة (مثال: "قرض شخصي بنسبة فائدة 5.9% خلال 48 ساعة").</p>
+    <p>كل منتج بنكي، مثل القرض الشخصي أو الحساب أو التأمين أو الاستثمار، يستهدف جمهوراً مختلفاً ويتطلّب رسالة مختلفة. الخطأ الشائع هو إطلاق حملة عامة بدون منتج أو منفعة محدّدة.</p>
 
     <h3>الخطوة 2 : هيكلة الحملات (Campaign Structure)</h3>
     <p>هيكلة موصى بها لبنك مغربي:</p>
@@ -1318,7 +1309,7 @@ export const blogPosts: BlogPost[] = [
     <p>✅ <strong>حملة Conversion :</strong> Lead Form Ads مع تكامل CRM لتسجيل العملاء المحتملين مباشرة في النظام البنكي.</p>
 
     <h3>الخطوة 3 : الاستهداف الجغرافي والديموغرافي</h3>
-    <p>التركيز على المدن الكبرى (الدار البيضاء، الرباط، طنجة، مراكش، فاس، أكادير) حيث توجد 70% من قاعدة العملاء البنكية الفعلية. استهداف فئة 25-55 سنة مع شرط CSP+ (مدراء، أطر، مهنيون).</p>
+    <p>يُبنى الاستهداف حسب المنتج والبيانات الفعلية: المدن، الفئات المهنية، مرحلة الحياة والقدرة على الاستفادة من العرض. لا توجد نسبة واحدة صالحة لكل بنك أو منتج.</p>
 
     <h3>الخطوة 4 : الإبداعات (Creatives) المتوافقة مع الثقافة المغربية</h3>
     <p>الإبداعات الناجحة بالمغرب تجمع بين الاحترافية البنكية والقرب الثقافي: استعمال الدارجة في النصوص (بدون مبالغة)، وجوه مغربية أصيلة، إعدادات حضرية مغربية مألوفة. الإبداعات المستوردة من حملات أوروبية تفشل بشكل منهجي.</p>
@@ -1332,9 +1323,9 @@ export const blogPosts: BlogPost[] = [
 
     <h2>حالة دراسية : كيف ضاعفت Link Agency أداء بنك مغربي رائد</h2>
     <p>اشتغلنا مع مؤسسة بنكية مغربية رائدة على إعادة هيكلة منظومتها الإعلانية على Meta. النتائج بعد 9 أشهر:</p>
-    <p>✅ <strong>تخفيض CPL بـ 47%</strong> (من 380 درهم إلى 201 درهم).</p>
-    <p>✅ <strong>زيادة معدّل التحويل بـ 62%</strong> بفضل تحسين Lead Forms وتكامل CRM.</p>
-    <p>✅ <strong>+34% ملفّات قروض شخصية</strong> مفتوحة شهرياً عبر القناة الرقمية.</p>
+    <p>✅ <strong>خفض كلفة العميل المحتمل المؤهّل</strong> عبر تحسين الاستهداف والنماذج.</p>
+    <p>✅ <strong>رفع معدّل التحويل</strong> بربط Lead Forms بنظام CRM وعملية متابعة واضحة.</p>
+    <p>✅ <strong>زيادة الملفات القابلة للمعالجة</strong> عبر تحسين جودة البيانات والتأهيل.</p>
 
     <h2>خلاصة : Meta Ads ليست خياراً، بل ضرورة للبنوك المغربية</h2>
     <p>البنوك التي ترفض الاستثمار المنهجي في Meta Ads ستفقد حصتها السوقية لصالح المنافسين الأكثر جرأة. لكنّ النجاح يتطلّب منهجية متخصّصة، احترام صارم للإطار التنظيمي، وفهم عميق للسلوك الرقمي للمغاربة. هذه هي الخبرات التي تقدّمها Link Agency للبنوك الرائدة بالمغرب.</p>
@@ -1355,7 +1346,7 @@ export const blogPosts: BlogPost[] = [
     excerpt: 'الدليل المرجعي للسيو بالمغرب: المنهجية، الكلمات المفتاحية، السيو التقني، استراتيجية المحتوى ثلاثي اللغات وقياس الأداء.',
     content: `
     <h2>لماذا أصبح السيو محرّك النمو الأوّل للشركات المغربية</h2>
-    <p>في 2026، 78% من القرارات الشرائية بالمغرب تبدأ ببحث على Google. الشركات الظاهرة في الصفحة الأولى تستحوذ على 91% من النقرات. هذا يعني أنّ غياب استراتيجية SEO منهجية يساوي إهداء حصة السوق للمنافسين.</p>
+    <p>يبدأ جزء مهم من رحلات الشراء ببحث على Google. الظهور في النتائج ذات الصلة يمنح العلامة فرصة الدخول في قائمة الاختيار، بينما يترك غياب استراتيجية SEO المساحة للمنافسين.</p>
     <p>لكنّ السيو بالمغرب يختلف جذرياً عن السيو في الأسواق الناطقة بالفرنسية أو الإنجليزية: الجمهور يبحث بثلاث لغات (عربية، فرنسية، دارجة)، Google يطبّق خوارزميات محلية، والمنافسة الرقمية لا تزال في طور النضج، مما يخلق فرصة استراتيجية للشركات الجريئة.</p>
 
     <h2>المنهجية الشاملة للسيو بالمغرب</h2>
@@ -1363,7 +1354,7 @@ export const blogPosts: BlogPost[] = [
     <p>كل استراتيجية سيو تبدأ بتدقيق تقني صارم: سرعة الموقع (Core Web Vitals), بنية URL, hreflang للغات المتعدّدة, schema.org structured data, mobile-first indexing. الأخطاء التقنية تدمّر السيو حتى لو كان المحتوى ممتازاً.</p>
 
     <h3>المرحلة 2 : البحث عن الكلمات المفتاحية ثلاثي اللغات</h3>
-    <p>المغربي يبحث بطريقة هجينة: "agence marketing digital maroc"، "وكالة تسويق رقمي المغرب"، "wakala marketing rakami". كل لغة تخلق فرصة منفصلة. الشركات التي تركّز على الفرنسية فقط تفقد 50% من حجم البحث المتاح.</p>
+    <p>يبحث المستخدم المغربي بصيغ هجينة: "agence marketing digital maroc"، "وكالة تسويق رقمي المغرب" أو تعبيرات بالدارجة. كل لغة تخلق فرصاً مختلفة، والتركيز على الفرنسية فقط يضيّق التغطية الدلالية.</p>
 
     <h3>المرحلة 3 : هيكلة المحتوى (Content Architecture)</h3>
     <p>اعتماد نموذج Pillar-Cluster: مقالات عمودية (3000+ كلمة) تغطّي موضوعاً شاملاً، محاطة بـ 8-12 مقالاً تابعاً يستهدف كلمات مفتاحية طويلة. هذه البنية تخلق سلطة موضوعية (Topical Authority) يكافئها Google بترتيب أعلى.</p>
@@ -1375,7 +1366,7 @@ export const blogPosts: BlogPost[] = [
     <p>الحصول على روابط من مواقع مغربية ذات سلطة (le360, hespress, médias 24): مقالات ضيف، شراكات إعلامية، تذكُّرات مؤسّسية. روابط أجنبية ذات سلطة عالية (.fr, .com) تعزّز السلطة الدولية.</p>
 
     <h2>السيو العربي : الميزة التنافسية المُهملة</h2>
-    <h3>لماذا 90% من الشركات المغربية تتجاهل السيو العربي</h3>
+    <h3>لماذا تتجاهل شركات مغربية كثيرة السيو العربي</h3>
     <p>السبب بسيط: نقص الخبرة. الوكالات المغربية ركّزت تاريخياً على الفرنسية، تاركة سوقاً ضخمة للسيو العربي بدون منافسة جدّية. هذه فرصة استراتيجية: الشركات التي تستثمر في محتوى عربي عالي الجودة تحتلّ المرتبات الأولى بسهولة.</p>
 
     <h3>القواعد التقنية للسيو العربي</h3>
@@ -1400,7 +1391,7 @@ export const blogPosts: BlogPost[] = [
     <p>✅ <strong>السنة 2 وما بعد :</strong> هيمنة على القطاع، انخفاض كلفة الاكتساب.</p>
 
     <h2>كيف تساعد Link Agency الشركات المغربية في السيو</h2>
-    <p>Link Agency تجمع نادراً بين خبرتين : السيو التقني المتقدّم (مرجعي في فرنسا) والسيو العربي العميق. منهجيتنا "Link SEO System" تنتج 20-30% نموّاً سنوياً في الزوّار العضويين للشركات الرائدة بالمغرب، مع تركيز خاص على القطاعات المنظّمة (بنوك، تأمين، عقار، صحة).</p>
+    <p>تتعامل Link Agency مع السيو كنظام يجمع التقنية، البنية التحريرية واللغات المستخدمة في المغرب. تُحدَّد أهداف النمو بعد تدقيق الوضع الحالي والمنافسة، لا عبر وعد موحّد مسبق.</p>
     `,
     author: 'Link Agency',
     publishDate: '2026-04-22',
@@ -1447,7 +1438,7 @@ export const blogPosts: BlogPost[] = [
     <p>✅ <strong>Google Ads (Search) :</strong> القناة #1 لتوليد عملاء محتملين بنيّة شراء عالية ("تأمين سيارة الدار البيضاء"، "قرض استهلاكي سريع").</p>
     <p>✅ <strong>Meta Ads (Facebook + Instagram) :</strong> ممتازة للوعي والإعادة الاستهداف (Retargeting).</p>
     <p>✅ <strong>YouTube Ads :</strong> فيديوهات تعليمية قصيرة (15-30 ثانية) تبني المصداقية.</p>
-    <p>✅ <strong>SEO :</strong> الاستثمار طويل المدى الذي يخفّض كلفة الاكتساب بـ 40-60% بعد سنتين.</p>
+    <p>✅ <strong>SEO :</strong> استثمار طويل المدى يمكنه تقليل الاعتماد على الزيارات المدفوعة عندما تُبنى سلطة عضوية حقيقية.</p>
     <p>✅ <strong>WhatsApp Business :</strong> القناة الأكثر استعمالاً في المغرب لإدارة الاتصال مع العملاء.</p>
 
     <h2>قياس الأداء الحقيقي</h2>
@@ -1458,7 +1449,7 @@ export const blogPosts: BlogPost[] = [
     <p>✅ <strong>Net Revenue Retention :</strong> نسبة احتفاظ الإيرادات من العملاء الحاليين.</p>
 
     <h2>لماذا تختار شركات التأمين والقروض المغربية Link Agency</h2>
-    <p>Link Agency تتمتّع بأكثر من 11 سنة من الخبرة في القطاعات المالية المنظّمة بالمغرب. منهجيتنا الهجينة (وكالة تنفيذ + كابينه تدبير الأداء) مصمّمة خصّيصاً للقطاعات التي تحتاج إلى احتراف تنظيمي عالٍ وقياس صارم للـ ROI. نعمل مع رؤساء التسويق والعمليات لإنشاء منظومات تسويق رقمي تولّد عملاء محتملين مؤهّلين بكلفة مُحسَّنة، مع احترام كامل لمتطلّبات ACAPS وبنك المغرب وCNDP.</p>
+    <p>منذ تأسيس Link Agency سنة 2015، تجمع الوكالة بين الاستراتيجية والتنسيق التنفيذي. في القطاعات المنظّمة، يبدأ العمل بتحديد المسؤوليات، القياس ومتطلبات الامتثال قبل إطلاق الحملات.</p>
     `,
     author: 'Link Agency',
     publishDate: '2026-04-29',
@@ -1475,8 +1466,8 @@ export const blogPosts: BlogPost[] = [
     title: 'كيف تقيس عائد الاستثمار (ROI) لحملاتك الرقمية بالمغرب : دليل المدير المالي',
     excerpt: 'دليل تقني لقياس ROI الحقيقي للتسويق الرقمي بالمغرب: نماذج الإسناد، حساب CAC وLTV، تكامل CRM ولوحات القيادة المالية.',
     content: `
-    <h2>لماذا 80% من الشركات المغربية لا تعرف ROI الحقيقي لتسويقها الرقمي</h2>
-    <p>السؤال الذي يطرحه كل مدير مالي على مدير التسويق: "أنفقنا 500,000 درهم في الإعلانات الرقمية هذا الفصل. ما هو العائد الفعلي؟". في 80% من الحالات، الجواب غامض: "زاد الوعي بالعلامة"، "حقّقنا 2 مليون مشاهدة"، "العملاء يتحدّثون عنّا أكثر". هذه ليست أجوبة مالية، بل تبريرات تسويقية.</p>
+    <h2>لماذا يصعب على شركات كثيرة معرفة ROI الحقيقي لتسويقها الرقمي</h2>
+    <p>السؤال الذي يطرحه كل مدير مالي على مدير التسويق بسيط: ما هو العائد الفعلي للإنفاق الرقمي؟ عندما يقتصر الجواب على الوعي أو المشاهدات، لا يحصل القرار المالي على ما يحتاجه من وضوح.</p>
     <p>المشكلة الجذرية : غياب منظومة قياس متكاملة تربط كل دريم منفق بإيراد مولَّد. هذا الدليل يقدّم الإطار الذي تستعمله الشركات الرائدة بالمغرب لقياس ROI الحقيقي.</p>
 
     <h2>المعادلة الأساسية : ROI = (الإيراد المولَّد - الاستثمار) / الاستثمار</h2>
@@ -1506,9 +1497,9 @@ export const blogPosts: BlogPost[] = [
 
     <h2>حساب LTV (Lifetime Value) للعميل المغربي</h2>
     <p>الصيغة الكلاسيكية : LTV = (متوسّط قيمة الشراء × تكرار الشراء × مدّة العلاقة). للقطاعات المغربية:</p>
-    <p>✅ <strong>قطاع البنوك :</strong> LTV نموذجي بين 25,000 و80,000 درهم على 7-10 سنوات.</p>
-    <p>✅ <strong>قطاع التأمين :</strong> LTV نموذجي بين 8,000 و30,000 درهم على 5-8 سنوات.</p>
-    <p>✅ <strong>قطاع التجارة الإلكترونية :</strong> LTV بين 800 و4,000 درهم على 18-36 شهراً.</p>
+    <p>✅ <strong>قطاع البنوك :</strong> يُحسب LTV حسب المنتجات، مدة العلاقة، هامش كل منتج ومعدلات الاحتفاظ الفعلية.</p>
+    <p>✅ <strong>قطاع التأمين :</strong> يعتمد LTV على نوع العقد، التجديد، المطالبات والبيع المتقاطع.</p>
+    <p>✅ <strong>قطاع التجارة الإلكترونية :</strong> يعتمد LTV على تكرار الشراء، الهامش والاحتفاظ حسب الفئة.</p>
 
     <h2>النسبة الحاسمة : LTV/CAC Ratio</h2>
     <p>هذه النسبة تحدّد صحّة منظومتك التسويقية:</p>
@@ -1554,7 +1545,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: 'local-casablanca',
     title: "Choisir une Agence Marketing Digital à Casablanca : 7 Critères Stratégiques pour les Directions Marketing",
-    excerpt: "Guide opérationnel pour évaluer et sélectionner une agence marketing digital à Casablanca. Critères, signaux faibles et méthode de short-list pour les marques au Maroc au Maroc.",
+    excerpt: "Guide opérationnel pour évaluer et sélectionner une agence marketing digital à Casablanca. Critères, signaux faibles et méthode de short-list pour les marques au Maroc.",
     content: `
     <h2>Le marché des agences digitales à Casablanca en 2026 : densité et opacité</h2>
     <p>Casablanca concentre l'écrasante majorité des agences marketing digital du Maroc. Cette densité, qui pourrait sembler une opportunité pour les annonceurs, crée en réalité une difficulté structurelle : comment distinguer un véritable partenaire stratégique d'un prestataire d'exécution déguisé ? Pour une direction marketing établie, le coût d'erreur d'un mauvais choix d'agence se chiffre en mois de production perdus, en budgets média mal alloués et en perte de confiance interne.</p>
@@ -1594,7 +1585,7 @@ export const blogPosts: BlogPost[] = [
     image: '/assets/blog/agence-casablanca.jpg',
     readTime: 9,
     tags: ['agence casablanca', 'marketing digital', 'sélection agence', 'direction marketing', 'maroc'],
-    metaDescription: "Comment choisir une agence marketing digital à Casablanca : 7 critères stratégiques pour les directions marketing de marques au Maroc au Maroc.",
+    metaDescription: "Comment choisir une agence marketing digital à Casablanca : 7 critères stratégiques pour les directions marketing de marques au Maroc.",
     metaKeywords: "agence marketing digital casablanca, choisir agence digitale maroc, agence communication casablanca, agence SEO casablanca, agence social media casablanca"
   },
   {
@@ -1615,13 +1606,13 @@ export const blogPosts: BlogPost[] = [
     <p>Les principaux marchés émetteurs vers Marrakech sont la France, l'Espagne, le Royaume-Uni, l'Allemagne et de plus en plus les marchés du Golfe. Une <a href="/social-media">stratégie social media</a> efficace doit produire en français, en anglais, et idéalement en arabe pour la clientèle régionale. Les formats Instagram et TikTok dominent, avec une logique éditoriale orientée inspiration plus que conversion directe.</p>
 
     <h2>Levier 1 : le SEO destination, sous-exploité par la majorité des établissements</h2>
-    <p>"Hôtel à Marrakech", "riad médina Marrakech", "hôtel luxe palmeraie" : ces requêtes touristiques drainent des dizaines de milliers de recherches mensuelles. La majorité des établissements marrakchis dépendent excessivement des OTA (Booking, Expedia) qui captent 15 à 25 % de commission. Une stratégie SEO bien menée permet de récupérer une part significative du trafic direct.</p>
+    <p>Les requêtes comme « hôtel à Marrakech », « riad médina Marrakech » ou « hôtel luxe palmeraie » traduisent une intention de séjour forte. Beaucoup d’établissements dépendent des plateformes de réservation et de leurs commissions. Une stratégie SEO bien menée peut développer la part de trafic et de réservation directs.</p>
 
     <h2>Levier 2 : l'influence marketing, naturel à Marrakech</h2>
     <p>Marrakech est l'une des destinations les plus instagrammées au monde. Une <a href="/influence-marketing">stratégie d'influence</a> bien construite — sourcing de créateurs internationaux, briefs créatifs précis, séjours en partenariat — démultiplie la notoriété d'un établissement à un coût largement inférieur à la publicité traditionnelle.</p>
 
     <h2>Levier 3 : les campagnes paid media internationales</h2>
-    <p>Meta Ads et Google Ads permettent un ciblage précis par marché émetteur, langue, intérêt et niveau de revenu. Pour un établissement premium marrakchi, un budget mensuel structuré allouant 60 % à la prospection internationale et 40 % au retargeting permet de remplir les périodes creuses et de lisser le taux d'occupation annuel.</p>
+    <p>Meta Ads et Google Ads permettent de travailler par marché émetteur, langue, intérêt et intention. La répartition entre prospection internationale et retargeting doit être décidée selon la saison, les données de réservation et la capacité disponible.</p>
 
     <h2>Levier 4 : l'événementiel comme accélérateur de notoriété</h2>
     <p>Les soirées d'inauguration, takeovers de chefs, partenariats festivals (Marrakech du rire, FIFM, FNH) ou événements privés constituent des accélérateurs puissants. La conception de ces <a href="/evenementiel">événements de marque</a> demande une coordination précise entre stratégie image, production sur place et amplification digitale.</p>
@@ -1696,7 +1687,7 @@ export const faqsEnriched: FAQ[] = [
   {
     id: '2',
     question: 'Quelle est la durée moyenne d\'un projet de branding complet ?',
-    answer: 'Un projet de branding complet prend généralement 6-12 semaines : recherche et stratégie (2 semaines), création et itérations (4-6 semaines), finalisation et guide de style (2-4 semaines). Pour des projets urgents, nous pouvons accélérer le processus avec notre équipe dédiée.',
+    answer: 'Le calendrier d’un projet de branding dépend du niveau de recherche, du nombre de décideurs et du périmètre de déploiement. Il est défini pendant le cadrage, avec des étapes de validation claires.',
     category: 'Branding',
     keywords: ['durée projet branding', 'délai création logo', 'planning identité visuelle', 'timing branding'],
     relatedServices: ['branding', 'stratégie de marque']
@@ -1704,7 +1695,7 @@ export const faqsEnriched: FAQ[] = [
   {
     id: '3',
     question: 'Comment choisir les bons réseaux sociaux pour mon entreprise au Maroc ?',
-    answer: 'Le choix dépend de votre cible : Facebook pour B2B et +35 ans (18M d\'utilisateurs), Instagram pour lifestyle et +25 ans (8M), TikTok pour -25 ans (6M), LinkedIn pour B2B professionnel (2M). Nous analysons votre audience et concurrence pour définir la stratégie optimale.',
+    answer: 'Le choix dépend de la cible, du cycle de décision et du type de contenu que la marque peut réellement produire. Facebook, Instagram, TikTok et LinkedIn n’adressent pas les mêmes usages. Nous analysons l’audience, la concurrence et les ressources avant de définir le dispositif.',
     category: 'Marketing Digital',
     keywords: ['réseaux sociaux maroc', 'facebook maroc', 'instagram maroc', 'stratégie social media'],
     relatedServices: ['content digital', 'social media']
@@ -1728,81 +1719,12 @@ export const faqsEnriched: FAQ[] = [
   {
     id: '6',
     question: 'Proposez-vous des services en darija et en arabe ?',
-    answer: 'Absolument ! Notre équipe maîtrise l\'arabe, le français et la darija. Nous créons du contenu adapté culturellement : posts en darija pour l\'engagement local, communication bilingue pour toucher toutes les audiences marocaines. Expertise multiculturelle garantie.',
+    answer: 'Oui. Le contenu peut être produit en arabe, en français et en darija, avec une adaptation du ton, des références et du niveau de langage à chaque audience.',
     category: 'Services',
     keywords: ['agence darija maroc', 'contenu arabe', 'marketing bilingue', 'communication locale'],
     relatedServices: ['content digital', 'branding local']
   }
 ];
 
-// Témoignages avec rich snippets
-export const testimonials: Testimonial[] = [
-  {
-    id: '1',
-    name: 'Youssef Benali',
-    company: 'Groupe Industriel Marocain',
-    role: 'Directeur Marketing & Communication',
-    content: 'Link Agency a structuré la refonte complète de notre plateforme de marque. Leur approche stratégique, adaptée aux enjeux du marché marocain, a permis d\'unifier notre communication sur l\'ensemble de nos filiales et de renforcer significativement notre notoriété auprès des décideurs.',
-    rating: 5,
-    image: '/assets/media/29365e8a-7e4d-4041-ad14-37f38d1bde1b.png',
-    service: 'Plateforme de marque & Gouvernance',
-    date: '2024-01-10',
-    projectType: 'Refonte de plateforme de marque corporate',
-    results: [
-      { metric: 'Notoriété assistée', value: '+300% en 18 mois' },
-      { metric: 'Cohérence multi-marques', value: '6 filiales unifiées' },
-      { metric: 'Engagement digital', value: '+220% sur LinkedIn' }
-    ]
-  },
-  {
-    id: '2',
-    name: 'Fatima Zahra El Mansouri',
-    company: 'Artisanat Moderne',
-    role: 'Directrice Marketing',
-    content: 'Grâce à leur stratégie digitale, nous avons multiplié nos ventes en ligne par 5. Leur compréhension de la culture marocaine et des réseaux sociaux locaux est exceptionnelle. ROI de 400% sur nos campagnes.',
-    rating: 5,
-    image: '/assets/media/44ffaff6-3a76-466f-ba0b-04f88d100bb0.png',
-    service: 'Marketing Digital',
-    date: '2023-12-15',
-    projectType: 'Stratégie réseaux sociaux & e-commerce',
-    results: [
-      { metric: 'Ventes en ligne', value: '+500% en 8 mois' },
-      { metric: 'ROI campagnes', value: '400%' },
-      { metric: 'Followers Instagram', value: '+15K en 6 mois' }
-    ]
-  },
-  {
-    id: '3',
-    name: 'Omar Benjelloun',
-    company: 'Groupe Immobilier Casa',
-    role: 'Directeur Général',
-    content: 'L\'organisation de notre événement de lancement a été parfaite. 200 invités VIP, coordination impeccable, respect du budget et timing. Link Agency maîtrise l\'événementiel haut de gamme au Maroc.',
-    rating: 5,
-    image: '/assets/media/566ba4a2-ee11-42db-a054-14667389b2c6.png',
-    service: 'Événementiel Premium',
-    date: '2023-11-20',
-    projectType: 'Lancement produit immobilier',
-    results: [
-      { metric: 'Invités présents', value: '200 VIP' },
-      { metric: 'Couverture média', value: '15 articles presse' },
-      { metric: 'Leads générés', value: '85 prospects qualifiés' }
-    ]
-  },
-  {
-    id: '4',
-    name: 'Laila Chraibi',
-    company: 'Beauty & Wellness Spa',
-    role: 'Fondatrice',
-    content: 'Du branding à la communication digitale, Link Agency nous accompagne depuis 3 ans. Leur créativité et professionnalisme ont fait de notre spa une référence à Marrakech. Augmentation de 250% de notre clientèle.',
-    rating: 5,
-    image: '/assets/media/86dfbcc8-1b16-4656-9047-427ad8d69523.png',
-    service: 'Accompagnement 360°',
-    date: '2023-10-05',
-    projectType: 'Branding + Digital + Events',
-    results: [
-      { metric: 'Croissance clientèle', value: '+250% en 2 ans' },
-      { metric: 'Chiffre d\'affaires', value: '+180%' },
-      { metric: 'Satisfaction client', value: '4.9/5 sur Google' }
-    ]
-  }
-];
+// Aucun témoignage n'est publié sans identité, texte et autorisation vérifiables.
+export const testimonials: Testimonial[] = [];

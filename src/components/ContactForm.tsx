@@ -6,6 +6,7 @@ import { Send, Check, AlertCircle, Loader2 } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Form, FormControl, FormField, FormItem, FormMessage } from '@/components/ui/form';
+import { Link } from 'react-router-dom';
 
 const formSchema = z.object({
   nom: z.string()
@@ -13,10 +14,10 @@ const formSchema = z.object({
     .min(2, 'Le nom doit contenir au moins 2 caractères')
     .max(100, 'Le nom est trop long')
     .refine(val => !/<script|javascript:/i.test(val), 'Contenu invalide'),
-  prenom: z.string()
+  fonction: z.string()
     .trim()
-    .min(2, 'Le prénom doit contenir au moins 2 caractères')
-    .max(100, 'Le prénom est trop long')
+    .min(2, 'La fonction doit contenir au moins 2 caractères')
+    .max(100, 'La fonction est trop longue')
     .refine(val => !/<script|javascript:/i.test(val), 'Contenu invalide'),
   email: z.string()
     .trim()
@@ -26,25 +27,27 @@ const formSchema = z.object({
     .trim()
     .min(8, 'Numéro de téléphone trop court')
     .max(20, 'Numéro de téléphone trop long')
-    .refine(val => /^[\d\s\-\+\(\)]+$/.test(val), 'Format de téléphone invalide'),
+    .refine(val => /^[\d\s+()-]+$/.test(val), 'Format de téléphone invalide'),
   entreprise: z.string()
     .trim()
-    .max(200, 'Nom d\'entreprise trop long')
-    .optional(),
+    .min(2, 'Le nom de l’entreprise doit contenir au moins 2 caractères')
+    .max(200, 'Nom d\'entreprise trop long'),
   service: z.string().min(1, 'Veuillez sélectionner un service'),
-  budget: z.string().optional(),
+  budget: z.string().min(1, 'Veuillez sélectionner un budget indicatif'),
   message: z.string()
     .trim()
     .min(20, 'Le message doit contenir au moins 20 caractères')
     .max(1000, 'Le message est trop long (max 1000 caractères)')
     .refine(val => !/<script|javascript:|on\w+=/i.test(val), 'Contenu invalide'),
   delai: z.string().optional(),
-  countryCode: z.string()
+  countryCode: z.string(),
+  consent: z.boolean().refine(Boolean, 'Votre accord est nécessaire pour transmettre la demande')
 });
 
 type FormData = z.infer<typeof formSchema>;
 
 const services = [
+  'Direction marketing externalisée',
   'Branding & Identité visuelle',
   'Social Media Management',
   'Création de contenu',
@@ -55,10 +58,9 @@ const services = [
 ];
 
 const budgets = [
-  'Moins de 100 000 MAD',
-  '100 000 - 250 000 MAD',
-  '250 000 - 500 000 MAD',
-  '500 000 - 1 000 000 MAD',
+  '100 000 à 250 000 MAD',
+  '250 000 à 500 000 MAD',
+  '500 000 à 1 000 000 MAD',
   'Plus de 1 000 000 MAD',
   'À cadrer ensemble'
 ];
@@ -94,7 +96,7 @@ export const ContactForm = () => {
     resolver: zodResolver(formSchema),
     defaultValues: {
       nom: '',
-      prenom: '',
+      fonction: '',
       email: '',
       telephone: '',
       entreprise: '',
@@ -102,7 +104,8 @@ export const ContactForm = () => {
       budget: '',
       message: '',
       delai: '',
-      countryCode: '+212'
+      countryCode: '+212',
+      consent: false
     }
   });
 
@@ -112,12 +115,13 @@ export const ContactForm = () => {
   const onSubmit = async (data: FormData) => {
     setIsSubmitting(true);
 
-    const summary = `Nom: ${data.nom} ${data.prenom}
+    const summary = `Nom: ${data.nom}
+Fonction: ${data.fonction}
 Email: ${data.email}
 Téléphone: ${data.countryCode} ${data.telephone}
-Entreprise: ${data.entreprise || 'Non renseignée'}
+Entreprise: ${data.entreprise}
 Expertise souhaitée: ${data.service}
-Budget: ${data.budget || 'Non renseigné'}
+Budget d’investissement: ${data.budget}
 Horizon: ${data.delai || 'Non renseigné'}
 
 Message:
@@ -128,14 +132,15 @@ ${data.message}`;
       'form-name': 'contact',
       'bot-field': '',
       nom: data.nom,
-      prenom: data.prenom,
+      fonction: data.fonction,
       email: data.email,
       telephone: `${data.countryCode} ${data.telephone}`,
-      entreprise: data.entreprise || '',
+      entreprise: data.entreprise,
       service: data.service,
-      budget: data.budget || '',
+      budget: data.budget,
       delai: data.delai || '',
       message: data.message,
+      consent: data.consent ? 'oui' : 'non',
       summary,
     }).toString();
 
@@ -147,7 +152,7 @@ ${data.message}`;
         body: formBody,
       });
       netlifyOk = res.ok;
-    } catch (e) {
+    } catch {
       netlifyOk = false;
     }
 
@@ -162,7 +167,9 @@ ${data.message}`;
           form_status: netlifyOk ? 'ok' : 'fallback_whatsapp',
         });
       }
-    } catch {}
+    } catch {
+      // Le suivi est facultatif et ne doit jamais bloquer l’envoi.
+    }
 
     // 3) Message WhatsApp préparé (option bonus, plus principal)
     const waMessage = `🚀 NOUVELLE DEMANDE - Link Agency
@@ -177,8 +184,8 @@ ${summary}`;
     toast({
       title: netlifyOk ? 'Demande envoyée avec succès !' : 'Demande enregistrée',
       description: netlifyOk
-        ? 'Notre équipe revient vers vous sous 24h. Vous pouvez aussi nous joindre sur WhatsApp.'
-        : 'Une copie a été préparée pour WhatsApp si vous préférez un contact instantané.',
+        ? 'Badre étudie personnellement votre demande. Vous pouvez aussi poursuivre sur WhatsApp.'
+        : 'Une copie a été préparée pour poursuivre directement sur WhatsApp.',
     });
   };
 
@@ -186,9 +193,9 @@ ${summary}`;
     if (!value) return null;
     const hasError = errors[fieldName];
     return hasError ? (
-      <AlertCircle className="w-4 h-4 sm:w-5 sm:h-5 text-red-400" />
+      <AlertCircle className="h-4 w-4 text-[#9f4f35] sm:h-5 sm:w-5" />
     ) : (
-      <Check className="w-4 h-4 sm:w-5 sm:h-5 text-green-400" />
+      <Check className="h-4 w-4 text-[#765fc4] sm:h-5 sm:w-5" />
     );
   };
 
@@ -198,20 +205,20 @@ ${summary}`;
         (window as unknown as { __lastLeadWA?: string }).__lastLeadWA) ||
       'https://wa.me/212699024526';
     return (
-      <div className="flex flex-col items-center justify-center min-h-[300px] sm:min-h-[400px] text-center px-4">
-        <div className="w-12 h-12 sm:w-16 sm:h-16 bg-green-500 rounded-full flex items-center justify-center mb-4 sm:mb-6 animate-pulse-subtle">
-          <Check className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
+      <div className="flex min-h-[300px] flex-col items-center justify-center px-4 text-center sm:min-h-[400px]">
+        <div className="mb-4 flex h-12 w-12 items-center justify-center bg-[#d7e942] sm:mb-6 sm:h-16 sm:w-16">
+          <Check className="h-6 w-6 text-black sm:h-8 sm:w-8" />
         </div>
-        <h3 className="text-xl sm:text-2xl font-light text-white mb-3 sm:mb-4">Demande reçue !</h3>
-        <p className="text-sm sm:text-base text-gray-300 max-w-md leading-relaxed mb-6">
-          Merci. Notre équipe vous recontacte sous 24h sur l'email indiqué.
-          Vous pouvez aussi poursuivre directement par WhatsApp.
+        <h3 className="mb-3 text-xl font-medium text-black sm:mb-4 sm:text-2xl">Demande reçue</h3>
+        <p className="mb-6 max-w-md text-sm leading-relaxed text-black/60 sm:text-base">
+          Merci. Badre étudie personnellement votre demande.
+          Vous pouvez poursuivre directement par WhatsApp.
         </p>
         <a
           href={waUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 px-5 py-3 bg-white text-black rounded-full text-sm font-medium hover:bg-gray-100 transition-colors"
+          className="inline-flex items-center gap-2 border border-black bg-black px-5 py-3 text-xs font-semibold uppercase tracking-[0.12em] text-white transition-colors hover:bg-[#765fc4]"
         >
           Continuer sur WhatsApp
         </a>
@@ -221,7 +228,7 @@ ${summary}`;
 
   return (
     <Form {...form}>
-      <form name="contact" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 sm:space-y-6 max-w-lg">
+      <form name="contact" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={form.handleSubmit(onSubmit)} className="max-w-2xl space-y-5 sm:space-y-7">
         <input type="hidden" name="form-name" value="contact" />
         <p className="hidden" aria-hidden="true">
           <label>Ne pas remplir : <input name="bot-field" /></label>
@@ -238,21 +245,21 @@ ${summary}`;
                     <input
                       {...field}
                        placeholder="Nom *"
-                      className="w-full bg-transparent border-0 border-b-2 border-gray-600 pb-2 sm:pb-3 text-white placeholder:text-gray-400 focus:outline-none focus:border-white text-base sm:text-lg font-light smooth-hover pr-8"
+                      className="w-full border-0 border-b border-black/30 bg-transparent pb-3 pr-8 text-base text-black placeholder:text-black/35 focus:border-black focus:outline-none sm:text-lg"
                     />
                   </FormControl>
                   <div className="absolute right-0 top-0">
                     {getFieldIcon('nom', field.value)}
                   </div>
                 </div>
-                <FormMessage className="text-red-400 text-xs sm:text-sm mt-1" />
+                <FormMessage className="mt-1 text-xs text-[#9f4f35] sm:text-sm" />
               </FormItem>
             )}
           />
           
           <FormField
             control={form.control}
-            name="prenom"
+            name="fonction"
             render={({ field }) => (
               <FormItem>
                 <div className="relative">
@@ -260,14 +267,14 @@ ${summary}`;
                     <input
                       {...field}
                        placeholder="Fonction *"
-                      className="w-full bg-transparent border-0 border-b-2 border-gray-600 pb-2 sm:pb-3 text-white placeholder:text-gray-400 focus:outline-none focus:border-white text-base sm:text-lg font-light smooth-hover pr-8"
+                      className="w-full border-0 border-b border-black/30 bg-transparent pb-3 pr-8 text-base text-black placeholder:text-black/35 focus:border-black focus:outline-none sm:text-lg"
                     />
                   </FormControl>
                   <div className="absolute right-0 top-0">
-                    {getFieldIcon('prenom', field.value)}
+                    {getFieldIcon('fonction', field.value)}
                   </div>
                 </div>
-                <FormMessage className="text-red-400 text-xs sm:text-sm mt-1" />
+                <FormMessage className="mt-1 text-xs text-[#9f4f35] sm:text-sm" />
               </FormItem>
             )}
           />
@@ -284,15 +291,15 @@ ${summary}`;
                     <input
                       {...field}
                       type="email"
-                      placeholder="Adresse e-mail *"
-                      className="w-full bg-transparent border-0 border-b-2 border-gray-600 pb-2 sm:pb-3 text-white placeholder:text-gray-400 focus:outline-none focus:border-white text-base sm:text-lg font-light smooth-hover pr-8"
+                      placeholder="Email professionnel *"
+                      className="w-full border-0 border-b border-black/30 bg-transparent pb-3 pr-8 text-base text-black placeholder:text-black/35 focus:border-black focus:outline-none sm:text-lg"
                     />
                   </FormControl>
                   <div className="absolute right-0 top-0">
                     {getFieldIcon('email', field.value)}
                   </div>
                 </div>
-                <FormMessage className="text-red-400 text-xs sm:text-sm mt-1" />
+                <FormMessage className="mt-1 text-xs text-[#9f4f35] sm:text-sm" />
               </FormItem>
             )}
           />
@@ -306,13 +313,13 @@ ${summary}`;
                   <FormItem className="w-28 sm:w-32">
                     <Select onValueChange={field.onChange} defaultValue={field.value}>
                       <FormControl>
-                        <SelectTrigger aria-label="Sélectionner un indicatif téléphonique" className="bg-transparent border-0 border-b-2 border-gray-600 text-white focus:border-white rounded-none h-auto pb-2 sm:pb-3 text-sm sm:text-base">
+                        <SelectTrigger aria-label="Sélectionner un indicatif téléphonique" className="h-auto rounded-none border-0 border-b border-black/30 bg-transparent pb-3 text-sm text-black focus:border-black sm:text-base">
                           <SelectValue />
                         </SelectTrigger>
                       </FormControl>
-                      <SelectContent className="bg-black border-gray-700 max-h-48">
+                      <SelectContent className="max-h-48 border-black/15 bg-[#f4f1eb]">
                         {countryCodes.map((country, index) => (
-                          <SelectItem key={index} value={country.code} className="text-white hover:bg-gray-800 text-sm">
+                          <SelectItem key={index} value={country.code} className="text-sm text-black focus:bg-[#d8cec1]">
                             <span className="flex items-center gap-2">
                               <span>{country.flag}</span>
                               <span>{country.code}</span>
@@ -335,15 +342,15 @@ ${summary}`;
                         <input
                           {...field}
                           type="tel"
-                          placeholder="Téléphone *"
-                          className="w-full bg-transparent border-0 border-b-2 border-gray-600 pb-2 sm:pb-3 text-white placeholder:text-gray-400 focus:outline-none focus:border-white text-base sm:text-lg font-light smooth-hover pr-8"
+                          placeholder="WhatsApp *"
+                          className="w-full border-0 border-b border-black/30 bg-transparent pb-3 pr-8 text-base text-black placeholder:text-black/35 focus:border-black focus:outline-none sm:text-lg"
                         />
                       </FormControl>
                       <div className="absolute right-0 top-0">
                         {getFieldIcon('telephone', field.value)}
                       </div>
                     </div>
-                    <FormMessage className="text-red-400 text-xs sm:text-sm mt-1" />
+                    <FormMessage className="mt-1 text-xs text-[#9f4f35] sm:text-sm" />
                   </FormItem>
                 )}
               />
@@ -361,13 +368,14 @@ ${summary}`;
                   <input
                     {...field}
                      placeholder="Entreprise *"
-                    className="w-full bg-transparent border-0 border-b-2 border-gray-600 pb-2 sm:pb-3 text-white placeholder:text-gray-400 focus:outline-none focus:border-white text-base sm:text-lg font-light smooth-hover pr-8"
+                    className="w-full border-0 border-b border-black/30 bg-transparent pb-3 pr-8 text-base text-black placeholder:text-black/35 focus:border-black focus:outline-none sm:text-lg"
                   />
                 </FormControl>
                 <div className="absolute right-0 top-0">
                   {getFieldIcon('entreprise', field.value || '')}
                 </div>
               </div>
+              <FormMessage className="mt-1 text-xs text-[#9f4f35] sm:text-sm" />
             </FormItem>
           )}
         />
@@ -380,19 +388,19 @@ ${summary}`;
             <FormItem>
               <Select onValueChange={field.onChange} value={field.value}>
                 <FormControl>
-                     <SelectTrigger aria-label="Sélectionner l'expertise souhaitée" className="bg-transparent border-0 border-b-2 border-gray-600 text-white focus:border-white rounded-none h-auto pb-2 sm:pb-3 text-base sm:text-lg font-light">
+                     <SelectTrigger aria-label="Sélectionner l'expertise souhaitée" className="h-auto rounded-none border-0 border-b border-black/30 bg-transparent pb-3 text-base text-black focus:border-black sm:text-lg">
                      <SelectValue placeholder="Expertise souhaitée *" className="text-gray-400" />
                   </SelectTrigger>
                 </FormControl>
-                <SelectContent className="bg-black border-gray-700">
+                <SelectContent className="border-black/15 bg-[#f4f1eb]">
                   {services.map((service, index) => (
-                    <SelectItem key={index} value={service} className="text-white hover:bg-gray-800">
+                    <SelectItem key={index} value={service} className="text-black focus:bg-[#d8cec1]">
                       {service}
                     </SelectItem>
                   ))}
                 </SelectContent>
               </Select>
-              <FormMessage className="text-red-400 text-xs sm:text-sm mt-1" />
+              <FormMessage className="mt-1 text-xs text-[#9f4f35] sm:text-sm" />
             </FormItem>
           )}
         />
@@ -405,18 +413,19 @@ ${summary}`;
               <FormItem>
                 <Select onValueChange={field.onChange} value={field.value}>
                   <FormControl>
-                     <SelectTrigger aria-label="Sélectionner le budget digital annuel indicatif" className="bg-transparent border-0 border-b-2 border-gray-600 text-white focus:border-white rounded-none h-auto pb-2 sm:pb-3 text-base sm:text-lg font-light">
-                       <SelectValue placeholder="Budget digital annuel indicatif" className="text-gray-400" />
+                     <SelectTrigger aria-label="Sélectionner le budget d’investissement indicatif" className="h-auto rounded-none border-0 border-b border-black/30 bg-transparent pb-3 text-base text-black focus:border-black sm:text-lg">
+                       <SelectValue placeholder="Budget d’investissement indicatif *" className="text-gray-400" />
                     </SelectTrigger>
                   </FormControl>
-                  <SelectContent className="bg-black border-gray-700">
+                  <SelectContent className="border-black/15 bg-[#f4f1eb]">
                     {budgets.map((budget, index) => (
-                      <SelectItem key={index} value={budget} className="text-white hover:bg-gray-800">
+                      <SelectItem key={index} value={budget} className="text-black focus:bg-[#d8cec1]">
                         {budget}
                       </SelectItem>
                     ))}
                   </SelectContent>
                 </Select>
+                <FormMessage className="mt-1 text-xs text-[#9f4f35] sm:text-sm" />
               </FormItem>
             )}
           />
@@ -428,13 +437,13 @@ ${summary}`;
               <FormItem>
                 <Select onValueChange={field.onChange} value={field.value}>
                   <FormControl>
-                     <SelectTrigger aria-label="Sélectionner l'horizon de déploiement" className="bg-transparent border-0 border-b-2 border-gray-600 text-white focus:border-white rounded-none h-auto pb-2 sm:pb-3 text-base sm:text-lg font-light">
+                     <SelectTrigger aria-label="Sélectionner l'horizon de déploiement" className="h-auto rounded-none border-0 border-b border-black/30 bg-transparent pb-3 text-base text-black focus:border-black sm:text-lg">
                        <SelectValue placeholder="Horizon de déploiement" className="text-gray-400" />
                     </SelectTrigger>
                   </FormControl>
-                  <SelectContent className="bg-black border-gray-700">
+                  <SelectContent className="border-black/15 bg-[#f4f1eb]">
                     {delais.map((delai, index) => (
-                      <SelectItem key={index} value={delai} className="text-white hover:bg-gray-800">
+                      <SelectItem key={index} value={delai} className="text-black focus:bg-[#d8cec1]">
                         {delai}
                       </SelectItem>
                     ))}
@@ -454,8 +463,8 @@ ${summary}`;
                 <FormControl>
                   <textarea
                     {...field}
-                     placeholder="Décrivez votre contexte, vos objectifs business et les leviers à activer... *"
-                    className="w-full bg-transparent border-0 border-b-2 border-gray-600 pb-2 sm:pb-3 text-white placeholder:text-gray-400 focus:outline-none focus:border-white resize-none text-base sm:text-lg font-light smooth-hover pr-8 min-h-[80px] sm:min-h-[100px]"
+                     placeholder="Décrivez l’entreprise, l’enjeu et le résultat attendu… *"
+                    className="min-h-[100px] w-full resize-none border-0 border-b border-black/30 bg-transparent pb-3 pr-8 text-base text-black placeholder:text-black/35 focus:border-black focus:outline-none sm:min-h-[120px] sm:text-lg"
                     rows={3}
                   />
                 </FormControl>
@@ -463,7 +472,21 @@ ${summary}`;
                   {getFieldIcon('message', field.value)}
                 </div>
               </div>
-              <FormMessage className="text-red-400 text-xs sm:text-sm mt-1" />
+              <FormMessage className="mt-1 text-xs text-[#9f4f35] sm:text-sm" />
+            </FormItem>
+          )}
+        />
+
+        <FormField
+          control={form.control}
+          name="consent"
+          render={({ field }) => (
+            <FormItem>
+              <label className="flex cursor-pointer items-start gap-3 text-sm leading-6 text-black/60">
+                <input type="checkbox" name={field.name} ref={field.ref} checked={field.value} onChange={field.onChange} onBlur={field.onBlur} className="mt-1 h-4 w-4 shrink-0 accent-[#765fc4]" />
+                <span>J’accepte que Link Agency utilise ces informations pour étudier ma demande et me répondre. <Link to="/politique-de-confidentialite" className="underline underline-offset-4">Politique de confidentialité</Link>.</span>
+              </label>
+              <FormMessage className="mt-1 text-xs text-[#9f4f35] sm:text-sm" />
             </FormItem>
           )}
         />
@@ -472,7 +495,7 @@ ${summary}`;
           <button
             type="submit"
             disabled={isSubmitting}
-            className="group bg-white text-black px-6 py-3 sm:px-8 sm:py-4 rounded-full hover:bg-gray-100 smooth-hover font-medium flex items-center space-x-2 sm:space-x-3 interactive-button disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none w-full sm:w-auto justify-center"
+            className="group flex w-full items-center justify-center gap-3 border border-[#765fc4] bg-[#765fc4] px-7 py-4 text-xs font-semibold uppercase tracking-[0.12em] text-white transition hover:border-[#6751b7] hover:bg-[#6751b7] disabled:cursor-not-allowed disabled:opacity-50 sm:w-auto"
           >
             {isSubmitting ? (
               <>
@@ -486,8 +509,8 @@ ${summary}`;
               </>
             )}
           </button>
-          <p className="text-gray-400 text-xs sm:text-sm mt-3 text-center sm:text-left">
-             Premier retour rapide • Les champs marqués * sont obligatoires
+          <p className="mt-3 text-center text-xs text-black/45 sm:text-left sm:text-sm">
+             Demande transmise directement à Badre · Les champs marqués * sont obligatoires
           </p>
         </div>
       </form>

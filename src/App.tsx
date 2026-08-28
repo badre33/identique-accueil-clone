@@ -12,6 +12,7 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import { CriticalResourcesPreloader } from "@/components/CriticalResourcesPreloader";
 import { AnalyticsProvider } from "@/components/Analytics";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { CookieConsent } from "@/components/CookieConsent";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 
@@ -54,6 +55,7 @@ const Layout = () => (
               <Outlet />
             </PageTransition>
             <StickyMobileCTA />
+            <CookieConsent />
           </TooltipProvider>
         </AnalyticsProvider>
       </QueryClientProvider>
@@ -94,6 +96,9 @@ export const routes: RouteObject[] = [
       { path: "blog", lazy: page(() => import('./pages/Blog')) },
       { path: "blog/:slug", lazy: page(() => import('./pages/BlogPost')) },
       { path: "contact", lazy: page(() => import('./pages/Contact')) },
+      { path: "mentions-legales", lazy: page(() => import('./pages/MentionsLegales')) },
+      { path: "politique-de-confidentialite", lazy: page(() => import('./pages/PolitiqueConfidentialite')) },
+      { path: "politique-de-cookies", lazy: page(() => import('./pages/PolitiqueCookies')) },
       { path: "creation-site-web-agadir", lazy: page(() => import('./pages/AgenceWebAgadir')) },
       { path: "creation-site-web-tanger", lazy: page(() => import('./pages/AgenceWebTanger')) },
       { path: "creation-site-web-casablanca", lazy: page(() => import('./pages/AgenceWebCasablanca')) },

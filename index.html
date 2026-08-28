@@ -6,15 +6,6 @@
     <meta name="theme-color" content="#000000" />
     <meta name="google-site-verification" content="xwtvJLZxqZFry58DAgiP2RLBz2VYViF-O0eD4MBGm3g" />
 
-    <!-- ══ Google Analytics 4 — snippet officiel (chargé dans <head> avant React) ══ -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F077M674TY"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-F077M674TY');
-    </script>
-
     <!-- ══ SEO PAR ROUTE — title / description / canonical / hreflang / OG /
          Twitter / geo sont injectés au build SSG par <Head> (vite-react-ssg),
          spécifiques à chaque page. index.html ne porte plus de baseline meta
@@ -29,55 +20,43 @@
         {
           "@type": "Organization",
           "name": "Link Agency",
+          "@id": "https://linkagency.ma/#organization",
           "alternateName": "Link Agency Maroc",
+          "legalName": "HARKA STRATEGY CONSULTING SARLAU",
           "url": "https://linkagency.ma",
           "logo": "https://linkagency.ma/og-default.jpg",
           "foundingDate": "2015",
-          "description": "Agence marketing digital au Maroc spécialisée en branding, communication digitale et événementiel corporate.",
+          "description": "Direction marketing externalisée et direction de marque pour entreprises ambitieuses au Maroc. Stratégie, branding, contenu et performance sous un pilotage senior.",
           "telephone": "+212-699-024526",
           "email": "bharkaoui@linkagency.ma",
           "address": {
             "@type": "PostalAddress",
-            "streetAddress": "Résidence Azur, 131 Bd d'Anfa",
             "addressLocality": "Casablanca",
-            "postalCode": "20000",
             "addressCountry": "MA"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 33.5731,
-            "longitude": -7.5898
           },
           "areaServed": {"@type": "Country", "name": "Morocco"},
           "sameAs": [
             "https://www.instagram.com/linkagency.ma",
-            "https://www.linkedin.com/company/linkagency",
+            "https://www.linkedin.com/company/107734353/",
             "https://www.facebook.com/linkagency.ma"
           ]
         },
         {
-          "@type": "LocalBusiness",
-          "name": "Link Agency",
+          "@type": "ProfessionalService",
+          "name": "Link Agency, Casablanca",
           "image": "https://linkagency.ma/og-default.jpg",
           "telephone": "+212-699-024526",
           "email": "bharkaoui@linkagency.ma",
           "address": {
             "@type": "PostalAddress",
-            "streetAddress": "Résidence Azur, 131 Bd d'Anfa",
             "addressLocality": "Casablanca",
-            "postalCode": "20000",
             "addressCountry": "MA"
           },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 33.5731,
-            "longitude": -7.5898
-          },
           "url": "https://linkagency.ma",
-          "priceRange": "$$",
-          "openingHoursSpecification": [
-            {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "18:00"},
-            {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "13:00"}
+          "areaServed": [
+            {"@type": "City", "name": "Casablanca"},
+            {"@type": "City", "name": "Rabat"},
+            {"@type": "City", "name": "Marrakech"}
           ]
         }
       ]
@@ -90,9 +69,9 @@
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" /></noscript>
     <link rel="dns-prefetch" href="https://images.unsplash.com" />
-    <link rel="icon" type="image/png" sizes="64x64" href="/assets/brand/favicon-64.png?v=2" />
-    <link rel="shortcut icon" href="/favicon.ico?v=2" />
-    <link rel="apple-touch-icon" href="/assets/brand/link-agency-logo.png?v=2" />
+    <link rel="icon" type="image/png" sizes="64x64" href="/assets/brand/favicon-64.png?v=3" />
+    <link rel="shortcut icon" href="/favicon.ico?v=3" />
+    <link rel="apple-touch-icon" href="/assets/brand/link-agency-logo.png?v=3" />
     <link rel="manifest" href="/manifest.json" />
 
     <!-- Critical CSS -->
@@ -113,7 +92,7 @@
       <input type="hidden" name="form-name" value="contact" />
       <input type="text" name="bot-field" />
       <input type="text" name="nom" />
-      <input type="text" name="prenom" />
+      <input type="text" name="fonction" />
       <input type="email" name="email" />
       <input type="tel" name="telephone" />
       <input type="text" name="entreprise" />
@@ -122,6 +101,7 @@
       <input type="text" name="delai" />
       <textarea name="message"></textarea>
       <textarea name="summary"></textarea>
+      <input type="checkbox" name="consent" />
     </form>
   </body>
 </html>

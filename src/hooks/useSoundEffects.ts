@@ -9,22 +9,17 @@ export const useSoundEffects = () => {
   // Désactiver les sons sur la page Inside Link
   const isInsideLinkPage = location.pathname === '/inside-link';
   
-  if (isInsideLinkPage) {
-    return {
-      playHoverSound: () => {},
-      playClickSound: () => {},
-      playSuccessSound: () => {}
-    };
-  }
-
   const initAudioContext = useCallback(() => {
     if (!audioContextRef.current) {
-      audioContextRef.current = new (window.AudioContext || (window as any).webkitAudioContext)();
+      const AudioContextClass = window.AudioContext || (window as typeof window & { webkitAudioContext?: typeof AudioContext }).webkitAudioContext;
+      if (!AudioContextClass) throw new Error('Web Audio API unavailable');
+      audioContextRef.current = new AudioContextClass();
     }
     return audioContextRef.current;
   }, []);
 
   const playHoverSound = useCallback(() => {
+    if (isInsideLinkPage) return;
     const audioContext = initAudioContext();
     const oscillator = audioContext.createOscillator();
     const gainNode = audioContext.createGain();
@@ -40,9 +35,10 @@ export const useSoundEffects = () => {
 
     oscillator.start(audioContext.currentTime);
     oscillator.stop(audioContext.currentTime + 0.1);
-  }, [initAudioContext]);
+  }, [initAudioContext, isInsideLinkPage]);
 
   const playClickSound = useCallback(() => {
+    if (isInsideLinkPage) return;
     const audioContext = initAudioContext();
     const oscillator = audioContext.createOscillator();
     const gainNode = audioContext.createGain();
@@ -58,9 +54,10 @@ export const useSoundEffects = () => {
 
     oscillator.start(audioContext.currentTime);
     oscillator.stop(audioContext.currentTime + 0.05);
-  }, [initAudioContext]);
+  }, [initAudioContext, isInsideLinkPage]);
 
   const playSuccessSound = useCallback(() => {
+    if (isInsideLinkPage) return;
     const audioContext = initAudioContext();
     const oscillator1 = audioContext.createOscillator();
     const oscillator2 = audioContext.createOscillator();
@@ -80,7 +77,7 @@ export const useSoundEffects = () => {
     oscillator2.start(audioContext.currentTime);
     oscillator1.stop(audioContext.currentTime + 0.3);
     oscillator2.stop(audioContext.currentTime + 0.3);
-  }, [initAudioContext]);
+  }, [initAudioContext, isInsideLinkPage]);
 
   return {
     playHoverSound,

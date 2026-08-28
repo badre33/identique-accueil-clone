@@ -1,5 +1,6 @@
 
 import type { Config } from "tailwindcss";
+import tailwindcssAnimate from "tailwindcss-animate";
 
 export default {
 	darkMode: ["class"],
@@ -139,7 +140,7 @@ export default {
 				'slide-in-right': 'slide-in-right 0.4s ease-out',
 				'pulse-subtle': 'pulse-subtle 2s ease-in-out infinite',
 				'marquee': 'marquee 42s linear infinite',
-				'marquee-mobile': 'marquee 28s linear infinite'
+				'marquee-mobile': 'marquee 18s linear infinite'
 			},
 			transitionTimingFunction: {
 				'out-expo': 'cubic-bezier(0.19, 1, 0.22, 1)',
@@ -147,5 +148,5 @@ export default {
 			}
 		}
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [tailwindcssAnimate],
 } satisfies Config;

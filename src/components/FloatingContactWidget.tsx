@@ -1,100 +1,32 @@
-
-import { useState } from 'react';
-import { MessageCircle, X, Phone, Mail, MessageSquare } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { useState } from "react";
+import { Mail, MessageCircle, Phone, X } from "lucide-react";
+import { EMAIL_URL, WHATSAPP_URL } from "@/config/contact";
+import { trackEmailClick, trackWhatsAppClick } from "@/lib/tracking";
 
 export const FloatingContactWidget = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleWhatsApp = () => {
-    const phoneNumber = "212699024526";
-    const message = "Bonjour, je souhaite discuter de mon projet avec Link Agency.";
-    const encodedMessage = encodeURIComponent(message);
-    window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
-  };
-
-  const handleCall = () => {
-    window.open('tel:+212699024526', '_self');
-  };
-
-  const handleEmail = () => {
-    window.open('mailto:bharkaoui@linkagency.ma?subject=Demande d\'information - Link Agency', '_self');
-  };
-
   return (
-    <>
-      {/* Enhanced Widget with better animations */}
-      <div className="fixed bottom-6 right-6 z-50">
-        {isOpen && (
-          <div className="mb-4 bg-white/95 backdrop-blur-xl rounded-3xl shadow-2xl border border-slate-200/50 p-8 w-84 animate-scale-in hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-1">
-            <div className="flex items-center justify-between mb-6">
-              <h3 className="font-bold text-slate-900 text-lg">Contactez-nous</h3>
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={() => setIsOpen(false)}
-                aria-label="Fermer le widget de contact"
-                className="h-10 w-10 p-0 hover:bg-slate-100 rounded-full hover:scale-110 transition-all duration-300"
-              >
-                <X className="w-5 h-5 text-slate-600" />
-              </Button>
-            </div>
-            
-            <p className="text-sm text-slate-600 mb-6 leading-relaxed">
-              Choisissez votre moyen de contact préféré
-            </p>
-            
-            <div className="space-y-4">
-              <Button
-                onClick={handleWhatsApp}
-                className="w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white flex items-center justify-center space-x-3 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:-translate-y-0.5 group"
-              >
-                <MessageSquare className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
-                <span className="font-semibold">WhatsApp</span>
-              </Button>
-              
-              <Button
-                onClick={handleCall}
-                variant="outline"
-                className="w-full flex items-center justify-center space-x-3 py-4 rounded-xl hover:bg-blue-50 border-2 hover:border-blue-200 transition-all duration-300 hover:scale-105 hover:-translate-y-0.5 shadow-sm hover:shadow-md group"
-              >
-                <Phone className="w-5 h-5 text-blue-600 group-hover:rotate-12 transition-transform duration-300" />
-                <span className="font-semibold text-slate-700">Appeler maintenant</span>
-              </Button>
-              
-              <Button
-                onClick={handleEmail}
-                variant="outline"
-                className="w-full flex items-center justify-center space-x-3 py-4 rounded-xl hover:bg-slate-50 border-2 hover:border-slate-200 transition-all duration-300 hover:scale-105 hover:-translate-y-0.5 shadow-sm hover:shadow-md group"
-              >
-                <Mail className="w-5 h-5 text-slate-600 group-hover:rotate-12 transition-transform duration-300" />
-                <span className="font-semibold text-slate-700">Envoyer un email</span>
-              </Button>
-            </div>
-            
-            <div className="mt-6 pt-6 border-t border-slate-200">
-              <div className="flex items-center space-x-3 text-sm text-slate-500">
-                <div className="w-3 h-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full animate-pulse shadow-lg"></div>
-                <span className="font-medium">Réponse sous 2h garantie</span>
-              </div>
-            </div>
+    <div className="fixed bottom-24 right-4 z-[9980] hidden sm:block lg:bottom-6 lg:right-6">
+      {isOpen && (
+        <div className="mb-3 w-[310px] border border-black bg-[#f4f1eb] p-5 text-[#0a0a0a] shadow-[10px_10px_0_rgba(10,10,10,.16)]">
+          <div className="flex items-start justify-between gap-6 border-b border-black/15 pb-4">
+            <div><p className="text-[9px] font-semibold uppercase tracking-[.16em] text-black/40">Contact direct</p><h3 className="mt-2 text-xl font-medium tracking-[-.035em]">Parlons de votre projet.</h3></div>
+            <button onClick={() => setIsOpen(false)} aria-label="Fermer les options de contact" className="flex h-9 w-9 shrink-0 items-center justify-center border border-black/15 transition hover:border-black"><X className="h-4 w-4" /></button>
           </div>
-        )}
-        
-        {/* Enhanced Main Button with better micro-interactions */}
-        <Button
-          onClick={() => setIsOpen(!isOpen)}
-          aria-label={isOpen ? "Fermer les options de contact" : "Ouvrir les options de contact"}
-          className="bg-gradient-to-r from-slate-900 to-slate-800 hover:from-slate-800 hover:to-slate-700 text-white rounded-full w-16 h-16 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-110 hover:-translate-y-1 group relative overflow-hidden"
-        >
-          <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
-          {isOpen ? (
-            <X className="w-7 h-7 group-hover:rotate-90 transition-transform duration-300 relative z-10" />
-          ) : (
-            <MessageCircle className="w-7 h-7 group-hover:scale-110 transition-transform duration-300 relative z-10" />
-          )}
-        </Button>
-      </div>
-    </>
+
+          <p className="mt-4 text-xs leading-6 text-black/55">WhatsApp est le canal le plus direct. Le téléphone et l’email restent disponibles si vous les préférez.</p>
+          <div className="mt-5 space-y-2">
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsAppClick("floating_widget")} className="flex min-h-12 items-center justify-between bg-[#765fc4] px-4 text-xs font-semibold uppercase tracking-[.11em] text-white transition hover:bg-[#6751b7]"><span className="flex items-center gap-3"><MessageCircle className="h-4 w-4" />WhatsApp</span><span>↗</span></a>
+            <a href="tel:+212699024526" className="flex min-h-12 items-center gap-3 border border-black/20 px-4 text-xs font-semibold uppercase tracking-[.11em] transition hover:border-black"><Phone className="h-4 w-4" />Appeler</a>
+            <a href={EMAIL_URL} onClick={() => trackEmailClick("floating_widget")} className="flex min-h-12 items-center gap-3 border border-black/20 px-4 text-xs font-semibold uppercase tracking-[.11em] transition hover:border-black"><Mail className="h-4 w-4" />Envoyer un email</a>
+          </div>
+        </div>
+      )}
+
+      <button onClick={() => setIsOpen(!isOpen)} aria-label={isOpen ? "Fermer les options de contact" : "Ouvrir les options de contact"} className="ml-auto flex h-14 w-14 items-center justify-center rounded-full border border-white/15 bg-[#111827] text-white shadow-xl transition hover:bg-[#765fc4]">
+        {isOpen ? <X className="h-5 w-5" /> : <MessageCircle className="h-5 w-5" />}
+      </button>
+    </div>
   );
 };

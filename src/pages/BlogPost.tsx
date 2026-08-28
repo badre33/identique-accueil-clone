@@ -54,11 +54,11 @@ const BlogPost = () => {
           "name": "Link Agency",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://linkagency.ma/logo-link-agency.png"
+            "url": "https://linkagency.ma/assets/brand/link-agency-logo.png"
           }
         },
         "datePublished": post.publishDate,
-        "dateModified": post.publishDate,
+        "dateModified": "2026-08-28",
         "url": `https://linkagency.ma/blog/${post.slug}`,
         "keywords": post.tags.join(", "),
         "wordCount": post.content.length,
@@ -89,7 +89,8 @@ const BlogPost = () => {
         type="article"
         publishedTime={post.publishDate}
         author={post.author}
-        image={post.image}
+        image={`https://linkagency.ma${post.image}`}
+        locale={isArabic ? "ar_MA" : "fr_FR"}
         structuredData={blogPostSchema}
       />
       
@@ -190,7 +191,7 @@ const BlogPost = () => {
                 Besoin d'accompagnement ?
               </h3>
               <p className="text-muted-foreground mb-6 text-base max-w-lg mx-auto">
-                Notre équipe d'experts est là pour conseiller et réaliser vos ambitions.
+                Badre cadre le besoin et mobilise les expertises nécessaires à sa réalisation.
               </p>
               <a
                 href={`https://wa.me/212699024526?text=${encodeURIComponent("Bonjour, j'ai lu l'article \"" + post.title + "\" et je souhaite échanger sur un projet similaire.")}`}

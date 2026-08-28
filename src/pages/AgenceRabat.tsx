@@ -38,7 +38,7 @@ const AgenceRabat = () => {
     {
       question: "Quels sont vos délais d'intervention à Rabat ?",
       answer:
-        "Pour un cadrage stratégique institutionnel, comptez 3 à 6 semaines. Pour une activation de campagne, 4 à 10 semaines selon le périmètre. Nos équipes peuvent se déplacer à Rabat sous 48h pour les réunions de cadrage.",
+        "Pour un cadrage stratégique institutionnel, comptez 3 à 6 semaines. Pour une activation de campagne, 4 à 10 semaines selon le périmètre. Les réunions de cadrage peuvent être organisées à Rabat selon le calendrier du mandat.",
     },
   ];
 
@@ -121,7 +121,7 @@ const AgenceRabat = () => {
 
           <div className="flex flex-wrap gap-4">
             <Button onClick={handleContact} className="bg-black text-white hover:bg-gray-800 px-8 py-6 text-lg">
-              Demander un devis
+              Échanger sur WhatsApp
             </Button>
             <a href="mailto:bharkaoui@linkagency.ma">
               <Button variant="outline" className="px-8 py-6 text-lg">
@@ -212,7 +212,7 @@ const AgenceRabat = () => {
             En tant qu'agence de communication à Rabat, Link Agency conçoit des dispositifs adaptés à cette exigence. Nous travaillons sur la structuration des plateformes de marque institutionnelles, la rédaction des messages corporate, la production éditoriale multilingue (rapports annuels, brochures institutionnelles, contenus digitaux) et l'animation des présences sociales pour les organismes publics et privés. Nos campagnes de sensibilisation ciblent à la fois les audiences nationales et les publics internationaux représentés dans la capitale.
           </p>
           <p className="text-gray-700 font-light leading-relaxed">
-            Notre approche repose sur trois principes : rigueur méthodologique, sensibilité aux codes protocolaires et exécution multilingue. Que vous soyez un ministère en refonte de communication, une ONG internationale en lancement de programme, une université en stratégie de visibilité ou un organisme financier en repositionnement, notre équipe vous accompagne avec discrétion et exigence.
+            Notre approche repose sur trois principes : rigueur méthodologique, sensibilité aux codes protocolaires et exécution multilingue. Que vous soyez un ministère en refonte de communication, une ONG internationale en lancement de programme, une université en stratégie de visibilité ou un organisme financier en repositionnement, Link Agency vous accompagne avec discrétion et exigence.
           </p>
         </div>
       </section>

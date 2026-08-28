@@ -13,7 +13,7 @@ export const StickyMobileCTA = () => {
         target="_blank"
         rel="noopener noreferrer"
         onClick={() => trackWhatsAppClick("sticky_mobile")}
-        className="inline-flex flex-1 items-center justify-center gap-2 bg-[#e8e1d5] px-4 py-3 text-sm font-semibold text-black transition-colors active:bg-[#d8cebf]"
+        className="inline-flex flex-1 items-center justify-center gap-2 bg-[#765fc4] px-4 py-3 text-sm font-semibold text-white transition-colors active:bg-[#6751b7]"
         aria-label="Contacter Link Agency sur WhatsApp"
       >
         <MessageCircle className="w-4 h-4" />

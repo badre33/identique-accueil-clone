@@ -1,363 +1,54 @@
-import { SEOHead } from "@/components/SEOHead";
-import { generatePersonBadreSchema } from "@/utils/structuredData";
-import { Head } from 'vite-react-ssg';
-import { useState, useEffect } from "react";
-import { ArrowLeft, Target, Palette, Users, Lightbulb, Linkedin, History, LineChart, Search, Code2 } from "lucide-react";
-import { Link } from "react-router-dom";
+import { ArrowUpRight } from "lucide-react";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 import { FloatingContactWidget } from "@/components/FloatingContactWidget";
-import { SideNavigation } from "@/components/inside-link/SideNavigation";
-import NetworkSection from "@/components/inside-link/NetworkSection";
-import { VisionSection } from "@/components/inside-link/VisionSection";
-import { TypewriterText } from "@/components/inside-link/TypewriterText";
-import { MagneticButton } from "@/components/inside-link/MagneticButton";
-import { ParticleBackground } from "@/components/inside-link/ParticleBackground";
-import { InteractiveBackground } from "@/components/inside-link/InteractiveBackground";
-import { ThreeDHoverCard } from "@/components/inside-link/ThreeDHoverCard";
-import { EnhancedTimeline } from "@/components/inside-link/EnhancedTimeline";
-import { GameifiedBrandingQuiz } from "@/components/inside-link/GameifiedBrandingQuiz";
-import { DynamicContent } from "@/components/inside-link/DynamicContent";
-import { ScrollReveal } from "@/components/inside-link/ScrollReveal";
-import { AnimatedCard } from "@/components/inside-link/AnimatedCard";
-import { SectionTransition } from "@/components/inside-link/SectionTransition";
-import { useParallax } from "@/hooks/useParallax";
-import { useSoundEffects } from "@/hooks/useSoundEffects";
+import { SEOHead } from "@/components/SEOHead";
+import { EditorialFinalCTA, EditorialPageHero, EditorialSectionIntro } from "@/components/editorial/EditorialPage";
+import { generatePersonBadreSchema } from "@/utils/structuredData";
 
-const InsideLink = () => {
-  const [currentSection, setCurrentSection] = useState('hero');
-  const parallaxOffset = useParallax(0.3);
-  const { playClickSound, playHoverSound } = useSoundEffects();
+const principles = [
+  ["01", "Senior-led", "Badre garde la stratégie, les arbitrages, le prix et la relation avec les comptes clés."],
+  ["02", "Sur mesure", "Les compétences sont mobilisées selon le mandat. Aucune structure artificielle n’est imposée au client."],
+  ["03", "Exigeant", "Chaque livrable doit pouvoir être défendu devant une direction générale, une équipe marketing ou un partenaire international."],
+  ["04", "Discret", "Le travail sert d’abord la marque du client. Link Agency peut intervenir comme un pôle externe intégré ou en marque blanche."],
+];
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const sections = ['hero', 'founders', 'network', 'skills', 'vision', 'timeline', 'quiz', 'cards', 'mission'];
-      const scrollPosition = window.scrollY + 200;
+const parcours = [
+  ["Discipline", "Un passage par l’institution militaire qui installe le sens de la responsabilité, de la préparation et de l’exécution."],
+  ["Conseil", "Une expérience au contact de dirigeants et d’organisations, notamment chez Nexia, pour relier communication et enjeux de direction."],
+  ["Écosystèmes", "French Tech et 212 Founders renforcent la compréhension des fondateurs, de la croissance et des environnements à forte ambition."],
+  ["Link Agency", "Un modèle volontairement resserré où le fondateur reste au centre de la stratégie et compose le dispositif autour du besoin réel."],
+];
 
-      for (const section of sections) {
-        const element = document.getElementById(section);
-        if (element) {
-          const offsetTop = element.offsetTop;
-          const offsetBottom = offsetTop + element.offsetHeight;
-          
-          if (scrollPosition >= offsetTop && scrollPosition < offsetBottom) {
-            setCurrentSection(section);
-            break;
-          }
-        }
-      }
-    };
+const InsideLink = () => (
+  <div className="min-h-screen bg-[#f4f1eb] pt-16 text-[#0a0a0a] sm:pt-20">
+    <SEOHead title="Le Cabinet et son Fondateur | Link Agency Maroc" description="Découvrez Badreddine Harkaoui, fondateur de Link Agency, son parcours et le modèle senior-led du cabinet à Casablanca." keywords="badreddine harkaoui, fondateur link agency, cabinet marketing casablanca, agence senior led maroc" url="https://linkagency.ma/inside-link" structuredData={generatePersonBadreSchema()} />
+    <Header />
+    <main className="link-editorial">
+      <EditorialPageHero index="12 / LE CABINET" eyebrow="Inside Link · Fondateur et modèle" title={<>Dans l’ombre<br /><span className="link-cover__outline">des marques visibles.</span></>} description="Link Agency est un cabinet resserré, dirigé par Badreddine Harkaoui. Il garde le cap stratégique et réunit les spécialistes nécessaires autour de chaque mandat." dossierLabel="Modèle du cabinet" dossierTitle="Un pilote. Le bon réseau." dossierBody="Une direction senior, un haut niveau d’implication et des ressources choisies selon la réalité de chaque dossier." accent="violet" primaryLabel="Parler à Badre" />
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const skillsData = [
-    {
-      icon: LineChart,
-      title: "Pilotage P&L Digital",
-      description: "Attribution multi-touch, RevOps et orchestration de la performance commerciale. Chaque dirham investi devient un actif mesurable.",
-      gradient: "from-slate-700 to-slate-900"
-    },
-    {
-      icon: Target,
-      title: "Acquisition & Lead Generation",
-      description: "Meta · Google · TikTok · LinkedIn Ads avec lead scoring qualifié, spécialisation banque, assurance et crédit consommation.",
-      gradient: "from-blue-500 to-cyan-500"
-    },
-    {
-      icon: Search,
-      title: "SEO Trilingue FR · AR · Darija",
-      description: "Référencement naturel français-arabe pensé pour renforcer durablement la visibilité organique des marques au Maroc.",
-      gradient: "from-green-500 to-emerald-500"
-    },
-    {
-      icon: Palette,
-      title: "Branding & Identité Visuelle",
-      description: "Création d'identités de marque mémorables et systèmes de design cohérents, du démarrage d'une marque à la refonte d'enseignes établies.",
-      gradient: "from-purple-500 to-pink-500"
-    },
-    {
-      icon: Code2,
-      title: "UX/UI & CRO",
-      description: "Conception de parcours de conversion, A/B testing systématique et design system pour transformer le trafic en leads qualifiés.",
-      gradient: "from-indigo-500 to-blue-500"
-    },
-    {
-      icon: Users,
-      title: "CRM & Marketing Automation",
-      description: "Intégration CRM, WhatsApp Business et automation pour fluidifier la chaîne lead → qualification → closing.",
-      gradient: "from-orange-500 to-red-500"
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-white relative overflow-hidden pt-16 sm:pt-20">
-        <Head>
-          <script type="application/ld+json">
-            {JSON.stringify(generatePersonBadreSchema())}
-          </script>
-        </Head>
-      <SEOHead
-        title="Inside Link — Fondateur, Méthode & Réseau | Link Agency"
-        description="Découvrez le fondateur, la méthode et le réseau de spécialistes de Link Agency, agence marketing senior-led basée à Casablanca depuis 2015."
-        keywords="link agency casablanca, agence marketing senior led maroc, badreddine harkaoui, stratégie marque maroc"
-        url="https://linkagency.ma/inside-link"
-      />
-      <ParticleBackground />
-      <InteractiveBackground />
-      <SideNavigation currentSection={currentSection} />
-      
-      {/* Header avec navigation de retour */}
-      <header className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100 transition-all duration-300">
-        <div className="max-w-7xl mx-auto px-8 lg:px-16">
-          <div className="flex items-center justify-between h-20">
-            <MagneticButton href="/" className="flex items-center space-x-3 text-black hover:text-gray-600 transition-colors duration-300">
-              <ArrowLeft className="w-5 h-5 transition-transform duration-300 group-hover:-translate-x-1" />
-              <span className="font-medium">Retour à l'accueil</span>
-            </MagneticButton>
-            <img 
-              src="/assets/brand/link-agency-logo.png" 
-              alt="Link Agency Logo" 
-              width={120}
-              height={48}
-              className="h-12 w-auto max-w-[120px] shrink-0 object-contain transition-transform duration-300 hover:scale-105"
-            />
-          </div>
+      <section className="editorial-section bg-[#d8cec1]">
+        <div className="editorial-shell grid gap-14 lg:grid-cols-[.78fr_1.22fr] lg:items-start">
+          <div className="relative"><div className="absolute -right-3 -top-3 h-full w-full border border-black/25 bg-[#c86b4a]" /><img src="/assets/media/da131874-d340-4dc9-b1e7-5fc5f24a0f40.png" alt="Badreddine Harkaoui, fondateur de Link Agency" className="relative aspect-[4/5] w-full border border-black object-cover object-top grayscale" loading="eager" decoding="async" /></div>
+          <div className="lg:pt-12"><p className="editorial-eyebrow text-black/45">Badreddine Harkaoui · Badre</p><h2 className="mt-7 text-4xl font-medium leading-[.98] tracking-[-.05em] sm:text-5xl lg:text-6xl">Le fondateur reste au centre du travail.</h2><div className="mt-10 space-y-6 text-base leading-8 text-black/65"><p>Badre accompagne les fondateurs, directions et marques sur leur positionnement, leur image, leurs contenus et leurs dispositifs de croissance. Son rôle consiste d’abord à lire la situation, décider du cap et maintenir la cohérence entre les expertises.</p><p>Il préfère travailler dans l’ombre. Le site ne cherche donc pas à construire un personnage spectaculaire, mais à rendre visible une manière de travailler : directe, impliquée et exigeante.</p><p>Lorsque le mandat demande de la production, du media buying, du développement, de la photo, de la vidéo ou de l’événementiel, les spécialistes sont commissionnés et coordonnés autour d’un cadre unique.</p></div><a href="https://www.linkedin.com/in/badreddine-harkaoui-nexiafiducia/" target="_blank" rel="noopener noreferrer" className="mt-9 inline-flex min-h-12 items-center gap-3 border border-black px-5 text-xs font-semibold uppercase tracking-[0.12em] transition hover:bg-black hover:text-white">Voir le parcours LinkedIn <ArrowUpRight className="h-4 w-4" /></a></div>
         </div>
-      </header>
+      </section>
 
-      {/* Hero Section */}
-      <SectionTransition>
-        <section id="hero" className="section-padding bg-gradient-to-br from-gray-50 via-white to-gray-100 relative pattern-waves">
-          <div className="absolute inset-0 pattern-grid opacity-50"></div>
-          
-          <div className="max-w-6xl mx-auto text-center relative z-10 space-section">
-            <ScrollReveal delay={400} direction="fade">
-              <h1 className="gradient-primary bg-clip-text text-transparent animate-pulse-subtle">
-                Inside Link
-              </h1>
-            </ScrollReveal>
-            
-            <ScrollReveal delay={600} direction="up">
-              <div className="text-2xl lg:text-3xl text-neutral-600 leading-relaxed max-w-4xl mx-auto font-light">
-                 <TypewriterText 
-                   text="Un fondateur. Une vision : transformer chaque investissement marketing en performance commerciale mesurable pour les marques au Maroc."
-                  speed={30}
-                  delay={1000}
-                />
-              </div>
-            </ScrollReveal>
-            
-            <ScrollReveal delay={800} direction="up">
-              <div className="mt-16">
-                <DynamicContent />
-              </div>
-            </ScrollReveal>
-          </div>
-        </section>
-      </SectionTransition>
+      <section className="editorial-section bg-[#0a0a0a] text-white">
+        <div className="editorial-shell"><EditorialSectionIntro light eyebrow="Principes de travail" title="Une structure légère. Une responsabilité lourde." body="Le modèle réduit les couches de coordination et garde l’interlocuteur qui décide au plus près du dossier." /><div className="mt-16 grid border-l border-t border-white/15 sm:grid-cols-2 lg:grid-cols-4">{principles.map(([number,title,description]) => <article key={number} className="min-h-72 border-b border-r border-white/15 p-7"><span className="font-mono text-xs text-white/30">{number}</span><h3 className="mt-16 text-2xl font-medium tracking-[-.035em]">{title}</h3><p className="mt-5 text-sm leading-7 text-white/55">{description}</p></article>)}</div></div>
+      </section>
 
-      {/* Fondateur Section */}
-      <SectionTransition variant="slide">
-        <section id="founders" className="section-padding relative pattern-dots">
-          <div className="max-w-5xl mx-auto">
-            <div className="grid grid-cols-1 gap-20">
-              
-              {/* Badreddine Harkaoui */}
-              <ScrollReveal delay={200} direction="left">
-                <AnimatedCard className="group card-elevated" hoverScale={1.01} glowEffect>
-                  <div className="relative mb-10 overflow-hidden rounded-3xl">
-                    <img 
-                      src="/assets/media/da131874-d340-4dc9-b1e7-5fc5f24a0f40.png"
-                      alt="Badreddine Harkaoui"
-                      className="w-full aspect-[4/5] object-cover object-top transition-transform duration-700 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent transition-opacity duration-500 group-hover:opacity-30"></div>
-                    <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-2 group-hover:translate-y-0">
-                      <MagneticButton 
-                        href="https://www.linkedin.com/in/badreddine-harkaoui-nexiafiducia/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="bg-white/90 backdrop-blur-sm p-4 rounded-full hover:bg-white transition-all duration-300 hover:scale-110 interactive-button"
-                        onClick={playClickSound}
-                      >
-                        <Linkedin className="w-6 h-6 text-blue-600" />
-                      </MagneticButton>
-                    </div>
-                  </div>
-                  
-                  <div className="space-content">
-                    <div className="space-tight">
-                      <h2 className="text-neutral-900 mb-3">Badreddine Harkaoui</h2>
-                      <p className="text-xl text-neutral-500 font-light">Fondateur &amp; Strategic Growth Architect. Expert en stratégie 360°, pilotage performance et orchestration commerciale.</p>
-                    </div>
-                    
-                    <p className="text-lg text-neutral-600 leading-relaxed">
-                      Badreddine est l'architecte de la performance commerciale de Link Agency.<br />
-                      Plus de 11 ans d'expérience auprès de marques marocaines de tous secteurs (services, retail, industrie, e-commerce, finance), aux côtés desquelles il a piloté des dispositifs 360° qui alignent branding, contenu, paid et événementiel sur un même objectif business.
-                    </p>
-                    <p className="text-lg text-neutral-600 leading-relaxed">
-                      Ancien caporal des forces d'élite françaises (engagé en 2007), passé par la tech, le conseil stratégique, la croissance B2B et B2C et un cabinet fiduciaire de référence, il a forgé une conviction simple : on ne fait pas du branding pour faire du branding, ni des posts pour faire des posts. Tout part d'une stratégie. Chaque création, chaque campagne, chaque événement sert l'image de marque ET la performance commerciale.
-                    </p>
+      <section className="editorial-section bg-[#bfd0c8]">
+        <div className="editorial-shell"><EditorialSectionIntro eyebrow="Le parcours" title="Quatre expériences qui façonnent la méthode." body="La trajectoire n’est pas présentée comme un récit héroïque. Elle explique simplement l’attention portée à la discipline, à la direction et à l’exécution." /><div className="mt-16 border-t border-black/20">{parcours.map(([title,description], index) => <article key={title} className="grid gap-4 border-b border-black/20 py-7 sm:grid-cols-[70px_230px_1fr]"><span className="font-mono text-xs text-black/35">0{index + 1}</span><h3 className="text-xl font-medium tracking-[-.03em]">{title}</h3><p className="max-w-2xl text-sm leading-7 text-black/60">{description}</p></article>)}</div></div>
+      </section>
 
-                    <div className="space-tight">
-                      <div className="flex items-center space-x-4">
-                        <Users className="w-7 h-7 text-black" />
-                        <span className="text-lg font-medium text-neutral-800">Quelques marques accompagnées :</span>
-                      </div>
-                      <p className="text-lg text-neutral-600 leading-relaxed ml-11">
-                        L'Bankalik (Attijariwafa Bank), AXA Assurance Maroc, RMA, Nexia, SGTM Immobilier, Subway Maroc, YouCan, Oncovita, La Maison Amoud, Achibest Food, Soulection, Artitenium, DWP, Focus M, Secret Events, Umbra Festival, Casablanca Music Week, Mom Corporation, OK Daddy, Épicerie Bordelaise, OCB Maroc, Edwin, et bien d'autres marques marocaines et internationales sur des dispositifs branding, contenu, performance, événementiel et personal branding.
-                      </p>
-                    </div>
+      <section className="editorial-section bg-[#f4f1eb]"><div className="editorial-shell grid gap-14 lg:grid-cols-[.85fr_1.15fr]"><div><p className="editorial-eyebrow text-black/45">Le réseau</p><h2 className="editorial-title mt-7">Les bonnes compétences, au bon moment.</h2></div><div><p className="text-lg leading-8 text-black/65">Link Agency ne vend pas l’illusion d’une grande équipe permanente. Le cabinet s’appuie sur un réseau de créatifs, producteurs, développeurs, experts média et partenaires événementiels sélectionnés selon le projet.</p><div className="mt-10 grid grid-cols-2 border-l border-t border-black/15 sm:grid-cols-3">{["Direction artistique","Photo et vidéo","Développement","Media buying","Influence","Événementiel"].map((item,index)=><div key={item} className="min-h-28 border-b border-r border-black/15 p-5"><span className="font-mono text-[9px] text-black/30">0{index+1}</span><p className="mt-6 text-sm font-medium">{item}</p></div>)}</div></div></div></section>
 
-                    <div className="space-tight">
-                      <div className="flex items-center space-x-4">
-                        <Target className="w-7 h-7 text-black transform hover:rotate-12 transition-transform duration-300 morph-icon" />
-                        <span className="text-lg font-medium text-neutral-800">Expertises stratégiques :</span>
-                      </div>
-                      <ul className="space-y-3 ml-11 text-neutral-600">
-                        <li className="hover:text-neutral-800 transition-colors cursor-default">• Stratégie de marque 360° et plateforme de positionnement,</li>
-                        <li className="hover:text-neutral-800 transition-colors cursor-default">• Branding, identité visuelle et direction artistique,</li>
-                        <li className="hover:text-neutral-800 transition-colors cursor-default">• Pilotage P&amp;L digital, attribution et orchestration des canaux,</li>
-                        <li className="hover:text-neutral-800 transition-colors cursor-default">• Acquisition payante, social media et lead generation,</li>
-                        <li className="hover:text-neutral-800 transition-colors cursor-default">• Activations, événements et déploiement opérationnel de dispositifs complexes.</li>
-                      </ul>
-                    </div>
-                    
-                    <blockquote className="border-l-4 border-black pl-8 italic text-xl text-neutral-700 font-light">
-                      <TypewriterText 
-                        text="Je ne livre pas des campagnes. Je livre des dispositifs qui transforment chaque dirham investi en performance commerciale mesurable."
-                        speed={40}
-                        delay={2000}
-                      />
-                    </blockquote>
-                  </div>
-                </AnimatedCard>
-              </ScrollReveal>
-            </div>
-          </div>
-        </section>
-      </SectionTransition>
-
-      {/* Réseau Maroc — partenaires sélectionnés */}
-      <ScrollReveal delay={200}>
-        <NetworkSection />
-      </ScrollReveal>
-
-      {/* 3D Skills Section */}
-      <SectionTransition variant="scale">
-        <section id="skills" className="section-padding gradient-subtle relative pattern-diagonal">
-          <div className="max-w-7xl mx-auto">
-            <ScrollReveal delay={200} direction="fade">
-              <div className="text-center mb-20 space-content">
-                <h2 className="text-neutral-900 mb-8">
-                  Nos Expertises
-                </h2>
-                <p className="text-xl text-neutral-500 max-w-3xl mx-auto">
-                  Des compétences complémentaires pour une approche holistique du branding
-                </p>
-              </div>
-            </ScrollReveal>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-              {skillsData.map((skill, index) => (
-                <ScrollReveal key={index} delay={300 + index * 100} direction={index % 2 === 0 ? 'left' : 'right'}>
-                  <AnimatedCard hoverScale={1.03} hoverRotation={index % 2 === 0 ? -1 : 1}>
-                    <ThreeDHoverCard {...skill} />
-                  </AnimatedCard>
-                </ScrollReveal>
-              ))}
-            </div>
-          </div>
-        </section>
-      </SectionTransition>
-
-      <ScrollReveal delay={200}>
-        <VisionSection />
-      </ScrollReveal>
-      
-      {/* Enhanced Interactive Timeline Section */}
-      <SectionTransition>
-        <section id="timeline" className="section-padding gradient-subtle relative pattern-waves">
-          <div className="max-w-5xl mx-auto">
-            <ScrollReveal delay={200}>
-              <div className="text-center mb-20 space-content">
-                <div className="flex items-center justify-center space-x-4 mb-10">
-                  <History className="w-10 h-10 transform hover:rotate-12 transition-transform duration-300" />
-                  <h2 className="text-neutral-900">Notre Histoire</h2>
-                </div>
-                <p className="text-xl text-neutral-500 max-w-3xl mx-auto">
-                  Le parcours qui nous a menés à créer Link Agency
-                </p>
-              </div>
-            </ScrollReveal>
-            
-            <ScrollReveal delay={400}>
-              <EnhancedTimeline />
-            </ScrollReveal>
-          </div>
-        </section>
-      </SectionTransition>
-
-      {/* Gamified Branding Quiz Section */}
-      <ScrollReveal delay={200}>
-        <section id="quiz" className="section-padding relative">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-20 space-content">
-              <h2 className="text-neutral-900 mb-8">
-                Testez Vos Connaissances en Branding
-              </h2>
-              <p className="text-xl text-neutral-500 max-w-3xl mx-auto">
-                Un quiz interactif et ludique pour découvrir votre niveau en branding
-              </p>
-            </div>
-            
-            <GameifiedBrandingQuiz />
-          </div>
-        </section>
-      </ScrollReveal>
-
-      {/* Pourquoi Link Section */}
-      <ScrollReveal delay={200}>
-        <section id="mission" className="section-padding bg-black text-white relative overflow-hidden">
-          <div className="max-w-5xl mx-auto relative z-10">
-            <div className="text-center mb-16">
-              <div className="flex items-center justify-center space-x-4 mb-8">
-                <Lightbulb className="w-10 h-10 text-white transform hover:rotate-12 transition-transform duration-300" />
-                <h2 className="text-white text-4xl lg:text-5xl font-light">Pourquoi j'ai fondé Link</h2>
-              </div>
-            </div>
-            
-            <div className="space-y-8 text-lg lg:text-xl leading-relaxed font-light max-w-4xl mx-auto">
-              <p className="text-gray-100 text-center">
-                Parce que j'étais fatigué de voir des marques fades, des identités génériques et des fondateurs brillants mal présentés.
-              </p>
-              <p className="text-gray-100 text-center">
-                Parce que je voulais créer une agence différente : radicalement stratégique, obsessionnellement esthétique.
-              </p>
-              <p className="text-white text-xl lg:text-2xl font-normal text-center mt-12">
-                Une agence où la rigueur militaire croise le design, où l'exécution est un art, et où chaque client est traité comme une marque de demain. J'ai structuré une méthode et un réseau de spécialistes qui me permettent aujourd'hui de tenir cette promesse.
-              </p>
-            </div>
-            
-            <div className="text-center mt-16">
-              <MagneticButton 
-                href="https://wa.me/212699024526?text=Bonjour%2C%20j'aimerais%20découvrir%20votre%20approche%20et%20échanger%20sur%20mon%20projet"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center space-x-3 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-700 text-white px-10 py-5 rounded-full text-lg font-medium hover:from-blue-700 hover:via-purple-700 hover:to-blue-800 transition-all duration-300 hover:scale-105 hover:-translate-y-1 shadow-lg hover:shadow-xl"
-                onClick={playClickSound}
-              >
-                <Users className="w-6 h-6" />
-                <span>Échanger avec le fondateur</span>
-              </MagneticButton>
-            </div>
-          </div>
-        </section>
-      </ScrollReveal>
-
-      <FloatingContactWidget />
-    </div>
-  );
-};
+      <EditorialFinalCTA title="Un interlocuteur impliqué, du premier échange aux arbitrages clés." body="Si votre besoin demande une autre structure ou un autre niveau de ressources, nous le dirons clairement dès le cadrage." label="Échanger avec Badre" accent="lime" />
+    </main>
+    <Footer />
+    <FloatingContactWidget />
+  </div>
+);
 
 export default InsideLink;
