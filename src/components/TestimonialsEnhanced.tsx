@@ -53,23 +53,23 @@ export const TestimonialsEnhanced = () => {
             grâce à nos services de branding, marketing digital et événementiel.
           </p>
 
-          {/* Stats globales */}
+          {/* Repères du modèle */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-2xl mx-auto">
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">4.9/5</div>
-              <div className="text-sm text-muted-foreground">Note moyenne</div>
+              <div className="text-3xl font-bold text-primary mb-2">Direct</div>
+              <div className="text-sm text-muted-foreground">Pilotage fondateur</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">150+</div>
-              <div className="text-sm text-muted-foreground">Clients satisfaits</div>
+              <div className="text-3xl font-bold text-primary mb-2">Sur mesure</div>
+              <div className="text-sm text-muted-foreground">Expertises mobilisées</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">98%</div>
-              <div className="text-sm text-muted-foreground">Recommandation</div>
+              <div className="text-3xl font-bold text-primary mb-2">Maroc</div>
+              <div className="text-sm text-muted-foreground">Portée internationale</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">11+</div>
-              <div className="text-sm text-muted-foreground">Années d'expérience</div>
+              <div className="text-3xl font-bold text-primary mb-2">2015</div>
+              <div className="text-sm text-muted-foreground">Fondé à Casablanca</div>
             </div>
           </div>
         </div>

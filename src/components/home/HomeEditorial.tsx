@@ -1,4 +1,4 @@
-import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight, FileDown } from "lucide-react";
 import { Link } from "react-router-dom";
 import { ClientLogosMarquee } from "@/components/ClientLogosMarquee";
 import { buildWhatsAppUrl } from "@/config/contact";
@@ -54,7 +54,7 @@ export const HomeEditorial = () => (
         </div>
         <div className="flex flex-col gap-3 border-t border-black/20 pt-5 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex flex-col gap-3 sm:flex-row"><a href={whatsapp} target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsAppClick("home_hero")} className="editorial-button-primary">Parler sur WhatsApp <ArrowRight className="h-4 w-4" /></a><Link to="/direction-marketing-externalisee" className="inline-flex min-h-12 items-center justify-center border border-black px-5 text-xs font-semibold uppercase tracking-[0.12em] text-black transition hover:bg-black hover:text-white">Découvrir le modèle</Link></div>
-          <p className="flex min-h-11 items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.2em] text-black/45"><span className="h-px w-8 bg-current" />Dossier de direction / 01</p>
+          <a href="/documents/LinkAgency_Dossier_Marque_2026_FINAL.pdf" target="_blank" rel="noopener noreferrer" className="group flex min-h-11 items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.2em] text-black/55 transition hover:text-black" aria-label="Ouvrir le dossier Link Agency 2026 au format PDF téléchargeable"><span className="h-px w-8 bg-current transition-all group-hover:w-12" />Ouvrir le dossier <FileDown className="h-4 w-4" /></a>
         </div>
       </div>
     </section>

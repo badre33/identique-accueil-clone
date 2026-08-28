@@ -7,7 +7,6 @@ interface Collaboration {
   category: string;
   logo?: string;
   description: string;
-  year: string;
   type: string;
   scope?: string;
 }
@@ -27,7 +26,7 @@ export const CollaborationDetailsModal = ({ collaboration, isOpen, onClose }: Co
         <DialogHeader className="border-b border-black/15 p-6 pr-14 sm:p-9 sm:pr-16">
           <div className="flex items-start justify-between gap-6">
             <div><p className="text-[9px] font-semibold uppercase tracking-[0.15em] text-black/40">{collaboration.scope || "Référence"}</p><DialogTitle className="mt-4 text-left text-3xl font-medium tracking-[-.045em] sm:text-5xl">{collaboration.name}</DialogTitle></div>
-            <span className="font-mono text-xs text-black/35">{collaboration.year}</span>
+            <span className="font-mono text-xs uppercase tracking-[0.12em] text-black/35">{collaboration.category}</span>
           </div>
         </DialogHeader>
 

@@ -177,16 +177,16 @@ export const CTAWithStats = ({ className }: { className?: string }) => {
     <div className={cn("text-center space-y-6 sm:space-y-8 w-full", className)}>
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8 max-w-md sm:max-w-none mx-auto mb-6 sm:mb-8">
         <div className="text-center group cursor-pointer hover:scale-105 transition-transform duration-300 p-3 sm:p-2 rounded-lg hover:bg-white/50">
-          <div className="text-xl sm:text-2xl font-bold text-black mb-1 group-hover:text-blue-600 transition-colors duration-300">50+</div>
-          <div className="text-sm text-gray-600 group-hover:text-gray-700 transition-colors duration-300">Clients accompagnés</div>
+          <div className="text-xl sm:text-2xl font-bold text-black mb-1 group-hover:text-blue-600 transition-colors duration-300">Direct</div>
+          <div className="text-sm text-gray-600 group-hover:text-gray-700 transition-colors duration-300">Pilotage fondateur</div>
         </div>
         <div className="text-center group cursor-pointer hover:scale-105 transition-transform duration-300 p-3 sm:p-2 rounded-lg hover:bg-white/50">
-          <div className="text-xl sm:text-2xl font-bold text-black mb-1 group-hover:text-green-600 transition-colors duration-300">200+</div>
-          <div className="text-sm text-gray-600 group-hover:text-gray-700 transition-colors duration-300">Projets réalisés</div>
+          <div className="text-xl sm:text-2xl font-bold text-black mb-1 group-hover:text-green-600 transition-colors duration-300">Sur mesure</div>
+          <div className="text-sm text-gray-600 group-hover:text-gray-700 transition-colors duration-300">Expertises mobilisées</div>
         </div>
         <div className="text-center group cursor-pointer hover:scale-105 transition-transform duration-300 p-3 sm:p-2 rounded-lg hover:bg-white/50">
-          <div className="text-xl sm:text-2xl font-bold text-black mb-1 group-hover:text-purple-600 transition-colors duration-300">11 ans</div>
-          <div className="text-sm text-gray-600 group-hover:text-gray-700 transition-colors duration-300">D'expérience</div>
+          <div className="text-xl sm:text-2xl font-bold text-black mb-1 group-hover:text-purple-600 transition-colors duration-300">2015</div>
+          <div className="text-sm text-gray-600 group-hover:text-gray-700 transition-colors duration-300">Fondé à Casablanca</div>
         </div>
       </div>
       
@@ -205,7 +205,7 @@ export const CTAWithStats = ({ className }: { className?: string }) => {
       </div>
 
       <p className="text-sm text-gray-500 max-w-sm mx-auto hover:text-gray-600 transition-colors duration-300 px-4">
-        50+ clients • 200+ projets • Studio interne
+        Pilotage direct • Expertises mobilisées • Structure indépendante
       </p>
     </div>
   );

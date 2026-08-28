@@ -6,7 +6,6 @@ interface Collaboration {
   category: string;
   logo?: string;
   description: string;
-  year: string;
   type: string;
   scope?: string;
 }
@@ -34,7 +33,7 @@ export const CollaborationCard = ({ collaboration, index, onClick }: Collaborati
       <p className="mt-5 text-sm leading-7 text-black/60">{collaboration.description}</p>
     </div>
     <div className="mt-8 flex items-end justify-between gap-5 border-t border-black/15 pt-5">
-      <div><span className="block text-[9px] font-semibold uppercase tracking-[0.13em] text-black/40">{collaboration.category} · {collaboration.year}</span><span className="mt-2 block text-xs font-medium">{collaboration.type}</span></div>
+      <div><span className="block text-[9px] font-semibold uppercase tracking-[0.13em] text-black/40">{collaboration.category}</span><span className="mt-2 block text-xs font-medium">{collaboration.type}</span></div>
       <ArrowUpRight className="h-5 w-5 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" />
     </div>
   </article>
