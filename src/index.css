@@ -159,6 +159,10 @@
   animation: editorial-intro-clip 1s cubic-bezier(.19,1,.22,1) 220ms both;
 }
 
+.link-editorial {
+  overflow-x: clip;
+}
+
 .link-editorial.motion-enhanced [data-reveal] {
   transition:
     opacity .8s cubic-bezier(.19,1,.22,1),
