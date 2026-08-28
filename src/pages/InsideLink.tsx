@@ -6,11 +6,8 @@ import { ArrowLeft, Target, Palette, Users, Lightbulb, Linkedin, History, LineCh
 import { Link } from "react-router-dom";
 import { FloatingContactWidget } from "@/components/FloatingContactWidget";
 import { SideNavigation } from "@/components/inside-link/SideNavigation";
-import TeamShowcase from "@/components/inside-link/TeamShowcase";
 import NetworkSection from "@/components/inside-link/NetworkSection";
-import { AnimatedStats } from "@/components/inside-link/AnimatedStats";
 import { VisionSection } from "@/components/inside-link/VisionSection";
-import { JoinTeamSection } from "@/components/inside-link/JoinTeamSection";
 import { TypewriterText } from "@/components/inside-link/TypewriterText";
 import { MagneticButton } from "@/components/inside-link/MagneticButton";
 import { ParticleBackground } from "@/components/inside-link/ParticleBackground";
@@ -18,7 +15,6 @@ import { InteractiveBackground } from "@/components/inside-link/InteractiveBackg
 import { ThreeDHoverCard } from "@/components/inside-link/ThreeDHoverCard";
 import { EnhancedTimeline } from "@/components/inside-link/EnhancedTimeline";
 import { GameifiedBrandingQuiz } from "@/components/inside-link/GameifiedBrandingQuiz";
-import { PersonalizedWelcome } from "@/components/inside-link/PersonalizedWelcome";
 import { DynamicContent } from "@/components/inside-link/DynamicContent";
 import { ScrollReveal } from "@/components/inside-link/ScrollReveal";
 import { AnimatedCard } from "@/components/inside-link/AnimatedCard";
@@ -33,7 +29,7 @@ const InsideLink = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['hero', 'founders', 'skills', 'vision', 'stats', 'timeline', 'quiz', 'cards', 'mission', 'join'];
+      const sections = ['hero', 'founders', 'network', 'skills', 'vision', 'timeline', 'quiz', 'cards', 'mission'];
       const scrollPosition = window.scrollY + 200;
 
       for (const section of sections) {
@@ -70,7 +66,7 @@ const InsideLink = () => {
     {
       icon: Search,
       title: "SEO Trilingue FR · AR · Darija",
-      description: "Référencement naturel bilingue français-arabe avec expertise rare au Maroc, capable de générer 20 à 30 % de croissance organique.",
+      description: "Référencement naturel français-arabe pensé pour renforcer durablement la visibilité organique des marques au Maroc.",
       gradient: "from-green-500 to-emerald-500"
     },
     {
@@ -88,7 +84,7 @@ const InsideLink = () => {
     {
       icon: Users,
       title: "CRM & Marketing Automation",
-      description: "Intégration CRM, WhatsApp Business et automation pour boucler la chaîne lead → call center → closing en moins d'une heure.",
+      description: "Intégration CRM, WhatsApp Business et automation pour fluidifier la chaîne lead → qualification → closing.",
       gradient: "from-orange-500 to-red-500"
     }
   ];
@@ -101,9 +97,9 @@ const InsideLink = () => {
           </script>
         </Head>
       <SEOHead
-        title="Inside Link — Équipe, Méthode & Réseau | Link Agency"
-        description="Découvrez l'équipe et la vision de Link Agency, agence digitale à Casablanca. 11 ans d'expérience, 200+ projets, une approche stratégique dédiée aux marques au Maroc au Maroc."
-        keywords="link agency casablanca, agence digitale maroc, équipe senior casablanca, stratégie marque maroc"
+        title="Inside Link — Fondateur, Méthode & Réseau | Link Agency"
+        description="Découvrez le fondateur, la méthode et le réseau de spécialistes de Link Agency, agence marketing senior-led basée à Casablanca depuis 2015."
+        keywords="link agency casablanca, agence marketing senior led maroc, badreddine harkaoui, stratégie marque maroc"
         url="https://linkagency.ma/inside-link"
       />
       <ParticleBackground />
@@ -135,10 +131,6 @@ const InsideLink = () => {
           <div className="absolute inset-0 pattern-grid opacity-50"></div>
           
           <div className="max-w-6xl mx-auto text-center relative z-10 space-section">
-            <ScrollReveal delay={200}>
-              <PersonalizedWelcome />
-            </ScrollReveal>
-            
             <ScrollReveal delay={400} direction="fade">
               <h1 className="gradient-primary bg-clip-text text-transparent animate-pulse-subtle">
                 Inside Link
@@ -148,7 +140,7 @@ const InsideLink = () => {
             <ScrollReveal delay={600} direction="up">
               <div className="text-2xl lg:text-3xl text-neutral-600 leading-relaxed max-w-4xl mx-auto font-light">
                  <TypewriterText 
-                   text="Un fondateur. Une vision : transformer chaque dirham marketing en performance commerciale mesurable pour les marques au Maroc au Maroc."
+                   text="Un fondateur. Une vision : transformer chaque investissement marketing en performance commerciale mesurable pour les marques au Maroc."
                   speed={30}
                   delay={1000}
                 />
@@ -246,11 +238,6 @@ const InsideLink = () => {
         </section>
       </SectionTransition>
 
-      {/* Notre équipe — 10 pôles d'expertise */}
-      <ScrollReveal delay={200}>
-        <TeamShowcase />
-      </ScrollReveal>
-
       {/* Réseau Maroc — partenaires sélectionnés */}
       <ScrollReveal delay={200}>
         <NetworkSection />
@@ -288,10 +275,6 @@ const InsideLink = () => {
         <VisionSection />
       </ScrollReveal>
       
-      <ScrollReveal delay={300}>
-        <AnimatedStats />
-      </ScrollReveal>
-
       {/* Enhanced Interactive Timeline Section */}
       <SectionTransition>
         <section id="timeline" className="section-padding gradient-subtle relative pattern-waves">
@@ -352,7 +335,7 @@ const InsideLink = () => {
                 Parce que je voulais créer une agence différente : radicalement stratégique, obsessionnellement esthétique.
               </p>
               <p className="text-white text-xl lg:text-2xl font-normal text-center mt-12">
-                Une agence où la rigueur militaire croise le design, où l'exécution est un art, et où chaque client est traité comme une marque de demain. Puis j'ai structuré l'équipe qui me permet aujourd'hui de tenir cette promesse.
+                Une agence où la rigueur militaire croise le design, où l'exécution est un art, et où chaque client est traité comme une marque de demain. J'ai structuré une méthode et un réseau de spécialistes qui me permettent aujourd'hui de tenir cette promesse.
               </p>
             </div>
             
@@ -365,17 +348,13 @@ const InsideLink = () => {
                 onClick={playClickSound}
               >
                 <Users className="w-6 h-6" />
-                <span>Rencontrer l'équipe</span>
+                <span>Échanger avec le fondateur</span>
               </MagneticButton>
             </div>
           </div>
         </section>
       </ScrollReveal>
 
-      <ScrollReveal delay={200}>
-        <JoinTeamSection />
-      </ScrollReveal>
-      
       <FloatingContactWidget />
     </div>
   );

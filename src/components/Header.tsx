@@ -1,335 +1,77 @@
+import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { ArrowUpRight, ChevronDown, Menu, X } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { trackEvent } from "@/lib/tracking";
 
-import { useState, useEffect } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Menu, X, ChevronDown } from 'lucide-react';
-import { cn } from '@/lib/utils';
-
-const servicePillars = [
-  {
-    title: 'Stratégie & Marque',
-    description: 'Identité, branding et conseil stratégique',
-    items: [
-      { label: 'Branding & Identité', to: '/branding' },
-      { label: 'Conseil stratégique', to: '/conseil-strategique' },
-      { label: 'Personal branding', to: '/personal-branding' },
-    ],
-  },
-  {
-    title: 'Performance Digitale',
-    description: 'Acquisition, contenu, SEO et analytics',
-    items: [
-      { label: 'Marketing digital', to: '/marketing-digital' },
-      { label: 'Social media', to: '/social-media' },
-      { label: 'Content digital', to: '/content-digital' },
-      { label: 'Développement web', to: '/developpement-web' },
-      { label: 'Analytics', to: '/analytics' },
-    ],
-  },
-  {
-    title: 'Influence & Événementiel',
-    description: 'Événements corporate et campagnes d\'influence',
-    items: [
-      { label: 'Événementiel corporate', to: '/evenementiel' },
-    ],
-  },
+const expertiseLinks = [
+  { label: "Branding & identité", to: "/branding" },
+  { label: "Stratégie de marque", to: "/conseil-strategique" },
+  { label: "Social media", to: "/social-media" },
+  { label: "Contenu digital", to: "/content-digital" },
+  { label: "Marketing digital", to: "/marketing-digital" },
+  { label: "Influence", to: "/influence-marketing" },
+  { label: "Événementiel", to: "/evenementiel" },
 ];
 
 export const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [mobileServicesExpanded, setMobileServicesExpanded] = useState(false);
+  const [open, setOpen] = useState(false);
+  const [expertisesOpen, setExpertisesOpen] = useState(false);
   const location = useLocation();
-  const navigate = useNavigate();
 
-  // Close mobile menu on route change
+  useEffect(() => setOpen(false), [location.pathname]);
   useEffect(() => {
-    setIsMenuOpen(false);
-  }, [location.pathname]);
-
-  // Prevent body scroll when menu is open
-  useEffect(() => {
-    if (isMenuOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
-    return () => {
-      document.body.style.overflow = '';
-    };
-  }, [isMenuOpen]);
-
-  const scrollToSection = (sectionId: string) => {
-    if (location.pathname === '/') {
-      const element = document.getElementById(sectionId);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-    } else {
-      navigate(`/#${sectionId}`);
-      setTimeout(() => {
-        const element = document.getElementById(sectionId);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }
-      }, 100);
-    }
-    setIsMenuOpen(false);
-  };
-
-  const navigationItems = [
-    { label: 'Accueil', to: '/' },
-    { label: 'Blog', to: '/blog' },
-    { label: 'Études de cas', to: '/etudes-de-cas' },
-    { label: 'Collaborations', to: '/collaborations' },
-    { label: 'Inside Link', to: '/inside-link' },
-    { label: 'Contact', to: '/contact' },
-  ];
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
+  }, [open]);
 
   return (
-    <>
-      <header className="fixed top-0 left-0 right-0 w-full bg-white z-[9999] border-b border-gray-200 shadow-sm" style={{ WebkitTransform: 'translateZ(0)', transform: 'translateZ(0)' }}>
-        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16 sm:h-20">
-            {/* Logo - Left side */}
-            <Link 
-              to="/" 
-              className="flex items-center flex-shrink-0 relative z-[10000]"
-              onClick={() => setIsMenuOpen(false)}
-              style={{ WebkitTransform: 'translateZ(0)', transform: 'translateZ(0)' }}
-            >
-              <img
-                src="/assets/brand/link-agency-logo.png"
-                alt="Link Agency Logo" 
-                className="h-10 w-auto max-w-[100px] sm:max-w-[120px] md:h-12 md:max-w-[140px] object-contain"
-                loading="eager"
-                fetchPriority="high"
-                style={{ display: 'block' }}
-              />
-            </Link>
-
-            {/* Desktop Navigation - Right side */}
-            <nav className="hidden lg:flex items-center space-x-3 xl:space-x-5">
-              {/* Accueil */}
-              <button
-                onClick={() => scrollToSection('accueil')}
-                className="text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors px-3 py-2 rounded-lg hover:bg-gray-50"
-              >
-                Accueil
-              </button>
-
-              {/* Services dropdown */}
-              <div
-                className="relative"
-                onMouseEnter={() => setIsServicesOpen(true)}
-                onMouseLeave={() => setIsServicesOpen(false)}
-              >
-                <button
-                  onClick={() => setIsServicesOpen(!isServicesOpen)}
-                  className="inline-flex items-center text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors px-3 py-2 rounded-lg hover:bg-gray-50"
-                  aria-expanded={isServicesOpen}
-                  aria-haspopup="true"
-                >
-                  Services
-                  <ChevronDown className={cn('w-4 h-4 ml-1 transition-transform', isServicesOpen && 'rotate-180')} />
-                </button>
-                {isServicesOpen && (
-                  <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1 w-[720px] bg-white rounded-2xl shadow-2xl border border-gray-100 p-6 grid grid-cols-3 gap-6 z-[10000]">
-                    {servicePillars.map((pillar) => (
-                      <div key={pillar.title}>
-                        <h3 className="text-xs font-bold uppercase tracking-wider bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 bg-clip-text text-transparent mb-1">
-                          {pillar.title}
-                        </h3>
-                        <p className="text-xs text-gray-500 mb-3">{pillar.description}</p>
-                        <ul className="space-y-1">
-                          {pillar.items.map((it) => (
-                            <li key={it.to}>
-                              <Link
-                                to={it.to}
-                                onClick={() => setIsServicesOpen(false)}
-                                className="block text-sm text-gray-700 hover:text-purple-700 hover:bg-purple-50/50 px-2 py-1.5 rounded-md transition-colors"
-                              >
-                                {it.label}
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </div>
-
-              {navigationItems.slice(1).map((item) => (
-                item.to ? (
-                  <Link 
-                    key={item.label}
-                    to={item.to}
-                    className="text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors px-3 py-2 rounded-lg hover:bg-gray-50"
-                  >
-                    {item.label}
-                  </Link>
-                ) : (
-                  <button 
-                    key={item.label}
-                    onClick={item.action}
-                    className="text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors px-3 py-2 rounded-lg hover:bg-gray-50"
-                  >
-                    {item.label}
-                  </button>
-                )
-              ))}
-              <a
-                href="https://wa.me/212699024526?text=Bonjour%2C%20je%20souhaite%20%C3%A9changer%20sur%20un%20projet."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="ml-2 inline-flex items-center px-5 py-2.5 bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-lg text-sm font-semibold hover:from-green-700 hover:to-emerald-700 transition-all shadow-sm hover:shadow-md"
-              >
-                Discuter sur WhatsApp
-              </a>
-            </nav>
-
-            {/* Mobile menu button */}
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors flex items-center justify-center min-w-[44px] min-h-[44px] relative z-[10000]"
-              aria-label="Toggle menu"
-              style={{ WebkitTransform: 'translateZ(0)', transform: 'translateZ(0)' }}
-            >
-              {isMenuOpen ? (
-                <X className="w-6 h-6 text-gray-900" />
-              ) : (
-                <Menu className="w-6 h-6 text-gray-900" />
-              )}
+    <header className="fixed inset-x-0 top-0 z-[9999] border-b border-white/10 bg-black/90 text-white backdrop-blur-xl">
+      <div className="mx-auto flex h-16 max-w-[1440px] items-center justify-between px-5 sm:h-20 sm:px-8 lg:px-12">
+        <Link to="/" className="flex items-center gap-3" aria-label="Link Agency — accueil">
+          <img src="/assets/brand/link-agency-logo.png" alt="" className="h-8 w-8 invert sm:h-9 sm:w-9" width="36" height="36" />
+          <span className="text-[13px] font-semibold uppercase tracking-[0.18em]">Link Agency</span>
+        </Link>
+        <nav className="hidden items-center gap-7 lg:flex" aria-label="Navigation principale">
+          <Link to="/direction-marketing-externalisee" className="editorial-nav-link">Notre modèle</Link>
+          <div className="relative" onMouseEnter={() => setExpertisesOpen(true)} onMouseLeave={() => setExpertisesOpen(false)}>
+            <button className="editorial-nav-link flex items-center gap-1.5" onClick={() => setExpertisesOpen(!expertisesOpen)} aria-expanded={expertisesOpen}>
+              Expertises <ChevronDown className={cn("h-3.5 w-3.5 transition-transform", expertisesOpen && "rotate-180")} />
             </button>
-          </div>
-        </div>
-      </header>
-
-      {/* Mobile Menu Overlay */}
-      <div
-        className={cn(
-          'fixed inset-0 z-[90] lg:hidden transition-all duration-300 ease-in-out',
-          isMenuOpen 
-            ? 'opacity-100 pointer-events-auto' 
-            : 'opacity-0 pointer-events-none'
-        )}
-      >
-        {/* Backdrop */}
-        <div 
-          className="absolute inset-0 bg-black/50 backdrop-blur-sm"
-          onClick={() => setIsMenuOpen(false)}
-        />
-        
-        {/* Menu Panel */}
-        <div
-          className={cn(
-            'absolute right-0 top-0 h-full w-80 max-w-[85vw] bg-white shadow-2xl transform transition-transform duration-300 ease-out',
-            isMenuOpen ? 'translate-x-0' : 'translate-x-full'
-          )}
-        >
-          <div className="flex flex-col h-full">
-            {/* Header */}
-            <div className="flex items-center justify-between p-6 border-b border-gray-200">
-              <img
-                src="/assets/brand/link-agency-logo.png"
-                alt="Link Agency Logo" 
-                className="h-8 w-auto object-contain"
-                loading="eager"
-                fetchPriority="high"
-              />
-              <button
-                onClick={() => setIsMenuOpen(false)}
-                className="p-2 rounded-lg hover:bg-gray-100 transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
-                aria-label="Close menu"
-              >
-                <X className="w-6 h-6 text-black" />
-              </button>
-            </div>
-
-            {/* Navigation */}
-            <nav className="flex-1 px-6 py-8 overflow-y-auto">
-              <div className="space-y-2">
-                {/* Accueil */}
-                <button
-                  onClick={() => { scrollToSection('accueil'); setIsMenuOpen(false); }}
-                  className="w-full text-left px-4 py-4 text-lg font-light text-black hover:text-gray-600 hover:bg-gray-50 rounded-xl transition-all duration-200"
-                >
-                  Accueil
-                </button>
-
-                {/* Services accordion */}
-                <div>
-                  <button
-                    onClick={() => setMobileServicesExpanded(!mobileServicesExpanded)}
-                    className="w-full flex items-center justify-between px-4 py-4 text-lg font-light text-black hover:text-gray-600 hover:bg-gray-50 rounded-xl transition-all duration-200"
-                    aria-expanded={mobileServicesExpanded}
-                  >
-                    Services
-                    <ChevronDown className={cn('w-5 h-5 transition-transform', mobileServicesExpanded && 'rotate-180')} />
-                  </button>
-                  {mobileServicesExpanded && (
-                    <div className="pl-4 pb-2 space-y-4 mt-2">
-                      {servicePillars.map((pillar) => (
-                        <div key={pillar.title}>
-                          <h4 className="text-xs font-bold uppercase tracking-wider bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 bg-clip-text text-transparent px-3 mb-1">
-                            {pillar.title}
-                          </h4>
-                          <ul className="space-y-1">
-                            {pillar.items.map((it) => (
-                              <li key={it.to}>
-                                <Link
-                                  to={it.to}
-                                  onClick={() => setIsMenuOpen(false)}
-                                  className="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-lg"
-                                >
-                                  {it.label}
-                                </Link>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      ))}
-                    </div>
-                  )}
-                </div>
-
-                {navigationItems.slice(1).map((item) => (
-                  <div key={item.label} className="block">
-                    {item.to ? (
-                      <Link 
-                        to={item.to}
-                        onClick={() => setIsMenuOpen(false)}
-                        className="block px-4 py-4 text-lg font-light text-black hover:text-gray-600 hover:bg-gray-50 rounded-xl transition-all duration-200"
-                      >
-                        {item.label}
-                      </Link>
-                    ) : (
-                      <button 
-                        onClick={() => {
-                          item.action?.();
-                          setIsMenuOpen(false);
-                        }}
-                        className="w-full text-left px-4 py-4 text-lg font-light text-black hover:text-gray-600 hover:bg-gray-50 rounded-xl transition-all duration-200"
-                      >
-                        {item.label}
-                      </button>
-                    )}
-                  </div>
+            <div className={cn("absolute left-1/2 top-full w-72 -translate-x-1/2 pt-5 transition-all", expertisesOpen ? "visible opacity-100" : "invisible opacity-0")}>
+              <div className="border border-white/10 bg-[#0a0a0a] p-3 shadow-2xl">
+                {expertiseLinks.map((item) => (
+                  <Link key={item.to} to={item.to} className="flex items-center justify-between border-b border-white/5 px-3 py-3 text-sm text-white/65 transition hover:bg-white/[0.04] hover:text-white last:border-0">
+                    {item.label}<ArrowUpRight className="h-3.5 w-3.5 text-white/30" />
+                  </Link>
                 ))}
               </div>
-              <a
-                href="https://wa.me/212699024526?text=Bonjour%2C%20je%20souhaite%20%C3%A9changer%20sur%20un%20projet."
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => setIsMenuOpen(false)}
-                className="mt-6 block text-center px-4 py-4 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 text-white rounded-xl text-base font-semibold hover:from-blue-700 hover:via-purple-700 hover:to-indigo-800 transition-all"
-              >
-                Discuter sur WhatsApp
-              </a>
-            </nav>
+            </div>
           </div>
-        </div>
+          <Link to="/collaborations" className="editorial-nav-link">Missions</Link>
+          <Link to="/blog" className="editorial-nav-link">Analyses</Link>
+          <Link to="/inside-link" className="editorial-nav-link">Le cabinet</Link>
+          <Link to="/contact" onClick={() => trackEvent("cta_contact_click", { category: "lead", label: "header" })} className="border border-[#c8102e] bg-[#c8102e] px-5 py-3 text-xs font-semibold uppercase tracking-[0.14em] text-white transition hover:bg-[#a90d26]">
+            Parler d’un projet
+          </Link>
+        </nav>
+        <button onClick={() => setOpen(!open)} className="flex min-h-11 min-w-11 items-center justify-center lg:hidden" aria-label={open ? "Fermer le menu" : "Ouvrir le menu"} aria-expanded={open}>
+          {open ? <X /> : <Menu />}
+        </button>
       </div>
-    </>
+      <div className={cn("fixed inset-0 top-16 bg-black px-5 pb-10 pt-8 transition lg:hidden sm:top-20 sm:px-8", open ? "visible translate-x-0 opacity-100" : "invisible translate-x-full opacity-0")}>
+        <nav className="mx-auto flex h-full max-w-xl flex-col overflow-y-auto" aria-label="Navigation mobile">
+          <Link to="/direction-marketing-externalisee" className="mobile-editorial-link">Notre modèle</Link>
+          <button onClick={() => setExpertisesOpen(!expertisesOpen)} className="mobile-editorial-link flex items-center justify-between text-left">
+            Expertises <ChevronDown className={cn("h-5 w-5 transition-transform", expertisesOpen && "rotate-180")} />
+          </button>
+          {expertisesOpen && <div className="border-b border-white/10 py-2 pl-4">{expertiseLinks.map((item) => <Link key={item.to} to={item.to} className="block py-2.5 text-sm text-white/60">{item.label}</Link>)}</div>}
+          <Link to="/collaborations" className="mobile-editorial-link">Missions</Link>
+          <Link to="/blog" className="mobile-editorial-link">Analyses</Link>
+          <Link to="/inside-link" className="mobile-editorial-link">Le cabinet</Link>
+          <Link to="/contact" className="mt-8 flex items-center justify-between bg-[#c8102e] px-5 py-4 text-sm font-semibold uppercase tracking-[0.12em]">Parler d’un projet <ArrowUpRight className="h-4 w-4" /></Link>
+        </nav>
+      </div>
+    </header>
   );
 };

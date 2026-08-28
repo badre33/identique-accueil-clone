@@ -137,7 +137,6 @@ const AgenceMarrakech = () => {
               width={1600}
               height={896}
               loading="eager"
-              fetchPriority="high"
               decoding="async"
               className="w-full h-auto rounded-2xl shadow-2xl object-cover aspect-[4/3]"
             />

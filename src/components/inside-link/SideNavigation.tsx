@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from 'react';
-import { Users, Target, Lightbulb, Award, Mail } from 'lucide-react';
+import { User, Target, Lightbulb, Network } from 'lucide-react';
 import { TouchOptimized } from '../TouchOptimized';
 import { useMobile } from '@/hooks/useMobile';
 import { cn } from '@/lib/utils';
@@ -30,12 +30,11 @@ export const SideNavigation = ({ currentSection }: SideNavigationProps) => {
   };
 
   const sections = [
-    { id: 'hero', label: 'Accueil', icon: Users },
-    { id: 'founders', label: 'Fondateurs', icon: Users },
+    { id: 'hero', label: 'Accueil', icon: User },
+    { id: 'founders', label: 'Fondateur', icon: User },
+    { id: 'network', label: 'Réseau', icon: Network },
     { id: 'vision', label: 'Notre Vision', icon: Target },
-    { id: 'stats', label: 'Statistiques', icon: Award },
     { id: 'mission', label: 'Pourquoi Link', icon: Lightbulb },
-    { id: 'join', label: 'Nous Rejoindre', icon: Mail },
   ];
 
   // Hide on mobile in portrait mode or very small screens

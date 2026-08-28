@@ -33,7 +33,7 @@ export const Services = () => {
       icon: Search,
       title: "SEO, SEO Arabe & Contenu éditorial Maroc",
       description: "Référencement naturel FR · AR · Darija. Nous générons 20 à 30 % de croissance organique grâce à une expertise SEO bilingue rare au Maroc.",
-      features: ["SEO FR · AR · Darija", "Stratégie de contenu pilier", "Production studio interne"],
+      features: ["SEO FR · AR · Darija", "Stratégie de contenu pilier", "Production via réseau spécialisé"],
       color: "from-green-500 to-emerald-600",
       bgImage: "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=300&h=225&fit=crop&fm=webp&q=30",
       link: "/content-digital"

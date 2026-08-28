@@ -15,7 +15,7 @@ export const Footer = () => {
           <div className="lg:col-span-2">
             <h3 className="text-xl font-semibold mb-4">Link Agency</h3>
             <p className="text-gray-300 text-sm leading-relaxed mb-4 max-w-md">
-              Cabinet conseil en performance digitale au Maroc. Nous accompagnons les directions marketing des banques, assurances, retail et industrie dans la conception de stratégies mesurables.
+              Direction de marque et pôle marketing externalisé pour les entreprises ambitieuses au Maroc. Stratégie, contenu et performance sous un même pilotage senior.
             </p>
             <a 
               href="https://maps.app.goo.gl/q3xLY5gy8cY6U6Tj6" 
@@ -31,7 +31,7 @@ export const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => trackWhatsAppClick("footer_brand")}
-              className="inline-flex items-center gap-2 px-4 py-2.5 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 text-white text-sm font-semibold rounded-lg hover:from-blue-700 hover:via-purple-700 hover:to-indigo-800 transition-all"
+              className="inline-flex items-center gap-2 bg-[#c8102e] px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#a90d26]"
             >
               <MessageCircle className="w-4 h-4" />
               Discuter sur WhatsApp
@@ -40,16 +40,17 @@ export const Footer = () => {
 
           {/* Pilier Stratégie & Marque */}
           <div>
-            <h3 className="text-xs font-bold uppercase tracking-wider bg-gradient-to-r from-blue-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent mb-4">
-              Stratégie & Marque
+            <h3 className="text-xs font-bold uppercase tracking-wider text-[#b8935a] mb-4">
+              Direction & Marque
             </h3>
             <ul className="space-y-2">
+              <li><Link to="/direction-marketing-externalisee" className="text-gray-300 hover:text-white transition-colors text-sm">Direction externalisée</Link></li>
               <li><Link to="/branding" className="text-gray-300 hover:text-white transition-colors text-sm">Branding & Identité</Link></li>
               <li><Link to="/conseil-strategique" className="text-gray-300 hover:text-white transition-colors text-sm">Conseil stratégique</Link></li>
               <li><Link to="/personal-branding" className="text-gray-300 hover:text-white transition-colors text-sm">Personal branding</Link></li>
             </ul>
 
-            <h3 className="text-xs font-bold uppercase tracking-wider bg-gradient-to-r from-blue-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent mt-6 mb-4">
+            <h3 className="text-xs font-bold uppercase tracking-wider text-[#b8935a] mt-6 mb-4">
               Influence & Événementiel
             </h3>
             <ul className="space-y-2">
@@ -60,7 +61,7 @@ export const Footer = () => {
 
           {/* Pilier Performance Digitale */}
           <div>
-            <h3 className="text-xs font-bold uppercase tracking-wider bg-gradient-to-r from-blue-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent mb-4">
+            <h3 className="text-xs font-bold uppercase tracking-wider text-[#b8935a] mb-4">
               Performance Digitale
             </h3>
             <ul className="space-y-2">
@@ -71,7 +72,7 @@ export const Footer = () => {
               <li><Link to="/analytics" className="text-gray-300 hover:text-white transition-colors text-sm">Analytics</Link></li>
             </ul>
 
-            <h3 className="text-xs font-bold uppercase tracking-wider bg-gradient-to-r from-blue-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent mt-6 mb-4">
+            <h3 className="text-xs font-bold uppercase tracking-wider text-[#b8935a] mt-6 mb-4">
               Découvrir
             </h3>
             <ul className="space-y-2">
@@ -127,10 +128,10 @@ export const Footer = () => {
               <strong className="text-gray-300">Link Agency</strong> — <strong className="text-gray-300">agence marketing digital Maroc</strong> et <strong className="text-gray-300">agence communication Casablanca</strong>. Nous accompagnons les directions marketing dans la conception de stratégies mesurables : <strong className="text-gray-300">social media Maroc</strong>, <strong className="text-gray-300">production vidéo</strong>, <strong className="text-gray-300">campagnes Meta & Google Ads</strong>, <strong className="text-gray-300">événementiel corporate</strong>.
             </p>
             <p className="mb-3">
-              Notre studio interne conçoit les dispositifs éditoriaux et publicitaires de secteurs exigeants : <Link to="/secteurs" className="text-gray-300 underline hover:text-white">banque, assurance, retail, e-commerce, industrie et services B2B</Link>. Nous combinons <strong className="text-gray-300">community management Casablanca</strong>, contenus bilingues FR/AR/Darija, reporting et optimisation continue du ROI.
+              Notre réseau de spécialistes est mobilisé selon les besoins des dispositifs éditoriaux et publicitaires de secteurs exigeants : <Link to="/secteurs" className="text-gray-300 underline hover:text-white">banque, assurance, retail, e-commerce, industrie et services B2B</Link>. Nous combinons <strong className="text-gray-300">community management Casablanca</strong>, contenus bilingues FR/AR/Darija, reporting et optimisation continue.
             </p>
             <p>
-              <strong className="text-gray-300">Agence marketing pour banque et assurance au Maroc</strong>, Link Agency accompagne plus de 50 clients à travers 200+ projets. De la stratégie à l'exécution, nous pilotons des dispositifs cohérents, mesurables et alignés sur vos enjeux business.
+              <strong className="text-gray-300">Agence marketing pour banque et assurance au Maroc</strong>, Link Agency pilote des dispositifs cohérents, mesurables et alignés sur les enjeux business des directions marketing.
             </p>
           </div>
         </div>

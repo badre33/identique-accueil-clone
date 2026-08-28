@@ -33,14 +33,14 @@ const timelineEvents: TimelineEvent[] = [
   },
   {
     id: 2,
-    year: '2017',
-    title: 'Tech, conseil & croissance',
-    description: 'Premières expériences en tech, conseil stratégique et accompagnement de la croissance B2B et B2C.',
-    detailedDescription: 'Badreddine évolue dans la tech et le conseil stratégique, accompagne plusieurs structures sur leurs problématiques de croissance et pose les bases d\'une approche hybride combinant exécution opérationnelle et pilotage data.',
+    year: '2015',
+    title: 'Création de Link Agency',
+    description: 'Badreddine fonde Link Agency à Casablanca avec un modèle de pilotage direct.',
+    detailedDescription: 'Création de Link Agency par Badreddine Harkaoui. La vision : réunir stratégie, contenu et performance dans un même cadre, avec un interlocuteur senior unique et des spécialistes mobilisés selon chaque mission.',
     icon: Lightbulb,
     color: 'from-green-500 to-emerald-500',
     location: 'Paris · Casablanca',
-    achievements: ['Premières missions stratégiques', 'Approche data assumée', 'Méthodologie affinée'],
+    achievements: ['Fondation par Badreddine Harkaoui', 'Pilotage direct', 'Modèle senior-led'],
   },
   {
     id: 3,
@@ -56,24 +56,24 @@ const timelineEvents: TimelineEvent[] = [
   {
     id: 4,
     year: '2023',
-    title: 'Création de Link Agency',
-    description: 'Badreddine fonde Link Agency à Casablanca avec une vision hybride unique au Maroc.',
-    detailedDescription: 'Création officielle de Link Agency par Badreddine Harkaoui, fondateur unique. La vision : un modèle hybride agence d\'exécution + cabinet de pilotage stratégique, où branding, contenu, social, paid et événementiel sont alignés sur un même objectif de performance commerciale.',
+    title: 'Structuration du modèle',
+    description: 'Link Agency formalise sa méthode et son réseau de spécialistes au Maroc.',
+    detailedDescription: 'Le modèle senior-led se structure autour d\'une direction de mission unique, d\'une méthode codifiée et d\'un réseau de partenaires spécialisés mobilisés selon les besoins : branding, contenu, social, paid et événementiel.',
     icon: Rocket,
     color: 'from-orange-500 to-red-500',
     location: 'Casablanca, Maroc',
-    achievements: ['Fondation par Badreddine Harkaoui', 'Modèle hybride unique', 'Équipe senior constituée'],
+    achievements: ['Méthode codifiée', 'Réseau spécialisé', 'Pilotage centralisé'],
   },
   {
     id: 5,
     year: '2026',
     title: 'Agence de stratégie & performance',
     description: 'Link Agency s\'impose comme partenaire stratégique des marques qui veulent aligner image et performance commerciale.',
-    detailedDescription: 'Link Agency consolide son positionnement d\'agence de stratégie et performance, tous secteurs confondus. 10 experts senior, méthodologie Link Performance System déployée, présence renforcée à Casablanca et Marrakech.',
+    detailedDescription: 'Link Agency consolide son positionnement d\'agence de stratégie et performance. La méthodologie Link Performance System est déployée avec une présence renforcée à Casablanca et Marrakech.',
     icon: Calendar,
     color: 'from-indigo-500 to-purple-500',
     location: 'Casablanca · Marrakech',
-    achievements: ['10 experts senior', 'Link Performance System', 'Stratégie 360° tous secteurs'],
+    achievements: ['Pilotage fondateur', 'Link Performance System', 'Stratégie intégrée'],
   }
 ];
 
@@ -263,30 +263,6 @@ export const EnhancedTimeline = () => {
         })}
       </div>
 
-      {/* Summary stats */}
-      <div className="mt-16 p-8 bg-gradient-to-br from-gray-50 to-white rounded-3xl border border-gray-100">
-        <div className="text-center">
-          <h3 className="text-2xl font-bold text-black mb-8">Notre parcours en chiffres</h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-black mb-2">5</div>
-              <div className="text-sm text-gray-600">Années d'expérience</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-black mb-2">50+</div>
-              <div className="text-sm text-gray-600">Projets réalisés</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-black mb-2">3</div>
-              <div className="text-sm text-gray-600">Pays d'expertise</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-black mb-2">100%</div>
-              <div className="text-sm text-gray-600">Satisfaction client</div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };

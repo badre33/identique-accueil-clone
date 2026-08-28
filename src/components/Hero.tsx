@@ -5,10 +5,10 @@ import { trackEvent } from "@/lib/tracking";
 
 const Hero = () => {
   const proofItems = [
-    { value: "11", unit: "ans", label: "au service des marques au Maroc" },
-    { value: "200+", unit: "", label: "missions livrées depuis 2015" },
-    { value: "30+", unit: "", label: "marques accompagnées" },
-    { value: "6", unit: "", label: "expertises intégrées" },
+    { value: "2015", unit: "", label: "année de création au Maroc" },
+    { value: "Direct", unit: "", label: "pilotage par le fondateur" },
+    { value: "Senior", unit: "", label: "expertises mobilisées selon la mission" },
+    { value: "FR/AR", unit: "", label: "contenus adaptés au marché marocain" },
   ];
 
   const clientLogos = [
@@ -52,9 +52,9 @@ const Hero = () => {
 
             <p className="mt-10 max-w-2xl text-lg lg:text-xl leading-relaxed text-foreground/70 font-normal">
               Branding, social media, performance, événementiel. Un fondateur
-              senior, 11 ans d'expérience au Maroc, 200+ missions livrées. Une
-              méthode codifiée, un interlocuteur unique, des livrables
-              rigoureux. Casablanca, Rabat, Marrakech.
+              senior pilote chaque mission, de la stratégie aux arbitrages.
+              Les expertises de production sont mobilisées selon le périmètre,
+              avec une méthode codifiée et des livrables rigoureux.
             </p>
 
             <div className="mt-12 flex flex-col sm:flex-row gap-4">
@@ -179,7 +179,7 @@ const Hero = () => {
           <div className="flex items-center gap-3 mb-8">
             <span className="h-px w-10 bg-foreground/40" />
             <span className="text-[11px] tracking-[0.2em] uppercase text-foreground/60 font-medium">
-              Ils nous ont fait confiance
+              Références de missions et d'expériences
             </span>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-x-6 gap-y-3">
@@ -192,6 +192,11 @@ const Hero = () => {
               </div>
             ))}
           </div>
+          <p className="mt-6 max-w-3xl text-xs leading-relaxed text-foreground/50">
+            Références issues de missions réalisées par Link Agency ou pilotées
+            par son fondateur dans le cadre de fonctions antérieures. Le contexte
+            précis de chaque intervention est présenté sur demande.
+          </p>
         </div>
       </div>
     </section>

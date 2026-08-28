@@ -8,7 +8,7 @@ export const OptimizedCTAs = {
   // CTA principal avec urgence
   PrimaryCTA: ({ 
     title = "Cadrez votre prochain dispositif digital",
-    subtitle = "50+ clients accompagnés, 200+ projets réalisés pour des marques au Maroc au Maroc",
+    subtitle = "Un pilotage senior et une méthode claire pour les dispositifs à fort enjeu au Maroc",
     ctaText = "Discuter de votre dispositif",
     urgencyText = "Premier échange stratégique • Réponse rapide",
     link = buildWhatsAppUrl("Bonjour, je souhaite échanger sur un projet.")
@@ -56,9 +56,9 @@ export const OptimizedCTAs = {
   SocialProofCTA: ({ 
     title = "Des références qui parlent aux directions marketing",
     stats = [
-      { value: "50+", label: "Clients accompagnés" },
-      { value: "200+", label: "Projets réalisés" },
-      { value: "15+", label: "Secteurs couverts" }
+      { value: "2015", label: "Création au Maroc" },
+      { value: "Direct", label: "Pilotage fondateur" },
+      { value: "Senior", label: "Réseau sur mesure" }
     ],
     ctaText = "Voir nos références",
     link = buildWhatsAppUrl("Bonjour, je souhaite échanger sur un projet.")
@@ -92,7 +92,7 @@ export const OptimizedCTAs = {
     title = "Pourquoi Link Agency ?",
     benefits = [
       "Portefeuille de marques au Maroc, dont banque et assurance",
-      "Studio interne : contenu, vidéo, motion, shooting et copywriting",
+      "Réseau de spécialistes mobilisé selon les besoins de chaque mission",
       "Pilotage publicitaire rigoureux avec reporting et optimisation continue",
       "Expertise sectorielle large : services, retail, industrie, finance, e-commerce"
     ],

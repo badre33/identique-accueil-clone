@@ -119,7 +119,7 @@ export const NetworkSection = () => {
             Un seul interlocuteur côté Link Agency — Badreddine.{" "}
             <span className="text-gray-500 italic">
               Pas de mille-feuille de sous-traitants, pas de devis surprises.
-              Vous traitez avec une équipe, qui pilote un réseau.
+              Vous traitez directement avec le fondateur, qui pilote le réseau.
             </span>
           </p>
         </div>

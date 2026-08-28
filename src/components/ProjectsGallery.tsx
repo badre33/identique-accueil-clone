@@ -141,7 +141,7 @@ export const ProjectsGallery = () => {
             Références & cas clients
           </h2>
           <p className="text-xl lg:text-2xl text-gray-700 leading-relaxed max-w-4xl mx-auto font-light">
-            50+ clients accompagnés. 200+ projets réalisés. 15+ secteurs couverts. Une sélection de cas qui illustrent notre capacité à concevoir, produire et piloter des dispositifs à fort enjeu.
+            Une sélection de missions documentées qui illustre notre capacité à concevoir, produire et piloter des dispositifs à fort enjeu.
           </p>
           <div className="flex flex-wrap justify-center gap-3 mt-10">
             {["L'Bankalik", "AXA Assurance Maroc", "RMA", "Subway Maroc", "YouCan", "Nova Spacia", "OCB Maroc", "La Maison Amoud", "Brainlyne", "Benatna"].map((client) => (

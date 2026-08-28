@@ -37,6 +37,30 @@
   --brand-graphite: 215 20% 35%;   /* Graphite */
 }
 
+@layer components {
+  .editorial-nav-link { @apply text-xs font-medium uppercase tracking-[0.13em] text-white/65 transition-colors hover:text-white; }
+  .mobile-editorial-link { @apply border-b border-white/10 py-5 text-xl font-medium tracking-tight text-white; }
+  .editorial-shell { @apply mx-auto w-full max-w-[1440px]; }
+  .editorial-section { @apply px-5 py-20 sm:px-8 sm:py-28 lg:px-12 lg:py-36; }
+  .editorial-heading-grid { @apply grid gap-8 lg:grid-cols-[260px_1fr]; }
+  .editorial-eyebrow { @apply text-[11px] font-semibold uppercase tracking-[0.25em]; }
+  .editorial-title { @apply text-4xl font-medium leading-[1.04] tracking-[-0.045em] sm:text-5xl lg:text-6xl; }
+  .editorial-lead { @apply max-w-3xl text-base leading-8 text-black/60 sm:text-lg; }
+  .editorial-button-primary { @apply inline-flex min-h-12 items-center justify-center gap-3 bg-[#c8102e] px-5 text-xs font-semibold uppercase tracking-[0.12em] text-white transition hover:bg-[#a90d26]; }
+  .editorial-button-secondary { @apply inline-flex min-h-12 items-center justify-center border border-white/20 px-5 text-xs font-semibold uppercase tracking-[0.12em] text-white transition hover:border-white/50; }
+}
+
+.link-editorial { font-family: "Montserrat", system-ui, sans-serif; }
+.editorial-grid {
+  background-image: linear-gradient(to right, rgba(255,255,255,.055) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,.035) 1px, transparent 1px);
+  background-size: 9vw 9vw;
+  mask-image: linear-gradient(to bottom, black, transparent 88%);
+}
+.link-editorial > section:nth-child(2) { border-color: rgba(255,255,255,.1); background: #050505; }
+.link-editorial > section:nth-child(2) header p:first-child { color: rgba(255,255,255,.62); }
+.link-editorial > section:nth-child(2) header p:last-child, .link-editorial > section:nth-child(2) > p { color: rgba(255,255,255,.36); }
+.link-editorial > section:nth-child(2) img { filter: grayscale(1) invert(.9); opacity: .55; }
+
 .dark {
   --background: 222.2 84% 4.9%;
   --foreground: 210 40% 98%;

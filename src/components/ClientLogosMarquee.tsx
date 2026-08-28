@@ -31,7 +31,7 @@ const logos: LogoEntry[] = [
   { name: "Mutandis Group", src: "/brands/mutandis.png" },
   { name: "Aiguebelle", src: "/brands/aiguebelle.svg" },
 
-  // Tier 4 — Tech, scaleups, références équipe
+  // Tier 4 — Tech, scaleups et références de missions
   { name: "YouCan", src: "/assets/media/youcan-logo.png" },
   { name: "Brainlyne", src: "/brands/brainlyne.png" },
   { name: "Nova Spacia", src: "/assets/media/novaspacia-logo.svg" },
@@ -73,27 +73,27 @@ const Row = ({ ariaHidden = false }: { ariaHidden?: boolean }) => (
 export const ClientLogosMarquee = memo(() => {
   return (
     <section
-      aria-label="Marques accompagnées par Link Agency"
+      aria-label="Références de missions et d'expériences Link Agency"
       className="relative border-y border-gray-100/80 bg-gradient-to-b from-white via-gray-50/30 to-white py-12 md:py-14"
     >
       <header className="mb-8 md:mb-10 flex flex-col items-center gap-2">
         <p className="text-[11px] md:text-xs font-medium uppercase tracking-[0.32em] text-gray-500">
-          Ils nous font confiance
+          Références de missions et d'expériences
         </p>
         <p className="text-xs md:text-sm font-light text-gray-400 italic">
-          {logos.length}+ marques accompagnées — banque, assurance, industrie, institutionnel
+          Interventions de Link Agency ou expériences antérieures du fondateur
         </p>
       </header>
 
       <div className="group relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_6%,black_94%,transparent)]">
-        <div className="flex animate-marquee whitespace-nowrap group-hover:[animation-play-state:paused] motion-reduce:animate-none">
+        <div className="flex animate-marquee-mobile md:animate-marquee whitespace-nowrap group-hover:[animation-play-state:paused] motion-reduce:animate-none">
           <Row />
           <Row ariaHidden />
         </div>
       </div>
 
       <p className="mt-6 md:mt-8 text-center text-[10px] md:text-xs text-gray-400 tracking-wide">
-        Survolez pour mettre en pause — cliquez sur « Collaborations » pour le détail des missions.
+        <span className="hidden md:inline">Survolez pour mettre en pause — </span>Consultez « Collaborations » pour le détail des missions.
       </p>
     </section>
   );

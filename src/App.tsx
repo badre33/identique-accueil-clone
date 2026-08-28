@@ -1,4 +1,5 @@
-import { Outlet } from "react-router-dom";
+import { useEffect } from "react";
+import { Outlet, useLocation } from "react-router-dom";
 import type { RouteObject } from "react-router-dom";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -25,6 +26,18 @@ const queryClient = new QueryClient({
   },
 });
 
+const RouteScrollReset = () => {
+  const { pathname, hash } = useLocation();
+  useEffect(() => {
+    if (hash) {
+      requestAnimationFrame(() => document.querySelector(hash)?.scrollIntoView());
+      return;
+    }
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  }, [pathname, hash]);
+  return null;
+};
+
 // Layout racine : tous les providers + chrome commun, puis <Outlet/> pour la page.
 const Layout = () => (
   <ErrorBoundary>
@@ -33,6 +46,7 @@ const Layout = () => (
         <AnalyticsProvider>
           <TooltipProvider>
             <CriticalResourcesPreloader />
+            <RouteScrollReset />
             <Toaster />
             <Sonner />
             <PageTransition>
@@ -58,6 +72,7 @@ export const routes: RouteObject[] = [
     element: <Layout />,
     children: [
       { index: true, element: <Index /> },
+      { path: "direction-marketing-externalisee", lazy: page(() => import('./pages/DirectionMarketingExternalisee')) },
       { path: "branding", lazy: page(() => import('./pages/Branding')) },
       { path: "evenementiel", lazy: page(() => import('./pages/Evenementiel')) },
       { path: "influence-marketing", lazy: page(() => import('./pages/InfluenceMarketing')) },

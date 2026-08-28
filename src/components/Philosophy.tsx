@@ -87,7 +87,7 @@ export const Philosophy = () => {
             </div>
             <h3 className="text-xl font-light mb-4 text-black">Résultats business mesurables</h3>
             <p className="text-gray-600 leading-relaxed">
-              50+ clients accompagnés, 200+ projets réalisés, 15+ secteurs couverts. Nos références incluent la banque, l'assurance, le retail, l'e-commerce et l'industrie au Maroc.
+              Une direction de mission engagée, des expertises activées selon le périmètre et des références dans la banque, l'assurance, le retail, l'e-commerce et l'industrie au Maroc.
             </p>
           </div>
         </div>
