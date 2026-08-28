@@ -78,14 +78,14 @@ export const ClientLogosMarquee = memo(() => {
       className="home-client-marquee relative overflow-hidden border-y border-black/15 bg-[#d8cec1] py-16 text-[#0a0a0a] md:py-20"
     >
       <div className="pointer-events-none absolute right-0 top-0 h-full w-1/4 bg-[#765fc4] opacity-[.12]" aria-hidden="true" />
-      <header className="relative mx-auto mb-12 grid max-w-[1440px] gap-7 px-5 sm:px-8 md:mb-14 lg:grid-cols-[220px_1fr_auto] lg:items-end lg:px-12">
+      <header className="relative mx-auto mb-12 grid max-w-[1440px] gap-7 px-5 sm:px-8 md:mb-14 lg:grid-cols-[220px_1fr_auto] lg:items-end lg:px-12" data-reveal>
         <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-[#6751b7]">00 / Références</p>
         <h2 className="max-w-3xl text-3xl font-medium leading-[1.02] tracking-[-.045em] sm:text-5xl">Des marques exigeantes.<br /><span className="text-black/40">Des contextes très différents.</span></h2>
         <p className="max-w-xs text-xs leading-5 text-black/50 lg:text-right">Missions Link Agency et expériences antérieures directement pilotées par le fondateur.</p>
       </header>
 
       <div className="group relative border-y border-black/20 py-9 [mask-image:linear-gradient(to_right,transparent,black_4%,black_96%,transparent)]">
-        <div className="flex animate-marquee-mobile md:animate-marquee whitespace-nowrap group-hover:[animation-play-state:paused] motion-reduce:animate-none">
+        <div className="flex w-max animate-marquee-mobile whitespace-nowrap will-change-transform group-hover:[animation-play-state:paused] motion-reduce:animate-none md:animate-marquee">
           <Row />
           <Row ariaHidden />
         </div>

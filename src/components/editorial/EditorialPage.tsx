@@ -53,14 +53,14 @@ export const EditorialPageHero = ({
     <div className="editorial-page-grain absolute inset-0" aria-hidden="true" />
     <div className="editorial-shell relative grid gap-14 lg:grid-cols-[minmax(0,1fr)_minmax(300px,430px)] lg:items-end lg:gap-20">
       <div>
-        <div className="mb-10 flex items-center gap-5 border-b border-black/15 pb-4">
+        <div className="motion-intro motion-intro--1 mb-10 flex items-center gap-5 border-b border-black/15 pb-4">
           <span className="text-[10px] font-bold tracking-[0.22em] text-black/40">{index}</span>
           <p className="editorial-eyebrow text-black/65">{eyebrow}</p>
         </div>
-        <h1 className="max-w-[1000px] text-[clamp(3rem,6.6vw,7.25rem)] font-medium leading-[.9] tracking-[-.065em]">
+        <h1 className="motion-intro motion-intro--2 max-w-[1000px] text-[clamp(3rem,6.6vw,7.25rem)] font-medium leading-[.9] tracking-[-.065em]">
           {title}
         </h1>
-        <div className="mt-10 grid gap-7 border-t border-black/15 pt-7 sm:grid-cols-[minmax(0,650px)_auto] sm:items-end sm:justify-between">
+        <div className="motion-intro motion-intro--3 mt-10 grid gap-7 border-t border-black/15 pt-7 sm:grid-cols-[minmax(0,650px)_auto] sm:items-end sm:justify-between">
           <p className="max-w-2xl text-base leading-8 text-black/65 sm:text-lg">{description}</p>
           <div className="flex flex-wrap gap-3">
             {secondaryLabel && secondaryTo && (
@@ -75,7 +75,7 @@ export const EditorialPageHero = ({
         </div>
       </div>
 
-      <aside className={cn("editorial-dossier relative min-h-[360px] border border-black p-7 sm:min-h-[430px] sm:p-9", accentClasses[accent])}>
+      <aside className={cn("editorial-dossier motion-intro-clip relative min-h-[360px] border border-black p-7 sm:min-h-[430px] sm:p-9", accentClasses[accent])}>
         <div className="flex items-center justify-between border-b border-current/25 pb-4 text-[9px] font-bold uppercase tracking-[0.2em]">
           <span>{dossierLabel}</span><span>Link©</span>
         </div>
@@ -96,7 +96,7 @@ interface EditorialSectionIntroProps {
 }
 
 export const EditorialSectionIntro = ({ eyebrow, title, body, light = false }: EditorialSectionIntroProps) => (
-  <div className="editorial-heading-grid">
+  <div className="editorial-heading-grid" data-reveal>
     <p className={cn("editorial-eyebrow", light ? "text-white/50" : "text-black/45")}>{eyebrow}</p>
     <div>
       <h2 className={cn("editorial-title", light ? "text-white" : "text-[#0a0a0a]")}>{title}</h2>
@@ -123,7 +123,7 @@ export const EditorialFinalCTA = ({
   accent = "lime",
 }: EditorialFinalCTAProps) => (
   <section className={cn("border-y border-black/20 px-5 py-16 sm:px-8 sm:py-20 lg:px-12", accentClasses[accent])}>
-    <div className="editorial-shell grid gap-10 lg:grid-cols-[1fr_320px] lg:items-end">
+    <div className="editorial-shell grid gap-10 lg:grid-cols-[1fr_320px] lg:items-end" data-reveal>
       <div>
         <p className="editorial-eyebrow mb-7 opacity-50">{eyebrow}</p>
         <h2 className="max-w-5xl text-4xl font-medium leading-[.98] tracking-[-.05em] sm:text-5xl lg:text-6xl">{title}</h2>
@@ -146,7 +146,7 @@ interface EditorialFAQProps {
 export const EditorialFAQ = ({ items, light = false }: EditorialFAQProps) => (
   <div className={cn("mt-12 border-t", light ? "border-white/15" : "border-black/15")}>
     {items.map((item, index) => (
-      <details key={item.question} className={cn("group border-b py-6", light ? "border-white/15" : "border-black/15")}>
+      <details key={item.question} className={cn("group border-b py-6", light ? "border-white/15" : "border-black/15")} data-reveal data-reveal-delay={index * 55}>
         <summary className="flex cursor-pointer list-none items-start justify-between gap-6 text-base font-medium sm:text-lg">
           <span>{item.question}</span><span className="font-mono text-xs opacity-40">{String(index + 1).padStart(2, "0")}</span>
         </summary>

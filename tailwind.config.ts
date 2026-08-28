@@ -139,8 +139,8 @@ export default {
 				'fade-in-up': 'fade-in-up 0.6s ease-out',
 				'slide-in-right': 'slide-in-right 0.4s ease-out',
 				'pulse-subtle': 'pulse-subtle 2s ease-in-out infinite',
-				'marquee': 'marquee 42s linear infinite',
-				'marquee-mobile': 'marquee 18s linear infinite'
+				'marquee': 'marquee 90s linear infinite',
+				'marquee-mobile': 'marquee 72s linear infinite'
 			},
 			transitionTimingFunction: {
 				'out-expo': 'cubic-bezier(0.19, 1, 0.22, 1)',

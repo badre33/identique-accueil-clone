@@ -13,6 +13,7 @@ import { CriticalResourcesPreloader } from "@/components/CriticalResourcesPreloa
 import { AnalyticsProvider } from "@/components/Analytics";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 import { CookieConsent } from "@/components/CookieConsent";
+import { EditorialMotionController } from "@/components/EditorialMotionController";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 
@@ -54,6 +55,7 @@ const Layout = () => (
               <Breadcrumb />
               <Outlet />
             </PageTransition>
+            <EditorialMotionController />
             <StickyMobileCTA />
             <CookieConsent />
           </TooltipProvider>
