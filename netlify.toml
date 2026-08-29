@@ -5,6 +5,45 @@
 [build.environment]
   NODE_VERSION = "20"
 
+# Points d'entrée courts et stables pour l'attribution des canaux propriétaires.
+# Les profils sociaux et signatures utilisent ces URL ; la destination peut évoluer
+# sans casser les liens déjà publiés.
+[[redirects]]
+  from = "/go/instagram"
+  to = "/?utm_id=owned_instagram_bio&utm_source=instagram&utm_medium=organic_social&utm_campaign=brand_always_on&utm_content=bio"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/go/facebook"
+  to = "/?utm_id=owned_facebook_page&utm_source=facebook&utm_medium=organic_social&utm_campaign=brand_always_on&utm_content=page"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/go/linkedin"
+  to = "/?utm_id=owned_linkedin_company&utm_source=linkedin&utm_medium=organic_social&utm_campaign=brand_always_on&utm_content=company_page"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/go/whatsapp"
+  to = "/?utm_id=owned_whatsapp_profile&utm_source=whatsapp&utm_medium=messaging&utm_campaign=brand_always_on&utm_content=business_profile"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/go/email"
+  to = "/?utm_id=owned_email_signature&utm_source=email_signature&utm_medium=email&utm_campaign=brand_always_on&utm_content=signature"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/go/portfolio"
+  to = "/?utm_id=owned_portfolio_pdf&utm_source=portfolio&utm_medium=owned_media&utm_campaign=brand_always_on&utm_content=pdf"
+  status = 302
+  force = true
+
 # SPA fallback (doublé avec _redirects pour sécurité)
 [[redirects]]
   from = "/*"

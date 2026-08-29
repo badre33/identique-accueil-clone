@@ -44,7 +44,7 @@ export const Header = ({ language }: HeaderProps) => {
         </Link>
         <nav className="hidden items-center gap-7 lg:flex" aria-label={isEnglish ? "Main navigation" : "Navigation principale"}>
           {isEnglish ? <>
-            <Link to="/en/marketing-agency-morocco#model" className={navLinkClass}>Our model</Link>
+            <Link to="/en/outsourced-marketing-department-morocco" className={navLinkClass}>Our model</Link>
             <Link to="/en/marketing-agency-morocco#services" className={navLinkClass}>Services</Link>
             <Link to="/en/marketing-agency-morocco#work" className={navLinkClass}>Selected work</Link>
             <Link to="/en/marketing-agency-morocco#process" className={navLinkClass}>Process</Link>
@@ -80,7 +80,7 @@ export const Header = ({ language }: HeaderProps) => {
       <div className={cn("absolute inset-x-0 top-full h-[calc(100dvh-4rem)] px-5 pb-10 pt-8 transition lg:hidden sm:h-[calc(100dvh-5rem)] sm:px-8", isLight ? "bg-[#f4f1eb] text-black" : "bg-black text-white", open ? "visible translate-x-0 opacity-100" : "invisible translate-x-full opacity-0")}>
         <nav className="mx-auto flex h-full max-w-xl flex-col overflow-y-auto" aria-label={isEnglish ? "Mobile navigation" : "Navigation mobile"}>
           {isEnglish ? <>
-            <Link to="/en/marketing-agency-morocco#model" className="mobile-editorial-link !border-black/15 !text-black">Our model</Link>
+            <Link to="/en/outsourced-marketing-department-morocco" className="mobile-editorial-link !border-black/15 !text-black">Our model</Link>
             <Link to="/en/marketing-agency-morocco#services" className="mobile-editorial-link !border-black/15 !text-black">Services</Link>
             <Link to="/en/marketing-agency-morocco#work" className="mobile-editorial-link !border-black/15 !text-black">Selected work</Link>
             <Link to="/en/marketing-agency-morocco#process" className="mobile-editorial-link !border-black/15 !text-black">Process</Link>

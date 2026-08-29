@@ -45,7 +45,7 @@ export const Footer = ({ language = "fr" }: FooterProps) => {
             </div>
             <div>
               <h3 className="text-[10px] font-bold uppercase tracking-[.18em] text-black/45">Explore</h3>
-              <ul className="mt-6 space-y-3"><li><Link to="/en/marketing-agency-morocco#model" className="text-sm text-black/65 transition hover:text-black">Operating model</Link></li><li><Link to="/en/marketing-agency-morocco#services" className="text-sm text-black/65 transition hover:text-black">Services</Link></li><li><Link to="/en/marketing-agency-morocco#work" className="text-sm text-black/65 transition hover:text-black">Selected work</Link></li><li><Link to="/en/marketing-agency-morocco#process" className="text-sm text-black/65 transition hover:text-black">Process</Link></li></ul>
+              <ul className="mt-6 space-y-3"><li><Link to="/en/outsourced-marketing-department-morocco" className="text-sm text-black/65 transition hover:text-black">Operating model</Link></li><li><Link to="/en/marketing-agency-morocco#services" className="text-sm text-black/65 transition hover:text-black">Services</Link></li><li><Link to="/en/marketing-agency-morocco#work" className="text-sm text-black/65 transition hover:text-black">Selected work</Link></li><li><Link to="/en/marketing-agency-morocco#process" className="text-sm text-black/65 transition hover:text-black">Process</Link></li></ul>
             </div>
             <div>
               <h3 className="text-[10px] font-bold uppercase tracking-[.18em] text-black/45">Capabilities</h3>

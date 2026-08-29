@@ -43,7 +43,7 @@ const configurations = [
 
 const DirectionMarketingExternalisee = () => (
   <div className="min-h-screen bg-[#f4f1eb] pt-16 text-[#0a0a0a] sm:pt-20">
-    <SEOHead title="Direction Marketing Externalisée au Maroc | Link Agency" description="Une direction marketing senior pour piloter votre stratégie, votre marque, vos partenaires et votre performance au Maroc. Modèle flexible, directement dirigé par le fondateur." url="https://linkagency.ma/direction-marketing-externalisee" structuredData={schema} />
+    <SEOHead title="Direction Marketing Externalisée au Maroc | Link Agency" description="Une direction marketing senior pour piloter votre stratégie, votre marque, vos partenaires et votre performance au Maroc. Modèle flexible, directement dirigé par le fondateur." url="https://linkagency.ma/direction-marketing-externalisee" structuredData={schema} alternateLanguages={[{ hrefLang: "en", href: "https://linkagency.ma/en/outsourced-marketing-department-morocco" }]} />
     <Header />
     <main className="link-editorial">
       <EditorialPageHero

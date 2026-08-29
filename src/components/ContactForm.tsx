@@ -149,6 +149,7 @@ ${data.message}`;
       summary,
       landing_page: attribution.landing_page || '',
       referrer_host: attribution.referrer_host || '',
+      utm_id: attribution.utm_id || '',
       utm_source: attribution.utm_source || '',
       utm_medium: attribution.utm_medium || '',
       utm_campaign: attribution.utm_campaign || '',

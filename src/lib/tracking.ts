@@ -20,6 +20,7 @@ export interface TrackEventParams {
 export interface AttributionData {
   landing_page?: string;
   referrer_host?: string;
+  utm_id?: string;
   utm_source?: string;
   utm_medium?: string;
   utm_campaign?: string;
@@ -136,6 +137,7 @@ export const captureAttribution = () => {
     const attribution: AttributionData = {
       landing_page: existing.landing_page || `${window.location.pathname}${window.location.search}`,
       referrer_host: existing.referrer_host || referrerHost,
+      utm_id: params.get("utm_id") || existing.utm_id || undefined,
       utm_source: params.get("utm_source") || existing.utm_source || undefined,
       utm_medium: params.get("utm_medium") || existing.utm_medium || undefined,
       utm_campaign: params.get("utm_campaign") || existing.utm_campaign || undefined,
