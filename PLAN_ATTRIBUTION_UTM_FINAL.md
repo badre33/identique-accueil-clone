@@ -28,6 +28,7 @@ Ces URL courtes redirigent vers le site avec les paramètres complets. Elles peu
 | Bio Instagram | `https://linkagency.ma/go/instagram` | `owned_instagram_bio` |
 | Page Facebook | `https://linkagency.ma/go/facebook` | `owned_facebook_page` |
 | Page entreprise LinkedIn | `https://linkagency.ma/go/linkedin` | `owned_linkedin_company` |
+| Google Business Profile | `https://linkagency.ma/go/google-business` | `owned_google_business_profile` |
 | Profil WhatsApp Business | `https://linkagency.ma/go/whatsapp` | `owned_whatsapp_profile` |
 | Signature e-mail | `https://linkagency.ma/go/email` | `owned_email_signature` |
 | Portfolio / dossier PDF | `https://linkagency.ma/go/portfolio` | `owned_portfolio_pdf` |

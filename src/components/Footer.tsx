@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowUpRight, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import { WHATSAPP_URL, WHATSAPP_URL_EN } from "@/config/contact";
+import { SOCIAL_PROFILES } from "@/config/social";
 import { trackWhatsAppClick } from "@/lib/tracking";
 
 const directionLinks = [
@@ -58,6 +59,9 @@ export const Footer = ({ language = "fr" }: FooterProps) => {
                 <a href="tel:+212699024526" className="flex items-center gap-3 text-sm text-black/65 transition hover:text-black"><Phone className="h-4 w-4 shrink-0" />+212 6 99 02 45 26</a>
                 <a href="mailto:bharkaoui@linkagency.ma?subject=Morocco%20brand%20and%20marketing%20brief" className="flex items-center gap-3 break-all text-sm text-black/65 transition hover:text-black"><Mail className="h-4 w-4 shrink-0" />bharkaoui@linkagency.ma</a>
               </div>
+              <nav aria-label="Link Agency social profiles" className="mt-7 flex flex-wrap gap-x-4 gap-y-3">
+                {SOCIAL_PROFILES.map(({ label, href }) => <a key={label} href={href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-[10px] font-semibold uppercase tracking-[.12em] text-black/55 transition hover:text-black">{label}<ArrowUpRight className="h-3 w-3" /></a>)}
+              </nav>
               <div className="mt-10 border-l-2 border-[#c86b4a] pl-4"><p className="text-xs leading-6 text-black/55">Key accounts are led directly by the founder.</p></div>
             </div>
           </div>
@@ -106,6 +110,9 @@ export const Footer = ({ language = "fr" }: FooterProps) => {
               <a href="tel:+212699024526" className="flex items-center gap-3 text-sm text-black/65 transition hover:text-black"><Phone className="h-4 w-4 shrink-0" />+212 6 99 02 45 26</a>
               <a href="mailto:bharkaoui@linkagency.ma" className="flex items-center gap-3 break-all text-sm text-black/65 transition hover:text-black"><Mail className="h-4 w-4 shrink-0" />bharkaoui@linkagency.ma</a>
             </div>
+            <nav aria-label="Profils sociaux Link Agency" className="mt-7 flex flex-wrap gap-x-4 gap-y-3">
+              {SOCIAL_PROFILES.map(({ label, href }) => <a key={label} href={href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-[10px] font-semibold uppercase tracking-[.12em] text-black/55 transition hover:text-black">{label}<ArrowUpRight className="h-3 w-3" /></a>)}
+            </nav>
             <div className="mt-10 border-l-2 border-[#c86b4a] pl-4"><p className="text-xs leading-6 text-black/55">Les comptes clés sont directement pilotés par le fondateur.</p></div>
           </div>
         </div>

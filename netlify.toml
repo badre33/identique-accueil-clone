@@ -27,6 +27,12 @@
   force = true
 
 [[redirects]]
+  from = "/go/google-business"
+  to = "/?utm_id=owned_google_business_profile&utm_source=google&utm_medium=organic&utm_campaign=local_visibility&utm_content=business_profile"
+  status = 302
+  force = true
+
+[[redirects]]
   from = "/go/whatsapp"
   to = "/?utm_id=owned_whatsapp_profile&utm_source=whatsapp&utm_medium=messaging&utm_campaign=brand_always_on&utm_content=business_profile"
   status = 302

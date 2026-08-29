@@ -2,6 +2,7 @@ utm_id,utm_source,utm_medium,utm_campaign,utm_content,destination,status,usage
 owned_instagram_bio,instagram,organic_social,brand_always_on,bio,/,active,Bio Instagram
 owned_facebook_page,facebook,organic_social,brand_always_on,page,/,active,Page Facebook
 owned_linkedin_company,linkedin,organic_social,brand_always_on,company_page,/,active,Page entreprise LinkedIn
+owned_google_business_profile,google,organic,local_visibility,business_profile,/,ready,Google Business Profile
 owned_whatsapp_profile,whatsapp,messaging,brand_always_on,business_profile,/,active,Profil WhatsApp Business
 owned_email_signature,email_signature,email,brand_always_on,signature,/,active,Signature e-mail
 owned_portfolio_pdf,portfolio,owned_media,brand_always_on,pdf,/,active,Dossier PDF

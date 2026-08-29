@@ -1,3 +1,5 @@
+import { SOCIAL_LINKS } from "@/config/social";
+
 // Données structurées Schema.org. Ne publier que des faits vérifiables.
 
 const organizationRef = {
@@ -24,6 +26,7 @@ export const generateOrganizationSchema = () => ({
     name: "Badreddine Harkaoui",
     alternateName: "Badre Harkaoui",
     jobTitle: "Fondateur et directeur conseil",
+    sameAs: [SOCIAL_LINKS.linkedinFounder],
   },
   address: {
     "@type": "PostalAddress",
@@ -43,9 +46,9 @@ export const generateOrganizationSchema = () => ({
     { "@type": "Country", name: "France" },
   ],
   sameAs: [
-    "https://www.instagram.com/linkagency.ma",
-    "https://www.linkedin.com/company/107734353/",
-    "https://www.facebook.com/linkagency.ma",
+    SOCIAL_LINKS.instagram,
+    SOCIAL_LINKS.linkedinCompany,
+    SOCIAL_LINKS.facebook,
   ],
   knowsAbout: [
     "Direction marketing externalisée",
@@ -185,5 +188,5 @@ export const generatePersonBadreSchema = () => ({
   knowsLanguage: ["fr", "ar", "en"],
   nationality: { "@type": "Country", name: "Maroc" },
   workLocation: { "@type": "Place", name: "Casablanca, Maroc" },
-  sameAs: ["https://www.linkedin.com/in/badreddine-harkaoui-nexiafiducia/"],
+  sameAs: [SOCIAL_LINKS.linkedinFounder],
 });
