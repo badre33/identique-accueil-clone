@@ -51,6 +51,13 @@ export const trackEvent = (eventName: string, params: TrackEventParams = {}) => 
   try {
     if (!hasAnalyticsConsent() || !isProductionAnalyticsHost()) return;
 
+    const hasGa4 = typeof window.gtag === "function";
+    const hasPlausible = typeof window.plausible === "function";
+    const hasMetaLead = eventName === "generate_lead" && typeof window.fbq === "function";
+    // Ne pas mémoriser l'événement tant qu'aucun collecteur n'est prêt : il sera rejoué
+    // dès que CookieConsent émet `linkagency:analytics-ready`.
+    if (!hasGa4 && !hasPlausible && !hasMetaLead) return;
+
     // Évite le double comptage lorsqu'un lien possède un handler explicite et le tracker global.
     const now = Date.now();
     if (lastEvent.name === eventName && now - lastEvent.at < 300) return;
@@ -63,16 +70,16 @@ export const trackEvent = (eventName: string, params: TrackEventParams = {}) => 
       ...params,
     };
 
-    if (typeof window.gtag === "function") {
+    if (hasGa4) {
       window.gtag("event", eventName, payload);
     }
 
-    if (typeof window.plausible === "function") {
+    if (hasPlausible) {
       window.plausible(eventName, { props: payload });
     }
 
     // Un clic de contact n'est pas un lead. Meta reçoit Lead uniquement après formulaire confirmé.
-    if (eventName === "generate_lead" && typeof window.fbq === "function") {
+    if (hasMetaLead) {
       window.fbq("track", "Lead", { content_name: params.service_interest });
     }
   } catch {
