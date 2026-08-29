@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-
-const STORAGE_KEY = "linkagency_cookie_consent_v1";
-const MEASUREMENT_ID = "G-F077M674TY";
+import {
+  ANALYTICS_CONSENT_KEY,
+  GA4_MEASUREMENT_ID,
+  isProductionAnalyticsHost,
+} from "@/lib/tracking";
 
 type ConsentChoice = "accepted" | "refused";
 
@@ -13,22 +15,54 @@ declare global {
   }
 }
 
-const loadAnalytics = () => {
-  if (typeof window === "undefined" || document.querySelector(`script[data-ga4="${MEASUREMENT_ID}"]`)) return;
+const ensureDataLayer = () => {
   window.dataLayer = window.dataLayer || [];
-  window.gtag = (...args: unknown[]) => window.dataLayer?.push(args);
-  window.gtag("js", new Date());
-  window.gtag("config", MEASUREMENT_ID, { anonymize_ip: true });
-
-  const script = document.createElement("script");
-  script.async = true;
-  script.src = `https://www.googletagmanager.com/gtag/js?id=${MEASUREMENT_ID}`;
-  script.dataset.ga4 = MEASUREMENT_ID;
-  document.head.appendChild(script);
+  window.gtag = window.gtag || ((...args: unknown[]) => window.dataLayer?.push(args));
 };
 
-export const hasAnalyticsConsent = () =>
-  typeof window !== "undefined" && window.localStorage.getItem(STORAGE_KEY) === "accepted";
+const setDefaultConsent = () => {
+  ensureDataLayer();
+  window.gtag?.("consent", "default", {
+    analytics_storage: "denied",
+    ad_storage: "denied",
+    ad_user_data: "denied",
+    ad_personalization: "denied",
+    wait_for_update: 500,
+  });
+};
+
+const updateConsent = (choice: ConsentChoice) => {
+  ensureDataLayer();
+  window.gtag?.("consent", "update", {
+    analytics_storage: choice === "accepted" ? "granted" : "denied",
+    ad_storage: "denied",
+    ad_user_data: "denied",
+    ad_personalization: "denied",
+  });
+};
+
+const loadAnalytics = () => {
+  if (!isProductionAnalyticsHost()) return;
+  ensureDataLayer();
+
+  if (!document.querySelector(`script[data-ga4="${GA4_MEASUREMENT_ID}"]`)) {
+    window.gtag?.("js", new Date());
+    window.gtag?.("config", GA4_MEASUREMENT_ID, {
+      anonymize_ip: true,
+      send_page_view: false,
+      allow_google_signals: false,
+      allow_ad_personalization_signals: false,
+    });
+
+    const script = document.createElement("script");
+    script.async = true;
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${GA4_MEASUREMENT_ID}`;
+    script.dataset.ga4 = GA4_MEASUREMENT_ID;
+    document.head.appendChild(script);
+  }
+
+  window.dispatchEvent(new Event("linkagency:analytics-ready"));
+};
 
 export const CookieConsent = () => {
   const [open, setOpen] = useState(false);
@@ -36,7 +70,9 @@ export const CookieConsent = () => {
   const isEnglish = location.pathname.startsWith("/en");
 
   useEffect(() => {
-    const stored = window.localStorage.getItem(STORAGE_KEY) as ConsentChoice | null;
+    setDefaultConsent();
+    const stored = window.localStorage.getItem(ANALYTICS_CONSENT_KEY) as ConsentChoice | null;
+    if (stored) updateConsent(stored);
     if (stored === "accepted") loadAnalytics();
     if (!stored) setOpen(true);
 
@@ -46,7 +82,8 @@ export const CookieConsent = () => {
   }, []);
 
   const choose = (choice: ConsentChoice) => {
-    window.localStorage.setItem(STORAGE_KEY, choice);
+    window.localStorage.setItem(ANALYTICS_CONSENT_KEY, choice);
+    updateConsent(choice);
     if (choice === "accepted") loadAnalytics();
     setOpen(false);
   };

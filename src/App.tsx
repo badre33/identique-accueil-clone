@@ -10,9 +10,9 @@ import { Breadcrumb } from "@/components/Breadcrumb";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { CriticalResourcesPreloader } from "@/components/CriticalResourcesPreloader";
-import { AnalyticsProvider } from "@/components/Analytics";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 import { CookieConsent } from "@/components/CookieConsent";
+import { AnalyticsController } from "@/components/AnalyticsController";
 import { EditorialMotionController } from "@/components/EditorialMotionController";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
@@ -45,7 +45,6 @@ const Layout = () => (
   <ErrorBoundary>
     <ThemeProvider>
       <QueryClientProvider client={queryClient}>
-        <AnalyticsProvider>
           <TooltipProvider>
             <CriticalResourcesPreloader />
             <RouteScrollReset />
@@ -57,9 +56,9 @@ const Layout = () => (
             </PageTransition>
             <EditorialMotionController />
             <StickyMobileCTA />
+            <AnalyticsController />
             <CookieConsent />
           </TooltipProvider>
-        </AnalyticsProvider>
       </QueryClientProvider>
     </ThemeProvider>
   </ErrorBoundary>

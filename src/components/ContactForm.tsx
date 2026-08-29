@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
@@ -7,6 +7,7 @@ import { useToast } from '@/hooks/use-toast';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Form, FormControl, FormField, FormItem, FormMessage } from '@/components/ui/form';
 import { Link } from 'react-router-dom';
+import { captureAttribution, getAttribution, trackEvent, trackGenerateLead } from '@/lib/tracking';
 
 const formSchema = z.object({
   nom: z.string()
@@ -90,6 +91,8 @@ const countryCodes = [
 export const ContactForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submissionSucceeded, setSubmissionSucceeded] = useState(false);
+  const formStarted = useRef(false);
   const { toast } = useToast();
 
   const form = useForm<FormData>({
@@ -114,6 +117,8 @@ export const ContactForm = () => {
 
   const onSubmit = async (data: FormData) => {
     setIsSubmitting(true);
+    captureAttribution();
+    const attribution = getAttribution();
 
     const summary = `Nom: ${data.nom}
 Fonction: ${data.fonction}
@@ -142,6 +147,13 @@ ${data.message}`;
       message: data.message,
       consent: data.consent ? 'oui' : 'non',
       summary,
+      landing_page: attribution.landing_page || '',
+      referrer_host: attribution.referrer_host || '',
+      utm_source: attribution.utm_source || '',
+      utm_medium: attribution.utm_medium || '',
+      utm_campaign: attribution.utm_campaign || '',
+      utm_content: attribution.utm_content || '',
+      utm_term: attribution.utm_term || '',
     }).toString();
 
     let netlifyOk = false;
@@ -156,19 +168,20 @@ ${data.message}`;
       netlifyOk = false;
     }
 
-    // 2) Tracking GA4
-    try {
-      const w = window as unknown as { gtag?: (...args: unknown[]) => void };
-      if (typeof w.gtag === 'function') {
-        w.gtag('event', 'generate_lead', {
-          event_category: 'lead',
-          event_label: data.service,
-          value: 1,
-          form_status: netlifyOk ? 'ok' : 'fallback_whatsapp',
-        });
-      }
-    } catch {
-      // Le suivi est facultatif et ne doit jamais bloquer l’envoi.
+    // 2) Une conversion n'est enregistrée qu'après réception confirmée par Netlify.
+    if (netlifyOk) {
+      trackGenerateLead({
+        formLocation: 'contact_form',
+        serviceInterest: data.service,
+        budgetBand: data.budget,
+        projectTimeline: data.delai,
+      });
+    } else {
+      trackEvent('form_submit_error', {
+        category: 'technical',
+        form_location: 'contact_form',
+        error_type: 'netlify_submission_failed',
+      });
     }
 
     // 3) Message WhatsApp préparé (option bonus, plus principal)
@@ -179,13 +192,14 @@ ${summary}`;
     (window as unknown as { __lastLeadWA?: string }).__lastLeadWA = whatsappUrl;
 
     setIsSubmitting(false);
+    setSubmissionSucceeded(netlifyOk);
     setIsSubmitted(true);
 
     toast({
-      title: netlifyOk ? 'Demande envoyée avec succès !' : 'Demande enregistrée',
+      title: netlifyOk ? 'Demande envoyée avec succès !' : 'Envoi à finaliser sur WhatsApp',
       description: netlifyOk
         ? 'Badre étudie personnellement votre demande. Vous pouvez aussi poursuivre sur WhatsApp.'
-        : 'Une copie a été préparée pour poursuivre directement sur WhatsApp.',
+        : 'Le formulaire n’a pas pu être confirmé. Une copie a été préparée pour WhatsApp.',
     });
   };
 
@@ -209,10 +223,11 @@ ${summary}`;
         <div className="mb-4 flex h-12 w-12 items-center justify-center bg-[#d7e942] sm:mb-6 sm:h-16 sm:w-16">
           <Check className="h-6 w-6 text-black sm:h-8 sm:w-8" />
         </div>
-        <h3 className="mb-3 text-xl font-medium text-black sm:mb-4 sm:text-2xl">Demande reçue</h3>
+        <h3 className="mb-3 text-xl font-medium text-black sm:mb-4 sm:text-2xl">{submissionSucceeded ? 'Demande reçue' : 'Finaliser sur WhatsApp'}</h3>
         <p className="mb-6 max-w-md text-sm leading-relaxed text-black/60 sm:text-base">
-          Merci. Badre étudie personnellement votre demande.
-          Vous pouvez poursuivre directement par WhatsApp.
+          {submissionSucceeded
+            ? 'Merci. Badre étudie personnellement votre demande. Vous pouvez poursuivre directement par WhatsApp.'
+            : 'La réception du formulaire n’a pas été confirmée. Envoyez la demande préparée sur WhatsApp pour ne rien perdre.'}
         </p>
         <a
           href={waUrl}
@@ -228,7 +243,18 @@ ${summary}`;
 
   return (
     <Form {...form}>
-      <form name="contact" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={form.handleSubmit(onSubmit)} className="max-w-2xl space-y-5 sm:space-y-7">
+      <form
+        name="contact"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        onSubmit={form.handleSubmit(onSubmit)}
+        onFocusCapture={() => {
+          if (formStarted.current) return;
+          formStarted.current = true;
+          trackEvent('form_start', { category: 'engagement', form_location: 'contact_form' });
+        }}
+        className="max-w-2xl space-y-5 sm:space-y-7"
+      >
         <input type="hidden" name="form-name" value="contact" />
         <p className="hidden" aria-hidden="true">
           <label>Ne pas remplir : <input name="bot-field" /></label>

@@ -1,7 +1,7 @@
 import { ArrowRight, ArrowUpRight, MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import { buildWhatsAppUrl } from "@/config/contact";
-import { trackEvent } from "@/lib/tracking";
+import { trackContactCtaClick, trackWhatsAppClick } from "@/lib/tracking";
 
 const Hero = () => {
   const proofItems = [
@@ -62,7 +62,7 @@ const Hero = () => {
                 href={waUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={() => trackEvent("cta_whatsapp_click", { category: "lead", label: "hero_primary" })}
+                onClick={() => trackWhatsAppClick("hero_primary")}
                 className="group inline-flex items-center justify-between gap-6 px-7 py-4 bg-foreground text-background hover:bg-primary transition-colors duration-300 rounded-none"
               >
                 <span className="inline-flex items-center gap-3 text-base font-medium tracking-tight">
@@ -74,7 +74,7 @@ const Hero = () => {
 
               <Link
                 to="/contact"
-                onClick={() => trackEvent("cta_devis_click", { category: "lead", label: "hero_secondary" })}
+                onClick={() => trackContactCtaClick("hero_secondary")}
                 className="group inline-flex items-center gap-3 px-7 py-4 text-foreground border border-foreground/20 hover:border-foreground transition-colors duration-300"
               >
                 <span className="text-base font-medium tracking-tight">

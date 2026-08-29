@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { intelligentPreloading, optimizeCriticalResources, adaptContentForNetwork } from '../utils/bundleOptimization';
 import { useServiceWorker } from '../hooks/useServiceWorker';
 import { WebVitalsOptimizer } from './WebVitalsOptimizer';
-import { initGA4 } from '../utils/analytics';
 
 export const CriticalResourcesPreloader = () => {
   useServiceWorker();
@@ -25,13 +24,6 @@ export const CriticalResourcesPreloader = () => {
       requestIdleCallback(() => {
         adaptContentForNetwork();
       }, { timeout: 1500 });
-
-      // Initialiser Google Analytics en production (différé)
-      if (import.meta.env.PROD) {
-        requestIdleCallback(() => {
-          initGA4();
-        }, { timeout: 3000 });
-      }
 
       setIsReady(true);
     };
