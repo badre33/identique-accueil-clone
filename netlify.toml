@@ -5,6 +5,20 @@
 [build.environment]
   NODE_VERSION = "20"
 
+# URLs éditoriales : une seule variante indexable, sans slash final.
+# `force = true` garantit la redirection avant la résolution Pretty URLs.
+[[redirects]]
+  from = "/blog/:slug/"
+  to = "/blog/:slug"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/insights/:slug/"
+  to = "/en/insights/:slug"
+  status = 301
+  force = true
+
 # SPA fallback (doublé avec _redirects pour sécurité)
 [[redirects]]
   from = "/*"
