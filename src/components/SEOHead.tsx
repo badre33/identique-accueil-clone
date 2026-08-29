@@ -10,10 +10,11 @@ interface SEOHeadProps {
   publishedTime?: string;
   modifiedTime?: string;
   author?: string;
-  locale?: 'fr_FR' | 'ar_MA' | 'en_US';
+  locale?: 'fr_FR' | 'ar_MA' | 'en_US' | 'en_GB';
   structuredData?: Record<string, unknown> | Array<Record<string, unknown>>;
   robots?: string;
   alternateLanguages?: Array<{ hrefLang: string; href: string }>;
+  xDefaultUrl?: string;
 }
 
 export const SEOHead = ({
@@ -29,16 +30,22 @@ export const SEOHead = ({
   locale = "fr_FR",
   structuredData,
   alternateLanguages,
+  xDefaultUrl,
   robots = "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
 }: SEOHeadProps) => {
   const siteName = "Link Agency";
   const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
+  const isEnglish = locale === "en_US" || locale === "en_GB";
+  const primaryHrefLang = locale === "ar_MA" ? "ar-MA" : isEnglish ? "en" : "fr-MA";
+  const documentLanguage = locale === "ar_MA" ? "ar" : isEnglish ? "en" : "fr";
 
   return (
     <Head>
+      <html lang={documentLanguage} />
       {/* Balises meta de base */}
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
+      <meta httpEquiv="content-language" content={documentLanguage} />
       {keywords && <meta name="keywords" content={keywords} />}
       <meta name="author" content={author} />
       <meta name="robots" content={robots} />
@@ -46,12 +53,10 @@ export const SEOHead = ({
       {/* Canonical URL */}
       <link rel="canonical" href={url} />
       
-      {/* Hreflang — site FR uniquement. Ne déclarer QUE les langues réellement
-          publiées : déclarer ar/en vers l'URL FR = faux signal pénalisé par GSC.
-          Rétablir ar-MA/en quand de vraies versions traduites existeront. */}
-      <link rel="alternate" hrefLang="fr-MA" href={url} />
-      <link rel="alternate" hrefLang="fr" href={url} />
-      <link rel="alternate" hrefLang="x-default" href={url} />
+      {/* Ne déclarer que les versions réellement publiées et réciproques. */}
+      <link rel="alternate" hrefLang={primaryHrefLang} href={url} />
+      {locale === "fr_FR" && <link rel="alternate" hrefLang="fr" href={url} />}
+      <link rel="alternate" hrefLang="x-default" href={xDefaultUrl ?? url} />
       {alternateLanguages?.map((alt) => (
         <link key={alt.hrefLang} rel="alternate" hrefLang={alt.hrefLang} href={alt.href} />
       ))}

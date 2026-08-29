@@ -22,7 +22,7 @@ export const Breadcrumb = () => {
     'direction-marketing-externalisee': 'Direction Marketing Externalisée',
   };
 
-  if (pathnames.length === 0 || location.pathname === '/direction-marketing-externalisee') return null;
+  if (pathnames.length === 0 || location.pathname === '/direction-marketing-externalisee' || location.pathname.startsWith('/en')) return null;
 
   return (
     <nav className="bg-gray-50 border-b border-gray-200 py-3 px-8 lg:px-16">

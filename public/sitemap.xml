@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://linkagency.ma/</loc><lastmod>2026-08-28</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://linkagency.ma/</loc><lastmod>2026-08-29</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://linkagency.ma/en/marketing-agency-morocco</loc><lastmod>2026-08-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://linkagency.ma/en/insights/brand-localisation-morocco</loc><lastmod>2026-08-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://linkagency.ma/en/insights/choose-marketing-partner-morocco</loc><lastmod>2026-08-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://linkagency.ma/direction-marketing-externalisee</loc><lastmod>2026-08-28</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://linkagency.ma/contact</loc><lastmod>2026-08-28</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://linkagency.ma/secteurs</loc><lastmod>2026-08-28</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
@@ -25,19 +28,16 @@
   <url><loc>https://linkagency.ma/mentions-legales</loc><lastmod>2026-08-28</lastmod><changefreq>yearly</changefreq><priority>0.2</priority></url>
   <url><loc>https://linkagency.ma/politique-de-confidentialite</loc><lastmod>2026-08-28</lastmod><changefreq>yearly</changefreq><priority>0.2</priority></url>
   <url><loc>https://linkagency.ma/politique-de-cookies</loc><lastmod>2026-08-28</lastmod><changefreq>yearly</changefreq><priority>0.2</priority></url>
-  <!-- Blog posts (21) -->
+  <!-- Blog posts (27) -->
   <url><loc>https://linkagency.ma/blog/strategie-marque-branding-maroc</loc><lastmod>2026-08-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://linkagency.ma/blog/marketing-digital-strategie-marque-maroc</loc><lastmod>2026-08-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://linkagency.ma/blog/evenementiel-strategique-marque-maroc</loc><lastmod>2026-08-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://linkagency.ma/blog/personal-branding-dirigeants-maroc</loc><lastmod>2026-08-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://linkagency.ma/blog/seo-local-maroc-guide-complet</loc><lastmod>2026-08-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://linkagency.ma/blog/reseaux-sociaux-coherence-marque-maroc</loc><lastmod>2026-08-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://linkagency.ma/blog/marketing-digital-strategie-marque-maroc</loc><lastmod>2024-01-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://linkagency.ma/blog/evenementiel-strategique-marque-maroc</loc><lastmod>2024-01-05</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://linkagency.ma/blog/personal-branding-dirigeants-maroc</loc><lastmod>2024-02-01</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://linkagency.ma/blog/reseaux-sociaux-coherence-marque-maroc</loc><lastmod>2024-01-20</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://linkagency.ma/blog/seo-local-maroc-casablanca-rabat-marrakech-2025</loc><lastmod>2026-08-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://linkagency.ma/blog/marketing-digital-maroc-tendances-2025</loc><lastmod>2026-08-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://linkagency.ma/blog/branding-local-maroc-identite-2025</loc><lastmod>2026-08-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://linkagency.ma/blog/reseaux-sociaux-maroc-tiktok-instagram-2025</loc><lastmod>2026-08-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://linkagency.ma/blog/ecommerce-maroc-boutique-en-ligne-2025</loc><lastmod>2026-08-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://linkagency.ma/blog/intelligence-artificielle-entreprises-maroc-2025</loc><lastmod>2026-08-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://linkagency.ma/blog/activation-marque-evenementiel-maroc</loc><lastmod>2026-08-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://linkagency.ma/blog/choisir-agence-marketing-digital-maroc-ar</loc><lastmod>2026-08-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://linkagency.ma/blog/meta-ads-banques-maroc-ar</loc><lastmod>2026-08-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
@@ -53,6 +53,14 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url><loc>https://linkagency.ma/blog/quand-externaliser-direction-marketing</loc><lastmod>2026-08-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://linkagency.ma/blog/direction-marketing-externalisee-vs-agence-recrutement</loc><lastmod>2026-08-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://linkagency.ma/blog/reprendre-marketing-externalise-insatisfaisant</loc><lastmod>2026-08-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://linkagency.ma/blog/adapter-marque-internationale-maroc</loc><lastmod>2026-08-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://linkagency.ma/blog/gouvernance-marketing-equipe-agence-freelances</loc><lastmod>2026-08-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://linkagency.ma/blog/plateforme-marque-decisions-comite-direction</loc><lastmod>2026-08-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://linkagency.ma/blog/francais-arabe-darija-anglais-strategie-marque-maroc</loc><lastmod>2026-08-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://linkagency.ma/blog/organiser-content-factory-sans-contenu-inutile</loc><lastmod>2026-08-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url>
     <loc>https://linkagency.ma/creation-site-web-agadir</loc>
     <lastmod>2026-08-28</lastmod>

@@ -2,10 +2,12 @@
 export interface BlogPost {
   id: string;
   title: string;
+  seoTitle?: string;
   excerpt: string;
   content: string;
   author: string;
   publishDate: string;
+  modifiedDate?: string;
   slug: string;
   category: 'branding' | 'digital' | 'evenementiel' | 'tendances' | 'conseils';
   image: string;

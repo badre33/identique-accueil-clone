@@ -76,6 +76,9 @@ export const routes: RouteObject[] = [
     element: <Layout />,
     children: [
       { index: true, element: <Index /> },
+      { path: "en/marketing-agency-morocco", lazy: page(() => import('./pages/MarketingAgencyMoroccoEn')) },
+      { path: "en/insights/brand-localisation-morocco", lazy: page(() => import('./pages/InternationalBrandMoroccoInsightEn')) },
+      { path: "en/insights/choose-marketing-partner-morocco", lazy: page(() => import('./pages/ChooseMarketingPartnerMoroccoInsightEn')) },
       { path: "direction-marketing-externalisee", lazy: page(() => import('./pages/DirectionMarketingExternalisee')) },
       { path: "branding", lazy: page(() => import('./pages/Branding')) },
       { path: "evenementiel", lazy: page(() => import('./pages/Evenementiel')) },

@@ -13,5 +13,10 @@ export const buildWhatsAppUrl = (message?: string) => {
 export const WHATSAPP_DEFAULT_MESSAGE =
   "Bonjour Badre, je souhaite vous présenter un enjeu de marque ou de marketing pour notre entreprise.";
 
+export const WHATSAPP_ENGLISH_MESSAGE =
+  "Hello Badre, we are [company/brand] from [country]. We are planning a [launch/growth/repositioning] project in Morocco around [date]. Our current marketing challenge is: ";
+
 export const WHATSAPP_URL = buildWhatsAppUrl(WHATSAPP_DEFAULT_MESSAGE);
+export const WHATSAPP_URL_EN = buildWhatsAppUrl(WHATSAPP_ENGLISH_MESSAGE);
 export const EMAIL_URL = `mailto:${EMAIL}?subject=${encodeURIComponent("Demande d'échange stratégique")}`;
+export const EMAIL_URL_EN = `mailto:${EMAIL}?subject=${encodeURIComponent("Morocco brand and marketing brief")}`;

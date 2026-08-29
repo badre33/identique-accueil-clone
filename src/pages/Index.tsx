@@ -9,7 +9,7 @@ const schema = generateWebPageSchema("Direction Marketing Externalisée & Brandi
 
 const Index = () => (
   <div className="min-h-screen bg-black pt-16 sm:pt-20">
-    <SEOHead title="Direction Marketing Externalisée & Branding Maroc | Link Agency" description="Direction de marque et pôle marketing externalisé pour entreprises ambitieuses au Maroc. Branding, contenu, réseaux sociaux et performance pilotés par un interlocuteur senior." url="https://linkagency.ma/" type="website" structuredData={schema} />
+    <SEOHead title="Direction Marketing Externalisée & Branding Maroc | Link Agency" description="Direction de marque et pôle marketing externalisé pour entreprises ambitieuses au Maroc. Branding, contenu, réseaux sociaux et performance pilotés par un interlocuteur senior." url="https://linkagency.ma/" type="website" structuredData={schema} alternateLanguages={[{ hrefLang: "en", href: "https://linkagency.ma/en/marketing-agency-morocco" }]} />
     <Header />
     <HomeEditorial />
     <Footer />

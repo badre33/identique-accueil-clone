@@ -3,11 +3,13 @@ import { Calendar, Clock, User, ArrowLeft, Share2 } from 'lucide-react';
 import { Header } from '@/components/Header';
 import { SEOHead } from '@/components/SEOHead';
 import { FloatingContactWidget } from '@/components/FloatingContactWidget';
+import { Footer } from '@/components/Footer';
 import { blogPosts } from '@/data/content';
 import { generateWebPageSchema, generateBreadcrumbSchema } from '@/utils/structuredData';
 import { Button } from '@/components/ui/button';
 import { ArticleBadge, ArticleContent } from '@/components/blog';
 import '@/styles/premium-blog.css';
+import { getArticleReadingTime, getArticleWordCount } from '@/utils/articleMetrics';
 
 // Determine if article is a pillar based on word count and structure
 const isPillarArticle = (content: string): boolean => {
@@ -35,6 +37,13 @@ const BlogPost = () => {
 
   const isPillar = isPillarArticle(post.content);
   const isArabic = post.slug.endsWith('-ar') || /[\u0600-\u06FF]/.test(post.title);
+  const wordCount = getArticleWordCount(post.content);
+  const readingTime = getArticleReadingTime(post.content, isArabic);
+  const modifiedDate = post.modifiedDate ?? post.publishDate;
+  const seoTitle = post.seoTitle ?? post.title;
+  const englishCounterpart = post.slug === 'adapter-marque-internationale-maroc'
+    ? 'https://linkagency.ma/en/insights/brand-localisation-morocco'
+    : undefined;
 
   const blogPostSchema = {
     "@context": "https://schema.org",
@@ -45,7 +54,7 @@ const BlogPost = () => {
         "description": post.excerpt,
         "image": `https://linkagency.ma${post.image}`,
         "author": {
-          "@type": "Organization",
+          "@type": post.author === "Link Agency" ? "Organization" : "Person",
           "name": post.author,
           "url": "https://linkagency.ma"
         },
@@ -58,11 +67,11 @@ const BlogPost = () => {
           }
         },
         "datePublished": post.publishDate,
-        "dateModified": "2026-08-28",
+        "dateModified": modifiedDate,
         "url": `https://linkagency.ma/blog/${post.slug}`,
         "keywords": post.tags.join(", "),
-        "wordCount": post.content.length,
-        "timeRequired": `PT${post.readTime}M`,
+        "wordCount": wordCount,
+        "timeRequired": `PT${readingTime}M`,
         "articleSection": post.category,
         "inLanguage": isArabic ? "ar-MA" : "fr-MA"
       },
@@ -82,16 +91,18 @@ const BlogPost = () => {
   return (
     <div className="min-h-screen bg-background pt-16 sm:pt-20">
       <SEOHead
-        title={`${post.title} - Link Agency Blog`}
+        title={seoTitle}
         description={post.metaDescription}
         keywords={post.metaKeywords}
         url={`https://linkagency.ma/blog/${post.slug}`}
         type="article"
         publishedTime={post.publishDate}
+        modifiedTime={modifiedDate}
         author={post.author}
         image={`https://linkagency.ma${post.image}`}
         locale={isArabic ? "ar_MA" : "fr_FR"}
         structuredData={blogPostSchema}
+        alternateLanguages={englishCounterpart ? [{ hrefLang: 'en', href: englishCounterpart }] : undefined}
       />
       
       <Header />
@@ -143,7 +154,7 @@ const BlogPost = () => {
             </div>
             <div className="flex items-center gap-2 text-sm">
               <Clock className="w-4 h-4 text-primary/50" />
-              {post.readTime} min
+              {readingTime} min
             </div>
             <button 
               className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors sm:ml-auto"
@@ -250,7 +261,7 @@ const BlogPost = () => {
                         </p>
                         <div className="flex items-center gap-2 text-xs text-muted-foreground">
                           <Clock className="w-3.5 h-3.5" />
-                          {relatedPost.readTime} min de lecture
+                          {getArticleReadingTime(relatedPost.content, relatedPost.slug.endsWith('-ar'))} min de lecture
                         </div>
                       </div>
                     </Link>
@@ -260,7 +271,7 @@ const BlogPost = () => {
           </div>
         </section>
       </article>
-      
+      <Footer />
       <FloatingContactWidget />
     </div>
   );

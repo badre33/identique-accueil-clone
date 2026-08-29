@@ -13,6 +13,9 @@
 /devis /contact 301!
 /services / 301!
 
+# English entry point
+/en /en/marketing-agency-morocco 301!
+
 # Anciennes URLs du site
 /home / 301!
 /accueil / 301!
@@ -20,8 +23,14 @@
 /case-studies /etudes-de-cas 301!
 /portfolio /etudes-de-cas 301!
 
+# Fusion éditoriale : ancien guide SEO local 2024 vers le guide evergreen 2026
+/blog/seo-local-maroc-guide-complet /blog/seo-local-maroc-casablanca-rabat-marrakech-2025 301!
+/blog/branding-local-maroc-identite-2025 /blog/adapter-marque-internationale-maroc 301!
+/blog/intelligence-artificielle-entreprises-maroc-2025 /blog/marketing-digital-maroc-tendances-2025 301!
+
 # Backstop trailing-slash : forme canonique sans slash sur le blog (Pretty URLs desactive cote Netlify)
 /blog/*/ /blog/:splat 301!
+/en/insights/*/ /en/insights/:splat 301!
 
 # SPA fallback
 /* /index.html 200

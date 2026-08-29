@@ -1,84 +1,94 @@
 import { BlogPost, FAQ, Testimonial } from '@/types/content';
 
 // Articles de blog optimisés SEO pour le Maroc
+const retiredBlogSlugs = new Set([
+  'seo-local-maroc-guide-complet',
+  'branding-local-maroc-identite-2025',
+  'intelligence-artificielle-entreprises-maroc-2025',
+]);
+
 export const blogPosts: BlogPost[] = [
   {
     id: 'top-agences-casa-2026',
     title: "Top 10 Agences Marketing à Casablanca en 2026 : Panorama, Critères et Grille de Choix",
-    excerpt: "Comparatif objectif des 10 agences marketing les plus en vue à Casablanca en 2026. Critères de sélection, positionnements, tarifs estimés et grille de décision selon votre profil d'annonceur.",
+    seoTitle: "Top agences marketing à Casablanca en 2026",
+    excerpt: "Panorama éditorial de 10 agences marketing à Casablanca en 2026. Critères de sélection, positionnements et grille de décision selon votre profil d'annonceur.",
     content: `
     <h2>Casablanca, capitale incontestée des agences marketing au Maroc</h2>
     <p>Casablanca concentre une part importante des sièges, des budgets de communication et des agences du pays. Pour un directeur marketing, un dirigeant d’entreprise ambitieuse ou un responsable communication d’une filiale étrangère, la question n’est donc plus seulement de savoir où chercher, mais comment trier une offre devenue dense.</p>
-    <p>Cet article propose un panorama des dix agences marketing les plus en vue à Casablanca en 2026. Il ne s'agit pas d'un classement par chiffre d'affaires ou par notoriété abstraite, mais d'une cartographie par positionnement : à chaque besoin son type d'agence, et à chaque agence son terrain de jeu.</p>
+    <p>Cet article propose un panel de dix agences marketing présentes à Casablanca en 2026. Il ne s'agit ni d'un classement par chiffre d'affaires ni d'une liste exhaustive, mais d'une cartographie éditoriale par positionnement : à chaque besoin son type d'agence, et à chaque agence son terrain de jeu.</p>
+
+    <h2>Méthodologie et transparence</h2>
+    <p>Le panorama repose sur les positionnements, offres et informations publiquement accessibles sur les sites des agences, vérifiés en août 2026. Link Agency figure dans la sélection et publie donc ce contenu avec un intérêt commercial assumé. Les entreprises citées peuvent demander la correction d'une information factuelle devenue inexacte.</p>
 
     <h2>Pourquoi le choix d'une agence est devenu plus difficile en 2026</h2>
     <p>Trois évolutions structurelles compliquent le choix d'une agence marketing au Maroc cette année.</p>
     <p>D’abord, la <strong>multiplication des acteurs</strong>. Entre agences historiques, boutiques digitales, collectifs de spécialistes et structures positionnées sur des niches comme l’influence, la vidéo ou le SEO arabe, la densité de l’offre crée du brouillard.</p>
-    <p>Ensuite, l'<strong>évolution des attentes clients</strong>. Les directions marketing ne demandent plus seulement une exécution de campagnes ou un community management. Elles cherchent un partenaire capable de relier l'investissement marketing à des KPIs business (CAC, LTV, contribution incrémentale au CA). Le métier s'est sophistiqué, mais peu d'agences ont vraiment fait le saut.</p>
+    <p>Ensuite, l'<strong>évolution des attentes clients</strong>. Les directions marketing ne demandent plus seulement une exécution de campagnes ou un community management. Elles cherchent un partenaire capable de relier l'investissement marketing à des indicateurs business, avec une attribution présentée honnêtement et des limites documentées.</p>
     <p>Enfin, la <strong>polarisation des modèles</strong>. Entre grandes agences, structures spécialisées, collectifs et indépendants, les périmètres comme les niveaux de séniorité varient fortement. Le prix seul ne permet donc pas de comparer deux propositions.</p>
 
     <h2>Les 5 critères qui font vraiment la différence en 2026</h2>
     <h3>1. Qui pilote réellement le dossier</h3>
-    <p>Dans une grande agence, le dirigeant ou le directeur de clientèle qui vend la prestation n'est presque jamais celui qui l'exécute. Vous serez confié à un chef de projet junior ou intermédiaire. Dans une boutique resserrée, c'est le fondateur ou un senior expérimenté qui pilote du début à la fin. Cette différence, invisible au moment de la signature, devient critique au bout de 3 mois.</p>
+    <p>La personne qui présente la recommandation n'est pas toujours celle qui pilotera le dossier. Demandez le nom, le niveau de séniorité et le temps réellement disponible de vos futurs interlocuteurs. Une grande agence peut offrir de la profondeur ; une structure resserrée peut offrir un accès plus direct. Le bon modèle dépend de l’enjeu et doit être visible avant la signature.</p>
 
     <h3>2. La transparence du modèle économique</h3>
-    <p>Méfiez-vous des agences qui se rémunèrent en commission sur les budgets média transférés : ce modèle crée un conflit d'intérêt structurel — plus vous dépensez, plus l'agence gagne. Privilégiez les agences en honoraires fixes ou en forfaits, où la valeur réside dans le conseil et l'exécution, pas dans le volume média intermédié.</p>
+    <p>Demandez comment sont calculés honoraires, commissions média, frais techniques et achats externes. Plusieurs modèles peuvent fonctionner s'ils sont transparents et alignés avec le mandat. Comparez le coût total, les responsabilités incluses et les situations dans lesquelles la rémunération du partenaire peut influencer ses recommandations.</p>
 
     <h3>3. La méthode codifiée</h3>
-    <p>Une agence sérieuse peut décrire son process en 4 ou 5 étapes claires : audit, stratégie, production, activation, pilotage. Cette codification garantit la reproductibilité de la qualité. Une agence sans méthode écrite improvise — et cela se sent au premier décalage de planning ou au premier livrable raté.</p>
+    <p>Une agence sérieuse peut décrire son processus : diagnostic, décisions, production, validation, activation et apprentissage. Une méthode ne garantit pas à elle seule la qualité, mais elle rend les responsabilités observables et facilite la correction lorsqu'un livrable ou un planning dévie.</p>
 
     <h3>4. La maîtrise du marché marocain et des langues</h3>
     <p>Le public marocain consomme en français, en arabe et en darija. Ignorer l’un de ces registres limite la portée et la justesse des messages. Le SEO en arabe, le copywriting en darija et la création bilingue demandent des compétences distinctes.</p>
 
     <h3>5. L'alignement avec votre niveau d'enjeu</h3>
-    <p>Une marque qui réalise 50 MMAD de CA annuel n'a pas les mêmes enjeux qu'un groupe coté. Le bon choix d'agence, c'est celui qui aligne sa taille, sa méthode et son expertise sectorielle sur votre niveau d'enjeu. Pas plus, pas moins.</p>
+    <p>Une entreprise en croissance, un groupe établi et une filiale internationale n'ont pas les mêmes circuits de validation ni les mêmes risques. Le bon choix aligne le modèle, la méthode, la capacité et l'expertise sectorielle sur votre niveau d'enjeu.</p>
 
     <h2>Le panorama des 10 agences marketing à Casablanca en 2026</h2>
 
     <h3>1. Hooked Digital</h3>
-    <p><strong>Positionnement</strong> : performance digitale B2B. <strong>Forces</strong> : expertise SEO et paid media, approche data-driven, content marketing. <strong>Pour qui</strong> : PME et ETI qui veulent générer des leads B2B mesurables. <strong>Tarifs estimés</strong> : 9 000 à 50 000 MAD/mois selon le périmètre.</p>
+    <p><strong>Positionnement</strong> : performance digitale B2B. <strong>Forces</strong> : expertise SEO et paid media, approche data-driven, content marketing. <strong>Pour qui</strong> : PME et ETI qui veulent générer des leads B2B mesurables.</p>
 
     <h3>2. N7 Com Group</h3>
-    <p><strong>Positionnement</strong> : stratégie marketing globale et branding. <strong>Forces</strong> : capacité de cadrage stratégique, expérience grands comptes, créativité institutionnelle. <strong>Pour qui</strong> : entreprises qui cherchent un partenaire pour repenser leur communication corporate. <strong>Tarifs estimés</strong> : haut de fourchette mid-market à premium.</p>
+    <p><strong>Positionnement</strong> : stratégie marketing globale et branding. <strong>Forces</strong> : capacité de cadrage stratégique, expérience grands comptes, créativité institutionnelle. <strong>Pour qui</strong> : entreprises qui cherchent un partenaire pour repenser leur communication corporate.</p>
 
     <h3>3. Klem Euro RSCG</h3>
-    <p><strong>Positionnement</strong> : agence créative historique au Maroc. <strong>Forces</strong> : héritage créatif, expertise campagnes intégrées, fortes références sectorielles. <strong>Pour qui</strong> : grandes marques nationales qui veulent une signature créative forte. <strong>Tarifs estimés</strong> : segment premium.</p>
+    <p><strong>Positionnement</strong> : agence créative historique au Maroc. <strong>Forces</strong> : héritage créatif, expertise campagnes intégrées, fortes références sectorielles. <strong>Pour qui</strong> : grandes marques nationales qui veulent une signature créative forte.</p>
 
     <h3>4. MAJORMEDIA</h3>
-    <p><strong>Positionnement</strong> : marketing digital et acquisition clients. <strong>Forces</strong> : campagnes publicitaires multicanal, expertise Meta et Google Ads. <strong>Pour qui</strong> : marques en croissance qui veulent accélérer leur acquisition. <strong>Tarifs estimés</strong> : mid-market.</p>
+    <p><strong>Positionnement</strong> : marketing digital et acquisition clients. <strong>Forces</strong> : campagnes publicitaires multicanal, expertise Meta et Google Ads. <strong>Pour qui</strong> : marques en croissance qui veulent accélérer leur acquisition.</p>
 
     <h3>5. UBIKOM Digital</h3>
-    <p><strong>Positionnement</strong> : SEO et inbound marketing. <strong>Forces</strong> : référencement naturel, génération de leads B2B, content stratégique. <strong>Pour qui</strong> : entreprises B2B qui veulent construire un actif SEO durable. <strong>Tarifs estimés</strong> : mid-market.</p>
+    <p><strong>Positionnement</strong> : SEO et inbound marketing. <strong>Forces</strong> : référencement naturel, génération de leads B2B, content stratégique. <strong>Pour qui</strong> : entreprises B2B qui veulent construire un actif SEO durable.</p>
 
     <h3>6. Link Agency — le challenger</h3>
-    <p><strong>Positionnement</strong> : agence boutique pilotée par son fondateur, méthode codifiée (Audit → Stratégie → Production → Activation → Pilotage), expertise multi-sectorielle au Maroc depuis 2015. <strong>Forces</strong> : un seul interlocuteur senior sur chaque dossier, zéro intermédiaire, livrables rigoureux, méthode démontrée par appel d'offres ouvert. <strong>Pour qui</strong> : PME ambitieuses, ETI en croissance et filiales étrangères qui cherchent une agence rigoureuse, opérationnelle et engagée. <strong>Approche</strong> : sur cadrage, structurée selon le périmètre de la mission.</p>
+    <p><strong>Positionnement</strong> : direction de marque et pôle marketing externalisé, pilotés directement par le fondateur. <strong>Forces</strong> : interlocuteur senior unique, articulation entre branding, contenus, activation et pilotage, spécialistes mobilisés selon le besoin. <strong>Pour qui</strong> : entreprises établies, groupes en croissance et marques étrangères qui cherchent à structurer ou reprendre le contrôle de leur marketing au Maroc.</p>
 
     <h3>7. The Next Click</h3>
-    <p><strong>Positionnement</strong> : branding et communication digitale data-driven. <strong>Forces</strong> : approche data, créativité disciplinée, performance orientée. <strong>Pour qui</strong> : marques qui veulent allier créa et mesure. <strong>Tarifs estimés</strong> : mid-market à premium.</p>
+    <p><strong>Positionnement</strong> : branding et communication digitale data-driven. <strong>Forces</strong> : approche data, créativité disciplinée, performance orientée. <strong>Pour qui</strong> : marques qui veulent allier créa et mesure.</p>
 
     <h3>8. RankUp</h3>
-    <p><strong>Positionnement</strong> : SEO, SEA et génération de leads. <strong>Forces</strong> : performance search, présence multi-villes (Casablanca, Rabat, Marrakech, Agadir). <strong>Pour qui</strong> : entreprises qui veulent dominer leur recherche locale. <strong>Tarifs estimés</strong> : entrée à mid-market.</p>
+    <p><strong>Positionnement</strong> : SEO, SEA et génération de leads. <strong>Forces</strong> : performance search, présence multi-villes (Casablanca, Rabat, Marrakech, Agadir). <strong>Pour qui</strong> : entreprises qui veulent développer leur visibilité locale.</p>
 
     <h3>9. CPOOD</h3>
-    <p><strong>Positionnement</strong> : marketing digital orienté croissance commerciale. <strong>Forces</strong> : acquisition client, stratégie digitale intégrée. <strong>Pour qui</strong> : startups et PME en phase d'accélération. <strong>Tarifs estimés</strong> : mid-market.</p>
+    <p><strong>Positionnement</strong> : marketing digital orienté croissance commerciale. <strong>Forces</strong> : acquisition client, stratégie digitale intégrée. <strong>Pour qui</strong> : startups et PME en phase d'accélération.</p>
 
     <h3>10. WikiDigital</h3>
-    <p><strong>Positionnement</strong> : agence web et SEO. <strong>Forces</strong> : création de sites optimisés, solutions digitales packagées. <strong>Pour qui</strong> : PME qui démarrent leur présence digitale ou refondent leur site. <strong>Tarifs estimés</strong> : entrée de marché.</p>
+    <p><strong>Positionnement</strong> : agence web et SEO. <strong>Forces</strong> : création de sites optimisés, solutions digitales packagées. <strong>Pour qui</strong> : PME qui démarrent leur présence digitale ou refondent leur site.</p>
 
     <h2>Comment choisir selon votre profil</h2>
     <p>Plutôt qu'un classement absolu, voici une grille de décision selon le profil de l'annonceur.</p>
 
-    <h3>Vous êtes une PME en croissance (CA 5-50 MMAD)</h3>
-    <p>Vous cherchez un partenaire accessible mais sérieux. Évitez les grandes agences (trop chères, processus trop lourds). Privilégiez une boutique resserrée avec un fondateur ou un directeur senior qui pilote, méthode claire, et un positionnement raisonnable. Link Agency, Hooked Digital, MAJORMEDIA correspondent à ce profil.</p>
+    <h3>Vous êtes une entreprise en croissance</h3>
+    <p>Vous cherchez un partenaire capable de structurer la croissance sans ajouter une organisation trop lourde. Comparez le niveau de séniorité réellement mobilisé, la méthode, la capacité de mesure et l'adéquation sectorielle. Link Agency, Hooked Digital et MAJORMEDIA illustrent trois configurations différentes à évaluer selon le besoin.</p>
 
-    <h3>Vous êtes une ETI ou un grand groupe national (CA > 100 MMAD)</h3>
-    <p>Vous avez les moyens d'investir mais vous cherchez encore le bon équilibre. Trois types d'agences peuvent vous servir : les grandes maisons créatives (Klem, N7), les agences hybrides positionnées sur la performance (The Next Click), ou les boutiques challengers qui livrent une qualité équivalente à moindre coût (Link Agency).</p>
+    <h3>Vous êtes une ETI ou un grand groupe national</h3>
+    <p>Vous cherchez un équilibre entre profondeur stratégique, capacité créative et proximité de pilotage. Trois types d'agences peuvent vous servir : les grandes maisons créatives, les agences hybrides positionnées sur la performance, ou les structures resserrées dans lesquelles un senior garde directement la responsabilité du mandat.</p>
 
     <h3>Vous êtes une filiale d'un groupe international</h3>
     <p>Vous avez besoin d'un partenaire bilingue (FR/EN), connecté aux codes des deux mondes, capable de servir d'interface entre le siège et les équipes locales. Privilégiez une agence dont le dirigeant a une expérience internationale ou de conseil senior. Link Agency, N7 Com Group, ou The Next Click correspondent à ce besoin.</p>
 
     <h3>Vous êtes un acteur premium avec une exigence créative forte</h3>
-    <p>Klem, Mosaik, ou une boutique créative spécialisée. Vous payerez plus mais vous obtiendrez une signature créative reconnaissable.</p>
+    <p>Évaluez les maisons créatives historiques et les boutiques spécialisées sur la force du concept, la qualité de production et la capacité à protéger la cohérence lors du déploiement. Le niveau d'investissement dépendra du périmètre et des droits attendus.</p>
 
     <h3>Vous voulez avant tout de la performance mesurable (acquisition de leads, ROAS)</h3>
     <p>Hooked Digital, UBIKOM, MAJORMEDIA, RankUp. Ces agences sont configurées pour le pilotage data et la génération de leads.</p>
@@ -88,21 +98,23 @@ export const blogPosts: BlogPost[] = [
     <p>La meilleure agence n'est pas la moins chère, ni la plus créative en présentation. C'est celle qui démontre la meilleure compréhension de votre business, propose une méthode claire, et vous met face à des seniors capables d'exécuter ce qu'ils promettent.</p>
 
     <h2>Pour aller plus loin</h2>
-    <p>Si vous souhaitez intégrer Link Agency à votre short-list, contactez directement Badre sur WhatsApp ou utilisez notre <a href="/contact">formulaire de cadrage</a>. Vous pouvez également consulter notre <a href="/agence-marketing-digital-casablanca">page dédiée à notre offre casablancaise</a>, nos <a href="/etudes-de-cas">références</a>, ou notre <a href="/inside-link">méthode et notre modèle</a>.</p>
+    <p>Si vous souhaitez intégrer Link Agency à votre short-list, <a href="https://wa.me/212699024526?text=Bonjour%20Badre%2C%20nous%20constituons%20une%20short-list%20de%20partenaires%20marketing" target="_blank" rel="noopener noreferrer">contactez directement Badre sur WhatsApp</a> ou utilisez notre <a href="/contact">formulaire de cadrage</a>. Vous pouvez également consulter notre <a href="/agence-marketing-digital-casablanca">offre à Casablanca</a>, nos <a href="/etudes-de-cas">références</a> et notre <a href="/inside-link">méthode</a>.</p>
     `,
-    author: 'Link Agency',
+    author: 'Badreddine Harkaoui',
     publishDate: '2026-05-25',
+    modifiedDate: '2026-08-28',
     slug: 'top-agences-marketing-casablanca-2026',
-    category: 'guide',
+    category: 'conseils',
     image: '/assets/blog/top-agences-casablanca-2026.jpg',
     readTime: 11,
     tags: ['agences marketing Casablanca', 'top agences Maroc', 'panorama agences', 'comparatif agences', 'choisir agence', 'agence marketing 2026', 'Hooked Digital', 'N7 Com', 'Klem'],
-    metaDescription: "Top 10 agences marketing à Casablanca en 2026 : panorama des acteurs majeurs, critères de sélection, tarifs estimés et grille de décision selon votre profil.",
+    metaDescription: "Top 10 agences marketing à Casablanca en 2026 : panorama éditorial, positionnements, critères de sélection et grille de décision selon votre profil.",
     metaKeywords: "top 10 agences marketing Casablanca, meilleures agences Casablanca 2026, panorama agences marketing Maroc, choisir agence Casablanca, comparatif agences marketing"
   },
   {
     id: '1',
     title: 'Stratégie de Marque au Maroc : Comment Construire un Branding Durable et Différenciant',
+    seoTitle: 'Stratégie de marque au Maroc : guide pour dirigeants',
     excerpt: 'Une analyse stratégique du branding au Maroc destinée aux dirigeants et décideurs. Méthodologie, erreurs à éviter et approche conseil pour une identité de marque performante.',
     content: `
     <h2>Le problème business réel : pourquoi tant de marques marocaines restent invisibles</h2>
@@ -112,8 +124,8 @@ export const blogPosts: BlogPost[] = [
     
     <p>Les conséquences sont mesurables : difficulté à justifier des prix premium, dépendance excessive à la prospection commerciale, turnover élevé faute de marque employeur, et vulnérabilité face aux nouveaux entrants. Une marque faible coûte cher, en opportunités perdues comme en efforts commerciaux démultipliés.</p>
 
-    <h2>Pourquoi la majorité des entreprises échouent sur le branding</h2>
-    <p>Après avoir accompagné des dizaines d'entreprises marocaines sur leur stratégie de marque, nous identifions trois causes structurelles d'échec récurrentes.</p>
+    <h2>Pourquoi les démarches de branding perdent souvent leur impact</h2>
+    <p>À travers les missions de stratégie, de contenu et de positionnement menées par Link Agency, trois causes structurelles d'échec reviennent régulièrement.</p>
     
     <h3>La confusion entre identité visuelle et stratégie de marque</h3>
     <p>Trop de dirigeants assimilent le branding à la création d'un logo. Or, l'identité visuelle n'est que la partie émergée d'un iceberg stratégique. Sans positionnement clair, sans promesse de marque définie, sans territoire d'expression cohérent, même le logo le plus élégant reste une coquille vide. Le branding commence par des décisions business : quel segment cibler, quelle valeur unique proposer, quel prix défendre.</p>
@@ -137,7 +149,7 @@ export const blogPosts: BlogPost[] = [
     <p>Une fois le positionnement défini, le territoire d'expression traduit la stratégie en signes distinctifs : codes visuels, ton de voix, univers iconographique, signature sonore. L'objectif est de créer une reconnaissance instantanée, même sans voir le logo. Les marques fortes sont identifiables à leurs couleurs, leur typographie, leur style photographique.</p>
 
     <h2>Méthodologie structurée : les étapes d'un branding efficace</h2>
-    <p>Une démarche de branding rigoureuse suit une progression logique en six phases distinctes.</p>
+    <p>Une démarche de branding rigoureuse suit une progression logique en six phases. Les durées indiquées ci-dessous sont des repères : le calendrier réel dépend du nombre de marchés, de décideurs, d’entretiens et de supports à déployer.</p>
     
     <h3>Phase 1 : Audit et diagnostic (2-3 semaines)</h3>
     <p>Analyse de l'existant, benchmark concurrentiel, étude des perceptions internes et externes. Cette phase inclut des entretiens avec la direction, les équipes et idéalement des clients. Le livrable est un rapport de diagnostic identifiant forces, faiblesses et opportunités de positionnement.</p>
@@ -166,8 +178,8 @@ export const blogPosts: BlogPost[] = [
     <h3>Privilégier l'esthétique sur la stratégie</h3>
     <p>Un logo peut être visuellement réussi et stratégiquement inadapté. La beauté ne suffit pas : l'identité doit servir les objectifs business. Un branding efficace n'est pas celui qui plaît le plus, mais celui qui différencie le mieux.</p>
     
-    <h3>Sous-estimer le budget et le temps nécessaires</h3>
-    <p>Un branding de qualité représente un investissement significatif, généralement entre 80 000 et 300 000 MAD pour une PME, davantage pour une grande entreprise. Vouloir économiser sur cette fondation stratégique compromet l'ensemble de l'édifice marketing.</p>
+    <h3>Sous-estimer l’investissement et le temps nécessaires</h3>
+    <p>Le périmètre peut aller d’un repositionnement ciblé à une refonte complète avec recherche, architecture de marque, identité, contenus et déploiement multi-supports. L’investissement doit donc être cadré à partir des décisions et des usages attendus, pas d’un tarif générique de « création de logo ».</p>
     
     <h3>Négliger le déploiement</h3>
     <p>Une identité de marque sans déploiement cohérent reste lettre morte. Le budget de déploiement (site web, supports, signalétique) doit être anticipé dès le départ, sous peine de voir la nouvelle identité cohabiter avec les anciens supports.</p>
@@ -202,7 +214,7 @@ export const blogPosts: BlogPost[] = [
     <h3>L'accompagnement dans la durée</h3>
     <p>La livraison d'une charte graphique n'est pas une fin. Nous proposons des formules d'accompagnement pour garantir la cohérence du déploiement et l'évolution maîtrisée de la marque dans le temps.</p>
     
-    <p>Link Agency réunit les expertises stratégiques, créatives et digitales nécessaires à chaque mandat de branding. Nous intervenons principalement auprès de marques au Maroc, de groupes multisectoriels et de directions marketing en repositionnement.</p>
+    <p>Link Agency garde directement la direction stratégique et coordonne les expertises créatives et digitales nécessaires à chaque mandat. Nous intervenons principalement auprès de marques au Maroc, de groupes multisectoriels et de directions marketing en repositionnement.</p>
 
     <h2>Conclusion : le branding comme décision stratégique</h2>
     <p>Dans un marché marocain de plus en plus concurrentiel, la stratégie de marque n'est plus un luxe réservé aux multinationales. Elle devient une nécessité pour toute entreprise souhaitant construire une préférence durable auprès de ses clients.</p>
@@ -211,16 +223,17 @@ export const blogPosts: BlogPost[] = [
     
     <p>Pour un dirigeant ou un fondateur, la question n'est pas de savoir s'il faut investir dans le branding, mais quand et comment le faire intelligemment. Une marque forte est un actif qui se valorise avec le temps, facilite la croissance et protège contre la concurrence.</p>
     
-    <p>Si vous souhaitez évaluer la force de votre marque actuelle ou engager une réflexion stratégique sur votre identité, nous sommes disponibles pour un échange confidentiel sur votre situation.</p>
+    <p>Si vous souhaitez évaluer la force de votre marque ou engager un repositionnement, découvrez notre <a href="/direction-marketing-externalisee">modèle de direction de marque externalisée</a> ou <a href="https://wa.me/212699024526?text=Bonjour%20Badre%2C%20je%20souhaite%20echanger%20sur%20notre%20strategie%20de%20marque" target="_blank" rel="noopener noreferrer">échangez directement avec Badre sur WhatsApp</a>.</p>
     `,
-    author: 'Link Agency Team',
+    author: 'Badreddine Harkaoui',
     publishDate: '2024-01-15',
+    modifiedDate: '2026-08-28',
     slug: 'strategie-marque-branding-maroc',
     category: 'branding',
     image: '/assets/blog/guide-branding-maroc.jpg',
     readTime: 12,
     tags: ['branding', 'stratégie de marque', 'identité visuelle', 'positionnement', 'maroc', 'conseil'],
-    metaDescription: 'Guide stratégique du branding au Maroc pour dirigeants et décideurs. Méthodologie, erreurs à éviter et approche conseil pour construire une marque forte et différenciante.',
+    metaDescription: 'Stratégie de marque au Maroc : méthode, erreurs à éviter et décisions à prendre pour construire un branding durable et différenciant.',
     metaKeywords: 'stratégie de marque maroc, branding maroc, identité de marque, positionnement marque, agence branding casablanca, conseil branding rabat, création marque marrakech'
   },
   {
@@ -294,7 +307,7 @@ export const blogPosts: BlogPost[] = [
     
     <p>Les dirigeants et décideurs qui réussissent leur transformation digitale sont ceux qui ont compris cette hiérarchie : d'abord la marque, ensuite les canaux. L'inverse produit du bruit, pas de la valeur.</p>
     `,
-    author: 'Link Agency Team',
+    author: 'Badreddine Harkaoui',
     publishDate: '2024-01-10',
     slug: 'marketing-digital-strategie-marque-maroc',
     category: 'digital',
@@ -427,7 +440,7 @@ export const blogPosts: BlogPost[] = [
     
     <p>L'événementiel bien pensé n'est pas un coût. C'est un investissement dans la construction d'une marque forte et différenciante.</p>
     `,
-    author: 'Link Agency Team',
+    author: 'Badreddine Harkaoui',
     publishDate: '2024-01-05',
     slug: 'evenementiel-strategique-marque-maroc',
     category: 'evenementiel',
@@ -533,7 +546,7 @@ export const blogPosts: BlogPost[] = [
     
     <p>Chez Link Agency, nous accompagnons les dirigeants et les directions marketing & communication dans la structuration de la marque personnelle de leurs leaders. De la plateforme de prise de parole à la production éditoriale, nous installons des voix qui comptent dans l'écosystème marocain.</p>
     `,
-    author: 'Branding Team',
+    author: 'Badreddine Harkaoui',
     publishDate: '2024-02-01',
     slug: 'personal-branding-dirigeants-maroc',
     category: 'branding',
@@ -697,7 +710,7 @@ export const blogPosts: BlogPost[] = [
     
     <p>Link Agency accompagne les entreprises marocaines dans leur stratégie de visibilité locale. Contactez directement Badre pour cadrer les priorités SEO de votre entreprise.</p>
     `,
-    author: 'SEO Team',
+    author: 'Badreddine Harkaoui',
     publishDate: '2024-01-28',
     slug: 'seo-local-maroc-guide-complet',
     category: 'digital',
@@ -777,14 +790,14 @@ export const blogPosts: BlogPost[] = [
     
     <p>Nous développons cette réflexion fondamentale dans notre analyse approfondie sur la <a href="/blog/strategie-marque-branding-maroc">stratégie de marque au Maroc : comment construire un branding durable et différenciant</a>. Cette ressource constitue le point de départ indispensable pour toute entreprise souhaitant transformer sa présence digitale en actif de marque.</p>
     `,
-    author: 'Link Agency Team',
+    author: 'Badreddine Harkaoui',
     publishDate: '2024-01-20',
     slug: 'reseaux-sociaux-coherence-marque-maroc',
     category: 'digital',
     image: '/assets/blog/strategie-reseaux-sociaux.jpg',
     readTime: 9,
     tags: ['réseaux sociaux', 'stratégie de marque', 'branding', 'cohérence', 'identité', 'maroc'],
-    metaDescription: 'Les réseaux sociaux au Maroc comme levier de cohérence de marque. Analyse stratégique pour dirigeants : erreurs fréquentes et alignement avec l\'identité de marque.',
+    metaDescription: 'Réseaux sociaux au Maroc : méthode pour aligner contenus, identité et objectifs business sans diluer la cohérence de marque.',
     metaKeywords: 'réseaux sociaux maroc, stratégie marque social media, branding réseaux sociaux, cohérence marque digitale, identité marque maroc'
   },
   
@@ -792,109 +805,162 @@ export const blogPosts: BlogPost[] = [
   
   {
     id: '10',
-    title: 'SEO Local au Maroc en 2025 : Dominer les Recherches à Casablanca, Rabat et Marrakech',
-    excerpt: 'Comment optimiser votre présence locale sur Google pour attirer plus de clients dans les grandes villes marocaines. Stratégies Google Business Profile et citations locales.',
+    title: 'SEO local au Maroc en 2026 : gagner en visibilité à Casablanca, Rabat et Marrakech',
+    seoTitle: 'SEO local Maroc 2026 : Casablanca, Rabat, Marrakech',
+    excerpt: 'Une méthode concrète pour améliorer votre présence dans Google Search et Maps sans fausses promesses : fiche établissement, pages locales, avis et mesure.',
     content: `
-    <h2>Le SEO local : un enjeu majeur pour les entreprises marocaines en 2025</h2>
-    <p>Une recherche locale traduit souvent une intention concrète : comparer, appeler, demander un itinéraire ou se rendre sur place. Optimiser cette présence aide l’entreprise à apparaître au moment où la décision se forme.</p>
-    
-    <h3>État des lieux du SEO local au Maroc</h3>
+    <h2>Le SEO local répond à une intention proche de la décision</h2>
+    <p>Le SEO local consiste à rendre une entreprise visible lorsqu’un prospect cherche un service, une marque ou un point de vente dans une zone précise. Au Maroc, cela concerne aussi bien une recherche explicite comme « agence branding Casablanca » qu’une requête générique affichant des résultats de proximité dans Google Search ou Google Maps.</p>
+    <p>Il n’existe pas de bouton permettant d’acheter une meilleure position locale. Google explique que les résultats reposent principalement sur trois critères : <strong>la pertinence</strong> entre la recherche et l’établissement, <strong>la distance</strong> avec l’utilisateur et <strong>la notoriété</strong> de l’entreprise. La stratégie doit donc travailler ces trois dimensions, sans prétendre contrôler la localisation de la personne qui recherche.</p>
+
+    <h2>1. Commencer par un diagnostic, pas par une liste de mots-clés</h2>
+    <p>Avant toute optimisation, vérifiez ce que Google comprend déjà de l’entreprise. Recherchez le nom de la marque, ses services principaux et les combinaisons service-ville importantes. Comparez les résultats sur ordinateur et mobile, puis observez la fiche établissement, les pages du site qui remontent, les avis, les concurrents visibles et les éventuelles incohérences d’adresse ou de téléphone.</p>
+    <p>Le diagnostic doit distinguer trois situations :</p>
     <ul>
-      <li><strong>Casablanca</strong> : forte densité de recherches et de concurrence locale</li>
-      <li><strong>Rabat</strong> : 1.8 million de recherches locales mensuelles</li>
-      <li><strong>Marrakech</strong> : forte composante touristique et internationale</li>
-      <li><strong>Tanger</strong> : 1.2 million de recherches locales mensuelles</li>
-      <li><strong>Fès</strong> : 900 000 recherches locales mensuelles</li>
+      <li><strong>la marque est introuvable sur son propre nom</strong> : problème d’indexation, de fiche ou de cohérence de l’identité numérique ;</li>
+      <li><strong>la marque apparaît sur son nom mais pas sur ses services</strong> : problème de pertinence et de contenu ;</li>
+      <li><strong>la marque apparaît mais génère peu d’actions</strong> : problème de proposition de valeur, de preuve ou d’expérience de conversion.</li>
     </ul>
-    
-    <h2>Optimiser Google Business Profile pour le Maroc</h2>
-    <h3>1. Informations NAP cohérentes</h3>
-    <p>Nom, Adresse, Téléphone doivent être identiques partout : site web, annuaires, réseaux sociaux. Utilisez le format marocain : +212 5XX-XXXXXX.</p>
-    
-    <h3>2. Catégories et attributs locaux</h3>
-    <p>Choisissez des catégories précises et ajoutez les attributs pertinents : "Accepte les paiements en espèces", "Parking disponible", "Climatisé" - très recherchés au Maroc.</p>
-    
-    <h3>3. Photos géolocalisées</h3>
-    <p>Ajoutez des photos avec métadonnées EXIF contenant votre localisation. Google favorise les fiches avec 10+ photos récentes.</p>
-    
-    <h2>Citations locales marocaines</h2>
-    <p>Les annuaires essentiels pour le SEO local au Maroc :</p>
+    <p>Google Search Console aide ensuite à identifier les requêtes et les pages qui gagnent déjà des impressions. Cette base évite de remplacer une URL utile ou de créer plusieurs pages qui se concurrencent.</p>
+
+    <h2>2. Construire une fiche Google Business Profile exacte et vivante</h2>
+    <p>Une fiche complète aide Google à comprendre l’activité et rassure les prospects. Le nom doit correspondre au nom réellement utilisé par l’entreprise, sans ajouter artificiellement des mots-clés. L’adresse ou la zone desservie, les horaires, le téléphone, le site, la catégorie principale et les catégories secondaires doivent refléter la réalité opérationnelle.</p>
+    <h3>Les éléments à maintenir</h3>
     <ul>
-      <li><strong>Pages Jaunes Maroc</strong> : Incontournable, haute autorité</li>
-      <li><strong>Kerix.net</strong> : Annuaire B2B marocain</li>
-      <li><strong>Kompass Maroc</strong> : Référence entreprises</li>
-      <li><strong>Charika.ma</strong> : Annuaire légal entreprises</li>
-      <li><strong>1000entreprises.com</strong> : Visibilité PME</li>
+      <li>une catégorie principale précise et peu de catégories secondaires réellement justifiées ;</li>
+      <li>une description claire de l’activité, des secteurs servis et de la zone d’intervention ;</li>
+      <li>des horaires à jour, y compris pendant Ramadan et les jours fériés ;</li>
+      <li>des photos récentes et représentatives, sans compter sur les métadonnées EXIF comme levier de classement ;</li>
+      <li>des liens vers la bonne page du site, avec un marquage UTM pour mesurer les visites.</li>
     </ul>
-    
-    <h2>Stratégie de contenu local</h2>
-    <p>Créez du contenu optimisé pour chaque ville ciblée :</p>
+    <p>La régularité est plus crédible qu’un remplissage ponctuel. Une fiche abandonnée, des horaires faux ou un numéro injoignable détruisent la confiance même lorsque le classement est bon.</p>
+
+    <h2>3. Créer des pages locales uniquement lorsqu’elles ont une vraie utilité</h2>
+    <p>Une page par ville peut être pertinente si l’offre, les références, les besoins ou le mode d’intervention diffèrent réellement. Une simple duplication où seul le nom de Casablanca devient Rabat ou Marrakech produit une expérience pauvre et peut diluer le site.</p>
+    <p>Une page locale solide doit répondre à cinq questions : quel problème est traité dans cette ville, pour quels types d’organisations, avec quelle méthode, quelles preuves et comment engager la conversation ? Elle peut présenter des enjeux propres au territoire, des secteurs dominants, des cas d’usage, une FAQ locale et un appel à l’action adapté.</p>
     <ul>
-      <li>Pages dédiées par quartier (Maarif, Hay Riad, Guéliz...)</li>
-      <li>Articles de blog sur les événements locaux</li>
-      <li>Témoignages clients avec mention de la ville</li>
-      <li>FAQ locale avec questions spécifiques à chaque région</li>
+      <li><strong>Casablanca</strong> : sièges, finance, industrie, retail et forte densité concurrentielle ;</li>
+      <li><strong>Rabat</strong> : institutions, ONG, organismes internationaux et communication d’autorité ;</li>
+      <li><strong>Marrakech</strong> : hospitality, luxe, événementiel et audiences internationales.</li>
     </ul>
-    
-    <p>Link Agency accompagne des entreprises marocaines dans leur stratégie de visibilité locale. Contactez directement Badre pour cadrer les priorités SEO de votre entreprise.</p>
+    <p>Pour voir cette logique appliquée, consultez nos pages dédiées à <a href="/agence-marketing-digital-casablanca">Casablanca</a>, à <a href="/agence-communication-rabat">Rabat</a> et à <a href="/agence-marketing-digital-marrakech">Marrakech</a>.</p>
+
+    <h2>4. Développer la notoriété locale sans fabriquer de citations</h2>
+    <p>La cohérence du nom, de l’adresse et du téléphone reste importante sur les supports que l’entreprise contrôle. Les annuaires peuvent aider s’ils sont légitimes, sectoriels et réellement consultés, mais l’objectif n’est pas d’accumuler des inscriptions de faible qualité.</p>
+    <p>Les signaux les plus utiles viennent souvent d’éléments plus difficiles à reproduire : couverture presse, partenaires, fédérations professionnelles, événements, profils sociaux actifs, pages de distributeurs ou références éditoriales locales. Le lien doit naître d’une relation ou d’une information utile, pas d’un achat massif de « citations SEO ».</p>
+
+    <h2>5. Organiser une stratégie d’avis conforme et crédible</h2>
+    <p>Les avis contribuent à la confiance et peuvent participer à la notoriété locale. Il faut les solliciter après une expérience réelle, avec un lien direct et une demande neutre. N’offrez pas de contrepartie contre un avis positif et ne filtrez pas les clients selon la note qu’ils pourraient laisser.</p>
+    <p>Répondez à chaque avis avec mesure. Une bonne réponse remercie, reprend un élément concret et protège les informations confidentielles. Face à un avis négatif, évitez la confrontation publique : reconnaissez le problème lorsqu’il est avéré, proposez un canal direct et expliquez la correction apportée.</p>
+
+    <h2>6. Relier visibilité locale, contenu et conversion</h2>
+    <p>Le SEO local ne s’arrête pas à l’apparition dans Maps. La page d’arrivée doit confirmer immédiatement la promesse : offre lisible, zone couverte, références pertinentes, contact facile et affichage mobile impeccable. Pour une entreprise de services, un bouton WhatsApp peut réduire la friction ; pour un point de vente, l’itinéraire et les horaires sont souvent prioritaires.</p>
+    <p>Le contenu de fond renforce également la pertinence. Une entreprise peut répondre aux questions que se posent ses prospects, documenter sa méthode et expliquer les particularités du marché marocain. Cette approche sert à la fois le référencement classique et la capacité des moteurs génératifs à comprendre l’expertise de la marque.</p>
+
+    <h2>7. Mesurer ce qui conduit à une vraie demande</h2>
+    <p>Suivez séparément la visibilité et la contribution commerciale. Les impressions et positions indiquent une présence ; les appels, clics vers WhatsApp, demandes d’itinéraire, formulaires qualifiés et opportunités CRM indiquent une contribution au business. Marquez les liens de la fiche, configurez les conversions et rapprochez les demandes des sources lorsque les données le permettent.</p>
+    <p>Un audit mensuel peut tenir sur un tableau simple : requêtes locales prioritaires, positions observées, pages d’entrée, actions depuis la fiche, avis reçus, problèmes détectés et prochaines corrections. Le but n’est pas de produire un rapport spectaculaire, mais de décider.</p>
+
+    <h2>Ce que Google confirme, et ce qu’aucune agence ne peut garantir</h2>
+    <p>Google confirme les trois facteurs de pertinence, distance et notoriété dans sa documentation officielle. En revanche, personne ne peut garantir une première position permanente, imposer une visibilité identique depuis tous les quartiers ou compenser durablement une mauvaise expérience client par des artifices techniques.</p>
+    <p><strong>Source principale :</strong> <a href="https://support.google.com/business/answer/7091?hl=fr" target="_blank" rel="noopener noreferrer">Google Business Profile — améliorer le classement local</a>.</p>
+
+    <h2>Faire du SEO local un actif commercial</h2>
+    <p>La bonne stratégie assemble une fiche exacte, des pages utiles, une réputation réelle, un contenu cohérent et une mesure reliée aux demandes. Si votre visibilité locale existe déjà mais ne produit pas assez d’opportunités, Link Agency peut cadrer les priorités et organiser leur exécution dans le cadre d’un <a href="/direction-marketing-externalisee">pôle marketing externalisé</a>.</p>
+    <p><a href="https://wa.me/212699024526?text=Bonjour%20Link%20Agency%2C%20je%20souhaite%20cadrer%20notre%20visibilite%20locale" target="_blank" rel="noopener noreferrer">Échanger sur WhatsApp à propos de votre visibilité locale</a>.</p>
     `,
-    author: 'SEO Team Link Agency',
+    author: 'Badreddine Harkaoui',
     publishDate: '2025-11-15',
+    modifiedDate: '2026-08-28',
     slug: 'seo-local-maroc-casablanca-rabat-marrakech-2025',
     category: 'digital',
     image: '/assets/blog/seo-local-maroc-2025.jpg',
     readTime: 10,
     tags: ['seo local', 'google business profile', 'casablanca', 'rabat', 'marrakech', 'référencement local', 'maroc'],
-    metaDescription: 'Guide SEO local Maroc 2025 : optimisez votre visibilité à Casablanca, Rabat et Marrakech. Google Business Profile, citations locales et stratégies gagnantes.',
-    metaKeywords: 'seo local maroc, référencement local casablanca, google business profile maroc, agence seo rabat, visibilité locale marrakech'
+    metaDescription: 'SEO local Maroc 2026 : méthode fiable pour gagner en visibilité à Casablanca, Rabat et Marrakech sur Google Search et Maps.',
+    metaKeywords: 'seo local maroc, référencement local casablanca, google business profile maroc, visibilité locale rabat, seo marrakech'
   },
   {
     id: '11',
-    title: 'Marketing Digital Maroc 2025 : Les Nouvelles Tendances qui Transforment le Marché',
-    excerpt: 'Intelligence artificielle, commerce social, marketing conversationnel : découvrez les tendances qui redéfinissent le marketing digital au Maroc en 2025.',
+    title: 'Marketing digital au Maroc en 2026 : 7 priorités pour les marques',
+    seoTitle: 'Marketing digital Maroc 2026 : 7 priorités',
+    excerpt: 'IA, social media, WhatsApp, données propriétaires et gouvernance : les tendances utiles aux directions marketing, séparées des effets de mode.',
     content: `
-    <h2>Le marketing digital marocain en pleine révolution</h2>
-    <p>Les usages numériques au Maroc continuent de progresser et les parcours sont largement mobiles. L’opportunité est réelle, mais elle exige une stratégie adaptée au contexte, aux langues et au niveau de maturité de chaque marque.</p>
-    
-    <h3>Chiffres clés du digital marocain en 2025</h3>
+    <h2>En 2026, le problème n’est plus d’être présent mais de garder une direction</h2>
+    <p>Le marketing digital au Maroc est arrivé à un stade où l’audience, les canaux et les outils existent. La difficulté est ailleurs : organiser une marque cohérente, produire avec régularité, transformer les conversations en opportunités et mesurer sans confondre activité et performance.</p>
+    <p>Les données agrégées par DataReportal indiquent 35,5 millions d’internautes au Maroc fin 2025 et 22,8 millions d’identités actives sur les réseaux sociaux. Ces chiffres donnent un ordre de grandeur, mais ils ne décrivent ni une audience unique ni une intention d’achat : une même personne peut utiliser plusieurs comptes, et les portées publicitaires des plateformes ne sont pas équivalentes à des utilisateurs actifs mensuels.</p>
+    <p>Pour une direction générale, la vraie question est donc : quelles priorités permettront à la marque de gagner en clarté et en efficacité au cours des douze prochains mois ?</p>
+
+    <h2>Priorité 1 : passer d’un calendrier de publications à un système de marque</h2>
+    <p>Publier trois fois par semaine ne constitue pas une stratégie. Un système de marque relie le positionnement, les audiences, les preuves, les thèmes éditoriaux, les formats, la distribution et les objectifs commerciaux. Il donne à chaque contenu une fonction précise : construire la préférence, expliquer une offre, rassurer, recruter ou déclencher une conversation.</p>
+    <p>Ce travail commence par une <a href="/branding">plateforme de marque</a> claire. Le digital amplifie ce qui existe déjà ; s’il amplifie un positionnement flou, il produit davantage de bruit. En 2026, la cohérence entre le site, LinkedIn, Instagram, WhatsApp, les propositions commerciales et l’expérience client devient un avantage concurrentiel plus durable qu’un format viral isolé.</p>
+
+    <h2>Priorité 2 : utiliser l’IA comme infrastructure de production, pas comme voix de marque</h2>
+    <p>L’IA générative peut accélérer la recherche, la synthèse, la déclinaison de formats, l’analyse de verbatims ou la préparation de reporting. Elle devient utile lorsqu’elle s’intègre à un processus défini, avec des sources, une validation humaine et une responsabilité claire.</p>
+    <p>Le risque apparaît lorsque l’entreprise lui délègue son jugement. Des contenus génériques, des chiffres non vérifiés et une voix interchangeable affaiblissent la marque. La bonne organisation sépare trois niveaux : ce qui peut être automatisé, ce qui doit être contrôlé par un expert et ce qui doit rester décidé par la direction.</p>
     <ul>
-      <li><strong>Usages numériques</strong> : une audience large, mobile et multilingue</li>
-      <li><strong>Mobile</strong> : point d’entrée dominant pour de nombreux parcours</li>
-      <li><strong>E-commerce</strong> : croissance des usages, avec des contraintes locales de paiement et de livraison</li>
-      <li><strong>Réseaux sociaux</strong> : rôle central dans la découverte et la conversation</li>
+      <li><strong>automatisable</strong> : transcription, classement, variantes, premières synthèses ;</li>
+      <li><strong>assisté</strong> : rédaction, analyse concurrentielle, scénarios de campagne ;</li>
+      <li><strong>non délégué</strong> : positionnement, arbitrage, validation sensible, promesse publique.</li>
     </ul>
-    
-    <h2>Les 5 tendances majeures de 2025</h2>
-    
-    <h3>1. L'IA générative dans le marketing</h3>
-    <p>Les entreprises marocaines explorent l’IA pour la création de contenu, le service client et l’analyse. Les gains dépendent toutefois de la qualité des données, du contrôle humain et de l’intégration aux processus existants.</p>
-    
-    <h3>2. Le commerce social explose</h3>
-    <p>Instagram et TikTok rapprochent contenu, recommandation et achat. Leur pertinence dépend toutefois de la cible, de la disponibilité des fonctionnalités et de la capacité de la marque à produire régulièrement.</p>
-    
-    <h3>3. Marketing conversationnel via WhatsApp</h3>
-    <p>WhatsApp occupe une place importante dans les échanges commerciaux au Maroc. Il peut relier publicité, conversation, catalogue et suivi, avec une reprise humaine lorsque la demande l’exige.</p>
-    
-    <h3>4. Vidéo courte et Reels</h3>
-    <p>La vidéo courte structure une part importante des usages sur TikTok, Instagram Reels et YouTube Shorts. Elle doit toutefois rester cohérente avec la marque et les capacités de production.</p>
-    
-    <h3>5. Personnalisation avancée</h3>
-    <p>La donnée first-party permet une segmentation plus pertinente par ville, comportement ou historique d’achat, dans le respect du consentement et des règles de protection des données.</p>
-    
-    <h2>Budgets et ROI 2025</h2>
-    <p>La part du budget consacrée au digital doit être définie selon les objectifs, la maturité de la marque et l’économie du canal. Aucun rendement moyen ne remplace un modèle d’attribution adapté à l’entreprise.</p>
-    
-    <p>Chez Link Agency Casablanca, nous accompagnons les entreprises marocaines dans leur transformation digitale avec des stratégies data-driven et créatives.</p>
+
+    <h2>Priorité 3 : concevoir le social media par rôle de plateforme</h2>
+    <p>Facebook, Instagram, TikTok, LinkedIn et YouTube ne servent pas le même parcours. Une marque retail peut combiner découverte visuelle, preuve sociale et retargeting ; une entreprise B2B peut concentrer son effort sur LinkedIn, les contenus experts, le référencement et la conversation directe. Être partout dilue la qualité lorsque la capacité de production est limitée.</p>
+    <p>La sélection doit croiser quatre critères : présence réelle de la cible, rôle dans la décision, formats que la marque peut produire au bon niveau et capacité de suivi commercial. Notre <a href="/blog/reseaux-sociaux-maroc-tiktok-instagram-2025">guide des réseaux sociaux au Maroc</a> détaille cette méthode plateforme par plateforme.</p>
+
+    <h2>Priorité 4 : organiser WhatsApp comme un canal commercial</h2>
+    <p>Au Maroc, WhatsApp raccourcit souvent la distance entre découverte et conversation. Mais ajouter un bouton ne suffit pas. Il faut définir les horaires de réponse, les messages d’accueil, la qualification, le transfert vers la bonne personne, les modèles de réponse et le suivi dans le CRM.</p>
+    <p>Le canal doit rester humain là où l’enjeu l’exige. Une automatisation peut collecter le contexte ou orienter une demande ; elle ne doit pas enfermer un prospect à forte valeur dans un parcours rigide. La mesure utile porte sur les conversations qualifiées, les rendez-vous et les opportunités, pas uniquement sur les clics.</p>
+
+    <h2>Priorité 5 : construire une donnée propriétaire conforme</h2>
+    <p>Les plateformes modifient leurs règles, leurs formats et leurs capacités de ciblage. Les entreprises ont donc intérêt à développer des actifs qu’elles contrôlent : base CRM qualifiée, consentements documentés, historique de relation, audiences issues du site, préférences clients et données de vente.</p>
+    <p>Cette ambition doit respecter la loi marocaine n° 09-08 relative à la protection des données personnelles. Collecter davantage n’est pas une stratégie en soi. Chaque donnée doit avoir une finalité, une durée de conservation, un niveau de sécurité et une base de traitement clairement définis. La CNDP rappelle également les obligations spécifiques liées à la prospection directe.</p>
+
+    <h2>Priorité 6 : préparer la marque aux moteurs génératifs</h2>
+    <p>Les prospects utilisent désormais Google, ChatGPT, Perplexity et d’autres interfaces pour comparer des acteurs, comprendre un marché ou préparer une short-list. La visibilité dans ces environnements repose moins sur une « astuce GEO » que sur des fondamentaux solides : entité clairement identifiable, pages accessibles, expertise démontrée, sources citées, auteurs assumés, données structurées et cohérence des informations sur le web.</p>
+    <p>Un contenu utile répond directement à la question, explique sa méthode, expose ses limites et relie les sujets entre eux. Cette architecture renforce à la fois le SEO et la capacité d’un moteur génératif à interpréter la marque. Elle doit compléter, et non remplacer, une base technique saine.</p>
+
+    <h2>Priorité 7 : reconnecter la création aux indicateurs de direction</h2>
+    <p>Le reporting marketing doit distinguer les indicateurs de diffusion, de considération, de conversion et de valeur. La portée et les vues renseignent sur la distribution ; elles ne prouvent pas une contribution commerciale. À l’inverse, une campagne B2B très ciblée peut sembler petite tout en créant des opportunités importantes.</p>
+    <p>Le tableau de bord dépend du modèle économique, mais il peut suivre :</p>
+    <ul>
+      <li>la part de trafic qualifié et les requêtes de marque ;</li>
+      <li>les conversations et formulaires réellement qualifiés ;</li>
+      <li>le coût d’acquisition lorsque l’attribution le permet ;</li>
+      <li>la progression des opportunités dans le CRM ;</li>
+      <li>les signaux de marque : demande directe, mentions, recherches et préférence.</li>
+    </ul>
+
+    <h2>Le contexte marocain favorise les entreprises capables de structurer leur marketing</h2>
+    <p>L’OMPIC a recensé 56 572 créations d’entreprises au premier semestre 2025, en hausse de 17,7 % sur un an, dont 39,2 % des nouvelles personnes morales dans la région Casablanca-Settat. Parallèlement, l’Office des Changes indique que les recettes d’investissements directs étrangers ont atteint 56,1 milliards de dirhams en 2025, soit une hausse de 28 %.</p>
+    <p>Ces chiffres ne garantissent pas un budget marketing pour chaque entreprise. Ils montrent toutefois un marché où de nouvelles marques apparaissent, où des groupes étrangers s’implantent et où la concurrence pour la visibilité s’intensifie. Les organisations capables de coordonner stratégie de marque, contenu, acquisition et mesure disposent d’un avantage opérationnel.</p>
+
+    <h2>Quelle organisation choisir en 2026 ?</h2>
+    <p>Une équipe interne convient lorsqu’un volume continu justifie plusieurs recrutements et qu’un responsable senior peut piloter les expertises. Une agence spécialisée répond à un besoin délimité. Une <a href="/direction-marketing-externalisee">direction marketing externalisée</a> devient pertinente lorsque l’entreprise a besoin d’une direction, d’une coordination et d’une capacité d’exécution sans constituer immédiatement tout le pôle en interne.</p>
+    <p>Le choix dépend de la maturité, de la vitesse attendue et de la complexité des chantiers. Il ne faut pas externaliser la responsabilité de la marque ; il faut organiser une gouvernance où la direction garde les décisions et où le partenaire porte le cadre, la cadence et la qualité.</p>
+
+    <h2>Sources et limites</h2>
+    <ul>
+      <li><a href="https://datareportal.com/reports/digital-2026-morocco" target="_blank" rel="noopener noreferrer">DataReportal, Digital 2026: Morocco</a> — données de fin 2025, avec les précautions méthodologiques précisées dans le rapport ;</li>
+      <li><a href="https://www.ompic.ma/fr/actualites/office-marocain-de-la-propriete-industrielle-et-commerciale-les-creations-dentreprises" target="_blank" rel="noopener noreferrer">OMPIC, créations d’entreprises au premier semestre 2025</a> ;</li>
+      <li><a href="https://www.oc.gov.ma/sites/default/files/2026-01/IMEE%20D%C3%A9c%202025.pdf" target="_blank" rel="noopener noreferrer">Office des Changes, indicateurs 2025</a> ;</li>
+      <li><a href="https://www.cndp.ma/images/lois/Loi-09-08-Fr.pdf" target="_blank" rel="noopener noreferrer">CNDP, loi n° 09-08</a>.</li>
+    </ul>
+
+    <h2>Mettre ces priorités dans le bon ordre</h2>
+    <p>La meilleure feuille de route n’additionne pas sept chantiers simultanés. Elle identifie le goulot d’étranglement principal, fixe un responsable, organise la mesure puis séquence le reste. Link Agency intervient comme direction de marque et pôle marketing externalisé pour construire ce cadre et mobiliser les expertises nécessaires à chaque mission.</p>
+    <p><a href="https://wa.me/212699024526?text=Bonjour%20Link%20Agency%2C%20je%20souhaite%20cadrer%20nos%20priorites%20marketing" target="_blank" rel="noopener noreferrer">Cadrer vos priorités marketing sur WhatsApp</a>.</p>
     `,
-    author: 'Digital Strategy Team',
+    author: 'Badreddine Harkaoui',
     publishDate: '2025-10-28',
+    modifiedDate: '2026-08-28',
     slug: 'marketing-digital-maroc-tendances-2025',
     category: 'digital',
     image: '/assets/blog/marketing-digital-maroc-2025.jpg',
     readTime: 8,
-    tags: ['marketing digital', 'ia', 'commerce social', 'whatsapp', 'tendances 2025', 'maroc'],
-    metaDescription: 'Tendances marketing digital Maroc 2025 : IA, commerce social, WhatsApp marketing. Stratégies gagnantes pour les entreprises marocaines.',
-    metaKeywords: 'marketing digital maroc 2025, tendances digital casablanca, ia marketing maroc, whatsapp business maroc, commerce social'
+    tags: ['marketing digital', 'ia', 'social media', 'whatsapp', 'tendances 2026', 'maroc'],
+    metaDescription: 'Marketing digital Maroc 2026 : 7 priorités concrètes sur l’IA, les réseaux sociaux, WhatsApp, la donnée, le SEO et la gouvernance.',
+    metaKeywords: 'marketing digital maroc 2026, tendances marketing maroc, ia marketing maroc, whatsapp business maroc, stratégie digitale'
   },
   {
     id: '12',
@@ -940,7 +1006,7 @@ export const blogPosts: BlogPost[] = [
     
     <p>Link Agency accompagne les marques marocaines dans leur stratégie de branding local, du positionnement à la cohérence des points de contact.</p>
     `,
-    author: 'Branding Team Link Agency',
+    author: 'Badreddine Harkaoui',
     publishDate: '2025-12-05',
     slug: 'branding-local-maroc-identite-2025',
     category: 'branding',
@@ -952,123 +1018,210 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: '13',
-    title: 'Réseaux Sociaux Maroc 2025 : TikTok, Instagram et les Nouvelles Plateformes',
-    excerpt: 'État des lieux complet des réseaux sociaux au Maroc en 2025 : statistiques, audiences, stratégies par plateforme et budgets publicitaires.',
+    title: 'Réseaux sociaux au Maroc en 2026 : quelle plateforme pour quelle marque ?',
+    seoTitle: 'Réseaux sociaux Maroc 2026 : quelle plateforme ?',
+    excerpt: 'Facebook, Instagram, TikTok, LinkedIn ou YouTube : une grille de décision pour choisir les bons canaux, organiser les contenus et mesurer leur rôle.',
     content: `
-    <h2>Le paysage social media marocain en 2025</h2>
-    <p>Les réseaux sociaux au Maroc continuent leur croissance fulgurante. Voici l'état des lieux complet pour planifier votre stratégie 2025.</p>
-    
-    <h3>Statistiques par plateforme (décembre 2025)</h3>
+    <h2>La meilleure plateforme n’existe pas sans objectif précis</h2>
+    <p>Une marque au Maroc ne doit pas choisir un réseau social parce qu’il est « incontournable ». Elle doit choisir les plateformes capables de remplir un rôle dans son parcours : faire connaître, construire la préférence, démontrer une expertise, générer une conversation, recruter ou soutenir la fidélisation.</p>
+    <p>DataReportal estime à 22,8 millions le nombre d’identités actives sur les réseaux sociaux au Maroc en octobre 2025. Les outils publicitaires indiquaient notamment une portée potentielle de 22,8 millions pour Facebook, 15,1 millions pour Instagram et 16,7 millions d’adultes pour TikTok. LinkedIn annonçait 6,9 millions de membres inscrits.</p>
+    <p>Ces chiffres ne sont pas directement comparables. Ils proviennent d’outils publicitaires, peuvent être révisés et ne correspondent pas toujours à des utilisateurs actifs uniques. Ils servent à dimensionner un marché, pas à décider seuls d’une stratégie.</p>
+
+    <h2>Facebook : couverture, communauté et activation locale</h2>
+    <p>Facebook reste pertinent pour de nombreuses audiences adultes, les communautés, les groupes, les événements et la diffusion locale. Il conserve aussi un rôle important dans l’écosystème publicitaire de Meta, notamment pour le retargeting et les campagnes qui ouvrent une conversation WhatsApp.</p>
+    <p>Il convient aux enseignes retail, services de proximité, institutions, marques grand public et organisations disposant déjà d’une communauté. En revanche, une page alimentée uniquement par des affiches promotionnelles finit souvent par perdre son rôle relationnel.</p>
+    <h3>Formats à privilégier</h3>
     <ul>
-      <li><strong>Facebook</strong> : couverture large et usages communautaires</li>
-      <li><strong>Instagram</strong> : image, lifestyle, retail et découverte</li>
-      <li><strong>TikTok</strong> : attention, culture et formats vidéo natifs</li>
-      <li><strong>LinkedIn</strong> : B2B, expertise et recrutement</li>
-      <li><strong>Snapchat</strong> : audiences jeunes et usages spécifiques</li>
-      <li><strong>X</strong> : actualité, médias et conversations d’influence</li>
+      <li>vidéos démonstratives ou témoignages avec sous-titres ;</li>
+      <li>contenus utiles liés au quotidien de la cible ;</li>
+      <li>couverture d’événements et prises de parole locales ;</li>
+      <li>publicités orientées message lorsque le suivi commercial est organisé.</li>
     </ul>
-    
-    <h2>Stratégies par plateforme</h2>
-    
-    <h3>TikTok Maroc : l'incontournable</h3>
-    <p>La plateforme progresse et favorise les marques capables d’adopter ses codes sans perdre leur identité :</p>
+
+    <h2>Instagram : image de marque, désir et preuve visuelle</h2>
+    <p>Instagram est un terrain naturel pour l’hospitality, la beauté, le bien-être, le food, le retail, l’immobilier, le design et les marques qui vendent une expérience autant qu’un produit. La plateforme peut combiner découverte par les Reels, considération par les carrousels, proximité par les Stories et réassurance par les contenus clients.</p>
+    <p>La difficulté n’est pas de publier davantage, mais d’établir une signature reconnaissable. Une <a href="/branding">identité de marque</a> doit pouvoir vivre dans la vidéo verticale, les prises de parole spontanées et les formats pédagogiques sans devenir rigide. La qualité attendue n’est pas nécessairement une production lourde ; c’est une intention claire et une cohérence durable.</p>
+
+    <h2>TikTok : attention, culture et capacité d’incarnation</h2>
+    <p>TikTok peut accélérer la découverte lorsqu’une marque accepte les codes de la plateforme : rythme, narration directe, incarnation et apprentissage continu. Copier un Reel corporate ou suivre chaque tendance sans lien avec le positionnement fonctionne rarement sur la durée.</p>
+    <p>La plateforme convient aux marques disposant d’un accès régulier à des personnes, des coulisses, des démonstrations ou un point de vue. La darija peut créer de la proximité lorsqu’elle est naturelle pour l’audience et la personne qui parle. Elle ne doit pas être ajoutée comme un décor.</p>
+    <h3>Avant d’ouvrir le canal, vérifiez trois capacités</h3>
+    <ol>
+      <li>pouvez-vous produire et tester plusieurs angles chaque mois ?</li>
+      <li>une personne ou un format peut-il incarner la marque avec crédibilité ?</li>
+      <li>savez-vous transformer l’attention obtenue en visite, recherche de marque ou conversation ?</li>
+    </ol>
+
+    <h2>LinkedIn : expertise, influence B2B et recrutement</h2>
+    <p>LinkedIn est pertinent lorsque la décision implique des dirigeants, des responsables marketing, des RH, des acheteurs ou des partenaires institutionnels. Pour une entreprise B2B, la page de marque joue un rôle de preuve, mais la portée organique repose souvent davantage sur des prises de parole humaines.</p>
+    <p>Le personal branding ne signifie pas transformer chaque dirigeant en influenceur. Il peut s’agir de publier moins souvent, avec un point de vue précis : lecture d’un marché, retour d’expérience, méthode, arbitrage ou position assumée. L’objectif est de rendre l’expertise visible sans exposer artificiellement la vie personnelle.</p>
+
+    <h2>YouTube : profondeur, recherche et durée de vie</h2>
+    <p>YouTube mérite d’être pensé au-delà des campagnes vidéo. Tutoriels, démonstrations, interviews, visites, webinaires et formats documentaires peuvent continuer à être découverts longtemps après leur publication. La plateforme est particulièrement utile lorsque le produit demande une explication ou lorsque la marque possède une expertise difficile à résumer en quinze secondes.</p>
+    <p>Les Shorts peuvent distribuer des extraits, tandis que les formats longs construisent la confiance. Un même tournage peut alimenter plusieurs canaux, à condition de concevoir la production dès le départ pour ces usages.</p>
+
+    <h2>WhatsApp : le pont entre social media et relation commerciale</h2>
+    <p>WhatsApp n’est pas un réseau social éditorial au même titre, mais il joue un rôle central dans de nombreux parcours marocains. Une publicité, une bio Instagram ou une page de service peut ouvrir directement une conversation. Cette proximité augmente aussi l’exigence de réponse.</p>
+    <p>Définissez qui répond, sous quel délai, avec quelles questions de qualification et comment la demande est suivie. Un prospect premium ne doit pas recevoir une suite de réponses automatiques impersonnelles. L’automatisation peut accueillir et orienter ; la relation doit reprendre rapidement.</p>
+
+    <h2>Choisir les canaux avec une matrice simple</h2>
+    <p>Notez chaque plateforme de 1 à 5 sur quatre dimensions : présence de la cible, rôle dans le cycle de décision, capacité de production et capacité de conversion. Gardez deux canaux principaux, puis un canal de soutien. Cette discipline protège la qualité.</p>
     <ul>
-      <li>Contenus en darija authentique</li>
-      <li>Challenges locaux et tendances marocaines</li>
-      <li>Collaborations avec créateurs locaux</li>
-      <li>Behind-the-scenes et contenus "raw"</li>
+      <li><strong>marque retail ou lifestyle</strong> : Instagram et TikTok, avec Facebook ou WhatsApp en soutien ;</li>
+      <li><strong>entreprise B2B</strong> : LinkedIn et contenus SEO, avec YouTube ou WhatsApp selon le cycle ;</li>
+      <li><strong>institution</strong> : LinkedIn et Facebook, complétés selon les publics et les obligations ;</li>
+      <li><strong>hospitality premium</strong> : Instagram et YouTube ou TikTok, avec une production multilingue.</li>
     </ul>
-    
-    <h3>Instagram : le visual commerce</h3>
-    <p>Focus sur Instagram Shopping et Reels. Les stories génèrent 2x plus d'engagement qu'en 2024.</p>
-    
-    <h3>LinkedIn Maroc : l'eldorado B2B</h3>
-    <p>LinkedIn est particulièrement pertinent pour le recrutement, la prise de parole d’expert et le développement de relations B2B.</p>
-    
-    <h2>Budgets publicitaires 2025</h2>
-    <table>
-      <tr><td>Facebook/Instagram Ads</td><td>CPC moyen : 1.20-2.50 MAD</td></tr>
-      <tr><td>TikTok Ads</td><td>CPM moyen : 25-45 MAD</td></tr>
-      <tr><td>LinkedIn Ads</td><td>CPC moyen : 8-15 MAD</td></tr>
-    </table>
-    
-    <h2>Calendrier éditorial marocain</h2>
-    <p>Dates clés à intégrer : Ramadan, Aïd (x2), Fête du Trône, rentrée scolaire, soldes d'hiver/été, Saint-Valentin, Black Friday.</p>
-    
-    <p>Link Agency cadre la présence sociale autour de la marque, des objectifs business et d’un système de production réaliste. Chaque accompagnement commence par une lecture du contexte et des priorités.</p>
+    <p>Ces combinaisons sont des points de départ, pas des règles universelles. Une analyse des clients réels et des ressources disponibles reste nécessaire.</p>
+
+    <h2>Organiser le contenu autour de quatre fonctions</h2>
+    <p>Un calendrier équilibré ne se résume pas à des « piliers » esthétiques. Il doit couvrir quatre fonctions : <strong>faire comprendre</strong> l’offre, <strong>faire préférer</strong> la marque, <strong>faire croire</strong> grâce aux preuves et <strong>faire agir</strong> avec un chemin clair.</p>
+    <p>Chaque thème peut être décliné selon le canal. Une étude de cas devient un carrousel LinkedIn, un Reel de coulisses, une vidéo YouTube et une page détaillée sur le site. Cette logique réduit la dispersion et renforce la répétition utile.</p>
+
+    <h2>Adapter la langue sans fragmenter la marque</h2>
+    <p>Français, arabe, darija et anglais ne servent pas toujours les mêmes publics ni les mêmes situations. La bonne approche part de l’audience et du contexte : darija pour la proximité lorsqu’elle est légitime, français pour certains usages corporate, arabe pour une couverture plus large ou institutionnelle, anglais pour les audiences internationales.</p>
+    <p>Il ne suffit pas de traduire. Les références, le niveau de langage, la longueur et le rythme doivent être adaptés. La plateforme de marque reste commune ; l’expression devient locale.</p>
+
+    <h2>Budget média : pourquoi les « CPC moyens » ne servent pas de prévision</h2>
+    <p>Un coût par clic dépend de l’objectif, de l’audience, de la saison, du placement, de la création, de la concurrence et de la qualité de la page d’arrivée. Publier un tarif moyen universel pour le Maroc donne une fausse impression de précision.</p>
+    <p>Le budget doit partir de l’économie du projet : combien vaut une opportunité qualifiée, quel volume est nécessaire, quel taux de transformation est réaliste et combien de temps faut-il pour apprendre ? Une phase pilote doit tester des hypothèses clairement définies, puis arbitrer entre création, distribution et conversion.</p>
+
+    <h2>Mesurer selon le rôle de chaque plateforme</h2>
+    <ul>
+      <li><strong>notoriété</strong> : portée qualifiée, fréquence, complétion vidéo, recherches de marque ;</li>
+      <li><strong>considération</strong> : visites de profil, sauvegardes, clics, temps passé sur les pages ;</li>
+      <li><strong>conversation</strong> : messages qualifiés, rendez-vous et opportunités ;</li>
+      <li><strong>fidélisation</strong> : réachat, participation, recommandation et qualité des échanges.</li>
+    </ul>
+    <p>Un indicateur n’a de valeur que s’il conduit à une décision : continuer, corriger, arrêter ou réallouer.</p>
+
+    <h2>Source et précautions</h2>
+    <p>Les ordres de grandeur cités proviennent de <a href="https://datareportal.com/reports/digital-2026-morocco" target="_blank" rel="noopener noreferrer">Digital 2026: Morocco</a>, publié fin 2025 à partir de plusieurs sources, dont les outils publicitaires des plateformes. Le rapport précise que les chiffres de portée ne sont pas toujours comparables entre plateformes et peuvent évoluer indépendamment du nombre réel d’utilisateurs.</p>
+
+    <h2>Construire une présence sociale qui travaille pour la marque</h2>
+    <p>Une stratégie social media solide choisit peu de canaux, attribue un rôle à chacun, protège la qualité de la marque et relie les interactions au système commercial. Link Agency peut piloter cette organisation dans le cadre d’un <a href="/direction-marketing-externalisee">pôle marketing externalisé</a>, de la stratégie à la coordination des contenus et de leur distribution.</p>
+    <p><a href="https://wa.me/212699024526?text=Bonjour%20Link%20Agency%2C%20je%20souhaite%20revoir%20notre%20strategie%20social%20media" target="_blank" rel="noopener noreferrer">Revoir votre stratégie social media sur WhatsApp</a>.</p>
     `,
-    author: 'Social Media Team',
+    author: 'Badreddine Harkaoui',
     publishDate: '2025-11-20',
+    modifiedDate: '2026-08-28',
     slug: 'reseaux-sociaux-maroc-tiktok-instagram-2025',
     category: 'digital',
     image: '/assets/blog/reseaux-sociaux-maroc-2025.jpg',
     readTime: 11,
-    tags: ['réseaux sociaux', 'tiktok maroc', 'instagram maroc', 'linkedin', 'social media 2025'],
-    metaDescription: 'Guide réseaux sociaux Maroc 2025 : TikTok, Instagram, LinkedIn. Statistiques, stratégies par plateforme et budgets publicitaires au Maroc.',
+    tags: ['réseaux sociaux', 'tiktok maroc', 'instagram maroc', 'linkedin', 'social media 2026'],
+    metaDescription: 'Réseaux sociaux Maroc 2026 : choisissez entre Facebook, Instagram, TikTok, LinkedIn et YouTube selon votre marque et vos objectifs.',
     metaKeywords: 'tiktok maroc 2025, instagram maroc, réseaux sociaux casablanca, social media marketing maroc, community management'
   },
   {
     id: '14',
-    title: 'E-commerce au Maroc 2025 : Cadre Stratégique pour les Directions Retail & Marketing',
-    excerpt: 'Lecture stratégique du marché e-commerce marocain en 2025 à destination des dirigeants et directions marketing : architecture de plateforme, paiement, logistique, pilotage de la performance et conformité.',
+    title: 'E-commerce au Maroc en 2026 : le cadre de décision pour les marques et le retail',
+    seoTitle: 'E-commerce Maroc 2026 : cadre de décision',
+    excerpt: 'Plateforme, paiement, logistique, acquisition, données et rentabilité : les décisions à prendre avant de lancer ou de refondre un dispositif e-commerce au Maroc.',
     content: `
-    <h2>Un marché e-commerce devenu structurant pour les marques au Maroc</h2>
-    <p>Le commerce en ligne progresse au Maroc. Pour les marques, les enseignes retail et les directions marketing, le canal digital n’est plus seulement complémentaire : il devient une composante du dispositif commercial et de la relation client.</p>
-    
-    <h3>Dynamiques à intégrer</h3>
-    <ul>
-      <li><strong>Marché</strong> : progression des transactions et des catégories achetées en ligne</li>
-      <li><strong>Acheteurs</strong> : élargissement progressif de l’audience</li>
-      <li><strong>Panier</strong> : niveaux très variables selon la catégorie et le modèle de livraison</li>
-      <li><strong>Mobile commerce</strong> : parcours à concevoir d’abord pour les petits écrans</li>
-      <li><strong>Top catégories</strong> : Mode, électronique, beauté, maison</li>
-    </ul>
-    
-    <h2>Architecture de plateforme : un choix de gouvernance</h2>
-    <h3>Options structurantes pour le marché marocain</h3>
-    <ul>
-      <li><strong>Shopify Plus</strong> : déploiement à l'échelle rapide pour les marques retail mono ou multi-pays</li>
-      <li><strong>WooCommerce / Headless</strong> : flexibilité éditoriale et intégration aux SI existants</li>
-      <li><strong>Marketplaces (Jumia, Amazon)</strong> : levier de couverture, à piloter en complément du DTC</li>
-      <li><strong>Plateformes sur-mesure / Composable Commerce</strong> : pour les groupes au catalogue complexe et aux exigences d'intégration ERP/PIM/CRM</li>
-    </ul>
-    
-    <h2>Solutions de paiement : enjeu d'expérience et de conversion</h2>
-    <ul>
-      <li><strong>CMI (Centre Monétique Interbancaire)</strong> : standard de paiement carte local</li>
-      <li><strong>Solutions internationales (PayPal, Stripe via partenaires)</strong> : pour les flux cross-border</li>
-      <li><strong>Cash on Delivery</strong> : un usage encore important à industrialiser sans dégrader la marge</li>
-      <li><strong>M-Wallet et paiement mobile</strong> : courbe d'adoption forte, à intégrer au funnel</li>
-    </ul>
-    
-    <h2>Logistique : levier d'expérience client et de rentabilité</h2>
-    <p>Partenaires logistiques structurants pour un dispositif national :</p>
-    <ul>
-      <li><strong>Amana</strong> : Filiale de Barid Al-Maghrib</li>
-      <li><strong>Colis Express</strong> : Réseau national dense</li>
-      <li><strong>GLS Maroc</strong> : Qualité premium</li>
-      <li><strong>Réseaux de points relais</strong> : un levier d’optimisation du coût et de la disponibilité de livraison</li>
-    </ul>
-    
-    <h2>Pilotage marketing : performance et brand equity</h2>
+    <h2>Un site e-commerce n’est pas un projet web isolé</h2>
+    <p>Au Maroc, lancer ou refondre une boutique en ligne implique simultanément la marque, le catalogue, le paiement, la logistique, le service client, la donnée et l’acquisition. Une belle interface ne compense pas un stock mal synchronisé, un délai de livraison flou ou une politique de retour incompréhensible.</p>
+    <p>Le ministère de l’Industrie et du Commerce place la digitalisation et le commerce électronique parmi les axes de modernisation du secteur. Le forum « Commerce Maroc 2030 » a également souligné l’inclusion financière, la logistique, le Made in Morocco et la structuration des marques. Pour les directions retail, la question n’est donc plus seulement d’ouvrir un canal : il faut définir son rôle économique et son articulation avec les magasins, distributeurs et équipes commerciales.</p>
+
+    <h2>1. Définir le rôle du canal avant de choisir la technologie</h2>
+    <p>Un dispositif e-commerce peut viser la vente directe, la collecte de données clients, l’extension géographique, la présentation du catalogue, la réservation, le réachat ou le soutien au réseau physique. Ces objectifs conduisent à des architectures différentes.</p>
+    <p>Avant l’appel d’offres technique, la direction doit répondre à six questions :</p>
     <ol>
-      <li><strong>SEO produits & catégorie</strong> : architecture de catalogue alignée sur l'intention locale</li>
-      <li><strong>Google Shopping & Performance Max</strong> : déploiement structuré sur le marché marocain</li>
-      <li><strong>Retargeting & CRM</strong> : récupération des paniers abandonnés et activation du parc client</li>
-      <li><strong>Influence sectorielle</strong> : créateurs locaux qualifiés, intégrés à un dispositif média mesurable</li>
+      <li>quelles catégories et quelles zones seront réellement servies ?</li>
+      <li>qui porte le stock, la préparation, la livraison et les retours ?</li>
+      <li>comment le prix en ligne s’articule-t-il avec le réseau de distribution ?</li>
+      <li>quels moyens de paiement sont disponibles et contractuellement validés ?</li>
+      <li>qui répond au client avant et après la commande ?</li>
+      <li>quel niveau de marge reste-t-il après acquisition, paiement, livraison et retours ?</li>
     </ol>
-    
-    <p>Link Agency accompagne les directions marketing, retail et e-commerce des marques au Maroc dans la conception, le déploiement et le pilotage de leurs dispositifs digitaux au Maroc. Intervention sur devis, calibrée sur la maturité et les enjeux du dispositif.</p>
+    <p>Si ces décisions restent ouvertes, la plateforme accumulera des exceptions coûteuses.</p>
+
+    <h2>2. Choisir une plateforme selon le modèle opérationnel</h2>
+    <p>Shopify, WooCommerce, une solution SaaS régionale ou une architecture sur mesure peuvent toutes être pertinentes. Le choix dépend moins de la popularité de l’outil que du catalogue, des intégrations, de la fréquence des évolutions et de l’équipe qui maintiendra le dispositif.</p>
+    <ul>
+      <li><strong>SaaS e-commerce</strong> : intéressant pour accélérer avec un cadre standardisé et un écosystème d’applications ;</li>
+      <li><strong>CMS avec module commerce</strong> : utile lorsque le contenu, la flexibilité et l’autonomie éditoriale sont centraux ;</li>
+      <li><strong>architecture headless ou sur mesure</strong> : à réserver aux besoins d’intégration ou d’expérience qui justifient réellement sa complexité ;</li>
+      <li><strong>marketplace</strong> : canal de distribution complémentaire, avec ses règles, ses données limitées et sa pression sur la marge.</li>
+    </ul>
+    <p>Évaluez le coût total sur plusieurs années : licences, développement, maintenance, applications, sécurité, hébergement, intégrations, dépendance au prestataire et capacité de l’équipe à administrer le catalogue.</p>
+
+    <h2>3. Concevoir d’abord le parcours mobile</h2>
+    <p>Le mobile est souvent le premier point de contact. La conception doit donc partir du petit écran : navigation, recherche, filtres, fiche produit, panier, adresse, paiement et suivi. Chaque étape supplémentaire augmente le risque d’abandon, surtout lorsque la connexion est instable ou que le formulaire demande des informations difficiles à saisir.</p>
+    <h3>Une fiche produit doit répondre sans ambiguïté</h3>
+    <ul>
+      <li>ce qui est vendu, avec des visuels fidèles ;</li>
+      <li>le prix complet et les variantes disponibles ;</li>
+      <li>les zones, délais et conditions de livraison ;</li>
+      <li>la politique d’échange ou de retour ;</li>
+      <li>les éléments de confiance et le moyen de contacter la marque.</li>
+    </ul>
+    <p>La vitesse doit être testée sur de vrais appareils et des connexions mobiles, pas uniquement sur un ordinateur de développement.</p>
+
+    <h2>4. Traiter le paiement comme une décision de confiance</h2>
+    <p>Le mix de paiement varie selon la catégorie, le panier, la clientèle et les partenaires disponibles. Carte bancaire, paiement à la livraison, virement ou portefeuille mobile peuvent coexister, mais chaque option possède un coût opérationnel et un risque.</p>
+    <p>Le paiement à la livraison peut rassurer certains clients, mais il augmente la nécessité de confirmer les commandes, de gérer les refus et de suivre les retours. Le paiement en ligne réduit certaines frictions opérationnelles, à condition que le parcours, la sécurité perçue et le support soient solides. Pour les ventes internationales, les moyens disponibles doivent être vérifiés avec les banques, acquéreurs et prestataires concernés avant d’être promis sur le site.</p>
+    <p>Le taux d’acceptation, les abandons, les remboursements et les échecs par méthode doivent être suivis séparément. Le moyen le plus utilisé n’est pas toujours le plus rentable.</p>
+
+    <h2>5. Industrialiser la logistique avant d’accélérer l’acquisition</h2>
+    <p>Une campagne réussie peut devenir un problème si l’entreprise ne prépare pas le volume. Capacité quotidienne, cut-off de préparation, zones desservies, suivi, preuve de livraison, retours et gestion des incidents doivent être documentés.</p>
+    <p>Comparez les transporteurs sur des données opérationnelles : couverture réelle, délai médian par ville, taux de première présentation réussie, qualité du suivi, gestion du contre-remboursement, retours et résolution des litiges. Un test limité sur plusieurs zones est plus instructif qu’une promesse commerciale générale.</p>
+    <p>Le client doit recevoir des informations cohérentes du site jusqu’au support WhatsApp. Une livraison en retard devient surtout destructrice lorsque personne ne sait expliquer où se trouve la commande.</p>
+
+    <h2>6. Aligner acquisition et économie unitaire</h2>
+    <p>Le chiffre d’affaires ne suffit pas à juger une campagne. La marge après remise, coût produit, paiement, préparation, livraison, retours et acquisition indique si la croissance crée de la valeur. Cette lecture doit être faite par catégorie, ville, canal et type de client lorsque le volume le permet.</p>
+    <p>Les principaux leviers ont des rôles différents :</p>
+    <ul>
+      <li><strong>SEO</strong> : construire des catégories et fiches produits qui répondent à l’intention de recherche ;</li>
+      <li><strong>paid media</strong> : tester une proposition et distribuer les offres avec un contrôle précis de la marge ;</li>
+      <li><strong>social media et influence</strong> : créer la demande, démontrer le produit et fournir de la preuve ;</li>
+      <li><strong>CRM</strong> : favoriser le deuxième achat, qui change souvent l’économie d’acquisition ;</li>
+      <li><strong>WhatsApp</strong> : résoudre les objections, confirmer certaines commandes et assister les cas complexes.</li>
+    </ul>
+    <p>La <a href="/marketing-digital">stratégie d’acquisition</a> doit être décidée avec l’équipe retail et financière, pas ajoutée après le lancement.</p>
+
+    <h2>7. Construire une donnée client conforme à la loi 09-08</h2>
+    <p>Une boutique collecte des identifiants, coordonnées, historiques de commande et parfois des données de comportement. La loi marocaine n° 09-08 impose un cadre de finalité, de proportionnalité, de sécurité et de respect des droits des personnes.</p>
+    <p>La conformité ne se limite pas à une bannière cookies. Il faut cartographier les données, les outils et les sous-traitants ; définir les durées de conservation ; sécuriser les accès ; encadrer la prospection ; et vérifier les formalités applicables avec la CNDP. La personnalisation ne doit pas reposer sur une collecte invisible ou illimitée.</p>
+
+    <h2>8. Organiser le pilotage entre marketing, opérations et technologie</h2>
+    <p>Le e-commerce traverse plusieurs fonctions. Sans gouvernance, chaque équipe optimise son périmètre : le marketing pousse le volume, les opérations limitent les exceptions, la technique protège le planning et la finance réduit les coûts. Un rituel commun doit arbitrer l’ensemble.</p>
+    <p>Le tableau de bord de direction peut suivre :</p>
+    <ul>
+      <li>conversion par appareil, canal et catégorie ;</li>
+      <li>marge contributive après coûts variables ;</li>
+      <li>taux d’acceptation du paiement et motifs d’échec ;</li>
+      <li>taux de livraison, délai et retours ;</li>
+      <li>premier achat, réachat et valeur client ;</li>
+      <li>volume et motifs des contacts au service client.</li>
+    </ul>
+
+    <h2>9. Préparer l’internationalisation sans dénaturer la marque</h2>
+    <p>Une marque étrangère entrant au Maroc doit adapter les langues, les prix, le paiement, la logistique, les preuves et certains codes de communication. Une marque marocaine qui exporte doit, elle aussi, construire un récit compréhensible hors de son contexte d’origine.</p>
+    <p>Dans les deux cas, l’enjeu n’est pas de traduire mécaniquement. Il faut préserver le cœur de marque tout en adaptant l’expérience. Cette articulation relève d’une <a href="/branding">stratégie de marque</a> et d’une connaissance opérationnelle du marché.</p>
+
+    <h2>Sources et limites</h2>
+    <ul>
+      <li><a href="https://www.mcinet.gov.ma/fr/actualites/forum-national-du-commerce-commerce-maroc-2030-un-secteur-moderne-inclusif-et-competitif" target="_blank" rel="noopener noreferrer">Ministère de l’Industrie et du Commerce, Forum Commerce Maroc 2030</a> ;</li>
+      <li><a href="https://www.mcinet.gov.ma/fr/actualites/signature-dune-convention-pour-lacceleration-de-la-digitalisation-du-commerce-au-maroc" target="_blank" rel="noopener noreferrer">Convention pour la digitalisation du commerce au Maroc</a> ;</li>
+      <li><a href="https://www.cndp.ma/images/lois/Loi-09-08-Fr.pdf" target="_blank" rel="noopener noreferrer">CNDP, loi n° 09-08</a>.</li>
+    </ul>
+    <p>Les taux de conversion, coûts logistiques et parts de moyens de paiement varient fortement selon la catégorie et l’organisation. Ils doivent être mesurés sur les données réelles de l’entreprise plutôt qu’empruntés à une moyenne générique.</p>
+
+    <h2>Cadrer le dispositif avant d’engager la refonte</h2>
+    <p>Link Agency peut organiser le cadrage de marque, l’expérience, l’acquisition et la gouvernance du projet, puis coordonner les expertises techniques et créatives adaptées. Cette intervention peut s’inscrire dans un <a href="/direction-marketing-externalisee">pôle marketing externalisé</a> lorsque l’entreprise a besoin d’un pilotage transversal.</p>
+    <p><a href="https://wa.me/212699024526?text=Bonjour%20Link%20Agency%2C%20je%20souhaite%20cadrer%20notre%20projet%20e-commerce" target="_blank" rel="noopener noreferrer">Cadrer votre projet e-commerce sur WhatsApp</a>.</p>
     `,
-    author: 'E-commerce Team',
+    author: 'Badreddine Harkaoui',
     publishDate: '2025-10-15',
+    modifiedDate: '2026-08-28',
     slug: 'ecommerce-maroc-boutique-en-ligne-2025',
     category: 'digital',
     image: '/assets/blog/ecommerce-maroc-2025.jpg',
     readTime: 12,
     tags: ['e-commerce', 'retail digital', 'paiement maroc', 'logistique', 'shopify plus maroc'],
-    metaDescription: 'E-commerce Maroc 2025 : cadre stratégique pour directions retail & marketing. Plateformes, paiement CMI, logistique et pilotage de la performance digitale.',
-    metaKeywords: 'ecommerce maroc 2025, retail digital maroc, paiement en ligne maroc, shopify plus maroc, direction marketing ecommerce casablanca'
+    metaDescription: 'E-commerce Maroc 2026 : cadre de décision pour choisir plateforme, paiement, logistique, acquisition, données et gouvernance.',
+    metaKeywords: 'ecommerce maroc 2026, retail digital maroc, paiement en ligne maroc, logistique ecommerce, stratégie ecommerce casablanca'
   },
   {
     id: '15',
@@ -1124,7 +1277,7 @@ export const blogPosts: BlogPost[] = [
     
     <p>Link Agency intègre l'IA dans ses prestations : chatbots, contenu augmenté, analyse prédictive. Découvrez comment l'IA peut transformer votre business.</p>
     `,
-    author: 'Innovation Team',
+    author: 'Badreddine Harkaoui',
     publishDate: '2025-12-10',
     slug: 'intelligence-artificielle-entreprises-maroc-2025',
     category: 'tendances',
@@ -1213,8 +1366,9 @@ export const blogPosts: BlogPost[] = [
 
     <p>L'activation de marque par l'événementiel constitue un investissement stratégique à part entière. Au Maroc, où la dimension relationnelle et expérientielle reste fondamentale dans les décisions d'achat et de prescription, les marques qui maîtrisent cet outil disposent d'un avantage concurrentiel significatif. La clé réside dans la rigueur méthodologique : chaque activation doit être conçue, exécutée et évaluée avec le même niveau d'exigence qu'une campagne média ou une refonte de marque.</p>
     `,
-    author: 'Link Agency',
+    author: 'Badreddine Harkaoui',
     publishDate: '2026-03-15',
+    modifiedDate: '2026-08-28',
     slug: 'activation-marque-evenementiel-maroc',
     category: 'evenementiel',
     image: '/assets/blog/activation-marque-evenementiel-maroc.jpg',
@@ -1265,15 +1419,16 @@ export const blogPosts: BlogPost[] = [
     <p>✅ <strong>ما هو معدّل بقاء عملائكم بعد 24 شهراً؟</strong></p>
     <p>✅ <strong>من هو الفريق الذي سيشتغل فعلياً على ملفّنا (سينيور أم جونيور)؟</strong></p>
 
-    <h2>لماذا اختار رؤساء البنوك والتأمين Link Agency</h2>
+    <h2>ما الذي يميّز نموذج التدبير لدى Link Agency</h2>
     <p>Link Agency تجمع بين التوجيه الاستراتيجي والتنسيق التنفيذي. يقود المؤسس الملفات الرئيسية مباشرة، ويستعين بشبكة من المتخصصين حسب احتياجات كل مشروع، من دون الادعاء بوجود فريق داخلي دائم.</p>
-    <p>نعمل بنموذج هجين فريد: وكالة تنفيذ + كابينه تدبير الأداء. كل درهم يُستثمر يُربط بعميل محتمل مؤهَّل، وكل حملة تندرج ضمن P&L رقمي قابل للقياس. هذا ما يميّزنا عن الوكالات التقليدية التي تقدّم خدمات منعزلة بدون رؤية شاملة للأداء التجاري.</p>
+    <p>يبدأ القياس بتحديد الأهداف، ومسؤولية كل طرف، ومصادر البيانات، وحدود الإسناد. لا يمكن دائماً ربط كل درهم بنتيجة تجارية واحدة بدقّة، لكن يمكن بناء مستوى كافٍ من التتبّع لاتخاذ قرارات أفضل وتوجيه الاستثمار نحو القنوات الأكثر فائدة.</p>
 
     <h2>خلاصة: استثمر في الاستراتيجية قبل التنفيذ</h2>
-    <p>اختيار وكالة تسويق رقمي بالمغرب في 2026 ليس قراراً تكتيكياً بل استراتيجياً. الوكالة المناسبة ستضاعف عائدك على الاستثمار، الوكالة الخاطئة ستحرق ميزانيتك. خذ الوقت الكافي للتقييم، اطرح الأسئلة الصحيحة، وافضّل الشفافية على الوعود البرّاقة.</p>
+    <p>اختيار وكالة تسويق رقمي بالمغرب في 2026 ليس قراراً تكتيكياً فقط. الشريك المناسب لا يضمن نتيجة سحرية، لكنه يحدّ من التشتّت، يوضّح المسؤوليات ويحسّن جودة القرارات. خذ الوقت الكافي للتقييم، اطرح الأسئلة الصحيحة، وافضّل الشفافية على الوعود البرّاقة.</p>
     `,
-    author: 'Link Agency',
+    author: 'Badreddine Harkaoui',
     publishDate: '2026-04-10',
+    modifiedDate: '2026-08-28',
     slug: 'choisir-agence-marketing-digital-maroc-ar',
     category: 'conseils',
     image: '/assets/blog/choisir-agence-marketing-digital-maroc.jpg',
@@ -1319,25 +1474,24 @@ export const blogPosts: BlogPost[] = [
     <p>✅ <strong>CPL مؤهَّل :</strong> كلفة العميل المحتمل بعد التأهيل من طرف مركز الاتصال البنكي (وليس قبله).</p>
     <p>✅ <strong>معدّل التحويل إلى ملفّ :</strong> نسبة العملاء المحتملين الذين يفتحون فعلاً ملفّاً بنكياً.</p>
     <p>✅ <strong>كلفة الاكتساب الحقيقية (CAC) :</strong> الميزانية الإعلانية ÷ عدد العملاء النهائيين.</p>
-    <p>✅ <strong>LTV/CAC ratio :</strong> القيمة المتوقّعة للعميل خلال حياته ÷ كلفة اكتسابه. الهدف: > 3.</p>
+    <p>✅ <strong>LTV/CAC ratio :</strong> القيمة المتوقّعة للعميل خلال حياته ÷ كلفة اكتسابه. تتم قراءة النسبة حسب نوع المنتج، دورة البيع وجودة البيانات المتاحة.</p>
 
-    <h2>حالة دراسية : كيف ضاعفت Link Agency أداء بنك مغربي رائد</h2>
-    <p>اشتغلنا مع مؤسسة بنكية مغربية رائدة على إعادة هيكلة منظومتها الإعلانية على Meta. النتائج بعد 9 أشهر:</p>
-    <p>✅ <strong>خفض كلفة العميل المحتمل المؤهّل</strong> عبر تحسين الاستهداف والنماذج.</p>
-    <p>✅ <strong>رفع معدّل التحويل</strong> بربط Lead Forms بنظام CRM وعملية متابعة واضحة.</p>
-    <p>✅ <strong>زيادة الملفات القابلة للمعالجة</strong> عبر تحسين جودة البيانات والتأهيل.</p>
+    <h2>سيناريو تطبيقي لإعادة هيكلة حملة بنكية</h2>
+    <p>في حالة افتراضية لبنك يريد تحسين جودة العملاء المحتملين، يبدأ العمل بتدقيق الموافقات ومصادر البيانات، ثم ربط نماذج Meta بعملية تأهيل واضحة داخل مركز الاتصال أو نظام CRM. بعد ذلك تتم مقارنة القنوات على أساس الملفات القابلة للمعالجة، لا على أساس عدد الاستمارات فقط.</p>
+    <p>هذا السيناريو يشرح منهجية العمل ولا يمثّل حالة عميل منشورة أو نتيجة مضمونة.</p>
 
-    <h2>خلاصة : Meta Ads ليست خياراً، بل ضرورة للبنوك المغربية</h2>
-    <p>البنوك التي ترفض الاستثمار المنهجي في Meta Ads ستفقد حصتها السوقية لصالح المنافسين الأكثر جرأة. لكنّ النجاح يتطلّب منهجية متخصّصة، احترام صارم للإطار التنظيمي، وفهم عميق للسلوك الرقمي للمغاربة. هذه هي الخبرات التي تقدّمها Link Agency للبنوك الرائدة بالمغرب.</p>
+    <h2>خلاصة : Meta Ads قناة محتملة وليست حلاً منفرداً</h2>
+    <p>يمكن لإعلانات Meta أن تدعم التوعية أو توليد العملاء المحتملين عندما يكون المنتج والجمهور والإطار التنظيمي واضحاً. نجاحها يتطلّب احترام القانون 09-08، حوكمة البيانات، إبداعات مناسبة وعملية متابعة قابلة للقياس. تُقيَّم القناة داخل منظومة التسويق كاملة، لا بمعزل عنها.</p>
     `,
-    author: 'Link Agency',
+    author: 'Badreddine Harkaoui',
     publishDate: '2026-04-15',
+    modifiedDate: '2026-08-28',
     slug: 'meta-ads-banques-maroc-ar',
     category: 'digital',
     image: '/assets/blog/meta-ads-banques-maroc.jpg',
     readTime: 10,
     tags: ['Meta Ads', 'بنوك المغرب', 'فيسبوك', 'انستغرام', 'إعلانات بنكية', 'تسويق رقمي'],
-    metaDescription: 'دليل شامل لإطلاق حملات Meta Ads (فيسبوك، انستغرام) للبنوك بالمغرب: الإطار التنظيمي، الاستهداف، الإبداعات، قياس الأداء وحالة دراسية.',
+    metaDescription: 'دليل لإطلاق حملات Meta Ads للبنوك بالمغرب: الإطار التنظيمي، حوكمة البيانات، الاستهداف، الإبداعات وقياس جودة العملاء المحتملين.',
     metaKeywords: 'إعلانات فيسبوك بنوك المغرب, Meta Ads بنوك, تسويق رقمي بنكي, حملات إعلانية بنوك, التسويق البنكي المغرب'
   },
   {
@@ -1393,8 +1547,9 @@ export const blogPosts: BlogPost[] = [
     <h2>كيف تساعد Link Agency الشركات المغربية في السيو</h2>
     <p>تتعامل Link Agency مع السيو كنظام يجمع التقنية، البنية التحريرية واللغات المستخدمة في المغرب. تُحدَّد أهداف النمو بعد تدقيق الوضع الحالي والمنافسة، لا عبر وعد موحّد مسبق.</p>
     `,
-    author: 'Link Agency',
+    author: 'Badreddine Harkaoui',
     publishDate: '2026-04-22',
+    modifiedDate: '2026-08-28',
     slug: 'seo-entreprises-maroc-guide-ar',
     category: 'digital',
     image: '/assets/blog/seo-maroc-guide.jpg',
@@ -1448,11 +1603,12 @@ export const blogPosts: BlogPost[] = [
     <p>✅ <strong>CAC vs LTV :</strong> كلفة الاكتساب مقارنة بالقيمة المتوقّعة للعميل (الهدف : LTV/CAC > 3).</p>
     <p>✅ <strong>Net Revenue Retention :</strong> نسبة احتفاظ الإيرادات من العملاء الحاليين.</p>
 
-    <h2>لماذا تختار شركات التأمين والقروض المغربية Link Agency</h2>
-    <p>منذ تأسيس Link Agency سنة 2015، تجمع الوكالة بين الاستراتيجية والتنسيق التنفيذي. في القطاعات المنظّمة، يبدأ العمل بتحديد المسؤوليات، القياس ومتطلبات الامتثال قبل إطلاق الحملات.</p>
+    <h2>متى تحتاج شركة التأمين أو القروض إلى تدبير خارجي منسّق</h2>
+    <p>يصبح التدبير الخارجي مفيداً عندما تتوزّع المسؤوليات بين فرق داخلية ووكالات متعددة، أو عندما لا ترتبط الحملات بعملية التأهيل والمبيعات. تجمع Link Agency بين التوجيه الاستراتيجي والتنسيق التنفيذي؛ وفي القطاعات المنظّمة يبدأ العمل بتحديد المسؤوليات، القياس ومتطلبات الامتثال قبل إطلاق الحملات.</p>
     `,
-    author: 'Link Agency',
+    author: 'Badreddine Harkaoui',
     publishDate: '2026-04-29',
+    modifiedDate: '2026-08-28',
     slug: 'marketing-digital-assurance-credit-maroc-ar',
     category: 'digital',
     image: '/assets/blog/marketing-digital-assurance-maroc.jpg',
@@ -1524,16 +1680,17 @@ export const blogPosts: BlogPost[] = [
     <p>✅ <strong>CAC، LTV، LTV/CAC Ratio.</strong></p>
     <p>✅ <strong>Payback Period :</strong> الوقت اللازم لاسترداد كلفة اكتساب عميل.</p>
 
-    <h2>كيف تساعد Link Agency في بناء منظومة قياس ROI</h2>
-    <p>Link Agency متخصّصة في "P&L Digital" : ربط كل دريم منفق في التسويق الرقمي بإيراد مولَّد بدقّة محاسبية. منهجيتنا "Link Performance System" تدمج:</p>
+    <h2>كيف تساعد Link Agency في تنظيم قياس المساهمة التسويقية</h2>
+    <p>لا يمكن دائماً ربط كل درهم تسويقي بإيراد واحد بدقّة محاسبية، خصوصاً مع دورات البيع الطويلة وتعدّد نقاط الاتصال. تساعد Link Agency على بناء منظومة قياس أكثر وضوحاً حسب جودة البيانات والأدوات المتاحة، وتشمل:</p>
     <p>✅ <strong>تدقيق منظومة القياس الحالية</strong> وتحديد الفجوات.</p>
-    <p>✅ <strong>تطبيق Multi-Touch Attribution</strong> مع GA4 وأدوات متقدّمة.</p>
-    <p>✅ <strong>تكامل CRM</strong> (Salesforce, HubSpot, أنظمة بنكية مخصّصة).</p>
-    <p>✅ <strong>لوحات قيادة مالية شهرية</strong> مصمّمة للمديرين الماليين والتنفيذيين.</p>
-    <p>هذا النهج المالي للتسويق الرقمي هو ما يميّز Link Agency عن الوكالات التقليدية بالمغرب.</p>
+    <p>✅ <strong>اختيار نموذج إسناد مناسب</strong> مع توثيق حدوده بدل تقديمه كحقيقة مطلقة.</p>
+    <p>✅ <strong>ربط CRM والتحليلات</strong> عندما تسمح البنية التقنية وجودة البيانات بذلك.</p>
+    <p>✅ <strong>لوحات قيادة شهرية</strong> تفصل بين المؤشرات المؤكدة، التقديرات والمساهمة المحتملة.</p>
+    <p>الهدف هو تحسين القرارات وتوضيح ما يمكن قياسه فعلاً، لا خلق دقّة وهمية.</p>
     `,
-    author: 'Link Agency',
+    author: 'Badreddine Harkaoui',
     publishDate: '2026-05-06',
+    modifiedDate: '2026-08-28',
     slug: 'mesurer-roi-marketing-digital-maroc-ar',
     category: 'conseils',
     image: '/assets/blog/roi-marketing-digital-maroc.jpg',
@@ -1543,19 +1700,852 @@ export const blogPosts: BlogPost[] = [
     metaKeywords: 'ROI تسويق رقمي المغرب, قياس عائد الاستثمار, CAC, LTV, إسناد متعدد النقاط, لوحة قيادة تسويقية'
   },
   {
+    id: 'externaliser-direction-marketing-signaux',
+    title: 'Quand faut-il externaliser sa direction marketing ? 7 signaux à reconnaître',
+    seoTitle: 'Externaliser sa direction marketing : 7 signaux',
+    excerpt: 'Sept situations dans lesquelles une entreprise a davantage besoin d’une direction et d’une coordination marketing que d’un prestataire supplémentaire.',
+    content: `
+    <h2>La réponse courte</h2>
+    <p>Il devient pertinent d’externaliser sa direction marketing lorsque l’entreprise possède des ambitions, des prestataires ou des actions en cours, mais qu’aucune personne suffisamment senior ne tient l’ensemble : priorités, marque, budget, calendrier, qualité et mesure.</p>
+    <p>Ce modèle ne consiste pas à déléguer la responsabilité de la marque. La direction générale garde les décisions structurantes. Le partenaire externalisé transforme ces décisions en feuille de route, coordonne les expertises et rend compte des résultats. Voici les sept signaux qui indiquent que ce besoin est devenu concret.</p>
+
+    <h2>Signal 1 : beaucoup d’actions, mais personne ne porte la direction</h2>
+    <p>Le site est géré par un prestataire, les réseaux sociaux par un autre, les campagnes par un freelance et les supports commerciaux en interne. Chacun exécute son périmètre, mais personne ne tranche les priorités ni ne vérifie la cohérence d’ensemble.</p>
+    <p>Le symptôme le plus visible est un calendrier rempli avec peu de décisions. Les réunions servent à suivre des tâches, pas à arbitrer. La direction générale finit par reprendre elle-même les briefs, les validations et les urgences. À ce stade, ajouter une agence augmente souvent le besoin de coordination au lieu de le résoudre.</p>
+
+    <h2>Signal 2 : la marque change de visage selon le canal</h2>
+    <p>Le site promet une chose, les réseaux sociaux en montrent une autre et l’équipe commerciale présente encore une troisième version. Les codes visuels varient, le ton n’est pas stable et les offres ne sont pas hiérarchisées de la même façon.</p>
+    <p>Ce problème n’est pas seulement esthétique. Il affaiblit la mémorisation, ralentit les validations et oblige chaque nouveau prestataire à réinterpréter la marque. Une direction marketing externalisée doit partir de la <a href="/branding">stratégie de marque</a>, puis construire les règles de gouvernance qui permettent à tous les canaux de servir le même positionnement.</p>
+
+    <h2>Signal 3 : le dirigeant est devenu le chef de projet marketing</h2>
+    <p>Dans une entreprise en croissance, le fondateur ou le directeur général garde souvent la vision de la marque. C’est légitime. Le problème apparaît lorsqu’il doit aussi relancer le graphiste, vérifier les formats, corriger les textes, arbitrer les campagnes et reconstruire le reporting.</p>
+    <p>Le temps de direction est alors consommé par une coordination de production. Externaliser le pilotage permet de conserver les arbitrages importants tout en confiant la préparation des décisions, la cadence et le contrôle qualité à un interlocuteur responsable.</p>
+
+    <h2>Signal 4 : une étape de croissance exige plusieurs expertises en même temps</h2>
+    <p>Lancement de marque, nouvelle gamme, ouverture de points de vente, expansion géographique, appel d’offres important ou refonte du canal digital : ces moments demandent rarement une seule compétence. Il faut relier positionnement, contenus, design, média, influence, SEO, événementiel et mesure.</p>
+    <p>Recruter chaque fonction avant d’avoir stabilisé le besoin peut créer une structure trop lourde. Une direction externalisée permet de définir le système, de mobiliser les spécialistes nécessaires au bon moment et d’observer le volume réel avant de décider quels rôles doivent devenir internes.</p>
+
+    <h2>Signal 5 : une marque internationale doit entrer ou se renforcer au Maroc</h2>
+    <p>Une filiale ou une marque étrangère possède souvent une plateforme globale, des standards et des assets existants. Son enjeu n’est pas de repartir de zéro, mais de traduire la stratégie dans le contexte marocain : langues, canaux, partenaires, usages commerciaux, calendrier, influence et sensibilité culturelle.</p>
+    <p>Le siège a besoin d’un interlocuteur capable de protéger la marque tout en expliquant les réalités locales. L’équipe marocaine a besoin de vitesse et d’autonomie. Une direction marketing externalisée peut servir d’interface, à condition que les droits de décision et les validations soient définis dès le départ.</p>
+
+    <h2>Signal 6 : les prestataires sont actifs, mais la satisfaction baisse</h2>
+    <p>Les livrables arrivent, les publications sortent et les campagnes tournent, mais l’entreprise a le sentiment de ne plus progresser. Les mêmes idées reviennent, la qualité varie et les reportings décrivent l’activité sans éclairer les décisions.</p>
+    <p>Le problème peut venir du brief, de la gouvernance, du niveau de séniorité ou d’un décalage entre le prestataire et le besoin réel. Avant de tout remplacer, il faut auditer les objectifs, les responsabilités, les actifs et la performance. Notre guide sur la <a href="/blog/reprendre-marketing-externalise-insatisfaisant">reprise d’un marketing externalisé insatisfaisant</a> détaille cette transition.</p>
+
+    <h2>Signal 7 : l’entreprise collecte des données mais ne sait pas quoi décider</h2>
+    <p>GA4, Meta, Search Console, CRM et tableaux internes produisent de nombreux chiffres. Pourtant, le comité de direction ne sait pas clairement ce qui crée des opportunités, ce qu’il faut arrêter ou quel chantier doit être financé ensuite.</p>
+    <p>Une direction marketing ne se contente pas de réunir les données. Elle définit les questions, sépare les signaux des métriques de vanité, documente les limites d’attribution et traduit les résultats en arbitrages de budget, de contenu ou de canal.</p>
+
+    <h2>Ce que la direction marketing externalisée doit réellement prendre en charge</h2>
+    <ul>
+      <li>le diagnostic de la marque, des canaux, des ressources et de la mesure ;</li>
+      <li>la feuille de route trimestrielle et l’ordre des priorités ;</li>
+      <li>la coordination des prestataires et spécialistes mobilisés ;</li>
+      <li>les briefs, validations et standards de qualité ;</li>
+      <li>le suivi budgétaire et les indicateurs de direction ;</li>
+      <li>la préparation des arbitrages avec la direction générale.</li>
+    </ul>
+    <p>Elle ne doit pas promettre de remplacer toute compétence interne, ni présenter une « équipe » fictive. Le modèle doit dire clairement qui pilote, qui produit, qui valide et quelles expertises sont mobilisées selon les missions.</p>
+
+    <h2>Les situations dans lesquelles ce modèle n’est pas adapté</h2>
+    <p>L’externalisation est moins pertinente lorsqu’une entreprise cherche uniquement un livrable ponctuel bien défini, lorsqu’aucun décideur interne n’est disponible pour arbitrer ou lorsque le besoin exige déjà plusieurs fonctions à temps plein avec un volume stable. Dans ce dernier cas, construire une équipe interne peut être plus cohérent.</p>
+    <p>Elle ne convient pas non plus à une organisation qui souhaite déléguer les décisions sensibles sans partager ses données, son contexte ou ses contraintes. Un partenaire externe ne peut piloter correctement dans le brouillard.</p>
+
+    <h2>Comment se déroule un démarrage sérieux</h2>
+    <h3>Les 30 premiers jours : comprendre et sécuriser</h3>
+    <p>Audit des actifs, des accès, des prestataires, des contrats, des performances et des attentes. Les urgences réelles sont séparées des habitudes. Une première carte des responsabilités est posée.</p>
+    <h3>De 30 à 60 jours : choisir et organiser</h3>
+    <p>La direction valide les objectifs, la feuille de route, les indicateurs et les règles de décision. Les chantiers non prioritaires sont mis en attente. Les briefs et rituels de pilotage sont standardisés.</p>
+    <h3>De 60 à 90 jours : produire et mesurer</h3>
+    <p>Les premiers chantiers structurants sont livrés, les canaux sont alignés et le reporting commence à relier activité, qualité et contribution commerciale. Les besoins de ressources deviennent plus lisibles.</p>
+
+    <h2>Une grille de décision en cinq questions</h2>
+    <ol>
+      <li>avons-nous un responsable senior qui tient réellement toute la chaîne marketing ?</li>
+      <li>la direction passe-t-elle trop de temps à coordonner l’exécution ?</li>
+      <li>notre marque et nos offres sont-elles cohérentes sur tous les canaux ?</li>
+      <li>les prestataires actuels reçoivent-ils des priorités et des briefs suffisamment clairs ?</li>
+      <li>nos données conduisent-elles à des décisions de budget et de croissance ?</li>
+    </ol>
+    <p>Trois réponses négatives ou plus justifient au minimum un audit de gouvernance marketing.</p>
+
+    <h2>Pourquoi le sujet prend de l’importance au Maroc</h2>
+    <p>L’OMPIC a enregistré 56 572 créations d’entreprises au premier semestre 2025, soit une hausse de 17,7 % sur un an. L’Office des Changes indique par ailleurs 56,1 milliards de dirhams de recettes d’investissements directs étrangers en 2025, en hausse de 28 %. Ces données ne prouvent pas un besoin uniforme, mais elles décrivent un marché où de nouvelles marques se créent, où des acteurs étrangers s’implantent et où la coordination marketing devient plus complexe.</p>
+    <p><strong>Sources :</strong> <a href="https://www.ompic.ma/fr/actualites/office-marocain-de-la-propriete-industrielle-et-commerciale-les-creations-dentreprises" target="_blank" rel="noopener noreferrer">OMPIC</a> et <a href="https://www.oc.gov.ma/sites/default/files/2026-01/IMEE%20D%C3%A9c%202025.pdf" target="_blank" rel="noopener noreferrer">Office des Changes</a>.</p>
+
+    <h2>La bonne question n’est pas « faut-il une agence de plus ? »</h2>
+    <p>La question est de savoir qui donnera une direction commune à la marque, aux contenus, à l’acquisition et aux partenaires. Link Agency intervient comme <a href="/direction-marketing-externalisee">direction de marque et pôle marketing externalisé</a>, avec un pilotage senior direct et des expertises mobilisées selon le besoin.</p>
+    <p><a href="https://wa.me/212699024526?text=Bonjour%20Badre%2C%20je%20souhaite%20evaluer%20si%20une%20direction%20marketing%20externalisee%20est%20adaptee" target="_blank" rel="noopener noreferrer">Évaluer votre situation directement sur WhatsApp</a>.</p>
+    `,
+    author: 'Badreddine Harkaoui',
+    publishDate: '2026-08-28',
+    slug: 'quand-externaliser-direction-marketing',
+    category: 'conseils',
+    image: '/assets/blog/guide-branding-maroc.jpg',
+    readTime: 10,
+    tags: ['direction marketing externalisée', 'organisation marketing', 'pilotage marketing', 'maroc', 'dirigeants'],
+    metaDescription: 'Quand externaliser sa direction marketing ? Sept signaux, les missions à confier et une grille de décision adaptée aux entreprises au Maroc.',
+    metaKeywords: 'quand externaliser direction marketing, direction marketing externalisée maroc, pôle marketing externalisé, organisation marketing'
+  },
+  {
+    id: 'direction-externalisee-vs-agence-recrutement',
+    title: 'Direction marketing externalisée, agence ou recrutement : comment décider ?',
+    seoTitle: 'Direction externalisée, agence ou recrutement ?',
+    excerpt: 'Une comparaison claire des trois modèles pour choisir selon la maturité, le volume de travail, le besoin de séniorité et la capacité interne.',
+    content: `
+    <h2>Trois modèles répondent à trois problèmes différents</h2>
+    <p>Une agence exécute généralement un périmètre défini. Un recrutement installe une capacité durable dans l’entreprise. Une direction marketing externalisée apporte temporairement ou durablement le pilotage senior, organise les priorités et coordonne les expertises nécessaires.</p>
+    <p>Le mauvais choix apparaît lorsqu’on demande à un modèle de résoudre un problème qui n’est pas le sien : recruter un community manager pour définir le positionnement, attendre d’une agence média qu’elle arbitre toute la marque ou externaliser alors que le volume justifie déjà une équipe complète.</p>
+
+    <h2>Choisir une agence lorsque le besoin est clairement délimité</h2>
+    <p>Une agence spécialisée est pertinente si l’entreprise possède déjà une direction marketing capable de produire le brief, d’arbitrer les priorités, de coordonner les parties prenantes et d’évaluer le travail. Elle apporte alors une expertise et une capacité d’exécution précises.</p>
+    <h3>Exemples de besoins adaptés</h3>
+    <ul>
+      <li>refonte d’une identité de marque déjà cadrée ;</li>
+      <li>production d’une campagne ou d’un dispositif éditorial ;</li>
+      <li>pilotage SEO, média, influence ou événementiel avec un responsable interne ;</li>
+      <li>renfort temporaire sur une charge de production identifiée.</li>
+    </ul>
+    <p>Le risque apparaît lorsque plusieurs agences travaillent sans cadre commun. L’entreprise conserve alors toute la charge de coordination, parfois sans disposer du niveau senior nécessaire.</p>
+
+    <h2>Recruter lorsque le besoin est continu et que l’entreprise sait manager le rôle</h2>
+    <p>Le recrutement est cohérent lorsqu’un volume stable exige une présence quotidienne, que les responsabilités sont claires et qu’un manager peut intégrer la personne. L’interne possède un avantage décisif : proximité avec les équipes, connaissance fine de l’organisation et continuité.</p>
+    <p>Un seul recrutement ne couvre toutefois pas toute la chaîne. Un directeur marketing ne remplace pas un designer, un media buyer, un rédacteur, un expert SEO et un analyste. Une entreprise doit donc distinguer le rôle qui doit devenir interne des compétences qui resteront spécialisées ou ponctuelles.</p>
+    <h3>Questions avant d’ouvrir le poste</h3>
+    <ol>
+      <li>le besoin est-il suffisamment stable sur les douze prochains mois ?</li>
+      <li>le poste possède-t-il un mandat, un budget et un décideur clairement identifiés ?</li>
+      <li>cherchons-nous un pilote senior ou une personne d’exécution ?</li>
+      <li>quelles expertises complémentaires resteront à acheter ?</li>
+    </ol>
+
+    <h2>Externaliser la direction lorsque le principal manque est le pilotage</h2>
+    <p>La direction marketing externalisée est adaptée lorsque l’entreprise a besoin d’un niveau senior, mais pas nécessairement à temps plein ; lorsqu’elle traverse une phase de lancement ou de transformation ; ou lorsqu’elle doit remettre de l’ordre entre plusieurs prestataires.</p>
+    <p>Son premier livrable n’est pas une campagne. C’est un système de décision : diagnostic, objectifs, feuille de route, gouvernance, briefs, budget, indicateurs et cadence. L’exécution est ensuite assurée directement ou confiée aux spécialistes les plus adaptés, sous une responsabilité de pilotage unique.</p>
+
+    <h2>Comparer les modèles sur cinq dimensions</h2>
+    <h3>1. Niveau de direction</h3>
+    <p>Une agence apporte une direction sur son périmètre. Un recrutement senior porte la direction au quotidien. Un directeur externalisé apporte cette séniorité sur un temps défini et doit rester accessible aux moments d’arbitrage.</p>
+    <h3>2. Vitesse de mise en place</h3>
+    <p>Une mission externe peut démarrer après cadrage et sécurisation des accès. Un recrutement exige sourcing, entretiens, préavis et intégration. L’urgence ne doit toutefois pas justifier un mandat flou.</p>
+    <h3>3. Profondeur de contexte</h3>
+    <p>L’interne apprend naturellement l’organisation. L’externe doit organiser son immersion : direction, commerce, opérations, finance, clients et prestataires. Sans accès au contexte, son pilotage restera superficiel.</p>
+    <h3>4. Flexibilité des expertises</h3>
+    <p>Le modèle externalisé permet de faire varier les spécialistes selon la feuille de route. Le recrutement construit une capacité fixe. L’agence concentre une expertise correspondant à son offre. Aucun modèle n’est supérieur en toute situation.</p>
+    <h3>5. Gouvernance et responsabilité</h3>
+    <p>Quel que soit le choix, une personne doit être responsable du résultat et une autre doit pouvoir arbitrer côté entreprise. Si tout le monde « contribue » mais que personne ne décide, le modèle échoue.</p>
+
+    <h2>La solution hybride est souvent la plus solide</h2>
+    <p>Une entreprise peut garder en interne la connaissance métier, le responsable de marque ou le commercial, confier la direction temporaire à un senior externe et mobiliser des agences spécialisées pour produire. Le but n’est pas d’externaliser le maximum, mais de placer chaque responsabilité au bon endroit.</p>
+    <p>Ce modèle peut aussi préparer un recrutement. Pendant quelques mois, la direction externalisée clarifie le poste, documente les processus, construit les outils et aide à identifier le profil réellement nécessaire. Le futur responsable interne hérite alors d’un système exploitable.</p>
+
+    <h2>Scénarios de décision</h2>
+    <h3>Vous avez un directeur marketing solide mais manquez de capacité</h3>
+    <p>Choisissez une agence ou des spécialistes sur un périmètre cadré. L’enjeu est l’exécution, pas la direction.</p>
+    <h3>Vous avez plusieurs prestataires mais aucun responsable senior</h3>
+    <p>Commencez par une direction externalisée. Elle peut conserver les bons partenaires et remplacer seulement ce qui ne correspond plus au besoin.</p>
+    <h3>Votre activité exige une présence marketing quotidienne et durable</h3>
+    <p>Préparez un recrutement. Un accompagnement externe peut sécuriser la transition, mais ne doit pas devenir un substitut artificiel à une fonction devenue structurelle.</p>
+    <h3>Vous lancez une marque ou une filiale au Maroc</h3>
+    <p>Une direction externalisée peut structurer l’entrée sur le marché, adapter la marque et orchestrer les premières actions. Le modèle interne cible est ensuite décidé à partir du volume réel.</p>
+
+    <h2>Les coûts invisibles à comparer</h2>
+    <p>Comparer uniquement un salaire et des honoraires est insuffisant. Le recrutement implique le temps de recherche, l’intégration, les outils, les expertises complémentaires et le management. L’externalisation implique l’immersion, la coordination et la marge du partenaire. Une agence implique souvent un périmètre contractuel qui génère des coûts supplémentaires dès qu’il évolue.</p>
+    <p>La comparaison honnête porte sur le <strong>coût total pour obtenir le niveau de direction et de production nécessaire</strong>, avec les risques de délai, de dépendance et de perte de connaissance. Les chiffres doivent être calculés pour l’entreprise, jamais présentés comme une économie automatique.</p>
+
+    <h2>Les clauses à clarifier avant une direction externalisée</h2>
+    <ul>
+      <li>le périmètre de décision et les sujets réservés à la direction générale ;</li>
+      <li>le temps senior réellement disponible et les délais de réponse ;</li>
+      <li>les livrables, rituels, indicateurs et critères de réussite ;</li>
+      <li>la propriété des comptes, fichiers, données et créations ;</li>
+      <li>l’identité des spécialistes mobilisés et leur mode de facturation ;</li>
+      <li>les conditions de sortie et de transfert de connaissance.</li>
+    </ul>
+
+    <h2>Une décision d’organisation, pas une simple décision d’achat</h2>
+    <p>Si le problème est l’exécution, choisissez l’expertise adaptée. Si le besoin est quotidien et stable, recrutez. Si l’entreprise manque surtout de direction, de coordination et de séniorité, étudiez le modèle externalisé.</p>
+    <p>Découvrez le détail de notre modèle de <a href="/direction-marketing-externalisee">direction marketing externalisée au Maroc</a>, ou lisez les <a href="/blog/quand-externaliser-direction-marketing">sept signaux qui indiquent que le besoin est arrivé</a>.</p>
+    <p><a href="https://wa.me/212699024526?text=Bonjour%20Badre%2C%20je%20souhaite%20comparer%20nos%20options%20d'organisation%20marketing" target="_blank" rel="noopener noreferrer">Comparer vos options directement sur WhatsApp</a>.</p>
+    `,
+    author: 'Badreddine Harkaoui',
+    publishDate: '2026-08-28',
+    slug: 'direction-marketing-externalisee-vs-agence-recrutement',
+    category: 'conseils',
+    image: '/assets/blog/agence-casablanca.jpg',
+    readTime: 10,
+    tags: ['direction marketing externalisée', 'agence marketing', 'recrutement marketing', 'organisation', 'maroc'],
+    metaDescription: 'Direction marketing externalisée, agence ou recrutement : comparez les trois modèles selon le besoin, la séniorité et le volume de travail.',
+    metaKeywords: 'direction marketing externalisée vs agence, recruter directeur marketing maroc, externalisation marketing, organisation marketing maroc'
+  },
+  {
+    id: 'reprendre-marketing-externalise',
+    title: 'Comment reprendre le contrôle d’un marketing externalisé mais insatisfaisant',
+    seoTitle: 'Marketing externalisé : reprendre le contrôle',
+    excerpt: 'Une méthode de transition en 90 jours pour sécuriser les actifs, diagnostiquer le dispositif, conserver ce qui fonctionne et remettre le marketing sous contrôle.',
+    content: `
+    <h2>Ne commencez pas par changer tous les prestataires</h2>
+    <p>Lorsqu’une entreprise n’est plus satisfaite de son agence ou de ses freelances, la réaction naturelle est de tout remplacer. C’est rarement la première décision à prendre. Le problème peut venir de la stratégie, du brief, des validations, de la mesure, du niveau de séniorité ou d’un périmètre devenu inadapté.</p>
+    <p>La reprise doit d’abord sécuriser les actifs et rendre la situation lisible. Ensuite seulement, la direction décide ce qui doit être conservé, recadré, internalisé ou remplacé. Cette méthode réduit le risque de perdre les accès, l’historique et les apprentissages accumulés.</p>
+
+    <h2>Étape 1 : sécuriser les comptes, fichiers et droits de propriété</h2>
+    <p>Avant toute annonce de transition, établissez l’inventaire des actifs marketing. L’entreprise doit être propriétaire ou administratrice principale de ses domaines, hébergements, comptes publicitaires, outils analytics, Search Console, profils sociaux, CRM, bibliothèques créatives et fichiers sources.</p>
+    <h3>La liste minimale à vérifier</h3>
+    <ul>
+      <li>domaine, DNS, hébergement et accès au code du site ;</li>
+      <li>Google Analytics, Tag Manager, Search Console et profils établissement ;</li>
+      <li>Business Manager Meta, comptes publicitaires, pixels et catalogues ;</li>
+      <li>pages LinkedIn, comptes TikTok, YouTube et autres plateformes actives ;</li>
+      <li>CRM, bases de contacts, consentements et automatisations ;</li>
+      <li>logos, chartes, fichiers sources, photos, vidéos, contrats et licences ;</li>
+      <li>historique des campagnes, audiences, rapports et factures.</li>
+    </ul>
+    <p>Ne retirez pas immédiatement les anciens accès. Commencez par vous assurer que l’entreprise possède ses propres administrateurs, activez l’authentification à deux facteurs et documentez qui détient quoi. La sortie sera ensuite organisée sans interrompre l’activité.</p>
+
+    <h2>Étape 2 : transformer l’insatisfaction en faits observables</h2>
+    <p>« Nous ne sommes plus satisfaits » peut couvrir des réalités très différentes. Il faut les nommer : qualité irrégulière, retards, manque d’idées, absence de conseil, reporting inutile, coûts mal maîtrisés, faible disponibilité ou résultats non reliés aux objectifs.</p>
+    <p>Pour chaque problème, notez un exemple, son impact et l’attente non satisfaite. Cette discipline évite de juger uniquement sur une impression et permet de distinguer un incident d’un dysfonctionnement structurel.</p>
+    <h3>Quatre dimensions à auditer</h3>
+    <ol>
+      <li><strong>direction</strong> : objectifs, priorités, positionnement et arbitrages ;</li>
+      <li><strong>production</strong> : qualité, délais, cohérence et capacité ;</li>
+      <li><strong>relation</strong> : interlocuteurs, disponibilité, transparence et anticipation ;</li>
+      <li><strong>performance</strong> : mesure, apprentissage et contribution aux enjeux business.</li>
+    </ol>
+
+    <h2>Étape 3 : vérifier si le brief et la gouvernance permettent de réussir</h2>
+    <p>Une agence ne peut pas compenser durablement des objectifs contradictoires, six validateurs ou une absence de données. Cela ne décharge pas le prestataire de sa responsabilité de conseil, mais la reprise doit corriger les causes internes autant que les défauts externes.</p>
+    <p>Vérifiez qui décide, combien de temps prend la validation, si les demandes urgentes remplacent constamment la feuille de route et si les retours sont consolidés. Une gouvernance simple comprend un décideur, un responsable opérationnel, un brief écrit et un délai de validation défini.</p>
+
+    <h2>Étape 4 : classer chaque chantier en quatre décisions</h2>
+    <ul>
+      <li><strong>conserver</strong> : le résultat est satisfaisant et le partenaire possède une vraie connaissance utile ;</li>
+      <li><strong>recadrer</strong> : la compétence existe mais les objectifs, le périmètre ou les règles doivent être corrigés ;</li>
+      <li><strong>mettre en pause</strong> : l’action consomme des ressources sans priorité démontrée ;</li>
+      <li><strong>remplacer</strong> : le niveau, la confiance ou le modèle ne correspondent plus au besoin.</li>
+    </ul>
+    <p>Cette approche évite le « grand soir » marketing. Une campagne rentable, un bon développeur ou un créateur qui comprend la marque peut être conservé même si le pilotage global change.</p>
+
+    <h2>Étape 5 : reconstruire une feuille de route de 90 jours</h2>
+    <h3>Jours 1 à 30 : reprendre la visibilité</h3>
+    <p>Inventaire, accès, contrats, calendrier, budgets, performances et obligations sont réunis. Les risques critiques sont traités : domaines non contrôlés, prélèvements inconnus, données non sauvegardées, pages sans administrateur ou campagnes sans limite claire.</p>
+    <h3>Jours 31 à 60 : réaligner la marque et les priorités</h3>
+    <p>La direction valide les audiences, les offres, les messages, les canaux et les indicateurs. Les contenus et campagnes sont évalués à partir de ce cadre. Un plan réaliste remplace l’accumulation de demandes.</p>
+    <h3>Jours 61 à 90 : installer la nouvelle cadence</h3>
+    <p>Les prestataires retenus travaillent avec des briefs communs, un calendrier partagé et un contrôle qualité. Le reporting produit des décisions. La direction voit clairement les ressources manquantes et peut arbitrer entre externe et interne.</p>
+
+    <h2>Étape 6 : redéfinir les indicateurs avant de relancer</h2>
+    <p>Un ancien reporting ne doit pas être repris automatiquement. Chaque canal reçoit des indicateurs correspondant à son rôle. La portée mesure la diffusion, les recherches de marque renseignent la demande, les conversations qualifiées mesurent l’intérêt commercial et le CRM suit les opportunités.</p>
+    <p>Lorsque l’attribution est imparfaite, dites-le. Une décision fondée sur une estimation documentée est plus saine qu’un chiffre précis mais faux. Le tableau de bord doit distinguer les données observées, les hypothèses et les limites.</p>
+
+    <h2>Étape 7 : organiser une sortie professionnelle</h2>
+    <p>Le transfert doit être écrit : liste des fichiers, exports, accès, travaux en cours, engagements média, licences, factures et dates de fin. Prévoyez une réunion de passation et un délai raisonnable. Changez les mots de passe seulement après avoir confirmé la récupération des actifs et la fin des opérations nécessaires.</p>
+    <p>Une sortie respectueuse protège l’entreprise. Le prestataire sortant peut détenir un contexte précieux et certaines relations pourront rester utiles sur un autre périmètre.</p>
+
+    <h2>Les signaux qui justifient un remplacement rapide</h2>
+    <ul>
+      <li>refus de transmettre des accès appartenant à l’entreprise ;</li>
+      <li>dépenses engagées sans validation ou manque de transparence financière ;</li>
+      <li>utilisation non autorisée de données, d’assets ou de références ;</li>
+      <li>failles de sécurité non traitées ;</li>
+      <li>fausses données, résultats manipulés ou dissimulation répétée.</li>
+    </ul>
+    <p>Dans ces situations, sécurisez d’abord les actifs avec les conseils techniques ou juridiques adaptés, puis organisez la continuité.</p>
+
+    <h2>Quand une direction marketing externalisée aide la transition</h2>
+    <p>Elle est utile lorsque la direction générale ne souhaite pas piloter elle-même l’audit, la passation et la reconstruction du dispositif. Son rôle est neutre : juger chaque ressource selon sa contribution, remettre les objectifs au centre et créer une responsabilité unique.</p>
+    <p>Le partenaire de reprise ne doit pas remplacer automatiquement tous les intervenants par son propre réseau. Il doit d’abord démontrer pourquoi une compétence est conservée ou changée, avec des critères visibles.</p>
+
+    <h2>Reprendre le contrôle sans repartir de zéro</h2>
+    <p>Une transition réussie protège ce qui a de la valeur, corrige la gouvernance et remplace seulement ce qui empêche la progression. Elle peut s’inscrire dans notre modèle de <a href="/direction-marketing-externalisee">direction marketing externalisée</a>. Pour comparer les options d’organisation, consultez aussi <a href="/blog/direction-marketing-externalisee-vs-agence-recrutement">direction externalisée, agence ou recrutement</a>.</p>
+    <p><a href="https://wa.me/212699024526?text=Bonjour%20Badre%2C%20nous%20souhaitons%20reprendre%20le%20controle%20de%20notre%20marketing%20externalise" target="_blank" rel="noopener noreferrer">Parler confidentiellement de votre dispositif sur WhatsApp</a>.</p>
+    `,
+    author: 'Badreddine Harkaoui',
+    publishDate: '2026-08-28',
+    slug: 'reprendre-marketing-externalise-insatisfaisant',
+    category: 'conseils',
+    image: '/assets/blog/marketing-digital-2024.jpg',
+    readTime: 9,
+    tags: ['agence marketing', 'transition prestataire', 'audit marketing', 'direction marketing externalisée', 'gouvernance'],
+    metaDescription: 'Marketing externalisé insatisfaisant : méthode en 90 jours pour sécuriser les actifs, auditer les prestataires et reprendre le contrôle.',
+    metaKeywords: 'agence marketing insatisfait, changer agence communication, audit prestataire marketing, reprendre marketing externalisé'
+  },
+  {
+    id: 'adapter-marque-internationale-maroc',
+    title: 'Adapter une marque internationale au marché marocain sans la dénaturer',
+    seoTitle: 'Adapter une marque internationale au Maroc',
+    excerpt: 'Une méthode d’entrée sur le marché marocain pour préserver le cœur de marque tout en adaptant langues, preuves, canaux, calendrier et expérience.',
+    content: `
+    <h2>Localiser une marque ne signifie ni traduire ni tout réinventer</h2>
+    <p>Une marque internationale qui entre au Maroc doit protéger ses actifs globaux tout en devenant crédible dans un contexte local. Copier la campagne du siège crée souvent de la distance. À l’inverse, multiplier les adaptations sans cadre finit par fragmenter l’identité.</p>
+    <p>La bonne méthode sépare le <strong>cœur non négociable</strong> de la marque des <strong>éléments adaptables</strong>. Le positionnement, la promesse centrale et les signes distinctifs peuvent rester stables ; les preuves, langues, formats, partenaires, calendrier et parcours commerciaux évoluent selon le marché.</p>
+
+    <h2>1. Établir le noyau de marque qui ne doit pas bouger</h2>
+    <p>Avant toute adaptation, le siège et l’équipe locale doivent nommer ce qui définit la marque : cible stratégique, tension client, promesse, personnalité, valeurs, architecture des offres et actifs distinctifs. Une charte graphique seule ne suffit pas.</p>
+    <p>Ce noyau sert de filtre. Une idée locale est acceptée si elle renforce le positionnement, même avec une expression différente. Elle est rejetée si elle attire l’attention mais affaiblit la promesse ou crée un précédent impossible à gérer ailleurs.</p>
+
+    <h2>2. Étudier les clients, les concurrents et les circuits réels</h2>
+    <p>Le marché marocain ne peut pas être résumé à une préférence pour certaines couleurs ou à l’usage de la darija. Il faut comprendre comment la catégorie est achetée, qui influence la décision, quels intermédiaires comptent, quelles objections bloquent et quelles marques définissent déjà les attentes.</p>
+    <p>Une étude utile combine entretiens, visite terrain, analyse des points de vente, recherche en ligne, social listening et échanges avec les équipes commerciales. Elle doit révéler les écarts entre l’hypothèse du siège et la réalité : sensibilité au prix, besoin de réassurance, rôle du distributeur, importance de WhatsApp ou poids de la recommandation.</p>
+
+    <h2>3. Construire une architecture linguistique</h2>
+    <p>Français, arabe, darija et anglais ne sont pas interchangeables. Leur rôle dépend du secteur, de l’audience et du contexte. Une communication corporate B2B peut fonctionner principalement en français et en anglais ; une marque grand public peut avoir besoin d’arabe ou de darija pour la proximité ; une expérience premium internationale peut maintenir davantage d’anglais.</p>
+    <p>L’architecture doit préciser quelle langue est utilisée par canal, pour quel public et avec quel niveau de formalité. La traduction doit être transcréée lorsque le rythme, l’humour ou la connotation changent. Le nom d’une offre ou une accroche doit aussi être testé oralement.</p>
+
+    <h2>4. Adapter les preuves, pas seulement les messages</h2>
+    <p>Une promesse internationale gagne en crédibilité lorsqu’elle s’appuie sur des preuves accessibles au marché local : disponibilité, partenaires, service après-vente, témoignages autorisés, certification pertinente, démonstration ou cas d’usage marocain.</p>
+    <p>Le premier objectif n’est pas nécessairement de créer une grande campagne. Il peut être de construire les éléments qui réduisent le risque perçu : page locale claire, interlocuteur identifié, conditions commerciales compréhensibles, présence sur les canaux attendus et premières références.</p>
+
+    <h2>5. Choisir les canaux selon le parcours local</h2>
+    <p>Le plan média du siège ne doit pas être reconduit par défaut. Une marque B2B peut avoir besoin de LinkedIn, de contenu expert, d’événements et de prospection ciblée. Une marque retail peut combiner distributeurs, Instagram, créateurs, point de vente et WhatsApp. Une marque hospitality travaillera l’image, les plateformes de réservation, le référencement international et les partenariats.</p>
+    <p>Notre <a href="/blog/reseaux-sociaux-maroc-tiktok-instagram-2025">guide des réseaux sociaux au Maroc</a> aide à attribuer un rôle à chaque plateforme. Le canal n’est retenu que si l’organisation peut produire, répondre et mesurer au niveau attendu.</p>
+
+    <h2>6. Intégrer le calendrier culturel avec précision</h2>
+    <p>Ramadan, Aïd, rentrée, fêtes nationales, saison touristique et événements sectoriels influencent les usages. Les intégrer ne signifie pas publier un visuel générique à chaque date. La marque doit déterminer quand elle possède une contribution légitime, quelle offre est concernée et comment son activité opérationnelle sera adaptée.</p>
+    <p>Les dates religieuses évoluent selon le calendrier lunaire et doivent être confirmées. Les messages sensibles nécessitent une validation locale. Une prise de parole sobre et juste vaut mieux qu’une récupération opportuniste.</p>
+
+    <h2>7. Préserver la qualité dans la production locale</h2>
+    <p>Le siège doit fournir des règles assez précises pour protéger la marque, mais assez souples pour permettre de créer. Les templates rigides produisent souvent des contenus déconnectés des usages locaux ; l’absence de règles produit l’incohérence.</p>
+    <p>Un système efficace comprend des assets globaux, des exemples d’adaptation autorisée, un processus de validation, des délais réalistes et une bibliothèque locale approuvée. Les créateurs, photographes, rédacteurs et experts mobilisés reçoivent un brief commun.</p>
+
+    <h2>8. Organiser la relation entre siège, filiale et partenaires</h2>
+    <p>La plupart des tensions viennent moins de la création que des droits de décision. Qui valide le positionnement local ? Quel budget peut être arbitré au Maroc ? Quels sujets doivent remonter au siège ? Quel délai de réponse est acceptable ?</p>
+    <p>Une matrice simple peut répartir les responsabilités :</p>
+    <ul>
+      <li><strong>siège</strong> : plateforme globale, actifs distinctifs, conformité internationale ;</li>
+      <li><strong>direction locale</strong> : objectifs commerciaux, contraintes opérationnelles et validation marché ;</li>
+      <li><strong>partenaire de pilotage</strong> : recommandations, coordination, briefs, qualité et reporting ;</li>
+      <li><strong>spécialistes</strong> : production et activation sur leur périmètre.</li>
+    </ul>
+
+    <h2>9. Tester une hypothèse locale avant de généraliser</h2>
+    <p>Une phase pilote permet de tester un segment, une ville, un canal ou une gamme. Elle doit avoir une durée, un budget, des indicateurs et des critères d’arrêt définis. Le but est d’apprendre, pas de produire artificiellement un succès.</p>
+    <p>Les résultats quantitatifs sont complétés par les retours du commerce, du service client, des distributeurs et des prospects. Une campagne peut générer de l’attention tout en révélant une objection sur le produit, le prix ou la disponibilité.</p>
+
+    <h2>10. Mesurer la construction du marché et la conversion</h2>
+    <p>Une nouvelle marque ne peut pas être évaluée uniquement au dernier clic. Suivez la distribution, les recherches de marque, la qualité des conversations, les demandes distributeurs, les essais, la progression des opportunités et les ventes. Documentez la part certaine et la part estimée de la contribution marketing.</p>
+    <p>Les premiers mois servent aussi à construire des actifs : base CRM, contenus locaux, données d’audience, partenaires et apprentissages. Leur valeur doit apparaître dans la revue de direction.</p>
+
+    <h2>Un contexte favorable, sans automatisme</h2>
+    <p>L’Office des Changes indique que les recettes d’investissements directs étrangers au Maroc ont atteint 56,1 milliards de dirhams en 2025, en hausse de 28 %. Ce chiffre signale une dynamique d’investissement, mais il ne préjuge ni de la réussite d’une marque particulière ni de la demande dans chaque catégorie.</p>
+    <p>La réussite dépend du produit, de la distribution, du prix, de l’exécution et de la capacité à adapter l’expérience. <strong>Source :</strong> <a href="https://www.oc.gov.ma/sites/default/files/2026-01/IMEE%20D%C3%A9c%202025.pdf" target="_blank" rel="noopener noreferrer">Office des Changes, indicateurs 2025</a>.</p>
+
+    <h2>Les erreurs les plus fréquentes</h2>
+    <ul>
+      <li>traduire une campagne sans étudier le parcours local ;</li>
+      <li>folkloriser le Maroc avec des codes décoratifs génériques ;</li>
+      <li>donner au partenaire local un rôle d’exécutant sans accès à la stratégie ;</li>
+      <li>ouvrir trop de canaux avant d’organiser la réponse commerciale ;</li>
+      <li>laisser les validations du siège ralentir chaque contenu ;</li>
+      <li>mesurer trop tôt uniquement la vente et ignorer la construction de la demande.</li>
+    </ul>
+
+    <h2>Protéger le global, rendre le local crédible</h2>
+    <p>Link Agency accompagne les marques étrangères qui entrent au Maroc et celles qui souhaitent reprendre le contrôle de leur présence locale. Le travail relie <a href="/branding">stratégie de marque</a>, adaptation des contenus, choix des partenaires et pilotage du marché dans le cadre d’une <a href="/direction-marketing-externalisee">direction marketing externalisée</a>.</p>
+    <p>Pour les sièges et partenaires internationaux, consultez également la <a href="/en/insights/brand-localisation-morocco" lang="en">version anglaise du guide de localisation de marque au Maroc</a>.</p>
+    <p><a href="https://wa.me/212699024526?text=Bonjour%20Badre%2C%20nous%20souhaitons%20adapter%20notre%20marque%20au%20marche%20marocain" target="_blank" rel="noopener noreferrer">Échanger sur votre entrée ou votre développement au Maroc</a>.</p>
+    `,
+    author: 'Badreddine Harkaoui',
+    publishDate: '2026-08-28',
+    slug: 'adapter-marque-internationale-maroc',
+    category: 'branding',
+    image: '/assets/blog/branding-local-maroc-2025.jpg',
+    readTime: 10,
+    tags: ['marque internationale', 'entrée marché maroc', 'localisation marque', 'branding maroc', 'go-to-market'],
+    metaDescription: 'Comment adapter une marque internationale au Maroc sans la dénaturer : langues, preuves, canaux, gouvernance et méthode d’entrée marché.',
+    metaKeywords: 'adapter marque au maroc, entrée marché maroc, marque internationale maroc, localisation marketing maroc, agence branding maroc'
+  },
+  {
+    id: 'gouvernance-marketing-parties-prenantes',
+    title: 'Équipe interne, agence et freelances : qui décide quoi en marketing ?',
+    seoTitle: 'Gouvernance marketing : qui décide quoi ?',
+    excerpt: 'Une méthode de gouvernance pour répartir décisions, production et responsabilité entre direction, équipe interne, agence et spécialistes externes.',
+    content: `
+    <h2>La réponse courte</h2>
+    <p>La direction générale arbitre les objectifs, le positionnement et l’investissement. Le responsable marketing transforme ces décisions en feuille de route. L’équipe interne apporte le contexte et la continuité. L’agence ou le partenaire de pilotage organise son périmètre. Les freelances produisent une expertise définie. Une seule personne doit rester responsable de l’ensemble.</p>
+    <p>Lorsque ces rôles ne sont pas explicites, les prestataires attendent des validations, les équipes se contredisent et le dirigeant redevient chef de projet. La gouvernance marketing sert à éviter ce vide.</p>
+
+    <h2>Pourquoi le problème apparaît même avec de bons intervenants</h2>
+    <p>Une entreprise peut réunir un bon graphiste, un media buyer compétent, une agence social media et une équipe commerciale engagée tout en produisant un marketing incohérent. Chaque intervenant optimise son propre livrable. Personne ne possède nécessairement le mandat pour arbitrer entre la marque, le délai, le budget et le résultat attendu.</p>
+    <p>Trois confusions reviennent souvent :</p>
+    <ul>
+      <li>la personne qui exécute devient implicitement celle qui décide ;</li>
+      <li>plusieurs validateurs donnent des retours incompatibles ;</li>
+      <li>le prestataire le plus disponible finit par coordonner des sujets hors de son périmètre.</li>
+    </ul>
+    <p>La solution n’est pas d’ajouter des réunions. Elle consiste à définir le propriétaire de chaque décision et le niveau d’autonomie de chaque rôle.</p>
+
+    <h2>Les six rôles à distinguer</h2>
+    <h3>1. La direction générale : propriétaire des arbitrages structurants</h3>
+    <p>Elle décide des objectifs business, des marchés prioritaires, du niveau d’investissement et des risques acceptables. Elle valide le positionnement et les changements qui engagent durablement l’entreprise. Elle ne devrait pas corriger chaque publication ni choisir chaque format.</p>
+    <h3>2. La direction marketing : responsable du système</h3>
+    <p>Elle relie la marque, les offres, les canaux, les ressources et la mesure. Elle prépare les décisions pour la direction générale, attribue les priorités et tient la qualité. Ce rôle peut être interne ou assuré par une <a href="/direction-marketing-externalisee">direction marketing externalisée</a>.</p>
+    <h3>3. Le référent interne : détenteur du contexte</h3>
+    <p>Il connaît les produits, les contraintes, les équipes et l’historique. Il rassemble les informations, coordonne les validations internes et signale les risques opérationnels. Il ne doit pas devenir l’unique source de briefs oraux.</p>
+    <h3>4. L’agence : responsable d’un périmètre contractualisé</h3>
+    <p>Elle conseille et exécute sur son mandat : branding, contenu, média, digital ou événementiel. Son autonomie doit être définie. Une agence ne peut pas porter la responsabilité de tout le marketing si elle n’a ni accès aux données ni mandat d’arbitrage.</p>
+    <h3>5. Les freelances et spécialistes : responsables de leur expertise</h3>
+    <p>Rédacteur, designer, photographe, développeur, analyste ou media buyer interviennent sur un besoin précis. Ils doivent recevoir un brief commun, connaître le décideur et livrer dans un système partagé. Ils ne constituent pas une équipe interne lorsqu’ils sont mobilisés ponctuellement.</p>
+    <h3>6. Le commerce et les opérations : sources de réalité</h3>
+    <p>Ces fonctions remontent les objections, la qualité des demandes, les contraintes de distribution et l’expérience client. Elles contribuent aux décisions, sans nécessairement valider la création ou piloter le calendrier.</p>
+
+    <h2>La matrice simple : décider, piloter, contribuer, produire</h2>
+    <p>Pour chaque chantier, attribuez quatre responsabilités. Une personne peut cumuler plusieurs rôles, mais chaque ligne ne doit comporter qu’un seul décideur et un seul pilote.</p>
+    <ul>
+      <li><strong>Décider</strong> : tranche lorsque plusieurs options sont possibles ;</li>
+      <li><strong>Piloter</strong> : prépare, coordonne et répond du résultat ;</li>
+      <li><strong>Contribuer</strong> : apporte une information ou une expertise avant décision ;</li>
+      <li><strong>Produire</strong> : réalise le livrable validé.</li>
+    </ul>
+    <p>Exemple pour une campagne de lancement : la direction générale décide l’objectif et l’investissement ; la direction marketing pilote ; le commerce, le produit et la finance contribuent ; les spécialistes créatifs et média produisent et activent.</p>
+
+    <h2>Cinq domaines où la responsabilité doit être écrite</h2>
+    <h3>Positionnement et messages</h3>
+    <p>La direction générale valide les changements de positionnement. La direction marketing prépare les options et protège leur cohérence. Les créatifs traduisent la décision ; ils ne la redéfinissent pas à chaque campagne.</p>
+    <h3>Calendrier et priorités</h3>
+    <p>Le pilote marketing tient une liste unique des chantiers. Une demande urgente ne remplace une priorité que si le décideur accepte explicitement ce qui sera retardé.</p>
+    <h3>Création et validation</h3>
+    <p>Un brief écrit précède la production. Les retours sont consolidés par une personne et portent sur des critères convenus : objectif, message, marque, exactitude et contraintes techniques.</p>
+    <h3>Budget et achats</h3>
+    <p>Les seuils d’engagement sont documentés. Le partenaire indique honoraires, achats externes, droits et frais techniques. La finance contrôle ; elle ne remplace pas l’arbitrage marketing.</p>
+    <h3>Données et performance</h3>
+    <p>L’entreprise reste propriétaire de ses comptes et données. Le pilote définit les indicateurs ; les spécialistes expliquent les résultats de leur canal ; la direction arbitre les investissements.</p>
+
+    <h2>Le système minimal de fonctionnement</h2>
+    <h3>Une feuille de route trimestrielle</h3>
+    <p>Elle contient peu de priorités, chacune reliée à un objectif, un responsable, un budget et un résultat attendu. Elle évite que le calendrier éditorial devienne la stratégie.</p>
+    <h3>Un point de pilotage hebdomadaire</h3>
+    <p>Trente à quarante-cinq minutes suffisent si les informations sont préparées : décisions attendues, risques, livrables, données et prochaines étapes. Le point ne sert pas à relire chaque tâche.</p>
+    <h3>Une revue mensuelle de direction</h3>
+    <p>Elle traite les résultats, les apprentissages et les arbitrages. Les indicateurs sont organisés par rôle : visibilité, considération, conversations, opportunités et contribution.</p>
+    <h3>Un espace de référence</h3>
+    <p>Plateforme de marque, offres, chartes, briefs, calendrier, accès et reporting possèdent une version de référence. Les fichiers dispersés dans les messageries créent de la dépendance.</p>
+
+    <h2>Comment gérer les validations sans ralentir la production</h2>
+    <ol>
+      <li>identifier avant le brief les personnes qui doivent contribuer ;</li>
+      <li>obtenir leur information avant la création, pas après ;</li>
+      <li>nommer un validateur final ;</li>
+      <li>fixer un délai de retour et la conséquence d’un silence ;</li>
+      <li>consolider les commentaires contradictoires avant de les transmettre ;</li>
+      <li>limiter le nombre de cycles inclus dans la production.</li>
+    </ol>
+    <p>Cette discipline protège à la fois le temps interne et la qualité des intervenants externes.</p>
+
+    <h2>Les signaux d’une gouvernance défaillante</h2>
+    <ul>
+      <li>le dirigeant reçoit directement les questions de chaque prestataire ;</li>
+      <li>les mêmes sujets sont rediscutés à chaque réunion ;</li>
+      <li>personne ne sait quelle version d’un document est valide ;</li>
+      <li>les créations sont corrigées selon des préférences personnelles ;</li>
+      <li>le reporting arrive mais aucune décision ne change ;</li>
+      <li>les urgences commerciales détruisent constamment la feuille de route.</li>
+    </ul>
+    <p>Si plusieurs signaux sont présents, l’entreprise a probablement besoin d’un pilote avant d’avoir besoin d’un prestataire supplémentaire. Le guide <a href="/blog/quand-externaliser-direction-marketing">quand externaliser sa direction marketing</a> aide à qualifier ce besoin.</p>
+
+    <h2>La gouvernance n’enlève pas l’agilité</h2>
+    <p>Elle permet au contraire de savoir ce qui peut être décidé rapidement et ce qui exige un arbitrage. Une marque peut donner une grande autonomie sur les formats sociaux tout en protégeant strictement ses messages réglementés, ses prix ou ses actifs distinctifs.</p>
+    <p>Le niveau de contrôle doit dépendre du risque. Une publication récurrente, une campagne nationale et un repositionnement ne suivent pas le même circuit.</p>
+
+    <h2>Mettre en place la gouvernance en trente jours</h2>
+    <ol>
+      <li>inventorier les chantiers, prestataires, contrats et accès ;</li>
+      <li>nommer le décideur et le pilote de chaque domaine ;</li>
+      <li>arrêter les validations parallèles ;</li>
+      <li>installer une feuille de route et un rituel hebdomadaire ;</li>
+      <li>documenter les briefs, budgets et indicateurs ;</li>
+      <li>réévaluer après un mois ce qui reste bloquant.</li>
+    </ol>
+
+    <h2>Un responsable clair derrière chaque décision</h2>
+    <p>Link Agency intervient comme direction de marque et pôle marketing externalisé lorsque l’entreprise doit coordonner ses ressources sans créer immédiatement toute la fonction en interne. Le pilotage reste senior et les spécialistes sont mobilisés selon le besoin, avec des responsabilités visibles.</p>
+    <p>Pour comparer les modèles, consultez <a href="/blog/direction-marketing-externalisee-vs-agence-recrutement">direction externalisée, agence ou recrutement</a>, ou <a href="https://wa.me/212699024526?text=Bonjour%20Badre%2C%20je%20souhaite%20clarifier%20notre%20gouvernance%20marketing" target="_blank" rel="noopener noreferrer">présentez votre organisation à Badre sur WhatsApp</a>.</p>
+    `,
+    author: 'Badreddine Harkaoui',
+    publishDate: '2026-08-28',
+    slug: 'gouvernance-marketing-equipe-agence-freelances',
+    category: 'conseils',
+    image: '/assets/blog/marketing-digital-2024.jpg',
+    readTime: 10,
+    tags: ['gouvernance marketing', 'agence marketing', 'freelances', 'équipe interne', 'direction marketing externalisée'],
+    metaDescription: 'Gouvernance marketing : répartissez clairement décisions, pilotage et production entre direction, équipe interne, agence et freelances.',
+    metaKeywords: 'gouvernance marketing, équipe interne agence freelances, organisation marketing, pilotage prestataires, direction marketing externalisée'
+  },
+  {
+    id: 'plateforme-marque-comite-direction',
+    title: 'Plateforme de marque : les 8 décisions qu’un comité de direction doit valider',
+    seoTitle: 'Plateforme de marque : 8 décisions de direction',
+    excerpt: 'Une plateforme de marque utile ne rassemble pas des mots inspirants : elle formalise huit décisions business que la direction doit pouvoir assumer.',
+    content: `
+    <h2>La réponse courte</h2>
+    <p>Une plateforme de marque est un référentiel de décisions : marché prioritaire, public, problème traité, positionnement, promesse, preuves, personnalité et architecture. Le comité de direction doit valider ces choix parce qu’ils influencent l’offre, le prix, le commerce, le recrutement et l’expérience client.</p>
+    <p>Si le document peut être approuvé uniquement par la communication, il est probablement trop décoratif. Une plateforme utile oblige l’entreprise à choisir, puis donne aux équipes et partenaires un cadre commun.</p>
+
+    <h2>Ce qu’une plateforme de marque n’est pas</h2>
+    <p>Ce n’est pas une charte graphique, une liste de valeurs génériques ni un texte institutionnel destiné à la page « À propos ». La charte visuelle traduit une partie de la marque. La plateforme définit ce que cette identité doit rendre visible et cohérent.</p>
+    <p>Elle n’a pas non plus vocation à figer chaque campagne. Elle protège le noyau de marque et précise les marges d’adaptation. Une bonne plateforme rend la création plus libre parce que les décisions fondamentales ne sont plus rediscutées à chaque brief.</p>
+
+    <h2>Décision 1 : sur quel marché voulons-nous réellement gagner ?</h2>
+    <p>« Tout le Maroc » ou « toutes les entreprises » n’est pas un choix stratégique. Le comité doit définir les catégories, zones, situations d’usage et niveaux d’enjeu prioritaires. Il peut conserver des activités secondaires, mais il doit savoir lesquelles structurent la marque.</p>
+    <p>Cette décision influence les concurrents comparés, les canaux, les preuves et le niveau d’investissement. Une marque de services B2B à Casablanca ne construit pas la même autorité qu’une enseigne retail nationale ou qu’un acteur hospitality à Marrakech.</p>
+
+    <h2>Décision 2 : à qui devons-nous devenir préférables ?</h2>
+    <p>La cible marketing ne se limite pas à un âge ou à une fonction. Il faut comprendre qui ressent le problème, qui évalue, qui influence, qui utilise et qui paie. Dans un cycle B2B, plusieurs personnes participent souvent à la décision.</p>
+    <p>Le comité valide les audiences prioritaires et accepte que la marque ne parle pas de la même manière à tout le monde. Une cible précise ne réduit pas nécessairement le marché ; elle rend la proposition plus intelligible.</p>
+
+    <h2>Décision 3 : quel problème méritons-nous de posséder ?</h2>
+    <p>Les entreprises décrivent volontiers leurs services, rarement la tension qu’elles résolvent. Le problème doit être important pour le client, cohérent avec les capacités réelles et assez distinctif pour construire une position.</p>
+    <p>Pour Link Agency, le sujet n’est pas seulement la production de communication. C’est l’absence de direction commune entre marque, contenus, partenaires et performance. Cette lecture organise ensuite l’offre de <a href="/direction-marketing-externalisee">direction marketing externalisée</a>.</p>
+
+    <h2>Décision 4 : quelle position voulons-nous occuper ?</h2>
+    <p>Le positionnement répond à une comparaison : pourquoi choisir cette marque plutôt qu’une autre option, y compris l’inaction ou une solution interne ? Il doit être crédible, pertinent et défendable dans la durée.</p>
+    <p>Une formulation utile précise le public, le cadre de référence, la différence et la raison d’y croire. Elle sert d’outil de décision interne ; elle n’a pas besoin d’être publiée mot pour mot.</p>
+
+    <h2>Décision 5 : quelle promesse pouvons-nous tenir ?</h2>
+    <p>La promesse exprime le changement apporté au client. Elle ne doit pas être une superlative impossible à prouver. « Le meilleur », « révolutionnaire » ou « résultats garantis » créent rarement une différence crédible.</p>
+    <p>Le comité doit vérifier que les opérations, le produit et les partenaires peuvent tenir cette promesse. Si le marketing promet une expérience que le service client ne peut pas délivrer, la plateforme devient un risque.</p>
+
+    <h2>Décision 6 : quelles preuves soutiennent la promesse ?</h2>
+    <p>Références autorisées, expertise, méthode, certifications, réseau, actifs propriétaires, implantation, qualité de service ou données peuvent constituer des preuves. Elles doivent être exactes et attribuables.</p>
+    <p>Une preuve n’est pas une formule vague comme « des années d’expérience ». Elle montre ce que l’entreprise sait faire, dans quel contexte et avec quelles limites. Les preuves manquantes deviennent des chantiers : documenter une méthode, obtenir une autorisation client ou mesurer un résultat.</p>
+
+    <h2>Décision 7 : quelle personnalité rend la marque reconnaissable ?</h2>
+    <p>La personnalité guide le ton, le rythme, les images et les comportements. Trois ou quatre traits suffisamment précis valent mieux qu’une longue liste. « Professionnel, innovant et proche » décrit presque toutes les entreprises.</p>
+    <p>Chaque trait doit comporter un comportement et une limite. Une marque « directe » explique clairement ses arbitrages, mais ne devient pas brutale. Une marque « premium » protège la qualité et le détail, sans tomber dans la distance ou l’ostentation.</p>
+
+    <h2>Décision 8 : comment organiser les offres et sous-marques ?</h2>
+    <p>L’architecture de marque détermine comment l’entreprise présente ses activités, gammes, filiales ou labels. Trop de noms créent de la confusion et dispersent l’investissement. Une marque unique peut, à l’inverse, devenir trop large si les promesses sont incompatibles.</p>
+    <p>Le comité doit décider ce qui porte la marque principale, ce qui reste une offre descriptive et ce qui mérite une identité autonome. Cette décision précède le naming et le design.</p>
+
+    <h2>Les informations à réunir avant l’atelier de direction</h2>
+    <ul>
+      <li>entretiens avec la direction, le commerce et les opérations ;</li>
+      <li>retours clients, objections et raisons de perte ;</li>
+      <li>offres, marges, canaux et priorités de croissance ;</li>
+      <li>analyse des concurrents et alternatives ;</li>
+      <li>audit des messages, identités et expériences actuelles ;</li>
+      <li>contraintes juridiques, techniques ou de distribution.</li>
+    </ul>
+    <p>Sans cette matière, l’atelier risque de produire uniquement l’opinion des personnes présentes.</p>
+
+    <h2>Comment faire valider sans transformer le travail en compromis</h2>
+    <p>Le comité ne doit pas écrire collectivement chaque phrase. Il valide des options préparées, avec leurs conséquences. Le sponsor du projet tranche lorsque les avis divergent.</p>
+    <ol>
+      <li>présenter le diagnostic et les tensions à résoudre ;</li>
+      <li>examiner deux ou trois options stratégiques réellement différentes ;</li>
+      <li>évaluer leur pertinence, crédibilité et capacité de différenciation ;</li>
+      <li>choisir une direction et documenter ce qui est abandonné ;</li>
+      <li>tester la compréhension auprès de clients ou d’équipes lorsque nécessaire ;</li>
+      <li>valider la version finale et nommer son propriétaire.</li>
+    </ol>
+
+    <h2>Le livrable doit permettre de décider</h2>
+    <p>Une plateforme exploitable tient dans un document lisible, accompagné d’exemples d’application. Elle peut inclure : synthèse du marché, audiences, positionnement, promesse, preuves, personnalité, messages, architecture et règles de gouvernance.</p>
+    <p>Chaque équipe doit savoir comment l’utiliser. Le commerce traduit la promesse dans ses conversations. Les RH alignent la marque employeur. Les créatifs construisent un territoire d’expression. Le marketing choisit les contenus et canaux. La direction vérifie les investissements.</p>
+
+    <h2>Les erreurs qui produisent une plateforme inutile</h2>
+    <ul>
+      <li>commencer par les valeurs avant d’avoir choisi le marché et le public ;</li>
+      <li>chercher une formulation qui satisfait tout le monde ;</li>
+      <li>confondre ambition future et capacités actuelles ;</li>
+      <li>copier les mots des concurrents ;</li>
+      <li>laisser l’agence décider seule du positionnement ;</li>
+      <li>livrer le document sans plan de déploiement.</li>
+    </ul>
+
+    <h2>Quand faut-il revoir la plateforme ?</h2>
+    <p>Une plateforme ne change pas au rythme des campagnes. Elle mérite une révision lorsque l’entreprise change de marché, de modèle, de cible, d’architecture d’offres ou lorsque la perception réelle s’éloigne durablement de la stratégie.</p>
+    <p>Une identité visuelle datée ne signifie pas forcément que le positionnement doit changer. À l’inverse, un nouveau logo ne corrigera pas une promesse devenue confuse. Notre guide <a href="/blog/strategie-marque-branding-maroc">stratégie de marque au Maroc</a> replace ces décisions dans une démarche complète.</p>
+
+    <h2>De la plateforme au système de marque</h2>
+    <p>Après validation, la plateforme doit être traduite dans l’identité, le langage, les contenus, les offres et les points de contact. Une gouvernance précise qui peut adapter, qui valide et comment la cohérence est contrôlée.</p>
+    <p>Link Agency accompagne les comités de direction et fondateurs dans ce travail de cadrage, puis coordonne le déploiement stratégique et créatif. Découvrez notre expertise <a href="/branding">Branding et identité</a> ou <a href="https://wa.me/212699024526?text=Bonjour%20Badre%2C%20je%20souhaite%20cadrer%20notre%20plateforme%20de%20marque" target="_blank" rel="noopener noreferrer">présentez votre enjeu de marque sur WhatsApp</a>.</p>
+    `,
+    author: 'Badreddine Harkaoui',
+    publishDate: '2026-08-28',
+    slug: 'plateforme-marque-decisions-comite-direction',
+    category: 'branding',
+    image: '/assets/blog/guide-branding-maroc.jpg',
+    readTime: 10,
+    tags: ['plateforme de marque', 'comité de direction', 'positionnement', 'branding', 'stratégie de marque'],
+    metaDescription: 'Plateforme de marque : les 8 décisions que la direction doit valider sur le marché, la cible, la promesse, les preuves et l’architecture.',
+    metaKeywords: 'plateforme de marque, décisions comité direction, positionnement marque, promesse de marque, architecture de marque'
+  },
+  {
+    id: 'architecture-langues-maroc',
+    title: 'Français, arabe, darija ou anglais : quelle langue pour votre marque au Maroc ?',
+    seoTitle: 'Quelle langue pour une marque au Maroc ?',
+    excerpt: 'Une méthode pour choisir le rôle du français, de l’arabe, de la darija et de l’anglais selon l’audience, le canal et la situation de communication.',
+    content: `
+    <h2>La réponse courte</h2>
+    <p>Une marque au Maroc ne doit pas choisir une seule langue par habitude. Elle doit attribuer un rôle à chaque langue selon le public, l’objectif, le canal et le niveau de proximité attendu. Le français peut structurer certains usages corporate, l’arabe élargir l’accessibilité, la darija créer une proximité orale et l’anglais relier la marque à des publics internationaux.</p>
+    <p>La bonne architecture reste cohérente : elle adapte l’expression sans changer la promesse ni fabriquer plusieurs personnalités contradictoires.</p>
+
+    <h2>Pourquoi traduire chaque contenu dans quatre langues ne fonctionne pas</h2>
+    <p>La traduction systématique multiplie les coûts, ralentit les validations et produit souvent des textes peu naturels. Elle suppose aussi que toutes les audiences ont besoin de la même information au même endroit, ce qui est rarement vrai.</p>
+    <p>Une architecture linguistique répond à quatre questions :</p>
+    <ol>
+      <li>qui doit comprendre ou agir ?</li>
+      <li>dans quelle situation la marque intervient-elle ?</li>
+      <li>quel niveau de formalité et de proximité est attendu ?</li>
+      <li>quelle langue l’organisation peut-elle produire et valider correctement ?</li>
+    </ol>
+    <p>La réponse peut varier entre le site, le service client, une campagne sociale, un rapport institutionnel et un packaging.</p>
+
+    <h2>Le français : précision corporate et continuité de travail</h2>
+    <p>Le français reste fréquent dans les échanges corporate, les services B2B, la finance, certaines communications institutionnelles, les propositions commerciales et de nombreux environnements professionnels. Il permet souvent une continuité entre la direction, les partenaires et les supports de travail.</p>
+    <p>Son usage ne doit toutefois pas être automatique. Une marque qui s’adresse au grand public peut créer une distance si le français devient le seul registre. Même en B2B, un vocabulaire inutilement complexe réduit la compréhension. Le niveau de langue doit servir la clarté, pas démontrer un statut.</p>
+    <h3>Le français est pertinent lorsque</h3>
+    <ul>
+      <li>les décideurs et équipes l’utilisent déjà dans le cycle de vente ;</li>
+      <li>l’offre demande une explication technique ou contractuelle ;</li>
+      <li>la marque doit maintenir une cohérence avec un siège francophone ;</li>
+      <li>le canal et le public attendent un registre formel.</li>
+    </ul>
+
+    <h2>L’arabe : accessibilité, autorité et couverture</h2>
+    <p>L’arabe peut être indispensable pour des communications publiques, réglementaires, éducatives ou grand public. Il permet d’adresser des audiences plus larges et de donner à la marque une présence qui ne dépend pas uniquement du français.</p>
+    <p>Il faut distinguer la traduction correcte d’un texte et sa capacité à être lu naturellement. Un contenu institutionnel, une publicité et une interface n’utilisent pas les mêmes structures. La direction doit prévoir une validation linguistique et métier, en particulier lorsque l’information engage juridiquement ou financièrement l’entreprise.</p>
+    <h3>Points de vigilance</h3>
+    <ul>
+      <li>mise en page de droite à gauche réellement testée ;</li>
+      <li>typographie arabe lisible sur mobile ;</li>
+      <li>terminologie cohérente entre site, support et service client ;</li>
+      <li>validation des chiffres, unités, dates et noms propres ;</li>
+      <li>référencement construit sur les formulations réellement recherchées.</li>
+    </ul>
+
+    <h2>La darija : proximité et naturel, pas décor local</h2>
+    <p>La darija fonctionne lorsqu’elle correspond au contexte et à la personne qui parle. Elle peut créer une relation directe dans la vidéo, les réseaux sociaux, l’activation, le service client ou certaines campagnes grand public. Elle devient artificielle lorsqu’elle est ajoutée à une marque qui ne maîtrise ni ses nuances ni son ton.</p>
+    <p>La darija pose aussi des choix d’écriture : alphabet arabe, caractères latins ou combinaison. La décision dépend de l’audience, du canal et de la lisibilité. Il n’est pas nécessaire de standardiser chaque expression, mais les mots récurrents, le niveau de familiarité et les limites doivent être documentés.</p>
+    <h3>Une darija de marque doit préciser</h3>
+    <ul>
+      <li>qui peut la prendre en charge avec crédibilité ;</li>
+      <li>les situations dans lesquelles elle est appropriée ;</li>
+      <li>le degré d’humour ou de familiarité accepté ;</li>
+      <li>les termes produits qui restent en français, arabe ou anglais ;</li>
+      <li>les sujets sensibles qui exigent un registre plus formel.</li>
+    </ul>
+
+    <h2>L’anglais : internationalisation et audiences transfrontalières</h2>
+    <p>L’anglais est utile pour les marques internationales qui entrent au Maroc, les entreprises marocaines qui exportent, le tourisme, la technologie, certains talents et les investisseurs. Il peut servir de langue de coordination avec un siège ou de langue publique pour une audience internationale.</p>
+    <p>Un site entièrement en anglais n’est cependant pas toujours adapté au parcours local. Une marque peut conserver l’anglais pour le corporate et développer des contenus français ou arabes pour la conversion. L’architecture doit distinguer langue de marque, langue de travail et langue d’achat.</p>
+    <p>Le guide <a href="/blog/adapter-marque-internationale-maroc">adapter une marque internationale au Maroc</a> détaille cette articulation entre cohérence globale et pertinence locale.</p>
+
+    <h2>Et l’amazighe ?</h2>
+    <p>Une stratégie linguistique sérieuse ne doit pas l’ignorer. Sa pertinence dépend des obligations, des territoires, des publics et de la mission de l’organisation. Une institution, une marque nationale ou un projet ancré dans certaines régions peut devoir l’intégrer dès le cadrage.</p>
+    <p>Comme pour les autres langues, l’usage doit être confié à des personnes capables de produire et de valider correctement, et non traité comme un symbole ajouté en fin de processus.</p>
+
+    <h2>Construire la matrice audience, canal, objectif</h2>
+    <p>Commencez par les situations réelles plutôt que par une règle générale. Pour chaque ligne, choisissez une langue principale, une adaptation éventuelle et le responsable de validation.</p>
+    <ul>
+      <li><strong>site corporate</strong> : direction, partenaires, candidats et investisseurs ;</li>
+      <li><strong>pages d’offres</strong> : prospects proches de la décision ;</li>
+      <li><strong>réseaux sociaux</strong> : audiences variables selon la plateforme et le format ;</li>
+      <li><strong>campagnes média</strong> : segments, zones et objectifs précis ;</li>
+      <li><strong>WhatsApp et service client</strong> : langue choisie ou utilisée par l’interlocuteur ;</li>
+      <li><strong>documents institutionnels</strong> : obligations, autorité et accessibilité ;</li>
+      <li><strong>packaging et point de vente</strong> : information, compréhension et espace disponible.</li>
+    </ul>
+
+    <h2>Un exemple d’architecture pour une entreprise B2B</h2>
+    <p>Une entreprise industrielle peut utiliser le français comme langue principale du site et des contenus experts, l’anglais pour le groupe et les partenaires internationaux, l’arabe pour certaines informations institutionnelles ou de recrutement, et la darija dans des formats terrain ou employeur.</p>
+    <p>Cette configuration n’est pas une recommandation universelle. Elle montre qu’une langue peut remplir une fonction sans devoir dupliquer toute la production.</p>
+
+    <h2>Un exemple pour une marque retail grand public</h2>
+    <p>La marque peut construire son univers visuel de manière commune, utiliser arabe et français sur les informations essentielles, choisir la darija pour certains formats vidéo et conversations, puis réserver l’anglais à une gamme ou à des audiences internationales. Le choix dépendra du produit, du positionnement et des zones servies.</p>
+
+    <h2>Traduction, adaptation ou transcréation ?</h2>
+    <ul>
+      <li><strong>traduction</strong> : préserver précisément le sens d’une information ;</li>
+      <li><strong>adaptation</strong> : ajuster exemples, longueur, références et niveau de langue ;</li>
+      <li><strong>transcréation</strong> : recréer une accroche ou un concept pour produire un effet équivalent ;</li>
+      <li><strong>création native</strong> : penser directement dans la langue et le contexte du public.</li>
+    </ul>
+    <p>Une mention légale demande de la précision. Une campagne demande parfois une transcréation. Une vidéo en darija gagne souvent à être conçue nativement.</p>
+
+    <h2>Le référencement multilingue exige de vraies pages</h2>
+    <p>Une version française et une version arabe ne doivent pas être mélangées dans la même page si elles ciblent des requêtes distinctes. Chaque version possède son URL, son titre, sa description, sa structure et ses liens. Les balises de langue doivent relier uniquement les versions réellement équivalentes.</p>
+    <p>Les mots-clés ne se traduisent pas mécaniquement. Il faut observer les formulations utilisées, les variantes d’écriture et l’intention. Le contenu doit être accessible au moteur sans dépendre d’un changement de langue uniquement exécuté dans le navigateur.</p>
+
+    <h2>La gouvernance linguistique</h2>
+    <p>Pour chaque langue, nommez un responsable de la qualité et un validateur métier. Créez un glossaire pour les offres, termes techniques, noms de produits, signatures et expressions interdites. Conservez les versions dans un même système afin d’éviter les mises à jour partielles.</p>
+    <p>L’IA peut aider à préparer une traduction ou vérifier la cohérence, mais elle ne doit pas valider seule une nuance culturelle, une promesse ou un contenu réglementé. La responsabilité reste humaine.</p>
+
+    <h2>Les erreurs les plus fréquentes</h2>
+    <ul>
+      <li>choisir le français uniquement parce qu’il est utilisé en interne ;</li>
+      <li>ajouter de la darija sans personne capable de l’incarner ;</li>
+      <li>publier une version arabe moins complète que la version française ;</li>
+      <li>mélanger plusieurs langues dans une phrase sans fonction claire ;</li>
+      <li>traduire les mots-clés au lieu d’étudier les recherches ;</li>
+      <li>créer quatre versions sans capacité de maintenance.</li>
+    </ul>
+
+    <h2>Une seule marque, plusieurs registres maîtrisés</h2>
+    <p>La plateforme de marque doit rester commune. Les langues modulent la proximité, l’autorité et l’accessibilité. Pour définir ce noyau, consultez les <a href="/blog/plateforme-marque-decisions-comite-direction">huit décisions d’une plateforme de marque</a>.</p>
+    <p>Link Agency cadre l’architecture éditoriale et coordonne les expertises linguistiques nécessaires selon le mandat. Découvrez notre approche <a href="/content-digital">Contenu digital</a> ou <a href="https://wa.me/212699024526?text=Bonjour%20Badre%2C%20je%20souhaite%20clarifier%20notre%20architecture%20linguistique%20de%20marque" target="_blank" rel="noopener noreferrer">échangez avec Badre sur WhatsApp</a>.</p>
+    `,
+    author: 'Badreddine Harkaoui',
+    publishDate: '2026-08-28',
+    slug: 'francais-arabe-darija-anglais-strategie-marque-maroc',
+    category: 'branding',
+    image: '/assets/blog/branding-local-maroc-2025.jpg',
+    readTime: 10,
+    tags: ['langues marketing maroc', 'darija', 'arabe', 'français', 'anglais', 'stratégie de marque'],
+    metaDescription: 'Français, arabe, darija ou anglais : choisissez la langue de votre marque au Maroc selon l’audience, le canal et l’objectif.',
+    metaKeywords: 'quelle langue marque maroc, marketing darija, communication arabe maroc, marque bilingue, stratégie éditoriale multilingue'
+  },
+  {
+    id: 'content-factory-gouvernance',
+    title: 'Organiser une content factory sans produire du contenu inutile',
+    seoTitle: 'Content factory : produire moins, produire utile',
+    excerpt: 'Un système de production éditoriale qui protège la marque, relie chaque contenu à un objectif et transforme une idée forte en formats utiles.',
+    content: `
+    <h2>La réponse courte</h2>
+    <p>Une content factory n’est pas une machine à publier davantage. C’est un système qui transforme les priorités de la marque en contenus cohérents, distribués sur les bons canaux et mesurés selon leur rôle. Elle devient utile lorsque le volume, les intervenants ou les formats rendent la coordination difficile.</p>
+    <p>Le système doit commencer par les décisions éditoriales, pas par un calendrier. Sans direction, l’industrialisation accélère surtout la production de contenus interchangeables.</p>
+
+    <h2>Pourquoi les entreprises produisent beaucoup sans construire d’actif</h2>
+    <p>Les demandes arrivent de toutes parts : un post pour un événement, une vidéo produit, une actualité RH, une campagne commerciale et un article SEO. Chaque demande semble raisonnable séparément. Ensemble, elles fragmentent la marque et consomment le temps de validation.</p>
+    <p>Les symptômes sont visibles :</p>
+    <ul>
+      <li>le calendrier est plein mais les offres restent mal comprises ;</li>
+      <li>chaque canal invente son propre ton ;</li>
+      <li>les mêmes sujets sont recréés plusieurs fois ;</li>
+      <li>les contenus à forte valeur restent bloqués faute de décideur ;</li>
+      <li>la mesure se limite aux vues et aux interactions ;</li>
+      <li>la production s’arrête dès que le responsable est absent.</li>
+    </ul>
+    <p>Une content factory corrige ce système avant d’augmenter le volume.</p>
+
+    <h2>Étape 1 : relier la production à la stratégie de marque</h2>
+    <p>La <a href="/blog/plateforme-marque-decisions-comite-direction">plateforme de marque</a> définit les audiences, la promesse, les preuves et la personnalité. L’architecture éditoriale traduit ensuite ces décisions en sujets que la marque peut légitimement posséder.</p>
+    <p>Chaque territoire éditorial doit répondre à une fonction :</p>
+    <ul>
+      <li><strong>faire comprendre</strong> : expliquer le problème, l’offre et la méthode ;</li>
+      <li><strong>faire préférer</strong> : exprimer le point de vue et la personnalité ;</li>
+      <li><strong>faire croire</strong> : apporter preuves, démonstrations et références autorisées ;</li>
+      <li><strong>faire agir</strong> : conduire vers une conversation, un essai, une visite ou un achat ;</li>
+      <li><strong>faire durer</strong> : aider, fidéliser et développer l’usage.</li>
+    </ul>
+
+    <h2>Étape 2 : créer une seule liste de priorités éditoriales</h2>
+    <p>Les sujets ne doivent pas vivre dans plusieurs calendriers. Une liste commune rassemble les demandes, leur public, leur objectif, leur niveau de priorité, leur propriétaire et leur date utile.</p>
+    <p>Un comité éditorial court décide ce qui entre en production. Pour chaque nouveau sujet, il demande :</p>
+    <ol>
+      <li>quelle décision ou perception voulons-nous influencer ?</li>
+      <li>quelle audience a réellement besoin de ce contenu ?</li>
+      <li>quelle preuve ou information rend le sujet crédible ?</li>
+      <li>sur quel canal peut-il remplir son rôle ?</li>
+      <li>quel contenu moins prioritaire sera retardé ou abandonné ?</li>
+    </ol>
+
+    <h2>Étape 3 : partir d’un contenu source</h2>
+    <p>La production devient plus cohérente lorsqu’elle part d’une matière forte : entretien avec un expert, étude de cas autorisée, rapport, démonstration, événement, recherche ou guide de fond. Cette source contient les idées, preuves et formulations principales.</p>
+    <p>Elle peut ensuite devenir un article, un carrousel, une vidéo, une séquence courte, une newsletter ou un support commercial. La déclinaison n’est pas un simple découpage : chaque format est réécrit pour son usage.</p>
+
+    <h2>Étape 4 : définir les rôles de production</h2>
+    <ul>
+      <li><strong>propriétaire éditorial</strong> : choisit les sujets et répond de la cohérence ;</li>
+      <li><strong>expert source</strong> : apporte la matière, les preuves et les nuances ;</li>
+      <li><strong>rédaction ou conception</strong> : structure le message pour le format ;</li>
+      <li><strong>direction artistique</strong> : protège le système visuel ;</li>
+      <li><strong>production</strong> : réalise, monte, développe ou décline ;</li>
+      <li><strong>validation</strong> : vérifie marque, exactitude et risque ;</li>
+      <li><strong>distribution</strong> : publie, amplifie et suit les réactions.</li>
+    </ul>
+    <p>Ces rôles peuvent être internes ou externes. Ils doivent rester visibles même lorsqu’une seule personne en cumule plusieurs. La <a href="/blog/gouvernance-marketing-equipe-agence-freelances">matrice de gouvernance marketing</a> aide à répartir les responsabilités.</p>
+
+    <h2>Étape 5 : améliorer le brief avant d’améliorer les outils</h2>
+    <p>Un bon brief permet à un spécialiste de prendre des décisions sans redemander le contexte. Il contient l’objectif, le public, le message, la preuve, le format, le canal, le CTA, les contraintes, les références et le décideur.</p>
+    <p>Le brief indique également ce qu’il ne faut pas faire : promesses interdites, sujets sensibles, expressions hors marque, droits non obtenus ou formats incompatibles avec le canal.</p>
+
+    <h2>Étape 6 : construire un workflow avec peu de statuts</h2>
+    <p>Une chaîne simple peut suffire : idée, cadrage, production, validation, programmation, publication, apprentissage. Chaque statut possède un propriétaire et une condition de sortie.</p>
+    <p>Les outils n’ont pas besoin d’être complexes. Un tableau partagé bien tenu vaut mieux qu’une plateforme puissante utilisée par la moitié des intervenants. Les fichiers sources, validations et versions finales doivent être liés au sujet.</p>
+
+    <h2>Étape 7 : instaurer un contrôle qualité en trois niveaux</h2>
+    <h3>Exactitude</h3>
+    <p>Noms, données, offres, prix, sources, droits et mentions sont vérifiés. Tout chiffre possède une origine et une date.</p>
+    <h3>Marque</h3>
+    <p>Le contenu respecte le positionnement, le ton, l’identité et le niveau de qualité. Il ne copie pas un format simplement parce qu’il est populaire.</p>
+    <h3>Canal</h3>
+    <p>Longueur, rythme, sous-titres, lisibilité mobile, miniature, lien et CTA correspondent à l’usage réel de la plateforme.</p>
+
+    <h2>Étape 8 : utiliser l’IA sans perdre la voix</h2>
+    <p>L’IA peut transcrire un entretien, classer les idées, préparer un plan, décliner des variantes ou vérifier une cohérence. Elle ne doit pas inventer les preuves, décider du positionnement ou publier sans validation.</p>
+    <p>Le système doit préciser les données qui peuvent être envoyées dans un outil, les sources obligatoires, le niveau de contrôle et les contenus qui restent exclusivement humains. La vitesse n’a de valeur que si la marque reste identifiable.</p>
+
+    <h2>Étape 9 : organiser la réutilisation sans répétition</h2>
+    <p>Une idée peut être répétée si le format, l’angle ou le niveau de détail changent. La répétition construit la mémorisation ; la duplication fatigue l’audience.</p>
+    <p>À partir d’un guide de fond, la marque peut produire :</p>
+    <ul>
+      <li>un diagnostic court pour LinkedIn ;</li>
+      <li>une vidéo qui explique une décision ;</li>
+      <li>un carrousel de méthode ;</li>
+      <li>une FAQ pour le site ;</li>
+      <li>un extrait pour une proposition commerciale ;</li>
+      <li>une version adaptée à une autre langue ou audience.</li>
+    </ul>
+
+    <h2>Étape 10 : mesurer la fonction, pas seulement le format</h2>
+    <p>Un article SEO, une vidéo de marque et une publication de conversion n’ont pas le même horizon. Le reporting doit respecter leur rôle.</p>
+    <ul>
+      <li><strong>compréhension</strong> : temps de lecture, progression, questions reçues ;</li>
+      <li><strong>préférence</strong> : sauvegardes, partages qualifiés, recherches de marque ;</li>
+      <li><strong>preuve</strong> : consultation des cas, demandes commerciales, utilisation par le commerce ;</li>
+      <li><strong>action</strong> : conversations, formulaires, essais et opportunités ;</li>
+      <li><strong>efficacité opérationnelle</strong> : délai, reprises, coût et taux de réutilisation.</li>
+    </ul>
+
+    <h2>La cadence minimale</h2>
+    <p>Une revue mensuelle choisit les grands sujets. Un point hebdomadaire débloque la production. Une revue trimestrielle examine les territoires, les performances et les contenus à mettre à jour. La cadence doit rester compatible avec la capacité réelle.</p>
+    <p>Deux contenus solides et correctement distribués peuvent avoir plus de valeur qu’une publication quotidienne sans preuve ni point de vue.</p>
+
+    <h2>Comment démarrer en trente jours</h2>
+    <ol>
+      <li>auditer les contenus, canaux, ressources et demandes récurrentes ;</li>
+      <li>définir quatre ou cinq fonctions éditoriales ;</li>
+      <li>choisir un contenu source prioritaire ;</li>
+      <li>nommer le propriétaire, les experts et le validateur ;</li>
+      <li>installer le workflow et le contrôle qualité ;</li>
+      <li>produire un cycle complet, mesurer les blocages puis ajuster.</li>
+    </ol>
+
+    <h2>Les situations où une content factory n’est pas nécessaire</h2>
+    <p>Une entreprise qui publie rarement, avec un seul décideur et peu de formats n’a pas besoin d’une structure lourde. Elle peut utiliser un calendrier simple et un brief solide. La factory devient pertinente lorsque le volume, les langues, les marques ou les intervenants créent un coût de coordination.</p>
+
+    <h2>Transformer la production en actif de marque</h2>
+    <p>Link Agency peut cadrer l’architecture éditoriale, installer le système de production et coordonner les spécialistes nécessaires, sans présenter ces ressources comme une équipe interne permanente. L’objectif reste une direction unique derrière des formats variés.</p>
+    <p>Découvrez nos expertises <a href="/content-digital">Contenu digital</a> et <a href="/social-media">Social Media</a>, ou <a href="https://wa.me/212699024526?text=Bonjour%20Badre%2C%20je%20souhaite%20organiser%20notre%20production%20de%20contenu" target="_blank" rel="noopener noreferrer">présentez votre dispositif sur WhatsApp</a>.</p>
+    `,
+    author: 'Badreddine Harkaoui',
+    publishDate: '2026-08-28',
+    slug: 'organiser-content-factory-sans-contenu-inutile',
+    category: 'digital',
+    image: '/assets/blog/strategie-reseaux-sociaux.jpg',
+    readTime: 10,
+    tags: ['content factory', 'production de contenu', 'gouvernance éditoriale', 'social media', 'stratégie de contenu'],
+    metaDescription: 'Content factory : organisez la production, les validations et la réutilisation des contenus sans diluer votre marque ni publier inutilement.',
+    metaKeywords: 'content factory maroc, organisation production contenu, gouvernance éditoriale, stratégie contenu, workflow social media'
+  },
+  {
     id: 'local-casablanca',
     title: "Choisir une Agence Marketing Digital à Casablanca : 7 Critères Stratégiques pour les Directions Marketing",
+    seoTitle: "Choisir une agence marketing à Casablanca : 7 critères",
     excerpt: "Guide opérationnel pour évaluer et sélectionner une agence marketing digital à Casablanca. Critères, signaux faibles et méthode de short-list pour les marques au Maroc.",
     content: `
-    <h2>Le marché des agences digitales à Casablanca en 2026 : densité et opacité</h2>
-    <p>Casablanca concentre l'écrasante majorité des agences marketing digital du Maroc. Cette densité, qui pourrait sembler une opportunité pour les annonceurs, crée en réalité une difficulté structurelle : comment distinguer un véritable partenaire stratégique d'un prestataire d'exécution déguisé ? Pour une direction marketing établie, le coût d'erreur d'un mauvais choix d'agence se chiffre en mois de production perdus, en budgets média mal alloués et en perte de confiance interne.</p>
-    <p>Cet article propose une grille d'évaluation rigoureuse, issue de notre expérience terrain auprès de marques au Maroc à Casablanca, dans la finance, le retail, l'industrie et les services B2B.</p>
+    <h2>Le marché des agences digitales à Casablanca en 2026 : une offre dense et difficile à comparer</h2>
+    <p>Casablanca réunit de nombreux sièges, annonceurs et prestataires marketing. Cette densité donne du choix, mais rend les propositions difficiles à comparer : une agence créative, un spécialiste média et une structure de pilotage peuvent employer les mêmes mots tout en vendant des responsabilités très différentes.</p>
+    <p>Pour une direction marketing, le coût d’un mauvais choix se mesure en temps perdu, en budgets mal arbitrés et en actifs de marque incohérents. Cette grille aide à évaluer le modèle, la séniorité et la méthode avant de comparer les livrables.</p>
 
     <h2>Critère 1 : la qualité du cadrage stratégique en avant-vente</h2>
     <p>Une agence digne de ce nom ne se contente pas de répondre à un brief : elle le challenge. Lors du premier rendez-vous, observez la nature des questions posées. Une agence sérieuse cherchera à comprendre votre modèle économique, vos cycles de vente, votre saisonnalité, votre concurrence et vos contraintes internes avant de parler livrables. Si la conversation dérive immédiatement vers les outils, les formats créatifs ou les budgets média, c'est un signal faible.</p>
 
     <h2>Critère 2 : la maîtrise du marché casablancais</h2>
-    <p>Le marché de Casablanca a ses codes : audiences, médias, partenaires, créateurs, prestataires techniques, contraintes administratives. Une agence implantée localement à Casablanca dispose d'un réseau opérationnel qui réduit drastiquement les délais d'exécution. À l'inverse, une agence purement digitale, sans ancrage physique, peut sous-estimer les contraintes spécifiques au marché marocain : modes de paiement, comportements d'audience, langues d'usage.</p>
+    <p>Le marché de Casablanca a ses codes : audiences, médias, partenaires, créateurs, prestataires techniques et langues d’usage. Un partenaire implanté localement peut mieux anticiper certaines contraintes opérationnelles. L’ancrage géographique ne suffit toutefois pas : demandez comment l’agence transforme cette connaissance en décisions concrètes pour votre catégorie.</p>
 
     <h2>Critère 3 : la profondeur de l'offre intégrée</h2>
     <p>Le marketing digital ne se réduit plus au paid media ou au SEO. Les directions marketing les plus matures cherchent un partenaire capable de penser l'écosystème global : <a href="/branding">stratégie de marque</a>, <a href="/marketing-digital">acquisition payante</a>, <a href="/social-media">social media</a>, <a href="/content-digital">production de contenu</a>, <a href="/evenementiel">événementiel</a> et <a href="/influence-marketing">influence</a>. Une offre fragmentée oblige à multiplier les prestataires et à porter en interne le coût de coordination.</p>
@@ -1563,23 +2553,24 @@ export const blogPosts: BlogPost[] = [
     <h2>Critère 4 : la rigueur du pilotage et du reporting</h2>
     <p>Demandez à voir un exemple anonymisé de reporting mensuel. Une agence solide produit des dashboards orientés business — ROAS, CPL, CAC, contribution incrémentale — pas des extractions GA4 brutes. Si l'agence n'est pas capable de relier ses actions aux indicateurs business, vous porterez seul le travail de traduction.</p>
 
-    <h2>Critère 5 : la stabilité de l'équipe</h2>
-    <p>Le secteur des agences à Casablanca connaît un turnover important. Une équipe stable est un signal fort : elle traduit une qualité managériale, une rentabilité saine et une capacité à fidéliser les talents. Demandez explicitement qui sera votre interlocuteur pendant les 12 prochains mois.</p>
+    <h2>Critère 5 : l’identité des personnes qui feront réellement le travail</h2>
+    <p>Demandez qui pilotera le mandat, qui produira, quelles compétences seront mobilisées ponctuellement et comment la continuité sera assurée. Une présentation brillante ne dit rien du niveau de la personne présente chaque semaine. Le modèle doit être transparent, qu’il repose sur une équipe salariée, une structure resserrée ou un réseau de spécialistes.</p>
 
     <h2>Critère 6 : la transparence sur le modèle économique</h2>
-    <p>Méfiez-vous des agences qui rémunèrent leurs équipes commerciales sur les budgets média transférés : ce modèle crée un conflit d'intérêt structurel. Privilégiez les agences en honoraires fixes, où la valeur est dans le conseil et l'exécution, pas dans le volume média intermédié.</p>
+    <p>Demandez comment sont calculés les honoraires, les commissions média, les frais techniques et les achats externes. Une commission n’est pas nécessairement inadaptée si elle est connue et alignée avec le mandat ; elle devient problématique lorsqu’elle influence les recommandations sans être explicitée. Comparez le coût total et les responsabilités incluses.</p>
 
     <h2>Critère 7 : les références sectorielles et la confidentialité</h2>
-    <p>Une agence sérieuse partage des références sectorielles pertinentes — sans nécessairement les nommer publiquement. La discrétion est souvent un signal de maturité : les marques au Maroc à Casablanca n'aiment pas voir leur logo en première page d'un site d'agence.</p>
+    <p>Une agence sérieuse doit pouvoir expliquer des situations comparables, sa contribution exacte et les limites des résultats présentés. Certaines références sont publiques, d’autres restent confidentielles. Dans les deux cas, vérifiez les autorisations, le rôle réel du prestataire et la pertinence du cas pour votre propre contexte.</p>
 
     <h2>Méthode de short-list recommandée</h2>
     <p>Notre recommandation pour une direction marketing : engager une short-list de 3 agences maximum, organiser un brief commun, demander une réponse en 2 semaines, et noter chaque agence sur les 7 critères ci-dessus. La meilleure agence n'est pas la moins chère, ni la plus créative en présentation : c'est celle qui démontre la meilleure compréhension de votre business.</p>
 
     <h2>Pour aller plus loin</h2>
-    <p>Si vous souhaitez évaluer Link Agency comme partenaire potentiel pour vos enjeux marketing à Casablanca, découvrez notre <a href="/agence-marketing-digital-casablanca">page dédiée à notre offre casablancaise</a> ou contactez-nous pour un premier échange confidentiel.</p>
+    <p>Si vous souhaitez évaluer Link Agency, découvrez notre <a href="/agence-marketing-digital-casablanca">offre à Casablanca</a>, comparez <a href="/blog/direction-marketing-externalisee-vs-agence-recrutement">agence, recrutement et direction externalisée</a>, ou <a href="https://wa.me/212699024526?text=Bonjour%20Badre%2C%20je%20souhaite%20echanger%20sur%20notre%20organisation%20marketing" target="_blank" rel="noopener noreferrer">échangez directement avec Badre sur WhatsApp</a>.</p>
     `,
-    author: 'Link Agency',
+    author: 'Badreddine Harkaoui',
     publishDate: '2026-05-10',
+    modifiedDate: '2026-08-28',
     slug: 'choisir-agence-marketing-digital-casablanca',
     category: 'conseils',
     image: '/assets/blog/agence-casablanca.jpg',
@@ -1620,8 +2611,9 @@ export const blogPosts: BlogPost[] = [
     <h2>Pour aller plus loin</h2>
     <p>Si vous pilotez le marketing d'un hôtel, riad, restaurant ou marque lifestyle à Marrakech, découvrez notre <a href="/agence-marketing-digital-marrakech">offre dédiée aux acteurs marrakchis</a> ou contactez-nous pour un audit confidentiel de votre dispositif actuel.</p>
     `,
-    author: 'Link Agency',
+    author: 'Badreddine Harkaoui',
     publishDate: '2026-05-10',
+    modifiedDate: '2026-08-28',
     slug: 'marketing-hotelier-marrakech-strategie',
     category: 'digital',
     image: '/assets/blog/marketing-marrakech.jpg',
@@ -1662,8 +2654,9 @@ export const blogPosts: BlogPost[] = [
     <h2>Pour aller plus loin</h2>
     <p>Si vous pilotez la communication d'une institution, ONG ou organisme international à Rabat, découvrez notre <a href="/agence-communication-rabat">page dédiée à la communication institutionnelle</a> ou contactez-nous pour un échange confidentiel sur votre dispositif.</p>
     `,
-    author: 'Link Agency',
+    author: 'Badreddine Harkaoui',
     publishDate: '2026-05-10',
+    modifiedDate: '2026-08-28',
     slug: 'communication-institutionnelle-rabat',
     category: 'conseils',
     image: '/assets/blog/communication-rabat.jpg',
@@ -1672,7 +2665,7 @@ export const blogPosts: BlogPost[] = [
     metaDescription: "Communication institutionnelle à Rabat : enjeux, codes et bonnes pratiques pour ministères, ONG, ambassades et organismes internationaux au Maroc.",
     metaKeywords: "communication institutionnelle rabat, agence communication rabat, agence ONG rabat, communication publique maroc, agence institutionnelle maroc"
   }
-];
+].filter(({ slug }) => !retiredBlogSlugs.has(slug));
 
 // FAQ enrichie avec mots-clés SEO
 export const faqsEnriched: FAQ[] = [
