@@ -4,6 +4,7 @@ import {
   captureAttribution,
   trackContactCtaClick,
   trackEmailClick,
+  trackFileDownload,
   trackPageView,
   trackPhoneClick,
   trackWhatsAppClick,
@@ -48,7 +49,8 @@ export const AnalyticsController = () => {
 
       const href = anchor.getAttribute("href") || "";
       const locationName = analyticsLocation(anchor);
-      if (/wa\.me|api\.whatsapp\.com/i.test(href)) trackWhatsAppClick(locationName);
+      if (anchor.hasAttribute("download") || /\.pdf(?:$|[?#])/i.test(href)) trackFileDownload(href, locationName);
+      else if (/wa\.me|api\.whatsapp\.com/i.test(href)) trackWhatsAppClick(locationName);
       else if (href.startsWith("tel:")) trackPhoneClick(locationName);
       else if (href.startsWith("mailto:")) trackEmailClick(locationName);
       else {

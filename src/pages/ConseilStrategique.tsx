@@ -33,7 +33,7 @@ const ConseilStrategique = () => <EditorialServicePage
   localTitle="Une stratégie conçue pour le marché marocain et lisible à l’international."
   localBody="Les décisions tiennent compte des réalités commerciales, culturelles et linguistiques du Maroc, tout en restant compatibles avec les standards de gouvernance d’un groupe ou d’une marque internationale."
   faqs={serviceFaqs["conseil-strategique"]}
-  cta={{ title: "Le problème n’est pas toujours le manque d’actions.", body: "Il est souvent l’absence de choix, de séquençage ou de gouvernance. C’est ce que nous pouvons clarifier ensemble.", label: "Ouvrir le dossier" }}
+  cta={{ title: "Le problème n’est pas toujours le manque d’actions.", body: "Il est souvent l’absence de choix, de séquençage ou de gouvernance. C’est ce que nous pouvons clarifier ensemble.", label: "Cadrer le sujet" }}
 />;
 
 export default ConseilStrategique;

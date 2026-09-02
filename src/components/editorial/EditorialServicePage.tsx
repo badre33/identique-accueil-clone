@@ -26,6 +26,8 @@ interface EditorialServicePageProps {
     dossierBody: string;
     accent: Accent;
     primaryLabel: string;
+    secondaryLabel?: string;
+    secondaryTo?: string;
   };
   pillarsEyebrow?: string;
   pillarsTitle: ReactNode;

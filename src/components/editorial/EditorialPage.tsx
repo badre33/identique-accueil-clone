@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight, FileDown } from "lucide-react";
 import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { WHATSAPP_URL } from "@/config/contact";
@@ -64,9 +64,15 @@ export const EditorialPageHero = ({
           <p className="max-w-2xl text-base leading-8 text-black/65 sm:text-lg">{description}</p>
           <div className="flex flex-wrap gap-3">
             {secondaryLabel && secondaryTo && (
-              <Link to={secondaryTo} className="inline-flex min-h-12 items-center gap-2 border border-black/25 px-5 text-xs font-semibold uppercase tracking-[0.12em] transition hover:border-black">
-                {secondaryLabel}
-              </Link>
+              secondaryTo.toLowerCase().includes(".pdf") ? (
+                <a href={secondaryTo} download="LinkAgency_Presentation_2026.pdf" data-analytics-location={`editorial_hero_download_${index}`} className="inline-flex min-h-12 items-center gap-2 border border-black/25 px-5 text-xs font-semibold uppercase tracking-[0.12em] transition hover:border-black hover:bg-black hover:text-white">
+                  {secondaryLabel}<FileDown className="h-4 w-4" />
+                </a>
+              ) : (
+                <Link to={secondaryTo} className="inline-flex min-h-12 items-center gap-2 border border-black/25 px-5 text-xs font-semibold uppercase tracking-[0.12em] transition hover:border-black">
+                  {secondaryLabel}
+                </Link>
+              )
             )}
             <EditorialAction href={primaryTo} source={`editorial_hero_${index}`} className="editorial-button-primary">
               {primaryLabel}<ArrowRight className="h-4 w-4" />

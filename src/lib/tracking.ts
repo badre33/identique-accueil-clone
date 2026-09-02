@@ -127,6 +127,19 @@ export const trackGenerateLead = (params: {
 export const trackOutbound = (url: string, label?: string) =>
   trackEvent("outbound_click", { category: "outbound", label: label ?? url });
 
+export const trackFileDownload = (url: string, ctaLocation: string) => {
+  const fileName = url.split("/").pop()?.split("?")[0] || "document";
+  const extension = fileName.includes(".") ? fileName.split(".").pop() : undefined;
+  trackEvent("file_download", {
+    category: "engagement",
+    label: ctaLocation,
+    cta_location: ctaLocation,
+    file_name: fileName,
+    file_extension: extension,
+    link_url: url,
+  });
+};
+
 export const captureAttribution = () => {
   if (typeof window === "undefined" || !hasAnalyticsConsent()) return;
 

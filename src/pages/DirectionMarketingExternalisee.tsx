@@ -56,8 +56,8 @@ const DirectionMarketingExternalisee = () => (
         dossierBody="Badre garde la stratégie, les arbitrages et la relation de direction. Les expertises sont mobilisées selon la feuille de route, pas selon un catalogue figé."
         accent="violet"
         primaryLabel="Évaluer le besoin"
-        secondaryLabel="Voir les missions"
-        secondaryTo="/collaborations"
+        secondaryLabel="Télécharger la présentation"
+        secondaryTo="/documents/LinkAgency_Dossier_Marque_2026_FINAL.pdf"
       />
 
       <section className="editorial-section bg-[#d8cec1]">
