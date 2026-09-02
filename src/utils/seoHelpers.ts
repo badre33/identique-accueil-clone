@@ -3,7 +3,7 @@
 export const SEO_CONSTANTS = {
   SITE_NAME: "Link Agency",
   BASE_URL: "https://linkagency.ma",
-  DEFAULT_IMAGE: "https://linkagency.ma/logo-link-agency.png",
+  DEFAULT_IMAGE: "https://linkagency.ma/og-link-agency-2026.jpg",
   TWITTER_HANDLE: "@LinkAgencyMA",
   LANGUAGES: ["fr", "ar", "en"] as const,
   LOCATIONS: ["casablanca", "rabat", "marrakech"] as const
@@ -17,8 +17,8 @@ export const generatePageMeta = (page: string) => {
     image?: string;
   }> = {
     home: {
-      title: "Link Agency — Cabinet Conseil Communication Corporate au Maroc",
-      description: "Cabinet conseil en communication corporate au Maroc. Branding, stratégie digitale et événementiel pour les entreprises ambitieuses. Casablanca, Rabat, Marrakech.",
+      title: "Direction marketing externalisée au Maroc | Link Agency",
+      description: "Link Agency pilote votre stratégie de marque, vos contenus, vos réseaux sociaux et votre acquisition comme une direction marketing externalisée au Maroc.",
       keywords: ""
     },
     branding: {
@@ -42,9 +42,9 @@ export const generatePageMeta = (page: string) => {
       keywords: "contenu digital maroc, social media casablanca, gestion réseaux sociaux, content marketing rabat"
     },
     "inside-link": {
-      title: "Inside Link Agency - Notre Vision & Équipe Creative au Maroc",
-      description: "Découvrez l'équipe Link Agency, notre vision créative et notre approche unique du marketing digital au Maroc.",
-      keywords: "équipe link agency, vision créative, agence marketing digital maroc, culture entreprise"
+      title: "Link Agency et son fondateur | Direction marketing au Maroc",
+      description: "Découvrez Badreddine Harkaoui, fondateur de Link Agency, son parcours et le modèle senior-led du cabinet à Casablanca.",
+      keywords: "badreddine harkaoui, fondateur link agency, cabinet marketing casablanca, direction marketing maroc"
     },
     collaborations: {
       title: "Nos Collaborations & Partenariats - Portfolio Link Agency Maroc",

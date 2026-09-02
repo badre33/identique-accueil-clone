@@ -18,10 +18,10 @@ interface SEOHeadProps {
 }
 
 export const SEOHead = ({
-  title = "Direction marketing externalisée et branding au Maroc | Link Agency",
-  description = "Link Agency pilote la stratégie, le branding, les contenus et la performance des entreprises ambitieuses au Maroc, comme un pôle marketing externalisé.",
+  title = "Direction marketing externalisée au Maroc | Link Agency",
+  description = "Link Agency pilote votre stratégie de marque, vos contenus, vos réseaux sociaux et votre acquisition comme une direction marketing externalisée au Maroc.",
   keywords,
-  image = "https://linkagency.ma/og-default.jpg",
+  image = "https://linkagency.ma/og-link-agency-2026.jpg",
   url = "https://linkagency.ma",
   type = "website",
   publishedTime,
@@ -38,6 +38,7 @@ export const SEOHead = ({
   const isEnglish = locale === "en_US" || locale === "en_GB";
   const primaryHrefLang = locale === "ar_MA" ? "ar-MA" : isEnglish ? "en" : "fr-MA";
   const documentLanguage = locale === "ar_MA" ? "ar" : isEnglish ? "en" : "fr";
+  const openGraphType = type === "service" ? "website" : type;
 
   return (
     <Head>
@@ -65,11 +66,13 @@ export const SEOHead = ({
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
+      <meta property="og:image:secure_url" content={image} />
+      <meta property="og:image:type" content="image/jpeg" />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
-      <meta property="og:image:alt" content={title} />
+      <meta property="og:image:alt" content="Link Agency — Une direction claire derrière votre marque" />
       <meta property="og:url" content={url} />
-      <meta property="og:type" content={type} />
+      <meta property="og:type" content={openGraphType} />
       <meta property="og:locale" content={locale} />
       <meta property="og:site_name" content={siteName} />
       {publishedTime && <meta property="article:published_time" content={publishedTime} />}
@@ -80,7 +83,7 @@ export const SEOHead = ({
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
-      <meta name="twitter:image:alt" content={title} />
+      <meta name="twitter:image:alt" content="Link Agency — Une direction claire derrière votre marque" />
       
       {/* Meta supplémentaires pour le SEO local */}
       <meta name="geo.region" content="MA" />
