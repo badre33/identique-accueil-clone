@@ -1,4 +1,5 @@
 import { SOCIAL_LINKS } from "@/config/social";
+import { DEFAULT_SOCIAL_IMAGE } from "@/config/seo";
 
 // Données structurées Schema.org. Ne publier que des faits vérifiables.
 
@@ -18,7 +19,7 @@ export const generateOrganizationSchema = () => ({
   slogan: "Stratégie. Contenu. Performance.",
   description: "Direction marketing externalisée et direction de marque pour entreprises ambitieuses au Maroc. Link Agency pilote stratégie, branding, contenu et performance avec une direction senior directement impliquée.",
   logo: "https://linkagency.ma/assets/brand/link-agency-logo.png",
-  image: "https://linkagency.ma/og-link-agency-2026.jpg",
+  image: DEFAULT_SOCIAL_IMAGE,
   foundingDate: "2015",
   founder: {
     "@type": "Person",
@@ -91,7 +92,7 @@ export const generateLocalBusinessSchema = (city: LocalCity = "casablanca") => (
   "@id": `https://linkagency.ma/#service-${city}`,
   name: `Link Agency, interventions à ${CITY_DATA[city].locality}`,
   url: CITY_DATA[city].url,
-  image: "https://linkagency.ma/og-link-agency-2026.jpg",
+  image: DEFAULT_SOCIAL_IMAGE,
   telephone: "+212699024526",
   email: "bharkaoui@linkagency.ma",
   parentOrganization: organizationRef,
@@ -133,7 +134,7 @@ export const generateWebPageSchema = (title: string, description: string, url: s
   inLanguage: "fr-MA",
   isPartOf: { "@type": "WebSite", name: "Link Agency", url: "https://linkagency.ma" },
   about: organizationRef,
-  primaryImageOfPage: { "@type": "ImageObject", url: "https://linkagency.ma/og-link-agency-2026.jpg" },
+  primaryImageOfPage: { "@type": "ImageObject", url: DEFAULT_SOCIAL_IMAGE },
 });
 
 export const generateBreadcrumbSchema = (breadcrumbs: Array<{ name: string; url: string }>) => ({

@@ -1,9 +1,10 @@
 // Helpers pour l'optimisation SEO
+import { DEFAULT_SOCIAL_IMAGE } from "@/config/seo";
 
 export const SEO_CONSTANTS = {
   SITE_NAME: "Link Agency",
   BASE_URL: "https://linkagency.ma",
-  DEFAULT_IMAGE: "https://linkagency.ma/og-link-agency-2026.jpg",
+  DEFAULT_IMAGE: DEFAULT_SOCIAL_IMAGE,
   TWITTER_HANDLE: "@LinkAgencyMA",
   LANGUAGES: ["fr", "ar", "en"] as const,
   LOCATIONS: ["casablanca", "rabat", "marrakech"] as const
