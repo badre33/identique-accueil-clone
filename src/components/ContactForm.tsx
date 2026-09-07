@@ -8,6 +8,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Form, FormControl, FormField, FormItem, FormMessage } from '@/components/ui/form';
 import { Link } from 'react-router-dom';
 import { captureAttribution, getAttribution, trackEvent, trackGenerateLead } from '@/lib/tracking';
+import { submitLeadToHubSpot } from '@/lib/hubspot';
 
 const formSchema = z.object({
   nom: z.string()
@@ -159,7 +160,7 @@ ${data.message}`;
 
     let netlifyOk = false;
     try {
-      const res = await fetch('/', {
+      const res = await fetch('/__forms.html', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: formBody,
@@ -169,13 +170,32 @@ ${data.message}`;
       netlifyOk = false;
     }
 
-    // 2) Une conversion n'est enregistrée qu'après réception confirmée par Netlify.
+    // 2) HubSpot reçoit uniquement une demande que Netlify a déjà confirmée.
+    let hubspotOk = false;
     if (netlifyOk) {
+      const hubspot = await submitLeadToHubSpot({
+        fullName: data.nom,
+        email: data.email,
+        phone: `${data.countryCode} ${data.telephone}`,
+        company: data.entreprise,
+        summary,
+        attribution,
+      });
+      hubspotOk = hubspot.ok;
+
+      trackEvent(hubspot.ok ? 'hubspot_sync_success' : 'hubspot_sync_error', {
+        category: 'technical',
+        form_location: 'contact_form',
+        hubspot_status: hubspot.status,
+      });
+
+      // Une conversion est enregistrée après réception Netlify, même si le CRM est temporairement indisponible.
       trackGenerateLead({
         formLocation: 'contact_form',
         serviceInterest: data.service,
         budgetBand: data.budget,
         projectTimeline: data.delai,
+        crmSyncStatus: hubspotOk ? 'synced' : 'failed',
       });
     } else {
       trackEvent('form_submit_error', {
@@ -185,7 +205,7 @@ ${data.message}`;
       });
     }
 
-    // 3) Message WhatsApp préparé (option bonus, plus principal)
+    // 3) Message WhatsApp préparé comme canal de poursuite de l'échange.
     const waMessage = `🚀 NOUVELLE DEMANDE - Link Agency
 
 ${summary}`;

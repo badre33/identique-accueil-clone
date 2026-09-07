@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Calculator, Check, ArrowRight } from 'lucide-react';
+import { trackWhatsAppClick } from '@/lib/tracking';
 
 interface ServiceOption {
   id: string;
@@ -78,6 +79,7 @@ export const QuoteCalculator = () => {
     
     const message = `Bonjour, je souhaite un devis premium pour les services suivants : ${selectedServiceNames}. Échelle du projet : ${projectScale}, Délai : ${urgency}. Total estimé : ${calculateTotal().toLocaleString()}DH`;
     const encodedMessage = encodeURIComponent(message);
+    trackWhatsAppClick('quote_calculator');
     window.open(`https://wa.me/212699024526?text=${encodedMessage}`, '_blank');
   };
 

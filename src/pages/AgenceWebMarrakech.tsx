@@ -5,6 +5,7 @@ import { ArrowLeft, Globe, Smartphone, Search, ShoppingCart, MessageCircle, Chec
 import { Link } from "react-router-dom";
 import { FloatingContactWidget } from "@/components/FloatingContactWidget";
 import { SEOHead } from "@/components/SEOHead";
+import { trackWhatsAppClick } from "@/lib/tracking";
 import {
   generateServiceSchema,
   generateWebPageSchema,
@@ -47,6 +48,7 @@ const AgenceWebMarrakech = () => {
 
   const handleContact = () => {
     const message = "Bonjour, je souhaite créer un site web à Marrakech avec Link Agency. Pourrions-nous échanger sur mon projet ?";
+    trackWhatsAppClick("agence_web_marrakech");
     window.open(`https://wa.me/212699024526?text=${encodeURIComponent(message)}`, "_blank");
   };
 

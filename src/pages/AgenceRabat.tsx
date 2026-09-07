@@ -4,6 +4,7 @@ import { ArrowLeft, MapPin, Landmark, ShieldCheck, Globe, CheckCircle2, Phone, M
 import { Link } from "react-router-dom";
 import { FloatingContactWidget } from "@/components/FloatingContactWidget";
 import { SEOHead } from "@/components/SEOHead";
+import { trackWhatsAppClick } from "@/lib/tracking";
 import rabatHero from "@/assets/rabat-hero.webp";
 import {
   generateServiceSchema,
@@ -82,6 +83,7 @@ const AgenceRabat = () => {
   const handleContact = () => {
     const phoneNumber = "212699024526";
     const message = "Bonjour, je souhaite échanger avec votre agence de communication à Rabat.";
+    trackWhatsAppClick("agence_rabat");
     window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, "_blank");
   };
 

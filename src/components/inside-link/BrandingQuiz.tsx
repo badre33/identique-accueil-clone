@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { ChevronRight, Award, Sparkles, Target, Zap } from 'lucide-react';
 import { useSoundEffects } from '@/hooks/useSoundEffects';
+import { trackWhatsAppClick } from '@/lib/tracking';
 
 interface Question {
   id: number;
@@ -192,6 +193,7 @@ export const BrandingQuiz = () => {
           <div className="space-y-4">
             <button
               onClick={() => {
+                trackWhatsAppClick('branding_quiz_result');
                 window.open('https://wa.me/212699024526?text=Bonjour%2C%20j\'ai%20fait%20le%20quiz%20et%20je%20suis%20' + result.type + '%20!%20J\'aimerais%20discuter%20de%20mon%20branding', '_blank');
                 playClickSound();
               }}

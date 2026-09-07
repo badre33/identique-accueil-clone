@@ -4,6 +4,7 @@ import { ArrowLeft, MapPin, Building2, TrendingUp, Target, CheckCircle2, Phone, 
 import { Link } from "react-router-dom";
 import { FloatingContactWidget } from "@/components/FloatingContactWidget";
 import { SEOHead } from "@/components/SEOHead";
+import { trackWhatsAppClick } from "@/lib/tracking";
 import casablancaHero from "@/assets/casablanca-hero.webp";
 import {
   generateServiceSchema,
@@ -82,6 +83,7 @@ const AgenceCasablanca = () => {
   const handleContact = () => {
     const phoneNumber = "212699024526";
     const message = "Bonjour, je souhaite échanger avec votre agence marketing digital à Casablanca.";
+    trackWhatsAppClick("agence_casablanca");
     window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, "_blank");
   };
 

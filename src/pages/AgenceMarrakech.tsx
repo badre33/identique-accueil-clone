@@ -4,6 +4,7 @@ import { ArrowLeft, MapPin, Sparkles, Camera, Globe, CheckCircle2, Phone, Mail, 
 import { Link } from "react-router-dom";
 import { FloatingContactWidget } from "@/components/FloatingContactWidget";
 import { SEOHead } from "@/components/SEOHead";
+import { trackWhatsAppClick } from "@/lib/tracking";
 import marrakechHero from "@/assets/marrakech-hero.webp";
 import {
   generateServiceSchema,
@@ -82,6 +83,7 @@ const AgenceMarrakech = () => {
   const handleContact = () => {
     const phoneNumber = "212699024526";
     const message = "Bonjour, je souhaite échanger avec votre agence marketing digital à Marrakech.";
+    trackWhatsAppClick("agence_marrakech");
     window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, "_blank");
   };
 

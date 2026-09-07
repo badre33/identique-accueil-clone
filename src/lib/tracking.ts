@@ -114,6 +114,7 @@ export const trackGenerateLead = (params: {
   serviceInterest: string;
   budgetBand: string;
   projectTimeline?: string;
+  crmSyncStatus?: "synced" | "failed";
 }) =>
   trackEvent("generate_lead", {
     category: "lead",
@@ -122,6 +123,7 @@ export const trackGenerateLead = (params: {
     service_interest: params.serviceInterest,
     budget_band: params.budgetBand,
     project_timeline: params.projectTimeline || "not_provided",
+    crm_sync_status: params.crmSyncStatus || "not_checked",
   });
 
 export const trackOutbound = (url: string, label?: string) =>
