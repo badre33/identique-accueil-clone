@@ -17,7 +17,11 @@ declare global {
 
 const ensureDataLayer = () => {
   window.dataLayer = window.dataLayer || [];
-  window.gtag = window.gtag || ((...args: unknown[]) => window.dataLayer?.push(args));
+  window.gtag = window.gtag || function () {
+    // Google tag expects an Arguments object in the data layer.
+    // eslint-disable-next-line prefer-rest-params
+    window.dataLayer?.push(arguments);
+  };
 };
 
 const setDefaultConsent = () => {
