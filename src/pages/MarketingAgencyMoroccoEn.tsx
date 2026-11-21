@@ -33,7 +33,6 @@ const process = [
 const selectedWork = [
   ["OCB Morocco", "International brand · Morocco", "Social strategy, content, campaigns and brand partnerships."],
   ["Nexia Morocco", "Corporate advisory · B2B", "Positioning, digital transformation and corporate communication."],
-  ["Nova Spacia", "Architecture · Design", "Brand identity, digital presence and premium positioning."],
   ["Oncovita", "Healthcare · Impact", "Identity, communication strategy and digital presence."],
 ];
 

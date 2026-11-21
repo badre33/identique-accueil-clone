@@ -137,7 +137,7 @@ export const Services = () => {
           </h2>
           
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-600 max-w-4xl mx-auto leading-relaxed font-light px-4 sm:px-0">
-            Stratégie & pilotage performance, acquisition payante, SEO bilingue, branding, communication et activations : un modèle hybride agence + cabinet de pilotage stratégique, pour les marques qui veulent aligner image et performance commerciale.
+            Stratégie & pilotage performance, acquisition payante, SEO bilingue, branding, communication et activations : une agence intégrée qui relie stratégie et exécution, pour les marques qui veulent aligner image et performance commerciale.
           </p>
         </div>
 
