@@ -11,6 +11,8 @@ const expertiseLinks = [
   { label: "Social media", to: "/social-media" },
   { label: "Contenu digital", to: "/content-digital" },
   { label: "Marketing digital", to: "/marketing-digital" },
+  { label: "Publicité en ligne", to: "/publicite-en-ligne" },
+  { label: "E-commerce & Shopify", to: "/e-commerce-shopify" },
   { label: "Influence", to: "/influence-marketing" },
   { label: "Événementiel", to: "/evenementiel" },
 ];
@@ -66,7 +68,7 @@ export const Header = ({ language }: HeaderProps) => {
             </div>
             <Link to="/collaborations" className={navLinkClass}>Missions</Link>
             <Link to="/blog" className={navLinkClass}>Analyses</Link>
-            <Link to="/inside-link" className={navLinkClass}>Le cabinet</Link>
+            <Link to="/inside-link" className={navLinkClass}>L’agence</Link>
           </>}
           <Link to={isEnglish ? "/" : "/en/marketing-agency-morocco"} className={navLinkClass} aria-label={isEnglish ? "Voir le site en français" : "View the website in English"}>{isEnglish ? "FR" : "EN"}</Link>
           <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsAppClick(isEnglish ? "header_en" : "header")} className="border border-[#765fc4] bg-[#765fc4] px-5 py-3 text-xs font-semibold uppercase tracking-[0.14em] text-white transition hover:border-[#6751b7] hover:bg-[#6751b7]">
@@ -92,7 +94,7 @@ export const Header = ({ language }: HeaderProps) => {
             {expertisesOpen && <div className={cn("border-b py-2 pl-4", isLight ? "border-black/15" : "border-white/10")}>{expertiseLinks.map((item) => <Link key={item.to} to={item.to} className={cn("block py-2.5 text-sm", isLight ? "text-black/60" : "text-white/60")}>{item.label}</Link>)}</div>}
             <Link to="/collaborations" className={cn("mobile-editorial-link", isLight && "!border-black/15 !text-black")}>Missions</Link>
             <Link to="/blog" className={cn("mobile-editorial-link", isLight && "!border-black/15 !text-black")}>Analyses</Link>
-            <Link to="/inside-link" className={cn("mobile-editorial-link", isLight && "!border-black/15 !text-black")}>Le cabinet</Link>
+            <Link to="/inside-link" className={cn("mobile-editorial-link", isLight && "!border-black/15 !text-black")}>L’agence</Link>
           </>}
           <Link to={isEnglish ? "/" : "/en/marketing-agency-morocco"} className={cn("mobile-editorial-link", isLight && "!border-black/15 !text-black")}>{isEnglish ? "Français" : "English"}</Link>
           <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsAppClick(isEnglish ? "header_mobile_en" : "header_mobile")} className="mt-8 flex items-center justify-between bg-[#765fc4] px-5 py-4 text-sm font-semibold uppercase tracking-[0.12em] text-white">{isEnglish ? "Discuss your brief" : "Parler sur WhatsApp"} <ArrowUpRight className="h-4 w-4" /></a>

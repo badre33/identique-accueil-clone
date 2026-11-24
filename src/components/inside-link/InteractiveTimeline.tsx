@@ -45,7 +45,7 @@ const timelineEvents: TimelineEvent[] = [
     id: 4,
     year: '2023',
     title: 'Création de Link Agency',
-    description: 'Badreddine fonde Link Agency à Casablanca : modèle hybride agence + cabinet de pilotage data, unique au Maroc.',
+    description: 'Badreddine fonde Link Agency à Casablanca : une agence intégrée qui relie la marque, le contenu et la performance.',
     icon: Rocket,
     color: 'from-orange-500 to-red-500',
     location: 'Casablanca'

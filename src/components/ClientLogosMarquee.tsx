@@ -34,7 +34,6 @@ const logos: LogoEntry[] = [
   // Tier 4 — Tech, scaleups et références de missions
   { name: "YouCan", src: "/assets/media/youcan-logo.png" },
   { name: "Brainlyne", src: "/brands/brainlyne.png" },
-  { name: "Nova Spacia", src: "/assets/media/novaspacia-logo.svg" },
   { name: "Nexia", src: "/assets/media/05dfc79f-2a20-4241-aa4d-606f6cdd30d2.png" },
   { name: "French Tech", src: "/assets/media/801816e7-97bc-49c9-948c-34e3c9d49e1f.png" },
   { name: "Soulection", src: "/assets/media/b8c1c54b-9721-486c-81ab-dae0977cacc0.png" },

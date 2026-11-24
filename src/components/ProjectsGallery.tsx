@@ -65,15 +65,6 @@ export const ProjectsGallery = () => {
       url: "https://artitenium.ma/"
     },
     {
-      title: "Nova Spacia",
-      category: "Branding & Digital, Maroc",
-      image: "/assets/media/novaspacia-logo.svg",
-      shortDescription: "Création d'identité visuelle et développement web pour Nova Spacia, entreprise spécialisée dans l'aménagement d'espaces professionnels et commerciaux.",
-      description: "Accompagnement complet de Nova Spacia dans le développement de leur image de marque et présence digitale. Notre mission incluait la conception d'une identité visuelle moderne et professionnelle, le développement d'un site web performant mettant en valeur leurs services d'aménagement d'espaces, ainsi qu'une stratégie de communication digitale adaptée à leur positionnement premium sur le marché de l'aménagement professionnel.",
-      year: "2026",
-      url: "https://novaspacia.com/"
-    },
-    {
       title: "Oncovita",
       category: "Santé & Bien-être, Maroc",
       image: "/assets/media/oncovita-logo.jpeg",
@@ -144,7 +135,7 @@ export const ProjectsGallery = () => {
             Une sélection de missions documentées qui illustre notre capacité à concevoir, produire et piloter des dispositifs à fort enjeu.
           </p>
           <div className="flex flex-wrap justify-center gap-3 mt-10">
-            {["L'Bankalik", "AXA Assurance Maroc", "RMA", "Subway Maroc", "YouCan", "Nova Spacia", "OCB Maroc", "La Maison Amoud", "Brainlyne", "Benatna"].map((client) => (
+            {["L'Bankalik", "AXA Assurance Maroc", "RMA", "Subway Maroc", "YouCan", "OCB Maroc", "La Maison Amoud", "Brainlyne", "Benatna"].map((client) => (
               <div key={client} className="px-4 py-3 rounded-2xl bg-white border border-gray-200 text-sm font-semibold text-gray-700 shadow-sm">
                 {client}
               </div>
@@ -165,7 +156,7 @@ export const ProjectsGallery = () => {
                 <img 
                   src={project.image} 
                   alt={project.title}
-                  className={`w-full h-full object-contain p-8 group-hover:scale-110 transition-transform duration-700 ${project.title === 'Nova Spacia' ? 'bg-gray-900' : 'bg-white'}`}
+                  className={`w-full h-full object-contain p-8 group-hover:scale-110 transition-transform duration-700 bg-white`}
                   loading="lazy"
                   decoding="async"
                   width="320"

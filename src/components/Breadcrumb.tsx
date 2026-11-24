@@ -13,6 +13,8 @@ export const Breadcrumb = () => {
     'personal-branding': 'Personal Branding',
     'content-digital': 'Content Digital',
     'marketing-digital': 'Marketing Digital',
+    'publicite-en-ligne': 'Publicité en ligne',
+    'e-commerce-shopify': 'E-commerce & Shopify',
     'conseil-strategique': 'Conseil Stratégique',
     'inside-link': 'Inside Link',
     'collaborations': 'Collaborations',

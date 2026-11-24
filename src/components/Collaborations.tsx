@@ -40,16 +40,6 @@ export const Collaborations = () => {
       type: "Branding & Digital"
     },
     {
-      name: "Nova Spacia",
-      url: "https://novaspacia.com/",
-      category: "Aménagement",
-      logo: "/assets/media/novaspacia-logo.svg",
-      description: "Création d'identité visuelle et développement web pour cette entreprise spécialisée dans l'aménagement d'espaces professionnels et commerciaux.",
-      year: "2026",
-      type: "Branding & Digital",
-      darkBg: true
-    },
-    {
       name: "Nexia",
       url: "https://nexia.ma/",
       category: "Conseil",

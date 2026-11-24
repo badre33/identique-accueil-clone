@@ -44,8 +44,8 @@ export const generatePageMeta = (page: string) => {
     },
     "inside-link": {
       title: "Link Agency et son fondateur | Direction marketing au Maroc",
-      description: "Découvrez Badreddine Harkaoui, fondateur de Link Agency, son parcours et le modèle senior-led du cabinet à Casablanca.",
-      keywords: "badreddine harkaoui, fondateur link agency, cabinet marketing casablanca, direction marketing maroc"
+      description: "Découvrez Badreddine Harkaoui, fondateur de Link Agency, son parcours et le modèle de l’agence intégrée à Casablanca.",
+      keywords: "badreddine harkaoui, fondateur link agency, agence marketing casablanca, direction marketing maroc"
     },
     collaborations: {
       title: "Nos Collaborations & Partenariats - Portfolio Link Agency Maroc",

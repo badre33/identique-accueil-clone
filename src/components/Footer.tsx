@@ -13,6 +13,8 @@ const directionLinks = [
 
 const performanceLinks = [
   ["Marketing digital", "/marketing-digital"],
+  ["Publicité en ligne", "/publicite-en-ligne"],
+  ["E-commerce & Shopify", "/e-commerce-shopify"],
   ["Social media", "/social-media"],
   ["Contenu digital", "/content-digital"],
   ["Développement web", "/developpement-web"],
