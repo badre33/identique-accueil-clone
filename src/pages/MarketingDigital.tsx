@@ -16,7 +16,7 @@ const MarketingDigital = () => <EditorialServicePage
   pillarsBody="Le rôle de Link Agency est de construire et piloter le système, pas d’empiler des canaux."
   pillars={[
     { title: "SEO et contenu", description: "Architecture, optimisation technique, pages utiles et contenus conçus pour capter une demande qualifiée." },
-    { title: "Campagnes payantes", description: "Meta, Google ou LinkedIn selon le besoin, avec des audiences, des créations et des objectifs clairement cadrés." },
+    { title: "Campagnes payantes", description: "Meta, Google ou TikTok selon le besoin, avec des audiences, des créations et des objectifs clairement cadrés." },
     { title: "Conversion", description: "Landing pages, messages, formulaires et parcours pensés pour transformer l’intérêt en demande exploitable." },
     { title: "Mesure", description: "Tracking, tableaux de bord et lecture des résultats pour arbitrer les budgets et améliorer le dispositif." },
   ]}

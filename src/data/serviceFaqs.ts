@@ -6,7 +6,7 @@ export interface FAQItem {
 export const serviceFaqs: Record<string, FAQItem[]> = {
   "publicite-en-ligne": [
     { question: "Quel budget prévoir pour la publicité Meta ou Google au Maroc ?", answer: "Le budget média dépend de vos objectifs et de votre marché. Il est payé directement aux plateformes par l’entreprise, sans commission de Link Agency. La gestion des campagnes est chiffrée à part, sur devis." },
-    { question: "Gérez-vous les campagnes sur Facebook, Instagram, Google et TikTok ?", answer: "Oui. Link Agency pilote Meta Ads (Facebook et Instagram), Google Ads, TikTok Ads et LinkedIn Ads, et choisit les plateformes selon votre cible et votre objectif." },
+    { question: "Gérez-vous les campagnes sur Facebook, Instagram, Google et TikTok ?", answer: "Oui. Link Agency pilote Meta Ads (Facebook et Instagram), Google Ads et TikTok Ads, et choisit les plateformes selon votre cible et votre objectif." },
     { question: "Créez-vous les publicités ?", answer: "Oui. Les visuels, les vidéos et les textes sont produits par l’agence, en darija, en français ou en arabe selon l’audience, puis testés et renouvelés." },
     { question: "Comment suivez-vous les résultats ?", answer: "Le suivi est installé avant le lancement : pixel Meta, API Conversions, Google Analytics et suivi des achats, des formulaires ou des messages WhatsApp. Les résultats sont lus chaque semaine et présentés chaque mois." },
     { question: "Pouvez-vous reprendre des campagnes existantes ?", answer: "Oui. La mission commence par un audit du compte publicitaire : configuration, suivi, audiences, créations et résultats. Les corrections sont faites avant d’investir davantage." },
@@ -44,7 +44,7 @@ export const serviceFaqs: Record<string, FAQItem[]> = {
     {
       question: "Quels canaux paid media pilotez-vous ?",
       answer:
-        "Meta Ads (Facebook & Instagram), Google Ads (Search, Display, YouTube, Shopping), TikTok Ads et LinkedIn Ads. Nous arbitrons le mix entre canaux selon vos objectifs (notoriété, acquisition, rétention) et votre cible (B2B, B2C, local).",
+        "Meta Ads (Facebook & Instagram), Google Ads (Search, Display, YouTube, Shopping) et TikTok Ads. Nous arbitrons le mix entre canaux selon vos objectifs (notoriété, acquisition, rétention) et votre cible (B2B, B2C, local).",
     },
     {
       question: "Comment mesurez-vous le ROI des campagnes ?",

@@ -14,7 +14,7 @@ const expertises = [
   { n: "01", title: "Direction marketing externalisée", text: "Stratégie, arbitrages, feuille de route, coordination et mesure.", to: "/direction-marketing-externalisee", tone: "hover:bg-[#765fc4] hover:text-white" },
   { n: "02", title: "Branding & positionnement", text: "Plateforme de marque, identité distinctive et cohérence des points de contact.", to: "/branding", tone: "hover:bg-[#c86b4a]" },
   { n: "03", title: "Contenu & réseaux sociaux", text: "Ligne éditoriale, contenus bilingues et présence qui construit la préférence.", to: "/social-media", tone: "hover:bg-[#bfd0c8]" },
-  { n: "04", title: "Publicité en ligne", text: "Meta, Google, TikTok et LinkedIn : des campagnes pilotées pour vendre et générer des demandes.", to: "/publicite-en-ligne", tone: "hover:bg-[#765fc4] hover:text-white" },
+  { n: "04", title: "Publicité en ligne", text: "Meta, Google et TikTok : des campagnes pilotées pour vendre et générer des demandes.", to: "/publicite-en-ligne", tone: "hover:bg-[#765fc4] hover:text-white" },
   { n: "05", title: "E-commerce & Shopify", text: "Création et gestion de boutiques en ligne, du catalogue à la commande.", to: "/e-commerce-shopify", tone: "hover:bg-[#c86b4a]" },
   { n: "06", title: "SEO & acquisition", text: "Référencement, landing pages et analytics alignés sur les objectifs business.", to: "/marketing-digital", tone: "hover:bg-[#d7e942]" },
 ];
